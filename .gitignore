@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+venv/
+env/
+
+# Databases — live on Railway volume
+data/
+*.db
+
+# Profiles — exclude large PNGs; keep JSON data files
+profiles/output/**/*.png
+profiles/__pycache__/
+
+# Audit / diagnostic scripts
+*_audit.py
+*_diagnostic.py
+*_test.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Claude
+.claude/

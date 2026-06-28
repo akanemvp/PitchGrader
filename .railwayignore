@@ -1,0 +1,15 @@
+data/
+*.db
+__pycache__/
+*.pyc
+live/
+*.log
+.DS_Store
+model/artifacts/feature_cache.parquet
+model/artifacts/feature_cache_meta.pkl
+model/artifacts/bam_model.rds
+model/artifacts/count_baselines.pkl
+model/artifacts/cluster_model.pkl
+model/artifacts/cluster_kmeans.pkl
+model/artifacts/cluster_model_fastball.pkl
+model/artifacts/cluster_model_breaking.pkl
