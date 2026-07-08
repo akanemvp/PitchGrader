@@ -1,20 +1,12 @@
-"""Group-specific swing-outcome Stuff+ — separate fastball / breaking / offspeed models.
+"""Driveline-style Stuff+ — one LightGBM regressor on an all-outcome run-value target.
 
-Three independent models, each a hierarchy of shape classifiers with dual per-platoon location
-regression (init_score) on every head:
-
-  swing branch:  P(whiff) | P(foul) | P(in_play)
-    in_play  →   bb_clf:  P(GB | line_drive | pulled_FB | non_pulled_FB | popup)
-
-  xRV = P(whiff)·W_whiff + P(foul)·W_foul + P(in_play)·Σ P(bb)·W_bb
-
-Each pitch is routed to one of three models by family:
-  fastball  — FF/FA/SI  (+ cutters the Stage-0 classifier calls fastball-like)
-  breaking  — SL/ST/CU/KC/SV/… (+ cutters the Stage-0 classifier calls breaking-like)
-  offspeed  — CH/FS/FO
-Cutters (FC) are split by SHAPE (velo + arm-relative movement) via model.cutter_stage0, not by
-the label. Outcome VALUES (linear weights) are global; only the probability models are per-group.
-Lower xRV = better. Graded location-neutral (per-head base log-frequency) at inference.
+For each pitch, xRV is predicted from 9 shape features (velocity, extension,
+vertical/horizontal acceleration, release side/height, arm angle, spin rate, and
+batter-vs-pitcher handedness). The target blends delta_run_exp for non-contact
+outcomes (ball / called-strike / whiff / foul) with xwOBA-based run value for balls
+in play. No location, no count. Platoon is marginalized at inference (average of
+same-hand and opposite-hand). Lower xRV = better; normalized to 100 = average,
+10 = one standard deviation on a frozen 2022-24 baseline.
 """
 from __future__ import annotations
 
@@ -41,59 +33,11 @@ XWOBA_COL = "estimated_woba_using_speedangle"
 LGBM_REG = dict(n_estimators=400, max_depth=5, learning_rate=0.04, subsample=0.8,
                 colsample_bytree=0.8, min_child_samples=200, reg_lambda=1.0,
                 random_state=42, n_jobs=-1, verbose=-1)
-EV_CUT = 95.0                                      # exit-velo split (under / over 95 mph)
-CELL_LABELS = ["GB<95", "GB95+", "LD<95", "LD95+", "FB<95", "FB95+", "PU"]   # GB/LD/FB × velo + popup
-N_CELLS = len(CELL_LABELS)                          # 7 cells (no pulled/non-pulled split)
 
 FASTBALL_T = {"FF", "FA", "SI", "FT"}
 OFFSPEED_T = {"CH", "FS", "FO"}
 GROUPS = ["fastball", "breaking", "offspeed"]
 GROUPED = False                  # False = one model for all pitches (no family split)
-
-NODE = dict(max_depth=5, learning_rate=0.04, bagging_fraction=0.8, bagging_freq=1,
-            feature_fraction=0.8, min_data_in_leaf=200, lambda_l2=1.0, verbose=-1,
-            num_threads=-1, seed=42)
-N_ROUNDS = 400
-LOCATION_REG = False           # full per-head location residualization on/off
-TAKE_LOC_REG = True            # residualize location for the TAKE (ball/called-strike) rows only
-LOC_SK = dict(n_estimators=300, max_depth=5, learning_rate=0.05, subsample=0.8,
-              colsample_bytree=0.8, min_child_samples=200, reg_lambda=1.0,
-              random_state=42, n_jobs=-1, verbose=-1)
-
-
-def _softmax(z):
-    z = z - z.max(axis=1, keepdims=True)
-    e = np.exp(z)
-    return e / e.sum(axis=1, keepdims=True)
-
-
-def _pull_metric(df):
-    """Spray-angle pull metric (>0 = pulled). atan2 from hc_x/hc_y, flipped by batter hand."""
-    hx = pd.to_numeric(df.get("hc_x"), errors="coerce")
-    hy = pd.to_numeric(df.get("hc_y"), errors="coerce")
-    angle = np.degrees(np.arctan2(hx - 125.42, 198.27 - hy))
-    stand = df.get("stand", pd.Series("", index=df.index)).fillna("").astype(str)
-    return pd.Series(np.where(stand.values == "R", -angle, angle), index=df.index)
-
-
-def _cell_class(df):
-    """In-play → 7 cells: {GB, LD, FB} × {<95, >=95} + popup(6).  EV split 95, popup not split."""
-    bb = df.get("bb_type", pd.Series("", index=df.index)).fillna("").astype(str).str.lower()
-    la = pd.to_numeric(df.get("launch_angle"), errors="coerce")
-    ev = pd.to_numeric(df.get("launch_speed"), errors="coerce")
-    typ = pd.Series(-1, index=df.index)             # 0=GB 1=LD 2=FB 3=PU
-    typ[bb == "ground_ball"] = 0; typ[bb == "line_drive"] = 1
-    typ[bb == "fly_ball"] = 2; typ[bb == "popup"] = 3
-    m = typ == -1
-    typ[m & (la < 10)] = 0; typ[m & (la >= 10) & (la < 25)] = 1
-    typ[m & (la >= 25) & (la < 50)] = 2; typ[m & (la >= 50)] = 3
-    hard = (ev.fillna(0.0) >= EV_CUT).astype(int)   # missing EV → soft (<95)
-    cell = pd.Series(np.nan, index=df.index)
-    for t in (0, 1, 2):                             # GB/LD/FB → 2 EV cells each
-        sel = typ == t
-        cell[sel] = t * 2 + hard[sel]
-    cell[typ == 3] = 6                              # popup → its own cell
-    return cell
 
 
 def _approach_angles(df):
@@ -150,41 +94,6 @@ def _pitch_group(df) -> pd.Series:
             pass
         grp[fc] = "breaking"
     return grp
-
-
-def _fit_node(sub, y_int, K, sh_feats, off_feats, use_loc):
-    """Shape classifier; per-platoon location init_score when use_loc. Returns (booster, logb)."""
-    if not use_loc:
-        dtrain = lgb.Dataset(sub[sh_feats].values, label=y_int)
-        booster = lgb.train({**NODE, "objective": "multiclass", "num_class": K},
-                            dtrain, num_boost_round=N_ROUNDS)
-        return booster, None
-    n = len(sub); same = pd.to_numeric(sub["same_hand"], errors="coerce").values
-    init = np.zeros((n, K))
-    for hv in (1.0, 0.0):
-        m = same == hv
-        if m.sum() < 100:
-            continue
-        lm = lgb.LGBMClassifier(**LOC_SK).fit(sub.loc[m, off_feats].values, y_int[m])
-        proba = lm.predict_proba(sub.loc[m, off_feats].values)
-        full = np.full((int(m.sum()), K), 1e-6)
-        for j, cls in enumerate(lm.classes_):
-            full[:, int(cls)] = proba[:, j]
-        init[m] = np.log(full)
-    freq = np.bincount(y_int, minlength=K).astype(float); freq /= freq.sum()
-    logb = np.log(np.clip(freq, 1e-6, 1.0))
-    dtrain = lgb.Dataset(sub[sh_feats].values, label=y_int, init_score=init.reshape(-1, order="F"))
-    booster = lgb.train({**NODE, "objective": "multiclass", "num_class": K},
-                        dtrain, num_boost_round=N_ROUNDS)
-    return booster, logb
-
-
-def _P(node, X):
-    booster, logb = node
-    if logb is None:
-        return booster.predict(X)
-    raw = booster.predict(X, raw_score=True)
-    return _softmax(logb[None, :] + raw)
 
 
 def _fit_group(g_base, mf, off):
