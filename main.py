@@ -3,9 +3,9 @@ Stuff+ CLI entry point.
 
 Commands
 --------
-  train     — Load training data (2022-24), engineer shape features, train the
-              model, and save the frozen normalization baseline. Use --prob-resid
-              for the current Driveline run-value model.
+  train     — Load training data, engineer shape features, train the Driveline
+              run-value model, and save the frozen normalization baseline.
+              Optional --sample=<frac> trains on a random subset.
   score     — Score each season's raw pitch table and write the *_scored tables.
   profiles  — Aggregate scored pitches into per-pitcher cards and leaderboards.
   live      — Start the live 2026 update loop (delegates to live/live_update.py).
@@ -48,31 +48,6 @@ def cmd_train():
         game_year
     """
     sample_frac = None
-    ensemble_movement_rv  = "--ensemble-movement-rv" in sys.argv
-    count_rv              = "--count-rv" in sys.argv
-    count_neutral         = "--count-neutral" in sys.argv
-    swing_quality         = "--swing-quality" in sys.argv
-    siera                 = "--siera" in sys.argv
-    residual_location     = "--residual-location" in sys.argv
-    prostuff_style        = "--prostuff-style" in sys.argv
-    residual_model        = "--residual-model" in sys.argv or "--linear-weights" in sys.argv or count_rv or swing_quality
-    linear_weights        = "--linear-weights" in sys.argv
-    prostuff_paper        = "--prostuff-paper" in sys.argv
-    prostuff_paper_contact = "--prostuff-paper-contact" in sys.argv
-    hbbe                   = "--hbbe" in sys.argv
-    hbbe_nn                = "--hbbe-nn" in sys.argv
-    hbbe_loc               = "--hbbe-loc" in sys.argv
-    hbbe_shapeloc          = "--hbbe-shapeloc" in sys.argv
-    tj_locresid            = "--tj-locresid" in sys.argv
-    prob_resid             = "--prob-resid" in sys.argv
-    rv_locresid            = "--rv-locresid" in sys.argv
-    bam                    = "--bam" in sys.argv
-    nn                     = "--nn" in sys.argv
-    # GRL is the default architecture when no other arch flag is passed
-    _other_arch = (count_rv or count_neutral or swing_quality or siera or residual_location or
-                   prostuff_style or residual_model or linear_weights or
-                   prostuff_paper or prostuff_paper_contact or hbbe or hbbe_nn or hbbe_loc or hbbe_shapeloc or tj_locresid or prob_resid or rv_locresid or bam or nn)
-    grl = "--grl" in sys.argv or not _other_arch
     for arg in sys.argv:
         if arg.startswith("--sample="):
             sample_frac = float(arg.split("=")[1])
@@ -90,51 +65,9 @@ def cmd_train():
     else:
         logger.info(f"  Loaded {len(df):,} rows.")
 
-    logger.info("Training models …")
-    if ensemble_movement_rv:
-        logger.info("  Using ensemble-based movement_rv (2-pass training)")
-    if count_neutral:
-        logger.info("  Using count-neutral ensemble (swing residual approach)")
-    elif swing_quality:
-        logger.info("  Using swing quality target (whiff + xwOBAcon, swings only)")
-    elif count_rv:
-        logger.info("  Using count-stratified RV target (TJ Stats approach)")
-    elif linear_weights:
-        logger.info("  Using linear weights target (context-neutral per-pitch RV)")
-    elif residual_model:
-        logger.info("  Using residual xRV model (single regressor per family)")
-    elif residual_location:
-        logger.info("  Using residual pipeline: Location+ → residual → Stuff+")
-    elif siera:
-        logger.info("  Using SIERA-calibrated target: Location+(siera_rv) → residual → Stuff+")
-    elif prostuff_style:
-        logger.info("  Using proStuff+-style multi-head ensemble (count-aware, no location)")
-    elif prostuff_paper:
-        logger.info("  Using proStuff+ paper architecture (whiff + foul + HR, scalar weights)")
-    elif prostuff_paper_contact:
-        logger.info("  Using proStuff+ paper + contact_rv regressor (5 sub-models incl. weak-contact)")
-    elif tj_locresid:
-        logger.info("  Using TJ cell-mean RV target with location regressed out (pure-shape LightGBM regressor)")
-    elif prob_resid:
-        logger.info("  Using probability-multiplier xRV (7 outcome heads, loc+count residualized, shape heads)")
-    elif rv_locresid:
-        logger.info("  Using continuous RV target (delta_run_exp + xwOBA-on-contact, count carried via RE, location-residualized, single shape regressor)")
-    elif hbbe_shapeloc:
-        logger.info("  Using v228 swing-tree SHAPE-CONDITIONAL LOCATION (shape→predicted spots per platoon, graded at those spots)")
-    elif hbbe_loc:
-        logger.info("  Using v228 swing-tree LOCATION-NEUTRAL (heads see plate_x_arm/plate_z; graded over a fixed per-platoon location grid)")
-    elif hbbe_nn:
-        logger.info("  Using v228 swing-tree with NEURAL-NET heads (whiff/foul/BIP MLPs, same structure as --hbbe)")
-    elif hbbe:
-        logger.info("  Using hierarchical batted-ball-event ensemble (swing/whiff/foul/ip → GB/LD/HR/other), no location, no xwOBA")
-    elif bam:
-        logger.info("  Using BAM Shape+ v2 (single mgcv::bam on OLS-stripped delta_run_exp residual)")
-    elif nn:
-        logger.info("  Using NN shape model (PyTorch MLP on OLS-stripped delta_run_exp residual, 11 shape features)")
-    elif grl:
-        logger.info("  Using GRL adversarial NN (Brody Chambers SABR poster — paper + contact + adversarial location)")
+    logger.info("Training the model …")
     from model.train import train_unified
-    train_unified(df, ensemble_movement_rv=ensemble_movement_rv, residual_model=residual_model, linear_weights=linear_weights, count_rv=count_rv, count_neutral=count_neutral, swing_quality=swing_quality, residual_location=residual_location, siera=siera, prostuff_style=prostuff_style, prostuff_paper=prostuff_paper, prostuff_paper_contact=prostuff_paper_contact, hbbe=hbbe, hbbe_nn=hbbe_nn, hbbe_loc=hbbe_loc, hbbe_shapeloc=hbbe_shapeloc, tj_locresid=tj_locresid, prob_resid=prob_resid, rv_locresid=rv_locresid, bam=bam, nn=nn, grl=grl)
+    train_unified(df)
 
     logger.info("Done.")
 
