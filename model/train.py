@@ -419,62 +419,9 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
     grl_feats = [f for f in all_feats if f not in ("plate_x", "plate_z")]
     ensembles: dict = {}
     _family_split = False
-    if grl:
-        # Single global model (one rv scale → all pitch types comparable).
-        logger.info(f"  [all] GRL adversarial NN on {len(df):,} pitches, {len(grl_feats)} features …")
-        ens_all = train_grl_ensemble(df, rv_baselines, features=grl_feats, epochs=25,
-                                     batch_size=8192, lr=1e-3, lambd_max=0.15, phase1_epochs=0)
-        if ens_all is None:
-            raise RuntimeError("Global model training failed")
-        ens_all["has_tree"] = False     # inference is NN-only (use_tree is never set)
-    elif prostuff_paper_contact:
-        logger.info(f"  [all] proStuff+ paper + contact_rv regressor (5 LGBM sub-models)")
-        # Include plate_x/plate_z — used at inference via location-grid averaging.
-        ens_all = train_prostuff_paper_contact_ensemble(df, rv_baselines, features=all_feats)
-    elif tj_locresid:
-        logger.info(f"  [all] TJ cell-mean RV target, location regressed out, pure-shape regressor")
-        from model.tj_locresid import train_tj_locresid_ensemble
-        ens_all = train_tj_locresid_ensemble(df, rv_baselines, features=all_feats)
-    elif prob_resid:
-        logger.info(f"  [all] Probability-multiplier xRV (7 outcome heads, loc+count residualized, shape heads)")
-        from model.prob_resid import train_prob_resid_ensemble
-        ens_all = train_prob_resid_ensemble(df, rv_baselines, features=all_feats)
-    elif rv_locresid:
-        logger.info(f"  [all] Continuous RV target (delta_run_exp + xwOBA contact), count-adjusted, location-residualized shape regressor")
-        from model.rv_locresid import train_rv_locresid_ensemble
-        ens_all = train_rv_locresid_ensemble(df, rv_baselines, features=all_feats)
-    elif hbbe_shapeloc:
-        logger.info(f"  [all] Swing-TREE SHAPE-CONDITIONAL LOCATION (shape→spot model + location-aware heads)")
-        from model.swing_tree_shapeloc import train_swing_tree_shapeloc_ensemble
-        ens_all = train_swing_tree_shapeloc_ensemble(df, rv_baselines, features=all_feats)
-    elif hbbe_loc:
-        logger.info(f"  [all] Swing-TREE ensemble LOCATION-NEUTRAL (location in heads, graded over per-platoon location grid)")
-        from model.swing_tree_loc import train_swing_tree_loc_ensemble
-        ens_all = train_swing_tree_loc_ensemble(df, rv_baselines, features=all_feats)
-    elif hbbe_nn:
-        logger.info(f"  [all] Swing-TREE ensemble with NEURAL-NET heads (whiff/foul/BIP MLPs)")
-        from model.swing_tree_nn import train_swing_tree_nn_ensemble
-        ens_all = train_swing_tree_nn_ensemble(df, rv_baselines, features=all_feats)
-    elif hbbe:
-        logger.info(f"  [all] Swing-TREE ensemble (whiff + foul + 3-way BIP, swing-conditional)")
-        ens_all = train_swing_tree_ensemble(df, rv_baselines, features=all_feats)
-    elif bam:
-        logger.info(f"  [all] BAM Shape+ v2 (mgcv::bam on OLS-stripped delta_run_exp residual)")
-        ens_all = train_bam_shape_v2(df, rv_baselines, features=all_feats)
-    elif nn:
-        logger.info(f"  [all] NN shape (PyTorch MLP on OLS-stripped residual, 11 shape features)")
-        ens_all = train_nn_shape(df, rv_baselines, features=all_feats)
-    elif prostuff_paper:
-        logger.info(f"  [all] proStuff+ paper architecture (whiff + foul + HR, scalar weights)")
-        ens_all = train_prostuff_paper_ensemble(df, rv_baselines, features=all_feats)
-    elif prostuff_style:
-        logger.info(f"  [all] proStuff multi-head ensemble (single global)")
-        ens_all = train_prostuff_ensemble(df, rv_baselines, _count_rv_lookup, features=all_feats)
-    elif residual_location or siera:
-        logger.info(f"  [all] Residual regressor path — target={target_col}")
-        ens_all = train_residual_model(df, all_feats, target_col=target_col)
-    elif not _family_split:
-        ens_all = train_count_neutral_ensemble(df, rv_baselines, features=all_feats)
+    logger.info(f"  [all] Driveline run-value regressor on {len(df):,} pitches, {len(all_feats)} features")
+    from model.prob_resid import train_prob_resid_ensemble
+    ens_all = train_prob_resid_ensemble(df, rv_baselines, features=all_feats)
 
     if not _family_split:
         if ens_all is None:
@@ -490,43 +437,9 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
                 logger.info(f"  Removed stale ensemble_{_fam}.pkl")
 
     def _predict_rv(df_norm, ens, rv_baselines):
-        """Route to the correct prediction function based on ensemble type."""
-        if ens.get("grl"):
-            if ens.get("use_tree"):
-                return predict_grl_tree_rv(df_norm, ens)
-            return predict_grl_rv(df_norm, ens)
-        if ens.get("swing_tree"):
-            return predict_swing_tree_rv(df_norm, ens)
-        if ens.get("tj_locresid"):
-            from model.tj_locresid import predict_tj_locresid_rv
-            return predict_tj_locresid_rv(df_norm, ens)
-        if ens.get("prob_resid"):
-            from model.prob_resid import predict_prob_resid_rv
-            return predict_prob_resid_rv(df_norm, ens)
-        if ens.get("rv_locresid"):
-            from model.rv_locresid import predict_rv_locresid_rv
-            return predict_rv_locresid_rv(df_norm, ens)
-        if ens.get("nn_shape"):
-            return predict_nn_shape(df_norm, ens)
-        if ens.get("bam_shape_v2"):
-            return predict_bam_shape_v2(df_norm, ens)
-        if ens.get("swing_outcome"):
-            return predict_swing_outcome_rv(df_norm, ens)
-        if ens.get("residual_stuff"):
-            return predict_residual_stuff_rv(df_norm, ens)
-        if ens.get("hbbe"):
-            return predict_paper_hbbe_rv(df_norm, ens)
-        if ens.get("prostuff_paper_contact"):
-            return predict_prostuff_paper_contact_rv(df_norm, ens)
-        if ens.get("prostuff_paper"):
-            return predict_prostuff_paper_rv(df_norm, ens)
-        if ens.get("prostuff"):
-            return predict_prostuff_rv(df_norm, ens)
-        if "swing_quality" in ens:
-            return predict_count_neutral_rv(df_norm, ens, rv_baselines)
-        if "residual" in ens:
-            return predict_residual_rv(df_norm, ens)
-        return predict_ensemble_rv(df_norm, ens, rv_baselines)
+        from model.prob_resid import predict_prob_resid_rv
+        return predict_prob_resid_rv(df_norm, ens)
+
 
     def _score_all_for_norm(df_norm):
         """Score every pitch using whatever ensembles we trained (global or fb/nfb split)."""
