@@ -17,8 +17,7 @@ per-pitcher profiles, leaderboards, and an interactive pitch-type editor.
 The project is **functional end-to-end**. It can:
 - ingest pitch data for MLB and several minor-league/spring levels,
 - engineer features and score every pitch with the current model,
-- generate per-player profile cards and per-season leaderboards, and
-- serve everything through a Flask web app (also deployed to Railway).
+- generate per-player profile cards and per-season leaderboards
 
 Sprint 1 focuses on **documenting** the project definition, scope, and architecture
 so the work can be reviewed and extended in later sprints.
