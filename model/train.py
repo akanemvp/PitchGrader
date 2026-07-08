@@ -21,16 +21,30 @@ import numpy as np
 import pandas as pd
 
 from config import MODEL_DIR, RV_COL
-from features.engineering import CORE_FEATURES, DIFF_FEATURES, OS_FEATURES, FB_FEATURES, BR_FEATURES, FEATURES_BY_TYPE, engineer_features, compute_fastball_diffs, build_movement_rv_lookup, apply_movement_rv, apply_fb_context
-from model.location_plus import train_location_plus, compute_residuals, save_location_plus
+from features.engineering import CORE_FEATURES, DIFF_FEATURES, OS_FEATURES, FB_FEATURES, BR_FEATURES, FEATURES_BY_TYPE, engineer_features, compute_fastball_diffs, build_movement_rv_lookup, apply_movement_rv
+import lightgbm as lgb
 from model.submodels import (
     train_residual_model,
     train_ensemble,
     train_count_neutral_ensemble,
+    train_prostuff_ensemble,
+    train_prostuff_paper_ensemble,
+    train_prostuff_paper_contact_ensemble,
+    train_paper_hbbe_ensemble,
+    train_residual_stuff_ensemble,
+    train_swing_outcome_ensemble,
+)
+from model.submodels import (
     train_whiff_model,
     predict_residual_rv,
     predict_ensemble_rv,
     predict_count_neutral_rv,
+    predict_prostuff_rv,
+    predict_prostuff_paper_rv,
+    predict_prostuff_paper_contact_rv,
+    predict_paper_hbbe_rv,
+    predict_residual_stuff_rv,
+    predict_swing_outcome_rv,
     predict_whiff_prob,
     compute_rv_baselines,
     compute_linear_weights_target,
@@ -47,7 +61,7 @@ from model.submodels import (
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v150_three_family_bip_ev"
+MODEL_VERSION = "v252_core9_spin"
 
 # 8 separate per-pitch-type models (v89-v94 architecture — best within-type correlations)
 MODEL_KEYS = ["ff", "si", "fc", "sl", "st", "cu", "ch", "fs"]
@@ -196,7 +210,7 @@ def _score_all_families(df: pd.DataFrame, ensembles: dict, rv_baselines: dict, f
     return e_rv
 
 
-def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual_model: bool = False, linear_weights: bool = False, count_rv: bool = False, count_neutral: bool = False, swing_quality: bool = False, whiff_model: bool = False, residual_location: bool = False, siera: bool = False) -> dict:
+def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual_model: bool = False, linear_weights: bool = False, count_rv: bool = False, count_neutral: bool = False, swing_quality: bool = False, whiff_model: bool = False, residual_location: bool = False, siera: bool = False, prostuff_style: bool = False, prostuff_paper: bool = False, prostuff_paper_contact: bool = False, hbbe: bool = False, hbbe_nn: bool = False, hbbe_loc: bool = False, hbbe_shapeloc: bool = False, tj_locresid: bool = False, prob_resid: bool = False, rv_locresid: bool = False, bam: bool = False, nn: bool = False, grl: bool = False) -> dict:
     """Train 3 family models (fb / br / os).
 
     ensemble_movement_rv: if True, use a 2-pass approach where movement_rv surface is built
@@ -219,7 +233,7 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
     # but not saved in older caches. We restore them from the original df after
     # loading the cache so we never need to re-engineer just because a raw column
     # was added to RAW_COLS.
-    _RAW_PASSTHROUGH = ["bb_type", "launch_speed"]
+    _RAW_PASSTHROUGH = ["bb_type", "launch_speed", "launch_angle", "hc_x", "hc_y", "stand"]
 
     _cache_loaded = False
     if os.path.exists(FEAT_CACHE) and os.path.exists(FEAT_CACHE_META):
@@ -238,12 +252,48 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
 
     if not _cache_loaded:
         logger.info("Engineering features …")
-        df, _ = engineer_features(df)
+        df, _baselines = engineer_features(df)
+
+        # Save movement baselines so inference uses the same regression coefficients
+        # (vaa_adj / haa_adj slopes, arm_bin_edges, etc.) as training.
+        if _baselines is not None:
+            _bpath = os.path.join(MODEL_DIR, "movement_baselines.pkl")
+            os.makedirs(MODEL_DIR, exist_ok=True)
+            with open(_bpath, "wb") as _fh:
+                _pkl.dump(_baselines, _fh)
+            logger.info(f"Movement baselines saved → {_bpath}")
 
         logger.info("Saving feature cache …")
         df.to_parquet(FEAT_CACHE, index=False)
         _pkl.dump({"key": _cache_key, "stage": "post_fastball"}, open(FEAT_CACHE_META, "wb"))
         logger.info(f"  Feature cache saved ({len(df):,} rows)")
+
+    # Save spin axis population means so inference can compute spin_axis_rel correctly
+    # (avoids collapse to 0 when scoring a single pitcher in isolation).
+    if "spin_axis_arm" in df.columns:
+        _spin_axis_path = os.path.join(MODEL_DIR, "spin_axis_lookup.pkl")
+        _spin_lookup: dict = {}
+        _gc = [c for c in ["pitch_type", "p_throws", "game_year"] if c in df.columns]
+        if _gc:
+            _gm = df.groupby(_gc)["spin_axis_arm"].mean()
+            for idx, val in _gm.items():
+                if len(_gc) >= 3:
+                    pt, throws, yr = idx
+                    _spin_lookup[(str(pt), str(throws), int(yr))] = float(val)
+                elif len(_gc) == 2:
+                    pt, throws = idx
+                    _spin_lookup[(str(pt), str(throws), 0)] = float(val)
+                else:
+                    _spin_lookup[(str(idx), "R", 0)] = float(val)
+        # Year=0 fallback: multi-year mean per (pt, throws)
+        _fb_cols = [c for c in ["pitch_type", "p_throws"] if c in df.columns]
+        if _fb_cols:
+            for idx, val in df.groupby(_fb_cols)["spin_axis_arm"].mean().items():
+                pt, throws = (idx if isinstance(idx, tuple) else (idx, "R"))
+                _spin_lookup[(str(pt), str(throws), 0)] = float(val)
+        with open(_spin_axis_path, "wb") as _fh:
+            _pkl.dump(_spin_lookup, _fh)
+        logger.info(f"Spin axis lookup saved ({len(_spin_lookup)} entries)")
 
     logger.info("Computing RV baselines …")
     rv_baselines = compute_rv_baselines(df)
@@ -261,8 +311,6 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
     _needs_movement_rv = "movement_rv" in features
     if residual_location or siera:
         # Residual pipeline: Location+ → residual → Stuff+
-        logger.info("Building FB context lookup …")
-        df, _ = apply_fb_context(df, lookup=None)
         # Step 2: (siera) compute SIERA target before location regression
         if siera:
             logger.info("Computing SIERA-calibrated target …")
@@ -278,9 +326,6 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
         residual_model = True  # use single-regressor path below
     elif not _needs_movement_rv or count_rv or linear_weights or whiff_model or count_neutral:
         # Fast path: skip Location+, residuals, and movement_rv surface
-        logger.info("Building FB context lookup …")
-        df, _ = apply_fb_context(df, lookup=None)
-        pass  # spd_from_fb removed — not in CORE_FEATURES
         # stand_r needed for count-neutral baseline swing model
         if "stand" in df.columns and "stand_r" not in df.columns:
             df["stand_r"] = (df["stand"] == "R").astype(int)
@@ -300,9 +345,6 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
         # --- Pass 1: bootstrap ensemble with movement_rv=0 ---
         logger.info("Pass 1: Bootstrap ensemble (movement_rv=0) for surface building …")
         df["movement_rv"] = 0.0
-        logger.info("Building FB context lookup …")
-        df, _ = apply_fb_context(df, lookup=None)
-        pass  # spd_from_fb removed — not in CORE_FEATURES
 
         boot_feats = [f for f in features if f != "movement_rv"] + ["movement_rv"]
         bootstrap_ensembles = {}
@@ -349,10 +391,6 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
             pickle.dump(mv_lookup, f)
         df = apply_movement_rv(df, mv_lookup)
 
-        logger.info("Building FB context lookup …")
-        df, _ = apply_fb_context(df, lookup=None)
-        pass  # spd_from_fb removed — not in CORE_FEATURES
-
     # --- Compute target if requested ---
     if not (residual_location or siera):
         target_col = "residual_xrv"
@@ -376,49 +414,213 @@ def train_unified(df: pd.DataFrame, ensemble_movement_rv: bool = False, residual
         logger.info(f"  linear_weight_rv: {n_valid:,} valid pitches, mean={df['linear_weight_rv'].mean():.5f}")
         target_col = "linear_weight_rv"
 
-    # --- Train single global model across all pitch types ---
+    # --- Train model(s) ---
     all_feats = [f for f in CORE_FEATURES if f in df.columns]
-    logger.info(f"  [all] Training on {len(df):,} pitches, {len(all_feats)} features …")
-    ensembles = {}
-    ens = train_ensemble(df.copy(), rv_baselines, features=all_feats)
-    if ens is None:
-        raise RuntimeError("Global model training failed")
-    save_ensemble(ens, "all")
-    ensembles["all"] = ens
-    logger.info(f"  [all] model saved.")
+    grl_feats = [f for f in all_feats if f not in ("plate_x", "plate_z")]
+    ensembles: dict = {}
+    _family_split = False
+    if grl:
+        # Single global model (one rv scale → all pitch types comparable).
+        logger.info(f"  [all] GRL adversarial NN on {len(df):,} pitches, {len(grl_feats)} features …")
+        ens_all = train_grl_ensemble(df, rv_baselines, features=grl_feats, epochs=25,
+                                     batch_size=8192, lr=1e-3, lambd_max=0.15, phase1_epochs=0)
+        if ens_all is None:
+            raise RuntimeError("Global model training failed")
+        ens_all["has_tree"] = False     # inference is NN-only (use_tree is never set)
+    elif prostuff_paper_contact:
+        logger.info(f"  [all] proStuff+ paper + contact_rv regressor (5 LGBM sub-models)")
+        # Include plate_x/plate_z — used at inference via location-grid averaging.
+        ens_all = train_prostuff_paper_contact_ensemble(df, rv_baselines, features=all_feats)
+    elif tj_locresid:
+        logger.info(f"  [all] TJ cell-mean RV target, location regressed out, pure-shape regressor")
+        from model.tj_locresid import train_tj_locresid_ensemble
+        ens_all = train_tj_locresid_ensemble(df, rv_baselines, features=all_feats)
+    elif prob_resid:
+        logger.info(f"  [all] Probability-multiplier xRV (7 outcome heads, loc+count residualized, shape heads)")
+        from model.prob_resid import train_prob_resid_ensemble
+        ens_all = train_prob_resid_ensemble(df, rv_baselines, features=all_feats)
+    elif rv_locresid:
+        logger.info(f"  [all] Continuous RV target (delta_run_exp + xwOBA contact), count-adjusted, location-residualized shape regressor")
+        from model.rv_locresid import train_rv_locresid_ensemble
+        ens_all = train_rv_locresid_ensemble(df, rv_baselines, features=all_feats)
+    elif hbbe_shapeloc:
+        logger.info(f"  [all] Swing-TREE SHAPE-CONDITIONAL LOCATION (shape→spot model + location-aware heads)")
+        from model.swing_tree_shapeloc import train_swing_tree_shapeloc_ensemble
+        ens_all = train_swing_tree_shapeloc_ensemble(df, rv_baselines, features=all_feats)
+    elif hbbe_loc:
+        logger.info(f"  [all] Swing-TREE ensemble LOCATION-NEUTRAL (location in heads, graded over per-platoon location grid)")
+        from model.swing_tree_loc import train_swing_tree_loc_ensemble
+        ens_all = train_swing_tree_loc_ensemble(df, rv_baselines, features=all_feats)
+    elif hbbe_nn:
+        logger.info(f"  [all] Swing-TREE ensemble with NEURAL-NET heads (whiff/foul/BIP MLPs)")
+        from model.swing_tree_nn import train_swing_tree_nn_ensemble
+        ens_all = train_swing_tree_nn_ensemble(df, rv_baselines, features=all_feats)
+    elif hbbe:
+        logger.info(f"  [all] Swing-TREE ensemble (whiff + foul + 3-way BIP, swing-conditional)")
+        ens_all = train_swing_tree_ensemble(df, rv_baselines, features=all_feats)
+    elif bam:
+        logger.info(f"  [all] BAM Shape+ v2 (mgcv::bam on OLS-stripped delta_run_exp residual)")
+        ens_all = train_bam_shape_v2(df, rv_baselines, features=all_feats)
+    elif nn:
+        logger.info(f"  [all] NN shape (PyTorch MLP on OLS-stripped residual, 11 shape features)")
+        ens_all = train_nn_shape(df, rv_baselines, features=all_feats)
+    elif prostuff_paper:
+        logger.info(f"  [all] proStuff+ paper architecture (whiff + foul + HR, scalar weights)")
+        ens_all = train_prostuff_paper_ensemble(df, rv_baselines, features=all_feats)
+    elif prostuff_style:
+        logger.info(f"  [all] proStuff multi-head ensemble (single global)")
+        ens_all = train_prostuff_ensemble(df, rv_baselines, _count_rv_lookup, features=all_feats)
+    elif residual_location or siera:
+        logger.info(f"  [all] Residual regressor path — target={target_col}")
+        ens_all = train_residual_model(df, all_feats, target_col=target_col)
+    elif not _family_split:
+        ens_all = train_count_neutral_ensemble(df, rv_baselines, features=all_feats)
 
-    def _save_family_norms(df_norm, suffix=""):
-        """Compute global norm from single model using raw pitch predictions."""
-        ens = ensembles.get("all")
-        all_e_rv = _predict_rv(df_norm, ens, rv_baselines) if ens else np.full(len(df_norm), np.nan)
-        valid_all = np.isfinite(all_e_rv)
-        g_mean = float(all_e_rv[valid_all].mean())
-        g_std  = float(all_e_rv[valid_all].std() + 1e-8)
+    if not _family_split:
+        if ens_all is None:
+            raise RuntimeError("Global model training failed")
+        save_ensemble(ens_all, "all")
+        ensembles["all"] = ens_all
+        logger.info(f"  [all] model saved.")
+        # Remove stale family models so predict.py uses the global model
+        for _fam in ("fb", "br", "os", "nfb"):
+            _fam_path = os.path.join(MODEL_DIR, f"ensemble_{_fam}.pkl")
+            if os.path.exists(_fam_path):
+                os.remove(_fam_path)
+                logger.info(f"  Removed stale ensemble_{_fam}.pkl")
+
+    def _predict_rv(df_norm, ens, rv_baselines):
+        """Route to the correct prediction function based on ensemble type."""
+        if ens.get("grl"):
+            if ens.get("use_tree"):
+                return predict_grl_tree_rv(df_norm, ens)
+            return predict_grl_rv(df_norm, ens)
+        if ens.get("swing_tree"):
+            return predict_swing_tree_rv(df_norm, ens)
+        if ens.get("tj_locresid"):
+            from model.tj_locresid import predict_tj_locresid_rv
+            return predict_tj_locresid_rv(df_norm, ens)
+        if ens.get("prob_resid"):
+            from model.prob_resid import predict_prob_resid_rv
+            return predict_prob_resid_rv(df_norm, ens)
+        if ens.get("rv_locresid"):
+            from model.rv_locresid import predict_rv_locresid_rv
+            return predict_rv_locresid_rv(df_norm, ens)
+        if ens.get("nn_shape"):
+            return predict_nn_shape(df_norm, ens)
+        if ens.get("bam_shape_v2"):
+            return predict_bam_shape_v2(df_norm, ens)
+        if ens.get("swing_outcome"):
+            return predict_swing_outcome_rv(df_norm, ens)
+        if ens.get("residual_stuff"):
+            return predict_residual_stuff_rv(df_norm, ens)
+        if ens.get("hbbe"):
+            return predict_paper_hbbe_rv(df_norm, ens)
+        if ens.get("prostuff_paper_contact"):
+            return predict_prostuff_paper_contact_rv(df_norm, ens)
+        if ens.get("prostuff_paper"):
+            return predict_prostuff_paper_rv(df_norm, ens)
+        if ens.get("prostuff"):
+            return predict_prostuff_rv(df_norm, ens)
+        if "swing_quality" in ens:
+            return predict_count_neutral_rv(df_norm, ens, rv_baselines)
+        if "residual" in ens:
+            return predict_residual_rv(df_norm, ens)
+        return predict_ensemble_rv(df_norm, ens, rv_baselines)
+
+    def _score_all_for_norm(df_norm):
+        """Score every pitch using whatever ensembles we trained (global or fb/nfb split)."""
+        if "all" in ensembles:
+            return _predict_rv(df_norm, ensembles["all"], rv_baselines)
+        out = np.full(len(df_norm), np.nan)
+        fam_arr = (df_norm["_mfam"].values if "_mfam" in df_norm.columns
+                   else __import__("model.cutter_stage0", fromlist=["route_to_model"]).route_to_model(df_norm).values)
+        for _fam in ("fb", "nfb"):
+            _ens = ensembles.get(_fam)
+            if _ens is None:
+                continue
+            mask = fam_arr == _fam
+            if mask.any():
+                out[mask] = _predict_rv(df_norm[mask], _ens, rv_baselines)
+        return out
+
+    def _compute_global_norm(df_norm, suffix=""):
+        """Score all pitches with the trained model(s) and compute mean/std.
+        For norm computation, just use raw training-data locations (since the
+        location-regressor-based aggregation isn't available until those models
+        are trained). The inference-time norm will be re-fitted in a separate
+        post-training step using the actual aggregation predict.py uses."""
+        # Subsample for the norm — mean/std are well-estimated from a sample, and
+        # location-neutral aggregation makes per-pitch scoring far heavier.
+        if len(df_norm) > 400_000:
+            df_norm = df_norm.sample(n=400_000, random_state=42)
+        e_rv = _score_all_for_norm(df_norm)
+        valid = np.isfinite(e_rv)
+        g_mean = float(e_rv[valid].mean())
+        g_std  = float(e_rv[valid].std() + 1e-8)
         global_norm = {"mean": g_mean, "std": g_std}
-        logger.info(f"  Global norm{suffix}: mean={g_mean:.5f}  std={g_std:.5f}  n={valid_all.sum():,}")
-        return {}, {}, global_norm
+        logger.info(f"  Global norm{suffix} [raw train loc]: mean={g_mean:.5f}  std={g_std:.5f}  n={valid.sum():,}")
+        return global_norm
 
-    fam_norms, type_norms, global_norm = _save_family_norms(df)
+    global_norm = _compute_global_norm(df)
     with open(os.path.join(MODEL_DIR, "norm_family.pkl"), "wb") as f:
-        pickle.dump(fam_norms, f)
+        pickle.dump({}, f)          # empty — predict.py falls back to global norm
     with open(os.path.join(MODEL_DIR, "norm_per_type.pkl"), "wb") as f:
-        pickle.dump(type_norms, f)
+        pickle.dump({}, f)
     with open(os.path.join(MODEL_DIR, "norm_global.pkl"), "wb") as f:
         pickle.dump(global_norm, f)
-    logger.info(f"Family norms saved: {fam_norms}")
     logger.info(f"Global norm saved: {global_norm}")
 
     # Historical norms (2020-2024)
     if "game_year" in df.columns:
         df_hist = df[df["game_year"] <= 2024]
-        fam_norms_hist, type_norms_hist, global_norm_hist = _save_family_norms(df_hist, suffix=" [hist]")
+        global_norm_hist = _compute_global_norm(df_hist, suffix=" [hist]")
         with open(os.path.join(MODEL_DIR, "norm_family_historical.pkl"), "wb") as f:
-            pickle.dump(fam_norms_hist, f)
+            pickle.dump({}, f)
         with open(os.path.join(MODEL_DIR, "norm_per_type_historical.pkl"), "wb") as f:
-            pickle.dump(type_norms_hist, f)
+            pickle.dump({}, f)
         with open(os.path.join(MODEL_DIR, "norm_global_historical.pkl"), "wb") as f:
             pickle.dump(global_norm_hist, f)
         logger.info(f"Historical norms (2020-2024) saved")
+
+    # ----- Location regressors (skipped for ensembles that don't use location at inference) -----
+    skip_loc = grl or ens_all.get("swing_outcome") or ens_all.get("bam_shape_v2") or ens_all.get("nn_shape") or ens_all.get("swing_tree") or ens_all.get("tj_locresid") or ens_all.get("prob_resid") or ens_all.get("rv_locresid")
+    if skip_loc:
+        if grl: reason = "GRL"
+        elif ens_all.get("swing_tree"): reason = "swing-tree"
+        elif ens_all.get("swing_outcome"): reason = "swing-outcome"
+        elif ens_all.get("bam_shape_v2"): reason = "BAM shape v2"
+        else: reason = "NN shape"
+        logger.info(f"Skipping location regressors ({reason} ensemble doesn't need them)")
+        version = hashlib.md5(MODEL_VERSION.encode()).hexdigest()[:12]
+        with open(os.path.join(MODEL_DIR, "model_version.txt"), "w") as f:
+            f.write(version)
+        logger.info(f"Model version: {version}")
+        logger.info("Done.")
+        return ensembles
+    # Predict (plate_x, plate_z) for each pitch from shape + same_hand.
+    # Used at inference: each pitch is scored at its predicted typical location
+    # for both same-hand and opposite-hand batter scenarios.
+    import lightgbm as lgb
+    SHAPE_FEATS_FOR_LOC = [f for f in CORE_FEATURES if f not in ("plate_x", "plate_z", "same_hand")]
+    loc_feats = SHAPE_FEATS_FOR_LOC + ["same_hand"]
+    loc_feats = [f for f in loc_feats if f in df.columns]
+    df_loc = df.dropna(subset=loc_feats + ["plate_x", "plate_z"])
+    logger.info(f"Training location regressors (n={len(df_loc):,}, feats={len(loc_feats)})")
+
+    LOC_PARAMS = dict(
+        n_estimators=400, max_depth=7, learning_rate=0.05,
+        subsample=0.8, colsample_bytree=0.8, min_child_samples=50,
+        reg_alpha=0.1, reg_lambda=1.0, random_state=42, n_jobs=-1, verbose=-1,
+    )
+    loc_x_model = lgb.LGBMRegressor(**LOC_PARAMS)
+    loc_x_model.fit(df_loc[loc_feats], df_loc["plate_x"])
+    loc_z_model = lgb.LGBMRegressor(**LOC_PARAMS)
+    loc_z_model.fit(df_loc[loc_feats], df_loc["plate_z"])
+    logger.info(f"  Location regressors fit. plate_x R²={loc_x_model.score(df_loc[loc_feats], df_loc['plate_x']):.4f}  plate_z R²={loc_z_model.score(df_loc[loc_feats], df_loc['plate_z']):.4f}")
+    with open(os.path.join(MODEL_DIR, "location_regressors.pkl"), "wb") as f:
+        pickle.dump({"feats": loc_feats, "plate_x": loc_x_model, "plate_z": loc_z_model}, f)
+    logger.info(f"  Saved location_regressors.pkl")
 
     version = hashlib.md5(MODEL_VERSION.encode()).hexdigest()[:12]
     with open(os.path.join(MODEL_DIR, "model_version.txt"), "w") as f:
@@ -450,18 +652,3 @@ def load_baselines():
         return pickle.load(f)
 
 
-def recalibrate(df: pd.DataFrame, target_mean: float = 100.0, target_std: float = 10.0) -> pd.DataFrame:
-    df = df.copy()
-    valid = df["stuff_plus"].notna() & np.isfinite(df["stuff_plus"])
-    for pt in df.loc[valid, "pitch_type"].unique():
-        mask   = valid & (df["pitch_type"] == pt)
-        scores = df.loc[mask, "stuff_plus"]
-        if len(scores) < 10:
-            continue
-        pt_mean = scores.mean()
-        pt_std  = scores.std()
-        if pt_std < 1e-6:
-            df.loc[mask, "stuff_plus"] = target_mean
-            continue
-        df.loc[mask, "stuff_plus"] = target_mean + (scores - pt_mean) / pt_std * target_std
-    return df

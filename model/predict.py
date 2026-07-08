@@ -23,14 +23,8 @@ import pandas as pd
 
 from config import MODEL_DIR
 from features.engineering import engineer_features, apply_movement_rv, OS_FEATURES
-from model.submodels import predict_residual_rv, predict_ensemble_rv, predict_count_neutral_rv, predict_prostuff_rv, predict_prostuff_paper_rv, predict_prostuff_paper_contact_rv, predict_paper_hbbe_rv, predict_residual_stuff_rv, predict_swing_outcome_rv, load_ensemble, load_rv_baselines
-from model.bam_shape_v2 import predict_bam_shape_v2
-from model.nn_shape import predict_nn_shape
-from model.swing_tree import predict_swing_tree_rv
-from model.tj_locresid import predict_tj_locresid_rv
+from model.submodels import load_ensemble, load_rv_baselines
 from model.prob_resid import predict_prob_resid_rv
-from model.rv_locresid import predict_rv_locresid_rv
-from model.grl_model import predict_grl_rv, predict_grl_tree_rv
 
 logger = logging.getLogger(__name__)
 
@@ -187,64 +181,8 @@ class StuffPlusPredictor:
         _global_std  = max(_global_src.get("std",  _global_src.get("global_std",  0.007)), 1e-6)
 
         def _score_df(df_in):
-            if _use_types:
-                e_rv = np.full(len(df_in), np.nan)
-                for fam in _TYPE_KEYS:
-                    ens = self.ensembles.get(fam)
-                    if ens is None:
-                        continue
-                    mask = _fam_row == fam
-                    if not mask.any():
-                        continue
-                    sub = df_in[mask]
-                    if ens.get("grl"):
-                        e_rv[mask] = predict_grl_tree_rv(sub, ens) if ens.get("use_tree") else predict_grl_rv(sub, ens)
-                    elif ens.get("prostuff_paper"):
-                        e_rv[mask] = predict_prostuff_paper_rv(sub, ens)
-                    elif ens.get("prostuff"):
-                        e_rv[mask] = predict_prostuff_rv(sub, ens)
-                    elif "residual" in ens:
-                        e_rv[mask] = predict_residual_rv(sub, ens)
-                    elif "swing_quality" in ens:
-                        e_rv[mask] = predict_count_neutral_rv(sub, ens, self.rv_baselines)
-                    else:
-                        e_rv[mask] = predict_ensemble_rv(sub, ens, self.rv_baselines)
-                return e_rv
-            else:
-                ens = self.ensembles["all"]
-                if ens.get("grl"):
-                    if ens.get("use_tree"):
-                        return predict_grl_tree_rv(df_in, ens)
-                    return predict_grl_rv(df_in, ens)
-                if ens.get("swing_tree"):
-                    return predict_swing_tree_rv(df_in, ens)
-                if ens.get("tj_locresid"):
-                    return predict_tj_locresid_rv(df_in, ens)
-                if ens.get("prob_resid"):
-                    return predict_prob_resid_rv(df_in, ens)
-                if ens.get("rv_locresid"):
-                    return predict_rv_locresid_rv(df_in, ens)
-                if ens.get("nn_shape"):
-                    return predict_nn_shape(df_in, ens)
-                if ens.get("bam_shape_v2"):
-                    return predict_bam_shape_v2(df_in, ens)
-                if ens.get("swing_outcome"):
-                    return predict_swing_outcome_rv(df_in, ens)
-                if ens.get("residual_stuff"):
-                    return predict_residual_stuff_rv(df_in, ens)
-                if ens.get("hbbe"):
-                    return predict_paper_hbbe_rv(df_in, ens)
-                if ens.get("prostuff_paper_contact"):
-                    return predict_prostuff_paper_contact_rv(df_in, ens)
-                if ens.get("prostuff_paper"):
-                    return predict_prostuff_paper_rv(df_in, ens)
-                if ens.get("prostuff"):
-                    return predict_prostuff_rv(df_in, ens)
-                if "residual" in ens:
-                    return predict_residual_rv(df_in, ens)
-                if "swing_quality" in ens:
-                    return predict_count_neutral_rv(df_in, ens, self.rv_baselines)
-                return predict_ensemble_rv(df_in, ens, self.rv_baselines)
+            # Production model is the single Driveline run-value regressor ("all").
+            return predict_prob_resid_rv(df_in, self.ensembles["all"])
 
         def _normalize(e_rv, pt_series):
             """Normalize using one global norm (single scale across all pitch types & models)."""
