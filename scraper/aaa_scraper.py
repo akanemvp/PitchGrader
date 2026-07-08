@@ -1,17 +1,18 @@
 """
-AAA (Triple-A) pitch scraper via Baseball Savant gamefeed JSON.
+Minor-league pitch scraper via the MLB StatsAPI per-game gamefeed JSON.
 
-Statcast CSV bulk download does NOT return AAA data, so we use Savant's per-game
-gamefeed JSON endpoint instead. The schedule of AAA games comes from the MLB
-StatsAPI (sportId=11 = Triple-A).
+The Statcast CSV bulk download doesn't return minor-league data, so we pull each
+game's feed from the MLB StatsAPI instead. `sport_id` selects the level and an
+optional `league_id` narrows within it:
+  sportId=11 → Triple-A (AAA)
+  sportId=16 → Rookie / complex (ACL)
+  sportId=14 + leagueId=123 → Florida State League (Low-A, FSL)
 
 Pipeline:
-  1. Get game_pks from MLB schedule for a date range
-  2. Fetch gamefeed JSON per game
-  3. Map gamefeed pitch fields → Statcast schema
+  1. Get game_pks from the MLB schedule for a date range (sport_id / league_id)
+  2. Fetch the gamefeed JSON per game
+  3. Map gamefeed pitch fields → the Statcast schema our model expects
   4. Save/append to pitches_{table_name}
-
-Pattern mirrors download_spring() in statcast_scraper.py.
 """
 from __future__ import annotations
 import io, json, logging, sqlite3, time

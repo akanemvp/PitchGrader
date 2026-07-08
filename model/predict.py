@@ -1,9 +1,17 @@
 """
-Stuff+ inference — single global model, global normalization.
+Stuff+ inference — loads the trained model and turns pitches into grades.
 
-One LightGBM ensemble (whiff / decision / called-strike sub-models) trained on all
-pitch types. Grades are globally comparable: 100 = average across all pitch types,
-std=10. No per-type or per-family re-normalization.
+StuffPlusPredictor loads the saved model (a single LightGBM regressor on the
+Driveline run-value target) plus the frozen 2022-24 normalization baseline, then:
+  1. engineers shape features for each pitch (unless already engineered),
+  2. predicts each pitch's expected run value (xRV),
+  3. normalizes to the Stuff+ scale: 100 = league average, 10 = one standard
+     deviation. Lower xRV = better pitch = higher grade.
+
+Two grade columns are produced: `stuff_plus` (the raw z-score, used for
+aggregation/leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap
+so individual pitches top out ~135 instead of running to extreme outliers).
+Grades are globally comparable across pitch types — no per-type re-normalization.
 """
 
 import logging

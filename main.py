@@ -3,10 +3,11 @@ Stuff+ CLI entry point.
 
 Commands
 --------
-  train     — Load training data, engineer features, train all models,
-              score training data, and save pitcher-level norms.
-  score     — Score each historical season table and write *_scored tables.
-  profiles  — Load scored data and regenerate player cards / leaderboards.
+  train     — Load training data (2022-24), engineer shape features, train the
+              model, and save the frozen normalization baseline. Use --prob-resid
+              for the current Driveline run-value model.
+  score     — Score each season's raw pitch table and write the *_scored tables.
+  profiles  — Aggregate scored pitches into per-pitcher cards and leaderboards.
   live      — Start the live 2026 update loop (delegates to live/live_update.py).
 """
 
