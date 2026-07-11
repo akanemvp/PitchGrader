@@ -15,18 +15,24 @@ per-pitcher profiles, leaderboards, and an interactive pitch-type editor.
 
 ## Current Status
 The project is **functional end-to-end**. It can:
-- ingest pitch data for MLB and several minor-league/spring levels,
-- engineer features and score every pitch with the current model,
-- generate per-player profile cards and per-season leaderboards, and
-- serve everything through a Flask web app (also deployed to Railway).
+- ingest pitch data for MLB, several minor-league/spring levels, and tracked NCAA college games,
+- engineer shape features and score every pitch with the current model, and
+- generate per-player profile cards and per-season leaderboards.
 
-Sprint 1 focuses on **documenting** the project definition, scope, and architecture
-so the work can be reviewed and extended in later sprints.
+**Sprint 2** delivers a working prototype: a Flask web app with an interactive
+pitch-type editor that re-classifies and re-scores pitches live (the Sprint 2 feature
+slice), built on the Sprint 1 project definition and architecture.
 
 ## Project Documents
+**Sprint 2**
+- [docs/architecture.md](docs/architecture.md) — current system architecture and the Sprint 2 feature slice
+- [docs/manual-verification.md](docs/manual-verification.md) — how the prototype is verified by hand
+- [docs/ai-implementation-review.md](docs/ai-implementation-review.md) — review of AI-assisted implementation
+
+**Sprint 1**
 - [docs/project/project-vision.md](docs/project/project-vision.md) — the problem, users, goals, and scope
 - [docs/project/requirements.md](docs/project/requirements.md) — functional, data, and non-functional requirements
-- [docs/project/architecture.md](docs/project/architecture.md) — how the system is organized
+- [docs/project/architecture.md](docs/project/architecture.md) — original architecture write-up
 
 ## Setup Notes
 > Setup is still being finalized and will be expanded as the project stabilizes.
