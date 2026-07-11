@@ -2103,6 +2103,7 @@ def _table_for_season(season: str) -> "str | None":
         "aaa2026":      "pitches_aaa2026_scored",
         "acl2026":      "pitches_acl2026_scored",
         "fsl2026":      "pitches_fsl2026_scored",
+        "college2026":  "pitches_college2026_scored",
         "breakout2026": "pitches_breakout2026_scored",
         "springall2026": "pitches_springall2026_scored",
     }.get(season)
@@ -3152,6 +3153,17 @@ def api_reclassify_profile():
                     "pt": str(r.pitch_type), "st": str(r.stand)}
                    for r in sdf.itertuples()]
 
+    # Per-pitch movement dots carrying the RECLASSIFIED pitch_type, so the movement
+    # chart's "each pitch" overlay recolors to the new labels in the preview (the
+    # season endpoint would otherwise re-fetch the original DB labels).
+    movement_dots = []
+    if all(c in df_scored.columns for c in ["pfx_x_arm", "pfx_z_in", "pitch_type"]):
+        mdf = df_scored[["pfx_x_arm", "pfx_z_in", "pitch_type"]].dropna()
+        movement_dots = [{"hb": round(float(r.pfx_x_arm), 2),
+                          "ivb": round(float(r.pfx_z_in), 2),
+                          "pt": str(r.pitch_type)}
+                         for r in mdf.itertuples()]
+
     profile = _find_profile(season, player_name)
 
     return jsonify({
@@ -3165,6 +3177,7 @@ def api_reclassify_profile():
         "total_pitches": int(sum(p["n"] for p in pitches)),
         "pitches":       pitches,
         "scatter":       scatter,
+        "movement_dots": movement_dots,
         "_preview":      True,
     })
 

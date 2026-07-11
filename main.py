@@ -89,6 +89,7 @@ def cmd_score():
         "aaa2026": "current",
         "acl2026": "current",
         "fsl2026": "current",
+        "college2026": "historical",   # completed season — score like 2025 (historical norm)
     }
     seasons = list(season_norm.keys())
     # Default: rescore 2025 and up (2023/2024 are frozen historical). Pass explicit
@@ -155,6 +156,7 @@ def cmd_profiles():
         ("aaa2026",      "aaa2026"),
         ("acl2026",      "acl2026"),
         ("fsl2026",      "fsl2026"),
+        ("college2026",  "college2026"),
         ("springall2026", "springall2026"),  # spring2026 + breakout2026 combined
     ]
     # Default: 2025 and up (matches scoring scope). Pass explicit season names to override.
