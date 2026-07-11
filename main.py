@@ -3,10 +3,11 @@ Stuff+ CLI entry point.
 
 Commands
 --------
-  train     — Load training data, engineer features, train all models,
-              score training data, and save pitcher-level norms.
-  score     — Score each historical season table and write *_scored tables.
-  profiles  — Load scored data and regenerate player cards / leaderboards.
+  train     — Load training data, engineer shape features, train the Driveline
+              run-value model, and save the frozen normalization baseline.
+              Optional --sample=<frac> trains on a random subset.
+  score     — Score each season's raw pitch table and write the *_scored tables.
+  profiles  — Aggregate scored pitches into per-pitcher cards and leaderboards.
   live      — Start the live 2026 update loop (delegates to live/live_update.py).
 """
 
@@ -41,20 +42,12 @@ def cmd_train():
         vx0, vy0, vz0, ax, ay, az,
         spin_axis, arm_angle,
         delta_run_exp, estimated_woba_using_speedangle,
-        bb_type, launch_speed,
+        bb_type, launch_speed, launch_angle, hc_x, hc_y,
         bat_score, home_score, away_score,
         post_bat_score, inning, outs_when_up, on_1b, on_2b, on_3b,
         game_year
     """
     sample_frac = None
-    ensemble_movement_rv  = "--ensemble-movement-rv" in sys.argv
-    count_rv              = "--count-rv" in sys.argv
-    count_neutral         = "--count-neutral" in sys.argv
-    swing_quality         = "--swing-quality" in sys.argv
-    siera                 = "--siera" in sys.argv
-    residual_location     = "--residual-location" in sys.argv
-    residual_model        = "--residual-model" in sys.argv or "--linear-weights" in sys.argv or count_rv or swing_quality
-    linear_weights        = "--linear-weights" in sys.argv
     for arg in sys.argv:
         if arg.startswith("--sample="):
             sample_frac = float(arg.split("=")[1])
@@ -72,25 +65,9 @@ def cmd_train():
     else:
         logger.info(f"  Loaded {len(df):,} rows.")
 
-    logger.info("Training models …")
-    if ensemble_movement_rv:
-        logger.info("  Using ensemble-based movement_rv (2-pass training)")
-    if count_neutral:
-        logger.info("  Using count-neutral ensemble (swing residual approach)")
-    elif swing_quality:
-        logger.info("  Using swing quality target (whiff + xwOBAcon, swings only)")
-    elif count_rv:
-        logger.info("  Using count-stratified RV target (TJ Stats approach)")
-    elif linear_weights:
-        logger.info("  Using linear weights target (context-neutral per-pitch RV)")
-    elif residual_model:
-        logger.info("  Using residual xRV model (single regressor per family)")
-    elif residual_location:
-        logger.info("  Using residual pipeline: Location+ → residual → Stuff+")
-    elif siera:
-        logger.info("  Using SIERA-calibrated target: Location+(siera_rv) → residual → Stuff+")
+    logger.info("Training the model …")
     from model.train import train_unified
-    train_unified(df, ensemble_movement_rv=ensemble_movement_rv, residual_model=residual_model, linear_weights=linear_weights, count_rv=count_rv, count_neutral=count_neutral, swing_quality=swing_quality, residual_location=residual_location, siera=siera)
+    train_unified(df)
 
     logger.info("Done.")
 
@@ -109,8 +86,20 @@ def cmd_score():
         "2023": "historical", "2024": "historical", "2025": "historical",
         "spring2026": "current", "breakout2026": "current",
         "2026": "current",
+        "aaa2026": "current",
+        "acl2026": "current",
+        "fsl2026": "current",
+        "college2026": "historical",   # completed season — score like 2025 (historical norm)
     }
     seasons = list(season_norm.keys())
+    # Default: rescore 2025 and up (2023/2024 are frozen historical). Pass explicit
+    # season names as args to override, e.g. `main.py score 2023 2024`.
+    _explicit = [a for a in sys.argv[2:] if not a.startswith("--")]
+    if _explicit:
+        seasons = [s for s in seasons if s in _explicit]
+    else:
+        seasons = [s for s in seasons if s not in ("2023", "2024")]
+    logger.info(f"Scoring seasons: {seasons}")
     for s in seasons:
         src_table   = f"pitches_{s}"
         dst_table   = f"pitches_{s}_scored"
@@ -136,6 +125,15 @@ def cmd_score():
 
         df_scored["stuff_plus"] = df_scored["stuff_plus"].clip(50.0, 160.0)
 
+        # SQLite is case-insensitive on column names — drop case-insensitive dupes
+        seen, keep = {}, []
+        for c in df_scored.columns:
+            lc = c.lower()
+            if lc in seen: continue
+            seen[lc] = c; keep.append(c)
+        if len(keep) != len(df_scored.columns):
+            df_scored = df_scored[keep]
+
         conn = sqlite3.connect(DB_PATH, timeout=60)
         df_scored.to_sql(dst_table, conn, if_exists="replace", index=False, chunksize=10000)
         conn.close()
@@ -155,7 +153,20 @@ def cmd_profiles():
         ("spring2026",   "spring2026"),
         ("breakout2026", "breakout2026"),
         ("2026",         "2026"),
+        ("aaa2026",      "aaa2026"),
+        ("acl2026",      "acl2026"),
+        ("fsl2026",      "fsl2026"),
+        ("college2026",  "college2026"),
+        ("springall2026", "springall2026"),  # spring2026 + breakout2026 combined
     ]
+    # Default: 2025 and up (matches scoring scope). Pass explicit season names to override.
+    _explicit = [a for a in sys.argv[2:] if not a.startswith("--")]
+    if _explicit:
+        seasons = [t for t in seasons if t[0] in _explicit]
+    else:
+        seasons = [t for t in seasons if t[0] not in ("2023", "2024")]
+    logger.info(f"Building profiles for: {[t[0] for t in seasons]}")
+
     conn = sqlite3.connect(DB_PATH)
     tables = [r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()]
     conn.close()
@@ -182,7 +193,11 @@ def cmd_profiles():
 
 def cmd_live():
     from live.live_update import run_live
-    run_live()
+    interval = 60   # refresh once a minute by default
+    for arg in sys.argv:
+        if arg.startswith("--interval="):
+            interval = int(arg.split("=")[1])
+    run_live(interval_seconds=interval)
 
 
 if __name__ == "__main__":

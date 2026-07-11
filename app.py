@@ -41,6 +41,18 @@ logger = logging.getLogger(__name__)
 # _SCORED_VERSION_FILE: persists on the Railway Volume (data/.spring_scored_model_version)
 _MODEL_VERSION_FILE  = os.path.join(MODEL_DIR, "model_version.txt")
 _SCORED_VERSION_FILE = os.path.join(DATA_DIR,  ".spring_scored_model_version")
+# Separate marker for the regular-season 2026 table so a model upgrade triggers a
+# full rescore of pitches_2026_scored independently of the spring rescore.
+_LIVE_SCORED_VERSION_FILE = os.path.join(DATA_DIR, ".live_scored_model_version")
+# pitcher_id → canonical display name. Reconciles /gf names (accent-stripped,
+# sometimes mis-parsed for suffixes/multi-word surnames) with the authoritative
+# official-CSV names so a pitcher's games never split across spellings.
+_CANON_NAMES_PATH = os.path.join(DATA_DIR, "pitcher_names.pkl")
+try:
+    with open(_CANON_NAMES_PATH, "rb") as _f:
+        _CANON_NAMES = pickle.load(_f)
+except Exception:
+    _CANON_NAMES = {}
 
 # ---------------------------------------------------------------------------
 # Bootstrap historical editor tables if missing (e.g. fresh Railway volume)
@@ -272,6 +284,54 @@ def _gf_name(name: str | None) -> "str | None":
         return name
     parts = name.rsplit(' ', 1)
     return f"{parts[1]}, {parts[0]}" if len(parts) == 2 else name
+
+
+def _apply_canonical_names(df: pd.DataFrame) -> pd.DataFrame:
+    """Unify a pitcher's display name across data sources by pitcher id.
+
+    /gf strips accents (Ureña→Urena) and mis-parses suffixes/multi-word surnames
+    (McCullers Jr.→'Jr., Lance McCullers'), while the official CSV is correct.
+    Pick the best variant per pitcher — fewest tokens after the comma (proper
+    'Surname, First'), then accented — learning from CSV rows in the batch and a
+    persisted lookup, so games never split across spellings.
+    """
+    if "pitcher" not in df.columns or "player_name" not in df.columns:
+        return df
+
+    def _has_accent(s):  return any(ord(c) > 127 for c in str(s))
+    def _after_comma(n): return len(str(n).split(",", 1)[1].split()) if "," in str(n) else len(str(n).split())
+    def _score(n):       return (-_after_comma(n), _has_accent(n), len(str(n)))
+
+    canon = dict(_CANON_NAMES)
+    changed = False
+    sub = df.dropna(subset=["pitcher", "player_name"])
+    for pid, g in sub.groupby("pitcher"):
+        try:
+            pid = int(pid)
+        except (TypeError, ValueError):
+            continue
+        cands = list(g["player_name"].unique())
+        if pid in canon:
+            cands.append(canon[pid])
+        best = max(cands, key=_score)
+        if canon.get(pid) != best:
+            canon[pid] = best
+            changed = True
+    if changed:
+        try:
+            with open(_CANON_NAMES_PATH, "wb") as _fh:
+                pickle.dump(canon, _fh)
+            _CANON_NAMES.update(canon)
+        except Exception:
+            pass
+
+    def _pick(row):
+        p = row.get("pitcher")
+        if pd.isna(p):
+            return row["player_name"]
+        return canon.get(int(p), row["player_name"])
+    df["player_name"] = df.apply(_pick, axis=1)
+    return df
 
 
 def _spin_axis_from_pfx(pfx_x, pfx_z) -> float | None:
@@ -1010,6 +1070,92 @@ def _refresh_live() -> None:
         from scraper.statcast_scraper import load_from_db, save_to_db
         from profiles.player_cards import generate_all_cards
 
+        # ── 0. Model version check — force full rescore when new models deployed ──
+        # Mirrors the spring trigger but for the regular-season table. If the
+        # deployed model_version.txt differs from the version recorded when
+        # pitches_2026_scored was last (re)built, every 2026 pitch is re-scored.
+        try:
+            _deployed_ver = open(_MODEL_VERSION_FILE).read().strip() if os.path.exists(_MODEL_VERSION_FILE) else ""
+            _scored_ver   = open(_LIVE_SCORED_VERSION_FILE).read().strip() if os.path.exists(_LIVE_SCORED_VERSION_FILE) else ""
+            if _deployed_ver and _deployed_ver != _scored_ver:
+                logger.info(
+                    f"Live refresh: model version changed "
+                    f"({_scored_ver[:8] or 'none'} → {_deployed_ver[:8]}) — "
+                    f"batch-rescoring all 2026 pitches with new model."
+                )
+                _conn_ver = sqlite3.connect(DB_PATH)
+                _conn_ver.execute("DROP TABLE IF EXISTS pitches_2026_scored")
+                _conn_ver.commit()
+                _all_pks_ver = [r[0] for r in _conn_ver.execute(
+                    "SELECT DISTINCT CAST(game_pk AS INTEGER) FROM pitches_2026 "
+                    "WHERE game_pk IS NOT NULL ORDER BY game_pk"
+                ).fetchall()]
+                _conn_ver.close()
+                logger.info(f"Live refresh: rescoring {len(_all_pks_ver)} games in batches.")
+                _VER_BATCH = 25
+                _pred_ver = _get_predictor()
+                _first_ver = True
+                for _vi in range(0, len(_all_pks_ver), _VER_BATCH):
+                    _vpks = _all_pks_ver[_vi:_vi + _VER_BATCH]
+                    _vph  = ",".join("?" * len(_vpks))
+                    try:
+                        _conn_vr = sqlite3.connect(DB_PATH)
+                        _df_vr = pd.read_sql_query(
+                            f"SELECT * FROM pitches_2026 "
+                            f"WHERE CAST(game_pk AS INTEGER) IN ({_vph})",
+                            _conn_vr, params=_vpks
+                        )
+                        _conn_vr.close()
+                        if _df_vr.empty:
+                            continue
+                        _df_vr = _apply_xwoba(_df_vr)
+                        _sc_vr = _pred_ver.predict(_df_vr)
+                        del _df_vr
+                        gc.collect()
+                        _slim_vr = [c for c in _SCORED_COLS if c in _sc_vr.columns]
+                        _sc_vr   = _sc_vr[_slim_vr].copy()
+                        _conn_vw = sqlite3.connect(DB_PATH)
+                        _sc_vr.to_sql("pitches_2026_scored", _conn_vw,
+                                      if_exists="replace" if _first_ver else "append",
+                                      index=False)
+                        _conn_vw.commit()
+                        _conn_vw.close()
+                        del _sc_vr
+                        gc.collect()
+                        _first_ver = False
+                        logger.info(
+                            f"Live refresh: version rescore batch "
+                            f"{_vi // _VER_BATCH + 1}/"
+                            f"{(len(_all_pks_ver) + _VER_BATCH - 1) // _VER_BATCH} done."
+                        )
+                    except Exception as _vbatch_exc:
+                        logger.warning(f"Live refresh: version rescore batch {_vi} failed: {_vbatch_exc}")
+                _conn_vc = sqlite3.connect(DB_PATH)
+                try:
+                    _vtbl_cols = [r[1] for r in _conn_vc.execute(
+                        "PRAGMA table_info(pitches_2026_scored)"
+                    ).fetchall()]
+                    _vsel = [c for c in _SCORED_COLS if c in _vtbl_cols]
+                    _df_vc = pd.read_sql(
+                        f"SELECT {', '.join(_vsel)} FROM pitches_2026_scored",
+                        _conn_vc
+                    )
+                finally:
+                    _conn_vc.close()
+                generate_all_cards(_df_vc, season='2026', skip_png=True)
+                del _df_vc
+                gc.collect()
+                _cached_leaderboard.cache_clear()
+                _live_last_updated = datetime.now()
+                logger.info("Live refresh: full model-upgrade rescore complete.")
+                try:
+                    open(_LIVE_SCORED_VERSION_FILE, "w").write(_deployed_ver)
+                except Exception:
+                    pass
+                return
+        except Exception as _ver_exc:
+            logger.warning(f"Live refresh: version check/rescore error ({_ver_exc}); continuing with normal flow.")
+
         # ── 1. CSV bulk export for completed/historical games ──────────────
         max_date = _live_max_date()
         fetch_from = (
@@ -1151,11 +1297,19 @@ def _refresh_live() -> None:
         _live_replace_pks = today_existing_pks | csv_pks
         if "player_name" in to_add.columns:
             to_add["player_name"] = to_add["player_name"].apply(_gf_name)
+            to_add = _apply_canonical_names(to_add)   # reconcile /gf vs CSV spellings by pitcher id
         conn_raw = sqlite3.connect(DB_PATH)
         try:
             _raw_exists = conn_raw.execute(
                 "SELECT name FROM sqlite_master WHERE type='table' AND name='pitches_2026'"
             ).fetchone() is not None
+            if _raw_exists:
+                # Ensure the arm_angle column exists so the real (CSV) arm angle is
+                # stored when completed games are re-inserted (auto-backfill).
+                _cols0 = [r[1] for r in conn_raw.execute("PRAGMA table_info(pitches_2026)").fetchall()]
+                if "arm_angle" not in _cols0:
+                    conn_raw.execute("ALTER TABLE pitches_2026 ADD COLUMN arm_angle REAL")
+                    conn_raw.commit()
             if _live_replace_pks and _raw_exists:
                 ph = ",".join("?" * len(_live_replace_pks))
                 conn_raw.execute(
@@ -1630,10 +1784,10 @@ threading.Thread(target=_repair_scored_table, daemon=True).start()
 
 
 def _live_refresh_loop():
-    """Background thread: refresh regular-season 2026 data every 90 seconds."""
+    """Background thread: refresh regular-season 2026 data every 60 seconds."""
     while True:
         _refresh_live()
-        time.sleep(90)
+        time.sleep(60)
 
 
 _live_thread = threading.Thread(target=_live_refresh_loop, daemon=True)
@@ -1734,8 +1888,10 @@ def _refresh_breakout() -> None:
         conn.close()
 
         new_df = _apply_xwoba(new_df)
-        new_df.to_sql("pitches_breakout2026", sqlite3.connect(DB_PATH),
-                      if_exists="append", index=False)
+        # Dedup-safe append (skips pitches already stored) — Spring Breakout is a
+        # finished event, so re-fetches must not re-duplicate the static games.
+        from scraper.statcast_scraper import append_to_db as _append_dedup
+        _append_dedup(new_df, table="pitches_breakout2026")
 
         # Score all breakout pitches and regenerate profiles
         conn = sqlite3.connect(DB_PATH)
@@ -1941,16 +2097,31 @@ def serve_card(player_name_season: str):
 
 def _table_for_season(season: str) -> "str | None":
     """Map a season string to its scored SQLite table name (live seasons only)."""
-    return {"spring2026": "pitches_spring2026_scored", "2026": "pitches_2026_scored"}.get(season)
+    return {
+        "spring2026":   "pitches_spring2026_scored",
+        "2026":         "pitches_2026_scored",
+        "aaa2026":      "pitches_aaa2026_scored",
+        "acl2026":      "pitches_acl2026_scored",
+        "fsl2026":      "pitches_fsl2026_scored",
+        "college2026":  "pitches_college2026_scored",
+        "breakout2026": "pitches_breakout2026_scored",
+        "springall2026": "pitches_springall2026_scored",
+    }.get(season)
 
 
 _boxscore_er_cache: dict[int, dict[int, int]] = {}  # game_pk → {pitcher_id → earned_runs}
+_boxscore_ip_cache: dict[int, dict[int, int]] = {}  # game_pk → {pitcher_id → outs}
 
 def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
-    """Fetch pitcher earned runs from MLB Stats API box score. Cached per game."""
+    """Fetch pitcher earned runs (and innings→outs) from MLB Stats API box score.
+    Cached per game. Also populates _boxscore_ip_cache: the boxscore inningsPitched
+    is authoritative for IP — it captures baserunning outs (pickoffs / caught
+    stealing) and the trailing out of a double play that the pitch-event stream
+    omits, which event-counting alone misses."""
     if game_pk in _boxscore_er_cache:
         return _boxscore_er_cache[game_pk]
     result: dict[int, int] = {}
+    ip_result: dict[int, int] = {}
     try:
         import urllib.request
         url = f"https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
@@ -1960,12 +2131,24 @@ def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
             players = data["teams"][team]["players"]
             for pitcher_id in data["teams"][team].get("pitchers", []):
                 p = players.get(f"ID{pitcher_id}", {})
-                er = p.get("stats", {}).get("pitching", {}).get("earnedRuns")
+                stats = p.get("stats", {}).get("pitching", {})
+                er = stats.get("earnedRuns")
                 if er is not None:
                     result[int(pitcher_id)] = int(er)
+                # inningsPitched is a string like "1.0", "0.2" — convert to outs
+                ip_str = stats.get("inningsPitched")
+                if ip_str is not None:
+                    try:
+                        parts = str(ip_str).split(".")
+                        ip_result[int(pitcher_id)] = (
+                            int(parts[0]) * 3 + int(parts[1]) if len(parts) == 2
+                            else int(parts[0]) * 3)
+                    except Exception:
+                        pass
     except Exception:
         pass
     _boxscore_er_cache[game_pk] = result
+    _boxscore_ip_cache[game_pk] = ip_result
     return result
 
 
@@ -2058,15 +2241,24 @@ def _compute_game_stats(gdf: pd.DataFrame) -> dict:
             # Statcast format: compute from score differential
             run_diff    = (ab_ends["post_bat_score"] - ab_ends["bat_score"]).clip(lower=0)
             earned_runs = int(run_diff.sum())
-    if earned_runs is None and "game_pk" in gdf.columns and "pitcher" in gdf.columns:
-        # Stockyard format (bat_score null or missing): look up from MLB Stats API box score
+    if "game_pk" in gdf.columns and "pitcher" in gdf.columns:
         game_pk_val = gdf["game_pk"].dropna().mode()
         pitcher_val = gdf["pitcher"].dropna().mode()
         if not game_pk_val.empty and not pitcher_val.empty:
-            er_map = _get_boxscore_earned_runs(int(game_pk_val.iloc[0]))
-            er = er_map.get(int(pitcher_val.iloc[0]))
-            if er is not None:
-                earned_runs = er
+            gp_i  = int(game_pk_val.iloc[0])
+            pid_i = int(pitcher_val.iloc[0])
+            er_map = _get_boxscore_earned_runs(gp_i)  # also fills _boxscore_ip_cache
+            # Stockyard format (bat_score null/missing): earned runs from boxscore
+            if earned_runs is None:
+                er = er_map.get(pid_i)
+                if er is not None:
+                    earned_runs = er
+            # Boxscore IP is authoritative for outs — overrides the event-counted
+            # value so DP/baserunning outs (e.g. a pickoff completing a double
+            # play) the pitch-event stream misses are credited on the game line.
+            bs_outs = _boxscore_ip_cache.get(gp_i, {}).get(pid_i)
+            if bs_outs is not None and bs_outs != total_outs:
+                total_outs = bs_outs
 
     return {
         "opp_team":     opp_team,
@@ -2961,6 +3153,17 @@ def api_reclassify_profile():
                     "pt": str(r.pitch_type), "st": str(r.stand)}
                    for r in sdf.itertuples()]
 
+    # Per-pitch movement dots carrying the RECLASSIFIED pitch_type, so the movement
+    # chart's "each pitch" overlay recolors to the new labels in the preview (the
+    # season endpoint would otherwise re-fetch the original DB labels).
+    movement_dots = []
+    if all(c in df_scored.columns for c in ["pfx_x_arm", "pfx_z_in", "pitch_type"]):
+        mdf = df_scored[["pfx_x_arm", "pfx_z_in", "pitch_type"]].dropna()
+        movement_dots = [{"hb": round(float(r.pfx_x_arm), 2),
+                          "ivb": round(float(r.pfx_z_in), 2),
+                          "pt": str(r.pitch_type)}
+                         for r in mdf.itertuples()]
+
     profile = _find_profile(season, player_name)
 
     return jsonify({
@@ -2974,6 +3177,7 @@ def api_reclassify_profile():
         "total_pitches": int(sum(p["n"] for p in pitches)),
         "pitches":       pitches,
         "scatter":       scatter,
+        "movement_dots": movement_dots,
         "_preview":      True,
     })
 
@@ -2985,4 +3189,7 @@ def api_reclassify_profile():
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5001))
-    app.run(debug=True, port=port, host="0.0.0.0")
+    # use_reloader=False: the reloader would re-import this module in a second
+    # process, double-starting every background refresh thread (and racing on the
+    # SQLite rescore). Production runs via gunicorn, so this only affects local dev.
+    app.run(debug=True, port=port, host="0.0.0.0", use_reloader=False)

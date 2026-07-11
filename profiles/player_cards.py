@@ -86,8 +86,9 @@ def stuff_grade(sp: float, pt_mean: float = 100.0) -> tuple:
     Pitch types whose model-learned mean differs from 100 (e.g., CU ≈ 94,
     KC ≈ 95) no longer receive systematically suppressed grades.
 
-    Pass pt_mean from the pitcher_level_norms for the relevant pitch type.
-    Defaults to 100.0 (flat scale) for overall/leaderboard grades.
+    pt_mean anchors the thresholds to a pitch type's own mean; it defaults to
+    100.0 (flat scale), which is what all current callers pass since grades are
+    globally calibrated to 100.
     """
     # Shift so that pt_mean maps to 100, then apply standard flat thresholds
     s = sp + (100.0 - pt_mean)
@@ -176,7 +177,6 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
     Includes all pitch types with at least 1 scored pitch. Low-velocity
     pitches (nulled by velocity floor in predict.py) are excluded from the
     count automatically since n uses ("stuff_plus", "count") which skips NaN.
-    Bayesian shrinkage in recalibrate_summaries handles small-n cases.
     Sorted by usage (count desc).
 
     New fields added for profile visualizations:
@@ -273,32 +273,14 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
     total_runs = 0
     _has_run_data = False
     if "events" in df.columns:
-        # ── Innings pitched (unified: handles Statcast CSV + /gf + mixed) ──
-        # Always collapse to one event per at-bat first using game_pk+at_bat_number.
-        # /gf repeats events on every pitch; Statcast only puts them on terminal pitch.
-        # Both are correctly reduced to one event per PA by this groupby.
-        grp_cols = [c for c in ["game_pk", "at_bat_number"] if c in df.columns]
-        if grp_cols:
-            ev = df.groupby(grp_cols)["events"].last().dropna()
-        else:
-            # Fallback: collapse consecutive identical events (no groupby cols)
-            _ev_all = df["events"]
-            _pa_grp = (_ev_all != _ev_all.shift()).cumsum()
-            ev = _ev_all.groupby(_pa_grp).last().dropna()
+        def _event_outs(ev_series):
+            """Outs from a per-at-bat-collapsed event series. Handles Statcast
+            (lowercase) + /gf Title-Case sets; DP events count as 2 outs."""
+            single = int(ev_series.isin(_out_events | _out_events_cap).sum())
+            dp_gf  = int(ev_series.isin(_dp_events_cap).sum())      # /gf DP: +1 (already 1 in _out_events_cap)
+            dp_sc  = int(ev_series.isin(_dp_events).sum() * 2)      # Statcast DP: not in single set → ×2
+            return single + dp_gf + dp_sc
 
-        # Count outs using both lowercase (Statcast) and Title-Case (/gf) sets.
-        # Single-out events: each = 1 out
-        single_outs = int(ev.isin(_out_events | _out_events_cap).sum())
-        # Double-play events add +1 extra out each.
-        # /gf DP events (e.g. "GIDP") are already in _out_events_cap (1 out there)
-        #   plus they appear in _dp_events_cap (+1 extra) = 2 total. ✓
-        # Statcast DP events (e.g. "double_play") are NOT in _out_events, so they
-        #   contribute 0 from single_outs; multiply by 2 here = 2 total. ✓
-        dp_extra_gf  = int(ev.isin(_dp_events_cap).sum())
-        dp_statcast  = int(ev.isin(_dp_events).sum() * 2)
-        total_outs   = single_outs + dp_extra_gf + dp_statcast
-
-        # ── Runs / ERA (per-game, trying bat_score first then boxscore API) ──
         pitcher_id_int = None
         if "pitcher" in df.columns:
             _pid_mode = df["pitcher"].dropna().mode()
@@ -308,30 +290,52 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
                 except (ValueError, TypeError):
                     pass
 
-        for gp in (df["game_pk"].dropna().unique() if "game_pk" in df.columns else []):
-            gp_int = int(gp)
-            gp_mask = df["game_pk"] == gp
-            gp_df   = df[gp_mask]
-            # Try bat_score method (Statcast CSV — most reliable)
-            if all(c in gp_df.columns for c in ["bat_score", "post_bat_score"]):
-                ab_ends = gp_df[gp_df["events"].notna() & gp_df["bat_score"].notna()]
-                if not ab_ends.empty:
-                    run_diff = (pd.to_numeric(ab_ends["post_bat_score"], errors="coerce") - pd.to_numeric(ab_ends["bat_score"], errors="coerce")).clip(lower=0)
-                    total_runs += int(run_diff.sum())
+        # ── Innings pitched + runs, aggregated PER GAME ──
+        # Outs are summed per game using the official boxscore as authoritative
+        # (it captures baserunning outs — pickoffs / caught stealing — and the
+        # trailing out of a double play that the pitch-event stream omits).
+        # Event-counting is the per-game fallback when the boxscore lacks the
+        # pitcher. Doing this per game is essential: comparing a single game's
+        # boxscore outs against the season-wide event total (the old bug) both
+        # failed to add DP/baserunning outs and could clobber the season total.
+        if "game_pk" in df.columns:
+            for gp in df["game_pk"].dropna().unique():
+                gp_int  = int(gp)
+                gp_df   = df[df["game_pk"] == gp]
+                if "at_bat_number" in gp_df.columns and gp_df["at_bat_number"].notna().any():
+                    ev_g = gp_df.groupby("at_bat_number")["events"].last().dropna()
+                else:
+                    _e = gp_df["events"]
+                    ev_g = _e.groupby((_e != _e.shift()).cumsum()).last().dropna()
+                event_outs = _event_outs(ev_g)
+
+                # Runs: bat_score diff first (Statcast CSV), else boxscore ER
+                game_runs = None
+                if all(c in gp_df.columns for c in ["bat_score", "post_bat_score"]):
+                    ab_ends = gp_df[gp_df["events"].notna() & gp_df["bat_score"].notna()]
+                    if not ab_ends.empty:
+                        run_diff = (pd.to_numeric(ab_ends["post_bat_score"], errors="coerce")
+                                    - pd.to_numeric(ab_ends["bat_score"], errors="coerce")).clip(lower=0)
+                        game_runs = int(run_diff.sum())
+
+                bs_outs = None
+                if pitcher_id_int is not None:
+                    er_map = _get_boxscore_earned_runs(gp_int)  # also fills _boxscore_ip_cache
+                    if game_runs is None:
+                        er = er_map.get(pitcher_id_int)
+                        if er is not None:
+                            game_runs = er
+                    bs_outs = _boxscore_ip_cache.get(gp_int, {}).get(pitcher_id_int)
+
+                total_outs += bs_outs if bs_outs is not None else event_outs
+                if game_runs is not None:
+                    total_runs += game_runs
                     _has_run_data = True
-                    continue
-            # Fall back to MLB Stats API boxscore (works for /gf-only games)
-            if pitcher_id_int is not None:
-                er_map = _get_boxscore_earned_runs(gp_int)
-                er = er_map.get(pitcher_id_int)
-                if er is not None:
-                    total_runs += er
-                    _has_run_data = True
-                # Correct IP using boxscore when event-counting misses baserunning outs
-                # (caught stealings / pickoffs don't appear as pitch rows in /gf data)
-                bs_outs = _boxscore_ip_cache.get(gp_int, {}).get(pitcher_id_int)
-                if bs_outs is not None and bs_outs > total_outs:
-                    total_outs = bs_outs
+        else:
+            # No game_pk to group on — collapse consecutive identical events.
+            _e = df["events"]
+            ev_all = _e.groupby((_e != _e.shift()).cumsum()).last().dropna()
+            total_outs = _event_outs(ev_all)
 
     ip_str_val = f"{total_outs // 3}.{total_outs % 3}"
     era_val = round((total_runs / (total_outs / 3)) * 9, 2) if (total_outs > 0 and _has_run_data) else None
@@ -554,109 +558,6 @@ def _pitch_panel(ax, row: pd.Series):
 
     ax.set_xticks([])
     ax.set_yticks([])
-
-
-# ---------------------------------------------------------------------------
-# Cross-pitcher recalibration
-# ---------------------------------------------------------------------------
-
-def recalibrate_summaries(
-    all_summary: pd.DataFrame,
-    target_mean: float = 100.0,
-    target_std: float = 10.0,
-) -> pd.DataFrame:
-    """
-    Recalibrate pitcher × pitch-type averages against training-data norms.
-
-    Grades are anchored to the training population at the PITCHER level:
-      • 100  = average MLB pitcher's version of that pitch (2020-2024 baseline)
-      • 110  = 1σ above the training pitcher distribution  (top ~16%)
-      • 120  = 2σ above                                    (top ~2.5%)
-
-    This is stable across seasons — a Grade 60 FF means the same thing in
-    2025 and 2026, regardless of how good the current year's pitchers are.
-
-    Reference norms (mean, std of pitcher-level averages by pitch type) are
-    pre-computed from training data by `save_pitcher_level_norms()` in train.py
-    and loaded from model/pitcher_level_norms.pkl. If the file is missing the
-    function falls back to computing norms from the current season's data.
-
-    Bayesian shrinkage is applied after recalibration to handle small samples.
-    """
-    from model.train import load_pitcher_level_norms
-
-    df = all_summary.copy()
-
-    # Load training-data reference norms
-    try:
-        ref_norms = load_pitcher_level_norms()
-    except FileNotFoundError:
-        logger.warning(
-            "pitcher_level_norms.pkl not found — falling back to current-season norms. "
-            "Run 'python main.py train' to generate stable reference norms."
-        )
-        ref_norms = {}
-        for pt in df["pitch_type"].unique():
-            mask = df["pitch_type"] == pt
-            scores = df.loc[mask, "stuff_plus"]
-            if mask.sum() < 5:
-                continue
-            ref_norms[pt] = {"mean": float(scores.mean()), "std": float(scores.std())}
-
-    # Recalibrate per pitch type using training-data reference distribution
-    for pt in df["pitch_type"].unique():
-        if pt not in ref_norms:
-            continue
-        mask = df["pitch_type"] == pt
-        if mask.sum() < 5:
-            continue
-        scores   = df.loc[mask, "stuff_plus"]
-        pt_mean  = ref_norms[pt]["mean"]
-        pt_std   = ref_norms[pt]["std"]
-        if pt_std < 1e-6:
-            df.loc[mask, "stuff_plus"] = pt_mean
-            continue
-        # Use pt_mean as the target anchor, not a flat 100.
-        # This preserves cross-pitch-type differences in the model's learned values:
-        #   CU pitchers average 96.31 → average CU grades as 96 (below average overall)
-        #   SL pitchers average 100.08 → average SL grades as 100 (league average)
-        # An average 4-seam fastball isn't worth 100 if the model says it averages 98.45.
-        #
-        # Clip raw pitcher-level averages at ±3.0 × pt_std before recalibration.
-        # Without this, outlier pitchers (e.g., Tyler Rogers with arm-slot IVB z = -6σ)
-        # produce raw averages far beyond the training distribution, and a tight pt_std
-        # (e.g., SI std = 3.1) amplifies those into implausible card grades (144+).
-        # Capping at ±3σ limits any pitch type to card = pt_mean ± 30 (max Grade 80).
-        scores_clipped = scores.clip(
-            lower=pt_mean - 3.0 * pt_std,
-            upper=pt_mean + 3.0 * pt_std,
-        )
-        df.loc[mask, "stuff_plus"] = (
-            pt_mean + (scores_clipped - pt_mean) / pt_std * target_std
-        )
-
-    # Bayesian shrinkage toward each pitch type's own mean for small samples.
-    # Shrink toward pt_mean (not a flat 100) so a 2-pitch CU shrinks to ~96, not ~100.
-    # k=10: n=10 → 50% weight on observed, n=50 → 83%, n=100 → 91%.
-    k = 10
-    pt_means_map = {pt: ref_norms[pt]["mean"] for pt in ref_norms}
-    df["_pt_mean"] = df["pitch_type"].map(pt_means_map).fillna(100.0)
-    df["stuff_plus"] = (df["n"] * df["stuff_plus"] + k * df["_pt_mean"]) / (df["n"] + k)
-    df.drop(columns=["_pt_mean"], inplace=True)
-
-    # Store the training-data anchor for each pitch type so callers can pass
-    # pt_mean to stuff_grade(), enabling per-pitch-type grade boundaries.
-    pt_means_export = {pt: ref_norms[pt]["mean"] for pt in ref_norms}
-    df["pt_mean"] = df["pitch_type"].map(pt_means_export).fillna(100.0)
-
-    logger.info(
-        f"Recalibrated summaries (training-data norms) — "
-        f"mean={df['stuff_plus'].mean():.1f}  "
-        f"std={df['stuff_plus'].std():.1f}  "
-        f"max={df['stuff_plus'].max():.1f}  "
-        f"min={df['stuff_plus'].min():.1f}"
-    )
-    return df
 
 
 # ---------------------------------------------------------------------------

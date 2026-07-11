@@ -35,26 +35,27 @@ logger = logging.getLogger(__name__)
 # Per-group feature lists (data-driven from bucket-level whiff/xwoba corrs)
 # ---------------------------------------------------------------------------
 CORE_FEATURES = [
-    # -- velocity / deceleration --
-    "perceived_velocity",     # perceived velo from batter's perspective (accounts for extension)
-    # -- movement --
-    "ssw_pfx_z",              # vertical seam-shifted wake residual
-    "ssw_pfx_x_arm",         # horizontal SSW residual (arm-side normalized)
-    "vaa_adj",                # vertical approach angle (adjusted)
-    "haa_adj",                # horizontal approach angle (adjusted)
+    # -- velocity --
+    "release_speed",          # raw release speed (mph)
+    # -- movement / approach angles --
+    "vaa_adj",                # vertical approach angle (adjusted for location, release, arm slot, accels)
+    "haa_adj",                # horizontal approach angle (adjusted for location, release, accels)
     # -- release point --
     "release_extension",      # extension toward home plate
     "release_pos_x",          # horizontal release position
     "release_pos_z",          # vertical release height
-    "arm_angle",              # arm slot angle (degrees)
+    "arm_angle",              # arm slot angle (native Statcast; estimator only fills nulls)
     # -- spin --
     "release_spin_rate",      # raw spin rate (RPM)
-    # -- accelerations (raw, arm-side normalized for handedness) --
+    # -- accelerations --
     "az",                     # raw vertical acceleration (includes gravity)
-    "hb_accel_arm",           # horizontal acceleration arm-side normalized (positive = arm side for both hands)
-    "ay",                     # acceleration toward plate (drag)
-    # -- handedness --
-    "same_hand",              # 1 if pitcher and batter same handedness, 0 otherwise
+    "hb_accel_arm",           # horizontal accel, arm-side normalized (+ = arm side for both hands)
+    # -- batter handedness (overridden 0/1 at inference for platoon averaging) --
+    "same_hand",
+    # -- location (engineered for completeness; the production Driveline model is
+    #    pure-shape and does NOT use these — see SHAPE_FEATS in model/prob_resid.py) --
+    "plate_x",                # horizontal plate location
+    "plate_z",                # vertical plate location
 ]
 
 # Differential features vs pitcher's primary fastball
@@ -185,6 +186,8 @@ def clean_statcast(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 
 _FASTBALL_LOOKUP_PATH = os.path.join(MODEL_DIR, "fastball_lookup.pkl")
+_SPIN_AXIS_LOOKUP_PATH = os.path.join(MODEL_DIR, "spin_axis_lookup.pkl")
+_MOVEMENT_BASELINES_PATH = os.path.join(MODEL_DIR, "movement_baselines.pkl")
 
 
 def compute_fastball_diffs(df: pd.DataFrame) -> pd.DataFrame:
@@ -364,10 +367,12 @@ def engineer_features(
         _pfx_mag     = np.sqrt(df["pfx_x_in"] ** 2 + df["pfx_z_in"] ** 2)
         _theoretical = _SPIN_EFF_CALIB * df["release_spin_rate"] / df["release_speed"].clip(lower=50.0)
         _spin_eff    = (_pfx_mag / _theoretical.clip(lower=1e-6)).clip(0.0, 1.0)
-        df["gyro_deg"] = np.degrees(np.arccos(_spin_eff))
+        df["gyro_degree"] = np.degrees(np.arccos(_spin_eff))
+        df["spin_efficiency"] = _spin_eff
     else:
         _spin_eff    = pd.Series(1.0, index=df.index)
-        df["gyro_deg"] = np.nan
+        df["gyro_degree"] = np.nan
+        df["spin_efficiency"] = 1.0
 
     # Arm-side-positive convention (needed internally for SSW/ivb_adj)
     if "p_throws" in df.columns:
@@ -380,20 +385,61 @@ def engineer_features(
     # active_spin = spin_rate × spin_efficiency
     df["active_spin_rate"] = df["release_spin_rate"] * _spin_eff
 
-    # Deception features: how much did the pitch underdeliver vs what its spin promised?
-    # gap_factor = (1/spin_eff - 1): scales actual pfx to the "promised" level and subtracts actual.
-    # High deception_z/x → pitch spun like it should break but didn't (gyro trick).
-    # Uses arm-side-positive convention for deception_x (consistent with ssw_pfx_x_arm).
-    _gap_factor = (1.0 / _spin_eff.clip(lower=0.05)) - 1.0
-    df["deception_z"] = df["pfx_z_in"] * _gap_factor
-    df["deception_x"] = df["pfx_x_arm"] * _gap_factor
-
     # Acceleration-based movement (needed for ivb_adj computation)
     df["ivb_accel"]    = df["az"] + 32.174
     df["ivb_accel_abs"] = df["ivb_accel"].abs()
     df["hb_accel_arm"] = df["ax"] * throw_sign
     df["hb_accel_arm_abs"] = df["hb_accel_arm"].abs()
     df["total_movement"] = np.sqrt(df["ivb_accel"] ** 2 + df["hb_accel_arm"] ** 2)
+
+    # Deception features: how much did the pitch underdeliver vs what its spin promised?
+    # gap_factor = (1/spin_eff - 1) scales the actual aerodynamic movement to the
+    # "promised" level. High deception_z/x → pitch spun like it should break but
+    # didn't (gyro trick). Scaled by acceleration-based movement (az, hb_accel_arm)
+    # rather than time-integrated pfx (extension/velocity-independent).
+    _gap_factor = (1.0 / _spin_eff.clip(lower=0.05)) - 1.0
+    df["deception_z"] = df["az"] * _gap_factor
+    df["deception_x"] = df["hb_accel_arm"] * _gap_factor
+
+    # ── Seam-shifted wake (SSW) ───────────────────────────────────────────
+    # spin_axis is the Hawkeye OBSERVED spin direction (carries the seam signal).
+    # ALL data is now on one basis: statcast_search / statsapi (FF≈209) every year —
+    # the earlier "2026 convention flip" was a data bug (2026 was wrongly pulled from
+    # the savant /gf endpoint, FF≈161). See memory: stuff_plus_2026_spinaxis_bug.
+    # Canonical Magnus-predicted break direction = (360 − spin_axis) − 180, applied
+    # uniformly. SSW = movement component perpendicular to that direction:
+    #   ssw_z: vertical residual   (+ = more rise than spin predicts, − = more sink)
+    #   ssw_x: arm-side residual   (+ = more arm-side run, − = more glove-side)
+    if "spin_axis" in df.columns and "ax" in df.columns and "az" in df.columns:
+        _ivb = df["az"] + 32.174
+        _sa  = pd.to_numeric(df["spin_axis"], errors="coerce")
+        _sa_aligned = (360.0 - _sa) % 360                      # one basis, every year
+        _spin_pred = np.radians(_sa_aligned - 180.0)            # spin-predicted break dir
+        _ux, _uz = np.sin(_spin_pred), np.cos(_spin_pred)
+        _Mx, _Mz = df["ax"].fillna(0.0), _ivb.fillna(0.0)
+        _proj = _Mx * _ux + _Mz * _uz                           # Magnus-aligned magnitude
+        df["ssw_z"] = (_Mz - _proj * _uz).fillna(0.0)           # vertical residual
+        df["ssw_x"] = ((_Mx - _proj * _ux) * throw_sign).fillna(0.0)   # arm-side residual
+    else:
+        df["ssw_z"] = 0.0
+        df["ssw_x"] = 0.0
+
+    # ── Release angles — initial trajectory direction out of the hand ──────
+    # The hitter extrapolates the ball's path from this launch direction.
+    # Distinct from approach angle (direction at the plate) and arm_angle (slot).
+    #   VRA = atan2(vz0, horizontal_speed)  — vertical launch (downhill−/uphill+)
+    #   HRA = atan2(vx0, |vy0|) × throw_sign — horizontal launch, arm-side mirrored
+    # The release→approach gap is the trajectory curvature perceived as break.
+    if all(c in df.columns for c in ("vx0", "vy0", "vz0")):
+        _vx0 = pd.to_numeric(df["vx0"], errors="coerce")
+        _vy0 = pd.to_numeric(df["vy0"], errors="coerce")
+        _vz0 = pd.to_numeric(df["vz0"], errors="coerce")
+        _hspeed = np.sqrt(_vx0 ** 2 + _vy0 ** 2)
+        df["vert_release_angle"] = np.degrees(np.arctan2(_vz0, _hspeed)).fillna(0.0)
+        df["horz_release_angle"] = (np.degrees(np.arctan2(_vx0, _vy0.abs())) * throw_sign).fillna(0.0)
+    else:
+        df["vert_release_angle"] = 0.0
+        df["horz_release_angle"] = 0.0
 
     # Arm-side-normalized release position (consistent convention across LHP/RHP)
     if "release_pos_x" in df.columns:
@@ -412,14 +458,67 @@ def engineer_features(
         df["spin_axis_arm_cos"] = np.cos(_sa_rad)
         # spin_axis_rel: peer-mean-normalized spin axis — robust to Statcast calibration
         # shifts between seasons (2026 reference frame changed ~60-200° by pitch type)
+        #
+        # During training (large batch): compute in-batch groupby means and save a lookup
+        # keyed by (pitch_type, p_throws, game_year) + a year=0 fallback mean.
+        # During inference (single pitcher): load saved lookup so the value doesn't
+        # collapse to 0 (which happens when peer_mean is computed on just one pitcher).
         year_col = "game_year" if "game_year" in df.columns else None
-        group_cols = ["pitch_type", "p_throws"] + ([year_col] if year_col else [])
-        valid = [c for c in group_cols if c in df.columns]
-        if valid:
-            peer_mean = df.groupby(valid)["spin_axis_arm"].transform("mean")
+        group_cols_yr = ["pitch_type", "p_throws"] + ([year_col] if year_col else [])
+        valid_gc = [c for c in group_cols_yr if c in df.columns]
+
+        if len(df) > 10_000 and valid_gc:
+            # Training path: compute from full batch and save lookup
+            peer_mean = df.groupby(valid_gc)["spin_axis_arm"].transform("mean")
+            try:
+                import pickle as _pkl
+                _gm = df.groupby(valid_gc)["spin_axis_arm"].mean()
+                _lookup: dict = {}
+                for idx, val in _gm.items():
+                    if len(valid_gc) >= 3:
+                        pt, throws, yr = idx
+                        _lookup[(str(pt), str(throws), int(yr))] = float(val)
+                    elif len(valid_gc) == 2:
+                        pt, throws = idx
+                        _lookup[(str(pt), str(throws), 0)] = float(val)
+                    else:
+                        _lookup[(str(idx), "R", 0)] = float(val)
+                # Also store year=0 as a multi-year fallback per (pt, throws)
+                _fb = df.groupby(["pitch_type", "p_throws"])["spin_axis_arm"].mean()
+                for (pt, throws), val in _fb.items():
+                    _lookup[(str(pt), str(throws), 0)] = float(val)
+                os.makedirs(MODEL_DIR, exist_ok=True)
+                with open(_SPIN_AXIS_LOOKUP_PATH, "wb") as _fh:
+                    _pkl.dump(_lookup, _fh)
+            except Exception:
+                pass
         else:
-            peer_mean = df["spin_axis_arm"].mean()
-        df["spin_axis_rel"] = df["spin_axis_arm"] - peer_mean
+            # Inference path: load saved lookup and merge
+            _spin_lookup: dict = {}
+            if os.path.exists(_SPIN_AXIS_LOOKUP_PATH):
+                try:
+                    import pickle as _pkl
+                    with open(_SPIN_AXIS_LOOKUP_PATH, "rb") as _fh:
+                        _spin_lookup = _pkl.load(_fh)
+                except Exception:
+                    pass
+
+            if _spin_lookup:
+                _throws = df["p_throws"] if "p_throws" in df.columns else pd.Series("R", index=df.index)
+                _yr = df[year_col].fillna(0).astype(int) if year_col else pd.Series(0, index=df.index)
+                peer_mean = pd.Series(np.nan, index=df.index)
+                for i in df.index:
+                    pt = str(df.at[i, "pitch_type"])
+                    th = str(_throws.at[i])
+                    yr = int(_yr.at[i])
+                    val = _spin_lookup.get((pt, th, yr), _spin_lookup.get((pt, th, 0), np.nan))
+                    peer_mean.at[i] = val
+            elif valid_gc:
+                peer_mean = df.groupby(valid_gc)["spin_axis_arm"].transform("mean")
+            else:
+                peer_mean = df["spin_axis_arm"].mean()
+
+        df["spin_axis_rel"] = df["spin_axis_arm"] - peer_mean.fillna(df["spin_axis_arm"])
 
     # -- 2. Approach angles
     df = add_approach_angles(df)
@@ -438,12 +537,27 @@ def engineer_features(
         with open(_aa_est_path, "rb") as _f:
             _aa_bundle = _pickle.load(_f)
         _aa_model   = _aa_bundle["model"]
-        _aa_feats   = _aa_bundle["features"]   # ['p_throws_r','height','release_extension','release_pos_x','release_pos_z']
+        _aa_feats   = _aa_bundle["features"]
         _aa_heights = _aa_bundle["height_lookup"]
-        if all(c in df.columns or c == "p_throws_r" or c == "height" for c in _aa_feats):
+        _height_default = float(np.nanmean(list(_aa_heights.values()))) if _aa_heights else 74.0
+        if _aa_bundle.get("jmaschino"):
+            # jmaschino56 arm-angle model. Features: [p_throws(R→0/L→1), height(in),
+            # release_extension, release_pos_z]. Its output is on the COMPLEMENT
+            # convention (0°=over-the-top, 90°=sidearm) and negates LHP, so we map to
+            # the Statcast convention with: arm_angle = 90 − |pred|.
+            _enc = _aa_bundle.get("encoders", {}).get("p_throws", {"R": 0, "L": 1})
+            _Xj = pd.DataFrame(index=df.index)
+            _Xj["p_throws"]          = df["p_throws"].map(_enc).astype(float)
+            _Xj["height"]            = df["pitcher"].map(_aa_heights).fillna(_height_default).astype(float)
+            _Xj["release_extension"] = pd.to_numeric(df.get("release_extension"), errors="coerce")
+            _Xj["release_pos_z"]     = pd.to_numeric(df.get("release_pos_z"), errors="coerce")
+            _valid = _Xj[_aa_feats].notna().all(axis=1)
+            if _valid.any():
+                _raw = _aa_model.predict(_Xj.loc[_valid, _aa_feats].values)
+                estimated_aa[_valid] = 90.0 - np.abs(_raw)
+        elif all(c in df.columns or c == "p_throws_r" or c == "height" for c in _aa_feats):
             _Xaa = pd.DataFrame(index=df.index)
             _Xaa["p_throws_r"]        = (df["p_throws"] == "R").astype(float)
-            _height_default = float(np.nanmean(list(_aa_heights.values()))) if _aa_heights else 74.0
             _Xaa["height"]            = df["pitcher"].map(_aa_heights).fillna(_height_default).astype(float)
             for _col in ["release_extension","release_pos_x","release_pos_z","release_pos_y",
                          "vx0","vz0","vy0","ax","az","spin_axis","release_speed","release_spin_rate"]:
@@ -484,6 +598,35 @@ def engineer_features(
         .where(statcast_aa.notna() | estimated_aa.notna(), other=lookup_aa)
     )
 
+    # release_pos_z_resid: release height ABOVE/BELOW what the arm slot predicts.
+    # Raw release_pos_z doubles as a velocity-like main effect (it over-rewards tall /
+    # over-the-top arms — e.g. Fairbanks). Regressing it on arm_angle and keeping the
+    # residual decouples "extra height beyond slot" from the part the slot already implies.
+    # Fixed OLS fit on 2022-2024 training data:
+    #   release_pos_z = 4.467 + 0.03416 * arm_angle   (R^2 = 0.667)
+    # Constant transform → the feature means the same thing every year. arm_angle is used
+    # only to build this residual; it is NOT itself a model feature.
+    df["release_pos_z_resid"] = df["release_pos_z"] - (4.467 + 0.03416 * df["arm_angle"])
+
+    # VAA / HAA: kinematic approach angles at the front of the plate (y = 17/12 ft),
+    # computed from the release velocity vector only. Then "adjusted for location" —
+    # VAA_adj regresses out plate_z, HAA_adj regresses out plate_x — isolating the
+    # approach angle beyond what the pitch's vertical/horizontal target implies.
+    # Fixed OLS coefficients (2022-24 training) so the feature means the same every year.
+    # NOTE: VAA_adj/HAA_adj read plate_z/plate_x to compute (uses location at inference).
+    _vx0 = pd.to_numeric(df.get("vx0"), errors="coerce")
+    _vy0 = pd.to_numeric(df.get("vy0"), errors="coerce")
+    _vz0 = pd.to_numeric(df.get("vz0"), errors="coerce")
+    _ax  = pd.to_numeric(df.get("ax"),  errors="coerce")
+    _ay  = pd.to_numeric(df.get("ay"),  errors="coerce")
+    _az  = pd.to_numeric(df.get("az"),  errors="coerce")
+    _t   = (-_vy0 - np.sqrt(_vy0**2 - 2 * _ay * (50.0 - 17.0/12.0))) / _ay
+    _vyf = _vy0 + _ay * _t
+    df["VAA"] = -np.degrees(np.arctan2(_vz0 + _az * _t, np.abs(_vyf)))
+    df["HAA"] = -np.degrees(np.arctan2(_vx0 + _ax * _t, np.abs(_vyf)))
+    df["VAA_adj"] = df["VAA"] - (9.99528 + -1.51533 * pd.to_numeric(df["plate_z"], errors="coerce"))
+    df["HAA_adj"] = df["HAA"] - (-0.75574 + -1.45935 * pd.to_numeric(df["plate_x"], errors="coerce"))
+
     # arm_angle_dev: angular deviation of actual movement direction from arm slot
     # atan2(hb, ivb) gives the direction the ball actually moves
     # subtracting arm_angle gives how far off the "dead zone" axis it is
@@ -502,6 +645,23 @@ def engineer_features(
     df["lateral_deception_mag"] = np.abs(df["total_movement"] * np.sin(dev_rad))
 
     # -- 4. Bin arm angle (needed to merge baselines)
+    # At inference (small batch), load saved training baselines so vaa_adj/haa_adj
+    # are computed relative to the full-population regression, not just the mini-batch.
+    # (Re-computing baselines on 100-200 inference pitches collapses vaa_adj → ~0
+    # because the regression intercept absorbs the batch mean.)
+    if baselines is None and len(df) < 10_000:
+        _bl_path = _MOVEMENT_BASELINES_PATH
+        if os.path.exists(_bl_path):
+            try:
+                import pickle as _pkl
+                with open(_bl_path, "rb") as _fh:
+                    _saved = _pkl.load(_fh)
+                if isinstance(_saved, tuple) and len(_saved) == 3:
+                    baselines, ff_ivb_coefs, _arm_bin_edges = _saved
+                    logger.debug("Loaded saved movement baselines for inference.")
+            except Exception as _e:
+                logger.warning(f"Could not load movement baselines: {_e}")
+
     arm_median = df["arm_angle"].median()
     if _arm_bin_edges is not None:
         df["arm_angle_bin"] = pd.cut(
@@ -528,6 +688,18 @@ def engineer_features(
         df["same_hand"] = (df["p_throws"] == df["stand"]).astype(float)
     else:
         df["same_hand"] = 0.0
+
+    # -- 5a. in_zone: binary strike-zone indicator (batter-specific via sz_top/sz_bot)
+    if "plate_x" in df.columns and "plate_z" in df.columns:
+        sz_top = df.get("sz_top", pd.Series(3.5, index=df.index)).fillna(3.5)
+        sz_bot = df.get("sz_bot", pd.Series(1.5, index=df.index)).fillna(1.5)
+        df["in_zone"] = (
+            (df["plate_x"].abs() <= 0.83) &
+            (df["plate_z"] >= sz_bot) &
+            (df["plate_z"] <= sz_top)
+        ).astype(float)
+    else:
+        df["in_zone"] = 0.5  # unknown → neutral
 
     # -- 5b. Perceived velocity — release_speed adjusted for extension
     if "release_speed" in df.columns and "release_extension" in df.columns:
@@ -615,6 +787,12 @@ def engineer_features(
 
     # -- 7b2. Spin features (spin_axis_arm_sin/cos, gyro_degree, deviation)
     is_rhp = (df.get("p_throws", pd.Series("R", index=df.index)) == "R")
+    # Arm-normalized horizontal release point (consistent with hb_accel_arm / ssw_x:
+    # ×+1 for RHP, ×−1 for LHP) so an arm-side release maps to the same value for
+    # both hands instead of being mirrored.
+    if "release_pos_x" in df.columns:
+        df["release_pos_x_arm"] = np.where(is_rhp, df["release_pos_x"],
+                                           -pd.to_numeric(df["release_pos_x"], errors="coerce"))
     if "spin_axis_arm_sin" not in df.columns or "spin_axis_arm_cos" not in df.columns:
         spin_axis = df["spin_axis"].fillna(180.0) if "spin_axis" in df.columns else pd.Series(180.0, index=df.index)
         spin_axis_norm = np.where(is_rhp, spin_axis, (360.0 - spin_axis) % 360.0)
@@ -715,6 +893,18 @@ def engineer_features(
         df["accel_arm_angle_dev"] = move_angle - df["arm_angle"]
     else:
         df["accel_arm_angle_dev"] = 0.0
+
+    # -- 9e. Dynamic dead-zone deviation (release-conditioned expected fastball
+    #        movement; deviation = how much the pitch defies its arm slot). Uses
+    #        arm_angle / scaled extension + actual accel — never the pitch label.
+    try:
+        from model.deadzone import apply_deadzone
+        df = apply_deadzone(df)
+    except Exception as _dz_exc:
+        logger.warning(f"dead-zone feature skipped ({_dz_exc})")
+        for _f in ("deadzone_hb_dev", "deadzone_vert_dev", "deadzone_dist"):
+            if _f not in df.columns:
+                df[_f] = 0.0
 
     # -- 10. NaN-fill CORE_FEATURES
     for col in CORE_FEATURES:

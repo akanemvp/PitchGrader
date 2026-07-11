@@ -1,9 +1,21 @@
 """
-Stuff+ inference — single global model, global normalization.
+Stuff+ inference — loads the trained model and turns pitches into grades.
 
-One LightGBM ensemble (whiff / decision / called-strike sub-models) trained on all
-pitch types. Grades are globally comparable: 100 = average across all pitch types,
-std=10. No per-type or per-family re-normalization.
+StuffPlusPredictor loads the saved model (a single LightGBM regressor on the
+Driveline run-value target) plus the frozen normalization baseline, then:
+  1. engineers shape features for each pitch (unless already engineered),
+  2. predicts each pitch's expected run value (xRV),
+  3. normalizes to the Stuff+ scale: 100 = league average, 10 = one standard
+     deviation. Lower xRV = better pitch = higher grade.
+
+Every pitch is scored twice — once as if facing a same-hand batter and once
+opposite-hand — and averaged 50/50, so a pitcher's grade is independent of the
+platoon mix they happened to face.
+
+Two grade columns are produced: `stuff_plus` (the raw z-score, used for
+aggregation/leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap
+so individual pitches top out ~135 instead of running to extreme outliers).
+Grades are globally comparable across pitch types — no per-type re-normalization.
 """
 
 import logging
@@ -14,26 +26,39 @@ import numpy as np
 import pandas as pd
 
 from config import MODEL_DIR
-from features.engineering import engineer_features, apply_movement_rv, apply_fb_context, OS_FEATURES
-from model.submodels import predict_residual_rv, predict_ensemble_rv, predict_count_neutral_rv, load_ensemble, load_rv_baselines
+from features.engineering import engineer_features
+from model.submodels import load_ensemble
+from model.prob_resid import predict_prob_resid_rv
 
 logger = logging.getLogger(__name__)
 
 _POWER_TYPES = {"FF", "FA", "SI", "FC", "ST"}
 
+# Percentile-anchored display grade. The raw Stuff+ z-score is a fine scale for the
+# bulk and for aggregation (pitcher / pitch-type means all sit well below the knee),
+# but on individual pitches the xRV distribution is fat-tailed, so a linear z-score
+# sends the rare elite pitch to a fictional 6 SD (clipped 160). This remaps single
+# pitches: identity below the ~99th-pct knee, then a saturating soft-cap so the tail
+# compresses into a realistic ceiling (~135) instead of running away. Aggregated
+# grades are unchanged because they live below the knee.
+_DG_KNEE, _DG_CEIL, _DG_SOFT = 125.0, 135.0, 12.0   # knee=99th pct, ceiling, softness
+
+
+def display_grade(sp):
+    """Percentile-anchored display grade for individual pitches (see note above)."""
+    sp = np.asarray(sp, dtype=float)
+    out = sp.copy()
+    hi = sp > _DG_KNEE          # NaN-safe: NaN > knee is False, so NaNs pass through
+    out[hi] = _DG_KNEE + (_DG_CEIL - _DG_KNEE) * (1.0 - np.exp(-(sp[hi] - _DG_KNEE) / _DG_SOFT))
+    return out
+
 
 class StuffPlusPredictor:
     def __init__(self):
-        self.ensembles:               dict = {}
-        self.rv_baselines:            dict = {}
-        self.norm_global:             dict = {}
-        self.norm_global_historical:  dict = {}
-        self.norm_family:             dict = {}
-        self.norm_family_historical:  dict = {}
-        self.norm_per_type:           dict = {}
-        self.norm_per_type_historical: dict = {}
-        self.fb_context_lookup:       dict = {}
-        self.baselines                     = None
+        self.ensembles:              dict = {}
+        self.norm_global:            dict = {}
+        self.norm_global_historical: dict = {}
+        self.baselines                    = None
         self._load()
 
     def _load(self):
@@ -46,67 +71,22 @@ class StuffPlusPredictor:
         if os.path.exists(gpath):
             with open(gpath, "rb") as f:
                 self.norm_global = pickle.load(f)
-            _gm = self.norm_global.get('mean', self.norm_global.get('global_mean', 0.0))
+            _gm = self.norm_global.get("mean", self.norm_global.get("global_mean", 0.0))
             logger.info(f"Global norm loaded: mean={_gm:.5f}")
 
         hg_path = os.path.join(MODEL_DIR, "norm_global_historical.pkl")
         if os.path.exists(hg_path):
             with open(hg_path, "rb") as f:
                 self.norm_global_historical = pickle.load(f)
-            _hgm = self.norm_global_historical.get('mean', self.norm_global_historical.get('global_mean', 0.0))
+            _hgm = self.norm_global_historical.get("mean", self.norm_global_historical.get("global_mean", 0.0))
             logger.info(f"Historical global norm loaded: mean={_hgm:.5f}")
-
-        fn_path = os.path.join(MODEL_DIR, "norm_family.pkl")
-        if os.path.exists(fn_path):
-            with open(fn_path, "rb") as f:
-                self.norm_family = pickle.load(f)
-            logger.info(f"Family norms loaded: {list(self.norm_family.keys())}")
-
-        fnh_path = os.path.join(MODEL_DIR, "norm_family_historical.pkl")
-        if os.path.exists(fnh_path):
-            with open(fnh_path, "rb") as f:
-                self.norm_family_historical = pickle.load(f)
-            logger.info(f"Historical family norms loaded")
-
-        npt_path = os.path.join(MODEL_DIR, "norm_per_type.pkl")
-        if os.path.exists(npt_path):
-            with open(npt_path, "rb") as f:
-                self.norm_per_type = pickle.load(f)
-            logger.info(f"Per-type norms loaded: {list(self.norm_per_type.keys())}")
-
-        npth_path = os.path.join(MODEL_DIR, "norm_per_type_historical.pkl")
-        if os.path.exists(npth_path):
-            with open(npth_path, "rb") as f:
-                self.norm_per_type_historical = pickle.load(f)
-            logger.info(f"Historical per-type norms loaded")
-
-
-        rv_bl = load_rv_baselines()
-        if rv_bl is not None:
-            self.rv_baselines = rv_bl
 
         ens = load_ensemble("all")
         if ens is not None:
             self.ensembles["all"] = ens
             logger.info("Global model loaded")
         else:
-            _loaded = 0
-            for _fam in ("fb", "br", "os"):
-                _ens = load_ensemble(_fam)
-                if _ens is not None:
-                    self.ensembles[_fam] = _ens
-                    _loaded += 1
-            if _loaded:
-                logger.info(f"Family models loaded: {_loaded}/3 (fb/br/os)")
-            else:
-                logger.warning("No model found — run 'python main.py train' first")
-
-        fb_ctx_path = os.path.join(MODEL_DIR, "fb_context_lookup.pkl")
-        if os.path.exists(fb_ctx_path):
-            with open(fb_ctx_path, "rb") as f:
-                self.fb_context_lookup = pickle.load(f)
-            logger.info(f"FB context lookup loaded ({len(self.fb_context_lookup)} pitchers)")
-
+            logger.warning("No model found — run 'python main.py train' first")
 
     def predict(self, df, baselines=None, already_engineered=False, norm_set="current"):
         if not already_engineered:
@@ -114,95 +94,37 @@ class StuffPlusPredictor:
             df, _ = engineer_features(df, baselines=bl)
 
         df = df.copy()
-        df["stuff_plus"]        = np.nan
-        df["stuff_plus_vs_rhb"] = np.nan
-        df["stuff_plus_vs_lhb"] = np.nan
+        df["stuff_plus"] = np.nan
 
-        _TYPE_GROUPS = {"fb": ["FF","FA","SI","FC"], "br": ["SL","SV","ST","SC","GY","CU","KC","CS"], "os": ["CH","FO","EP","KN","FS"]}
-        _TYPE_KEYS = ("fb", "br", "os")
-
-        # Determine model mode: 3-family or single global fallback
-        _use_types = any(k in self.ensembles for k in _TYPE_KEYS)
-        if not _use_types and "all" not in self.ensembles:
+        if "all" not in self.ensembles:
             logger.warning("Model not loaded — returning NaN")
             return df
 
-        _fam_norm_src = self.norm_family_historical if (norm_set == "historical" and self.norm_family_historical) else self.norm_family
         _global_src  = self.norm_global_historical if (norm_set == "historical" and self.norm_global_historical) else self.norm_global
         _global_mean = _global_src.get("mean", _global_src.get("global_mean", 0.0))
-        _global_std  = max(_global_src.get("std",  _global_src.get("global_std",  0.007)), 1e-6)
+        _global_std  = max(_global_src.get("std", _global_src.get("global_std", 0.007)), 1e-6)
 
-        # Apply FB context features (sets fb_velo per pitcher)
-        if self.fb_context_lookup:
-            df, _ = apply_fb_context(df, lookup=self.fb_context_lookup)
-        elif "fb_ivb_adj" not in df.columns:
-            df["fb_ivb_adj"] = 0.0
-            df["fb_hb_adj"]  = 0.0
-            df["fb_velo"]    = df.get("release_speed", pd.Series(93.0, index=df.index))
+        ens = self.ensembles["all"]
 
-        def _score_df(df_in):
-            if _use_types:
-                e_rv = np.full(len(df_in), np.nan)
-                pt_arr = df_in["pitch_type"].fillna("").values
-                for fam, pts in _TYPE_GROUPS.items():
-                    ens = self.ensembles.get(fam)
-                    if ens is None:
-                        continue
-                    mask = np.isin(pt_arr, pts)
-                    if mask.any():
-                        e_rv[mask] = predict_ensemble_rv(df_in[mask], ens, self.rv_baselines)
-                return e_rv
-            else:
-                ens = self.ensembles["all"]
-                if "residual" in ens:
-                    return predict_residual_rv(df_in, ens)
-                return predict_ensemble_rv(df_in, ens, self.rv_baselines)
+        # Platoon-neutral scoring: score each pitch once as if facing a same-hand
+        # batter (same_hand=1.0) and once opposite-hand (same_hand=0.0), average
+        # 50/50. The Driveline model uses no location feature, so pitches are scored
+        # at their raw shape with no plate_x/plate_z substitution.
+        df_same = df.copy(); df_same["same_hand"] = 1.0
+        df_opp  = df.copy(); df_opp["same_hand"]  = 0.0
+        expected_rv = 0.5 * predict_prob_resid_rv(df_same, ens) + 0.5 * predict_prob_resid_rv(df_opp, ens)
+        stuff_plus = 100.0 + (_global_mean - expected_rv) / _global_std * 10.0
 
-        def _normalize(e_rv, pt_series):
-            """Normalize using global norm (single scale across all pitch types)."""
-            if _fam_norm_src:
-                grades = np.full(len(e_rv), np.nan)
-                pt_arr = pt_series.values if hasattr(pt_series, "values") else np.asarray(pt_series)
-                for fam, pts in _TYPE_GROUPS.items():
-                    mask = np.isin(pt_arr, pts)
-                    if not mask.any():
-                        continue
-                    fn = _fam_norm_src.get(fam, {})
-                    fmean = fn.get("mean", _global_mean)
-                    fstd  = max(fn.get("std", _global_std), 1e-6)
-                    grades[mask] = 100.0 + (fmean - e_rv[mask]) / fstd * 10.0
-                unknown = np.isnan(grades) & np.isfinite(e_rv)
-                if unknown.any():
-                    grades[unknown] = 100.0 + (_global_mean - e_rv[unknown]) / _global_std * 10.0
-                return grades
-            else:
-                return 100.0 + (_global_mean - e_rv) / _global_std * 10.0
-
-        # count not used as feature (regressed out of target during training)
-
-        # Score vs same-hand and opposite-hand batters independently
-        df_sh = df.copy(); df_sh["same_hand"] = 1
-        df_op = df.copy(); df_op["same_hand"] = 0
-
-        sp_same = _normalize(_score_df(df_sh), df["pitch_type"])
-        sp_opp  = _normalize(_score_df(df_op), df["pitch_type"])
-
-        # Map same/opposite → vs_rhb/vs_lhb based on pitcher handedness
-        p_throws_r = df["p_throws_r"].values if "p_throws_r" in df.columns else np.ones(len(df))
-        vs_rhb     = np.where(p_throws_r == 1, sp_same, sp_opp)
-        vs_lhb     = np.where(p_throws_r == 1, sp_opp,  sp_same)
-        stuff_plus = (vs_rhb + vs_lhb) / 2.0
-
+        # Velocity floor: a "power" pitch type below 75 mph is almost always a
+        # mislabel, so null it rather than emit a bogus grade.
         low_velo   = (df["release_speed"] < 75.0).values
         power_mask = df["pitch_type"].isin(_POWER_TYPES).values
-        null_mask  = power_mask & low_velo
-        stuff_plus[null_mask] = np.nan
-        vs_rhb[null_mask]     = np.nan
-        vs_lhb[null_mask]     = np.nan
+        stuff_plus[power_mask & low_velo] = np.nan
 
-        df["stuff_plus"]        = np.clip(stuff_plus, -50.0, 200.0)
-        df["stuff_plus_vs_rhb"] = np.clip(vs_rhb,     -50.0, 200.0)
-        df["stuff_plus_vs_lhb"] = np.clip(vs_lhb,     -50.0, 200.0)
+        df["stuff_plus"] = np.clip(stuff_plus, -50.0, 200.0)
+        # Raw stuff_plus stays as-is for aggregation; display grade compresses the
+        # individual-pitch tail into a realistic ceiling (~135).
+        df["stuff_plus_display"] = display_grade(df["stuff_plus"].values)
         return df
 
 
