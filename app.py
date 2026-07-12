@@ -2293,12 +2293,22 @@ def api_player_games(player_name_season: str):
         if len(name_parts) == 2:
             player_name = f"{name_parts[1]}, {name_parts[0]}"
 
+    # Gamefeed-sourced tables (ACL, FSL) don't have every column the MLB Statcast
+    # schema does (e.g. bat_score/post_bat_score), so select only the columns that
+    # actually exist — otherwise the whole query throws and the game list is empty.
+    # _compute_game_stats already guards on column presence for anything missing.
+    want = ["game_pk", "game_date", "home_team", "away_team", "inning_topbot",
+            "description", "events", "bat_score", "post_bat_score",
+            "at_bat_number", "pitch_number", "pitcher"]
     try:
         conn = sqlite3.connect(DB_PATH)
+        have = {r[1] for r in conn.execute(f"PRAGMA table_info({table})")}
+        cols = [c for c in want if c in have]
+        if "game_pk" not in have or "game_date" not in have:
+            conn.close()
+            return jsonify([])
         df = pd.read_sql_query(
-            f"""SELECT game_pk, game_date, home_team, away_team, inning_topbot,
-                       description, events, bat_score, post_bat_score,
-                       at_bat_number, pitch_number, pitcher
+            f"""SELECT {", ".join(cols)}
                 FROM {table} WHERE player_name = ?
                 ORDER BY game_date, game_pk, at_bat_number, pitch_number""",
             conn, params=[player_name])
