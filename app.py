@@ -1978,9 +1978,24 @@ def _load_json(path: str):
         return None
 
 
-@lru_cache(maxsize=16)
-def _cached_leaderboard(season: str):
+@lru_cache(maxsize=64)
+def _cached_leaderboard_mt(season: str, mtime: float):
+    # mtime is part of the cache key: when an external updater rewrites the
+    # leaderboard JSON (live seasons), the mtime changes and this re-reads from
+    # disk — so live data refreshes without an app restart or manual cache_clear.
     return _load_json(_leaderboard_path(season))
+
+
+def _cached_leaderboard(season: str):
+    try:
+        mt = os.path.getmtime(_leaderboard_path(season))
+    except OSError:
+        mt = 0.0
+    return _cached_leaderboard_mt(season, mt)
+
+
+# Preserve the `.cache_clear()` API used throughout app.py.
+_cached_leaderboard.cache_clear = _cached_leaderboard_mt.cache_clear
 
 
 def _leaderboard_live(season: str):
@@ -2104,6 +2119,7 @@ def _table_for_season(season: str) -> "str | None":
         "acl2026":      "pitches_acl2026_scored",
         "fsl2026":      "pitches_fsl2026_scored",
         "college2026":  "pitches_college2026_scored",
+        "futures2026":  "pitches_futures2026_scored",
         "breakout2026": "pitches_breakout2026_scored",
         "springall2026": "pitches_springall2026_scored",
     }.get(season)
