@@ -1,16 +1,16 @@
 """
 Stuff+ model training.
 
-Trains the production model: a single LightGBM regressor on a Driveline
-all-outcome run-value target (see model/prob_resid.py). One model covers every
-pitch type ("all"); there is no per-type or family split, no location model, and
-no count model — platoon is marginalized at inference by scoring each pitch both
-same- and opposite-handed.
+Trains the production model: a single LightGBM regressor on a swing-outcome
+run-value target (see model/prob_resid.py). One model covers every pitch type
+("all"); there is no per-type or family split, no location model, no count model,
+and no platoon marginalization — the shape features are arm-normalized, so the
+model cannot identify pitcher handedness and one grade per pitch suffices.
 
 train_unified() does the full run:
   1. engineer shape features (cached to model/feature_cache.parquet),
   2. save the movement/spin baselines inference needs,
-  3. compute RV baselines and the count-specific run-value lookup,
+  3. compute the RV baselines the target needs,
   4. train the "all" regressor (train_prob_resid_ensemble) and save it,
   5. compute and save the global normalization (current + 2020-24 historical)
      that maps xRV onto the 100 = league-average, 10 = one-SD Stuff+ scale,
@@ -29,7 +29,6 @@ from config import MODEL_DIR
 from features.engineering import CORE_FEATURES, engineer_features
 from model.submodels import (
     compute_rv_baselines,
-    compute_count_rv_lookup,
     save_ensemble,
     save_rv_baselines,
 )
@@ -116,11 +115,6 @@ def train_unified(df: pd.DataFrame) -> dict:
     logger.info("Computing RV baselines …")
     rv_baselines = compute_rv_baselines(df)
     save_rv_baselines(rv_baselines)
-
-    # Save count-specific V_s lookup (RE24 transition matrix) for use at inference
-    _count_rv_lookup = compute_count_rv_lookup(df)
-    _count_rv_lookup.to_parquet(os.path.join(MODEL_DIR, "count_rv_lookup.parquet"), index=False)
-    logger.info(f"Count-specific V_s lookup saved ({len(_count_rv_lookup)} cells)")
 
     if "stand" in df.columns and "stand_r" not in df.columns:
         df["stand_r"] = (df["stand"] == "R").astype(int)

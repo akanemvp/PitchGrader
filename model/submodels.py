@@ -7,8 +7,6 @@ Driveline run-value regressor (model/prob_resid.py):
   • compute_rv_baselines      — count-adjusted per-outcome run values (whiff/ball/
                                 cs/foul) and the league contact anchors, computed
                                 once from training data (used by prob_resid).
-  • compute_count_rv_lookup   — (event, balls, strikes) → mean delta_run_exp table
-                                (the RE24-style count lookup saved at train time).
   • save_ensemble/load_ensemble       — pickle the trained "all" model.
   • save_rv_baselines/load_rv_baselines — pickle the RV baselines dict.
 
@@ -114,59 +112,6 @@ def compute_rv_baselines(df: pd.DataFrame) -> dict:
         f"mean_contact_rv={mean_contact_rv:.5f}  woba_scale={WOBA_SCALE}"
     )
     return baselines
-
-
-# Map raw Statcast description / events strings to a single canonical outcome
-# label for the count-RV lookup below.
-_DESC_TO_EVENT = {
-    "ball": "ball", "blocked_ball": "ball", "pitchout": "ball", "intent_ball": "ball",
-    "called_strike": "called_strike",
-    "swinging_strike": "swinging_strike", "swinging_strike_blocked": "swinging_strike",
-    "missed_bunt": "swinging_strike",
-    "foul": "foul", "foul_tip": "foul", "foul_bunt": "foul", "bunt_foul_tip": "foul",
-    "hit_by_pitch": "hit_by_pitch",
-    "hit_into_play": None,  # use events column instead
-}
-
-_EVENTS_TO_EVENT = {
-    "strikeout": "strikeout", "strikeout_double_play": "strikeout",
-    "walk": "walk", "intent_walk": "walk",
-    "hit_by_pitch": "hit_by_pitch",
-    "single": "single", "double": "double", "triple": "triple", "home_run": "home_run",
-    "field_out": "field_out", "force_out": "field_out", "grounded_into_double_play": "field_out",
-    "double_play": "field_out", "triple_play": "field_out", "sac_fly": "field_out",
-    "sac_bunt": "field_out", "fielders_choice": "field_out", "fielders_choice_out": "field_out",
-    "sac_fly_double_play": "field_out", "other_out": "field_out",
-}
-
-
-def compute_count_rv_lookup(df: pd.DataFrame) -> pd.DataFrame:
-    """Build (event, balls, strikes) → mean delta_run_exp lookup from training data."""
-    desc = df.get("description", pd.Series("", index=df.index)).fillna("")
-    events = df.get("events", pd.Series("", index=df.index)).fillna("")
-    balls   = pd.to_numeric(df.get("balls",   0), errors="coerce").fillna(0).astype(int)
-    strikes = pd.to_numeric(df.get("strikes", 0), errors="coerce").fillna(0).astype(int)
-    rv = pd.to_numeric(df.get("delta_run_exp", np.nan), errors="coerce")
-
-    event_col = pd.Series("", index=df.index)
-    for d, e in _DESC_TO_EVENT.items():
-        mask = desc == d
-        if e is not None:
-            event_col[mask] = e
-        else:
-            # hit_into_play: use events column
-            event_col[mask] = events[mask].map(_EVENTS_TO_EVENT).fillna("field_out")
-    # fallback: use events column for rows not matched by description
-    unmatched = event_col == ""
-    event_col[unmatched] = events[unmatched].map(_EVENTS_TO_EVENT).fillna("")
-    event_col[event_col == ""] = np.nan
-
-    tmp = pd.DataFrame({"event": event_col, "balls": balls, "strikes": strikes, "rv": rv})
-    tmp = tmp[tmp["event"].notna() & tmp["rv"].notna()]
-    lookup = tmp.groupby(["event", "balls", "strikes"])["rv"].mean().reset_index()
-    lookup.columns = ["event", "balls", "strikes", "count_rv"]
-    logger.info(f"  Count-stratified RV lookup: {len(lookup)} (event, balls, strikes) cells")
-    return lookup
 
 
 def save_ensemble(ensemble: dict, family: str = ENSEMBLE_KEY) -> None:

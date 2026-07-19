@@ -1,12 +1,20 @@
-"""Driveline-style Stuff+ — one LightGBM regressor on an all-outcome run-value target.
+"""Driveline-style Stuff+ — one LightGBM regressor on a swing-outcome run-value target.
 
-For each pitch, xRV is predicted from 9 shape features (velocity, extension,
-vertical/horizontal acceleration, release side/height, arm angle, spin rate, and
-batter-vs-pitcher handedness). The target blends delta_run_exp for non-contact
-outcomes (ball / called-strike / whiff / foul) with xwOBA-based run value for balls
-in play. No location, no count. Platoon is marginalized at inference (average of
-same-hand and opposite-hand). Lower xRV = better; normalized to 100 = average,
-10 = one standard deviation on a frozen 2022-24 baseline.
+For each pitch, xRV is predicted from 8 shape features: velocity, extension, vertical
+acceleration, arm-normalized horizontal acceleration, arm-normalized release side,
+release height, arm angle, and spin rate. No location, no count, no batter handedness.
+
+The horizontal features are MIRRORED (arm-side positive for both hands) so a lefty and
+a righty throwing physically identical pitches grade identically — verified by a mirror
+test (asymmetry 0.00; it was +4.7 with raw signed features).
+
+Target — swings only; balls and called strikes are excluded, since whether a taken
+pitch is a ball or a strike is mostly location/command, which this model cannot see:
+  • whiff / foul  → actual delta_run_exp
+  • in play       → spray-aware xRV from (exit velo, launch angle, spray angle),
+                    which xwOBAcon cannot capture because it is spray-blind
+
+Lower xRV = better; normalized to 100 = league average, 10 = one standard deviation.
 """
 from __future__ import annotations
 
@@ -46,7 +54,6 @@ LGBM_REG = dict(n_estimators=400, max_depth=5, learning_rate=0.04, subsample=0.8
 
 FASTBALL_T = {"FF", "FA", "SI", "FT"}
 OFFSPEED_T = {"CH", "FS", "FO"}
-GROUPS = ["fastball", "breaking", "offspeed"]
 GROUPED = False                  # False = one model for all pitches (no family split)
 
 

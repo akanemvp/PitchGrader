@@ -128,6 +128,49 @@ class StuffPlusPredictor:
         return df
 
 
+_COMPOSITE_PREDICTOR = None
+
+
+def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
+    """Grade each pitch type's AVERAGE pitch — {pitch_type: Stuff+}.
+
+    Averages the model's shape features within a pitch type, then scores that single
+    composite pitch. This is not the same as averaging the per-pitch grades: the model
+    is a tree ensemble, so mean(grade(x)) != grade(mean(x)), and averaging grades
+    quietly penalizes pitchers whose stuff varies more from pitch to pitch.
+
+    `df` must already be engineered (it comes from a *_scored table). Returns {} if the
+    model or the required feature columns aren't available, so callers can fall back.
+    """
+    global _COMPOSITE_PREDICTOR
+    if _COMPOSITE_PREDICTOR is None:
+        _COMPOSITE_PREDICTOR = StuffPlusPredictor()
+    p = _COMPOSITE_PREDICTOR
+    ens = p.ensembles.get("all")
+    if ens is None or df is None or df.empty or "pitch_type" not in df.columns:
+        return {}
+    feats = [f for f in ens.get("feats", []) if f in df.columns]
+    if len(feats) < len(ens.get("feats", [])):
+        return {}
+
+    src = p.norm_global_historical if (norm_set == "historical" and p.norm_global_historical) else p.norm_global
+    gm = src.get("mean", src.get("global_mean", 0.0))
+    gs = max(src.get("std", src.get("global_std", 0.007)), 1e-6)
+
+    comp = df.groupby("pitch_type")[feats].mean().dropna()
+    if comp.empty:
+        return {}
+    comp = comp.reset_index()
+    # neutral columns the scorer touches but the model doesn't use as features
+    for col, val in (("plate_x", 0.0), ("plate_z", 2.5), ("same_hand", 0.0),
+                     ("vx0", 0.0), ("vy0", -130.0), ("vz0", 0.0), ("ay", 25.0)):
+        if col not in comp.columns:
+            comp[col] = val
+    rv = predict_prob_resid_rv(comp, ens)
+    sp = np.clip(100.0 + (gm - rv) / gs * 10.0, -50.0, 200.0)
+    return {pt: float(v) for pt, v in zip(comp["pitch_type"], sp) if np.isfinite(v)}
+
+
 def load_baselines():
     path = os.path.join(MODEL_DIR, "movement_baselines.pkl")
     if not os.path.exists(path):
