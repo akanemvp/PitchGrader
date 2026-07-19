@@ -119,6 +119,15 @@ def cmd_score():
             logger.info(f"  {src_table} is empty — skipping.")
             continue
 
+        # Apply saved pitch-type corrections before scoring. The raw tables are
+        # rewritten by re-scrapes, so overrides live in their own table and are
+        # re-applied here every time — that's what makes a correction durable.
+        from storage.overrides import apply_overrides, count_overrides
+        _n_ovr = count_overrides(s)
+        if _n_ovr:
+            df = apply_overrides(df, s)
+            logger.info(f"  Applied {_n_ovr} saved pitch-type override(s) for {s}")
+
         norm_set = season_norm[s]
         logger.info(f"Scoring {src_table} ({len(df):,} rows) [norm={norm_set}] …")
         df_eng, _ = engineer_features(df, baselines=predictor.baselines)

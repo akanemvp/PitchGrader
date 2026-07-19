@@ -28,6 +28,7 @@ from flask import Flask, jsonify, render_template, send_file, abort, request
 from flask_cors import CORS
 
 from config import DB_PATH, PROFILES_DIR, MODEL_DIR, DATA_DIR
+from storage import overrides as pitch_overrides_store
 
 logging.basicConfig(level=logging.INFO)
 app = Flask(__name__, template_folder="templates", static_folder="static")
@@ -2877,6 +2878,96 @@ def api_player_pitches_raw(player_name_season: str):
         records.append({k: (None if isinstance(v, float) and math.isnan(v) else v)
                         for k, v in row.items()})
     return jsonify(records)
+
+
+@app.route("/api/overrides/<season>", methods=["GET"])
+def api_overrides_list(season: str):
+    """List saved pitch-type corrections, optionally filtered to a pitcher / game."""
+    player = request.args.get("player")
+    if player and "," not in player:
+        parts = player.strip().rsplit(" ", 1)
+        if len(parts) == 2:
+            player = f"{parts[1]}, {parts[0]}"
+    gp = request.args.get("game_pk", type=int)
+    try:
+        df = pitch_overrides_store.get_overrides(season, player_name=player, game_pk=gp)
+        return jsonify(df.to_dict("records"))
+    except Exception as exc:
+        logger.error(f"api_overrides_list: {exc}")
+        return jsonify([]), 500
+
+
+@app.route("/api/overrides", methods=["POST"])
+def api_overrides_save():
+    """Persist pitch-type corrections so they survive refresh / restart / re-scrape.
+
+    Body: {player_name, season, pitch_overrides: {"{game_pk}_{at_bat}_{pitch}": new_type}}
+
+    The scraped label is looked up and stored as original_type, giving an audit trail
+    and letting us detect later if the key no longer points at the pitch we corrected.
+    """
+    body = request.get_json(silent=True) or {}
+    season = body.get("season", "")
+    player_name = body.get("player_name", "")
+    ovr = body.get("pitch_overrides", {}) or {}
+    if not season or not ovr:
+        return jsonify({"error": "missing season or pitch_overrides"}), 400
+
+    db_name = _gf_name(player_name) if player_name else None
+
+    # Look up each pitch's current (scraped) label for the audit trail.
+    original: dict = {}
+    raw_table = f"pitches_{season}"
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        tbls = {r[0] for r in conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table'").fetchall()}
+        if raw_table in tbls and db_name:
+            cur = pd.read_sql_query(
+                f"""SELECT CAST(game_pk AS INTEGER) gk, CAST(at_bat_number AS INTEGER) ab,
+                           CAST(pitch_number AS INTEGER) pn, pitch_type
+                    FROM {raw_table} WHERE player_name = ?""", conn, params=(db_name,))
+            original = {f"{r.gk}_{r.ab}_{r.pn}": r.pitch_type for r in cur.itertuples()}
+        conn.close()
+    except Exception as exc:
+        logger.warning(f"api_overrides_save: original lookup failed: {exc}")
+
+    rows = []
+    for key, new_type in ovr.items():
+        parts = str(key).split("_")
+        if len(parts) != 3:
+            continue
+        try:
+            gk, ab, pn = int(parts[0]), int(parts[1]), int(parts[2])
+        except ValueError:
+            continue
+        rows.append({"game_pk": gk, "at_bat_number": ab, "pitch_number": pn,
+                     "new_type": new_type, "player_name": db_name,
+                     "original_type": original.get(f"{gk}_{ab}_{pn}")})
+    if not rows:
+        return jsonify({"error": "no valid pitch keys"}), 400
+    try:
+        n = pitch_overrides_store.save_many(season, rows)
+        return jsonify({"saved": n, "season_total": pitch_overrides_store.count_overrides(season)})
+    except Exception as exc:
+        logger.error(f"api_overrides_save: {exc}")
+        return jsonify({"error": str(exc)}), 500
+
+
+@app.route("/api/overrides", methods=["DELETE"])
+def api_overrides_delete():
+    """Revert one pitch back to its scraped label."""
+    body = request.get_json(silent=True) or {}
+    try:
+        n = pitch_overrides_store.delete_override(
+            body["season"], int(body["game_pk"]),
+            int(body["at_bat_number"]), int(body["pitch_number"]))
+        return jsonify({"deleted": n})
+    except (KeyError, ValueError, TypeError):
+        return jsonify({"error": "need season, game_pk, at_bat_number, pitch_number"}), 400
+    except Exception as exc:
+        logger.error(f"api_overrides_delete: {exc}")
+        return jsonify({"error": str(exc)}), 500
 
 
 @app.route("/api/reclassify", methods=["POST"])

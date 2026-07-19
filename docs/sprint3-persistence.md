@@ -89,15 +89,34 @@ game view — the two access patterns the UI actually uses.
 | `apply_overrides(df, season)` | apply stored corrections to any pitch DataFrame |
 | `count_overrides()` | totals, for verification |
 
-**Verified working:** a CRUD round-trip — save an override, confirm
-`apply_overrides()` rewrites the pitch's type in a DataFrame (`SL` → `ST`), then
-delete it and confirm the count returns to zero.
+### HTTP API (`app.py`)
+A small CRUD surface over the store:
+
+| Endpoint | Purpose |
+|---|---|
+| `POST /api/overrides` | save corrections; looks up and stores the scraped `original_type` |
+| `GET /api/overrides/<season>` | list corrections, filterable by `?player=` / `?game_pk=` |
+| `DELETE /api/overrides` | revert one pitch to its scraped label |
+
+### Scoring integration (`main.py`)
+`cmd_score` calls `apply_overrides()` on each season's pitches **before** feature
+engineering, so saved corrections flow into the grades on every re-score. Because the
+raw tables are replaced by re-scrapes, re-applying here on each run is exactly what
+makes a correction durable.
+
+**Verified working (end-to-end via the API):**
+1. `POST` a correction → saved, with `original_type` captured automatically (`CH`).
+2. `GET` → reads the record back.
+3. `apply_overrides()` → rewrites that pitch `CH` → `ST`.
+4. Row present in the on-disk `pitch_overrides` table (survives process restart).
+5. `DELETE` → reverts; count returns to zero.
 
 ## Remaining work
-1. Wire `/api/reclassify` to call `save_many()` so the editor's "save" persists.
-2. Call `apply_overrides()` in the read/score path so saved corrections show up
-   automatically on profiles and in re-scoring.
-3. A "revert" control in the editor UI (`delete_override`).
+1. A **Save** button in the editor UI wired to `POST /api/overrides` (the editor is
+   currently preview/compare only).
+2. A revert control in the editor UI (`DELETE /api/overrides`).
+3. Apply overrides in the live read paths (`api_player_pitches_raw`, game detail) so
+   saved corrections appear in the UI without waiting for a re-score.
 4. Decide override precedence when a re-scrape changes a pitch's original label.
 
 ## Biggest risk
