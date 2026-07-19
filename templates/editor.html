@@ -399,10 +399,15 @@
         <button class="btn-calc" id="calc-btn" onclick="recalculate()" disabled>
           Recalculate Stuff+
         </button>
+        <button class="btn-calc" id="save-btn" onclick="saveChanges()" disabled
+          style="background:#1f7a4d" title="Save these corrections so they persist">
+          Save Changes
+        </button>
         <button class="btn-clear-all" id="btn-clear-all" onclick="clearAll()" style="display:none">
           Clear all changes
         </button>
         <span class="spinner" id="spinner" style="display:none">Calculating…</span>
+        <span id="save-msg" style="display:none;font-size:12px;font-weight:600;color:#1f7a4d;margin-left:8px"></span>
       </div>
 
       <div id="error-msg"></div>
@@ -822,6 +827,7 @@ function applyReclassify() {
   buildLegend();
 
   document.getElementById("calc-btn").disabled     = false;
+  document.getElementById("save-btn").disabled     = false;
   document.getElementById("btn-clear-all").style.display = "";
   document.getElementById("results-section").style.display = "none";
 }
@@ -834,6 +840,7 @@ function renderPendingList() {
       Draw on the chart to select pitches, then apply a new pitch type.</div>`;
     document.getElementById("btn-clear-all").style.display = "none";
     document.getElementById("calc-btn").disabled = true;
+    document.getElementById("save-btn").disabled = true;
     return;
   }
 
@@ -922,6 +929,43 @@ async function recalculate() {
   } finally {
     calcBtn.disabled = false;
     spinner.style.display = "none";
+  }
+}
+
+// Persist the pending corrections (Sprint 3). Unlike "View in Profile" — which is a
+// throwaway in-memory preview — this writes to the pitch_overrides table so the
+// corrections survive refresh, restart, and the re-scrapes that replace raw tables.
+async function saveChanges() {
+  if (Object.keys(appliedOvr).length === 0) return;
+  const btn = document.getElementById("save-btn");
+  const msg = document.getElementById("save-msg");
+  const errEl = document.getElementById("error-msg");
+  btn.disabled = true;
+  msg.style.display = "none";
+  errEl.style.display = "none";
+  try {
+    const res = await fetch("/api/overrides", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({
+        player_name:     playerName,
+        season:          season,
+        pitch_overrides: appliedOvr,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      errEl.textContent   = data.error || "Could not save changes";
+      errEl.style.display = "block";
+      btn.disabled = false;
+      return;
+    }
+    msg.textContent = `Saved ${data.saved} correction${data.saved === 1 ? "" : "s"} · ${data.season_total} stored for ${season}`;
+    msg.style.display = "inline";
+  } catch (e) {
+    errEl.textContent   = "Could not save changes: " + e;
+    errEl.style.display = "block";
+    btn.disabled = false;
   }
 }
 

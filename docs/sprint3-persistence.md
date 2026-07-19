@@ -111,13 +111,25 @@ makes a correction durable.
 4. Row present in the on-disk `pitch_overrides` table (survives process restart).
 5. `DELETE` → reverts; count returns to zero.
 
+### Editor UI (`templates/editor.html`)
+A **Save Changes** button posts the pending corrections to `POST /api/overrides` and
+reports how many were saved. This is the meaningful distinction from Sprint 2's
+"View in Profile", which remains a throwaway in-memory preview:
+
+| Action | Behavior |
+|---|---|
+| *View in Profile* | in-memory preview; discarded on refresh (Sprint 2) |
+| **Save Changes** | writes to `pitch_overrides`; survives refresh/restart/re-scrape |
+
+Verified through the running app: saving two pitches returned
+`{"saved": 2, "season_total": 2}` with the scraped labels captured as
+`original_type` (`CH`→`ST`, `FF`→`ST`).
+
 ## Remaining work
-1. A **Save** button in the editor UI wired to `POST /api/overrides` (the editor is
-   currently preview/compare only).
-2. A revert control in the editor UI (`DELETE /api/overrides`).
-3. Apply overrides in the live read paths (`api_player_pitches_raw`, game detail) so
+1. A revert control in the editor UI (`DELETE /api/overrides` already exists).
+2. Apply overrides in the live read paths (`api_player_pitches_raw`, game detail) so
    saved corrections appear in the UI without waiting for a re-score.
-4. Decide override precedence when a re-scrape changes a pitch's original label.
+3. Decide override precedence when a re-scrape changes a pitch's original label.
 
 ## Biggest risk
 **Key stability across re-scrapes.** Overrides are tied to
