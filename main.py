@@ -83,7 +83,7 @@ def cmd_score():
     # 2023/2024/2025: use historical norms (2020-2024 baseline) to avoid contamination
     # 2026 seasons: use current norms (2020-2025 baseline)
     season_norm = {
-        "2023": "historical", "2024": "historical", "2025": "historical",
+        "2023": "historical", "2024": "historical",   # 2025 removed: it is training data now
         "spring2026": "current", "breakout2026": "current",
         "2026": "current",
         "aaa2026": "current",
@@ -159,7 +159,6 @@ def cmd_profiles():
     seasons = [
         ("2023",         "2023"),
         ("2024",         "2024"),
-        ("2025",         "2025"),
         ("spring2026",   "spring2026"),
         ("breakout2026", "breakout2026"),
         ("2026",         "2026"),

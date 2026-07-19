@@ -85,7 +85,7 @@ def _bootstrap_editor_tables() -> None:
     gz_tmp  = "/tmp/editor_bootstrap.csv.gz"
     csv_tmp = "/tmp/editor_bootstrap.csv"
     try:
-        for season in ["2025", "2024", "2023"]:
+        for season in ["2026", "2024", "2023"]:
             tbl      = f"pitches_{season}_editor"
             done_key = f"/tmp/.editor_{season}_done"
             if os.path.exists(done_key):
@@ -2080,7 +2080,7 @@ def _name_matches(player_name: str, q: str) -> bool:
 @app.route("/api/search")
 def api_search():
     q = _normalize(request.args.get("q", "").strip())
-    season = request.args.get("season", "2025")
+    season = request.args.get("season", "2026")
     lb = _leaderboard_live(season)
     if not lb or not q:
         return jsonify([])
@@ -2573,7 +2573,7 @@ def admin_rebuild_all():
             from profiles.player_cards import generate_all_cards
 
             predictor = StuffPlusPredictor()
-            seasons = ["2024", "2025", "spring2026", "breakout2026"]
+            seasons = ["2024", "spring2026", "breakout2026"]
             conn = sqlite3.connect(DB_PATH)
             tables = [r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()]
             conn.close()

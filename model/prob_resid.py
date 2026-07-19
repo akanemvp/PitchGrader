@@ -24,9 +24,19 @@ FOUL_DESCS   = {"foul", "foul_tip", "bunt_foul_tip", "foul_bunt"}
 INPLAY_DESC  = "hit_into_play"
 
 SHAPE_FEATS = [
-    "release_speed", "release_extension", "az", "ax",
-    "release_pos_x", "release_pos_z", "arm_angle", "release_spin_rate", "same_hand",
+    "release_speed", "release_extension", "az", "ax_arm",
+    "release_pos_x_arm", "release_pos_z", "arm_angle", "release_spin_rate",
 ]
+# ax_arm / release_pos_x_arm are the MIRRORED (arm-normalized) versions of ax and
+# release_pos_x — arm-side is positive for both hands. Using the raw signed values
+# forced the model to learn identical physics separately in each sign region from
+# ~73/27 lopsided data, handing lefties a ~4-5 point phantom bonus. Verified via a
+# mirror test: flipping a pitch's handedness moved its grade +4.7 with raw features
+# and exactly 0.00 with these.
+#
+# `same_hand` is deliberately absent: with mirrored features the model cannot
+# identify pitcher handedness, so platoon marginalization became a no-op (+0.08
+# points league-wide). One grade per pitch, single scoring pass.
 LOC_FEATS = ["plate_x", "plate_z", "sz_top", "sz_bot"]   # location + batter strike-zone size
 COUNT_FEATS = []                                   # no count (faithful Driveline Stuff+)
 XWOBA_COL = "estimated_woba_using_speedangle"
@@ -108,10 +118,14 @@ def train_prob_resid_ensemble(df: pd.DataFrame, rv_baselines: dict, features=Non
     desc = df["description"].fillna("").astype(str)
     dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
     is_w = desc.isin(WHIFF_DESCS); is_f = desc.isin(FOUL_DESCS); is_ip = desc == INPLAY_DESC
-    is_take = desc.isin(BALL_DESCS) | desc.isin(CALLED_DESCS)
-    df = df[is_w | is_f | is_ip | is_take].copy()
+    # SWING-ONLY: balls and called strikes are excluded. Whether a taken pitch is a
+    # ball or a strike is mostly location/command, which this model can't see (it has
+    # no location features), so takes inject noise rather than shape signal.
+    _n_takes = int((desc.isin(BALL_DESCS) | desc.isin(CALLED_DESCS)).sum())
+    df = df[is_w | is_f | is_ip].copy()
     desc = desc[df.index]; dre = dre[df.index]
     is_w = is_w[df.index]; is_f = is_f[df.index]; is_ip = is_ip[df.index]
+    logger.info(f"  Swing-only target: dropped {_n_takes:,} takes; training on {len(df):,} swings")
     cz, cx = _fit_approach(df); _apply_approach(df, cz, cx)        # location-adjusted VAA/HAA
     sh = [f for f in SHAPE_FEATS if f in df.columns]
     off = [f for f in LOC_FEATS if f in df.columns]
@@ -121,20 +135,37 @@ def train_prob_resid_ensemble(df: pd.DataFrame, rv_baselines: dict, features=Non
 
     cnt = [f for f in COUNT_FEATS if f in df.columns]
     mf = sh + cnt
-    # ---- full Driveline RV target, ALL outcomes: dre for ball/cs/whiff/foul, xwOBA→runs in-play ----
-    lg = rv_baselines.get("lg_xwoba_con", 0.370); scl = rv_baselines.get("woba_scale", 1.15)
-    mean_c = float(dre[is_ip].mean())
-    xw = pd.to_numeric(df.get(XWOBA_COL), errors="coerce")
-    is_take = desc.isin(BALL_DESCS) | desc.isin(CALLED_DESCS)
-    noncontact = is_w | is_f | is_take
-    df["_swrv"] = np.nan
-    df.loc[noncontact, "_swrv"] = dre[noncontact]
-    df.loc[is_ip, "_swrv"] = ((xw - lg) / scl + mean_c)[is_ip].fillna(mean_c)
-    use = noncontact | is_ip
-    logger.info(f"  Driveline RV (ALL outcomes): ball/cs/whiff/foul=delta_run_exp, in_play=xwOBA→runs "
-                f"(lg={lg:.3f} scl={scl:.2f} mean_c={mean_c:+.4f}); no location regression")
 
-    base = df[use].dropna(subset=mf + off + ["_swrv"])
+    # ---- Target: whiff/foul = actual delta_run_exp; in-play = SPRAY-AWARE xRV ----
+    # xwOBAcon knows only exit velo + launch angle — it is blind to spray direction,
+    # so it systematically flatters breaking-ball contact and penalizes grounders
+    # (measured: sinkers beat their xwOBAcon by ~23 wOBA pts, sweepers trailed by ~41).
+    # A model on (EV, LA, spray) predicts in-play run value far better out-of-sample
+    # (r 0.641 -> 0.701) and cuts the pitch-type bias ~18%.
+    mean_c = float(dre[is_ip].mean())
+    df["_swrv"] = np.nan
+    df.loc[is_w | is_f, "_swrv"] = dre[is_w | is_f]
+    _spray_cols = ["launch_speed", "launch_angle", "hc_x", "hc_y", "stand"]
+    if is_ip.any() and all(c in df.columns for c in _spray_cols):
+        _sp = np.degrees(np.arctan2(pd.to_numeric(df["hc_x"], errors="coerce") - 125.42,
+                                    198.27 - pd.to_numeric(df["hc_y"], errors="coerce")))
+        df["_spray"] = _sp * np.where(df["stand"].astype(str) == "R", 1.0, -1.0)
+        _F = ["launch_speed", "launch_angle", "_spray"]
+        _fit = df[is_ip].dropna(subset=_F + ["delta_run_exp"])
+        _cm = lgb.LGBMRegressor(n_estimators=400, max_depth=6, learning_rate=0.05,
+                                min_child_samples=200, subsample=0.8, colsample_bytree=0.8,
+                                random_state=42, verbose=-1).fit(_fit[_F], _fit["delta_run_exp"])
+        _ok = df[_F].notna().all(axis=1) & is_ip
+        df.loc[_ok, "_swrv"] = _cm.predict(df.loc[_ok, _F])
+        df.loc[is_ip & ~_ok, "_swrv"] = mean_c
+        logger.info(f"  In-play target: spray-aware xRV on (EV, LA, spray), fit on {len(_fit):,} BIP")
+    else:
+        lg = rv_baselines.get("lg_xwoba_con", 0.370); scl = rv_baselines.get("woba_scale", 1.15)
+        xw = pd.to_numeric(df.get(XWOBA_COL), errors="coerce")
+        df.loc[is_ip, "_swrv"] = ((xw - lg) / scl + mean_c)[is_ip].fillna(mean_c)
+        logger.warning("  spray columns missing — falling back to xwOBAcon in-play target")
+
+    base = df.dropna(subset=mf + off + ["_swrv"])
     grp = _pitch_group(base)
     groups = {}
     for g in sorted(grp.unique()):
