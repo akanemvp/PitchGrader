@@ -2138,10 +2138,11 @@ def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
         return _boxscore_er_cache[game_pk]
     result: dict[int, int] = {}
     ip_result: dict[int, int] = {}
+    fetched = False
     try:
         import urllib.request
         url = f"https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
-        with urllib.request.urlopen(url, timeout=5) as resp:
+        with urllib.request.urlopen(url, timeout=10) as resp:
             data = json.loads(resp.read())
         for team in ("home", "away"):
             players = data["teams"][team]["players"]
@@ -2161,10 +2162,16 @@ def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
                             else int(parts[0]) * 3)
                     except Exception:
                         pass
+        fetched = True
     except Exception:
         pass
-    _boxscore_er_cache[game_pk] = result
-    _boxscore_ip_cache[game_pk] = ip_result
+    # Only cache a SUCCESSFUL fetch. Caching a failure (network hiccup / timeout)
+    # would permanently poison this game for the life of the process: the boxscore
+    # IP override would never fire and the game line would silently fall back to
+    # the event-counted outs, which undercounts DP/baserunning outs.
+    if fetched:
+        _boxscore_er_cache[game_pk] = result
+        _boxscore_ip_cache[game_pk] = ip_result
     return result
 
 
@@ -3192,6 +3199,21 @@ def api_reclassify_profile():
 
     profile = _find_profile(season, player_name)
 
+    # Game-scoped preview: carry the game line (IP / H / ER / BB / K / HR, opponent,
+    # date) so the page can re-render as a GAME view. Without these the preview
+    # collapses to a season summary and the game's stats disappear. Re-classifying a
+    # pitch type doesn't change these — they come from descriptions/events/boxscore —
+    # so they're computed from the same game-scoped frame.
+    game_fields = {}
+    if game_pk is not None:
+        try:
+            game_fields = dict(_compute_game_stats(df))
+            _gd = df["game_date"].dropna() if "game_date" in df.columns else []
+            game_fields["game_pk"]   = int(game_pk)
+            game_fields["game_date"] = str(_gd.iloc[0]) if len(_gd) else None
+        except Exception as exc:
+            logger.warning(f"reclassify_profile game stats failed: {exc}")
+
     return jsonify({
         "player_name":   db_name,
         "season":        season,
@@ -3204,6 +3226,7 @@ def api_reclassify_profile():
         "pitches":       pitches,
         "scatter":       scatter,
         "movement_dots": movement_dots,
+        **game_fields,
         "_preview":      True,
     })
 
