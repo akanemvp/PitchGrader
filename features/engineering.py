@@ -689,6 +689,20 @@ def engineer_features(
     else:
         df["same_hand"] = 0.0
 
+    # -- Arm-normalized (mirrored) horizontal features --------------------------
+    # Raw ax / release_pos_x are sign-flipped between hands, so a model trained on
+    # them has to learn the same physics twice — once per sign region — from data
+    # that is ~73% right-handed. That gave lefties a ~4-5 point phantom bonus
+    # (verified: mirroring a pitch changed its grade by +4.7 before this fix, 0.00
+    # after). Mirroring puts both hands on one scale so arm-side is always positive
+    # and one pattern is learned from 100% of the data. Same approach tjStuff+ uses.
+    _hand_sign = np.where(df["p_throws"].astype(str) == "R", -1.0, 1.0) \
+        if "p_throws" in df.columns else 1.0
+    if "ax" in df.columns:
+        df["ax_arm"] = pd.to_numeric(df["ax"], errors="coerce") * _hand_sign
+    if "release_pos_x" in df.columns:
+        df["release_pos_x_arm"] = pd.to_numeric(df["release_pos_x"], errors="coerce") * _hand_sign
+
     # -- 5a. in_zone: binary strike-zone indicator (batter-specific via sz_top/sz_bot)
     if "plate_x" in df.columns and "plate_z" in df.columns:
         sz_top = df.get("sz_top", pd.Series(3.5, index=df.index)).fillna(3.5)

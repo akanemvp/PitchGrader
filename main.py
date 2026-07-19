@@ -83,7 +83,7 @@ def cmd_score():
     # 2023/2024/2025: use historical norms (2020-2024 baseline) to avoid contamination
     # 2026 seasons: use current norms (2020-2025 baseline)
     season_norm = {
-        "2023": "historical", "2024": "historical", "2025": "historical",
+        "2023": "historical", "2024": "historical",   # 2025 removed: it is training data now
         "spring2026": "current", "breakout2026": "current",
         "2026": "current",
         "aaa2026": "current",
@@ -119,6 +119,15 @@ def cmd_score():
             logger.info(f"  {src_table} is empty — skipping.")
             continue
 
+        # Apply saved pitch-type corrections before scoring. The raw tables are
+        # rewritten by re-scrapes, so overrides live in their own table and are
+        # re-applied here every time — that's what makes a correction durable.
+        from storage.overrides import apply_overrides, count_overrides
+        _n_ovr = count_overrides(s)
+        if _n_ovr:
+            df = apply_overrides(df, s)
+            logger.info(f"  Applied {_n_ovr} saved pitch-type override(s) for {s}")
+
         norm_set = season_norm[s]
         logger.info(f"Scoring {src_table} ({len(df):,} rows) [norm={norm_set}] …")
         df_eng, _ = engineer_features(df, baselines=predictor.baselines)
@@ -150,7 +159,6 @@ def cmd_profiles():
     seasons = [
         ("2023",         "2023"),
         ("2024",         "2024"),
-        ("2025",         "2025"),
         ("spring2026",   "spring2026"),
         ("breakout2026", "breakout2026"),
         ("2026",         "2026"),
