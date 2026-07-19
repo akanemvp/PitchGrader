@@ -37,13 +37,33 @@ those results and lets a user re-label pitches and re-score them live.
 
 ## The Model
 The production model is a **single LightGBM regressor** (`model/prob_resid.py`) that
-predicts each pitch's expected run value from **9 shape features** — release speed,
-extension, vertical/horizontal acceleration, release side/height, arm angle, spin
-rate, and batter-vs-pitcher handedness. It uses **no location and no count**; platoon
-is marginalized at inference by scoring each pitch both same- and opposite-handed and
-averaging. The predicted run value is normalized onto the Stuff+ scale
-(**100 = league average, 10 = one standard deviation**) using frozen 2022–2024
-Major League norms, so grades are comparable across pitch types and seasons.
+predicts each pitch's expected run value from **8 shape features** — release speed,
+extension, vertical acceleration, arm-normalized horizontal acceleration,
+arm-normalized release side, release height, arm angle, and spin rate. It uses **no
+location, no count, and no batter handedness**.
+
+The two horizontal features are **mirrored** so arm-side is positive for both hands.
+This matters: with raw signed values the model had to learn the same physics twice
+(once per sign region) from data that is 73% right-handed, which gave left-handers a
+~5-point phantom bonus. Mirroring makes a lefty and a righty throwing physically
+identical pitches grade identically, by construction — see
+[model-handedness-fix.md](model-handedness-fix.md).
+
+The training target uses **swings only**: actual `delta_run_exp` for whiffs and fouls,
+and a **spray-aware expected run value** (exit velo, launch angle, spray angle) for
+balls in play. Balls and called strikes are excluded, since whether a taken pitch is
+called a ball or a strike is mostly location and command — which this model cannot see.
+
+Predicted run value is normalized onto the Stuff+ scale (**100 = league average,
+10 = one standard deviation**) using frozen 2022–2025 Major League norms, so grades are
+comparable across pitch types and seasons. Because 2025 is training data, it is no
+longer scored or displayed.
+
+**Aggregation:** every pitch is graded individually, but a pitch *type*'s score is the
+grade of that type's **average pitch** (metrics averaged first, then graded) rather than
+the average of the individual grades. The model is a tree ensemble, so
+`mean(grade(x)) ≠ grade(mean(x))`, and averaging grades penalizes pitchers whose stuff
+varies more from pitch to pitch.
 
 ## Data Flow
 ```

@@ -356,6 +356,24 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
     )
     agg = df.groupby("pitch_type").agg(**agg_dict).reset_index()
 
+    # --- Pitch-type grade = grade of the AVERAGE pitch (not average of the grades) ---
+    # Individual pitches keep their own stuff_plus (used for per-pitch leaderboards and
+    # the editor). But the pitch-type score averages the *shape metrics* first and
+    # grades that one composite pitch.
+    #
+    # Why: the model is a tree ensemble, so mean(grade(x)) != grade(mean(x)). Averaging
+    # per-pitch grades penalizes pitchers whose stuff varies more, because the extra
+    # spread lands in flatter regions of the response. Real case — Misiorowski's average
+    # four-seam grades 118.3, but averaging his 1,047 per-pitch grades gave 113.9, which
+    # put him level with a pitcher whose average pitch is meaningfully worse.
+    try:
+        from model.predict import _composite_pitch_grade
+        _cg = _composite_pitch_grade(df)
+        if _cg:
+            agg["stuff_plus"] = agg["pitch_type"].map(_cg).fillna(agg["stuff_plus"])
+    except Exception as _exc:
+        logger.warning(f"composite pitch grading unavailable, using per-pitch mean: {_exc}")
+
     # Circular mean for spin_axis (0–360° circular scale).
     # Arithmetic mean is wrong near the 0°/360° boundary: two pitches at 355° and
     # 5° would average to 180° instead of 0°. Use sin/cos component averaging.

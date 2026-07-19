@@ -110,6 +110,35 @@ his shape supports once handedness is handled correctly.
   arm-normalized **r = +0.1130** vs raw **r = +0.1090** on identical data — the fix
   improves accuracy as well as removing bias.
 
+## Aggregation fix: grade the average pitch, not the average of the grades
+
+A separate issue surfaced while reviewing the four-seam leaderboard. Jacob
+Misiorowski (100.5 mph, 7.56 ft extension, 2620 rpm) graded **113.9** — level with a
+pitcher whose average fastball is clearly worse on every input. The model's own
+feature attribution said Misiorowski should be ~4 points ahead.
+
+The cause was the aggregation, not the model. The pitch-type score was the **mean of
+the per-pitch grades**, but the model is a tree ensemble, so:
+
+```
+mean( grade(pitch) )  ≠  grade( mean(pitch) )
+```
+
+| | n | mean of grades | grade of the average pitch |
+|---|---|---|---|
+| Misiorowski FF | 1,047 | 113.9 | **118.3** |
+| Morgan FF | 113 | 114.0 | 113.9 |
+
+Misiorowski's velocity varies more pitch-to-pitch (SD 1.77 vs 0.93 mph). That extra
+spread lands in flatter regions of the model's response, so averaging the grades
+pulled his number down. Averaging *grades* quietly penalizes pitchers whose stuff
+varies — which is not something Stuff+ is meant to measure.
+
+**Fix:** average the shape metrics within a pitch type first, then grade that single
+composite pitch (`_composite_pitch_grade` in `model/predict.py`, used by
+`summarize_pitcher`). Individual pitches keep their own grade — the per-pitch
+leaderboards and the editor are unchanged. Only the pitch-type/arsenal score moved.
+
 ## Known limitations
 - **Swing-only is unvalidated** (see above).
 - **The fastball half of the xwOBA bias survives.** Spray fixed breaking-ball contact
