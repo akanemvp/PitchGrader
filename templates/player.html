@@ -1390,16 +1390,26 @@ async function load() {
       }).catch(() => {});
   }
 
-  // Render season summary
-  renderPage(data, null, false);
+  // Render. A reclassify preview that was launched from a GAME view carries the
+  // game line (game_pk + IP/H/ER/…), so render it as a game view — otherwise it
+  // collapses to a season summary and the game's stats are lost.
+  const _isGamePreview = !!(data._preview && data.game_pk != null);
+  if (_isGamePreview) {
+    _inGameView = true;
+    renderPage(data, data.scatter, true, data.game_pk);
+  } else {
+    renderPage(data, null, false);
+  }
 
   // Overlay individual pitch dots. In a reclassify preview the per-pitch dots come
   // back on the response already carrying the new labels — use those directly so the
   // movement chart recolors. Otherwise fetch the season's raw pitches from the DB.
   if (data._preview && Array.isArray(data.movement_dots)) {
+    // Preview dots are already scoped correctly (game-scoped when the preview came
+    // from a game view), so draw them regardless of _inGameView.
     _seasonDots = data.movement_dots;
     requestAnimationFrame(() => {
-      if (!_inGameView && data.movement_dots.length) overlayRawDots(data.movement_dots, data.p_throws === "L");
+      if (data.movement_dots.length) overlayRawDots(data.movement_dots, data.p_throws === "L");
     });
   } else {
     fetch(`/api/player_pitches_raw/${encodeURIComponent(playerName)}/${season}`)
