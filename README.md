@@ -10,7 +10,7 @@ where **100 is league average and every 10 points is one standard deviation**
 only on the *physical shape* of the pitch — velocity, movement, spin, release point,
 and arm slot — not on the result of the at-bat. The project ingests public
 pitch-tracking data, engineers shape features, trains a model against frozen
-2022–2024 Major League norms, and serves the results through a web app that shows
+2022–2025 Major League norms, and serves the results through a web app that shows
 per-pitcher profiles and an interactive pitch-type editor.
 
 ## Current Status
