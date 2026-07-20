@@ -11,23 +11,30 @@ only on the *physical shape* of the pitch — velocity, movement, spin, release 
 and arm slot — not on the result of the at-bat. The project ingests public
 pitch-tracking data, engineers shape features, trains a model against frozen
 2022–2024 Major League norms, and serves the results through a web app that shows
-per-pitcher profiles, leaderboards, and an interactive pitch-type editor.
+per-pitcher profiles and an interactive pitch-type editor.
 
 ## Current Status
 The project is **functional end-to-end**. It can:
 - ingest pitch data for MLB, several minor-league/spring levels, and tracked NCAA college games,
 - engineer shape features and score every pitch with the current model, and
-- generate per-player profile cards and per-season leaderboards.
+- generate per-player profile cards and a per-season player index (which powers search).
 
 **Sprint 2** delivers a working prototype: a Flask web app with an interactive
 pitch-type editor that re-classifies and re-scores pitches live (the Sprint 2 feature
 slice), built on the Sprint 1 project definition and architecture.
 
+**Sprint 3** makes those corrections durable: a `pitch_overrides` table, a CRUD API,
+and a **Save Changes** button, so an edit survives refreshes, restarts, and re-scrapes
+and is re-applied on every scoring run.
+
 ## Project Documents
+**Sprint 3**
+- [docs/sprint3-persistence.md](docs/sprint3-persistence.md) — persisting pitch re-classifications: design decision, data model, and status
+- [docs/model-handedness-fix.md](docs/model-handedness-fix.md) — engineering note: handedness normalization and target revision
+
 **Sprint 2**
 - [docs/architecture.md](docs/architecture.md) — current system architecture and the Sprint 2 feature slice
 - [docs/manual-verification.md](docs/manual-verification.md) — how the prototype is verified by hand
-- [docs/ai-implementation-review.md](docs/ai-implementation-review.md) — review of AI-assisted implementation
 
 **Sprint 1**
 - [docs/project/project-vision.md](docs/project/project-vision.md) — the problem, users, goals, and scope
@@ -40,7 +47,7 @@ slice), built on the Sprint 1 project definition and architecture.
 Rough run instructions (Python 3.x):
 1. Install dependencies: `pip install -r requirements.txt`
 2. Score a season into the database: `python3 main.py score 2025`
-3. Build profile cards/leaderboards: `python3 main.py profiles`
+3. Build profile cards and the season player index: `python3 main.py profiles`
 4. Run the web app locally: `python3 app.py` (serves on `http://127.0.0.1:5001`)
 
 The app reads a local SQLite database of pitch data. Model artifacts live under
