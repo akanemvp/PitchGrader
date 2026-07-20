@@ -174,6 +174,20 @@ _SCORED_COLS = [
     "stuff_plus", "estimated_woba_using_speedangle",
 ]
 
+# The background refreshes load a SLIM column set for card generation. That slim list
+# must include every feature the model uses, because pitch-type grades are computed by
+# scoring each type's average pitch — drop a feature and the card builder silently
+# falls back to averaging per-pitch grades, which is a different (worse) number.
+# Derive the model features from the trained model so this can never drift again when
+# SHAPE_FEATS changes.
+try:
+    from model.prob_resid import SHAPE_FEATS as _MODEL_FEATS
+    for _f in _MODEL_FEATS:
+        if _f not in _SCORED_COLS:
+            _SCORED_COLS.append(_f)
+except Exception as _exc:  # pragma: no cover - defensive
+    logging.getLogger(__name__).warning(f"could not append model features to _SCORED_COLS: {_exc}")
+
 # ---------------------------------------------------------------------------
 # Spring training live refresh (background thread, every 90 s)
 # ---------------------------------------------------------------------------
