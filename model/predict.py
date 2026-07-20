@@ -8,9 +8,9 @@ Driveline run-value target) plus the frozen normalization baseline, then:
   3. normalizes to the Stuff+ scale: 100 = league average, 10 = one standard
      deviation. Lower xRV = better pitch = higher grade.
 
-Every pitch is scored twice — once as if facing a same-hand batter and once
-opposite-hand — and averaged 50/50, so a pitcher's grade is independent of the
-platoon mix they happened to face.
+The model's shape features are arm-normalized and carry no handedness, so a lefty
+and a righty throwing physically identical pitches grade identically and no platoon
+averaging is needed — one scoring pass per pitch.
 
 Two grade columns are produced: `stuff_plus` (the raw z-score, used for
 aggregation/leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap
@@ -106,13 +106,10 @@ class StuffPlusPredictor:
 
         ens = self.ensembles["all"]
 
-        # Platoon-neutral scoring: score each pitch once as if facing a same-hand
-        # batter (same_hand=1.0) and once opposite-hand (same_hand=0.0), average
-        # 50/50. The Driveline model uses no location feature, so pitches are scored
-        # at their raw shape with no plate_x/plate_z substitution.
-        df_same = df.copy(); df_same["same_hand"] = 1.0
-        df_opp  = df.copy(); df_opp["same_hand"]  = 0.0
-        expected_rv = 0.5 * predict_prob_resid_rv(df_same, ens) + 0.5 * predict_prob_resid_rv(df_opp, ens)
+        # Single pass: the model's features are arm-normalized and exclude same_hand,
+        # so it cannot see batter or pitcher handedness. The old two-pass same/opposite
+        # average is a no-op here and just doubled inference cost.
+        expected_rv = predict_prob_resid_rv(df, ens)
         stuff_plus = 100.0 + (_global_mean - expected_rv) / _global_std * 10.0
 
         # Velocity floor: a "power" pitch type below 75 mph is almost always a
@@ -148,16 +145,21 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
     p = _COMPOSITE_PREDICTOR
     ens = p.ensembles.get("all")
     if ens is None or df is None or df.empty or "pitch_type" not in df.columns:
+        logger.warning("composite grade skipped: no model or empty frame")
         return {}
-    feats = [f for f in ens.get("feats", []) if f in df.columns]
-    if len(feats) < len(ens.get("feats", [])):
+    want = list(ens.get("feats", []))
+    missing = [f for f in want if f not in df.columns]
+    if missing:
+        # Loud on purpose: silently falling back to the per-pitch mean is how a stale
+        # aggregation slips into production unnoticed.
+        logger.warning(f"composite grade skipped — missing model features: {missing}")
         return {}
 
     src = p.norm_global_historical if (norm_set == "historical" and p.norm_global_historical) else p.norm_global
     gm = src.get("mean", src.get("global_mean", 0.0))
     gs = max(src.get("std", src.get("global_std", 0.007)), 1e-6)
 
-    comp = df.groupby("pitch_type")[feats].mean().dropna()
+    comp = df.groupby("pitch_type")[want].mean().dropna()
     if comp.empty:
         return {}
     comp = comp.reset_index()
