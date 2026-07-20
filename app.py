@@ -2882,6 +2882,25 @@ def api_player_pitches_raw(player_name_season: str):
     except Exception as exc:
         logger.warning(f"player_pitches_raw error: {exc}")
         return jsonify([])
+    # Apply saved pitch-type corrections so the editor shows the user's saved work
+    # after a refresh. pitch_type is not a model feature, so the per-pitch grade is
+    # unchanged — only the label (and therefore the aggregation) moves.
+    try:
+        _ov = pitch_overrides_store.get_overrides(season, player_name=db_name)
+        if len(_ov) and {"gk", "ab", "pn"}.issubset(df.columns):
+            _key = (_ov["game_pk"].astype(str) + "_" + _ov["at_bat_number"].astype(str)
+                    + "_" + _ov["pitch_number"].astype(str))
+            _map = dict(zip(_key, _ov["new_type"]))
+            _dk = (pd.to_numeric(df["gk"], errors="coerce").astype("Int64").astype(str) + "_"
+                   + pd.to_numeric(df["ab"], errors="coerce").astype("Int64").astype(str) + "_"
+                   + pd.to_numeric(df["pn"], errors="coerce").astype("Int64").astype(str))
+            _hit = _dk.map(_map)
+            if _hit.notna().any():
+                df.loc[_hit.notna(), "pt"] = _hit[_hit.notna()].values
+                logger.info(f"applied {int(_hit.notna().sum())} saved override(s) for {db_name} ({season})")
+    except Exception as _exc:
+        logger.warning(f"could not apply overrides in player_pitches_raw: {_exc}")
+
     if game_pk_filter is None and len(df) > 2000:
         df = df.sample(2000, random_state=42)
     df = df.dropna(subset=["ivb", "hb", "pt"])
@@ -2962,10 +2981,52 @@ def api_overrides_save():
         return jsonify({"error": "no valid pitch keys"}), 400
     try:
         n = pitch_overrides_store.save_many(season, rows)
+        _rebuild_pitcher_card(season, db_name)
         return jsonify({"saved": n, "season_total": pitch_overrides_store.count_overrides(season)})
     except Exception as exc:
         logger.error(f"api_overrides_save: {exc}")
         return jsonify({"error": str(exc)}), 500
+
+
+def _rebuild_pitcher_card(season: str, db_name: "str | None") -> None:
+    """Regenerate one pitcher's profile card with saved overrides applied.
+
+    No re-scoring needed: pitch_type is not a model feature, so each pitch keeps its
+    grade — the correction only changes which pitch type a pitch is aggregated into.
+    Without this the card would keep showing the pre-correction arsenal until the next
+    full re-score, which makes a saved correction look like it did nothing.
+    """
+    table = _table_for_season(season)
+    if not table or not db_name:
+        return
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        df = pd.read_sql_query(f"SELECT * FROM {table} WHERE player_name = ?", conn, params=(db_name,))
+        conn.close()
+        if df.empty:
+            return
+        df = pitch_overrides_store.apply_overrides(df, season)
+        # generate_all_cards REWRITES the season leaderboard from whatever frame it is
+        # given. Passing one pitcher would replace a 700-entry leaderboard with a
+        # single row and break search, so snapshot it and merge this pitcher's entry
+        # back in afterwards.
+        lb_path = _leaderboard_path(season)
+        lb_before = _load_json(lb_path) or []
+        from profiles.player_cards import generate_all_cards
+        generate_all_cards(df, season=season, skip_png=True)
+        lb_after = _load_json(lb_path) or []
+        if lb_before:
+            updated = {r.get("player_name"): r for r in lb_after if isinstance(r, dict)}
+            merged = [updated.get(r.get("player_name"), r) for r in lb_before if isinstance(r, dict)]
+            known = {r.get("player_name") for r in merged}
+            merged += [r for r in lb_after if isinstance(r, dict) and r.get("player_name") not in known]
+            with open(lb_path, "w") as fh:
+                json.dump(merged, fh)
+            logger.info(f"leaderboard preserved: {len(lb_before)} -> {len(merged)} entries")
+        _cached_leaderboard.cache_clear()
+        logger.info(f"rebuilt card for {db_name} ({season}) with overrides applied")
+    except Exception as exc:
+        logger.warning(f"could not rebuild card for {db_name}: {exc}")
 
 
 @app.route("/api/overrides", methods=["DELETE"])
@@ -2976,11 +3037,39 @@ def api_overrides_delete():
         n = pitch_overrides_store.delete_override(
             body["season"], int(body["game_pk"]),
             int(body["at_bat_number"]), int(body["pitch_number"]))
+        if body.get("player_name"):
+            _rebuild_pitcher_card(body["season"], _gf_name(body["player_name"]))
         return jsonify({"deleted": n})
     except (KeyError, ValueError, TypeError):
         return jsonify({"error": "need season, game_pk, at_bat_number, pitch_number"}), 400
     except Exception as exc:
         logger.error(f"api_overrides_delete: {exc}")
+        return jsonify({"error": str(exc)}), 500
+
+
+@app.route("/api/overrides/revert", methods=["POST"])
+def api_overrides_revert():
+    """Revert ALL saved corrections for one pitcher in a season (undo everything).
+
+    Body: {player_name, season}. Deletes their override rows and rebuilds the card so
+    the pitcher immediately reads back at their original scraped labels.
+    """
+    body = request.get_json(silent=True) or {}
+    season = body.get("season", "")
+    player_name = body.get("player_name", "")
+    if not season or not player_name:
+        return jsonify({"error": "need season and player_name"}), 400
+    db_name = _gf_name(player_name)
+    try:
+        ov = pitch_overrides_store.get_overrides(season, player_name=db_name)
+        n = 0
+        for r in ov.itertuples():
+            n += pitch_overrides_store.delete_override(
+                season, int(r.game_pk), int(r.at_bat_number), int(r.pitch_number))
+        _rebuild_pitcher_card(season, db_name)
+        return jsonify({"reverted": n, "season_total": pitch_overrides_store.count_overrides(season)})
+    except Exception as exc:
+        logger.error(f"api_overrides_revert: {exc}")
         return jsonify({"error": str(exc)}), 500
 
 

@@ -403,6 +403,10 @@
           style="background:#1f7a4d" title="Save these corrections so they persist">
           Save Changes
         </button>
+        <button class="btn-clear-all" id="btn-revert" onclick="revertSaved()"
+          title="Delete every saved correction for this pitcher and restore the original labels">
+          Revert saved
+        </button>
         <button class="btn-clear-all" id="btn-clear-all" onclick="clearAll()" style="display:none">
           Clear all changes
         </button>
@@ -965,6 +969,34 @@ async function saveChanges() {
   } catch (e) {
     errEl.textContent   = "Could not save changes: " + e;
     errEl.style.display = "block";
+    btn.disabled = false;
+  }
+}
+
+// Delete every SAVED correction for this pitcher (undo persistence, not just the
+// pending edits that "Clear all changes" drops).
+async function revertSaved() {
+  if (!confirm("Delete all saved pitch-type corrections for this pitcher? This restores the original labels.")) return;
+  const btn = document.getElementById("btn-revert");
+  const msg = document.getElementById("save-msg");
+  const errEl = document.getElementById("error-msg");
+  btn.disabled = true; msg.style.display = "none"; errEl.style.display = "none";
+  try {
+    const res = await fetch("/api/overrides/revert", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ player_name: playerName, season: season }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) {
+      errEl.textContent = data.error || "Could not revert"; errEl.style.display = "block";
+      btn.disabled = false; return;
+    }
+    msg.textContent = `Reverted ${data.reverted} saved correction${data.reverted === 1 ? "" : "s"}`;
+    msg.style.display = "inline";
+    setTimeout(() => window.location.reload(), 900);
+  } catch (e) {
+    errEl.textContent = "Could not revert: " + e; errEl.style.display = "block";
     btn.disabled = false;
   }
 }
