@@ -125,11 +125,41 @@ Verified through the running app: saving two pitches returned
 `{"saved": 2, "season_total": 2}` with the scraped labels captured as
 `original_type` (`CH`→`ST`, `FF`→`ST`).
 
+### Applying corrections in the read path
+Saving alone wasn't enough: the correction was durable in the database, but the app
+still served the original label because `apply_overrides` only ran at scoring time.
+A user would save, see "Saved N corrections," refresh, and see no change.
+
+Two additions closed that:
+- **`api_player_pitches_raw`** applies saved overrides, so the editor shows the user's
+  saved work after a refresh.
+- **Saving rebuilds that pitcher's profile card** so the arsenal table updates
+  immediately. This is cheap because **`pitch_type` is not a model feature** — each
+  pitch keeps its grade, and only the aggregation (which type a pitch counts toward)
+  changes. No re-scoring required.
+
+One trap worth recording: `generate_all_cards` **rewrites the season leaderboard** from
+whatever frame it is given, so rebuilding a single pitcher truncated a 721-entry
+leaderboard to one row and broke search. The rebuild now snapshots the leaderboard,
+regenerates the card, and merges that pitcher's entry back in.
+
+### Revert
+| Action | Scope |
+|---|---|
+| *Clear all changes* | drops **pending** edits that were never saved |
+| **Revert saved** | deletes **persisted** corrections and restores scraped labels |
+
+`POST /api/overrides/revert` clears every correction for a pitcher/season;
+`DELETE /api/overrides` reverts a single pitch. Both rebuild the card.
+
+**Verified cycle:** save 5 corrections → card and editor both show FF 1042 / SI 5 →
+re-request (refresh) → still 1042/5 → revert → back to FF 1047, SI gone.
+
 ## Remaining work
-1. A revert control in the editor UI (`DELETE /api/overrides` already exists).
-2. Apply overrides in the live read paths (`api_player_pitches_raw`, game detail) so
-   saved corrections appear in the UI without waiting for a re-score.
-3. Decide override precedence when a re-scrape changes a pitch's original label.
+1. Decide override precedence when a re-scrape changes a pitch's original label.
+2. Apply overrides in the game-detail read path (season and editor views are done).
+3. Surface saved corrections visually in the editor (e.g. a marker on corrected
+   pitches) so a user can see what is already persisted before editing.
 
 ## Biggest risk
 **Key stability across re-scrapes.** Overrides are tied to
