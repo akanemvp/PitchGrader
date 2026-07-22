@@ -1,0 +1,125 @@
+{
+  "player_name": "Herrera, Andres",
+  "season": "acl2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 43.4,
+  "team": "A-RCK",
+  "pitcher_id": 820784,
+  "age": null,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 78.7,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 0,
+      "n_vs_l": 7,
+      "usage_pct": 77.8,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 77.8,
+      "velo": 91.7,
+      "ivb": 14.5,
+      "hb": 9.3,
+      "vaa": -5.07,
+      "haa": 0.22,
+      "spin": 2122,
+      "extension": 6.2,
+      "arm_angle": 43.1,
+      "release_height": 5.95,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 14.3,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.29,
+        -1.38,
+        0.75,
+        -1.38,
+        0.41,
+        -2.73,
+        1.07
+      ],
+      "locations_z": [
+        2.8,
+        2.11,
+        3.67,
+        3.73,
+        2.2,
+        4.51,
+        1.67
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.29,
+        -1.38,
+        0.75,
+        -1.38,
+        0.41,
+        -2.73,
+        1.07
+      ],
+      "locations_z_vs_l": [
+        2.8,
+        2.11,
+        3.67,
+        3.73,
+        2.2,
+        4.51,
+        1.67
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 79.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 22.2,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 22.2,
+      "velo": 91.1,
+      "ivb": 11.3,
+      "hb": 10.2,
+      "vaa": -5.5,
+      "haa": 0.6,
+      "spin": 1969,
+      "extension": 6.17,
+      "arm_angle": 43.7,
+      "release_height": 5.97,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.38,
+        0.75
+      ],
+      "locations_z": [
+        1.91,
+        3.89
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.38,
+        0.75
+      ],
+      "locations_z_vs_l": [
+        1.91,
+        3.89
+      ]
+    }
+  ]
+}

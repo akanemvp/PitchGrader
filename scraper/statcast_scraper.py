@@ -136,22 +136,72 @@ def save_to_db(df: pd.DataFrame, table: str = "pitches_train", replace: bool = T
 
 
 def append_to_db(df: pd.DataFrame, table: str):
-    """Append rows without replacing existing data.
+    """Insert new rows AND backfill NULL columns on existing rows from a re-scrape.
 
-    If the table already exists, align df columns to match it so new
-    feature-engineering columns don't cause a schema mismatch.
+    Dedup on game_pk/at_bat_number/pitch_number. For pitches already present in
+    the DB, any column where the DB has NULL but the new dataframe has a value
+    is updated (e.g. arm_angle, events, bat_score, post_bat_score — fields
+    Savant publishes hours/days after the initial scrape). For pitches not yet
+    present, append as new rows.
+
+    This is the permanent backfill behavior: every periodic re-scrape both
+    catches new games AND fills in late-published columns on prior scrapes.
     """
     _ensure_db_dir()
+    _KEY = ["game_pk", "at_bat_number", "pitch_number"]
     conn = sqlite3.connect(DB_PATH)
     try:
         existing = pd.read_sql(f"SELECT * FROM [{table}] LIMIT 0", conn)
         shared = [c for c in existing.columns if c in df.columns]
         df = df[shared]
-    except Exception:
-        pass  # table doesn't exist yet — let save_to_db create it
+        if all(k in df.columns for k in _KEY):
+            keys = pd.read_sql(f"SELECT {', '.join(_KEY)} FROM [{table}]", conn).drop_duplicates()
+            if len(keys):
+                merged = df.merge(keys, on=_KEY, how="left", indicator=True)
+                existing_rows = df[merged["_merge"].to_numpy() == "both"]
+                new_rows      = df[merged["_merge"].to_numpy() == "left_only"]
+                # 1) Backfill NULL columns on existing rows in-place
+                if len(existing_rows):
+                    _backfill_null_columns(conn, table, existing_rows, _KEY)
+                df = new_rows  # only truly new rows continue down to save_to_db
+    except Exception as exc:
+        logger.warning(f"append_to_db: dedup/backfill path failed ({exc}); falling back to plain append")
     finally:
         conn.close()
-    save_to_db(df, table=table, replace=False)
+    if len(df):
+        save_to_db(df, table=table, replace=False)
+
+
+def _backfill_null_columns(conn: sqlite3.Connection, table: str,
+                           df_new: pd.DataFrame, key_cols: list) -> None:
+    """For pitches that already exist in `table`, update any column whose
+    stored value is NULL but where `df_new` carries a non-NULL value.
+
+    Uses a temp table + a single `UPDATE ... FROM` with COALESCE so existing
+    non-NULL values are NEVER overwritten. Backfill is monotonic: NULL → value
+    only. SQLite ≥ 3.33 required for UPDATE...FROM syntax.
+    """
+    if df_new.empty:
+        return
+    tmp = "_aa_backfill_tmp"
+    cur = conn.cursor()
+    cur.execute(f"DROP TABLE IF EXISTS {tmp}")
+    df_new.to_sql(tmp, conn, if_exists="replace", index=False)
+    key_csv = ", ".join(key_cols)
+    cur.execute(f"CREATE INDEX _aa_backfill_idx ON {tmp}({key_csv})")
+    cur.execute(f"CREATE INDEX IF NOT EXISTS idx_{table}_bf_key ON {table}({key_csv})")
+    non_key = [c for c in df_new.columns if c not in key_cols]
+    if not non_key:
+        cur.execute(f"DROP TABLE {tmp}")
+        return
+    # Build SET clause: each column gets COALESCE(existing, new) — existing wins if non-NULL.
+    set_clauses = ", ".join(f'"{c}" = COALESCE("{table}"."{c}", {tmp}."{c}")' for c in non_key)
+    join_cond   = " AND ".join(f'"{table}"."{k}" = {tmp}."{k}"' for k in key_cols)
+    sql = f'UPDATE "{table}" SET {set_clauses} FROM {tmp} WHERE {join_cond}'
+    cur.execute(sql)
+    cur.execute(f"DROP TABLE {tmp}")
+    conn.commit()
+    logger.info(f"  backfill: examined {len(df_new):,} existing rows in {table} for NULL→value updates")
 
 
 def load_from_db(table: str = "pitches_train") -> pd.DataFrame:

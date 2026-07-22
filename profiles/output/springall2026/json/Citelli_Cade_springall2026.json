@@ -1,0 +1,64 @@
+{
+  "player_name": "Citelli, Cade",
+  "season": "springall2026",
+  "total_pitches": 3,
+  "p_throws": "R",
+  "arm_angle": 35.0,
+  "team": "TB",
+  "pitcher_id": 699530,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 92.0,
+      "ivb": 15.3,
+      "hb": 14.3,
+      "vaa": -5.26,
+      "haa": 0.5,
+      "spin": 2326,
+      "extension": 6.54,
+      "arm_angle": 35.0,
+      "release_height": 5.57,
+      "spin_axis_clock": "10:34",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.96,
+        -0.94,
+        0.1
+      ],
+      "locations_z": [
+        2.48,
+        1.68,
+        2.94
+      ],
+      "locations_x_vs_r": [
+        0.96,
+        -0.94,
+        0.1
+      ],
+      "locations_z_vs_r": [
+        2.48,
+        1.68,
+        2.94
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

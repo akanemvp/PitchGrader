@@ -1,0 +1,64 @@
+{
+  "player_name": "Pratto, Nick",
+  "season": "aaa2026",
+  "total_pitches": 3,
+  "p_throws": "L",
+  "arm_angle": 32.8,
+  "team": "RR",
+  "pitcher_id": 668472,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.2,
+      "ivb": 15.4,
+      "hb": 0.8,
+      "vaa": -5.53,
+      "haa": -2.47,
+      "spin": 1874,
+      "extension": 6.2,
+      "arm_angle": 32.8,
+      "release_height": 5.65,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.2,
+        1.21,
+        0.12
+      ],
+      "locations_z": [
+        4.56,
+        2.65,
+        1.97
+      ],
+      "locations_x_vs_r": [
+        0.2,
+        1.21,
+        0.12
+      ],
+      "locations_z_vs_r": [
+        4.56,
+        2.65,
+        1.97
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

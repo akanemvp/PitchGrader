@@ -1,0 +1,129 @@
+{
+  "player_name": "Manuel, Truitt",
+  "season": "college2026",
+  "total_pitches": 10,
+  "p_throws": "R",
+  "arm_angle": 42.1,
+  "team": "NCS",
+  "pitcher_id": 827402,
+  "age": null,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 105.4,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 9,
+      "n_vs_r": 9,
+      "n_vs_l": 0,
+      "usage_pct": 90.0,
+      "usage_pct_vs_r": 90.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 93.1,
+      "ivb": 17.7,
+      "hb": 6.5,
+      "vaa": -5.91,
+      "haa": 1.43,
+      "spin": 2128,
+      "extension": 6.05,
+      "arm_angle": 37.9,
+      "release_height": 5.53,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 11.1,
+      "chase_pct": 12.5,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.58,
+        1.27,
+        -1.62,
+        0.67,
+        2.47,
+        -0.08,
+        0.27,
+        -0.86,
+        2.41
+      ],
+      "locations_z": [
+        1.57,
+        1.29,
+        1.79,
+        1.27,
+        0.3,
+        2.19,
+        0.04,
+        2.32,
+        3.03
+      ],
+      "locations_x_vs_r": [
+        0.58,
+        1.27,
+        -1.62,
+        0.67,
+        2.47,
+        -0.08,
+        0.27,
+        -0.86,
+        2.41
+      ],
+      "locations_z_vs_r": [
+        1.57,
+        1.29,
+        1.79,
+        1.27,
+        0.3,
+        2.19,
+        0.04,
+        2.32,
+        3.03
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 88.9,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 10.0,
+      "usage_pct_vs_r": 10.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 76.1,
+      "ivb": -14.4,
+      "hb": -7.4,
+      "vaa": -6.7,
+      "haa": 1.82,
+      "spin": 2326,
+      "extension": 5.87,
+      "arm_angle": 46.2,
+      "release_height": 6.14,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.64
+      ],
+      "locations_z": [
+        5.28
+      ],
+      "locations_x_vs_r": [
+        -0.64
+      ],
+      "locations_z_vs_r": [
+        5.28
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

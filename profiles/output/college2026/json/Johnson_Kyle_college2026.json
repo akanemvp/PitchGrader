@@ -1,0 +1,212 @@
+{
+  "player_name": "Johnson, Kyle",
+  "season": "college2026",
+  "total_pitches": 20,
+  "p_throws": "L",
+  "arm_angle": 31.2,
+  "team": "UVA",
+  "pitcher_id": 702973,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 100.5,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 12,
+      "n_vs_r": 9,
+      "n_vs_l": 3,
+      "usage_pct": 60.0,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 60.0,
+      "velo": 95.2,
+      "ivb": 13.7,
+      "hb": 12.8,
+      "vaa": -4.83,
+      "haa": -1.95,
+      "spin": 2373,
+      "extension": 6.5,
+      "arm_angle": 33.0,
+      "release_height": 5.58,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 20.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.13,
+        -0.37,
+        -2.41,
+        0.27,
+        0.69,
+        1.09,
+        1.85,
+        -0.5,
+        -1.5,
+        0.64,
+        0.16,
+        0.75
+      ],
+      "locations_z": [
+        1.86,
+        2.55,
+        1.65,
+        3.27,
+        2.64,
+        3.04,
+        4.95,
+        1.79,
+        2.23,
+        2.13,
+        3.25,
+        3.13
+      ],
+      "locations_x_vs_r": [
+        -0.13,
+        -0.37,
+        -2.41,
+        0.27,
+        0.69,
+        1.09,
+        1.85,
+        -0.5,
+        -1.5
+      ],
+      "locations_z_vs_r": [
+        1.86,
+        2.55,
+        1.65,
+        3.27,
+        2.64,
+        3.04,
+        4.95,
+        1.79,
+        2.23
+      ],
+      "locations_x_vs_l": [
+        0.64,
+        0.16,
+        0.75
+      ],
+      "locations_z_vs_l": [
+        2.13,
+        3.25,
+        3.13
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 93.8,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 5,
+      "n_vs_r": 4,
+      "n_vs_l": 1,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 26.7,
+      "usage_pct_vs_l": 20.0,
+      "velo": 85.3,
+      "ivb": 4.5,
+      "hb": 15.5,
+      "vaa": -6.78,
+      "haa": -2.35,
+      "spin": 2000,
+      "extension": 6.44,
+      "arm_angle": 29.0,
+      "release_height": 5.4,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 60.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 66.7,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.91,
+        -1.16,
+        -0.02,
+        -0.01,
+        -0.55
+      ],
+      "locations_z": [
+        2.29,
+        2.63,
+        1.49,
+        2.17,
+        2.04
+      ],
+      "locations_x_vs_r": [
+        -0.91,
+        -1.16,
+        -0.02,
+        -0.01
+      ],
+      "locations_z_vs_r": [
+        2.29,
+        2.63,
+        1.49,
+        2.17
+      ],
+      "locations_x_vs_l": [
+        -0.55
+      ],
+      "locations_z_vs_l": [
+        2.04
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 15.0,
+      "usage_pct_vs_r": 13.3,
+      "usage_pct_vs_l": 20.0,
+      "velo": 80.8,
+      "ivb": -1.0,
+      "hb": -7.9,
+      "vaa": -8.26,
+      "haa": -5.18,
+      "spin": 2568,
+      "extension": 6.36,
+      "arm_angle": 31.7,
+      "release_height": 5.56,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.01,
+        1.07,
+        -3.36
+      ],
+      "locations_z": [
+        1.75,
+        3.29,
+        0.27
+      ],
+      "locations_x_vs_r": [
+        -1.01,
+        1.07
+      ],
+      "locations_z_vs_r": [
+        1.75,
+        3.29
+      ],
+      "locations_x_vs_l": [
+        -3.36
+      ],
+      "locations_z_vs_l": [
+        0.27
+      ]
+    }
+  ]
+}

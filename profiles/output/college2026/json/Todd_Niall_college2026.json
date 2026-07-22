@@ -1,0 +1,137 @@
+{
+  "player_name": "Todd, Niall",
+  "season": "college2026",
+  "total_pitches": 11,
+  "p_throws": "L",
+  "arm_angle": 19.9,
+  "team": "GAS",
+  "pitcher_id": 838176,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 78.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 9,
+      "n_vs_r": 5,
+      "n_vs_l": 4,
+      "usage_pct": 81.8,
+      "usage_pct_vs_r": 83.3,
+      "usage_pct_vs_l": 80.0,
+      "velo": 87.6,
+      "ivb": 9.1,
+      "hb": 17.4,
+      "vaa": -5.88,
+      "haa": -2.48,
+      "spin": 1741,
+      "extension": 6.43,
+      "arm_angle": 24.8,
+      "release_height": 5.14,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 44.4,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.17,
+        -1.78,
+        1.55,
+        -0.39,
+        -0.46,
+        -1.73,
+        -1.95,
+        -0.76,
+        -0.68
+      ],
+      "locations_z": [
+        2.31,
+        2.48,
+        3.06,
+        3.13,
+        0.72,
+        1.36,
+        2.54,
+        2.36,
+        2.14
+      ],
+      "locations_x_vs_r": [
+        0.17,
+        -1.78,
+        1.55,
+        -0.39,
+        -0.46
+      ],
+      "locations_z_vs_r": [
+        2.31,
+        2.48,
+        3.06,
+        3.13,
+        0.72
+      ],
+      "locations_x_vs_l": [
+        -1.73,
+        -1.95,
+        -0.76,
+        -0.68
+      ],
+      "locations_z_vs_l": [
+        1.36,
+        2.54,
+        2.36,
+        2.14
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 92.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 18.2,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 20.0,
+      "velo": 74.2,
+      "ivb": 0.8,
+      "hb": -9.7,
+      "vaa": -7.82,
+      "haa": -5.54,
+      "spin": 2594,
+      "extension": 5.95,
+      "arm_angle": 15.1,
+      "release_height": 4.75,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.24,
+        -0.44
+      ],
+      "locations_z": [
+        1.53,
+        2.15
+      ],
+      "locations_x_vs_r": [
+        -1.24
+      ],
+      "locations_z_vs_r": [
+        1.53
+      ],
+      "locations_x_vs_l": [
+        -0.44
+      ],
+      "locations_z_vs_l": [
+        2.15
+      ]
+    }
+  ]
+}

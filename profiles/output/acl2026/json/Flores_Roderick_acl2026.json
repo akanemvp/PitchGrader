@@ -1,0 +1,56 @@
+{
+  "player_name": "Flores, Roderick",
+  "season": "acl2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 34.4,
+  "team": "A-BRW",
+  "pitcher_id": 808228,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 71.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 82.1,
+      "ivb": 15.2,
+      "hb": 11.3,
+      "vaa": -5.51,
+      "haa": -0.06,
+      "spin": 1833,
+      "extension": 5.27,
+      "arm_angle": 34.4,
+      "release_height": 5.85,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.98
+      ],
+      "locations_z": [
+        3.07
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.98
+      ],
+      "locations_z_vs_l": [
+        3.07
+      ]
+    }
+  ]
+}

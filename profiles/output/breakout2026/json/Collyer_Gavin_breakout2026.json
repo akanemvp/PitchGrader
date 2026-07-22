@@ -1,0 +1,115 @@
+{
+  "player_name": "Collyer, Gavin",
+  "season": "breakout2026",
+  "total_pitches": 6,
+  "p_throws": "R",
+  "arm_angle": 23.7,
+  "team": "TXP",
+  "pitcher_id": 686560,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 111.2,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 66.7,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 60.0,
+      "velo": 98.8,
+      "ivb": 10.9,
+      "hb": 10.0,
+      "vaa": -3.73,
+      "haa": 3.02,
+      "spin": 2426,
+      "extension": 6.12,
+      "arm_angle": 25.0,
+      "release_height": 5.12,
+      "spin_axis_clock": "10:34",
+      "zone_pct": 25.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.26,
+        -0.75,
+        -0.76,
+        0.61
+      ],
+      "locations_z": [
+        2.02,
+        3.72,
+        3.78,
+        3.46
+      ],
+      "locations_x_vs_r": [
+        0.26
+      ],
+      "locations_z_vs_r": [
+        2.02
+      ],
+      "locations_x_vs_l": [
+        -0.75,
+        -0.76,
+        0.61
+      ],
+      "locations_z_vs_l": [
+        3.72,
+        3.78,
+        3.46
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 104.7,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 40.0,
+      "velo": 94.2,
+      "ivb": 5.0,
+      "hb": -0.8,
+      "vaa": -5.37,
+      "haa": 4.8,
+      "spin": 2748,
+      "extension": 6.14,
+      "arm_angle": 22.5,
+      "release_height": 4.96,
+      "spin_axis_clock": "12:17",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.7,
+        0.09
+      ],
+      "locations_z": [
+        2.49,
+        2.22
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.7,
+        0.09
+      ],
+      "locations_z_vs_l": [
+        2.49,
+        2.22
+      ]
+    }
+  ]
+}

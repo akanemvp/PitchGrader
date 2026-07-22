@@ -1,0 +1,56 @@
+{
+  "player_name": "Rodriguez, Yerlin",
+  "season": "springall2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 24.3,
+  "team": "MIL",
+  "pitcher_id": 693750,
+  "age": 24,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 109.8,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.1,
+      "ivb": -0.2,
+      "hb": -5.5,
+      "vaa": -5.38,
+      "haa": 1.86,
+      "spin": 2349,
+      "extension": 6.34,
+      "arm_angle": 24.3,
+      "release_height": 5.18,
+      "spin_axis_clock": "3:05",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.05
+      ],
+      "locations_z": [
+        3.43
+      ],
+      "locations_x_vs_r": [
+        -1.05
+      ],
+      "locations_z_vs_r": [
+        3.43
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

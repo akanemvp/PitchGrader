@@ -1,0 +1,135 @@
+{
+  "player_name": "Weatherly, Sam",
+  "season": "springall2026",
+  "total_pitches": 11,
+  "p_throws": "L",
+  "arm_angle": 28.1,
+  "team": "COL",
+  "pitcher_id": 676333,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.7,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 6,
+      "n_vs_r": 0,
+      "n_vs_l": 6,
+      "usage_pct": 54.5,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 60.0,
+      "velo": 82.5,
+      "ivb": 4.1,
+      "hb": -12.7,
+      "vaa": -8.2,
+      "haa": -3.94,
+      "spin": 2778,
+      "extension": 5.93,
+      "arm_angle": 24.8,
+      "release_height": 5.33,
+      "spin_axis_clock": "9:40",
+      "zone_pct": 16.7,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.5,
+        -0.44,
+        -2.97,
+        -1.11,
+        -0.22,
+        0.1
+      ],
+      "locations_z": [
+        2.25,
+        1.21,
+        0.03,
+        0.57,
+        1.58,
+        0.63
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.5,
+        -0.44,
+        -2.97,
+        -1.11,
+        -0.22,
+        0.1
+      ],
+      "locations_z_vs_l": [
+        2.25,
+        1.21,
+        0.03,
+        0.57,
+        1.58,
+        0.63
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 5,
+      "n_vs_r": 1,
+      "n_vs_l": 4,
+      "usage_pct": 45.5,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 40.0,
+      "velo": 90.8,
+      "ivb": 13.3,
+      "hb": -0.3,
+      "vaa": -4.65,
+      "haa": -2.36,
+      "spin": 2465,
+      "extension": 6.08,
+      "arm_angle": 31.3,
+      "release_height": 5.44,
+      "spin_axis_clock": "11:58",
+      "zone_pct": 40.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.852,
+      "locations_x": [
+        -1.38,
+        -0.98,
+        -0.48,
+        -0.92,
+        0.19
+      ],
+      "locations_z": [
+        3.75,
+        2.6,
+        2.33,
+        3.06,
+        2.88
+      ],
+      "locations_x_vs_r": [
+        -0.48
+      ],
+      "locations_z_vs_r": [
+        2.33
+      ],
+      "locations_x_vs_l": [
+        -1.38,
+        -0.98,
+        -0.92,
+        0.19
+      ],
+      "locations_z_vs_l": [
+        3.75,
+        2.6,
+        3.06,
+        2.88
+      ]
+    }
+  ]
+}

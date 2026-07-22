@@ -1,0 +1,259 @@
+{
+  "player_name": "Wickersham, Kaden",
+  "season": "college2026",
+  "total_pitches": 22,
+  "p_throws": "R",
+  "arm_angle": 43.2,
+  "team": "WSU",
+  "pitcher_id": 823145,
+  "age": null,
+  "ip_str": "1.2",
+  "era": 10.8,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 76.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 9,
+      "n_vs_r": 5,
+      "n_vs_l": 4,
+      "usage_pct": 40.9,
+      "usage_pct_vs_r": 38.5,
+      "usage_pct_vs_l": 44.4,
+      "velo": 92.3,
+      "ivb": 12.6,
+      "hb": 4.8,
+      "vaa": -5.62,
+      "haa": 1.42,
+      "spin": 1964,
+      "extension": 5.72,
+      "arm_angle": 43.1,
+      "release_height": 5.94,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.75,
+        1.96,
+        0.04,
+        1.01,
+        -0.47,
+        -0.11,
+        -0.23,
+        1.56,
+        0.41
+      ],
+      "locations_z": [
+        2.18,
+        3.45,
+        2.82,
+        3.42,
+        2.34,
+        1.93,
+        1.63,
+        3.77,
+        1.84
+      ],
+      "locations_x_vs_r": [
+        0.75,
+        1.96,
+        0.04,
+        1.01,
+        -0.47
+      ],
+      "locations_z_vs_r": [
+        2.18,
+        3.45,
+        2.82,
+        3.42,
+        2.34
+      ],
+      "locations_x_vs_l": [
+        -0.11,
+        -0.23,
+        1.56,
+        0.41
+      ],
+      "locations_z_vs_l": [
+        1.93,
+        1.63,
+        3.77,
+        1.84
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 85.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 4,
+      "n_vs_l": 3,
+      "usage_pct": 31.8,
+      "usage_pct_vs_r": 30.8,
+      "usage_pct_vs_l": 33.3,
+      "velo": 91.9,
+      "ivb": 10.6,
+      "hb": 0.7,
+      "vaa": -5.43,
+      "haa": 1.59,
+      "spin": 1925,
+      "extension": 5.66,
+      "arm_angle": 41.9,
+      "release_height": 5.93,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 14.3,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.94,
+        1.97,
+        -0.45,
+        1.31,
+        -1.09,
+        -0.91,
+        -0.65
+      ],
+      "locations_z": [
+        2.41,
+        2.49,
+        4.06,
+        3.24,
+        2.36,
+        2.5,
+        3.31
+      ],
+      "locations_x_vs_r": [
+        0.94,
+        1.97,
+        -0.45,
+        -0.91
+      ],
+      "locations_z_vs_r": [
+        2.41,
+        2.49,
+        4.06,
+        2.5
+      ],
+      "locations_x_vs_l": [
+        1.31,
+        -1.09,
+        -0.65
+      ],
+      "locations_z_vs_l": [
+        3.24,
+        2.36,
+        3.31
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 95.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 13.6,
+      "usage_pct_vs_r": 15.4,
+      "usage_pct_vs_l": 11.1,
+      "velo": 82.4,
+      "ivb": -5.9,
+      "hb": -8.2,
+      "vaa": -9.35,
+      "haa": 2.04,
+      "spin": 2511,
+      "extension": 5.57,
+      "arm_angle": 43.4,
+      "release_height": 6.08,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.03,
+        0.6,
+        -0.8
+      ],
+      "locations_z": [
+        -0.01,
+        1.15,
+        3.77
+      ],
+      "locations_x_vs_r": [
+        -0.03,
+        0.6
+      ],
+      "locations_z_vs_r": [
+        -0.01,
+        1.15
+      ],
+      "locations_x_vs_l": [
+        -0.8
+      ],
+      "locations_z_vs_l": [
+        3.77
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 94.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 13.6,
+      "usage_pct_vs_r": 15.4,
+      "usage_pct_vs_l": 11.1,
+      "velo": 82.9,
+      "ivb": -0.1,
+      "hb": -7.7,
+      "vaa": -7.44,
+      "haa": 2.23,
+      "spin": 2424,
+      "extension": 5.55,
+      "arm_angle": 44.5,
+      "release_height": 6.11,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.93,
+        0.25,
+        -0.94
+      ],
+      "locations_z": [
+        3.56,
+        2.57,
+        2.35
+      ],
+      "locations_x_vs_r": [
+        0.93,
+        0.25
+      ],
+      "locations_z_vs_r": [
+        3.56,
+        2.57
+      ],
+      "locations_x_vs_l": [
+        -0.94
+      ],
+      "locations_z_vs_l": [
+        2.35
+      ]
+    }
+  ]
+}

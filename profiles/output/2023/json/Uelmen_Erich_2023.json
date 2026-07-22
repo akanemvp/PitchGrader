@@ -1,0 +1,303 @@
+{
+  "player_name": "Uelmen, Erich",
+  "season": "2023",
+  "total_pitches": 33,
+  "p_throws": "R",
+  "arm_angle": 21.5,
+  "team": "PHI",
+  "pitcher_id": 657272,
+  "age": 27,
+  "ip_str": "1.0",
+  "era": 36.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2023/Uelmen_Erich_2023.png",
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 99.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 11,
+      "n_vs_r": 8,
+      "n_vs_l": 3,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 36.4,
+      "usage_pct_vs_l": 27.3,
+      "velo": 92.5,
+      "ivb": 2.5,
+      "hb": 16.4,
+      "vaa": -5.57,
+      "haa": 1.22,
+      "spin": 2039,
+      "extension": 6.81,
+      "arm_angle": 20.5,
+      "release_height": 4.77,
+      "spin_axis_clock": "1:56",
+      "zone_pct": 45.5,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.118,
+      "locations_x": [
+        -2.11,
+        -0.88,
+        -0.83,
+        1.09,
+        -0.37,
+        0.5,
+        0.04,
+        -0.07,
+        -0.84,
+        -0.65,
+        -0.24
+      ],
+      "locations_z": [
+        2.69,
+        3.49,
+        2.41,
+        1.75,
+        1.54,
+        2.14,
+        1.87,
+        1.62,
+        2.18,
+        3.15,
+        2.68
+      ],
+      "locations_x_vs_r": [
+        -2.11,
+        -0.88,
+        -0.83,
+        1.09,
+        -0.37,
+        0.5,
+        0.04,
+        -0.24
+      ],
+      "locations_z_vs_r": [
+        2.69,
+        3.49,
+        2.41,
+        1.75,
+        1.54,
+        2.14,
+        1.87,
+        2.68
+      ],
+      "locations_x_vs_l": [
+        -0.07,
+        -0.84,
+        -0.65
+      ],
+      "locations_z_vs_l": [
+        1.62,
+        2.18,
+        3.15
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 107.8,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 10,
+      "n_vs_r": 6,
+      "n_vs_l": 4,
+      "usage_pct": 30.3,
+      "usage_pct_vs_r": 27.3,
+      "usage_pct_vs_l": 36.4,
+      "velo": 81.7,
+      "ivb": 0.9,
+      "hb": -12.3,
+      "vaa": -7.32,
+      "haa": 5.47,
+      "spin": 2530,
+      "extension": 6.83,
+      "arm_angle": 23.3,
+      "release_height": 4.77,
+      "spin_axis_clock": "8:37",
+      "zone_pct": 30.0,
+      "chase_pct": 14.3,
+      "whiff_pct": 33.3,
+      "xwoba_contact": 0.73,
+      "locations_x": [
+        0.09,
+        2.05,
+        0.56,
+        1.59,
+        0.94,
+        1.11,
+        0.31,
+        1.44,
+        -0.1,
+        1.2
+      ],
+      "locations_z": [
+        0.45,
+        1.25,
+        2.62,
+        1.36,
+        1.77,
+        1.76,
+        1.64,
+        1.87,
+        1.67,
+        2.34
+      ],
+      "locations_x_vs_r": [
+        0.09,
+        2.05,
+        0.56,
+        1.59,
+        -0.1,
+        1.2
+      ],
+      "locations_z_vs_r": [
+        0.45,
+        1.25,
+        2.62,
+        1.36,
+        1.67,
+        2.34
+      ],
+      "locations_x_vs_l": [
+        0.94,
+        1.11,
+        0.31,
+        1.44
+      ],
+      "locations_z_vs_l": [
+        1.77,
+        1.76,
+        1.64,
+        1.87
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 109.7,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 6,
+      "n_vs_r": 3,
+      "n_vs_l": 3,
+      "usage_pct": 18.2,
+      "usage_pct_vs_r": 13.6,
+      "usage_pct_vs_l": 27.3,
+      "velo": 86.2,
+      "ivb": -1.8,
+      "hb": 16.8,
+      "vaa": -7.13,
+      "haa": 1.76,
+      "spin": 2000,
+      "extension": 6.7,
+      "arm_angle": 19.3,
+      "release_height": 4.61,
+      "spin_axis_clock": "2:30",
+      "zone_pct": 33.3,
+      "chase_pct": 25.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": 0.174,
+      "locations_x": [
+        -0.78,
+        1.07,
+        0.57,
+        -0.06,
+        -1.45,
+        1.1
+      ],
+      "locations_z": [
+        1.74,
+        0.88,
+        1.98,
+        1.23,
+        3.07,
+        0.54
+      ],
+      "locations_x_vs_r": [
+        -0.78,
+        1.07,
+        0.57
+      ],
+      "locations_z_vs_r": [
+        1.74,
+        0.88,
+        1.98
+      ],
+      "locations_x_vs_l": [
+        -0.06,
+        -1.45,
+        1.1
+      ],
+      "locations_z_vs_l": [
+        1.23,
+        3.07,
+        0.54
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.8,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 6,
+      "n_vs_r": 5,
+      "n_vs_l": 1,
+      "usage_pct": 18.2,
+      "usage_pct_vs_r": 22.7,
+      "usage_pct_vs_l": 9.1,
+      "velo": 92.6,
+      "ivb": 13.1,
+      "hb": 9.9,
+      "vaa": -3.8,
+      "haa": 2.53,
+      "spin": 2301,
+      "extension": 6.77,
+      "arm_angle": 23.0,
+      "release_height": 4.83,
+      "spin_axis_clock": "1:42",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": 0.723,
+      "locations_x": [
+        0.54,
+        -0.25,
+        0.17,
+        -0.07,
+        1.46,
+        0.1
+      ],
+      "locations_z": [
+        2.9,
+        3.62,
+        2.55,
+        2.74,
+        2.48,
+        3.97
+      ],
+      "locations_x_vs_r": [
+        0.54,
+        -0.25,
+        0.17,
+        -0.07,
+        1.46
+      ],
+      "locations_z_vs_r": [
+        2.9,
+        3.62,
+        2.55,
+        2.74,
+        2.48
+      ],
+      "locations_x_vs_l": [
+        0.1
+      ],
+      "locations_z_vs_l": [
+        3.97
+      ]
+    }
+  ]
+}

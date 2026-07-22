@@ -1,0 +1,56 @@
+{
+  "player_name": "Franco, Sadrac",
+  "season": "spring2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 33.1,
+  "team": "SD",
+  "pitcher_id": 677614,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 98.0,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 82.0,
+      "ivb": 4.1,
+      "hb": -14.2,
+      "vaa": -6.16,
+      "haa": 4.03,
+      "spin": 2507,
+      "extension": 6.2,
+      "arm_angle": 33.1,
+      "release_height": 5.12,
+      "spin_axis_clock": "2:28",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.82
+      ],
+      "locations_z": [
+        2.78
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.82
+      ],
+      "locations_z_vs_l": [
+        2.78
+      ]
+    }
+  ]
+}

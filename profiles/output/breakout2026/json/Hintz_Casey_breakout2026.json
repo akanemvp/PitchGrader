@@ -1,0 +1,109 @@
+{
+  "player_name": "Hintz, Casey",
+  "season": "breakout2026",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 13.0,
+  "team": "SMP",
+  "pitcher_id": 808750,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 93.2,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 80.0,
+      "usage_pct_vs_r": 80.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 92.2,
+      "ivb": -1.9,
+      "hb": 8.9,
+      "vaa": -5.99,
+      "haa": 2.84,
+      "spin": 2017,
+      "extension": 5.5,
+      "arm_angle": 10.0,
+      "release_height": 4.6,
+      "spin_axis_clock": "8:34",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.006,
+      "locations_x": [
+        -0.77,
+        1.12,
+        -1.16,
+        -0.17
+      ],
+      "locations_z": [
+        2.68,
+        1.81,
+        2.08,
+        1.68
+      ],
+      "locations_x_vs_r": [
+        -0.77,
+        1.12,
+        -1.16,
+        -0.17
+      ],
+      "locations_z_vs_r": [
+        2.68,
+        1.81,
+        2.08,
+        1.68
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 105.0,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.3,
+      "ivb": 8.0,
+      "hb": -16.1,
+      "vaa": -4.8,
+      "haa": 5.31,
+      "spin": 2693,
+      "extension": 5.33,
+      "arm_angle": 15.9,
+      "release_height": 4.79,
+      "spin_axis_clock": "2:07",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.19
+      ],
+      "locations_z": [
+        3.14
+      ],
+      "locations_x_vs_r": [
+        -0.19
+      ],
+      "locations_z_vs_r": [
+        3.14
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

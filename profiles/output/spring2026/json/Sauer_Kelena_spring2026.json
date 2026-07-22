@@ -1,0 +1,146 @@
+{
+  "player_name": "Sauer, Kelena",
+  "season": "spring2026",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 19.4,
+  "team": "TOR",
+  "pitcher_id": 694989,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 92.5,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 60.0,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 92.4,
+      "ivb": 4.8,
+      "hb": 11.8,
+      "vaa": -6.46,
+      "haa": 2.54,
+      "spin": 2284,
+      "extension": 6.44,
+      "arm_angle": 21.1,
+      "release_height": 5.01,
+      "spin_axis_clock": "9:46",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.1,
+        0.05,
+        0.33
+      ],
+      "locations_z": [
+        1.07,
+        1.83,
+        1.89
+      ],
+      "locations_x_vs_r": [
+        -0.1,
+        0.05,
+        0.33
+      ],
+      "locations_z_vs_r": [
+        1.07,
+        1.83,
+        1.89
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 107.2,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 90.8,
+      "ivb": 6.8,
+      "hb": -1.8,
+      "vaa": -5.44,
+      "haa": 4.17,
+      "spin": 2444,
+      "extension": 6.3,
+      "arm_angle": 19.7,
+      "release_height": 5.03,
+      "spin_axis_clock": "12:30",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.22
+      ],
+      "locations_z": [
+        2.39
+      ],
+      "locations_x_vs_r": [
+        0.22
+      ],
+      "locations_z_vs_r": [
+        2.39
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "ST",
+      "pitch_name": "Sweeper",
+      "stuff_plus": 101.2,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 81.1,
+      "ivb": 1.8,
+      "hb": -13.2,
+      "vaa": -7.75,
+      "haa": 6.52,
+      "spin": 2519,
+      "extension": 6.35,
+      "arm_angle": 17.4,
+      "release_height": 4.85,
+      "spin_axis_clock": "2:44",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.32
+      ],
+      "locations_z": [
+        1.31
+      ],
+      "locations_x_vs_r": [
+        1.32
+      ],
+      "locations_z_vs_r": [
+        1.31
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

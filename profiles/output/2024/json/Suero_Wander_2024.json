@@ -1,0 +1,60 @@
+{
+  "player_name": "Suero, Wander",
+  "season": "2024",
+  "total_pitches": 2,
+  "p_throws": "R",
+  "arm_angle": 39.7,
+  "team": "HOU",
+  "pitcher_id": 593833,
+  "age": 33,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2024/Suero_Wander_2024.png",
+  "pitches": [
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 105.1,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 89.8,
+      "ivb": 18.3,
+      "hb": -1.2,
+      "vaa": -5.42,
+      "haa": 4.26,
+      "spin": 2540,
+      "extension": 7.15,
+      "arm_angle": 39.7,
+      "release_height": 5.74,
+      "spin_axis_clock": "12:26",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 1.017,
+      "locations_x": [
+        0.74,
+        -0.14
+      ],
+      "locations_z": [
+        2.74,
+        1.67
+      ],
+      "locations_x_vs_r": [
+        0.74,
+        -0.14
+      ],
+      "locations_z_vs_r": [
+        2.74,
+        1.67
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

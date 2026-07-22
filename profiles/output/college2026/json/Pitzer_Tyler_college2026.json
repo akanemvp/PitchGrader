@@ -1,0 +1,201 @@
+{
+  "player_name": "Pitzer, Tyler",
+  "season": "college2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 39.1,
+  "team": "MSS",
+  "pitcher_id": 814197,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 91.0,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 44.4,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 60.0,
+      "velo": 92.6,
+      "ivb": 16.9,
+      "hb": 9.1,
+      "vaa": -4.01,
+      "haa": -0.21,
+      "spin": 2452,
+      "extension": 6.11,
+      "arm_angle": 42.0,
+      "release_height": 5.76,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 25.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.96,
+        0.57,
+        -0.83,
+        -1.36
+      ],
+      "locations_z": [
+        3.7,
+        1.65,
+        3.46,
+        5.07
+      ],
+      "locations_x_vs_r": [
+        -0.96
+      ],
+      "locations_z_vs_r": [
+        3.7
+      ],
+      "locations_x_vs_l": [
+        0.57,
+        -0.83,
+        -1.36
+      ],
+      "locations_z_vs_l": [
+        1.65,
+        3.46,
+        5.07
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 100.8,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 75.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.2,
+      "ivb": 1.4,
+      "hb": -5.6,
+      "vaa": -8.51,
+      "haa": 3.62,
+      "spin": 2771,
+      "extension": 6.23,
+      "arm_angle": 40.7,
+      "release_height": 5.56,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        2.46,
+        1.0,
+        1.08
+      ],
+      "locations_z": [
+        0.45,
+        1.45,
+        1.36
+      ],
+      "locations_x_vs_r": [
+        2.46,
+        1.0,
+        1.08
+      ],
+      "locations_z_vs_r": [
+        0.45,
+        1.45,
+        1.36
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 92.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 11.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 20.0,
+      "velo": 88.2,
+      "ivb": 2.9,
+      "hb": 8.0,
+      "vaa": -7.75,
+      "haa": 1.22,
+      "spin": 1668,
+      "extension": 6.29,
+      "arm_angle": 35.3,
+      "release_height": 5.45,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.19
+      ],
+      "locations_z": [
+        1.24
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.19
+      ],
+      "locations_z_vs_l": [
+        1.24
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 105.3,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 11.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 20.0,
+      "velo": 86.1,
+      "ivb": -0.4,
+      "hb": -4.2,
+      "vaa": -6.89,
+      "haa": 0.99,
+      "spin": 2796,
+      "extension": 5.98,
+      "arm_angle": 38.2,
+      "release_height": 5.65,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.92
+      ],
+      "locations_z": [
+        2.58
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.92
+      ],
+      "locations_z_vs_l": [
+        2.58
+      ]
+    }
+  ]
+}

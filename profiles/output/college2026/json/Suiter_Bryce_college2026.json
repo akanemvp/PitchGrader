@@ -1,0 +1,168 @@
+{
+  "player_name": "Suiter, Bryce",
+  "season": "college2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 41.4,
+  "team": "TXT",
+  "pitcher_id": 836693,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 115.8,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 4,
+      "n_vs_r": 3,
+      "n_vs_l": 1,
+      "usage_pct": 44.4,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 25.0,
+      "velo": 94.5,
+      "ivb": 19.2,
+      "hb": 14.0,
+      "vaa": -4.85,
+      "haa": 0.46,
+      "spin": 2530,
+      "extension": 6.29,
+      "arm_angle": 42.5,
+      "release_height": 5.82,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.31,
+        -0.41,
+        0.3,
+        0.98
+      ],
+      "locations_z": [
+        1.13,
+        2.95,
+        2.66,
+        3.43
+      ],
+      "locations_x_vs_r": [
+        -0.31,
+        -0.41,
+        0.3
+      ],
+      "locations_z_vs_r": [
+        1.13,
+        2.95,
+        2.66
+      ],
+      "locations_x_vs_l": [
+        0.98
+      ],
+      "locations_z_vs_l": [
+        3.43
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 91.9,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 78.8,
+      "ivb": -10.0,
+      "hb": -7.8,
+      "vaa": -10.78,
+      "haa": 3.92,
+      "spin": 2477,
+      "extension": 6.07,
+      "arm_angle": 42.1,
+      "release_height": 5.98,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.76,
+        0.61,
+        0.63
+      ],
+      "locations_z": [
+        0.68,
+        1.01,
+        1.01
+      ],
+      "locations_x_vs_r": [
+        1.76
+      ],
+      "locations_z_vs_r": [
+        0.68
+      ],
+      "locations_x_vs_l": [
+        0.61,
+        0.63
+      ],
+      "locations_z_vs_l": [
+        1.01,
+        1.01
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 122.5,
+      "grade": "70",
+      "color": "#00b4d8",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 22.2,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 25.0,
+      "velo": 94.5,
+      "ivb": 20.2,
+      "hb": 11.8,
+      "vaa": -6.46,
+      "haa": 1.45,
+      "spin": 2461,
+      "extension": 6.11,
+      "arm_angle": 39.5,
+      "release_height": 5.68,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.66,
+        0.86
+      ],
+      "locations_z": [
+        0.29,
+        1.61
+      ],
+      "locations_x_vs_r": [
+        0.66
+      ],
+      "locations_z_vs_r": [
+        0.29
+      ],
+      "locations_x_vs_l": [
+        0.86
+      ],
+      "locations_z_vs_l": [
+        1.61
+      ]
+    }
+  ]
+}

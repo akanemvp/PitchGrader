@@ -1,0 +1,154 @@
+{
+  "player_name": "Gaston, Carter",
+  "season": "college2026",
+  "total_pitches": 7,
+  "p_throws": "R",
+  "arm_angle": 34.9,
+  "team": "UP",
+  "pitcher_id": 813751,
+  "age": null,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 85.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 57.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 57.1,
+      "velo": 85.5,
+      "ivb": 8.9,
+      "hb": 16.2,
+      "vaa": -5.28,
+      "haa": -0.16,
+      "spin": 1816,
+      "extension": 6.68,
+      "arm_angle": 37.3,
+      "release_height": 5.56,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.27,
+        -1.79,
+        -0.78,
+        -0.17
+      ],
+      "locations_z": [
+        3.16,
+        3.67,
+        3.64,
+        2.46
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.27,
+        -1.79,
+        -0.78,
+        -0.17
+      ],
+      "locations_z_vs_l": [
+        3.16,
+        3.67,
+        3.64,
+        2.46
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 86.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 28.6,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 28.6,
+      "velo": 77.2,
+      "ivb": 1.4,
+      "hb": 13.4,
+      "vaa": -7.03,
+      "haa": 1.52,
+      "spin": 1193,
+      "extension": 6.38,
+      "arm_angle": 31.0,
+      "release_height": 5.41,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.58,
+        0.7
+      ],
+      "locations_z": [
+        3.83,
+        1.77
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.58,
+        0.7
+      ],
+      "locations_z_vs_l": [
+        3.83,
+        1.77
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 83.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 14.3,
+      "velo": 82.6,
+      "ivb": 12.1,
+      "hb": 6.2,
+      "vaa": -7.43,
+      "haa": 3.02,
+      "spin": 2041,
+      "extension": 6.71,
+      "arm_angle": 36.3,
+      "release_height": 5.5,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.43
+      ],
+      "locations_z": [
+        1.22
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        1.43
+      ],
+      "locations_z_vs_l": [
+        1.22
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "player_name": "Magdic, Ryan",
+  "season": "spring2026",
+  "total_pitches": 8,
+  "p_throws": "L",
+  "arm_angle": 35.8,
+  "team": "ATH",
+  "pitcher_id": 678163,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 54.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 77.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 91.0,
+      "ivb": 11.4,
+      "hb": 12.4,
+      "vaa": -5.89,
+      "haa": -0.59,
+      "spin": 1936,
+      "extension": 5.92,
+      "arm_angle": 35.6,
+      "release_height": 6.08,
+      "spin_axis_clock": "1:35",
+      "zone_pct": 0.0,
+      "chase_pct": 25.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.22,
+        1.14,
+        1.61,
+        -0.22
+      ],
+      "locations_z": [
+        3.64,
+        3.11,
+        2.35,
+        1.63
+      ],
+      "locations_x_vs_r": [
+        1.61
+      ],
+      "locations_z_vs_r": [
+        2.35
+      ],
+      "locations_x_vs_l": [
+        1.22,
+        1.14,
+        -0.22
+      ],
+      "locations_z_vs_l": [
+        3.64,
+        3.11,
+        1.63
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 86.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 37.5,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 77.9,
+      "ivb": 0.8,
+      "hb": -3.9,
+      "vaa": -7.22,
+      "haa": -2.49,
+      "spin": 1831,
+      "extension": 5.63,
+      "arm_angle": 38.8,
+      "release_height": 6.3,
+      "spin_axis_clock": "10:34",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.5,
+        1.57,
+        -0.61
+      ],
+      "locations_z": [
+        4.6,
+        3.95,
+        2.26
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        1.5,
+        1.57,
+        -0.61
+      ],
+      "locations_z_vs_l": [
+        4.6,
+        3.95,
+        2.26
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 93.3,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.2,
+      "ivb": 3.4,
+      "hb": 15.4,
+      "vaa": -7.22,
+      "haa": -1.01,
+      "spin": 1793,
+      "extension": 5.94,
+      "arm_angle": 32.8,
+      "release_height": 5.96,
+      "spin_axis_clock": "2:35",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.29
+      ],
+      "locations_z": [
+        2.56
+      ],
+      "locations_x_vs_r": [
+        0.29
+      ],
+      "locations_z_vs_r": [
+        2.56
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

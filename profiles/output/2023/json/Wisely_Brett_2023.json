@@ -1,0 +1,74 @@
+{
+  "player_name": "Wisely, Brett",
+  "season": "2023",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 34.6,
+  "team": "SF",
+  "pitcher_id": 689172,
+  "age": 24,
+  "ip_str": "1.0",
+  "era": 9.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2023/Wisely_Brett_2023.png",
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 78.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 2,
+      "n_vs_l": 3,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 42.9,
+      "velo": 78.6,
+      "ivb": 14.5,
+      "hb": 11.3,
+      "vaa": -5.61,
+      "haa": 1.76,
+      "spin": 1886,
+      "extension": 5.84,
+      "arm_angle": 34.6,
+      "release_height": 5.83,
+      "spin_axis_clock": "1:23",
+      "zone_pct": 60.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": 0.18,
+      "locations_x": [
+        0.3,
+        -0.37,
+        0.43,
+        0.38,
+        0.19
+      ],
+      "locations_z": [
+        3.15,
+        2.62,
+        3.03,
+        3.93,
+        3.91
+      ],
+      "locations_x_vs_r": [
+        0.38,
+        0.19
+      ],
+      "locations_z_vs_r": [
+        3.93,
+        3.91
+      ],
+      "locations_x_vs_l": [
+        0.3,
+        -0.37,
+        0.43
+      ],
+      "locations_z_vs_l": [
+        3.15,
+        2.62,
+        3.03
+      ]
+    }
+  ]
+}

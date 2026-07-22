@@ -1,0 +1,68 @@
+{
+  "player_name": "Bozzo, Gregory",
+  "season": "fsl2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 28.3,
+  "team": "TAM",
+  "pitcher_id": 801307,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 74.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.8,
+      "ivb": 14.9,
+      "hb": 14.2,
+      "vaa": -6.15,
+      "haa": 1.18,
+      "spin": 1876,
+      "extension": 5.29,
+      "arm_angle": 28.3,
+      "release_height": 5.63,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 25.0,
+      "chase_pct": 66.7,
+      "whiff_pct": 33.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.35,
+        -0.12,
+        0.13,
+        -1.37
+      ],
+      "locations_z": [
+        1.17,
+        3.8,
+        2.64,
+        2.25
+      ],
+      "locations_x_vs_r": [
+        1.35,
+        -0.12,
+        0.13,
+        -1.37
+      ],
+      "locations_z_vs_r": [
+        1.17,
+        3.8,
+        2.64,
+        2.25
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

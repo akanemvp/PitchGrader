@@ -1,0 +1,143 @@
+{
+  "player_name": "Arias, Eligio",
+  "season": "fsl2026",
+  "total_pitches": 13,
+  "p_throws": "R",
+  "arm_angle": 25.6,
+  "team": "CLR",
+  "pitcher_id": 820857,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 102.4,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 8,
+      "n_vs_r": 2,
+      "n_vs_l": 6,
+      "usage_pct": 61.5,
+      "usage_pct_vs_r": 28.6,
+      "usage_pct_vs_l": 100.0,
+      "velo": 93.6,
+      "ivb": 13.1,
+      "hb": 5.6,
+      "vaa": -4.71,
+      "haa": 1.8,
+      "spin": 2563,
+      "extension": 6.59,
+      "arm_angle": 25.2,
+      "release_height": 5.03,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 37.5,
+      "chase_pct": 20.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.95,
+        -1.13,
+        -1.14,
+        0.56,
+        -0.06,
+        0.61,
+        0.76,
+        1.33
+      ],
+      "locations_z": [
+        3.56,
+        2.71,
+        2.65,
+        1.26,
+        3.08,
+        2.16,
+        1.67,
+        1.88
+      ],
+      "locations_x_vs_r": [
+        0.76,
+        1.33
+      ],
+      "locations_z_vs_r": [
+        1.67,
+        1.88
+      ],
+      "locations_x_vs_l": [
+        -0.95,
+        -1.13,
+        -1.14,
+        0.56,
+        -0.06,
+        0.61
+      ],
+      "locations_z_vs_l": [
+        3.56,
+        2.71,
+        2.65,
+        1.26,
+        3.08,
+        2.16
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.9,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 5,
+      "n_vs_l": 0,
+      "usage_pct": 38.5,
+      "usage_pct_vs_r": 71.4,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.3,
+      "ivb": 2.1,
+      "hb": -6.9,
+      "vaa": -7.11,
+      "haa": 3.76,
+      "spin": 2644,
+      "extension": 6.64,
+      "arm_angle": 26.0,
+      "release_height": 5.09,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 66.7,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.74,
+        1.62,
+        1.16,
+        0.39,
+        -0.12
+      ],
+      "locations_z": [
+        2.47,
+        1.97,
+        1.69,
+        0.84,
+        2.0
+      ],
+      "locations_x_vs_r": [
+        0.74,
+        1.62,
+        1.16,
+        0.39,
+        -0.12
+      ],
+      "locations_z_vs_r": [
+        2.47,
+        1.97,
+        1.69,
+        0.84,
+        2.0
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

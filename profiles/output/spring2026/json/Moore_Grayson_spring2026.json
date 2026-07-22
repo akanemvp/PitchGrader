@@ -1,0 +1,293 @@
+{
+  "player_name": "Moore, Grayson",
+  "season": "spring2026",
+  "total_pitches": 31,
+  "p_throws": "R",
+  "arm_angle": 49.4,
+  "team": "CHC",
+  "pitcher_id": 694383,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 81.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 84.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 18,
+      "n_vs_r": 11,
+      "n_vs_l": 7,
+      "usage_pct": 58.1,
+      "usage_pct_vs_r": 61.1,
+      "usage_pct_vs_l": 53.8,
+      "velo": 92.8,
+      "ivb": 15.2,
+      "hb": 1.7,
+      "vaa": -5.01,
+      "haa": 0.45,
+      "spin": 1965,
+      "extension": 6.61,
+      "arm_angle": 48.0,
+      "release_height": 6.07,
+      "spin_axis_clock": "11:47",
+      "zone_pct": 33.3,
+      "chase_pct": 8.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.14,
+        -0.18,
+        -0.8,
+        -0.75,
+        -1.13,
+        -0.19,
+        -0.75,
+        -0.9,
+        -0.74,
+        -0.85,
+        -1.33,
+        1.38,
+        1.26,
+        -1.85,
+        0.06,
+        0.67,
+        0.38,
+        0.41
+      ],
+      "locations_z": [
+        3.72,
+        2.53,
+        3.39,
+        2.46,
+        3.7,
+        4.1,
+        4.31,
+        4.18,
+        1.73,
+        3.04,
+        5.69,
+        2.03,
+        1.92,
+        2.89,
+        0.31,
+        2.75,
+        2.55,
+        3.23
+      ],
+      "locations_x_vs_r": [
+        -0.14,
+        -0.18,
+        -0.8,
+        -0.75,
+        -1.13,
+        -1.33,
+        1.38,
+        1.26,
+        0.67,
+        0.38,
+        0.41
+      ],
+      "locations_z_vs_r": [
+        3.72,
+        2.53,
+        3.39,
+        2.46,
+        3.7,
+        5.69,
+        2.03,
+        1.92,
+        2.75,
+        2.55,
+        3.23
+      ],
+      "locations_x_vs_l": [
+        -0.19,
+        -0.75,
+        -0.9,
+        -0.74,
+        -0.85,
+        -1.85,
+        0.06
+      ],
+      "locations_z_vs_l": [
+        4.1,
+        4.31,
+        4.18,
+        1.73,
+        3.04,
+        2.89,
+        0.31
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 100.7,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 5,
+      "n_vs_l": 2,
+      "usage_pct": 22.6,
+      "usage_pct_vs_r": 27.8,
+      "usage_pct_vs_l": 15.4,
+      "velo": 84.1,
+      "ivb": 3.9,
+      "hb": -2.1,
+      "vaa": -8.14,
+      "haa": 1.01,
+      "spin": 1978,
+      "extension": 6.57,
+      "arm_angle": 47.3,
+      "release_height": 6.08,
+      "spin_axis_clock": "12:56",
+      "zone_pct": 28.6,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.87,
+        -0.39,
+        -0.1,
+        -0.52,
+        0.16,
+        -0.85,
+        1.34
+      ],
+      "locations_z": [
+        3.8,
+        1.42,
+        2.26,
+        2.3,
+        0.52,
+        1.26,
+        0.66
+      ],
+      "locations_x_vs_r": [
+        -0.87,
+        -0.39,
+        -0.1,
+        0.16,
+        1.34
+      ],
+      "locations_z_vs_r": [
+        3.8,
+        1.42,
+        2.26,
+        0.52,
+        0.66
+      ],
+      "locations_x_vs_l": [
+        -0.52,
+        -0.85
+      ],
+      "locations_z_vs_l": [
+        2.3,
+        1.26
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 105.6,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 9.7,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 23.1,
+      "velo": 80.0,
+      "ivb": 4.7,
+      "hb": 7.6,
+      "vaa": -8.17,
+      "haa": -0.91,
+      "spin": 678,
+      "extension": 6.6,
+      "arm_angle": 49.7,
+      "release_height": 6.21,
+      "spin_axis_clock": "10:04",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.47,
+        0.97,
+        -2.29
+      ],
+      "locations_z": [
+        2.67,
+        0.85,
+        2.82
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.47,
+        0.97,
+        -2.29
+      ],
+      "locations_z_vs_l": [
+        2.67,
+        0.85,
+        2.82
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 85.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 9.7,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 7.7,
+      "velo": 73.1,
+      "ivb": -14.7,
+      "hb": -7.4,
+      "vaa": -12.62,
+      "haa": 1.94,
+      "spin": 2164,
+      "extension": 6.71,
+      "arm_angle": 52.6,
+      "release_height": 6.25,
+      "spin_axis_clock": "5:07",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.29,
+        0.75,
+        1.1
+      ],
+      "locations_z": [
+        1.05,
+        -0.06,
+        0.43
+      ],
+      "locations_x_vs_r": [
+        0.75,
+        1.1
+      ],
+      "locations_z_vs_r": [
+        -0.06,
+        0.43
+      ],
+      "locations_x_vs_l": [
+        -0.29
+      ],
+      "locations_z_vs_l": [
+        1.05
+      ]
+    }
+  ]
+}

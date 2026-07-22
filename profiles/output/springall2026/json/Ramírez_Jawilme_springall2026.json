@@ -1,0 +1,97 @@
+{
+  "player_name": "Ram\u00edrez, Jawilme",
+  "season": "springall2026",
+  "total_pitches": 2,
+  "p_throws": "R",
+  "arm_angle": 44.7,
+  "team": "STL",
+  "pitcher_id": 691711,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 81.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 91.2,
+      "ivb": 14.6,
+      "hb": 11.8,
+      "vaa": -6.24,
+      "haa": -0.36,
+      "spin": 2261,
+      "extension": 6.17,
+      "arm_angle": 47.6,
+      "release_height": 6.18,
+      "spin_axis_clock": "10:42",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.38
+      ],
+      "locations_z": [
+        2.25
+      ],
+      "locations_x_vs_r": [
+        -1.38
+      ],
+      "locations_z_vs_r": [
+        2.25
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 91.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.7,
+      "ivb": 7.0,
+      "hb": -0.7,
+      "vaa": -7.07,
+      "haa": 2.82,
+      "spin": 1812,
+      "extension": 5.95,
+      "arm_angle": 41.7,
+      "release_height": 6.06,
+      "spin_axis_clock": "12:11",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.2
+      ],
+      "locations_z": [
+        2.48
+      ],
+      "locations_x_vs_r": [
+        0.2
+      ],
+      "locations_z_vs_r": [
+        2.48
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

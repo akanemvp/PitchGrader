@@ -1,0 +1,285 @@
+{
+  "player_name": "Hauser, Joseph",
+  "season": "college2026",
+  "total_pitches": 29,
+  "p_throws": "R",
+  "arm_angle": 47.2,
+  "team": "NEU",
+  "pitcher_id": 809687,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 95.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 15,
+      "n_vs_r": 6,
+      "n_vs_l": 9,
+      "usage_pct": 51.7,
+      "usage_pct_vs_r": 35.3,
+      "usage_pct_vs_l": 75.0,
+      "velo": 90.0,
+      "ivb": 19.4,
+      "hb": 7.6,
+      "vaa": -4.27,
+      "haa": 0.89,
+      "spin": 2054,
+      "extension": 6.64,
+      "arm_angle": 46.6,
+      "release_height": 5.97,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 46.7,
+      "chase_pct": 25.0,
+      "whiff_pct": 20.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.63,
+        -0.56,
+        0.0,
+        -0.5,
+        0.64,
+        -0.92,
+        0.28,
+        -0.0,
+        0.72,
+        0.34,
+        -1.28,
+        -0.06,
+        -0.56,
+        -0.05,
+        0.83
+      ],
+      "locations_z": [
+        2.67,
+        3.94,
+        3.02,
+        3.11,
+        2.72,
+        3.84,
+        4.31,
+        4.72,
+        2.96,
+        3.19,
+        3.07,
+        3.85,
+        4.36,
+        3.01,
+        2.86
+      ],
+      "locations_x_vs_r": [
+        -0.0,
+        0.72,
+        -0.06,
+        -0.56,
+        -0.05,
+        0.83
+      ],
+      "locations_z_vs_r": [
+        4.72,
+        2.96,
+        3.85,
+        4.36,
+        3.01,
+        2.86
+      ],
+      "locations_x_vs_l": [
+        0.63,
+        -0.56,
+        0.0,
+        -0.5,
+        0.64,
+        -0.92,
+        0.28,
+        0.34,
+        -1.28
+      ],
+      "locations_z_vs_l": [
+        2.67,
+        3.94,
+        3.02,
+        3.11,
+        2.72,
+        3.84,
+        4.31,
+        3.19,
+        3.07
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 10,
+      "n_vs_r": 8,
+      "n_vs_l": 2,
+      "usage_pct": 34.5,
+      "usage_pct_vs_r": 47.1,
+      "usage_pct_vs_l": 16.7,
+      "velo": 82.0,
+      "ivb": 9.8,
+      "hb": -1.0,
+      "vaa": -7.76,
+      "haa": 2.33,
+      "spin": 1249,
+      "extension": 6.84,
+      "arm_angle": 47.4,
+      "release_height": 5.93,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 20.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.46,
+        0.41,
+        0.65,
+        0.48,
+        1.23,
+        0.21,
+        0.5,
+        -0.31,
+        1.41,
+        0.45
+      ],
+      "locations_z": [
+        2.36,
+        1.66,
+        1.24,
+        1.4,
+        2.03,
+        2.38,
+        0.9,
+        3.88,
+        -1.29,
+        1.99
+      ],
+      "locations_x_vs_r": [
+        0.41,
+        0.65,
+        1.23,
+        0.21,
+        0.5,
+        -0.31,
+        1.41,
+        0.45
+      ],
+      "locations_z_vs_r": [
+        1.66,
+        1.24,
+        2.03,
+        2.38,
+        0.9,
+        3.88,
+        -1.29,
+        1.99
+      ],
+      "locations_x_vs_l": [
+        -0.46,
+        0.48
+      ],
+      "locations_z_vs_l": [
+        2.36,
+        1.4
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 107.4,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 10.3,
+      "usage_pct_vs_r": 11.8,
+      "usage_pct_vs_l": 8.3,
+      "velo": 83.7,
+      "ivb": 4.0,
+      "hb": 9.4,
+      "vaa": -8.77,
+      "haa": 0.54,
+      "spin": 873,
+      "extension": 6.85,
+      "arm_angle": 48.3,
+      "release_height": 5.92,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.02,
+        -0.43,
+        0.05
+      ],
+      "locations_z": [
+        0.74,
+        0.23,
+        2.33
+      ],
+      "locations_x_vs_r": [
+        -0.02,
+        0.05
+      ],
+      "locations_z_vs_r": [
+        0.74,
+        2.33
+      ],
+      "locations_x_vs_l": [
+        -0.43
+      ],
+      "locations_z_vs_l": [
+        0.23
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 82.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 3.4,
+      "usage_pct_vs_r": 5.9,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.6,
+      "ivb": 17.2,
+      "hb": 1.0,
+      "vaa": -6.64,
+      "haa": 1.41,
+      "spin": 910,
+      "extension": 6.8,
+      "arm_angle": 46.6,
+      "release_height": 5.9,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.04
+      ],
+      "locations_z": [
+        1.88
+      ],
+      "locations_x_vs_r": [
+        -0.04
+      ],
+      "locations_z_vs_r": [
+        1.88
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

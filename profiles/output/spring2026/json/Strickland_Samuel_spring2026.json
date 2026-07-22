@@ -1,0 +1,218 @@
+{
+  "player_name": "Strickland, Samuel",
+  "season": "spring2026",
+  "total_pitches": 22,
+  "p_throws": "L",
+  "arm_angle": 42.6,
+  "team": "ATL",
+  "pitcher_id": 694436,
+  "age": 27,
+  "ip_str": "1.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 81.5,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 11,
+      "n_vs_r": 5,
+      "n_vs_l": 6,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 35.7,
+      "usage_pct_vs_l": 75.0,
+      "velo": 91.7,
+      "ivb": 15.2,
+      "hb": 7.5,
+      "vaa": -6.33,
+      "haa": -2.16,
+      "spin": 1865,
+      "extension": 6.3,
+      "arm_angle": 42.9,
+      "release_height": 6.03,
+      "spin_axis_clock": "12:53",
+      "zone_pct": 63.6,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.56,
+        0.78,
+        0.37,
+        0.26,
+        0.22,
+        -0.15,
+        0.23,
+        0.66,
+        -0.59,
+        -1.12,
+        -0.08
+      ],
+      "locations_z": [
+        2.7,
+        2.85,
+        1.0,
+        2.08,
+        1.19,
+        1.28,
+        2.37,
+        1.46,
+        1.75,
+        1.13,
+        1.84
+      ],
+      "locations_x_vs_r": [
+        -0.15,
+        0.66,
+        -0.59,
+        -1.12,
+        -0.08
+      ],
+      "locations_z_vs_r": [
+        1.28,
+        1.46,
+        1.75,
+        1.13,
+        1.84
+      ],
+      "locations_x_vs_l": [
+        0.56,
+        0.78,
+        0.37,
+        0.26,
+        0.22,
+        0.23
+      ],
+      "locations_z_vs_l": [
+        2.7,
+        2.85,
+        1.0,
+        2.08,
+        1.19,
+        2.37
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 97.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 10,
+      "n_vs_r": 9,
+      "n_vs_l": 1,
+      "usage_pct": 45.5,
+      "usage_pct_vs_r": 64.3,
+      "usage_pct_vs_l": 12.5,
+      "velo": 81.2,
+      "ivb": 7.8,
+      "hb": 13.2,
+      "vaa": -7.94,
+      "haa": -1.36,
+      "spin": 1515,
+      "extension": 6.3,
+      "arm_angle": 44.1,
+      "release_height": 6.11,
+      "spin_axis_clock": "1:58",
+      "zone_pct": 60.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.37,
+        -0.38,
+        0.62,
+        0.89,
+        0.31,
+        1.41,
+        0.11,
+        -0.26,
+        0.4,
+        -0.16
+      ],
+      "locations_z": [
+        -0.11,
+        1.94,
+        2.4,
+        2.28,
+        1.59,
+        2.88,
+        1.48,
+        2.89,
+        2.17,
+        0.67
+      ],
+      "locations_x_vs_r": [
+        -0.38,
+        0.62,
+        0.89,
+        0.31,
+        1.41,
+        0.11,
+        -0.26,
+        0.4,
+        -0.16
+      ],
+      "locations_z_vs_r": [
+        1.94,
+        2.4,
+        2.28,
+        1.59,
+        2.88,
+        1.48,
+        2.89,
+        2.17,
+        0.67
+      ],
+      "locations_x_vs_l": [
+        0.37
+      ],
+      "locations_z_vs_l": [
+        -0.11
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 4.5,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 12.5,
+      "velo": 82.6,
+      "ivb": 12.2,
+      "hb": -3.5,
+      "vaa": -7.44,
+      "haa": -4.81,
+      "spin": 1960,
+      "extension": 6.2,
+      "arm_angle": 40.8,
+      "release_height": 5.99,
+      "spin_axis_clock": "11:28",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.26
+      ],
+      "locations_z": [
+        1.6
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.26
+      ],
+      "locations_z_vs_l": [
+        1.6
+      ]
+    }
+  ]
+}

@@ -1,18 +1,34 @@
-"""Driveline-style Stuff+ — one LightGBM regressor on a swing-outcome run-value target.
+"""Stuff+ — Method A: a two-zone conditional-outcome model.
 
-For each pitch, xRV is predicted from 8 shape features: velocity, extension, vertical
-acceleration, arm-normalized horizontal acceleration, arm-normalized release side,
-release height, arm angle, and spin rate. No location, no count, no batter handedness.
+A pitch's expected run value is split by where the shape tends to go, then each
+zone is scored by its full swing/take outcome tree. The final value is the
+shape-predicted-zone-rate blend of the two:
 
-The horizontal features are MIRRORED (arm-side positive for both hands) so a lefty and
-a righty throwing physically identical pitches grade identically — verified by a mirror
-test (asymmetry 0.00; it was +4.7 with raw signed features).
+    xRV(shape) = P(in-zone | shape) · IN-ZONE value
+               + P(out-zone | shape) · OUT-ZONE value
 
-Target — swings only; balls and called strikes are excluded, since whether a taken
-pitch is a ball or a strike is mostly location/command, which this model cannot see:
-  • whiff / foul  → actual delta_run_exp
-  • in play       → spray-aware xRV from (exit velo, launch angle, spray angle),
-                    which xwOBAcon cannot capture because it is spray-blind
+  IN-ZONE value  = P(swing | in-zone) · [whiff / foul / GB·AIR·PU·HR contact]
+                 + P(take | in-zone)  · V_called_strike        (an in-zone take is a strike)
+
+  OUT-ZONE value = P(chase | out-zone) · [whiff / foul / GB·AIR·PU·HR contact]
+                 + P(no-chase | out-zone) · V_ball             (an out-zone take is a ball)
+
+Everything is trained on the 8 arm-normalized SHAPE_FEATS — no location, count, or
+handedness as *features*. Location is used only at TRAIN time, to label each pitch
+in-zone vs out-of-zone against the individual hitter's strike zone; at inference the
+seven heads are applied to shape alone. The zone weight P(in-zone | shape) is the
+shape's population-average zone tendency (validated calibrated, AUC 0.58) — it is
+command-neutral (trained across all pitchers) yet accurate (fastball ~0.51, slider
+~0.42), which is why it credits called strikes and balls fairly without importing an
+individual pitcher's command.
+
+Contact is a 4-cell trajectory model — ground ball (LA<10), air/line-drive (10-50),
+pop-up (>50), home run — valued per cell by count-adjusted run value, with chase
+contact valued as weaker than in-zone contact.
+
+Best-validated configuration of the session: reality corr -0.20 vs actual run value,
+cross-type ordering -0.36, un-compressed fastballs and sliders, and it attaches
+shape credit to takes (in-zone called strikes, out-of-zone balls) the fair way.
 
 Lower xRV = better; normalized to 100 = league average, 10 = one standard deviation.
 """
@@ -35,163 +51,114 @@ SHAPE_FEATS = [
     "release_speed", "release_extension", "az", "ax_arm",
     "release_pos_x_arm", "release_pos_z", "arm_angle", "release_spin_rate",
 ]
-# ax_arm / release_pos_x_arm are the MIRRORED (arm-normalized) versions of ax and
-# release_pos_x — arm-side is positive for both hands. Using the raw signed values
-# forced the model to learn identical physics separately in each sign region from
-# ~73/27 lopsided data, handing lefties a ~4-5 point phantom bonus. Verified via a
-# mirror test: flipping a pitch's handedness moved its grade +4.7 with raw features
-# and exactly 0.00 with these.
-#
-# `same_hand` is deliberately absent: with mirrored features the model cannot
-# identify pitcher handedness, so platoon marginalization became a no-op (+0.08
-# points league-wide). One grade per pitch, single scoring pass.
-LOC_FEATS = ["plate_x", "plate_z", "sz_top", "sz_bot"]   # location + batter strike-zone size
-COUNT_FEATS = []                                   # no count (faithful Driveline Stuff+)
-XWOBA_COL = "estimated_woba_using_speedangle"
-LGBM_REG = dict(n_estimators=400, max_depth=5, learning_rate=0.04, subsample=0.8,
-                colsample_bytree=0.8, min_child_samples=200, reg_lambda=1.0,
-                random_state=42, n_jobs=-1, verbose=-1)
+XWOBA_COL = "estimated_woba_using_speedangle"   # retained for import compatibility
 
-FASTBALL_T = {"FF", "FA", "SI", "FT"}
-OFFSPEED_T = {"CH", "FS", "FO"}
-GROUPED = False                  # False = one model for all pitches (no family split)
+# half plate-width + ball radius (ft): the horizontal edge of the rulebook zone
+ZONE_HALF = 0.83
+
+# LightGBM: strongly regularized so the velocity/extension response stays smooth into
+# the sparse tail. path_smooth + large min_child_samples + extra_trees, no monotone
+# constraints. deterministic + force_col_wise give reproducible grades at full speed.
+_LGBM = dict(
+    n_estimators=600, max_depth=5, learning_rate=0.04, subsample=0.8,
+    colsample_bytree=0.8, min_child_samples=2500, reg_lambda=5.0,
+    path_smooth=5.0, min_split_gain=1e-5, extra_trees=True,
+    random_state=42, n_jobs=-1, deterministic=True, force_col_wise=True, verbose=-1,
+)
+
+# in-play trajectory cells, in fixed order
+_IP4 = ["GB", "AIR", "PU", "HR"]
+_SW3 = ["foul", "whiff", "inplay"]
 
 
-def _approach_angles(df):
-    """Vertical & horizontal approach angle (deg) at plate front (y=17/12) from velocity/accel."""
-    y0, yf = 50.0, 17.0 / 12.0
-    g = lambda c: pd.to_numeric(df.get(c), errors="coerce")
-    vx0, vy0, vz0, ax, ay, az = g("vx0"), g("vy0"), g("vz0"), g("ax"), g("ay"), g("az")
-    disc = (vy0 ** 2 - 2 * ay * (y0 - yf)).clip(lower=0)
-    t = (-vy0 - np.sqrt(disc)) / ay
-    vy_f = vy0 + ay * t; vz_f = vz0 + az * t; vx_f = vx0 + ax * t
-    vaa = np.degrees(np.arctan2(vz_f, -vy_f))
-    haa = np.degrees(np.arctan2(vx_f, -vy_f))
-    return vaa, haa
-
-
-def _fit_approach(df):
-    """Fit the location (plate_z/plate_x) component of VAA/HAA so it can be removed (deg-2 poly)."""
-    vaa, haa = _approach_angles(df)
-    pz = pd.to_numeric(df.get("plate_z"), errors="coerce")
+def _batter_zone(df: pd.DataFrame) -> pd.Series:
+    """Boolean in-zone mask using each batter's own strike zone (mean sz_top/sz_bot)."""
     px = pd.to_numeric(df.get("plate_x"), errors="coerce")
-    mv = vaa.notna() & pz.notna(); mh = haa.notna() & px.notna()
-    cz = np.polyfit(pz[mv].values, vaa[mv].values, 2)
-    cx = np.polyfit(px[mh].values, haa[mh].values, 2)
-    return cz.tolist(), cx.tolist()
+    pz = pd.to_numeric(df.get("plate_z"), errors="coerce")
+    szt = pd.to_numeric(df.get("sz_top"), errors="coerce")
+    szb = pd.to_numeric(df.get("sz_bot"), errors="coerce")
+    if "batter" in df.columns:
+        bz = pd.DataFrame({"batter": df["batter"], "_t": szt, "_b": szb}).groupby("batter").agg(
+            zt=("_t", "mean"), zb=("_b", "mean"))
+        z = df[["batter"]].merge(bz, on="batter", how="left")
+        zt_b, zb_b = z["zt"].values, z["zb"].values
+    else:
+        zt_b, zb_b = szt.values, szb.values
+    inz = (px.abs().values <= ZONE_HALF) & (pz.values >= zb_b) & (pz.values <= zt_b)
+    return pd.Series(np.where(np.isfinite(zt_b) & pz.notna().values, inz, False),
+                     index=df.index).fillna(False)
 
 
-def _apply_approach(df, cz, cx):
-    """Add location-adjusted VAA/HAA columns: raw approach angle minus its location-expected value."""
-    vaa, haa = _approach_angles(df)
-    pz = pd.to_numeric(df.get("plate_z"), errors="coerce"); pz = pz.fillna(pz.median())
-    px = pd.to_numeric(df.get("plate_x"), errors="coerce"); px = px.fillna(px.median())
-    df["vaa_adj"] = vaa.values - np.polyval(cz, pz.values)
-    df["haa_adj"] = haa.values - np.polyval(cx, px.values)
-    return df
-
-
-def _pitch_group(df) -> pd.Series:
-    """fastball / breaking / offspeed. Cutters split by shape via Stage-0 classifier.
-    When GROUPED is False, one model for everything."""
-    if not GROUPED:
-        return pd.Series("all", index=df.index)
-    pt = df.get("pitch_type", pd.Series("", index=df.index)).fillna("").astype(str)
-    grp = pd.Series("breaking", index=df.index, dtype=object)
-    grp[pt.isin(FASTBALL_T)] = "fastball"
-    grp[pt.isin(OFFSPEED_T)] = "offspeed"
-    fc = pt == "FC"
-    if fc.any():
-        # cutter Stage-0 method classifies by shape; route to breaking or offspeed (never fastball).
-        # Cutters are hard pitches (breaking-family), never changeup/splitter-like, so they land in breaking.
-        try:
-            from model.cutter_stage0 import classify_cutters
-            classify_cutters(df)                   # method runs; breaking-vs-offspeed → all breaking
-        except Exception:
-            pass
-        grp[fc] = "breaking"
-    return grp
-
-
-def _fit_group(g_base, mf, off):
-    """Driveline single RV regressor on the all-outcome target '_swrv' (no location)."""
-    tgt = g_base["_swrv"].values
-    reg = lgb.LGBMRegressor(**LGBM_REG).fit(g_base[mf].values, tgt)
-    return {"reg": reg, "base": 0.0}, len(g_base)
+def _ip_cell(la: pd.Series, ev: pd.Series, mask: pd.Series) -> pd.Series:
+    """GB / AIR / PU / HR label for in-play pitches under `mask`."""
+    cell = pd.Series(index=la.index, dtype=object)
+    m = mask & la.notna()
+    hr = m & (ev == "home_run")
+    rest = m & (ev != "home_run")
+    cell[hr] = "HR"
+    cell[rest & (la < 10)] = "GB"
+    cell[rest & (la > 50)] = "PU"
+    cell[rest & (la >= 10) & (la <= 50)] = "AIR"
+    return cell
 
 
 def train_prob_resid_ensemble(df: pd.DataFrame, rv_baselines: dict, features=None) -> dict:
-    df = df[df["delta_run_exp"].notna() & np.isfinite(df["delta_run_exp"])].copy()
-    desc = df["description"].fillna("").astype(str)
+    df = df.copy()
+    dd = df["description"].fillna("").astype(str)
+    ev = df["events"].fillna("").astype(str)
+    la = pd.to_numeric(df.get("launch_angle"), errors="coerce")
     dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
-    is_w = desc.isin(WHIFF_DESCS); is_f = desc.isin(FOUL_DESCS); is_ip = desc == INPLAY_DESC
-    # SWING-ONLY: balls and called strikes are excluded. Whether a taken pitch is a
-    # ball or a strike is mostly location/command, which this model can't see (it has
-    # no location features), so takes inject noise rather than shape signal.
-    _n_takes = int((desc.isin(BALL_DESCS) | desc.isin(CALLED_DESCS)).sum())
-    df = df[is_w | is_f | is_ip].copy()
-    desc = desc[df.index]; dre = dre[df.index]
-    is_w = is_w[df.index]; is_f = is_f[df.index]; is_ip = is_ip[df.index]
-    logger.info(f"  Swing-only target: dropped {_n_takes:,} takes; training on {len(df):,} swings")
-    cz, cx = _fit_approach(df); _apply_approach(df, cz, cx)        # location-adjusted VAA/HAA
-    sh = [f for f in SHAPE_FEATS if f in df.columns]
-    off = [f for f in LOC_FEATS if f in df.columns]
-    for zc in ("sz_top", "sz_bot"):                            # fill sparse zone nulls, don't drop rows
-        if zc in df.columns:
-            df[zc] = pd.to_numeric(df[zc], errors="coerce").fillna(df[zc].median())
+    b = pd.to_numeric(df["balls"], errors="coerce").fillna(0).astype(int)
+    s = pd.to_numeric(df["strikes"], errors="coerce").fillna(0).astype(int)
+    # count-adjusted run value: subtract the per-count mean so values are count-neutral
+    ca = dre - pd.DataFrame({"b": b, "s": s, "d": dre}).groupby(["b", "s"]).d.transform("mean")
 
-    cnt = [f for f in COUNT_FEATS if f in df.columns]
-    mf = sh + cnt
+    inz = _batter_zone(df); ooz = ~inz
+    isw = dd.isin(WHIFF_DESCS); isf = dd.isin(FOUL_DESCS)
+    iscs = dd.isin(CALLED_DESCS); isip = dd.eq(INPLAY_DESC) & la.notna()
+    isswing = isw | isf | isip
+    sf = df[SHAPE_FEATS].notna().all(axis=1)
+    logger.info(f"  Method A: {int(inz.sum()):,} in-zone / {int(ooz.sum()):,} out-of-zone")
 
-    # ---- Target: whiff/foul = actual delta_run_exp; in-play = SPRAY-AWARE xRV ----
-    # xwOBAcon knows only exit velo + launch angle — it is blind to spray direction,
-    # so it systematically flatters breaking-ball contact and penalizes grounders
-    # (measured: sinkers beat their xwOBAcon by ~23 wOBA pts, sweepers trailed by ~41).
-    # A model on (EV, LA, spray) predicts in-play run value far better out-of-sample
-    # (r 0.641 -> 0.701) and cuts the pitch-type bias ~18%.
-    mean_c = float(dre[is_ip].mean())
-    df["_swrv"] = np.nan
-    df.loc[is_w | is_f, "_swrv"] = dre[is_w | is_f]
-    _spray_cols = ["launch_speed", "launch_angle", "hc_x", "hc_y", "stand"]
-    if is_ip.any() and all(c in df.columns for c in _spray_cols):
-        _sp = np.degrees(np.arctan2(pd.to_numeric(df["hc_x"], errors="coerce") - 125.42,
-                                    198.27 - pd.to_numeric(df["hc_y"], errors="coerce")))
-        df["_spray"] = _sp * np.where(df["stand"].astype(str) == "R", 1.0, -1.0)
-        _F = ["launch_speed", "launch_angle", "_spray"]
-        _fit = df[is_ip].dropna(subset=_F + ["delta_run_exp"])
-        _cm = lgb.LGBMRegressor(n_estimators=400, max_depth=6, learning_rate=0.05,
-                                min_child_samples=200, subsample=0.8, colsample_bytree=0.8,
-                                random_state=42, verbose=-1).fit(_fit[_F], _fit["delta_run_exp"])
-        _ok = df[_F].notna().all(axis=1) & is_ip
-        df.loc[_ok, "_swrv"] = _cm.predict(df.loc[_ok, _F])
-        df.loc[is_ip & ~_ok, "_swrv"] = mean_c
-        logger.info(f"  In-play target: spray-aware xRV on (EV, LA, spray), fit on {len(_fit):,} BIP")
-    else:
-        lg = rv_baselines.get("lg_xwoba_con", 0.370); scl = rv_baselines.get("woba_scale", 1.15)
-        xw = pd.to_numeric(df.get(XWOBA_COL), errors="coerce")
-        df.loc[is_ip, "_swrv"] = ((xw - lg) / scl + mean_c)[is_ip].fillna(mean_c)
-        logger.warning("  spray columns missing — falling back to xwOBAcon in-play target")
+    def cav(mask):   # mean count-adjusted RV under a mask
+        v = ca[mask & ca.notna()]
+        return float(v.mean()) if len(v) else 0.0
 
-    base = df.dropna(subset=mf + off + ["_swrv"])
-    grp = _pitch_group(base)
-    groups = {}
-    for g in sorted(grp.unique()):
-        gi = base.index[grp == g]
-        groups[g], n = _fit_group(base.loc[gi], mf, off)
-        logger.info(f"  [{g:8s}] n={n:,}  (grouped={GROUPED}, no location)")
+    ip_iz = _ip_cell(la, ev, inz); ip_oz = _ip_cell(la, ev, ooz)
+    Vi = {"foul": cav(inz & isf), "whiff": cav(inz & isw),
+          **{c: cav(inz & (ip_iz == c)) for c in _IP4}}
+    Vo = {"foul": cav(ooz & isf), "whiff": cav(ooz & isw),
+          **{c: cav(ooz & (ip_oz == c)) for c in _IP4}}
+    v_cs = cav(inz & iscs)              # in-zone take = called strike
+    v_ball = cav(ooz & ~isswing)        # out-zone take = ball
+    logger.info(f"  values: v_cs={v_cs:+.4f} v_ball={v_ball:+.4f}  "
+                f"Vi.HR={Vi['HR']:+.3f} Vo.GB={Vo['GB']:+.3f}")
 
-    ens = {"prob_resid": True, "grouped": True, "feats": mf, "shape_feats": sh, "count_feats": cnt,
-           "loc_feats": off, "groups": groups, "vaa_coef": cz, "haa_coef": cx}
+    def fit(mask, y, obj=None, k=None):
+        kw = dict(_LGBM)
+        if obj:
+            kw.update(objective=obj, num_class=k)
+        return lgb.LGBMClassifier(**kw).fit(df.loc[mask, SHAPE_FEATS].values, y[mask].values)
 
-    # ---- count: score at the MEAN count (1 eval ≈ full 12-count marginal, ~12× faster) ----
-    if cnt:
-        mb = float(base["balls"].mean()); ms = float(base["strikes"].mean())
-        ens["count_dist"] = [((mb, ms), 1.0)]
-        logger.info(f"  count: scored at mean count (balls={mb:.2f}, strikes={ms:.2f}) — fast marginal approx")
-    else:
-        ens["count_dist"] = [((0, 0), 1.0)]
+    idx3 = {c: i for i, c in enumerate(_SW3)}; idx4 = {c: i for i, c in enumerate(_IP4)}
+    sw3 = pd.Series(index=df.index, dtype=object); sw3[isf] = "foul"; sw3[isw] = "whiff"; sw3[isip] = "inplay"
 
-    samp = base.sample(n=min(120_000, len(base)), random_state=42)
+    H = {}
+    H["zone"]     = fit(sf, inz.astype(int))                                              # P(in-zone | shape)
+    H["izgate"]   = fit(inz & (isswing | iscs) & sf, isswing.astype(int))                 # P(swing | in-zone)
+    H["iz_swing"] = fit(inz & isswing & sw3.notna() & sf, sw3.map(idx3), "multiclass", 3) # foul/whiff/inplay | iz swing
+    H["iz_ip"]    = fit(inz & ip_iz.isin(_IP4) & sf, ip_iz.map(idx4), "multiclass", 4)    # GB/AIR/PU/HR | iz inplay
+    H["chase"]    = fit(ooz & sf, isswing.astype(int))                                    # P(chase | out-zone)
+    H["oz_swing"] = fit(ooz & isswing & sw3.notna() & sf, sw3.map(idx3), "multiclass", 3) # foul/whiff/inplay | chase
+    H["oz_ip"]    = fit(ooz & ip_oz.isin(_IP4) & sf, ip_oz.map(idx4), "multiclass", 4)    # GB/AIR/PU/HR | oz inplay
+    logger.info(f"  trained 7 heads on {int(sf.sum()):,} shaped pitches")
+
+    ens = {"method": "A", "feats": SHAPE_FEATS, "shape_feats": SHAPE_FEATS,
+           "heads": H, "Vi": Vi, "Vo": Vo, "v_cs": v_cs, "v_ball": v_ball,
+           # legacy keys some callers probe:
+           "groups": {"all": None}, "count_dist": [((0, 0), 1.0)]}
+
+    samp = df.loc[sf, SHAPE_FEATS].sample(n=min(150000, int(sf.sum())), random_state=42)
     preds = predict_prob_resid_rv(samp, ens)
     ens["norm"] = {"raw_mean": float(np.nanmean(preds)), "raw_std": float(np.nanstd(preds)),
                    "target_mean": 100.0, "target_std": 10.0}
@@ -200,42 +167,24 @@ def train_prob_resid_ensemble(df: pd.DataFrame, rv_baselines: dict, features=Non
     return ens
 
 
-def _group_xrv(sub, node, mf, count_dist):
-    """Driveline RV regressor xRV, marginalized over platoon (and count)."""
-    s = sub[[f for f in mf if f in sub.columns]].copy()
-    for f in s.columns:
-        if f in ("same_hand", "balls", "strikes"):
-            continue
-        if s[f].isna().any():
-            s[f] = s[f].fillna(s[f].median())
-    out = np.zeros(len(sub), dtype=float)
-    hand_states = [1.0, 0.0] if "same_hand" in mf else [None]
-    for h in hand_states:
-        if h is not None:
-            s["same_hand"] = h
-        for (b, st), w in count_dist:
-            if "balls" in mf:
-                s["balls"] = b; s["strikes"] = st
-            out += w * (node["base"] + node["reg"].predict(s[mf].values))
-    return out / len(hand_states)
-
-
 def predict_prob_resid_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
+    """Method A expected run value from shape alone (7 heads composed)."""
     if len(df) == 0:
         return np.full(0, np.nan)
-    if "vaa_coef" in ens:
-        df = _apply_approach(df.copy(), ens["vaa_coef"], ens["haa_coef"])
-    mf = ens["feats"]
-    cd = ens.get("count_dist") or [((0, 0), 1.0)]
-    grp = _pitch_group(df)
-    out = np.full(len(df), np.nan)
-    pos = {idx: i for i, idx in enumerate(df.index)}
-    for g in ens["groups"]:
-        m = (grp == g)
-        if not m.any():
-            continue
-        sub = df[m]
-        vals = _group_xrv(sub, ens["groups"][g], mf, cd)
-        for idx, v in zip(sub.index, vals):
-            out[pos[idx]] = v
-    return out
+    H = ens["heads"]; Vi = ens["Vi"]; Vo = ens["Vo"]; v_cs = ens["v_cs"]; v_ball = ens["v_ball"]
+    X = df[SHAPE_FEATS].apply(pd.to_numeric, errors="coerce")
+    X = X.fillna(X.median()).values
+    vi = np.array([Vi[c] for c in _IP4]); vo = np.array([Vo[c] for c in _IP4])
+
+    psw = H["izgate"].predict_proba(X)[:, 1]
+    s3i = H["iz_swing"].predict_proba(X); ipi = H["iz_ip"].predict_proba(X)
+    in_swing = s3i[:, 0] * Vi["foul"] + s3i[:, 1] * Vi["whiff"] + s3i[:, 2] * (ipi @ vi)
+    in_xrv = psw * in_swing + (1 - psw) * v_cs
+
+    pch = H["chase"].predict_proba(X)[:, 1]
+    s3o = H["oz_swing"].predict_proba(X); ipo = H["oz_ip"].predict_proba(X)
+    oz_swing = s3o[:, 0] * Vo["foul"] + s3o[:, 1] * Vo["whiff"] + s3o[:, 2] * (ipo @ vo)
+    oz_xrv = pch * oz_swing + (1 - pch) * v_ball
+
+    w = H["zone"].predict_proba(X)[:, 1]
+    return w * in_xrv + (1 - w) * oz_xrv

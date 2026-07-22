@@ -1,0 +1,105 @@
+{
+  "player_name": "Causey, Dylan",
+  "season": "college2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 49.1,
+  "team": "SOM",
+  "pitcher_id": 829182,
+  "age": null,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 106.5,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 86.5,
+      "ivb": 5.2,
+      "hb": -6.6,
+      "vaa": -5.43,
+      "haa": 2.19,
+      "spin": 2252,
+      "extension": 6.23,
+      "arm_angle": 49.4,
+      "release_height": 5.94,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.45,
+        1.1
+      ],
+      "locations_z": [
+        3.85,
+        3.62
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.45,
+        1.1
+      ],
+      "locations_z_vs_l": [
+        3.85,
+        3.62
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 76.2,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 90.8,
+      "ivb": 14.3,
+      "hb": 11.4,
+      "vaa": -5.25,
+      "haa": -0.92,
+      "spin": 1958,
+      "extension": 6.13,
+      "arm_angle": 48.8,
+      "release_height": 5.87,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.42,
+        -1.29
+      ],
+      "locations_z": [
+        3.23,
+        2.41
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.42,
+        -1.29
+      ],
+      "locations_z_vs_l": [
+        3.23,
+        2.41
+      ]
+    }
+  ]
+}

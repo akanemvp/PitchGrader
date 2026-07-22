@@ -1,0 +1,174 @@
+{
+  "player_name": "Kim, Seong-Jun",
+  "season": "springall2026",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 33.2,
+  "team": "TXP",
+  "pitcher_id": 834605,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 102.0,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 3,
+      "n_vs_l": 4,
+      "usage_pct": 63.6,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 80.0,
+      "velo": 92.8,
+      "ivb": 16.4,
+      "hb": 7.3,
+      "vaa": -4.62,
+      "haa": 1.45,
+      "spin": 2322,
+      "extension": 6.5,
+      "arm_angle": 32.4,
+      "release_height": 5.46,
+      "spin_axis_clock": "11:12",
+      "zone_pct": 42.9,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.374,
+      "locations_x": [
+        -0.08,
+        -0.88,
+        0.72,
+        -0.83,
+        0.16,
+        -1.31,
+        -1.1
+      ],
+      "locations_z": [
+        2.77,
+        3.73,
+        1.97,
+        3.07,
+        1.87,
+        2.66,
+        2.79
+      ],
+      "locations_x_vs_r": [
+        0.16,
+        -1.31,
+        -1.1
+      ],
+      "locations_z_vs_r": [
+        1.87,
+        2.66,
+        2.79
+      ],
+      "locations_x_vs_l": [
+        -0.08,
+        -0.88,
+        0.72,
+        -0.83
+      ],
+      "locations_z_vs_l": [
+        2.77,
+        3.73,
+        1.97,
+        3.07
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 97.6,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 27.3,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 20.0,
+      "velo": 83.2,
+      "ivb": -1.0,
+      "hb": -1.0,
+      "vaa": -8.68,
+      "haa": 3.04,
+      "spin": 1578,
+      "extension": 6.56,
+      "arm_angle": 32.5,
+      "release_height": 5.44,
+      "spin_axis_clock": "5:16",
+      "zone_pct": 0.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.17,
+        0.75,
+        0.74
+      ],
+      "locations_z": [
+        0.53,
+        1.49,
+        1.17
+      ],
+      "locations_x_vs_r": [
+        0.75,
+        0.74
+      ],
+      "locations_z_vs_r": [
+        1.49,
+        1.17
+      ],
+      "locations_x_vs_l": [
+        -0.17
+      ],
+      "locations_z_vs_l": [
+        0.53
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 95.0,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 9.1,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.5,
+      "ivb": -2.0,
+      "hb": -1.1,
+      "vaa": -7.49,
+      "haa": 3.2,
+      "spin": 2515,
+      "extension": 6.53,
+      "arm_angle": 34.6,
+      "release_height": 5.53,
+      "spin_axis_clock": "5:02",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.54
+      ],
+      "locations_z": [
+        2.56
+      ],
+      "locations_x_vs_r": [
+        0.54
+      ],
+      "locations_z_vs_r": [
+        2.56
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

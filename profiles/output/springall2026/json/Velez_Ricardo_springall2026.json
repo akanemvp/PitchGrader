@@ -1,0 +1,105 @@
+{
+  "player_name": "Velez, Ricardo",
+  "season": "springall2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 35.7,
+  "team": "TEX",
+  "pitcher_id": 703106,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 75.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.3,
+      "ivb": 2.7,
+      "hb": -1.7,
+      "vaa": -6.93,
+      "haa": 2.73,
+      "spin": 2285,
+      "extension": 6.01,
+      "arm_angle": 34.0,
+      "release_height": 5.43,
+      "spin_axis_clock": "1:08",
+      "zone_pct": 33.3,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.199,
+      "locations_x": [
+        0.42,
+        1.94,
+        -0.94
+      ],
+      "locations_z": [
+        2.7,
+        1.25,
+        2.82
+      ],
+      "locations_x_vs_r": [
+        0.42,
+        1.94,
+        -0.94
+      ],
+      "locations_z_vs_r": [
+        2.7,
+        1.25,
+        2.82
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 83.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 92.5,
+      "ivb": 13.8,
+      "hb": 9.4,
+      "vaa": -4.6,
+      "haa": 0.22,
+      "spin": 2371,
+      "extension": 6.1,
+      "arm_angle": 37.3,
+      "release_height": 5.6,
+      "spin_axis_clock": "10:51",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.402,
+      "locations_x": [
+        -0.69
+      ],
+      "locations_z": [
+        3.04
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.69
+      ],
+      "locations_z_vs_l": [
+        3.04
+      ]
+    }
+  ]
+}

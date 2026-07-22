@@ -1,0 +1,186 @@
+{
+  "player_name": "Valle, John",
+  "season": "acl2026",
+  "total_pitches": 14,
+  "p_throws": "R",
+  "arm_angle": 22.6,
+  "team": "F-NAT",
+  "pitcher_id": 813179,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 102.2,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 5,
+      "n_vs_l": 2,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 62.5,
+      "usage_pct_vs_l": 33.3,
+      "velo": 94.7,
+      "ivb": 13.3,
+      "hb": 17.6,
+      "vaa": -4.96,
+      "haa": 0.19,
+      "spin": 2538,
+      "extension": 5.34,
+      "arm_angle": 22.4,
+      "release_height": 5.39,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 57.1,
+      "chase_pct": 66.7,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.64,
+        -0.56,
+        -1.16,
+        -0.53,
+        -1.02,
+        0.4,
+        1.04
+      ],
+      "locations_z": [
+        2.52,
+        1.57,
+        2.97,
+        2.77,
+        2.64,
+        2.92,
+        1.94
+      ],
+      "locations_x_vs_r": [
+        -0.64,
+        -0.56,
+        -1.16,
+        -0.53,
+        -1.02
+      ],
+      "locations_z_vs_r": [
+        2.52,
+        1.57,
+        2.97,
+        2.77,
+        2.64
+      ],
+      "locations_x_vs_l": [
+        0.4,
+        1.04
+      ],
+      "locations_z_vs_l": [
+        2.92,
+        1.94
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 91.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 5,
+      "n_vs_r": 1,
+      "n_vs_l": 4,
+      "usage_pct": 35.7,
+      "usage_pct_vs_r": 12.5,
+      "usage_pct_vs_l": 66.7,
+      "velo": 81.8,
+      "ivb": 1.5,
+      "hb": 0.8,
+      "vaa": -7.86,
+      "haa": 2.7,
+      "spin": 2665,
+      "extension": 5.49,
+      "arm_angle": 20.5,
+      "release_height": 5.31,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 20.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.75,
+        0.7,
+        -1.23,
+        -1.22,
+        1.43
+      ],
+      "locations_z": [
+        0.9,
+        1.99,
+        1.39,
+        3.55,
+        -0.02
+      ],
+      "locations_x_vs_r": [
+        1.75
+      ],
+      "locations_z_vs_r": [
+        0.9
+      ],
+      "locations_x_vs_l": [
+        0.7,
+        -1.23,
+        -1.22,
+        1.43
+      ],
+      "locations_z_vs_l": [
+        1.99,
+        1.39,
+        3.55,
+        -0.02
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 91.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 80.2,
+      "ivb": -1.3,
+      "hb": -1.4,
+      "vaa": -8.08,
+      "haa": 2.88,
+      "spin": 2657,
+      "extension": 5.34,
+      "arm_angle": 24.8,
+      "release_height": 5.45,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.98,
+        -0.12
+      ],
+      "locations_z": [
+        1.25,
+        2.58
+      ],
+      "locations_x_vs_r": [
+        0.98,
+        -0.12
+      ],
+      "locations_z_vs_r": [
+        1.25,
+        2.58
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

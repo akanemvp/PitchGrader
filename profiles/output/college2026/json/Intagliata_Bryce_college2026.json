@@ -1,0 +1,183 @@
+{
+  "player_name": "Intagliata, Bryce",
+  "season": "college2026",
+  "total_pitches": 5,
+  "p_throws": "L",
+  "arm_angle": 31.8,
+  "team": "UTT",
+  "pitcher_id": 840840,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 40.0,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 73.0,
+      "ivb": -3.4,
+      "hb": -12.4,
+      "vaa": -9.21,
+      "haa": -3.79,
+      "spin": 2434,
+      "extension": 6.26,
+      "arm_angle": 34.7,
+      "release_height": 5.74,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.72,
+        -0.48
+      ],
+      "locations_z": [
+        2.82,
+        1.1
+      ],
+      "locations_x_vs_r": [
+        0.72,
+        -0.48
+      ],
+      "locations_z_vs_r": [
+        2.82,
+        1.1
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 81.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.8,
+      "ivb": 12.1,
+      "hb": 8.6,
+      "vaa": -6.92,
+      "haa": -1.37,
+      "spin": 1964,
+      "extension": 6.3,
+      "arm_angle": 31.4,
+      "release_height": 5.53,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.46
+      ],
+      "locations_z": [
+        1.57
+      ],
+      "locations_x_vs_r": [
+        0.46
+      ],
+      "locations_z_vs_r": [
+        1.57
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 83.5,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.6,
+      "ivb": 12.8,
+      "hb": 5.6,
+      "vaa": -6.32,
+      "haa": -1.36,
+      "spin": 2034,
+      "extension": 6.31,
+      "arm_angle": 30.2,
+      "release_height": 5.47,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.86
+      ],
+      "locations_z": [
+        1.74
+      ],
+      "locations_x_vs_r": [
+        0.86
+      ],
+      "locations_z_vs_r": [
+        1.74
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 86.5,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 85.8,
+      "ivb": 13.8,
+      "hb": 2.6,
+      "vaa": -7.4,
+      "haa": -1.87,
+      "spin": 1907,
+      "extension": 6.26,
+      "arm_angle": 31.0,
+      "release_height": 5.51,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.54
+      ],
+      "locations_z": [
+        0.95
+      ],
+      "locations_x_vs_r": [
+        0.54
+      ],
+      "locations_z_vs_r": [
+        0.95
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

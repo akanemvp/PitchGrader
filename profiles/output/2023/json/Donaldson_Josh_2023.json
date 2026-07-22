@@ -1,0 +1,135 @@
+{
+  "player_name": "Donaldson, Josh",
+  "season": "2023",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 26.9,
+  "team": "NYY",
+  "pitcher_id": 518626,
+  "age": 38,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2023/Donaldson_Josh_2023.png",
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 8,
+      "n_vs_r": 6,
+      "n_vs_l": 2,
+      "usage_pct": 72.7,
+      "usage_pct_vs_r": 66.7,
+      "usage_pct_vs_l": 100.0,
+      "velo": 85.0,
+      "ivb": 12.1,
+      "hb": 6.1,
+      "vaa": -4.83,
+      "haa": 1.26,
+      "spin": 2011,
+      "extension": 5.84,
+      "arm_angle": 28.4,
+      "release_height": 5.44,
+      "spin_axis_clock": "1:28",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.511,
+      "locations_x": [
+        0.18,
+        -1.03,
+        -2.01,
+        0.63,
+        -0.18,
+        0.88,
+        -0.51,
+        -0.54
+      ],
+      "locations_z": [
+        3.63,
+        3.39,
+        4.83,
+        2.49,
+        2.38,
+        3.63,
+        2.76,
+        3.4
+      ],
+      "locations_x_vs_r": [
+        0.18,
+        -1.03,
+        -2.01,
+        0.63,
+        -0.51,
+        -0.54
+      ],
+      "locations_z_vs_r": [
+        3.63,
+        3.39,
+        4.83,
+        2.49,
+        2.76,
+        3.4
+      ],
+      "locations_x_vs_l": [
+        -0.18,
+        0.88
+      ],
+      "locations_z_vs_l": [
+        2.38,
+        3.63
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 27.3,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.3,
+      "ivb": 2.8,
+      "hb": 17.0,
+      "vaa": -8.2,
+      "haa": 1.46,
+      "spin": 2142,
+      "extension": 5.97,
+      "arm_angle": 25.4,
+      "release_height": 5.25,
+      "spin_axis_clock": "2:26",
+      "zone_pct": 0.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.33,
+      "locations_x": [
+        0.38,
+        1.46,
+        0.95
+      ],
+      "locations_z": [
+        0.35,
+        0.31,
+        2.59
+      ],
+      "locations_x_vs_r": [
+        0.38,
+        1.46,
+        0.95
+      ],
+      "locations_z_vs_r": [
+        0.35,
+        0.31,
+        2.59
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

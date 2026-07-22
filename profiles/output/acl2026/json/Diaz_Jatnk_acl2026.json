@@ -1,0 +1,334 @@
+{
+  "player_name": "Diaz, Jatnk",
+  "season": "acl2026",
+  "total_pitches": 31,
+  "p_throws": "R",
+  "arm_angle": 45.5,
+  "team": "F-TIG",
+  "pitcher_id": 813891,
+  "age": null,
+  "ip_str": "2.0",
+  "era": 9.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 77.6,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 17,
+      "n_vs_r": 13,
+      "n_vs_l": 4,
+      "usage_pct": 54.8,
+      "usage_pct_vs_r": 59.1,
+      "usage_pct_vs_l": 44.4,
+      "velo": 92.3,
+      "ivb": 14.6,
+      "hb": 5.7,
+      "vaa": -5.71,
+      "haa": 0.41,
+      "spin": 2210,
+      "extension": 6.43,
+      "arm_angle": 47.5,
+      "release_height": 5.93,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 76.5,
+      "chase_pct": 50.0,
+      "whiff_pct": 9.1,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.48,
+        0.53,
+        -0.72,
+        -0.51,
+        -1.63,
+        -0.45,
+        -0.48,
+        0.56,
+        -0.83,
+        -0.21,
+        0.07,
+        -0.08,
+        -0.04,
+        0.1,
+        0.58,
+        0.37,
+        0.58
+      ],
+      "locations_z": [
+        4.66,
+        2.33,
+        2.05,
+        2.04,
+        3.23,
+        2.53,
+        2.24,
+        1.08,
+        1.5,
+        2.52,
+        2.15,
+        3.21,
+        2.05,
+        2.13,
+        2.28,
+        1.67,
+        2.37
+      ],
+      "locations_x_vs_r": [
+        -1.48,
+        0.53,
+        -0.72,
+        -0.51,
+        -1.63,
+        -0.48,
+        0.56,
+        -0.83,
+        -0.21,
+        0.07,
+        -0.08,
+        -0.04,
+        0.58
+      ],
+      "locations_z_vs_r": [
+        4.66,
+        2.33,
+        2.05,
+        2.04,
+        3.23,
+        2.24,
+        1.08,
+        1.5,
+        2.52,
+        2.15,
+        3.21,
+        2.05,
+        2.37
+      ],
+      "locations_x_vs_l": [
+        -0.45,
+        0.1,
+        0.58,
+        0.37
+      ],
+      "locations_z_vs_l": [
+        2.53,
+        2.13,
+        2.28,
+        1.67
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 100.7,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 3,
+      "n_vs_l": 2,
+      "usage_pct": 16.1,
+      "usage_pct_vs_r": 13.6,
+      "usage_pct_vs_l": 22.2,
+      "velo": 79.9,
+      "ivb": 8.4,
+      "hb": -11.5,
+      "vaa": -5.94,
+      "haa": 0.74,
+      "spin": 2254,
+      "extension": 6.13,
+      "arm_angle": 43.2,
+      "release_height": 5.9,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 80.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.32,
+        0.11,
+        -0.5,
+        1.87,
+        0.43
+      ],
+      "locations_z": [
+        2.89,
+        3.47,
+        2.95,
+        6.37,
+        1.55
+      ],
+      "locations_x_vs_r": [
+        -0.32,
+        -0.5,
+        1.87
+      ],
+      "locations_z_vs_r": [
+        2.89,
+        2.95,
+        6.37
+      ],
+      "locations_x_vs_l": [
+        0.11,
+        0.43
+      ],
+      "locations_z_vs_l": [
+        3.47,
+        1.55
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 100.9,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 3,
+      "n_vs_l": 1,
+      "usage_pct": 12.9,
+      "usage_pct_vs_r": 13.6,
+      "usage_pct_vs_l": 11.1,
+      "velo": 87.7,
+      "ivb": 13.8,
+      "hb": -14.3,
+      "vaa": -5.51,
+      "haa": -0.08,
+      "spin": 2183,
+      "extension": 6.33,
+      "arm_angle": 49.2,
+      "release_height": 5.91,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 75.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.55,
+        0.39,
+        0.66,
+        0.06
+      ],
+      "locations_z": [
+        2.75,
+        2.73,
+        3.89,
+        2.02
+      ],
+      "locations_x_vs_r": [
+        0.39,
+        0.66,
+        0.06
+      ],
+      "locations_z_vs_r": [
+        2.73,
+        3.89,
+        2.02
+      ],
+      "locations_x_vs_l": [
+        0.55
+      ],
+      "locations_z_vs_l": [
+        2.75
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 96.4,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 9.7,
+      "usage_pct_vs_r": 9.1,
+      "usage_pct_vs_l": 11.1,
+      "velo": 78.0,
+      "ivb": 0.6,
+      "hb": -16.2,
+      "vaa": -6.59,
+      "haa": 1.53,
+      "spin": 2331,
+      "extension": 6.17,
+      "arm_angle": 44.4,
+      "release_height": 5.98,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        2.24,
+        0.27,
+        -3.07
+      ],
+      "locations_z": [
+        2.95,
+        3.69,
+        4.56
+      ],
+      "locations_x_vs_r": [
+        0.27,
+        -3.07
+      ],
+      "locations_z_vs_r": [
+        3.69,
+        4.56
+      ],
+      "locations_x_vs_l": [
+        2.24
+      ],
+      "locations_z_vs_l": [
+        2.95
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 94.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 6.5,
+      "usage_pct_vs_r": 4.5,
+      "usage_pct_vs_l": 11.1,
+      "velo": 83.3,
+      "ivb": 8.4,
+      "hb": 15.0,
+      "vaa": -6.83,
+      "haa": -0.72,
+      "spin": 1854,
+      "extension": 6.48,
+      "arm_angle": 43.2,
+      "release_height": 5.79,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -2.44,
+        0.53
+      ],
+      "locations_z": [
+        2.92,
+        1.68
+      ],
+      "locations_x_vs_r": [
+        -2.44
+      ],
+      "locations_z_vs_r": [
+        2.92
+      ],
+      "locations_x_vs_l": [
+        0.53
+      ],
+      "locations_z_vs_l": [
+        1.68
+      ]
+    }
+  ]
+}

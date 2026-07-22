@@ -1,0 +1,56 @@
+{
+  "player_name": "Porter, Logan",
+  "season": "aaa2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 33.1,
+  "team": "SAC",
+  "pitcher_id": 682515,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 18.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 70.0,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 77.1,
+      "ivb": 12.7,
+      "hb": 10.6,
+      "vaa": -5.01,
+      "haa": 0.94,
+      "spin": 1796,
+      "extension": 5.14,
+      "arm_angle": 33.1,
+      "release_height": 5.87,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.42
+      ],
+      "locations_z": [
+        4.13
+      ],
+      "locations_x_vs_r": [
+        0.42
+      ],
+      "locations_z_vs_r": [
+        4.13
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

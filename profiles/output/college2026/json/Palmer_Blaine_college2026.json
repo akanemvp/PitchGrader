@@ -1,0 +1,150 @@
+{
+  "player_name": "Palmer, Blaine",
+  "season": "college2026",
+  "total_pitches": 6,
+  "p_throws": "R",
+  "arm_angle": 39.2,
+  "team": "ACU",
+  "pitcher_id": 809493,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 89.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 76.8,
+      "ivb": -10.3,
+      "hb": -9.1,
+      "vaa": -9.95,
+      "haa": 3.17,
+      "spin": 2578,
+      "extension": 5.61,
+      "arm_angle": 43.0,
+      "release_height": 6.05,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.75,
+        -0.93,
+        1.46
+      ],
+      "locations_z": [
+        2.31,
+        4.41,
+        -0.86
+      ],
+      "locations_x_vs_r": [
+        0.75,
+        -0.93,
+        1.46
+      ],
+      "locations_z_vs_r": [
+        2.31,
+        4.41,
+        -0.86
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 81.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 90.4,
+      "ivb": 14.1,
+      "hb": 11.8,
+      "vaa": -5.01,
+      "haa": 1.97,
+      "spin": 2305,
+      "extension": 5.91,
+      "arm_angle": 34.0,
+      "release_height": 5.66,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.96,
+        0.88
+      ],
+      "locations_z": [
+        2.08,
+        3.63
+      ],
+      "locations_x_vs_r": [
+        0.96,
+        0.88
+      ],
+      "locations_z_vs_r": [
+        2.08,
+        3.63
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.8,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 16.7,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 90.3,
+      "ivb": 17.4,
+      "hb": 10.6,
+      "vaa": -6.38,
+      "haa": 2.78,
+      "spin": 2302,
+      "extension": 5.9,
+      "arm_angle": 40.7,
+      "release_height": 5.69,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.99
+      ],
+      "locations_z": [
+        1.48
+      ],
+      "locations_x_vs_r": [
+        1.99
+      ],
+      "locations_z_vs_r": [
+        1.48
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

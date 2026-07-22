@@ -1,0 +1,60 @@
+{
+  "player_name": "Morgan, Walker",
+  "season": "college2026",
+  "total_pitches": 2,
+  "p_throws": "R",
+  "arm_angle": 38.7,
+  "team": "CLT",
+  "pitcher_id": 839414,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 96.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.6,
+      "ivb": 5.9,
+      "hb": 16.4,
+      "vaa": -6.37,
+      "haa": 1.21,
+      "spin": 2004,
+      "extension": 6.68,
+      "arm_angle": 38.7,
+      "release_height": 5.8,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.32,
+        0.23
+      ],
+      "locations_z": [
+        3.4,
+        2.51
+      ],
+      "locations_x_vs_r": [
+        -1.32,
+        0.23
+      ],
+      "locations_z_vs_r": [
+        3.4,
+        2.51
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

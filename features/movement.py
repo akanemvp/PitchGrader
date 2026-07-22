@@ -277,109 +277,64 @@ def compute_baselines(
     #
     # Coefficients are stored as columns in the baselines DataFrame so that
     # merge_deviations() can apply them at inference time without refitting.
+    # --- Approach-angle regressions (NO pitch-type grouping) ---
+    # VAA_hat = b0 + b1*plate_z + b2*plate_z^2 + b3*plate_x + b4*release_speed
+    #              + b5*(plate_z*release_speed)   -- ONE global fit (vertical
+    #   approach is handedness-symmetric, so R/L are pooled).
+    # HAA_hat = b0 + b1*plate_x + b2*plate_x^2 + b3*plate_z + b4*release_speed
+    #   -- fit PER p_throws only (horizontal approach flips by throwing hand).
+    # Neither uses release point / arm slot / extension, so flat approach from a
+    # low slot or big extension survives in the residual.
+
+    # LOCATION-ONLY adjustment: remove ONLY the relevant location axis from each angle
+    # (plate_z for VAA, plate_x for HAA). Velocity, release point, arm slot, extension —
+    # all survive in the residual. So vaa_adj/haa_adj = approach angle with just the
+    # location effect stripped out.
+    def _fit_vaa(sub_df):
+        out = {"vaa_slope": 0.0, "vaa_slope_pz2": 0.0, "vaa_slope_px": 0.0,
+               "vaa_slope_velo": 0.0, "vaa_slope_pz_velo": 0.0, "vaa_intercept": 0.0}
+        req = ["vaa", "plate_z"]
+        if all(c in sub_df.columns for c in req):
+            s = sub_df.dropna(subset=req)
+            if len(s) >= 50:
+                pz = s["plate_z"].values
+                X = np.column_stack([pz, np.ones(len(s))])
+                c, *_ = np.linalg.lstsq(X, s["vaa"].values, rcond=None)
+                out.update(vaa_slope=float(c[0]), vaa_intercept=float(c[1]))
+        return out
+
+    def _fit_haa(sub_df):
+        out = {"haa_slope_px": 0.0, "haa_slope_px2": 0.0, "haa_slope_pz": 0.0,
+               "haa_slope_velo": 0.0, "haa_intercept": 0.0}
+        req = ["haa", "plate_x"]
+        if all(c in sub_df.columns for c in req):
+            s = sub_df.dropna(subset=req)
+            if len(s) >= 50:
+                px = s["plate_x"].values
+                X = np.column_stack([px, np.ones(len(s))])
+                c, *_ = np.linalg.lstsq(X, s["haa"].values, rcond=None)
+                out.update(haa_slope_px=float(c[0]), haa_intercept=float(c[1]))
+        return out
+
+    _vaa_coefs = _fit_vaa(df)                                  # one global VAA fit
+    _haa_by_hand = {th: _fit_haa(g) for th, g in df.groupby("p_throws")}  # HAA per hand
+    _default_haa = _fit_haa(df)
+
     aa_coef_rows = []
     for keys, grp in df.groupby(["pitch_type", "p_throws"]):
         pt, throws = keys
-        row = {
-            "pitch_type": pt,
-            "p_throws":   throws,
-            "vaa_slope":      0.0,  # plate_z
-            "vaa_slope_px":   0.0,  # plate_x
-            "vaa_slope_rz":   0.0,  # release_pos_z
-            "vaa_slope_rx":   0.0,  # release_pos_x
-            "vaa_slope_arm":  0.0,  # arm_angle
-            "vaa_slope_velo": 0.0,  # release_speed
-            "vaa_slope_ext":  0.0,  # release_extension
-            "vaa_intercept":  0.0,
-            "haa_slope_px":   0.0,  # plate_x
-            "haa_slope_pz":   0.0,  # plate_z
-            "haa_slope_rx":   0.0,  # release_pos_x
-            "haa_slope_rz":   0.0,  # release_pos_z
-            "haa_slope_velo": 0.0,  # release_speed
-            "haa_slope_ext":  0.0,  # release_extension
-            "haa_intercept":  0.0,
-        }
-
-        # VAA ~ plate_z + plate_x + release_pos_z + release_pos_x + arm_angle + release_speed + release_extension
-        # Controls for: pitch location (both axes), full release point, arm slot, velocity, extension.
-        # Residual (vaa_adj) captures genuine carry quality independent of all physical confounders.
-        required_vaa = ["vaa", "plate_z", "plate_x", "release_pos_z", "release_pos_x",
-                        "arm_angle", "release_speed", "release_extension"]
-        if all(c in grp.columns for c in required_vaa):
-            sub = grp.dropna(subset=required_vaa)
-            if len(sub) >= 50:
-                X = np.column_stack([
-                    sub["plate_z"].values,
-                    sub["plate_x"].values,
-                    sub["release_pos_z"].values,
-                    sub["release_pos_x"].values,
-                    sub["arm_angle"].values,
-                    sub["release_speed"].values,
-                    sub["release_extension"].values,
-                    np.ones(len(sub)),
-                ])
-                coefs, *_ = np.linalg.lstsq(X, sub["vaa"].values, rcond=None)
-                row["vaa_slope"]      = float(coefs[0])   # plate_z
-                row["vaa_slope_px"]   = float(coefs[1])   # plate_x
-                row["vaa_slope_rz"]   = float(coefs[2])   # release_pos_z
-                row["vaa_slope_rx"]   = float(coefs[3])   # release_pos_x
-                row["vaa_slope_arm"]  = float(coefs[4])
-                row["vaa_slope_velo"] = float(coefs[5])
-                row["vaa_slope_ext"]  = float(coefs[6])
-                row["vaa_intercept"]  = float(coefs[7])
-        elif "vaa" in grp.columns and "plate_z" in grp.columns:
-            sub = grp.dropna(subset=["vaa", "plate_z"])
-            if len(sub) >= 50:
-                c = np.polyfit(sub["plate_z"].values, sub["vaa"].values, 1)
-                row["vaa_slope"]     = float(c[0])
-                row["vaa_intercept"] = float(c[1])
-
-        # HAA ~ plate_x + plate_z + release_pos_x + release_pos_z + release_speed + release_extension
-        # Controls for: pitch location (both axes), full release point, velocity, extension.
-        required_haa = ["haa", "plate_x", "plate_z", "release_pos_x", "release_pos_z",
-                        "release_speed", "release_extension"]
-        if all(c in grp.columns for c in required_haa):
-            sub = grp.dropna(subset=required_haa)
-            if len(sub) >= 50:
-                X = np.column_stack([
-                    sub["plate_x"].values,
-                    sub["plate_z"].values,
-                    sub["release_pos_x"].values,
-                    sub["release_pos_z"].values,
-                    sub["release_speed"].values,
-                    sub["release_extension"].values,
-                    np.ones(len(sub)),
-                ])
-                coefs, *_ = np.linalg.lstsq(X, sub["haa"].values, rcond=None)
-                row["haa_slope_px"]   = float(coefs[0])   # plate_x
-                row["haa_slope_pz"]   = float(coefs[1])   # plate_z
-                row["haa_slope_rx"]   = float(coefs[2])   # release_pos_x
-                row["haa_slope_rz"]   = float(coefs[3])   # release_pos_z
-                row["haa_slope_velo"] = float(coefs[4])
-                row["haa_slope_ext"]  = float(coefs[5])
-                row["haa_intercept"]  = float(coefs[6])
-        elif "haa" in grp.columns and "plate_x" in grp.columns and "release_pos_x" in grp.columns:
-            sub = grp.dropna(subset=["haa", "plate_x", "release_pos_x"])
-            if len(sub) >= 50:
-                X = np.column_stack([
-                    sub["plate_x"].values,
-                    sub["release_pos_x"].values,
-                    np.ones(len(sub)),
-                ])
-                coefs, *_ = np.linalg.lstsq(X, sub["haa"].values, rcond=None)
-                row["haa_slope_px"]  = float(coefs[0])
-                row["haa_slope_rx"]  = float(coefs[1])
-                row["haa_intercept"] = float(coefs[2])
-
+        row = {"pitch_type": pt, "p_throws": throws}
+        row.update(_vaa_coefs)                                 # same VAA coefs everywhere
+        row.update(_haa_by_hand.get(throws, _default_haa))     # HAA coefs by handedness
         aa_coef_rows.append(row)
 
     if aa_coef_rows:
         aa_df = pd.DataFrame(aa_coef_rows)
         agg = agg.merge(aa_df, on=["pitch_type", "p_throws"], how="left")
-        for col in ["vaa_slope", "vaa_slope_px", "vaa_slope_rz", "vaa_slope_rx",
-                    "vaa_slope_arm", "vaa_slope_velo", "vaa_slope_ext", "vaa_intercept",
-                    "haa_slope_px", "haa_slope_pz", "haa_slope_rx", "haa_slope_rz",
-                    "haa_slope_velo", "haa_slope_ext", "haa_intercept"]:
+        for col in ["vaa_slope", "vaa_slope_pz2", "vaa_slope_px", "vaa_slope_velo",
+                    "vaa_slope_pz_velo", "vaa_intercept",
+                    "haa_slope_px", "haa_slope_px2", "haa_slope_pz", "haa_slope_velo",
+                    "haa_intercept"]:
             agg[col] = agg[col].fillna(0.0)
         logger.info("Approach angle regression coefficients stored in baselines.")
 
@@ -544,107 +499,60 @@ def compute_baselines(
     # Stored in baselines at pitch_type × p_throws level (arm_angle_bin not needed:
     # spin_axis already accounts for slot; model merges via arm_angle_bin but
     # coefficients broadcast uniformly via the merge fill).
-    ssw_rows = []
-    for (pt, throws), grp in df.groupby(["pitch_type", "p_throws"]):
+    # Global per-handedness fit (NOT per pitch type) so that pitch-type-typical
+    # SSW (sinker arm-side run, splitter drop, etc.) shows up as real signal
+    # in the residual instead of being absorbed into pitch-type-specific coefs.
+    #
+    # Targets are RAW accelerations: az (raw vertical, gravity-included, ft/s²)
+    # and ax × throw_sign (arm-side-signed horizontal, ft/s²).  Intercept INCLUDED
+    # in the vertical fit so it absorbs the constant gravity offset (-32.174);
+    # the residual is then pure aerodynamic SSW.  Acceleration targets are
+    # velocity- and extension-independent (unlike time-integrated pfx_*).
+    ssw_global_rows = []
+    for hand, hand_df in df.groupby("p_throws"):
         row = {
-            "pitch_type":     pt,
-            "p_throws":       throws,
-            "ssw_z_coef_cos": 0.0,
-            "ssw_z_coef_sin": 0.0,
-            "ssw_x_coef_cos": 0.0,
-            "ssw_x_coef_sin": 0.0,
-            "ssw_z_std":      1.0,
-            "ssw_x_std":      1.0,
+            "p_throws":         hand,
+            "ssw_z_global_cos": 0.0,
+            "ssw_z_global_sin": 0.0,
+            "ssw_z_global_int": 0.0,
+            "ssw_x_global_cos": 0.0,
+            "ssw_x_global_sin": 0.0,
+            "ssw_x_global_int": 0.0,
         }
-        needed = ["spin_axis", "release_spin_rate", "pfx_z_in", "pfx_x_arm"]
-        if all(c in grp.columns for c in needed):
-            sub = grp.dropna(subset=needed)
-            if len(sub) >= 50:
+        needed = ["spin_axis", "release_spin_rate", "az", "ax"]
+        if all(c in hand_df.columns for c in needed):
+            sub = hand_df.dropna(subset=needed)
+            if len(sub) >= 500:
                 sa_rad = np.radians(sub["spin_axis"].values)
-                # Use active_spin_rate (Magnus-generating component only) so the
-                # regression reflects true seam-shifted wake, not gyro contamination.
-                # Falls back to release_spin_rate if active_spin_rate unavailable.
                 sr_vals = (
                     sub["active_spin_rate"].values
                     if "active_spin_rate" in sub.columns
                     else sub["release_spin_rate"].values
                 )
+                throw_sign = np.where(sub["p_throws"].values == "R", 1.0, -1.0)
+                ax_arm = sub["ax"].values * throw_sign
                 X = np.column_stack([
                     sr_vals * np.cos(sa_rad),
                     sr_vals * np.sin(sa_rad),
+                    np.ones(len(sub)),
                 ])
-                bz, _, _, _ = np.linalg.lstsq(X, sub["pfx_z_in"].values, rcond=None)
-                bx, _, _, _ = np.linalg.lstsq(X, sub["pfx_x_arm"].values, rcond=None)
-                resid_z = sub["pfx_z_in"].values - X @ bz
-                resid_x = sub["pfx_x_arm"].values - X @ bx
-                row["ssw_z_coef_cos"] = float(bz[0])
-                row["ssw_z_coef_sin"] = float(bz[1])
-                row["ssw_x_coef_cos"] = float(bx[0])
-                row["ssw_x_coef_sin"] = float(bx[1])
-                row["ssw_z_std"] = max(float(resid_z.std()), 0.1)
-                row["ssw_x_std"] = max(float(resid_x.std()), 0.1)
-        ssw_rows.append(row)
+                bz, _, _, _ = np.linalg.lstsq(X, sub["az"].values, rcond=None)
+                bx, _, _, _ = np.linalg.lstsq(X, ax_arm, rcond=None)
+                row["ssw_z_global_cos"] = float(bz[0])
+                row["ssw_z_global_sin"] = float(bz[1])
+                row["ssw_z_global_int"] = float(bz[2])
+                row["ssw_x_global_cos"] = float(bx[0])
+                row["ssw_x_global_sin"] = float(bx[1])
+                row["ssw_x_global_int"] = float(bx[2])
+        ssw_global_rows.append(row)
 
-    if ssw_rows:
-        ssw_df = pd.DataFrame(ssw_rows)
-        agg = agg.merge(ssw_df, on=["pitch_type", "p_throws"], how="left")
-        for col in ["ssw_z_coef_cos", "ssw_z_coef_sin", "ssw_x_coef_cos",
-                    "ssw_x_coef_sin", "ssw_z_std", "ssw_x_std"]:
+    if ssw_global_rows:
+        ssw_global_df = pd.DataFrame(ssw_global_rows)
+        agg = agg.merge(ssw_global_df, on=["p_throws"], how="left")
+        for col in ["ssw_z_global_cos", "ssw_z_global_sin", "ssw_z_global_int",
+                    "ssw_x_global_cos", "ssw_x_global_sin", "ssw_x_global_int"]:
             agg[col] = agg[col].fillna(0.0)
-        agg["ssw_z_std"] = agg["ssw_z_std"].clip(lower=0.1)
-        agg["ssw_x_std"] = agg["ssw_x_std"].clip(lower=0.1)
-        logger.info("SSW (spin-movement residual) coefficients stored in baselines.")
-
-    # ── SSW arm-slot bucket normalization ─────────────────────────────────
-    # Apply SSW coefficients to training data to compute raw residuals, then
-    # compute per-(pitch_type × p_throws × arm_angle_bin) mean and std.
-    # This makes ssw_pfx_z/x "Gray's sweeper SSW vs other sweepers at his arm
-    # slot" rather than vs all sweepers globally — same logic as hb_adj/ivb_adj.
-    if ssw_rows and "arm_angle_bin" in df.columns:
-        ssw_coef_map = {(r["pitch_type"], r["p_throws"]): r for r in ssw_rows}
-        ssw_norm_rows = []
-        for (pt, throws), grp in df.groupby(["pitch_type", "p_throws"]):
-            coef = ssw_coef_map.get((pt, throws))
-            if coef is None:
-                continue
-            needed = ["spin_axis", "release_spin_rate", "pfx_z_in", "pfx_x_arm", "arm_angle_bin"]
-            sub = grp.dropna(subset=["spin_axis", "release_spin_rate", "pfx_z_in", "pfx_x_arm"])
-            sub = sub[sub["arm_angle_bin"].notna()]
-            if len(sub) == 0:
-                continue
-            sa_rad = np.radians(sub["spin_axis"].values)
-            sr_vals = (
-                sub["active_spin_rate"].values
-                if "active_spin_rate" in sub.columns
-                else sub["release_spin_rate"].values
-            )
-            magnus_z = coef["ssw_z_coef_cos"] * sr_vals * np.cos(sa_rad) + coef["ssw_z_coef_sin"] * sr_vals * np.sin(sa_rad)
-            magnus_x = coef["ssw_x_coef_cos"] * sr_vals * np.cos(sa_rad) + coef["ssw_x_coef_sin"] * sr_vals * np.sin(sa_rad)
-            raw_z = sub["pfx_z_in"].values - magnus_z
-            raw_x = sub["pfx_x_arm"].values - magnus_x
-            temp = pd.DataFrame({
-                "arm_angle_bin": sub["arm_angle_bin"].values,
-                "ssw_z": raw_z,
-                "ssw_x": raw_x,
-            })
-            for bin_val, bin_grp in temp.groupby("arm_angle_bin"):
-                ssw_norm_rows.append({
-                    "pitch_type":    pt,
-                    "p_throws":      throws,
-                    "arm_angle_bin": bin_val,
-                    "ssw_z_mean_bin": float(bin_grp["ssw_z"].mean()),
-                    "ssw_z_std_bin":  max(float(bin_grp["ssw_z"].std(ddof=1)) if len(bin_grp) > 1 else 1.0, 0.1),
-                    "ssw_x_mean_bin": float(bin_grp["ssw_x"].mean()),
-                    "ssw_x_std_bin":  max(float(bin_grp["ssw_x"].std(ddof=1)) if len(bin_grp) > 1 else 1.0, 0.1),
-                })
-        if ssw_norm_rows:
-            ssw_norm_df = pd.DataFrame(ssw_norm_rows)
-            agg = agg.merge(ssw_norm_df, on=["pitch_type", "p_throws", "arm_angle_bin"], how="left")
-            agg["ssw_z_mean_bin"] = agg["ssw_z_mean_bin"].fillna(0.0)
-            agg["ssw_x_mean_bin"] = agg["ssw_x_mean_bin"].fillna(0.0)
-            agg["ssw_z_std_bin"]  = agg["ssw_z_std_bin"].fillna(1.0).clip(lower=0.1)
-            agg["ssw_x_std_bin"]  = agg["ssw_x_std_bin"].fillna(1.0).clip(lower=0.1)
-            logger.info("SSW arm-slot bucket normalization stored in baselines.")
+        logger.info("SSW global Magnus coefficients (raw az/ax_arm, per handedness, with intercept) stored in baselines.")
 
     # ── FF IVB regression (arm_angle + release_height → expected IVB) ────
     ff_ivb_coefs = fit_ff_ivb_model(df)
@@ -735,35 +643,28 @@ def merge_deviations(
 
     # ── Adjusted approach angles ──────────────────────────────────────────
     # Apply regression coefficients stored during compute_baselines().
-    # vaa_adj = vaa - (slope_pz × plate_z + slope_rz × release_pos_z + intercept):
-    #   removes both pitch-height confound AND release-height confound (Gaeckle).
-    #   Residual captures genuine carry quality independent of slot geometry.
-    # haa_adj = haa - (slope_px × plate_x + slope_rx × release_pos_x + intercept):
-    #   removes horizontal location and release-point confound.
+    # vaa_adj = residual after removing: pitch location, release point, arm slot,
+    #   velocity, extension, AND az/ax/ay (in-flight accelerations).
+    # Regressing out az/ax/ay is critical: without it, the model simultaneously
+    # rewards lift (az) and penalizes the flat plate arrival that lift causes
+    # (e.g. Pérez sweeper). The residual now captures approach quality beyond
+    # what the pitch's own physics predict.
     # Falls back to raw vaa / haa if coefficients weren't stored (old baselines).
     if "vaa_slope" in merged.columns and "vaa" in merged.columns and "plate_z" in merged.columns:
-        plate_z       = merged["plate_z"].fillna(merged["plate_z"].median())
-        release_pos_z = merged["release_pos_z"].fillna(merged["release_pos_z"].median()) \
-            if "release_pos_z" in merged.columns else pd.Series(0.0, index=merged.index)
         def _get(col): return merged[col] if col in merged.columns else pd.Series(0.0, index=merged.index)
+        plate_z       = merged["plate_z"].fillna(merged["plate_z"].median())
         plate_x_v     = merged["plate_x"].fillna(0.0) if "plate_x" in merged.columns else pd.Series(0.0, index=merged.index)
-        release_pos_x_v = merged["release_pos_x"].fillna(merged["release_pos_x"].median()) \
-            if "release_pos_x" in merged.columns else pd.Series(0.0, index=merged.index)
-        arm_angle_val = merged["arm_angle"].fillna(merged["arm_angle"].median()) \
-            if "arm_angle" in merged.columns else pd.Series(0.0, index=merged.index)
         release_speed = merged["release_speed"].fillna(merged["release_speed"].median()) \
             if "release_speed" in merged.columns else pd.Series(0.0, index=merged.index)
-        release_ext   = merged["release_extension"].fillna(merged["release_extension"].median()) \
-            if "release_extension" in merged.columns else pd.Series(0.0, index=merged.index)
+        # VAAx = VAA_actual − VAA_hat, where
+        # VAA_hat = b0 + b1*plate_z + b2*plate_z^2 + b3*plate_x + b4*release_speed + b5*(plate_z*release_speed)
         merged["vaa_adj"] = (
             merged["vaa"]
-            - merged["vaa_slope"]      * plate_z
-            - _get("vaa_slope_px")     * plate_x_v
-            - _get("vaa_slope_rz")     * release_pos_z
-            - _get("vaa_slope_rx")     * release_pos_x_v
-            - _get("vaa_slope_arm")    * arm_angle_val
-            - _get("vaa_slope_velo")   * release_speed
-            - _get("vaa_slope_ext")    * release_ext
+            - merged["vaa_slope"]        * plate_z
+            - _get("vaa_slope_pz2")      * plate_z ** 2
+            - _get("vaa_slope_px")       * plate_x_v
+            - _get("vaa_slope_velo")     * release_speed
+            - _get("vaa_slope_pz_velo")  * (plate_z * release_speed)
             - merged["vaa_intercept"]
         )
     else:
@@ -773,17 +674,18 @@ def merge_deviations(
         "haa_slope_px" in merged.columns
         and "haa" in merged.columns
         and "plate_x" in merged.columns
-        and "release_pos_x" in merged.columns
     ):
+        # Handedness matters for HAA: coefficients are fit separately per p_throws,
+        # and the residual is sign-flipped to be arm-side-relative across R/L.
         _throw_sign = merged["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0)
+        # HAAx = HAA_actual − HAA_hat, where
+        # HAA_hat = b0 + b1*plate_x + b2*plate_x^2 + b3*plate_z + b4*release_speed
         merged["haa_adj"] = (
             merged["haa"]
             - _get("haa_slope_px")   * plate_x_v
+            - _get("haa_slope_px2")  * plate_x_v ** 2
             - _get("haa_slope_pz")   * plate_z
-            - _get("haa_slope_rx")   * release_pos_x_v
-            - _get("haa_slope_rz")   * release_pos_z
             - _get("haa_slope_velo") * release_speed
-            - _get("haa_slope_ext")  * release_ext
             - merged["haa_intercept"]
         ) * _throw_sign
     else:
@@ -871,25 +773,24 @@ def merge_deviations(
     else:
         merged["hb_adj"] = merged.get("hb_z", pd.Series(np.nan, index=merged.index))
 
-    # ── True Seam-Shifted Wake (SSW) residuals ────────────────────────────
-    # The Magnus force predicts movement from spin_rate × trig(spin_axis).
-    # The OLS coefficients fitted in compute_baselines give the best-fit
-    # Magnus prediction per pitch_type × p_throws group.
-    # Residual = actual movement − Magnus prediction = seam-shifted wake.
+    # ── True Seam-Shifted Wake (SSW) residuals — raw accel (ft/s²) ────────
+    # Single global Magnus model per handedness (fit across all pitch types) on
+    # RAW az (gravity-included) and arm-side-signed ax. Intercept in the fit
+    # absorbs the constant gravity offset, so the residual is pure aerodynamic
+    # SSW.  Pitch-type-typical seam effects show up as real signal.
     #
-    #   ssw_pfx_z:     vertical SSW  (positive = more rise than spin predicts)
-    #   ssw_pfx_x_arm: horizontal SSW arm-side (positive = more arm-side fade)
-    #
-    # Requires spin_axis (Hawkeye, 2020+).  Falls back to 0.0 if missing.
-    ssw_coef_cols = ["ssw_z_coef_cos", "ssw_z_coef_sin",
-                     "ssw_x_coef_cos", "ssw_x_coef_sin"]
+    #   ssw_pfx_z:     vertical SSW (ft/s²)  (+ = more rise force than spin predicts)
+    #   ssw_pfx_x_arm: horizontal SSW (ft/s²) arm-side (+ = more fade force)
+    ssw_coef_cols = ["ssw_z_global_cos", "ssw_z_global_sin", "ssw_z_global_int",
+                     "ssw_x_global_cos", "ssw_x_global_sin", "ssw_x_global_int"]
     have_coefs = all(c in merged.columns for c in ssw_coef_cols)
     have_spin  = ("spin_axis" in merged.columns and
                   "release_spin_rate" in merged.columns)
+    have_raw   = ("az" in merged.columns and "ax" in merged.columns and
+                  "p_throws" in merged.columns)
 
-    if have_coefs and have_spin:
+    if have_coefs and have_spin and have_raw:
         sa_rad = np.radians(merged["spin_axis"].fillna(0.0))
-        # Use active_spin_rate so SSW reflects seam effects only, not gyro component
         sr = (
             merged["active_spin_rate"].fillna(0.0)
             if "active_spin_rate" in merged.columns
@@ -897,28 +798,18 @@ def merge_deviations(
         )
         spin_cos = sr * np.cos(sa_rad)
         spin_sin = sr * np.sin(sa_rad)
+        throw_sign = np.where(merged["p_throws"].values == "R", 1.0, -1.0)
+        ax_arm = merged["ax"].fillna(0.0).values * throw_sign
 
-        magnus_z = (merged["ssw_z_coef_cos"] * spin_cos
-                    + merged["ssw_z_coef_sin"] * spin_sin)
-        magnus_x = (merged["ssw_x_coef_cos"] * spin_cos
-                    + merged["ssw_x_coef_sin"] * spin_sin)
+        magnus_z = (merged["ssw_z_global_cos"] * spin_cos
+                    + merged["ssw_z_global_sin"] * spin_sin
+                    + merged["ssw_z_global_int"])
+        magnus_x = (merged["ssw_x_global_cos"] * spin_cos
+                    + merged["ssw_x_global_sin"] * spin_sin
+                    + merged["ssw_x_global_int"])
 
-        raw_ssw_z = merged["pfx_z_in"]  - magnus_z
-        raw_ssw_x = merged["pfx_x_arm"] - magnus_x
-
-        # Arm-slot bucket normalization: compare to peers at same pitch_type ×
-        # p_throws × arm_angle_bin so e.g. Gray's sweeper SSW is measured vs
-        # other sweepers at his arm slot, not all sweepers globally.
-        if "ssw_z_mean_bin" in merged.columns:
-            z_mean = merged["ssw_z_mean_bin"].fillna(0.0)
-            z_std  = merged["ssw_z_std_bin"].fillna(1.0).clip(lower=0.1)
-            x_mean = merged["ssw_x_mean_bin"].fillna(0.0)
-            x_std  = merged["ssw_x_std_bin"].fillna(1.0).clip(lower=0.1)
-            merged["ssw_pfx_z"]     = (raw_ssw_z - z_mean) / z_std
-            merged["ssw_pfx_x_arm"] = (raw_ssw_x - x_mean) / x_std
-        else:
-            merged["ssw_pfx_z"]     = raw_ssw_z
-            merged["ssw_pfx_x_arm"] = raw_ssw_x
+        merged["ssw_pfx_z"]     = merged["az"].fillna(0.0) - magnus_z
+        merged["ssw_pfx_x_arm"] = ax_arm - magnus_x
     else:
         merged["ssw_pfx_z"]     = 0.0
         merged["ssw_pfx_x_arm"] = 0.0

@@ -1,0 +1,168 @@
+{
+  "player_name": "Tracey, Taylor",
+  "season": "college2026",
+  "total_pitches": 10,
+  "p_throws": "L",
+  "arm_angle": 39.0,
+  "team": "UT",
+  "pitcher_id": 815625,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 91.2,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 5,
+      "n_vs_r": 4,
+      "n_vs_l": 1,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 44.4,
+      "usage_pct_vs_l": 100.0,
+      "velo": 90.7,
+      "ivb": 17.2,
+      "hb": 13.8,
+      "vaa": -4.63,
+      "haa": -0.09,
+      "spin": 2115,
+      "extension": 6.55,
+      "arm_angle": 43.7,
+      "release_height": 5.79,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 60.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.9,
+        0.39,
+        -0.11,
+        0.19,
+        -0.72
+      ],
+      "locations_z": [
+        2.82,
+        4.62,
+        2.01,
+        2.81,
+        3.23
+      ],
+      "locations_x_vs_r": [
+        0.39,
+        -0.11,
+        0.19,
+        -0.72
+      ],
+      "locations_z_vs_r": [
+        4.62,
+        2.01,
+        2.81,
+        3.23
+      ],
+      "locations_x_vs_l": [
+        0.9
+      ],
+      "locations_z_vs_l": [
+        2.82
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 85.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 40.0,
+      "usage_pct_vs_r": 44.4,
+      "usage_pct_vs_l": 0.0,
+      "velo": 76.5,
+      "ivb": 13.2,
+      "hb": 19.8,
+      "vaa": -6.54,
+      "haa": 0.88,
+      "spin": 1913,
+      "extension": 5.81,
+      "arm_angle": 36.5,
+      "release_height": 5.82,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 25.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.24,
+        3.16,
+        -1.5,
+        0.22
+      ],
+      "locations_z": [
+        3.8,
+        3.83,
+        1.25,
+        2.71
+      ],
+      "locations_x_vs_r": [
+        1.24,
+        3.16,
+        -1.5,
+        0.22
+      ],
+      "locations_z_vs_r": [
+        3.8,
+        3.83,
+        1.25,
+        2.71
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 94.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 10.0,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.9,
+      "ivb": 3.5,
+      "hb": -1.7,
+      "vaa": -7.07,
+      "haa": -3.48,
+      "spin": 2122,
+      "extension": 6.26,
+      "arm_angle": 36.7,
+      "release_height": 5.71,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.32
+      ],
+      "locations_z": [
+        2.68
+      ],
+      "locations_x_vs_r": [
+        -1.32
+      ],
+      "locations_z_vs_r": [
+        2.68
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

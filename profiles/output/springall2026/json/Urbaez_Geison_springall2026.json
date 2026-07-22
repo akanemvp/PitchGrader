@@ -1,0 +1,217 @@
+{
+  "player_name": "Urbaez, Geison",
+  "season": "springall2026",
+  "total_pitches": 13,
+  "p_throws": "R",
+  "arm_angle": 43.4,
+  "team": "TOR",
+  "pitcher_id": 696064,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 7,
+      "n_vs_r": 4,
+      "n_vs_l": 3,
+      "usage_pct": 53.8,
+      "usage_pct_vs_r": 44.4,
+      "usage_pct_vs_l": 75.0,
+      "velo": 87.2,
+      "ivb": 4.5,
+      "hb": 19.2,
+      "vaa": -7.36,
+      "haa": 0.26,
+      "spin": 2197,
+      "extension": 6.13,
+      "arm_angle": 43.3,
+      "release_height": 5.98,
+      "spin_axis_clock": "9:26",
+      "zone_pct": 57.1,
+      "chase_pct": 33.3,
+      "whiff_pct": 25.0,
+      "xwoba_contact": 0.121,
+      "locations_x": [
+        -0.41,
+        -0.34,
+        -0.19,
+        -1.41,
+        0.3,
+        -0.48,
+        -0.8
+      ],
+      "locations_z": [
+        1.99,
+        1.51,
+        2.5,
+        2.46,
+        1.52,
+        2.03,
+        2.06
+      ],
+      "locations_x_vs_r": [
+        -0.41,
+        -0.34,
+        -0.48,
+        -0.8
+      ],
+      "locations_z_vs_r": [
+        1.99,
+        1.51,
+        2.03,
+        2.06
+      ],
+      "locations_x_vs_l": [
+        -0.19,
+        -1.41,
+        0.3
+      ],
+      "locations_z_vs_l": [
+        2.5,
+        2.46,
+        1.52
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 105.9,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 30.8,
+      "usage_pct_vs_r": 44.4,
+      "usage_pct_vs_l": 0.0,
+      "velo": 95.3,
+      "ivb": 9.7,
+      "hb": 16.5,
+      "vaa": -6.47,
+      "haa": 0.82,
+      "spin": 2100,
+      "extension": 6.42,
+      "arm_angle": 46.6,
+      "release_height": 6.01,
+      "spin_axis_clock": "10:01",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.31,
+        0.01,
+        -2.18,
+        1.78
+      ],
+      "locations_z": [
+        2.15,
+        1.91,
+        2.84,
+        0.92
+      ],
+      "locations_x_vs_r": [
+        0.31,
+        0.01,
+        -2.18,
+        1.78
+      ],
+      "locations_z_vs_r": [
+        2.15,
+        1.91,
+        2.84,
+        0.92
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 96.9,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 7.7,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 25.0,
+      "velo": 87.3,
+      "ivb": 3.5,
+      "hb": 2.3,
+      "vaa": -7.39,
+      "haa": 3.01,
+      "spin": 2241,
+      "extension": 6.0,
+      "arm_angle": 42.7,
+      "release_height": 6.05,
+      "spin_axis_clock": "10:53",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.34
+      ],
+      "locations_z": [
+        2.12
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.34
+      ],
+      "locations_z_vs_l": [
+        2.12
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 99.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 7.7,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.1,
+      "ivb": 0.1,
+      "hb": -6.1,
+      "vaa": -7.15,
+      "haa": 2.08,
+      "spin": 2442,
+      "extension": 5.96,
+      "arm_angle": 40.9,
+      "release_height": 6.04,
+      "spin_axis_clock": "2:58",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.35
+      ],
+      "locations_z": [
+        2.79
+      ],
+      "locations_x_vs_r": [
+        -1.35
+      ],
+      "locations_z_vs_r": [
+        2.79
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "player_name": "Coleman, Javen",
+  "season": "fsl2026",
+  "total_pitches": 23,
+  "p_throws": "L",
+  "arm_angle": 31.7,
+  "team": "DUN",
+  "pitcher_id": 694495,
+  "age": null,
+  "ip_str": "1.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 123.0,
+      "grade": "70",
+      "color": "#00b4d8",
+      "n": 14,
+      "n_vs_r": 12,
+      "n_vs_l": 2,
+      "usage_pct": 60.9,
+      "usage_pct_vs_r": 63.2,
+      "usage_pct_vs_l": 50.0,
+      "velo": 93.0,
+      "ivb": 19.7,
+      "hb": 10.0,
+      "vaa": -4.25,
+      "haa": -1.89,
+      "spin": 2285,
+      "extension": 6.41,
+      "arm_angle": 31.1,
+      "release_height": 5.38,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 57.1,
+      "whiff_pct": 25.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.24,
+        -0.8,
+        -1.97,
+        -0.42,
+        -0.48,
+        0.94,
+        -0.73,
+        -0.67,
+        0.55,
+        0.37,
+        0.02,
+        1.57,
+        0.34,
+        0.85
+      ],
+      "locations_z": [
+        2.45,
+        2.94,
+        0.57,
+        1.62,
+        2.01,
+        3.7,
+        1.67,
+        3.49,
+        2.7,
+        2.51,
+        3.35,
+        3.92,
+        2.9,
+        3.38
+      ],
+      "locations_x_vs_r": [
+        -1.24,
+        -0.8,
+        -1.97,
+        0.94,
+        -0.73,
+        -0.67,
+        0.55,
+        0.37,
+        0.02,
+        1.57,
+        0.34,
+        0.85
+      ],
+      "locations_z_vs_r": [
+        2.45,
+        2.94,
+        0.57,
+        3.7,
+        1.67,
+        3.49,
+        2.7,
+        2.51,
+        3.35,
+        3.92,
+        2.9,
+        3.38
+      ],
+      "locations_x_vs_l": [
+        -0.42,
+        -0.48
+      ],
+      "locations_z_vs_l": [
+        1.62,
+        2.01
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 85.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 4,
+      "n_vs_l": 1,
+      "usage_pct": 21.7,
+      "usage_pct_vs_r": 21.1,
+      "usage_pct_vs_l": 25.0,
+      "velo": 83.1,
+      "ivb": 5.4,
+      "hb": 7.0,
+      "vaa": -7.57,
+      "haa": -1.38,
+      "spin": 1284,
+      "extension": 6.57,
+      "arm_angle": 34.4,
+      "release_height": 5.49,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 66.7,
+      "whiff_pct": 75.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.63,
+        0.13,
+        0.31,
+        0.26,
+        0.98
+      ],
+      "locations_z": [
+        1.11,
+        2.17,
+        2.14,
+        0.68,
+        1.77
+      ],
+      "locations_x_vs_r": [
+        0.63,
+        0.13,
+        0.31,
+        0.98
+      ],
+      "locations_z_vs_r": [
+        1.11,
+        2.17,
+        2.14,
+        1.77
+      ],
+      "locations_x_vs_l": [
+        0.26
+      ],
+      "locations_z_vs_l": [
+        0.68
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.8,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 3,
+      "n_vs_l": 1,
+      "usage_pct": 17.4,
+      "usage_pct_vs_r": 15.8,
+      "usage_pct_vs_l": 25.0,
+      "velo": 84.2,
+      "ivb": 3.9,
+      "hb": -4.6,
+      "vaa": -7.47,
+      "haa": -3.77,
+      "spin": 2442,
+      "extension": 6.41,
+      "arm_angle": 29.7,
+      "release_height": 5.35,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.84,
+        -1.18,
+        -0.23,
+        0.37
+      ],
+      "locations_z": [
+        1.22,
+        0.83,
+        2.03,
+        2.21
+      ],
+      "locations_x_vs_r": [
+        -0.84,
+        -0.23,
+        0.37
+      ],
+      "locations_z_vs_r": [
+        1.22,
+        2.03,
+        2.21
+      ],
+      "locations_x_vs_l": [
+        -1.18
+      ],
+      "locations_z_vs_l": [
+        0.83
+      ]
+    }
+  ]
+}

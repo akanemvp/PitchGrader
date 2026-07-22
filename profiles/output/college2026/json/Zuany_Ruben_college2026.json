@@ -1,0 +1,76 @@
+{
+  "player_name": "Zuany, Ruben",
+  "season": "college2026",
+  "total_pitches": 6,
+  "p_throws": "R",
+  "arm_angle": 39.7,
+  "team": "GRN",
+  "pitcher_id": 838670,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 79.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 6,
+      "n_vs_r": 6,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 77.8,
+      "ivb": 17.5,
+      "hb": 13.7,
+      "vaa": -6.43,
+      "haa": -0.33,
+      "spin": 1973,
+      "extension": 5.51,
+      "arm_angle": 39.7,
+      "release_height": 5.68,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 25.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.09,
+        -0.23,
+        0.61,
+        -2.05,
+        -0.97,
+        -1.08
+      ],
+      "locations_z": [
+        2.13,
+        1.92,
+        2.06,
+        2.2,
+        3.4,
+        2.49
+      ],
+      "locations_x_vs_r": [
+        1.09,
+        -0.23,
+        0.61,
+        -2.05,
+        -0.97,
+        -1.08
+      ],
+      "locations_z_vs_r": [
+        2.13,
+        1.92,
+        2.06,
+        2.2,
+        3.4,
+        2.49
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

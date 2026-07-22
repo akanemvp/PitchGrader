@@ -1,0 +1,117 @@
+{
+  "player_name": "Lloyd, Daniel",
+  "season": "spring2026",
+  "total_pitches": 7,
+  "p_throws": "R",
+  "arm_angle": 22.7,
+  "team": "BAL",
+  "pitcher_id": 681463,
+  "age": 26,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 99.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 0,
+      "n_vs_l": 5,
+      "usage_pct": 71.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 71.4,
+      "velo": 91.5,
+      "ivb": 14.7,
+      "hb": 7.4,
+      "vaa": -5.08,
+      "haa": 2.08,
+      "spin": 2226,
+      "extension": 6.52,
+      "arm_angle": 22.3,
+      "release_height": 5.1,
+      "spin_axis_clock": "11:06",
+      "zone_pct": 80.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.513,
+      "locations_x": [
+        0.17,
+        0.47,
+        -0.2,
+        -0.64,
+        0.73
+      ],
+      "locations_z": [
+        1.9,
+        2.15,
+        2.5,
+        2.79,
+        1.04
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.17,
+        0.47,
+        -0.2,
+        -0.64,
+        0.73
+      ],
+      "locations_z_vs_l": [
+        1.9,
+        2.15,
+        2.5,
+        2.79,
+        1.04
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 101.5,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 28.6,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 28.6,
+      "velo": 88.8,
+      "ivb": 5.4,
+      "hb": -0.7,
+      "vaa": -5.67,
+      "haa": 1.79,
+      "spin": 2766,
+      "extension": 6.35,
+      "arm_angle": 23.0,
+      "release_height": 5.13,
+      "spin_axis_clock": "12:21",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.84,
+        -1.13
+      ],
+      "locations_z": [
+        2.84,
+        2.16
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.84,
+        -1.13
+      ],
+      "locations_z_vs_l": [
+        2.84,
+        2.16
+      ]
+    }
+  ]
+}

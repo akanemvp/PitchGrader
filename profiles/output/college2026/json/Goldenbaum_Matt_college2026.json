@@ -1,0 +1,145 @@
+{
+  "player_name": "Goldenbaum, Matt",
+  "season": "college2026",
+  "total_pitches": 13,
+  "p_throws": "R",
+  "arm_angle": 43.2,
+  "team": "CRE",
+  "pitcher_id": 825108,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 96.0,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 3,
+      "n_vs_l": 4,
+      "usage_pct": 53.8,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 79.0,
+      "ivb": -15.3,
+      "hb": -5.3,
+      "vaa": -10.5,
+      "haa": 1.7,
+      "spin": 2673,
+      "extension": 6.51,
+      "arm_angle": 45.3,
+      "release_height": 5.68,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 28.6,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.89,
+        0.42,
+        -0.37,
+        -1.15,
+        1.09,
+        -0.05,
+        -0.73
+      ],
+      "locations_z": [
+        1.9,
+        1.61,
+        0.87,
+        0.94,
+        0.68,
+        1.15,
+        1.95
+      ],
+      "locations_x_vs_r": [
+        1.09,
+        -0.05,
+        -0.73
+      ],
+      "locations_z_vs_r": [
+        0.68,
+        1.15,
+        1.95
+      ],
+      "locations_x_vs_l": [
+        0.89,
+        0.42,
+        -0.37,
+        -1.15
+      ],
+      "locations_z_vs_l": [
+        1.9,
+        1.61,
+        0.87,
+        0.94
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 99.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 6,
+      "n_vs_r": 2,
+      "n_vs_l": 4,
+      "usage_pct": 46.2,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 93.4,
+      "ivb": 16.8,
+      "hb": 4.9,
+      "vaa": -5.35,
+      "haa": 0.85,
+      "spin": 2317,
+      "extension": 6.56,
+      "arm_angle": 41.0,
+      "release_height": 5.45,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.66,
+        -0.51,
+        0.16,
+        0.58,
+        -0.38,
+        0.21
+      ],
+      "locations_z": [
+        2.15,
+        -0.31,
+        3.25,
+        2.45,
+        2.8,
+        1.68
+      ],
+      "locations_x_vs_r": [
+        0.58,
+        0.21
+      ],
+      "locations_z_vs_r": [
+        2.45,
+        1.68
+      ],
+      "locations_x_vs_l": [
+        0.66,
+        -0.51,
+        0.16,
+        -0.38
+      ],
+      "locations_z_vs_l": [
+        2.15,
+        -0.31,
+        3.25,
+        2.8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "player_name": "Sanders, Brayden",
+  "season": "college2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 41.4,
+  "team": "MEM",
+  "pitcher_id": 695550,
+  "age": null,
+  "ip_str": "0.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 81.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.1,
+      "ivb": -8.3,
+      "hb": -3.1,
+      "vaa": -7.52,
+      "haa": 0.4,
+      "spin": 1897,
+      "extension": 5.38,
+      "arm_angle": 41.4,
+      "release_height": 6.08,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.71
+      ],
+      "locations_z": [
+        3.65
+      ],
+      "locations_x_vs_r": [
+        -1.71
+      ],
+      "locations_z_vs_r": [
+        3.65
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

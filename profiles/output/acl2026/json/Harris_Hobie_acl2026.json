@@ -1,0 +1,272 @@
+{
+  "player_name": "Harris, Hobie",
+  "season": "acl2026",
+  "total_pitches": 17,
+  "p_throws": "R",
+  "arm_angle": 49.0,
+  "team": "F-RSX",
+  "pitcher_id": 665048,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 18.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 85.1,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 6,
+      "n_vs_r": 2,
+      "n_vs_l": 4,
+      "usage_pct": 35.3,
+      "usage_pct_vs_r": 66.7,
+      "usage_pct_vs_l": 28.6,
+      "velo": 94.7,
+      "ivb": 15.7,
+      "hb": 7.6,
+      "vaa": -4.78,
+      "haa": 0.36,
+      "spin": 2134,
+      "extension": 6.42,
+      "arm_angle": 49.8,
+      "release_height": 6.41,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.01,
+        -1.73,
+        -0.54,
+        -0.23,
+        1.4,
+        0.56
+      ],
+      "locations_z": [
+        3.03,
+        2.93,
+        5.67,
+        3.25,
+        4.17,
+        1.69
+      ],
+      "locations_x_vs_r": [
+        1.4,
+        0.56
+      ],
+      "locations_z_vs_r": [
+        4.17,
+        1.69
+      ],
+      "locations_x_vs_l": [
+        -1.01,
+        -1.73,
+        -0.54,
+        -0.23
+      ],
+      "locations_z_vs_l": [
+        3.03,
+        2.93,
+        5.67,
+        3.25
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 100.1,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 1,
+      "n_vs_l": 4,
+      "usage_pct": 29.4,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 28.6,
+      "velo": 87.7,
+      "ivb": 5.1,
+      "hb": -2.7,
+      "vaa": -8.45,
+      "haa": 2.08,
+      "spin": 2382,
+      "extension": 6.33,
+      "arm_angle": 46.8,
+      "release_height": 6.2,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.36,
+        0.61,
+        0.42,
+        -0.28,
+        0.83
+      ],
+      "locations_z": [
+        2.04,
+        0.82,
+        0.32,
+        2.48,
+        0.5
+      ],
+      "locations_x_vs_r": [
+        0.83
+      ],
+      "locations_z_vs_r": [
+        0.5
+      ],
+      "locations_x_vs_l": [
+        -0.36,
+        0.61,
+        0.42,
+        -0.28
+      ],
+      "locations_z_vs_l": [
+        2.04,
+        0.82,
+        0.32,
+        2.48
+      ]
+    },
+    {
+      "pitch_type": "FS",
+      "pitch_name": "Splitter",
+      "stuff_plus": 99.6,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 17.6,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 21.4,
+      "velo": 85.2,
+      "ivb": 6.6,
+      "hb": 6.0,
+      "vaa": -6.67,
+      "haa": 1.16,
+      "spin": 1288,
+      "extension": 6.43,
+      "arm_angle": 47.9,
+      "release_height": 6.29,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.13,
+        -0.05,
+        0.0
+      ],
+      "locations_z": [
+        2.08,
+        4.25,
+        2.51
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.13,
+        -0.05,
+        0.0
+      ],
+      "locations_z_vs_l": [
+        2.08,
+        4.25,
+        2.51
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 95.6,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 11.8,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 14.3,
+      "velo": 95.4,
+      "ivb": 11.2,
+      "hb": 13.7,
+      "vaa": -6.69,
+      "haa": -0.01,
+      "spin": 2284,
+      "extension": 6.53,
+      "arm_angle": 47.6,
+      "release_height": 6.2,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.86,
+        0.28
+      ],
+      "locations_z": [
+        2.0,
+        1.78
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.86,
+        0.28
+      ],
+      "locations_z_vs_l": [
+        2.0,
+        1.78
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 97.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 5.9,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 7.1,
+      "velo": 82.5,
+      "ivb": -5.6,
+      "hb": -4.3,
+      "vaa": -8.0,
+      "haa": 1.71,
+      "spin": 2631,
+      "extension": 6.2,
+      "arm_angle": 53.0,
+      "release_height": 6.68,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.19
+      ],
+      "locations_z": [
+        3.26
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.19
+      ],
+      "locations_z_vs_l": [
+        3.26
+      ]
+    }
+  ]
+}

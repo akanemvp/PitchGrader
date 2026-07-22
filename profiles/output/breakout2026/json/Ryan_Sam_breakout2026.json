@@ -1,0 +1,203 @@
+{
+  "player_name": "Ryan, Sam",
+  "season": "breakout2026",
+  "total_pitches": 10,
+  "p_throws": "R",
+  "arm_angle": 39.1,
+  "team": "MTP",
+  "pitcher_id": 687857,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 99.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 40.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 40.0,
+      "velo": 95.3,
+      "ivb": 14.7,
+      "hb": 13.7,
+      "vaa": -5.19,
+      "haa": 1.27,
+      "spin": 2298,
+      "extension": 6.17,
+      "arm_angle": 38.7,
+      "release_height": 5.85,
+      "spin_axis_clock": "10:34",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.699,
+      "locations_x": [
+        0.65,
+        1.45,
+        0.44,
+        0.26
+      ],
+      "locations_z": [
+        2.38,
+        2.47,
+        1.73,
+        3.62
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.65,
+        1.45,
+        0.44,
+        0.26
+      ],
+      "locations_z_vs_l": [
+        2.38,
+        2.47,
+        1.73,
+        3.62
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 30.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 30.0,
+      "velo": 86.2,
+      "ivb": -3.5,
+      "hb": -4.4,
+      "vaa": -8.1,
+      "haa": 2.76,
+      "spin": 2063,
+      "extension": 6.2,
+      "arm_angle": 39.0,
+      "release_height": 5.88,
+      "spin_axis_clock": "4:15",
+      "zone_pct": 33.3,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.58,
+        0.55,
+        1.08
+      ],
+      "locations_z": [
+        1.58,
+        2.68,
+        1.6
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.58,
+        0.55,
+        1.08
+      ],
+      "locations_z_vs_l": [
+        1.58,
+        2.68,
+        1.6
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 95.4,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 20.0,
+      "velo": 89.3,
+      "ivb": 8.1,
+      "hb": -1.6,
+      "vaa": -5.81,
+      "haa": 2.45,
+      "spin": 2190,
+      "extension": 6.18,
+      "arm_angle": 39.1,
+      "release_height": 5.91,
+      "spin_axis_clock": "12:23",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.06,
+        0.58
+      ],
+      "locations_z": [
+        3.71,
+        2.07
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.06,
+        0.58
+      ],
+      "locations_z_vs_l": [
+        3.71,
+        2.07
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 98.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 10.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 10.0,
+      "velo": 83.9,
+      "ivb": 2.6,
+      "hb": 10.3,
+      "vaa": -6.46,
+      "haa": 0.35,
+      "spin": 1627,
+      "extension": 6.3,
+      "arm_angle": 39.7,
+      "release_height": 5.91,
+      "spin_axis_clock": "9:28",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.65
+      ],
+      "locations_z": [
+        3.11
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.65
+      ],
+      "locations_z_vs_l": [
+        3.11
+      ]
+    }
+  ]
+}

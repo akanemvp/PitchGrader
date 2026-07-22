@@ -1,0 +1,154 @@
+{
+  "player_name": "Estrada, Ricardo",
+  "season": "springall2026",
+  "total_pitches": 7,
+  "p_throws": "L",
+  "arm_angle": 45.6,
+  "team": "SF",
+  "pitcher_id": 698962,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 57.1,
+      "usage_pct_vs_r": 57.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 91.5,
+      "ivb": 16.3,
+      "hb": 1.4,
+      "vaa": -5.99,
+      "haa": -1.39,
+      "spin": 2213,
+      "extension": 6.1,
+      "arm_angle": 41.7,
+      "release_height": 5.39,
+      "spin_axis_clock": "12:10",
+      "zone_pct": 25.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.67,
+        -0.5,
+        -0.52,
+        -1.01
+      ],
+      "locations_z": [
+        1.17,
+        1.58,
+        2.43,
+        0.79
+      ],
+      "locations_x_vs_r": [
+        -0.67,
+        -0.5,
+        -0.52,
+        -1.01
+      ],
+      "locations_z_vs_r": [
+        1.17,
+        1.58,
+        2.43,
+        0.79
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 81.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 28.6,
+      "usage_pct_vs_r": 28.6,
+      "usage_pct_vs_l": 0.0,
+      "velo": 91.5,
+      "ivb": 14.9,
+      "hb": 12.2,
+      "vaa": -5.83,
+      "haa": 0.63,
+      "spin": 2161,
+      "extension": 6.05,
+      "arm_angle": 40.8,
+      "release_height": 5.41,
+      "spin_axis_clock": "1:18",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.22,
+        0.13
+      ],
+      "locations_z": [
+        1.29,
+        2.23
+      ],
+      "locations_x_vs_r": [
+        0.22,
+        0.13
+      ],
+      "locations_z_vs_r": [
+        1.29,
+        2.23
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 87.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 14.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.0,
+      "ivb": -11.0,
+      "hb": -2.5,
+      "vaa": -8.59,
+      "haa": -0.71,
+      "spin": 2281,
+      "extension": 5.68,
+      "arm_angle": 54.1,
+      "release_height": 5.88,
+      "spin_axis_clock": "6:26",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.46
+      ],
+      "locations_z": [
+        2.74
+      ],
+      "locations_x_vs_r": [
+        0.46
+      ],
+      "locations_z_vs_r": [
+        2.74
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

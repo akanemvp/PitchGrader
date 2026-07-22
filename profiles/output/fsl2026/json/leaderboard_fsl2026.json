@@ -1,0 +1,3066 @@
+[
+  {
+    "player_name": "Kimbrel, Craig",
+    "season": "fsl2026",
+    "stuff_plus": 123.5,
+    "grade": "70",
+    "color": "#00b4d8",
+    "total_pitches": 18
+  },
+  {
+    "player_name": "Mateo, Carlos",
+    "season": "fsl2026",
+    "stuff_plus": 121.3,
+    "grade": "70",
+    "color": "#00b4d8",
+    "total_pitches": 144
+  },
+  {
+    "player_name": "Gair, Marty",
+    "season": "fsl2026",
+    "stuff_plus": 117.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 538
+  },
+  {
+    "player_name": "Sanchez, Franklin",
+    "season": "fsl2026",
+    "stuff_plus": 115.0,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Little, Jordan",
+    "season": "fsl2026",
+    "stuff_plus": 113.5,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 153
+  },
+  {
+    "player_name": "Navarro, Reinold",
+    "season": "fsl2026",
+    "stuff_plus": 113.5,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1199
+  },
+  {
+    "player_name": "Wood, Gage",
+    "season": "fsl2026",
+    "stuff_plus": 113.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 365
+  },
+  {
+    "player_name": "Leon, Jorge De",
+    "season": "fsl2026",
+    "stuff_plus": 112.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 182
+  },
+  {
+    "player_name": "Jobe, Jackson",
+    "season": "fsl2026",
+    "stuff_plus": 112.2,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Morillo, Elier",
+    "season": "fsl2026",
+    "stuff_plus": 111.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 527
+  },
+  {
+    "player_name": "Coleman, Javen",
+    "season": "fsl2026",
+    "stuff_plus": 111.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 23
+  },
+  {
+    "player_name": "Acton, Garrett",
+    "season": "fsl2026",
+    "stuff_plus": 110.9,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Arias, Brian",
+    "season": "fsl2026",
+    "stuff_plus": 110.9,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 349
+  },
+  {
+    "player_name": "N\u00fa\u00f1ez, Dedniel",
+    "season": "fsl2026",
+    "stuff_plus": 110.6,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Jones, Jared",
+    "season": "fsl2026",
+    "stuff_plus": 110.4,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 41
+  },
+  {
+    "player_name": "Mercedes, Ernesto",
+    "season": "fsl2026",
+    "stuff_plus": 109.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 478
+  },
+  {
+    "player_name": "Bischoff, Kyle",
+    "season": "fsl2026",
+    "stuff_plus": 109.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Clarke, Brandon",
+    "season": "fsl2026",
+    "stuff_plus": 109.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Smith, Burch",
+    "season": "fsl2026",
+    "stuff_plus": 109.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 16
+  },
+  {
+    "player_name": "Galle, Patrick",
+    "season": "fsl2026",
+    "stuff_plus": 109.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 103
+  },
+  {
+    "player_name": "Portes, Ovis",
+    "season": "fsl2026",
+    "stuff_plus": 108.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 148
+  },
+  {
+    "player_name": "Tanner, Alistair",
+    "season": "fsl2026",
+    "stuff_plus": 108.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 437
+  },
+  {
+    "player_name": "Odle, Jacob",
+    "season": "fsl2026",
+    "stuff_plus": 108.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 584
+  },
+  {
+    "player_name": "Cruz, Xavier",
+    "season": "fsl2026",
+    "stuff_plus": 108.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 113
+  },
+  {
+    "player_name": "Ercolani, Alessandro",
+    "season": "fsl2026",
+    "stuff_plus": 108.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 61
+  },
+  {
+    "player_name": "Driessen, Dylan",
+    "season": "fsl2026",
+    "stuff_plus": 108.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 504
+  },
+  {
+    "player_name": "Wissinger, Reece",
+    "season": "fsl2026",
+    "stuff_plus": 107.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 159
+  },
+  {
+    "player_name": "Degges, Ryan",
+    "season": "fsl2026",
+    "stuff_plus": 107.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 75
+  },
+  {
+    "player_name": "Ziegler, Calvin",
+    "season": "fsl2026",
+    "stuff_plus": 107.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "Heuer, Mac",
+    "season": "fsl2026",
+    "stuff_plus": 107.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 296
+  },
+  {
+    "player_name": "Lanthier, Ethan",
+    "season": "fsl2026",
+    "stuff_plus": 106.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 164
+  },
+  {
+    "player_name": "Bechtold, Andrew",
+    "season": "fsl2026",
+    "stuff_plus": 106.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 50
+  },
+  {
+    "player_name": "Bloss, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 106.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 169
+  },
+  {
+    "player_name": "Cortese, Richie",
+    "season": "fsl2026",
+    "stuff_plus": 106.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 211
+  },
+  {
+    "player_name": "Perry, Nolan",
+    "season": "fsl2026",
+    "stuff_plus": 106.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 324
+  },
+  {
+    "player_name": "Wood, Zeke",
+    "season": "fsl2026",
+    "stuff_plus": 106.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 106
+  },
+  {
+    "player_name": "Jr., Thomas Balboni",
+    "season": "fsl2026",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 41
+  },
+  {
+    "player_name": "Blanco, Wilmer",
+    "season": "fsl2026",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 292
+  },
+  {
+    "player_name": "Bowen, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 461
+  },
+  {
+    "player_name": "Florido, Antonio",
+    "season": "fsl2026",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 204
+  },
+  {
+    "player_name": "Diaz, Franyel",
+    "season": "fsl2026",
+    "stuff_plus": 105.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 82
+  },
+  {
+    "player_name": "Olivares, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 105.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "McLoughlin, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 105.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 565
+  },
+  {
+    "player_name": "Jimenez, Estibenzon",
+    "season": "fsl2026",
+    "stuff_plus": 105.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 61
+  },
+  {
+    "player_name": "Militello, Justin",
+    "season": "fsl2026",
+    "stuff_plus": 104.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 474
+  },
+  {
+    "player_name": "Gresham, Tanner",
+    "season": "fsl2026",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 642
+  },
+  {
+    "player_name": "Mercado, Michael",
+    "season": "fsl2026",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Scarborough, Joe",
+    "season": "fsl2026",
+    "stuff_plus": 104.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 566
+  },
+  {
+    "player_name": "Lashutka, Luke",
+    "season": "fsl2026",
+    "stuff_plus": 104.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 102
+  },
+  {
+    "player_name": "Merryweather, Julian",
+    "season": "fsl2026",
+    "stuff_plus": 104.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 72
+  },
+  {
+    "player_name": "Pipkin, Dominic",
+    "season": "fsl2026",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Tortosa, Cristhian",
+    "season": "fsl2026",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Gerber, Joey",
+    "season": "fsl2026",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Stevens, Kevin",
+    "season": "fsl2026",
+    "stuff_plus": 104.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 65
+  },
+  {
+    "player_name": "Hernandez, Seth",
+    "season": "fsl2026",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 371
+  },
+  {
+    "player_name": "Jacobs, Ben",
+    "season": "fsl2026",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 274
+  },
+  {
+    "player_name": "McAuliffe, Nick",
+    "season": "fsl2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 184
+  },
+  {
+    "player_name": "Wetwiska, Cale",
+    "season": "fsl2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 276
+  },
+  {
+    "player_name": "Barriera, Brandon",
+    "season": "fsl2026",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 374
+  },
+  {
+    "player_name": "Dollar, Ryan",
+    "season": "fsl2026",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 189
+  },
+  {
+    "player_name": "Carpio, Samuel",
+    "season": "fsl2026",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 698
+  },
+  {
+    "player_name": "Meyer, Noble",
+    "season": "fsl2026",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "Urena, Franly",
+    "season": "fsl2026",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 751
+  },
+  {
+    "player_name": "Armbruester, Justin",
+    "season": "fsl2026",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 94
+  },
+  {
+    "player_name": "Renner, Chase",
+    "season": "fsl2026",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 111
+  },
+  {
+    "player_name": "Hayden, Luke",
+    "season": "fsl2026",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Charles, Joe",
+    "season": "fsl2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 238
+  },
+  {
+    "player_name": "Clevinger, Mike",
+    "season": "fsl2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "Holman, Grant",
+    "season": "fsl2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Jimenez, Marco",
+    "season": "fsl2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 107
+  },
+  {
+    "player_name": "Breckheimer, Alex",
+    "season": "fsl2026",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 510
+  },
+  {
+    "player_name": "Lara, Joel",
+    "season": "fsl2026",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 864
+  },
+  {
+    "player_name": "Batka, Keegan",
+    "season": "fsl2026",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 158
+  },
+  {
+    "player_name": "Echeman, Kaden",
+    "season": "fsl2026",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 783
+  },
+  {
+    "player_name": "McKenna, Mike",
+    "season": "fsl2026",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 497
+  },
+  {
+    "player_name": "Victorino, Omar",
+    "season": "fsl2026",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 166
+  },
+  {
+    "player_name": "Menes, Rub\u00e9n",
+    "season": "fsl2026",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 148
+  },
+  {
+    "player_name": "Afthim, Brady",
+    "season": "fsl2026",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 247
+  },
+  {
+    "player_name": "Payano, Nelfri",
+    "season": "fsl2026",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 111
+  },
+  {
+    "player_name": "Quick, Riley",
+    "season": "fsl2026",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 117
+  },
+  {
+    "player_name": "Brock, T.J.",
+    "season": "fsl2026",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 18
+  },
+  {
+    "player_name": "Pan, Wen-Hui",
+    "season": "fsl2026",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 69
+  },
+  {
+    "player_name": "Clemente, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 102.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 786
+  },
+  {
+    "player_name": "Rojas, Yondrei",
+    "season": "fsl2026",
+    "stuff_plus": 102.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 12
+  },
+  {
+    "player_name": "Hampton, Chase",
+    "season": "fsl2026",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 140
+  },
+  {
+    "player_name": "McGowan, Christian",
+    "season": "fsl2026",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 130
+  },
+  {
+    "player_name": "Archie, Bryce",
+    "season": "fsl2026",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 340
+  },
+  {
+    "player_name": "Faherty, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 399
+  },
+  {
+    "player_name": "Jackson, Luke",
+    "season": "fsl2026",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 28
+  },
+  {
+    "player_name": "Eshleman, Jack",
+    "season": "fsl2026",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 337
+  },
+  {
+    "player_name": "Chinchilla, Gabriel",
+    "season": "fsl2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 67
+  },
+  {
+    "player_name": "Devenski, Chris",
+    "season": "fsl2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Kolhosser, Xavier",
+    "season": "fsl2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 336
+  },
+  {
+    "player_name": "Mueller, Mitch",
+    "season": "fsl2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 312
+  },
+  {
+    "player_name": "Shaffner, Andrew",
+    "season": "fsl2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 172
+  },
+  {
+    "player_name": "Bieber, Shane",
+    "season": "fsl2026",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 49
+  },
+  {
+    "player_name": "Seabold, Connor",
+    "season": "fsl2026",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Best, Liam",
+    "season": "fsl2026",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 652
+  },
+  {
+    "player_name": "Adams, Gavin",
+    "season": "fsl2026",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 650
+  },
+  {
+    "player_name": "Witherspoon, Malachi",
+    "season": "fsl2026",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 885
+  },
+  {
+    "player_name": "Bowker, Cody",
+    "season": "fsl2026",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 633
+  },
+  {
+    "player_name": "Effross, Scott",
+    "season": "fsl2026",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Lavender, Nate",
+    "season": "fsl2026",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 82
+  },
+  {
+    "player_name": "Ottenbreit, Micah",
+    "season": "fsl2026",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 134
+  },
+  {
+    "player_name": "Garc\u00eda, Yimi",
+    "season": "fsl2026",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Yesavage, Trey",
+    "season": "fsl2026",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 148
+  },
+  {
+    "player_name": "Horn, Bailey",
+    "season": "fsl2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Young, Ethan",
+    "season": "fsl2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 514
+  },
+  {
+    "player_name": "Payne, Nate",
+    "season": "fsl2026",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 237
+  },
+  {
+    "player_name": "Robinson, Kyle",
+    "season": "fsl2026",
+    "stuff_plus": 100.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 37
+  },
+  {
+    "player_name": "Henschel, Justin",
+    "season": "fsl2026",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 423
+  },
+  {
+    "player_name": "Watson, Troy",
+    "season": "fsl2026",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Diamond, Derek",
+    "season": "fsl2026",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Samudio, Denis",
+    "season": "fsl2026",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 383
+  },
+  {
+    "player_name": "Waites, Cole",
+    "season": "fsl2026",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "Brieske, Beau",
+    "season": "fsl2026",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Martinez, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 659
+  },
+  {
+    "player_name": "Arias, Eligio",
+    "season": "fsl2026",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 13
+  },
+  {
+    "player_name": "Owens, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 85
+  },
+  {
+    "player_name": "Gonzalez, Eduar",
+    "season": "fsl2026",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 203
+  },
+  {
+    "player_name": "Pengelly, Dayne",
+    "season": "fsl2026",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 219
+  },
+  {
+    "player_name": "Sanchez, Ramon",
+    "season": "fsl2026",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 306
+  },
+  {
+    "player_name": "Anker, Jack",
+    "season": "fsl2026",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 768
+  },
+  {
+    "player_name": "Hilker, Michael",
+    "season": "fsl2026",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 607
+  },
+  {
+    "player_name": "Shelagowski, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 100.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 601
+  },
+  {
+    "player_name": "Boudreau, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1119
+  },
+  {
+    "player_name": "Mota, Eliseo",
+    "season": "fsl2026",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 532
+  },
+  {
+    "player_name": "Graham, Payton",
+    "season": "fsl2026",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 531
+  },
+  {
+    "player_name": "Messina, Carson",
+    "season": "fsl2026",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 402
+  },
+  {
+    "player_name": "Green, Griffin",
+    "season": "fsl2026",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 37
+  },
+  {
+    "player_name": "Hurd, Thatcher",
+    "season": "fsl2026",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 532
+  },
+  {
+    "player_name": "Marozas, Austin",
+    "season": "fsl2026",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 79
+  },
+  {
+    "player_name": "Obando, Angel",
+    "season": "fsl2026",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 388
+  },
+  {
+    "player_name": "Cruz, Luis De La",
+    "season": "fsl2026",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 515
+  },
+  {
+    "player_name": "Obermueller, Cade",
+    "season": "fsl2026",
+    "stuff_plus": 99.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 575
+  },
+  {
+    "player_name": "Hendry, Brian",
+    "season": "fsl2026",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 77
+  },
+  {
+    "player_name": "Miller, Joe",
+    "season": "fsl2026",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Genao, Manuel",
+    "season": "fsl2026",
+    "stuff_plus": 99.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1040
+  },
+  {
+    "player_name": "Marquez, Ramon",
+    "season": "fsl2026",
+    "stuff_plus": 99.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 386
+  },
+  {
+    "player_name": "Ramirez, Irwin",
+    "season": "fsl2026",
+    "stuff_plus": 99.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 271
+  },
+  {
+    "player_name": "Mejias, Miguel",
+    "season": "fsl2026",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 523
+  },
+  {
+    "player_name": "Etheridge, J.T.",
+    "season": "fsl2026",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 750
+  },
+  {
+    "player_name": "Moring, Reed",
+    "season": "fsl2026",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 614
+  },
+  {
+    "player_name": "Sterling, Levi",
+    "season": "fsl2026",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1200
+  },
+  {
+    "player_name": "Guthrie, Troy",
+    "season": "fsl2026",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1122
+  },
+  {
+    "player_name": "Matoma, David",
+    "season": "fsl2026",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 522
+  },
+  {
+    "player_name": "Tilly, Cam",
+    "season": "fsl2026",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 836
+  },
+  {
+    "player_name": "Laureano, Anyer",
+    "season": "fsl2026",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 272
+  },
+  {
+    "player_name": "Mize, Casey",
+    "season": "fsl2026",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 55
+  },
+  {
+    "player_name": "Rodr\u00edguez, Yerry",
+    "season": "fsl2026",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 75
+  },
+  {
+    "player_name": "Seay, Parker",
+    "season": "fsl2026",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 489
+  },
+  {
+    "player_name": "Craig, Gabe",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 330
+  },
+  {
+    "player_name": "DesMarets, Matthew",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 318
+  },
+  {
+    "player_name": "Fields, Colin",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 59
+  },
+  {
+    "player_name": "Salazar, Eduardo",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Soto, Charlee",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 54
+  },
+  {
+    "player_name": "White, Thomas",
+    "season": "fsl2026",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 63
+  },
+  {
+    "player_name": "Davenport, Mason",
+    "season": "fsl2026",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 250
+  },
+  {
+    "player_name": "Guacache, Xiomer",
+    "season": "fsl2026",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 253
+  },
+  {
+    "player_name": "Mijares, Elwis",
+    "season": "fsl2026",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 717
+  },
+  {
+    "player_name": "Paniagua, Inohan",
+    "season": "fsl2026",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Chivilli, Hendry",
+    "season": "fsl2026",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 279
+  },
+  {
+    "player_name": "Ligon, Karson",
+    "season": "fsl2026",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 215
+  },
+  {
+    "player_name": "Cain, Tegan",
+    "season": "fsl2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 327
+  },
+  {
+    "player_name": "Morris, Mason",
+    "season": "fsl2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 539
+  },
+  {
+    "player_name": "Murdock, Noah",
+    "season": "fsl2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 74
+  },
+  {
+    "player_name": "Watts, Dylan",
+    "season": "fsl2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 659
+  },
+  {
+    "player_name": "Adams, Travis",
+    "season": "fsl2026",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Dyke, Ty Van",
+    "season": "fsl2026",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 431
+  },
+  {
+    "player_name": "Hoskins, Luke",
+    "season": "fsl2026",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 455
+  },
+  {
+    "player_name": "Alba, Max",
+    "season": "fsl2026",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 72
+  },
+  {
+    "player_name": "Mendez, Julio",
+    "season": "fsl2026",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1208
+  },
+  {
+    "player_name": "Portuondo, Roilan",
+    "season": "fsl2026",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 650
+  },
+  {
+    "player_name": "Murray, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 500
+  },
+  {
+    "player_name": "Ellwanger, James",
+    "season": "fsl2026",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 174
+  },
+  {
+    "player_name": "Perez, Michael",
+    "season": "fsl2026",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 228
+  },
+  {
+    "player_name": "Alzolay, Adbert",
+    "season": "fsl2026",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 29
+  },
+  {
+    "player_name": "Lewis, Cory",
+    "season": "fsl2026",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 23
+  },
+  {
+    "player_name": "Melton, Troy",
+    "season": "fsl2026",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 122
+  },
+  {
+    "player_name": "Pogue, Andrew",
+    "season": "fsl2026",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 538
+  },
+  {
+    "player_name": "Gomez, Yendy",
+    "season": "fsl2026",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 666
+  },
+  {
+    "player_name": "Gonzalez, Orlando",
+    "season": "fsl2026",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "IV, Andrew Dutkanych",
+    "season": "fsl2026",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 286
+  },
+  {
+    "player_name": "Carreno, Nicolas",
+    "season": "fsl2026",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 627
+  },
+  {
+    "player_name": "Rojas, Kendry",
+    "season": "fsl2026",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 35
+  },
+  {
+    "player_name": "Walters, Brian",
+    "season": "fsl2026",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 738
+  },
+  {
+    "player_name": "Garcia, Jaiker",
+    "season": "fsl2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 578
+  },
+  {
+    "player_name": "Lopez, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 203
+  },
+  {
+    "player_name": "Senga, Kodai",
+    "season": "fsl2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 64
+  },
+  {
+    "player_name": "Hammond, Eric",
+    "season": "fsl2026",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 561
+  },
+  {
+    "player_name": "Jimenez, Jonathan",
+    "season": "fsl2026",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 412
+  },
+  {
+    "player_name": "Marte, Jos\u00e9",
+    "season": "fsl2026",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 50
+  },
+  {
+    "player_name": "Youngerman, Sean",
+    "season": "fsl2026",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 870
+  },
+  {
+    "player_name": "Baker, Trace",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 64
+  },
+  {
+    "player_name": "Castillo, Walin",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1055
+  },
+  {
+    "player_name": "Cesar, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 323
+  },
+  {
+    "player_name": "Holiday, Brian",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 408
+  },
+  {
+    "player_name": "Revis, Dusty",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 123
+  },
+  {
+    "player_name": "Watts, Anthony",
+    "season": "fsl2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 297
+  },
+  {
+    "player_name": "Ledesma, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 405
+  },
+  {
+    "player_name": "Nedrow, Jack",
+    "season": "fsl2026",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 332
+  },
+  {
+    "player_name": "Villafana, Deivi",
+    "season": "fsl2026",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 460
+  },
+  {
+    "player_name": "Chirinos, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 554
+  },
+  {
+    "player_name": "Mendez, Gerinton",
+    "season": "fsl2026",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 173
+  },
+  {
+    "player_name": "Gipson-Long, Sawyer",
+    "season": "fsl2026",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Mack, Zack",
+    "season": "fsl2026",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 485
+  },
+  {
+    "player_name": "Tejada, Clevari",
+    "season": "fsl2026",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 210
+  },
+  {
+    "player_name": "Colon, Edgar",
+    "season": "fsl2026",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 382
+  },
+  {
+    "player_name": "Zeldin, Brian",
+    "season": "fsl2026",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 283
+  },
+  {
+    "player_name": "Rodriguez, Pedro",
+    "season": "fsl2026",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 433
+  },
+  {
+    "player_name": "Tallon, James",
+    "season": "fsl2026",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 291
+  },
+  {
+    "player_name": "Cuthbertson, Hayden",
+    "season": "fsl2026",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 183
+  },
+  {
+    "player_name": "Gordon, R.J.",
+    "season": "fsl2026",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 73
+  },
+  {
+    "player_name": "Mendoza, Jordarlin",
+    "season": "fsl2026",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 496
+  },
+  {
+    "player_name": "Cuello, Antoni",
+    "season": "fsl2026",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 552
+  },
+  {
+    "player_name": "Taggart, Aiden",
+    "season": "fsl2026",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 12
+  },
+  {
+    "player_name": "Tiedemann, Josh",
+    "season": "fsl2026",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 519
+  },
+  {
+    "player_name": "Bradt, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Purnell, Blake",
+    "season": "fsl2026",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 781
+  },
+  {
+    "player_name": "Mosquera, Eiver",
+    "season": "fsl2026",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 250
+  },
+  {
+    "player_name": "Rodriguez, Luis R.",
+    "season": "fsl2026",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Salas, Braulio",
+    "season": "fsl2026",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 791
+  },
+  {
+    "player_name": "Hurtado, Daviel",
+    "season": "fsl2026",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 139
+  },
+  {
+    "player_name": "Tineo, Dameivi",
+    "season": "fsl2026",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 833
+  },
+  {
+    "player_name": "Villani, Mike",
+    "season": "fsl2026",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 173
+  },
+  {
+    "player_name": "Falinski, Adam",
+    "season": "fsl2026",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 326
+  },
+  {
+    "player_name": "Herrera, Yordy",
+    "season": "fsl2026",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 248
+  },
+  {
+    "player_name": "Lalane, Henry",
+    "season": "fsl2026",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 855
+  },
+  {
+    "player_name": "Salcedo, Kelvis",
+    "season": "fsl2026",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 208
+  },
+  {
+    "player_name": "Flatt, Danny",
+    "season": "fsl2026",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 334
+  },
+  {
+    "player_name": "Martinez, Jeter",
+    "season": "fsl2026",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1049
+  },
+  {
+    "player_name": "Victorino, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 623
+  },
+  {
+    "player_name": "Becker, Matthew",
+    "season": "fsl2026",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 46
+  },
+  {
+    "player_name": "Zeigler, Draven",
+    "season": "fsl2026",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 300
+  },
+  {
+    "player_name": "Oldham, Billy",
+    "season": "fsl2026",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 67
+  },
+  {
+    "player_name": "Pacheco, Brad",
+    "season": "fsl2026",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 959
+  },
+  {
+    "player_name": "Parliament, Wyatt",
+    "season": "fsl2026",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 569
+  },
+  {
+    "player_name": "Warrecker, Bryce",
+    "season": "fsl2026",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 115
+  },
+  {
+    "player_name": "Rutledge, Jackson",
+    "season": "fsl2026",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 53
+  },
+  {
+    "player_name": "Severino, Lluveres",
+    "season": "fsl2026",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 702
+  },
+  {
+    "player_name": "Taschin, Giacomo",
+    "season": "fsl2026",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 305
+  },
+  {
+    "player_name": "Marte, Sabier",
+    "season": "fsl2026",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 121
+  },
+  {
+    "player_name": "Berr\u00edos, Jos\u00e9",
+    "season": "fsl2026",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 102
+  },
+  {
+    "player_name": "Fisher, Matthew",
+    "season": "fsl2026",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 307
+  },
+  {
+    "player_name": "Alvarez, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 95.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 445
+  },
+  {
+    "player_name": "Benitez, Keyner",
+    "season": "fsl2026",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 308
+  },
+  {
+    "player_name": "Blum, Josh",
+    "season": "fsl2026",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 141
+  },
+  {
+    "player_name": "Carter, Greysen",
+    "season": "fsl2026",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 681
+  },
+  {
+    "player_name": "Ramirez, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 563
+  },
+  {
+    "player_name": "Davila, Jos\u00e9",
+    "season": "fsl2026",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 83
+  },
+  {
+    "player_name": "Holcombe, Colby",
+    "season": "fsl2026",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Minter, A.J.",
+    "season": "fsl2026",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "Tineo, Riskiel",
+    "season": "fsl2026",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 62
+  },
+  {
+    "player_name": "Kublick, Hunter",
+    "season": "fsl2026",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 209
+  },
+  {
+    "player_name": "Mitrovich, Justin",
+    "season": "fsl2026",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 711
+  },
+  {
+    "player_name": "Robberse, Sem",
+    "season": "fsl2026",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 67
+  },
+  {
+    "player_name": "Villanueva, Ramiro",
+    "season": "fsl2026",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 687
+  },
+  {
+    "player_name": "Christensen, Charlie",
+    "season": "fsl2026",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 562
+  },
+  {
+    "player_name": "Hjerpe, Cooper",
+    "season": "fsl2026",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 66
+  },
+  {
+    "player_name": "Oviedo, Adolfo",
+    "season": "fsl2026",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 510
+  },
+  {
+    "player_name": "Takacs, Noah",
+    "season": "fsl2026",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 658
+  },
+  {
+    "player_name": "Garcia, Joel",
+    "season": "fsl2026",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 115
+  },
+  {
+    "player_name": "G\u00e1lvez, Jovi",
+    "season": "fsl2026",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 297
+  },
+  {
+    "player_name": "Hechavarria, Silvano",
+    "season": "fsl2026",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 574
+  },
+  {
+    "player_name": "Grinsell, Grayson",
+    "season": "fsl2026",
+    "stuff_plus": 94.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 897
+  },
+  {
+    "player_name": "Howey, Preston",
+    "season": "fsl2026",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 137
+  },
+  {
+    "player_name": "Rodriguez, Jose M.",
+    "season": "fsl2026",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 666
+  },
+  {
+    "player_name": "Ruzicka, Joe",
+    "season": "fsl2026",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 214
+  },
+  {
+    "player_name": "Ynfante, Nelfy",
+    "season": "fsl2026",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 527
+  },
+  {
+    "player_name": "Hill, Camron",
+    "season": "fsl2026",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 129
+  },
+  {
+    "player_name": "Lin, Sheng-En",
+    "season": "fsl2026",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 587
+  },
+  {
+    "player_name": "Rodriguez, Victor",
+    "season": "fsl2026",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 64
+  },
+  {
+    "player_name": "Smith, Kolten",
+    "season": "fsl2026",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 783
+  },
+  {
+    "player_name": "Wilson, Paul",
+    "season": "fsl2026",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 94
+  },
+  {
+    "player_name": "Perachi, Dominic",
+    "season": "fsl2026",
+    "stuff_plus": 93.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 44
+  },
+  {
+    "player_name": "Rice, Owen",
+    "season": "fsl2026",
+    "stuff_plus": 93.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Garc\u00eda, Jes\u00fas",
+    "season": "fsl2026",
+    "stuff_plus": 93.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 309
+  },
+  {
+    "player_name": "Mueth, Zander",
+    "season": "fsl2026",
+    "stuff_plus": 93.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 360
+  },
+  {
+    "player_name": "Fenlong, Connor",
+    "season": "fsl2026",
+    "stuff_plus": 93.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 211
+  },
+  {
+    "player_name": "Walsh, Michael",
+    "season": "fsl2026",
+    "stuff_plus": 93.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 61
+  },
+  {
+    "player_name": "Cornielle, Alexander",
+    "season": "fsl2026",
+    "stuff_plus": 93.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 60
+  },
+  {
+    "player_name": "Knowles, Robbie",
+    "season": "fsl2026",
+    "stuff_plus": 93.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 154
+  },
+  {
+    "player_name": "Velasquez, Giussepe",
+    "season": "fsl2026",
+    "stuff_plus": 93.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 151
+  },
+  {
+    "player_name": "Cruz, Juan De La",
+    "season": "fsl2026",
+    "stuff_plus": 93.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 359
+  },
+  {
+    "player_name": "Estrada, Lazaro",
+    "season": "fsl2026",
+    "stuff_plus": 93.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 38
+  },
+  {
+    "player_name": "Kuiper, Cash",
+    "season": "fsl2026",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 724
+  },
+  {
+    "player_name": "Pruitt, Jacob",
+    "season": "fsl2026",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 477
+  },
+  {
+    "player_name": "Questad, Dylan",
+    "season": "fsl2026",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 269
+  },
+  {
+    "player_name": "Camarillo, Frank",
+    "season": "fsl2026",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 448
+  },
+  {
+    "player_name": "Corbin, Patrick",
+    "season": "fsl2026",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 74
+  },
+  {
+    "player_name": "Dalquist, Matthew",
+    "season": "fsl2026",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 602
+  },
+  {
+    "player_name": "Myers, Carson",
+    "season": "fsl2026",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 359
+  },
+  {
+    "player_name": "Smith, Austin",
+    "season": "fsl2026",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 280
+  },
+  {
+    "player_name": "Liranzo, Angel",
+    "season": "fsl2026",
+    "stuff_plus": 92.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "Breedlove, Austin",
+    "season": "fsl2026",
+    "stuff_plus": 92.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 57
+  },
+  {
+    "player_name": "Caraballo, Jan",
+    "season": "fsl2026",
+    "stuff_plus": 92.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 639
+  },
+  {
+    "player_name": "Palmese, Noah",
+    "season": "fsl2026",
+    "stuff_plus": 92.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 249
+  },
+  {
+    "player_name": "Reitz, Jason",
+    "season": "fsl2026",
+    "stuff_plus": 92.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 461
+  },
+  {
+    "player_name": "D\u00edaz, Joel",
+    "season": "fsl2026",
+    "stuff_plus": 92.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 79
+  },
+  {
+    "player_name": "Jones, Merit",
+    "season": "fsl2026",
+    "stuff_plus": 92.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1185
+  },
+  {
+    "player_name": "Scott, Win",
+    "season": "fsl2026",
+    "stuff_plus": 92.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 250
+  },
+  {
+    "player_name": "Smith, Tristan",
+    "season": "fsl2026",
+    "stuff_plus": 92.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 257
+  },
+  {
+    "player_name": "Brink, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 92.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 162
+  },
+  {
+    "player_name": "Rosario, Jonathan",
+    "season": "fsl2026",
+    "stuff_plus": 92.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Guevara, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 92.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Rosa, Pitterson",
+    "season": "fsl2026",
+    "stuff_plus": 92.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 138
+  },
+  {
+    "player_name": "Ware, Conner",
+    "season": "fsl2026",
+    "stuff_plus": 92.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 956
+  },
+  {
+    "player_name": "Rodriguez, Christian",
+    "season": "fsl2026",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 740
+  },
+  {
+    "player_name": "Stevens, Jonathan",
+    "season": "fsl2026",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 891
+  },
+  {
+    "player_name": "Yousuf, Zuher",
+    "season": "fsl2026",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 831
+  },
+  {
+    "player_name": "Crossland, Cade",
+    "season": "fsl2026",
+    "stuff_plus": 92.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1157
+  },
+  {
+    "player_name": "Torres, Stharlin",
+    "season": "fsl2026",
+    "stuff_plus": 92.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 542
+  },
+  {
+    "player_name": "Cepeda, Felix",
+    "season": "fsl2026",
+    "stuff_plus": 91.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 53
+  },
+  {
+    "player_name": "Moreta, Franklyn",
+    "season": "fsl2026",
+    "stuff_plus": 91.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 498
+  },
+  {
+    "player_name": "Williamson, Jadon",
+    "season": "fsl2026",
+    "stuff_plus": 91.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 145
+  },
+  {
+    "player_name": "Dunn, Ross",
+    "season": "fsl2026",
+    "stuff_plus": 91.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Gillespie, Blake",
+    "season": "fsl2026",
+    "stuff_plus": 91.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 236
+  },
+  {
+    "player_name": "Cain, Brandon",
+    "season": "fsl2026",
+    "stuff_plus": 91.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 739
+  },
+  {
+    "player_name": "Dominguez, Diego",
+    "season": "fsl2026",
+    "stuff_plus": 91.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 592
+  },
+  {
+    "player_name": "West, Justin",
+    "season": "fsl2026",
+    "stuff_plus": 91.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1169
+  },
+  {
+    "player_name": "Mendez, Greiber",
+    "season": "fsl2026",
+    "stuff_plus": 91.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 731
+  },
+  {
+    "player_name": "Fang, Callan",
+    "season": "fsl2026",
+    "stuff_plus": 91.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 326
+  },
+  {
+    "player_name": "Guzman, Jose",
+    "season": "fsl2026",
+    "stuff_plus": 91.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 439
+  },
+  {
+    "player_name": "Medina, Ian",
+    "season": "fsl2026",
+    "stuff_plus": 91.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 276
+  },
+  {
+    "player_name": "Avila, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 90.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 213
+  },
+  {
+    "player_name": "Scheffler, Dominic",
+    "season": "fsl2026",
+    "stuff_plus": 90.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 269
+  },
+  {
+    "player_name": "Alewine, Bryce",
+    "season": "fsl2026",
+    "stuff_plus": 90.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Velasquez, Luis",
+    "season": "fsl2026",
+    "stuff_plus": 90.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Evans, Donye",
+    "season": "fsl2026",
+    "stuff_plus": 90.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 325
+  },
+  {
+    "player_name": "Garcia, Josbel",
+    "season": "fsl2026",
+    "stuff_plus": 90.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 466
+  },
+  {
+    "player_name": "Amarante, Juan",
+    "season": "fsl2026",
+    "stuff_plus": 90.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Leys, Caleb",
+    "season": "fsl2026",
+    "stuff_plus": 90.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 803
+  },
+  {
+    "player_name": "Peralta, Engel",
+    "season": "fsl2026",
+    "stuff_plus": 90.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 104
+  },
+  {
+    "player_name": "Martinez, Jack",
+    "season": "fsl2026",
+    "stuff_plus": 90.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1122
+  },
+  {
+    "player_name": "Gaitan, Abraham",
+    "season": "fsl2026",
+    "stuff_plus": 89.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 324
+  },
+  {
+    "player_name": "Heidel, Brayden",
+    "season": "fsl2026",
+    "stuff_plus": 89.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 338
+  },
+  {
+    "player_name": "Morrissey, MT",
+    "season": "fsl2026",
+    "stuff_plus": 89.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 607
+  },
+  {
+    "player_name": "Warunek, Kevin",
+    "season": "fsl2026",
+    "stuff_plus": 89.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 79
+  },
+  {
+    "player_name": "Peters, Treyson",
+    "season": "fsl2026",
+    "stuff_plus": 89.8,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 127
+  },
+  {
+    "player_name": "Facundo, Allen",
+    "season": "fsl2026",
+    "stuff_plus": 89.7,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 237
+  },
+  {
+    "player_name": "Miller, Jake",
+    "season": "fsl2026",
+    "stuff_plus": 89.7,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 63
+  },
+  {
+    "player_name": "Aquino, Cesar",
+    "season": "fsl2026",
+    "stuff_plus": 89.6,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 393
+  },
+  {
+    "player_name": "Carpenter, Michael",
+    "season": "fsl2026",
+    "stuff_plus": 89.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Gallegos, Edgar",
+    "season": "fsl2026",
+    "stuff_plus": 89.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Shunck, RJ",
+    "season": "fsl2026",
+    "stuff_plus": 89.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 60
+  },
+  {
+    "player_name": "Wilson, Bradley",
+    "season": "fsl2026",
+    "stuff_plus": 89.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 736
+  },
+  {
+    "player_name": "Wooster, Caden",
+    "season": "fsl2026",
+    "stuff_plus": 89.3,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 261
+  },
+  {
+    "player_name": "Hansen, Pete",
+    "season": "fsl2026",
+    "stuff_plus": 89.2,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 93
+  },
+  {
+    "player_name": "Francisco, Brent",
+    "season": "fsl2026",
+    "stuff_plus": 89.0,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 314
+  },
+  {
+    "player_name": "Tippie, Matthew",
+    "season": "fsl2026",
+    "stuff_plus": 89.0,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 544
+  },
+  {
+    "player_name": "Uzcategui, Jonas",
+    "season": "fsl2026",
+    "stuff_plus": 89.0,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 97
+  },
+  {
+    "player_name": "Hubbart, Bryce",
+    "season": "fsl2026",
+    "stuff_plus": 88.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "McCoy, Kyle",
+    "season": "fsl2026",
+    "stuff_plus": 88.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 179
+  },
+  {
+    "player_name": "Herget, Kevin",
+    "season": "fsl2026",
+    "stuff_plus": 88.7,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Diaz, Jatnk",
+    "season": "fsl2026",
+    "stuff_plus": 88.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 530
+  },
+  {
+    "player_name": "Santos, Victor",
+    "season": "fsl2026",
+    "stuff_plus": 88.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 21
+  },
+  {
+    "player_name": "Suarez, Ramon",
+    "season": "fsl2026",
+    "stuff_plus": 88.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 185
+  },
+  {
+    "player_name": "Obispo, Emilio",
+    "season": "fsl2026",
+    "stuff_plus": 88.4,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 911
+  },
+  {
+    "player_name": "Havard, Peyton",
+    "season": "fsl2026",
+    "stuff_plus": 88.0,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 570
+  },
+  {
+    "player_name": "Hollan, Hunter",
+    "season": "fsl2026",
+    "stuff_plus": 88.0,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 61
+  },
+  {
+    "player_name": "Stuprich, Brennan",
+    "season": "fsl2026",
+    "stuff_plus": 87.7,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 551
+  },
+  {
+    "player_name": "Petri, Jorger",
+    "season": "fsl2026",
+    "stuff_plus": 87.6,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 97
+  },
+  {
+    "player_name": "Fonseca, Luis ",
+    "season": "fsl2026",
+    "stuff_plus": 87.3,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 281
+  },
+  {
+    "player_name": "Gaetano, Yonleg",
+    "season": "fsl2026",
+    "stuff_plus": 87.3,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 569
+  },
+  {
+    "player_name": "Salcedo, Yeraldo",
+    "season": "fsl2026",
+    "stuff_plus": 87.2,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 414
+  },
+  {
+    "player_name": "Garcia, Pedro",
+    "season": "fsl2026",
+    "stuff_plus": 86.9,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 661
+  },
+  {
+    "player_name": "Francia, Dariel",
+    "season": "fsl2026",
+    "stuff_plus": 86.6,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 497
+  },
+  {
+    "player_name": "Gilley, Cole",
+    "season": "fsl2026",
+    "stuff_plus": 86.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 625
+  },
+  {
+    "player_name": "Rodriguez, Carlos",
+    "season": "fsl2026",
+    "stuff_plus": 86.4,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 29
+  },
+  {
+    "player_name": "Valdez, Yoan",
+    "season": "fsl2026",
+    "stuff_plus": 86.4,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 69
+  },
+  {
+    "player_name": "Henderson, Ixan",
+    "season": "fsl2026",
+    "stuff_plus": 85.2,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Lantigua, Lisnerkin",
+    "season": "fsl2026",
+    "stuff_plus": 83.8,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 336
+  },
+  {
+    "player_name": "Shinn, Nathan",
+    "season": "fsl2026",
+    "stuff_plus": 83.2,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 311
+  },
+  {
+    "player_name": "Hebbert, Duque",
+    "season": "fsl2026",
+    "stuff_plus": 83.1,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "McCarthy, Nolan",
+    "season": "fsl2026",
+    "stuff_plus": 82.8,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 12
+  },
+  {
+    "player_name": "Batista, Yadiel",
+    "season": "fsl2026",
+    "stuff_plus": 81.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 545
+  },
+  {
+    "player_name": "Nunez, Irvin",
+    "season": "fsl2026",
+    "stuff_plus": 75.8,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 6
+  },
+  {
+    "player_name": "Bozzo, Gregory",
+    "season": "fsl2026",
+    "stuff_plus": 74.8,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 4
+  },
+  {
+    "player_name": "Gomez, Santiago",
+    "season": "fsl2026",
+    "stuff_plus": 73.6,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 29
+  },
+  {
+    "player_name": "Pettorini, Tyler",
+    "season": "fsl2026",
+    "stuff_plus": 73.5,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Tapia, Sergio",
+    "season": "fsl2026",
+    "stuff_plus": 72.1,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "Caraballo, Heriberto",
+    "season": "fsl2026",
+    "stuff_plus": 70.0,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 7
+  },
+  {
+    "player_name": "Darden, Taylor",
+    "season": "fsl2026",
+    "stuff_plus": 70.0,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 10
+  }
+]

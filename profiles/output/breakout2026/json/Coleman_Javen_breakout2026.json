@@ -1,0 +1,180 @@
+{
+  "player_name": "Coleman, Javen",
+  "season": "breakout2026",
+  "total_pitches": 13,
+  "p_throws": "L",
+  "arm_angle": 36.7,
+  "team": "TBP",
+  "pitcher_id": 694495,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 119.0,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 10,
+      "n_vs_r": 9,
+      "n_vs_l": 1,
+      "usage_pct": 76.9,
+      "usage_pct_vs_r": 75.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 93.1,
+      "ivb": 20.0,
+      "hb": 8.6,
+      "vaa": -4.08,
+      "haa": -1.38,
+      "spin": 2175,
+      "extension": 6.54,
+      "arm_angle": 36.1,
+      "release_height": 5.54,
+      "spin_axis_clock": "12:46",
+      "zone_pct": 50.0,
+      "chase_pct": 40.0,
+      "whiff_pct": 20.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.19,
+        -0.43,
+        0.2,
+        0.3,
+        0.27,
+        1.94,
+        -0.87,
+        -0.59,
+        0.37,
+        -1.19
+      ],
+      "locations_z": [
+        4.15,
+        1.8,
+        2.12,
+        2.86,
+        2.9,
+        4.54,
+        2.28,
+        3.15,
+        2.29,
+        3.24
+      ],
+      "locations_x_vs_r": [
+        0.19,
+        -0.43,
+        0.2,
+        0.3,
+        0.27,
+        -0.87,
+        -0.59,
+        0.37,
+        -1.19
+      ],
+      "locations_z_vs_r": [
+        4.15,
+        1.8,
+        2.12,
+        2.86,
+        2.9,
+        2.28,
+        3.15,
+        2.29,
+        3.24
+      ],
+      "locations_x_vs_l": [
+        1.94
+      ],
+      "locations_z_vs_l": [
+        4.54
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 90.4,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 15.4,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.0,
+      "ivb": 7.4,
+      "hb": 5.4,
+      "vaa": -5.6,
+      "haa": -1.18,
+      "spin": 1134,
+      "extension": 6.47,
+      "arm_angle": 40.8,
+      "release_height": 5.76,
+      "spin_axis_clock": "1:10",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.131,
+      "locations_x": [
+        0.43,
+        0.05
+      ],
+      "locations_z": [
+        3.3,
+        3.67
+      ],
+      "locations_x_vs_r": [
+        0.43,
+        0.05
+      ],
+      "locations_z_vs_r": [
+        3.3,
+        3.67
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 105.1,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 7.7,
+      "usage_pct_vs_r": 8.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 85.4,
+      "ivb": 5.9,
+      "hb": -8.9,
+      "vaa": -7.88,
+      "haa": -3.33,
+      "spin": 2367,
+      "extension": 6.49,
+      "arm_angle": 33.2,
+      "release_height": 5.44,
+      "spin_axis_clock": "10:07",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.272,
+      "locations_x": [
+        -0.06
+      ],
+      "locations_z": [
+        1.1
+      ],
+      "locations_x_vs_r": [
+        -0.06
+      ],
+      "locations_z_vs_r": [
+        1.1
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

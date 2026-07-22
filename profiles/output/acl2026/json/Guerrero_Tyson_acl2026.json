@@ -1,0 +1,219 @@
+{
+  "player_name": "Guerrero, Tyson",
+  "season": "acl2026",
+  "total_pitches": 13,
+  "p_throws": "L",
+  "arm_angle": 32.3,
+  "team": "A-ROY",
+  "pitcher_id": 694553,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 73.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 3,
+      "n_vs_l": 2,
+      "usage_pct": 38.5,
+      "usage_pct_vs_r": 42.9,
+      "usage_pct_vs_l": 33.3,
+      "velo": 92.6,
+      "ivb": 11.9,
+      "hb": 8.1,
+      "vaa": -5.48,
+      "haa": -1.84,
+      "spin": 488,
+      "extension": 6.21,
+      "arm_angle": 31.8,
+      "release_height": 5.53,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.01,
+        -1.25,
+        1.11,
+        -0.61,
+        -1.32
+      ],
+      "locations_z": [
+        2.13,
+        1.99,
+        2.19,
+        2.45,
+        2.91
+      ],
+      "locations_x_vs_r": [
+        1.11,
+        -0.61,
+        -1.32
+      ],
+      "locations_z_vs_r": [
+        2.19,
+        2.45,
+        2.91
+      ],
+      "locations_x_vs_l": [
+        -0.01,
+        -1.25
+      ],
+      "locations_z_vs_l": [
+        2.13,
+        1.99
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 70.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 23.1,
+      "usage_pct_vs_r": 28.6,
+      "usage_pct_vs_l": 16.7,
+      "velo": 91.9,
+      "ivb": 10.8,
+      "hb": 13.9,
+      "vaa": -5.61,
+      "haa": -1.16,
+      "spin": 72,
+      "extension": 6.23,
+      "arm_angle": 33.3,
+      "release_height": 5.59,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.63,
+        1.13,
+        -0.71
+      ],
+      "locations_z": [
+        2.26,
+        2.31,
+        2.69
+      ],
+      "locations_x_vs_r": [
+        1.13,
+        -0.71
+      ],
+      "locations_z_vs_r": [
+        2.31,
+        2.69
+      ],
+      "locations_x_vs_l": [
+        -1.63
+      ],
+      "locations_z_vs_l": [
+        2.26
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.3,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 23.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 81.7,
+      "ivb": 5.4,
+      "hb": -10.0,
+      "vaa": -6.89,
+      "haa": -4.33,
+      "spin": 2510,
+      "extension": 6.23,
+      "arm_angle": 30.9,
+      "release_height": 5.51,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.23,
+        -2.43,
+        -0.63
+      ],
+      "locations_z": [
+        2.11,
+        2.9,
+        2.15
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.23,
+        -2.43,
+        -0.63
+      ],
+      "locations_z_vs_l": [
+        2.11,
+        2.9,
+        2.15
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 82.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 15.4,
+      "usage_pct_vs_r": 28.6,
+      "usage_pct_vs_l": 0.0,
+      "velo": 86.0,
+      "ivb": 6.8,
+      "hb": 13.5,
+      "vaa": -6.24,
+      "haa": -1.31,
+      "spin": 71,
+      "extension": 6.29,
+      "arm_angle": 33.2,
+      "release_height": 5.5,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.38,
+        0.11
+      ],
+      "locations_z": [
+        2.24,
+        2.57
+      ],
+      "locations_x_vs_r": [
+        -1.38,
+        0.11
+      ],
+      "locations_z_vs_r": [
+        2.24,
+        2.57
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

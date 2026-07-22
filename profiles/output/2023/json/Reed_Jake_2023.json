@@ -1,0 +1,320 @@
+{
+  "player_name": "Reed, Jake",
+  "season": "2023",
+  "total_pitches": 29,
+  "p_throws": "R",
+  "arm_angle": -5.9,
+  "team": "LAD",
+  "pitcher_id": 596082,
+  "age": 31,
+  "ip_str": "0.1",
+  "era": 108.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2023/Reed_Jake_2023.png",
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 94.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 13,
+      "n_vs_r": 9,
+      "n_vs_l": 4,
+      "usage_pct": 44.8,
+      "usage_pct_vs_r": 56.2,
+      "usage_pct_vs_l": 30.8,
+      "velo": 79.9,
+      "ivb": 4.3,
+      "hb": -10.9,
+      "vaa": -5.56,
+      "haa": 5.02,
+      "spin": 2355,
+      "extension": 5.21,
+      "arm_angle": -6.1,
+      "release_height": 4.32,
+      "spin_axis_clock": "8:30",
+      "zone_pct": 69.2,
+      "chase_pct": 25.0,
+      "whiff_pct": 28.6,
+      "xwoba_contact": 0.796,
+      "locations_x": [
+        -0.14,
+        -0.56,
+        0.12,
+        0.06,
+        0.57,
+        0.01,
+        -1.22,
+        -0.57,
+        -0.39,
+        -0.82,
+        0.13,
+        0.62,
+        1.81
+      ],
+      "locations_z": [
+        2.27,
+        2.42,
+        2.9,
+        3.59,
+        2.69,
+        2.99,
+        2.98,
+        3.57,
+        2.13,
+        2.42,
+        2.82,
+        2.7,
+        2.33
+      ],
+      "locations_x_vs_r": [
+        -0.14,
+        0.06,
+        0.57,
+        0.01,
+        -1.22,
+        -0.57,
+        0.13,
+        0.62,
+        1.81
+      ],
+      "locations_z_vs_r": [
+        2.27,
+        3.59,
+        2.69,
+        2.99,
+        2.98,
+        3.57,
+        2.82,
+        2.7,
+        2.33
+      ],
+      "locations_x_vs_l": [
+        -0.56,
+        0.12,
+        -0.39,
+        -0.82
+      ],
+      "locations_z_vs_l": [
+        2.42,
+        2.9,
+        2.13,
+        2.42
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 89.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 9,
+      "n_vs_r": 7,
+      "n_vs_l": 2,
+      "usage_pct": 31.0,
+      "usage_pct_vs_r": 43.8,
+      "usage_pct_vs_l": 15.4,
+      "velo": 88.2,
+      "ivb": -1.0,
+      "hb": 17.9,
+      "vaa": -4.95,
+      "haa": 1.38,
+      "spin": 2145,
+      "extension": 5.34,
+      "arm_angle": -12.0,
+      "release_height": 4.11,
+      "spin_axis_clock": "2:47",
+      "zone_pct": 44.4,
+      "chase_pct": 20.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.231,
+      "locations_x": [
+        -0.42,
+        -0.57,
+        -0.88,
+        1.72,
+        0.0,
+        -0.73,
+        -2.75,
+        -2.5,
+        0.71
+      ],
+      "locations_z": [
+        2.39,
+        2.77,
+        3.21,
+        2.79,
+        2.39,
+        4.03,
+        2.4,
+        3.32,
+        2.95
+      ],
+      "locations_x_vs_r": [
+        -0.42,
+        -0.57,
+        -0.88,
+        1.72,
+        0.0,
+        -0.73,
+        0.71
+      ],
+      "locations_z_vs_r": [
+        2.39,
+        2.77,
+        3.21,
+        2.79,
+        2.39,
+        4.03,
+        2.95
+      ],
+      "locations_x_vs_l": [
+        -2.75,
+        -2.5
+      ],
+      "locations_z_vs_l": [
+        2.4,
+        3.32
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 13.8,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 30.8,
+      "velo": 84.8,
+      "ivb": 7.2,
+      "hb": 5.0,
+      "vaa": -4.11,
+      "haa": 3.87,
+      "spin": 2335,
+      "extension": 5.2,
+      "arm_angle": -8.4,
+      "release_height": 4.37,
+      "spin_axis_clock": "1:42",
+      "zone_pct": 25.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.91,
+        -1.05,
+        1.44,
+        0.38
+      ],
+      "locations_z": [
+        3.02,
+        3.44,
+        3.83,
+        3.37
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.91,
+        -1.05,
+        1.44,
+        0.38
+      ],
+      "locations_z_vs_l": [
+        3.02,
+        3.44,
+        3.83,
+        3.37
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 85.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 6.9,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 15.4,
+      "velo": 90.0,
+      "ivb": 6.3,
+      "hb": 16.1,
+      "vaa": -4.11,
+      "haa": 0.67,
+      "spin": 2240,
+      "extension": 5.4,
+      "arm_angle": 1.9,
+      "release_height": 4.68,
+      "spin_axis_clock": "2:21",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.24,
+        -1.63
+      ],
+      "locations_z": [
+        3.6,
+        3.17
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.24,
+        -1.63
+      ],
+      "locations_z_vs_l": [
+        3.6,
+        3.17
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 102.7,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 3.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 7.7,
+      "velo": 81.6,
+      "ivb": -5.6,
+      "hb": 19.7,
+      "vaa": -7.2,
+      "haa": 0.53,
+      "spin": 1738,
+      "extension": 5.7,
+      "arm_angle": -5.1,
+      "release_height": 4.44,
+      "spin_axis_clock": "3:32",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.147,
+      "locations_x": [
+        -0.97
+      ],
+      "locations_z": [
+        2.12
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.97
+      ],
+      "locations_z_vs_l": [
+        2.12
+      ]
+    }
+  ]
+}

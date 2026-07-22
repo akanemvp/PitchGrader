@@ -1,0 +1,166 @@
+{
+  "player_name": "Hall, Nathan",
+  "season": "acl2026",
+  "total_pitches": 10,
+  "p_throws": "R",
+  "arm_angle": 32.8,
+  "team": "F-MET",
+  "pitcher_id": 807937,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 5,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 93.1,
+      "ivb": 14.5,
+      "hb": 5.8,
+      "vaa": -3.84,
+      "haa": 2.04,
+      "spin": 2399,
+      "extension": 5.98,
+      "arm_angle": 32.0,
+      "release_height": 5.54,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.1,
+        0.24,
+        1.48,
+        0.33,
+        0.78
+      ],
+      "locations_z": [
+        3.02,
+        5.15,
+        2.68,
+        2.9,
+        4.17
+      ],
+      "locations_x_vs_r": [
+        -0.1,
+        0.24,
+        1.48,
+        0.33,
+        0.78
+      ],
+      "locations_z_vs_r": [
+        3.02,
+        5.15,
+        2.68,
+        2.9,
+        4.17
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 40.0,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.2,
+      "ivb": 1.4,
+      "hb": -1.6,
+      "vaa": -7.1,
+      "haa": 2.92,
+      "spin": 2669,
+      "extension": 5.94,
+      "arm_angle": 30.0,
+      "release_height": 5.47,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 75.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.16,
+        0.36,
+        1.81,
+        0.11
+      ],
+      "locations_z": [
+        2.4,
+        2.57,
+        0.37,
+        2.84
+      ],
+      "locations_x_vs_r": [
+        0.16,
+        0.36,
+        1.81,
+        0.11
+      ],
+      "locations_z_vs_r": [
+        2.4,
+        2.57,
+        0.37,
+        2.84
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 96.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 10.0,
+      "usage_pct_vs_r": 10.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 78.6,
+      "ivb": -14.5,
+      "hb": -8.0,
+      "vaa": -9.74,
+      "haa": 1.5,
+      "spin": 2786,
+      "extension": 5.89,
+      "arm_angle": 36.5,
+      "release_height": 5.8,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.26
+      ],
+      "locations_z": [
+        2.06
+      ],
+      "locations_x_vs_r": [
+        -1.26
+      ],
+      "locations_z_vs_r": [
+        2.06
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

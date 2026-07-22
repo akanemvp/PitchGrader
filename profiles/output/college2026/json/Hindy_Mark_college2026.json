@@ -1,0 +1,281 @@
+{
+  "player_name": "Hindy, Mark",
+  "season": "college2026",
+  "total_pitches": 28,
+  "p_throws": "L",
+  "arm_angle": 42.3,
+  "team": "UT",
+  "pitcher_id": 810962,
+  "age": null,
+  "ip_str": "1.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 78.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 15,
+      "n_vs_r": 6,
+      "n_vs_l": 9,
+      "usage_pct": 53.6,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 89.8,
+      "ivb": 10.7,
+      "hb": 6.6,
+      "vaa": -5.53,
+      "haa": -0.37,
+      "spin": 2083,
+      "extension": 6.37,
+      "arm_angle": 42.8,
+      "release_height": 5.7,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 26.7,
+      "chase_pct": 27.3,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.25,
+        0.54,
+        -0.43,
+        -1.35,
+        -0.09,
+        1.43,
+        1.5,
+        1.32,
+        -1.08,
+        0.9,
+        -0.76,
+        0.43,
+        0.62,
+        -0.71,
+        -0.43
+      ],
+      "locations_z": [
+        4.06,
+        3.81,
+        3.8,
+        2.45,
+        2.01,
+        3.36,
+        1.92,
+        2.05,
+        2.28,
+        2.98,
+        3.28,
+        1.96,
+        3.89,
+        1.01,
+        1.6
+      ],
+      "locations_x_vs_r": [
+        -0.09,
+        1.43,
+        1.5,
+        1.32,
+        -1.08,
+        0.9
+      ],
+      "locations_z_vs_r": [
+        2.01,
+        3.36,
+        1.92,
+        2.05,
+        2.28,
+        2.98
+      ],
+      "locations_x_vs_l": [
+        1.25,
+        0.54,
+        -0.43,
+        -1.35,
+        -0.76,
+        0.43,
+        0.62,
+        -0.71,
+        -0.43
+      ],
+      "locations_z_vs_l": [
+        4.06,
+        3.81,
+        3.8,
+        2.45,
+        3.28,
+        1.96,
+        3.89,
+        1.01,
+        1.6
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 99.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 10,
+      "n_vs_r": 2,
+      "n_vs_l": 8,
+      "usage_pct": 35.7,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 44.4,
+      "velo": 84.8,
+      "ivb": 4.5,
+      "hb": -1.7,
+      "vaa": -6.66,
+      "haa": -1.96,
+      "spin": 2255,
+      "extension": 6.3,
+      "arm_angle": 42.6,
+      "release_height": 5.76,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 20.0,
+      "chase_pct": 12.5,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.63,
+        0.98,
+        -1.12,
+        -0.67,
+        -0.08,
+        -0.41,
+        0.16,
+        1.56,
+        -2.2,
+        -2.33
+      ],
+      "locations_z": [
+        2.27,
+        3.97,
+        2.13,
+        0.79,
+        3.31,
+        4.46,
+        1.94,
+        3.58,
+        1.49,
+        2.33
+      ],
+      "locations_x_vs_r": [
+        -0.08,
+        0.16
+      ],
+      "locations_z_vs_r": [
+        3.31,
+        1.94
+      ],
+      "locations_x_vs_l": [
+        -0.63,
+        0.98,
+        -1.12,
+        -0.67,
+        -0.41,
+        1.56,
+        -2.2,
+        -2.33
+      ],
+      "locations_z_vs_l": [
+        2.27,
+        3.97,
+        2.13,
+        0.79,
+        4.46,
+        3.58,
+        1.49,
+        2.33
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 77.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 7.1,
+      "usage_pct_vs_r": 10.0,
+      "usage_pct_vs_l": 5.6,
+      "velo": 89.0,
+      "ivb": 10.3,
+      "hb": 10.7,
+      "vaa": -6.28,
+      "haa": -0.36,
+      "spin": 2029,
+      "extension": 6.48,
+      "arm_angle": 41.5,
+      "release_height": 5.57,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.03,
+        -0.2
+      ],
+      "locations_z": [
+        2.02,
+        2.07
+      ],
+      "locations_x_vs_r": [
+        -0.2
+      ],
+      "locations_z_vs_r": [
+        2.07
+      ],
+      "locations_x_vs_l": [
+        -0.03
+      ],
+      "locations_z_vs_l": [
+        2.02
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 74.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 3.6,
+      "usage_pct_vs_r": 10.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 89.8,
+      "ivb": 13.4,
+      "hb": 11.4,
+      "vaa": -6.19,
+      "haa": 0.09,
+      "spin": 2222,
+      "extension": 6.28,
+      "arm_angle": 42.5,
+      "release_height": 5.6,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.09
+      ],
+      "locations_z": [
+        1.89
+      ],
+      "locations_x_vs_r": [
+        0.09
+      ],
+      "locations_z_vs_r": [
+        1.89
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

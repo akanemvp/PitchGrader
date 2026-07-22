@@ -1,0 +1,202 @@
+{
+  "player_name": "Steeves, Austin",
+  "season": "college2026",
+  "total_pitches": 18,
+  "p_throws": "L",
+  "arm_angle": 28.0,
+  "team": "SU",
+  "pitcher_id": 827527,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 40.5,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 84.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 13,
+      "n_vs_r": 11,
+      "n_vs_l": 2,
+      "usage_pct": 72.2,
+      "usage_pct_vs_r": 84.6,
+      "usage_pct_vs_l": 40.0,
+      "velo": 86.6,
+      "ivb": 15.1,
+      "hb": 7.1,
+      "vaa": -4.96,
+      "haa": -0.83,
+      "spin": 2102,
+      "extension": 6.44,
+      "arm_angle": 31.1,
+      "release_height": 5.31,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 23.1,
+      "chase_pct": 20.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.07,
+        -0.86,
+        -0.06,
+        0.27,
+        0.79,
+        0.22,
+        -1.09,
+        1.1,
+        0.38,
+        0.93,
+        1.4,
+        1.22,
+        0.6
+      ],
+      "locations_z": [
+        4.97,
+        1.78,
+        2.34,
+        3.54,
+        3.44,
+        1.57,
+        0.29,
+        0.94,
+        2.81,
+        2.9,
+        4.07,
+        2.85,
+        3.92
+      ],
+      "locations_x_vs_r": [
+        -0.07,
+        -0.86,
+        -0.06,
+        0.27,
+        -1.09,
+        1.1,
+        0.38,
+        0.93,
+        1.4,
+        1.22,
+        0.6
+      ],
+      "locations_z_vs_r": [
+        4.97,
+        1.78,
+        2.34,
+        3.54,
+        0.29,
+        0.94,
+        2.81,
+        2.9,
+        4.07,
+        2.85,
+        3.92
+      ],
+      "locations_x_vs_l": [
+        0.79,
+        0.22
+      ],
+      "locations_z_vs_l": [
+        3.44,
+        1.57
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 22.2,
+      "usage_pct_vs_r": 7.7,
+      "usage_pct_vs_l": 60.0,
+      "velo": 77.9,
+      "ivb": -3.1,
+      "hb": -5.2,
+      "vaa": -7.66,
+      "haa": -2.93,
+      "spin": 2260,
+      "extension": 6.19,
+      "arm_angle": 29.1,
+      "release_height": 5.35,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.21,
+        -0.29,
+        -0.4,
+        0.56
+      ],
+      "locations_z": [
+        1.97,
+        1.73,
+        3.26,
+        2.7
+      ],
+      "locations_x_vs_r": [
+        -0.21
+      ],
+      "locations_z_vs_r": [
+        1.97
+      ],
+      "locations_x_vs_l": [
+        -0.29,
+        -0.4,
+        0.56
+      ],
+      "locations_z_vs_l": [
+        1.73,
+        3.26,
+        2.7
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 72.4,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 5.6,
+      "usage_pct_vs_r": 7.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.7,
+      "ivb": 13.1,
+      "hb": 10.4,
+      "vaa": -3.66,
+      "haa": -0.39,
+      "spin": 1553,
+      "extension": 6.27,
+      "arm_angle": 23.9,
+      "release_height": 5.15,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.24
+      ],
+      "locations_z": [
+        4.0
+      ],
+      "locations_x_vs_r": [
+        1.24
+      ],
+      "locations_z_vs_r": [
+        4.0
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

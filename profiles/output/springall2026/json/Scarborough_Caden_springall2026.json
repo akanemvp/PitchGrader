@@ -1,0 +1,213 @@
+{
+  "player_name": "Scarborough, Caden",
+  "season": "springall2026",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 27.5,
+  "team": "ALF",
+  "pitcher_id": 807291,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 97.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 1,
+      "n_vs_l": 4,
+      "usage_pct": 45.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 50.0,
+      "velo": 93.6,
+      "ivb": 11.9,
+      "hb": 10.0,
+      "vaa": -4.72,
+      "haa": 1.84,
+      "spin": 2330,
+      "extension": 7.14,
+      "arm_angle": 27.1,
+      "release_height": 4.92,
+      "spin_axis_clock": "10:39",
+      "zone_pct": 80.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 1.088,
+      "locations_x": [
+        -1.02,
+        0.2,
+        0.33,
+        -0.43,
+        -0.36
+      ],
+      "locations_z": [
+        2.53,
+        1.93,
+        2.42,
+        2.37,
+        2.55
+      ],
+      "locations_x_vs_r": [
+        0.33
+      ],
+      "locations_z_vs_r": [
+        2.42
+      ],
+      "locations_x_vs_l": [
+        -1.02,
+        0.2,
+        -0.43,
+        -0.36
+      ],
+      "locations_z_vs_l": [
+        2.53,
+        1.93,
+        2.37,
+        2.55
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 109.0,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 27.3,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 25.0,
+      "velo": 85.8,
+      "ivb": -2.1,
+      "hb": -6.0,
+      "vaa": -7.09,
+      "haa": 3.45,
+      "spin": 2586,
+      "extension": 7.11,
+      "arm_angle": 28.4,
+      "release_height": 5.03,
+      "spin_axis_clock": "3:36",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.54,
+        -0.02,
+        0.13
+      ],
+      "locations_z": [
+        1.66,
+        2.29,
+        1.86
+      ],
+      "locations_x_vs_r": [
+        0.13
+      ],
+      "locations_z_vs_r": [
+        1.86
+      ],
+      "locations_x_vs_l": [
+        -0.54,
+        -0.02
+      ],
+      "locations_z_vs_l": [
+        1.66,
+        2.29
+      ]
+    },
+    {
+      "pitch_type": "ST",
+      "pitch_name": "Sweeper",
+      "stuff_plus": 95.6,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 18.2,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 12.5,
+      "velo": 79.7,
+      "ivb": 2.2,
+      "hb": -18.4,
+      "vaa": -7.63,
+      "haa": 4.09,
+      "spin": 2966,
+      "extension": 7.13,
+      "arm_angle": 26.4,
+      "release_height": 4.85,
+      "spin_axis_clock": "2:46",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.06,
+      "locations_x": [
+        -0.26,
+        -1.02
+      ],
+      "locations_z": [
+        0.89,
+        2.03
+      ],
+      "locations_x_vs_r": [
+        -1.02
+      ],
+      "locations_z_vs_r": [
+        2.03
+      ],
+      "locations_x_vs_l": [
+        -0.26
+      ],
+      "locations_z_vs_l": [
+        0.89
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 92.5,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 9.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 12.5,
+      "velo": 83.6,
+      "ivb": 0.5,
+      "hb": 10.4,
+      "vaa": -7.29,
+      "haa": 0.09,
+      "spin": 1227,
+      "extension": 7.17,
+      "arm_angle": 28.0,
+      "release_height": 4.97,
+      "spin_axis_clock": "9:06",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.85
+      ],
+      "locations_z": [
+        1.7
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.85
+      ],
+      "locations_z_vs_l": [
+        1.7
+      ]
+    }
+  ]
+}

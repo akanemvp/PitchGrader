@@ -1,0 +1,60 @@
+{
+  "player_name": "Wallner, Matt",
+  "season": "2024",
+  "total_pitches": 2,
+  "p_throws": "R",
+  "arm_angle": 54.0,
+  "team": "MIN",
+  "pitcher_id": 670242,
+  "age": 27,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2024/Wallner_Matt_2024.png",
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 70.0,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 78.5,
+      "ivb": 19.7,
+      "hb": 7.6,
+      "vaa": -8.91,
+      "haa": -0.31,
+      "spin": 2051,
+      "extension": 4.8,
+      "arm_angle": 54.0,
+      "release_height": 7.62,
+      "spin_axis_clock": "12:47",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.007,
+      "locations_x": [
+        0.08,
+        -0.38
+      ],
+      "locations_z": [
+        0.47,
+        2.65
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.08,
+        -0.38
+      ],
+      "locations_z_vs_l": [
+        0.47,
+        2.65
+      ]
+    }
+  ]
+}

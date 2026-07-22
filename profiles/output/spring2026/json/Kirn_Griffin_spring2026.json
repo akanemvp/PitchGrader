@@ -1,0 +1,97 @@
+{
+  "player_name": "Kirn, Griffin",
+  "season": "spring2026",
+  "total_pitches": 2,
+  "p_throws": "L",
+  "arm_angle": 16.9,
+  "team": "ATH",
+  "pitcher_id": 822488,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 92.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 91.1,
+      "ivb": 12.4,
+      "hb": 6.4,
+      "vaa": -5.25,
+      "haa": -3.4,
+      "spin": 2250,
+      "extension": 6.03,
+      "arm_angle": 19.3,
+      "release_height": 5.27,
+      "spin_axis_clock": "12:55",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.43
+      ],
+      "locations_z": [
+        2.34
+      ],
+      "locations_x_vs_r": [
+        -0.43
+      ],
+      "locations_z_vs_r": [
+        2.34
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.1,
+      "ivb": 1.0,
+      "hb": -1.6,
+      "vaa": -7.9,
+      "haa": -3.48,
+      "spin": 2585,
+      "extension": 5.78,
+      "arm_angle": 14.5,
+      "release_height": 5.12,
+      "spin_axis_clock": "10:04",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.4
+      ],
+      "locations_z": [
+        1.43
+      ],
+      "locations_x_vs_r": [
+        0.4
+      ],
+      "locations_z_vs_r": [
+        1.43
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "player_name": "Broca, Jes\u00fas",
+  "season": "breakout2026",
+  "total_pitches": 8,
+  "p_throws": "L",
+  "arm_angle": 31.9,
+  "team": "MBP",
+  "pitcher_id": 695871,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 87.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 37.5,
+      "usage_pct_vs_r": 37.5,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.0,
+      "ivb": -0.4,
+      "hb": -5.2,
+      "vaa": -7.61,
+      "haa": -2.45,
+      "spin": 2316,
+      "extension": 5.08,
+      "arm_angle": 30.9,
+      "release_height": 5.45,
+      "spin_axis_clock": "8:47",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.43,
+        -0.1,
+        -0.06
+      ],
+      "locations_z": [
+        0.11,
+        2.83,
+        3.13
+      ],
+      "locations_x_vs_r": [
+        -0.43,
+        -0.1,
+        -0.06
+      ],
+      "locations_z_vs_r": [
+        0.11,
+        2.83,
+        3.13
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 71.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.7,
+      "ivb": 8.8,
+      "hb": 14.9,
+      "vaa": -7.95,
+      "haa": 0.01,
+      "spin": 1817,
+      "extension": 5.3,
+      "arm_angle": 29.5,
+      "release_height": 5.14,
+      "spin_axis_clock": "2:00",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.3,
+        0.27
+      ],
+      "locations_z": [
+        0.4,
+        0.77
+      ],
+      "locations_x_vs_r": [
+        0.3,
+        0.27
+      ],
+      "locations_z_vs_r": [
+        0.4,
+        0.77
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 87.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 92.5,
+      "ivb": 5.9,
+      "hb": 14.6,
+      "vaa": -6.29,
+      "haa": -1.04,
+      "spin": 1948,
+      "extension": 5.28,
+      "arm_angle": 31.4,
+      "release_height": 5.23,
+      "spin_axis_clock": "2:16",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.41,
+        0.21
+      ],
+      "locations_z": [
+        1.24,
+        2.36
+      ],
+      "locations_x_vs_r": [
+        -1.41,
+        0.21
+      ],
+      "locations_z_vs_r": [
+        1.24,
+        2.36
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 84.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 12.5,
+      "usage_pct_vs_l": 0.0,
+      "velo": 93.7,
+      "ivb": 15.0,
+      "hb": 3.6,
+      "vaa": -4.0,
+      "haa": -0.32,
+      "spin": 2057,
+      "extension": 5.27,
+      "arm_angle": 35.9,
+      "release_height": 5.45,
+      "spin_axis_clock": "12:27",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.89
+      ],
+      "locations_z": [
+        3.28
+      ],
+      "locations_x_vs_r": [
+        0.89
+      ],
+      "locations_z_vs_r": [
+        3.28
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "player_name": "Wallace, Jacob",
+  "season": "springall2026",
+  "total_pitches": 21,
+  "p_throws": "R",
+  "arm_angle": 38.3,
+  "team": "ATL",
+  "pitcher_id": 686608,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 103.3,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 11,
+      "n_vs_r": 8,
+      "n_vs_l": 3,
+      "usage_pct": 52.4,
+      "usage_pct_vs_r": 53.3,
+      "usage_pct_vs_l": 50.0,
+      "velo": 86.8,
+      "ivb": 5.1,
+      "hb": -3.4,
+      "vaa": -6.72,
+      "haa": 2.14,
+      "spin": 2555,
+      "extension": 6.1,
+      "arm_angle": 39.0,
+      "release_height": 5.71,
+      "spin_axis_clock": "1:10",
+      "zone_pct": 54.5,
+      "chase_pct": 20.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.478,
+      "locations_x": [
+        1.8,
+        -0.8,
+        0.06,
+        -1.27,
+        -0.8,
+        -0.64,
+        -0.85,
+        -0.53,
+        -1.02,
+        -0.28,
+        -0.58
+      ],
+      "locations_z": [
+        2.8,
+        1.87,
+        2.64,
+        2.54,
+        1.47,
+        2.35,
+        2.92,
+        2.54,
+        1.59,
+        3.19,
+        2.45
+      ],
+      "locations_x_vs_r": [
+        -1.27,
+        -0.8,
+        -0.64,
+        -0.85,
+        -0.53,
+        -1.02,
+        -0.28,
+        -0.58
+      ],
+      "locations_z_vs_r": [
+        2.54,
+        1.47,
+        2.35,
+        2.92,
+        2.54,
+        1.59,
+        3.19,
+        2.45
+      ],
+      "locations_x_vs_l": [
+        1.8,
+        -0.8,
+        0.06
+      ],
+      "locations_z_vs_l": [
+        2.8,
+        1.87,
+        2.64
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 102.9,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 5,
+      "n_vs_l": 2,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 33.3,
+      "velo": 84.9,
+      "ivb": -1.5,
+      "hb": -5.9,
+      "vaa": -8.52,
+      "haa": 3.11,
+      "spin": 2755,
+      "extension": 6.08,
+      "arm_angle": 40.1,
+      "release_height": 5.75,
+      "spin_axis_clock": "3:30",
+      "zone_pct": 28.6,
+      "chase_pct": 60.0,
+      "whiff_pct": 75.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.58,
+        0.18,
+        0.24,
+        -0.18,
+        0.5,
+        1.11,
+        0.15
+      ],
+      "locations_z": [
+        1.31,
+        1.48,
+        2.93,
+        1.03,
+        2.15,
+        1.25,
+        0.21
+      ],
+      "locations_x_vs_r": [
+        0.24,
+        -0.18,
+        0.5,
+        1.11,
+        0.15
+      ],
+      "locations_z_vs_r": [
+        2.93,
+        1.03,
+        2.15,
+        1.25,
+        0.21
+      ],
+      "locations_x_vs_l": [
+        0.58,
+        0.18
+      ],
+      "locations_z_vs_l": [
+        1.31,
+        1.48
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.1,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 13.3,
+      "usage_pct_vs_l": 16.7,
+      "velo": 92.4,
+      "ivb": 11.9,
+      "hb": 14.2,
+      "vaa": -6.11,
+      "haa": -0.24,
+      "spin": 2363,
+      "extension": 6.25,
+      "arm_angle": 35.8,
+      "release_height": 5.53,
+      "spin_axis_clock": "10:25",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.622,
+      "locations_x": [
+        0.36,
+        -1.37,
+        -2.42
+      ],
+      "locations_z": [
+        2.15,
+        1.58,
+        1.97
+      ],
+      "locations_x_vs_r": [
+        -1.37,
+        -2.42
+      ],
+      "locations_z_vs_r": [
+        1.58,
+        1.97
+      ],
+      "locations_x_vs_l": [
+        0.36
+      ],
+      "locations_z_vs_l": [
+        2.15
+      ]
+    }
+  ]
+}

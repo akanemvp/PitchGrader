@@ -1,0 +1,180 @@
+{
+  "player_name": "Simon, Ben",
+  "season": "breakout2026",
+  "total_pitches": 13,
+  "p_throws": "R",
+  "arm_angle": 35.8,
+  "team": "NMP",
+  "pitcher_id": 815084,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 111.8,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 8,
+      "n_vs_r": 1,
+      "n_vs_l": 7,
+      "usage_pct": 61.5,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 58.3,
+      "velo": 94.5,
+      "ivb": 18.0,
+      "hb": 11.5,
+      "vaa": -4.39,
+      "haa": 0.99,
+      "spin": 2293,
+      "extension": 6.3,
+      "arm_angle": 38.0,
+      "release_height": 5.46,
+      "spin_axis_clock": "10:55",
+      "zone_pct": 37.5,
+      "chase_pct": 20.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.379,
+      "locations_x": [
+        0.55,
+        1.44,
+        -0.98,
+        0.16,
+        -0.07,
+        0.2,
+        0.17,
+        -0.16
+      ],
+      "locations_z": [
+        3.67,
+        2.36,
+        3.12,
+        2.52,
+        3.96,
+        2.46,
+        2.26,
+        1.53
+      ],
+      "locations_x_vs_r": [
+        0.2
+      ],
+      "locations_z_vs_r": [
+        2.46
+      ],
+      "locations_x_vs_l": [
+        0.55,
+        1.44,
+        -0.98,
+        0.16,
+        -0.07,
+        0.17,
+        -0.16
+      ],
+      "locations_z_vs_l": [
+        3.67,
+        2.36,
+        3.12,
+        2.52,
+        3.96,
+        2.26,
+        1.53
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 99.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 30.8,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 33.3,
+      "velo": 86.4,
+      "ivb": 2.9,
+      "hb": 0.1,
+      "vaa": -7.36,
+      "haa": 2.97,
+      "spin": 2048,
+      "extension": 6.16,
+      "arm_angle": 34.2,
+      "release_height": 5.3,
+      "spin_axis_clock": "12:59",
+      "zone_pct": 25.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 50.0,
+      "xwoba_contact": 0.877,
+      "locations_x": [
+        0.48,
+        1.69,
+        0.69,
+        0.0
+      ],
+      "locations_z": [
+        2.2,
+        2.23,
+        0.74,
+        1.29
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.48,
+        1.69,
+        0.69,
+        0.0
+      ],
+      "locations_z_vs_l": [
+        2.2,
+        2.23,
+        0.74,
+        1.29
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 91.7,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 7.7,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 8.3,
+      "velo": 87.5,
+      "ivb": 2.5,
+      "hb": 10.6,
+      "vaa": -7.27,
+      "haa": 1.29,
+      "spin": 1312,
+      "extension": 6.25,
+      "arm_angle": 35.3,
+      "release_height": 5.31,
+      "spin_axis_clock": "9:27",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.058,
+      "locations_x": [
+        0.15
+      ],
+      "locations_z": [
+        1.66
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.15
+      ],
+      "locations_z_vs_l": [
+        1.66
+      ]
+    }
+  ]
+}

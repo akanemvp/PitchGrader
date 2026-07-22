@@ -1,0 +1,182 @@
+{
+  "player_name": "Simmons, Dylan",
+  "season": "spring2026",
+  "total_pitches": 14,
+  "p_throws": "R",
+  "arm_angle": 52.6,
+  "team": "CIN",
+  "pitcher_id": 687535,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 9,
+      "n_vs_r": 0,
+      "n_vs_l": 9,
+      "usage_pct": 64.3,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 64.3,
+      "velo": 88.7,
+      "ivb": 5.9,
+      "hb": -5.5,
+      "vaa": -6.87,
+      "haa": 1.61,
+      "spin": 2200,
+      "extension": 6.01,
+      "arm_angle": 48.3,
+      "release_height": 6.22,
+      "spin_axis_clock": "1:26",
+      "zone_pct": 55.6,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.32,
+        0.34,
+        0.21,
+        0.71,
+        1.16,
+        0.01,
+        0.83,
+        0.96,
+        0.41
+      ],
+      "locations_z": [
+        3.88,
+        2.68,
+        2.4,
+        2.79,
+        0.85,
+        2.7,
+        2.42,
+        1.7,
+        3.18
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.32,
+        0.34,
+        0.21,
+        0.71,
+        1.16,
+        0.01,
+        0.83,
+        0.96,
+        0.41
+      ],
+      "locations_z_vs_l": [
+        3.88,
+        2.68,
+        2.4,
+        2.79,
+        0.85,
+        2.7,
+        2.42,
+        1.7,
+        3.18
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 76.0,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 21.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 21.4,
+      "velo": 94.3,
+      "ivb": 13.9,
+      "hb": 6.9,
+      "vaa": -4.6,
+      "haa": -0.9,
+      "spin": 1983,
+      "extension": 6.02,
+      "arm_angle": 51.3,
+      "release_height": 6.46,
+      "spin_axis_clock": "11:08",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.16,
+        0.61,
+        -1.36
+      ],
+      "locations_z": [
+        2.87,
+        3.71,
+        4.73
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.16,
+        0.61,
+        -1.36
+      ],
+      "locations_z_vs_l": [
+        2.87,
+        3.71,
+        4.73
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 96.6,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 14.3,
+      "velo": 80.6,
+      "ivb": -6.4,
+      "hb": -3.2,
+      "vaa": -8.77,
+      "haa": 0.47,
+      "spin": 2701,
+      "extension": 6.3,
+      "arm_angle": 58.1,
+      "release_height": 6.57,
+      "spin_axis_clock": "5:07",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.25,
+        0.03
+      ],
+      "locations_z": [
+        2.0,
+        3.34
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.25,
+        0.03
+      ],
+      "locations_z_vs_l": [
+        2.0,
+        3.34
+      ]
+    }
+  ]
+}

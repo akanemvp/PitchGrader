@@ -1,0 +1,105 @@
+{
+  "player_name": "Rodriguez, Moises",
+  "season": "breakout2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 21.9,
+  "team": "DTP",
+  "pitcher_id": 685481,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 106.6,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 96.3,
+      "ivb": 2.4,
+      "hb": 16.7,
+      "vaa": -5.96,
+      "haa": 1.69,
+      "spin": 2059,
+      "extension": 6.01,
+      "arm_angle": 23.1,
+      "release_height": 5.29,
+      "spin_axis_clock": "9:16",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.078,
+      "locations_x": [
+        0.65,
+        -0.3
+      ],
+      "locations_z": [
+        2.27,
+        2.29
+      ],
+      "locations_x_vs_r": [
+        0.65,
+        -0.3
+      ],
+      "locations_z_vs_r": [
+        2.27,
+        2.29
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.3,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 84.8,
+      "ivb": 1.6,
+      "hb": -4.4,
+      "vaa": -8.13,
+      "haa": 5.04,
+      "spin": 2249,
+      "extension": 6.08,
+      "arm_angle": 20.7,
+      "release_height": 5.16,
+      "spin_axis_clock": "2:25",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.1,
+      "locations_x": [
+        2.19,
+        0.33
+      ],
+      "locations_z": [
+        0.35,
+        1.62
+      ],
+      "locations_x_vs_r": [
+        2.19,
+        0.33
+      ],
+      "locations_z_vs_r": [
+        0.35,
+        1.62
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

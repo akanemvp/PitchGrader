@@ -1,0 +1,174 @@
+{
+  "player_name": "Bash, Andrew",
+  "season": "college2026",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 41.4,
+  "team": "MIN",
+  "pitcher_id": 687856,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 103.0,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 36.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 57.1,
+      "velo": 95.3,
+      "ivb": 16.5,
+      "hb": 7.0,
+      "vaa": -4.43,
+      "haa": 1.44,
+      "spin": 2168,
+      "extension": 6.56,
+      "arm_angle": 41.7,
+      "release_height": 5.62,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 33.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.42,
+        -0.82,
+        -0.75,
+        0.48
+      ],
+      "locations_z": [
+        2.44,
+        2.38,
+        3.39,
+        3.39
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.42,
+        -0.82,
+        -0.75,
+        0.48
+      ],
+      "locations_z_vs_l": [
+        2.44,
+        2.38,
+        3.39,
+        3.39
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 100.0,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 2,
+      "n_vs_l": 2,
+      "usage_pct": 36.4,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 28.6,
+      "velo": 92.2,
+      "ivb": 5.1,
+      "hb": 15.8,
+      "vaa": -6.45,
+      "haa": 0.34,
+      "spin": 2091,
+      "extension": 6.4,
+      "arm_angle": 40.6,
+      "release_height": 5.56,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 75.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.98,
+        -0.64,
+        0.07,
+        -0.62
+      ],
+      "locations_z": [
+        0.62,
+        2.33,
+        2.51,
+        3.06
+      ],
+      "locations_x_vs_r": [
+        0.07,
+        -0.62
+      ],
+      "locations_z_vs_r": [
+        2.51,
+        3.06
+      ],
+      "locations_x_vs_l": [
+        -0.98,
+        -0.64
+      ],
+      "locations_z_vs_l": [
+        0.62,
+        2.33
+      ]
+    },
+    {
+      "pitch_type": "ST",
+      "pitch_name": "Sweeper",
+      "stuff_plus": 110.2,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 27.3,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 14.3,
+      "velo": 87.1,
+      "ivb": 0.3,
+      "hb": -6.7,
+      "vaa": -7.88,
+      "haa": 3.68,
+      "spin": 2861,
+      "extension": 6.56,
+      "arm_angle": 42.0,
+      "release_height": 5.63,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.73,
+        0.88,
+        0.61
+      ],
+      "locations_z": [
+        1.98,
+        1.33,
+        1.7
+      ],
+      "locations_x_vs_r": [
+        0.88,
+        0.61
+      ],
+      "locations_z_vs_r": [
+        1.33,
+        1.7
+      ],
+      "locations_x_vs_l": [
+        0.73
+      ],
+      "locations_z_vs_l": [
+        1.98
+      ]
+    }
+  ]
+}

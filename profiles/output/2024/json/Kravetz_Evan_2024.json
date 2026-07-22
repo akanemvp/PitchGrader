@@ -1,0 +1,144 @@
+{
+  "player_name": "Kravetz, Evan",
+  "season": "2024",
+  "total_pitches": 4,
+  "p_throws": "L",
+  "arm_angle": 49.5,
+  "team": "CIN",
+  "pitcher_id": 667478,
+  "age": 28,
+  "ip_str": "0.2",
+  "era": 13.5,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2024/Kravetz_Evan_2024.png",
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 90.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 100.0,
+      "velo": 90.8,
+      "ivb": 16.2,
+      "hb": 12.1,
+      "vaa": -7.74,
+      "haa": -1.29,
+      "spin": 2357,
+      "extension": 6.65,
+      "arm_angle": 47.1,
+      "release_height": 6.72,
+      "spin_axis_clock": "10:40",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.232,
+      "locations_x": [
+        -0.39,
+        -0.17
+      ],
+      "locations_z": [
+        0.18,
+        2.08
+      ],
+      "locations_x_vs_r": [
+        -0.39
+      ],
+      "locations_z_vs_r": [
+        0.18
+      ],
+      "locations_x_vs_l": [
+        -0.17
+      ],
+      "locations_z_vs_l": [
+        2.08
+      ]
+    },
+    {
+      "pitch_type": "FS",
+      "pitch_name": "Splitter",
+      "stuff_plus": 94.9,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 80.5,
+      "ivb": 4.6,
+      "hb": 7.6,
+      "vaa": -8.4,
+      "haa": -1.47,
+      "spin": 1148,
+      "extension": 6.8,
+      "arm_angle": 48.5,
+      "release_height": 6.66,
+      "spin_axis_clock": "10:04",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.18,
+      "locations_x": [
+        -0.19
+      ],
+      "locations_z": [
+        2.25
+      ],
+      "locations_x_vs_r": [
+        -0.19
+      ],
+      "locations_z_vs_r": [
+        2.25
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "KC",
+      "pitch_name": "Knuckle Curve",
+      "stuff_plus": 88.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 78.2,
+      "ivb": -4.7,
+      "hb": -2.8,
+      "vaa": -10.54,
+      "haa": -3.73,
+      "spin": 1928,
+      "extension": 6.8,
+      "arm_angle": 52.8,
+      "release_height": 6.67,
+      "spin_axis_clock": "5:14",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.22
+      ],
+      "locations_z": [
+        1.42
+      ],
+      "locations_x_vs_r": [
+        -1.22
+      ],
+      "locations_z_vs_r": [
+        1.42
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

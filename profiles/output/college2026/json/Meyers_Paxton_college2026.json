@@ -1,0 +1,185 @@
+{
+  "player_name": "Meyers, Paxton",
+  "season": "college2026",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 26.3,
+  "team": "CT",
+  "pitcher_id": 837535,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 36.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 78.8,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 40.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 50.0,
+      "velo": 87.5,
+      "ivb": 10.1,
+      "hb": 10.4,
+      "vaa": -5.5,
+      "haa": 1.56,
+      "spin": 1980,
+      "extension": 6.38,
+      "arm_angle": 25.7,
+      "release_height": 5.12,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.16,
+        0.92
+      ],
+      "locations_z": [
+        1.84,
+        2.88
+      ],
+      "locations_x_vs_r": [
+        0.92
+      ],
+      "locations_z_vs_r": [
+        2.88
+      ],
+      "locations_x_vs_l": [
+        -0.16
+      ],
+      "locations_z_vs_l": [
+        1.84
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 97.9,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 78.5,
+      "ivb": 1.2,
+      "hb": -11.0,
+      "vaa": -7.52,
+      "haa": 3.83,
+      "spin": 2429,
+      "extension": 6.12,
+      "arm_angle": 26.4,
+      "release_height": 5.35,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.65
+      ],
+      "locations_z": [
+        2.25
+      ],
+      "locations_x_vs_r": [
+        0.65
+      ],
+      "locations_z_vs_r": [
+        2.25
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 89.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 85.3,
+      "ivb": 9.2,
+      "hb": 5.4,
+      "vaa": -5.84,
+      "haa": -0.23,
+      "spin": 2341,
+      "extension": 6.2,
+      "arm_angle": 27.7,
+      "release_height": 5.4,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.65
+      ],
+      "locations_z": [
+        2.57
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.65
+      ],
+      "locations_z_vs_l": [
+        2.57
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 86.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.8,
+      "ivb": 14.2,
+      "hb": 5.9,
+      "vaa": -4.78,
+      "haa": 2.95,
+      "spin": 2269,
+      "extension": 6.09,
+      "arm_angle": 25.6,
+      "release_height": 5.17,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.51
+      ],
+      "locations_z": [
+        2.72
+      ],
+      "locations_x_vs_r": [
+        1.51
+      ],
+      "locations_z_vs_r": [
+        2.72
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

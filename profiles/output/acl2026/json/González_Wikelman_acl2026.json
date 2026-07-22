@@ -1,0 +1,235 @@
+{
+  "player_name": "Gonz\u00e1lez, Wikelman",
+  "season": "acl2026",
+  "total_pitches": 17,
+  "p_throws": "R",
+  "arm_angle": 33.4,
+  "team": "A-WSX",
+  "pitcher_id": 682790,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 18.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 103.8,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 9,
+      "n_vs_r": 4,
+      "n_vs_l": 5,
+      "usage_pct": 52.9,
+      "usage_pct_vs_r": 66.7,
+      "usage_pct_vs_l": 45.5,
+      "velo": 95.7,
+      "ivb": 13.8,
+      "hb": 8.6,
+      "vaa": -4.33,
+      "haa": 1.98,
+      "spin": 2454,
+      "extension": 6.66,
+      "arm_angle": 31.4,
+      "release_height": 5.0,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 55.6,
+      "chase_pct": 25.0,
+      "whiff_pct": 40.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.54,
+        0.04,
+        2.27,
+        0.95,
+        0.86,
+        0.7,
+        0.14,
+        0.13,
+        0.55
+      ],
+      "locations_z": [
+        2.63,
+        2.37,
+        1.69,
+        1.74,
+        2.67,
+        2.0,
+        2.51,
+        3.85,
+        3.16
+      ],
+      "locations_x_vs_r": [
+        0.54,
+        0.04,
+        2.27,
+        0.95
+      ],
+      "locations_z_vs_r": [
+        2.63,
+        2.37,
+        1.69,
+        1.74
+      ],
+      "locations_x_vs_l": [
+        0.86,
+        0.7,
+        0.14,
+        0.13,
+        0.55
+      ],
+      "locations_z_vs_l": [
+        2.67,
+        2.0,
+        2.51,
+        3.85,
+        3.16
+      ]
+    },
+    {
+      "pitch_type": "SV",
+      "pitch_name": "Slurve",
+      "stuff_plus": 96.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 2,
+      "n_vs_l": 3,
+      "usage_pct": 29.4,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 27.3,
+      "velo": 80.0,
+      "ivb": -8.1,
+      "hb": -14.2,
+      "vaa": -7.47,
+      "haa": 3.02,
+      "spin": 2637,
+      "extension": 6.43,
+      "arm_angle": 39.0,
+      "release_height": 5.44,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 20.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.87,
+        -1.05,
+        -1.54,
+        -0.33,
+        0.08
+      ],
+      "locations_z": [
+        1.53,
+        3.67,
+        3.59,
+        2.24,
+        3.62
+      ],
+      "locations_x_vs_r": [
+        0.87,
+        -1.05
+      ],
+      "locations_z_vs_r": [
+        1.53,
+        3.67
+      ],
+      "locations_x_vs_l": [
+        -1.54,
+        -0.33,
+        0.08
+      ],
+      "locations_z_vs_l": [
+        3.59,
+        2.24,
+        3.62
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 84.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 11.8,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 18.2,
+      "velo": 89.7,
+      "ivb": 4.3,
+      "hb": 14.4,
+      "vaa": -6.89,
+      "haa": 0.88,
+      "spin": 1741,
+      "extension": 6.7,
+      "arm_angle": 31.4,
+      "release_height": 4.99,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.48,
+        -0.17
+      ],
+      "locations_z": [
+        0.4,
+        2.28
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.48,
+        -0.17
+      ],
+      "locations_z_vs_l": [
+        0.4,
+        2.28
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 106.1,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 5.9,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 9.1,
+      "velo": 89.2,
+      "ivb": 7.7,
+      "hb": -5.5,
+      "vaa": -6.42,
+      "haa": 2.97,
+      "spin": 2640,
+      "extension": 6.59,
+      "arm_angle": 31.8,
+      "release_height": 5.04,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.22
+      ],
+      "locations_z": [
+        1.54
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.22
+      ],
+      "locations_z_vs_l": [
+        1.54
+      ]
+    }
+  ]
+}

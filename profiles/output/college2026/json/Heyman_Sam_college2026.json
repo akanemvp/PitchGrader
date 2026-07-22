@@ -1,0 +1,310 @@
+{
+  "player_name": "Heyman, Sam",
+  "season": "college2026",
+  "total_pitches": 26,
+  "p_throws": "R",
+  "arm_angle": 29.8,
+  "team": "BEL",
+  "pitcher_id": 838962,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.1,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 17,
+      "n_vs_r": 7,
+      "n_vs_l": 10,
+      "usage_pct": 65.4,
+      "usage_pct_vs_r": 53.8,
+      "usage_pct_vs_l": 76.9,
+      "velo": 88.6,
+      "ivb": 16.6,
+      "hb": 9.8,
+      "vaa": -5.1,
+      "haa": 1.26,
+      "spin": 2221,
+      "extension": 6.77,
+      "arm_angle": 31.6,
+      "release_height": 5.32,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 29.4,
+      "chase_pct": 25.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.5,
+        -0.37,
+        -0.69,
+        -0.19,
+        0.23,
+        0.22,
+        -2.76,
+        -0.09,
+        -0.38,
+        -0.24,
+        0.63,
+        2.32,
+        0.38,
+        -0.46,
+        -1.95,
+        1.38,
+        1.22
+      ],
+      "locations_z": [
+        3.2,
+        -0.0,
+        1.71,
+        3.37,
+        3.51,
+        3.5,
+        3.08,
+        0.94,
+        1.77,
+        1.59,
+        2.41,
+        2.93,
+        3.4,
+        2.21,
+        3.21,
+        1.58,
+        1.74
+      ],
+      "locations_x_vs_r": [
+        -2.76,
+        2.32,
+        0.38,
+        -0.46,
+        -1.95,
+        1.38,
+        1.22
+      ],
+      "locations_z_vs_r": [
+        3.08,
+        2.93,
+        3.4,
+        2.21,
+        3.21,
+        1.58,
+        1.74
+      ],
+      "locations_x_vs_l": [
+        -1.5,
+        -0.37,
+        -0.69,
+        -0.19,
+        0.23,
+        0.22,
+        -0.09,
+        -0.38,
+        -0.24,
+        0.63
+      ],
+      "locations_z_vs_l": [
+        3.2,
+        -0.0,
+        1.71,
+        3.37,
+        3.51,
+        3.5,
+        0.94,
+        1.77,
+        1.59,
+        2.41
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 2,
+      "n_vs_l": 2,
+      "usage_pct": 15.4,
+      "usage_pct_vs_r": 15.4,
+      "usage_pct_vs_l": 15.4,
+      "velo": 83.2,
+      "ivb": 6.7,
+      "hb": -0.2,
+      "vaa": -6.46,
+      "haa": 1.52,
+      "spin": 2193,
+      "extension": 6.68,
+      "arm_angle": 28.9,
+      "release_height": 5.24,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 25.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.08,
+        -1.37,
+        -1.04,
+        -0.26
+      ],
+      "locations_z": [
+        2.69,
+        2.6,
+        1.91,
+        1.42
+      ],
+      "locations_x_vs_r": [
+        -1.37,
+        -1.04
+      ],
+      "locations_z_vs_r": [
+        2.6,
+        1.91
+      ],
+      "locations_x_vs_l": [
+        -1.08,
+        -0.26
+      ],
+      "locations_z_vs_l": [
+        2.69,
+        1.42
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 86.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 11.5,
+      "usage_pct_vs_r": 15.4,
+      "usage_pct_vs_l": 7.7,
+      "velo": 88.8,
+      "ivb": 14.8,
+      "hb": 13.5,
+      "vaa": -5.73,
+      "haa": 0.87,
+      "spin": 2265,
+      "extension": 6.77,
+      "arm_angle": 30.0,
+      "release_height": 5.26,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 66.7,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.97,
+        1.65,
+        -0.84
+      ],
+      "locations_z": [
+        2.27,
+        1.26,
+        2.11
+      ],
+      "locations_x_vs_r": [
+        1.65,
+        -0.84
+      ],
+      "locations_z_vs_r": [
+        1.26,
+        2.11
+      ],
+      "locations_x_vs_l": [
+        -0.97
+      ],
+      "locations_z_vs_l": [
+        2.27
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 96.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 3.8,
+      "usage_pct_vs_r": 7.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 76.9,
+      "ivb": -1.6,
+      "hb": -14.4,
+      "vaa": -10.3,
+      "haa": 6.39,
+      "spin": 2224,
+      "extension": 6.73,
+      "arm_angle": 26.2,
+      "release_height": 5.08,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        2.27
+      ],
+      "locations_z": [
+        0.06
+      ],
+      "locations_x_vs_r": [
+        2.27
+      ],
+      "locations_z_vs_r": [
+        0.06
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 96.3,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 3.8,
+      "usage_pct_vs_r": 7.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 85.2,
+      "ivb": 11.3,
+      "hb": -2.4,
+      "vaa": -4.48,
+      "haa": 4.43,
+      "spin": 2282,
+      "extension": 6.63,
+      "arm_angle": 32.4,
+      "release_height": 5.41,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.75
+      ],
+      "locations_z": [
+        3.6
+      ],
+      "locations_x_vs_r": [
+        1.75
+      ],
+      "locations_z_vs_r": [
+        3.6
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

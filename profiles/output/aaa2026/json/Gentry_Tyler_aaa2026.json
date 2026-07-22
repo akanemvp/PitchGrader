@@ -1,0 +1,139 @@
+{
+  "player_name": "Gentry, Tyler",
+  "season": "aaa2026",
+  "total_pitches": 12,
+  "p_throws": "R",
+  "arm_angle": 14.6,
+  "team": "TOL",
+  "pitcher_id": 694355,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 83.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 11,
+      "n_vs_r": 9,
+      "n_vs_l": 2,
+      "usage_pct": 91.7,
+      "usage_pct_vs_r": 90.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 85.3,
+      "ivb": 8.0,
+      "hb": 11.6,
+      "vaa": -4.34,
+      "haa": 1.66,
+      "spin": 2117,
+      "extension": 5.98,
+      "arm_angle": 8.1,
+      "release_height": 4.5,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 27.3,
+      "chase_pct": 12.5,
+      "whiff_pct": 25.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -2.44,
+        0.37,
+        1.67,
+        -1.26,
+        -0.95,
+        1.91,
+        0.23,
+        2.1,
+        -0.4,
+        -0.66,
+        1.82
+      ],
+      "locations_z": [
+        3.43,
+        2.45,
+        2.27,
+        3.75,
+        3.15,
+        2.73,
+        3.14,
+        3.17,
+        4.02,
+        2.93,
+        2.69
+      ],
+      "locations_x_vs_r": [
+        1.67,
+        -1.26,
+        -0.95,
+        1.91,
+        0.23,
+        2.1,
+        -0.4,
+        -0.66,
+        1.82
+      ],
+      "locations_z_vs_r": [
+        2.27,
+        3.75,
+        3.15,
+        2.73,
+        3.14,
+        3.17,
+        4.02,
+        2.93,
+        2.69
+      ],
+      "locations_x_vs_l": [
+        -2.44,
+        0.37
+      ],
+      "locations_z_vs_l": [
+        3.43,
+        2.45
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 87.0,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 8.3,
+      "usage_pct_vs_r": 10.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.8,
+      "ivb": 10.8,
+      "hb": 12.2,
+      "vaa": -4.45,
+      "haa": 1.24,
+      "spin": 2295,
+      "extension": 6.3,
+      "arm_angle": 21.0,
+      "release_height": 4.81,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.05
+      ],
+      "locations_z": [
+        2.91
+      ],
+      "locations_x_vs_r": [
+        0.05
+      ],
+      "locations_z_vs_r": [
+        2.91
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

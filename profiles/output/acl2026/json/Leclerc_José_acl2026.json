@@ -1,0 +1,223 @@
+{
+  "player_name": "Leclerc, Jos\u00e9",
+  "season": "acl2026",
+  "total_pitches": 14,
+  "p_throws": "R",
+  "arm_angle": 39.6,
+  "team": "A-PAD",
+  "pitcher_id": 600917,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.0,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 4,
+      "n_vs_l": 1,
+      "usage_pct": 35.7,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 16.7,
+      "velo": 79.0,
+      "ivb": 2.6,
+      "hb": -10.5,
+      "vaa": -7.99,
+      "haa": 4.18,
+      "spin": 2471,
+      "extension": 5.7,
+      "arm_angle": 36.3,
+      "release_height": 5.55,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 66.7,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.91,
+        0.83,
+        -0.35,
+        1.06,
+        2.66
+      ],
+      "locations_z": [
+        2.25,
+        1.82,
+        2.62,
+        1.31,
+        0.88
+      ],
+      "locations_x_vs_r": [
+        1.91,
+        0.83,
+        1.06,
+        2.66
+      ],
+      "locations_z_vs_r": [
+        2.25,
+        1.82,
+        1.31,
+        0.88
+      ],
+      "locations_x_vs_l": [
+        -0.35
+      ],
+      "locations_z_vs_l": [
+        2.62
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 77.9,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 21.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 86.6,
+      "ivb": 11.5,
+      "hb": 7.9,
+      "vaa": -6.61,
+      "haa": 0.77,
+      "spin": 2043,
+      "extension": 5.77,
+      "arm_angle": 38.8,
+      "release_height": 5.54,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.27,
+        -0.32,
+        0.75
+      ],
+      "locations_z": [
+        1.83,
+        1.72,
+        1.63
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.27,
+        -0.32,
+        0.75
+      ],
+      "locations_z_vs_l": [
+        1.83,
+        1.72,
+        1.63
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 96.4,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 21.4,
+      "usage_pct_vs_r": 12.5,
+      "usage_pct_vs_l": 33.3,
+      "velo": 90.8,
+      "ivb": 8.1,
+      "hb": -1.8,
+      "vaa": -5.7,
+      "haa": 2.5,
+      "spin": 2574,
+      "extension": 5.69,
+      "arm_angle": 40.9,
+      "release_height": 5.73,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.53,
+        0.58,
+        1.2
+      ],
+      "locations_z": [
+        2.4,
+        2.92,
+        2.83
+      ],
+      "locations_x_vs_r": [
+        1.2
+      ],
+      "locations_z_vs_r": [
+        2.83
+      ],
+      "locations_x_vs_l": [
+        0.53,
+        0.58
+      ],
+      "locations_z_vs_l": [
+        2.4,
+        2.92
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.4,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 21.4,
+      "usage_pct_vs_r": 37.5,
+      "usage_pct_vs_l": 0.0,
+      "velo": 93.6,
+      "ivb": 14.5,
+      "hb": -0.4,
+      "vaa": -5.44,
+      "haa": 1.65,
+      "spin": 2420,
+      "extension": 5.85,
+      "arm_angle": 42.4,
+      "release_height": 5.68,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.13,
+        0.22,
+        0.7
+      ],
+      "locations_z": [
+        1.86,
+        3.14,
+        1.75
+      ],
+      "locations_x_vs_r": [
+        -0.13,
+        0.22,
+        0.7
+      ],
+      "locations_z_vs_r": [
+        1.86,
+        3.14,
+        1.75
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

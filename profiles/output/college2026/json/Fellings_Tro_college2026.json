@@ -1,0 +1,125 @@
+{
+  "player_name": "Fellings, Tro",
+  "season": "college2026",
+  "total_pitches": 9,
+  "p_throws": "L",
+  "arm_angle": 40.9,
+  "team": "PUR",
+  "pitcher_id": 835368,
+  "age": null,
+  "ip_str": "0.2",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.0,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 7,
+      "n_vs_l": 0,
+      "usage_pct": 77.8,
+      "usage_pct_vs_r": 77.8,
+      "usage_pct_vs_l": 0.0,
+      "velo": 78.6,
+      "ivb": 2.9,
+      "hb": -5.2,
+      "vaa": -8.67,
+      "haa": -2.54,
+      "spin": 2275,
+      "extension": 6.72,
+      "arm_angle": 40.3,
+      "release_height": 5.83,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 28.6,
+      "chase_pct": 60.0,
+      "whiff_pct": 60.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.17,
+        -0.04,
+        0.13,
+        1.14,
+        0.08,
+        0.89,
+        0.4
+      ],
+      "locations_z": [
+        0.79,
+        0.52,
+        2.31,
+        1.49,
+        0.57,
+        2.31,
+        2.49
+      ],
+      "locations_x_vs_r": [
+        -0.17,
+        -0.04,
+        0.13,
+        1.14,
+        0.08,
+        0.89,
+        0.4
+      ],
+      "locations_z_vs_r": [
+        0.79,
+        0.52,
+        2.31,
+        1.49,
+        0.57,
+        2.31,
+        2.49
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 88.1,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 22.2,
+      "usage_pct_vs_r": 22.2,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.2,
+      "ivb": 14.3,
+      "hb": -0.7,
+      "vaa": -6.88,
+      "haa": -2.55,
+      "spin": 2228,
+      "extension": 6.8,
+      "arm_angle": 41.5,
+      "release_height": 5.89,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.33,
+        0.16
+      ],
+      "locations_z": [
+        -0.56,
+        3.76
+      ],
+      "locations_x_vs_r": [
+        -0.33,
+        0.16
+      ],
+      "locations_z_vs_r": [
+        -0.56,
+        3.76
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

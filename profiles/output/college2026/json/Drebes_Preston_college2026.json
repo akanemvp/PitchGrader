@@ -1,0 +1,186 @@
+{
+  "player_name": "Drebes, Preston",
+  "season": "college2026",
+  "total_pitches": 14,
+  "p_throws": "R",
+  "arm_angle": 41.5,
+  "team": "WIL",
+  "pitcher_id": 843992,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 89.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 9,
+      "n_vs_r": 5,
+      "n_vs_l": 4,
+      "usage_pct": 64.3,
+      "usage_pct_vs_r": 83.3,
+      "usage_pct_vs_l": 50.0,
+      "velo": 87.6,
+      "ivb": 19.7,
+      "hb": 10.5,
+      "vaa": -4.94,
+      "haa": 0.65,
+      "spin": 2079,
+      "extension": 6.22,
+      "arm_angle": 43.4,
+      "release_height": 5.73,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.95,
+        -0.68,
+        0.26,
+        -0.24,
+        2.09,
+        1.49,
+        0.7,
+        0.36,
+        -0.48
+      ],
+      "locations_z": [
+        4.49,
+        2.73,
+        4.02,
+        1.91,
+        6.04,
+        1.77,
+        0.8,
+        0.92,
+        2.34
+      ],
+      "locations_x_vs_r": [
+        2.09,
+        1.49,
+        0.7,
+        0.36,
+        -0.48
+      ],
+      "locations_z_vs_r": [
+        6.04,
+        1.77,
+        0.8,
+        0.92,
+        2.34
+      ],
+      "locations_x_vs_l": [
+        -0.95,
+        -0.68,
+        0.26,
+        -0.24
+      ],
+      "locations_z_vs_l": [
+        4.49,
+        2.73,
+        4.02,
+        1.91
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 94.2,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 21.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 37.5,
+      "velo": 78.0,
+      "ivb": -2.0,
+      "hb": 13.8,
+      "vaa": -8.44,
+      "haa": -0.28,
+      "spin": 1337,
+      "extension": 6.07,
+      "arm_angle": 40.3,
+      "release_height": 5.69,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 100.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.79,
+        0.17,
+        -2.49
+      ],
+      "locations_z": [
+        2.13,
+        2.29,
+        1.72
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        0.79,
+        0.17,
+        -2.49
+      ],
+      "locations_z_vs_l": [
+        2.13,
+        2.29,
+        1.72
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 86.1,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 14.3,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 12.5,
+      "velo": 77.2,
+      "ivb": 2.4,
+      "hb": -6.3,
+      "vaa": -8.68,
+      "haa": 2.21,
+      "spin": 1849,
+      "extension": 5.79,
+      "arm_angle": 40.8,
+      "release_height": 5.76,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.78,
+        1.15
+      ],
+      "locations_z": [
+        1.68,
+        1.68
+      ],
+      "locations_x_vs_r": [
+        1.15
+      ],
+      "locations_z_vs_r": [
+        1.68
+      ],
+      "locations_x_vs_l": [
+        -0.78
+      ],
+      "locations_z_vs_l": [
+        1.68
+      ]
+    }
+  ]
+}

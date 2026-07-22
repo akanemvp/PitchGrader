@@ -1,0 +1,153 @@
+{
+  "player_name": "Herrera, Welinton",
+  "season": "breakout2026",
+  "total_pitches": 15,
+  "p_throws": "L",
+  "arm_angle": 45.0,
+  "team": "COP",
+  "pitcher_id": 700327,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 9.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 92.3,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 10,
+      "n_vs_r": 7,
+      "n_vs_l": 3,
+      "usage_pct": 66.7,
+      "usage_pct_vs_r": 77.8,
+      "usage_pct_vs_l": 50.0,
+      "velo": 97.1,
+      "ivb": 14.8,
+      "hb": 10.4,
+      "vaa": -5.23,
+      "haa": 0.2,
+      "spin": 2220,
+      "extension": 6.15,
+      "arm_angle": 46.2,
+      "release_height": 5.7,
+      "spin_axis_clock": "1:10",
+      "zone_pct": 70.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 16.7,
+      "xwoba_contact": 0.317,
+      "locations_x": [
+        0.31,
+        -1.06,
+        0.73,
+        -1.0,
+        0.66,
+        0.24,
+        0.25,
+        0.4,
+        -0.76,
+        0.12
+      ],
+      "locations_z": [
+        2.79,
+        1.56,
+        2.44,
+        2.51,
+        3.41,
+        2.51,
+        1.91,
+        1.74,
+        1.76,
+        2.44
+      ],
+      "locations_x_vs_r": [
+        0.31,
+        -1.0,
+        0.66,
+        0.24,
+        0.4,
+        -0.76,
+        0.12
+      ],
+      "locations_z_vs_r": [
+        2.79,
+        2.51,
+        3.41,
+        2.51,
+        1.74,
+        1.76,
+        2.44
+      ],
+      "locations_x_vs_l": [
+        -1.06,
+        0.73,
+        0.25
+      ],
+      "locations_z_vs_l": [
+        1.56,
+        2.44,
+        1.91
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 103.2,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 5,
+      "n_vs_r": 2,
+      "n_vs_l": 3,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 22.2,
+      "usage_pct_vs_l": 50.0,
+      "velo": 86.0,
+      "ivb": 0.7,
+      "hb": 0.5,
+      "vaa": -6.82,
+      "haa": -0.73,
+      "spin": 2259,
+      "extension": 5.92,
+      "arm_angle": 43.8,
+      "release_height": 5.68,
+      "spin_axis_clock": "1:33",
+      "zone_pct": 60.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.91,
+        -0.16,
+        0.83,
+        1.05,
+        -0.04
+      ],
+      "locations_z": [
+        2.41,
+        2.85,
+        1.91,
+        4.03,
+        1.76
+      ],
+      "locations_x_vs_r": [
+        -0.16,
+        0.83
+      ],
+      "locations_z_vs_r": [
+        2.85,
+        1.91
+      ],
+      "locations_x_vs_l": [
+        -0.91,
+        1.05,
+        -0.04
+      ],
+      "locations_z_vs_l": [
+        2.41,
+        4.03,
+        1.76
+      ]
+    }
+  ]
+}

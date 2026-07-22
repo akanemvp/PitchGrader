@@ -1,0 +1,202 @@
+{
+  "player_name": "Edwards, Grant",
+  "season": "college2026",
+  "total_pitches": 18,
+  "p_throws": "R",
+  "arm_angle": -12.9,
+  "team": "UGA",
+  "pitcher_id": 838974,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 101.0,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 13,
+      "n_vs_r": 8,
+      "n_vs_l": 5,
+      "usage_pct": 72.2,
+      "usage_pct_vs_r": 72.7,
+      "usage_pct_vs_l": 71.4,
+      "velo": 87.7,
+      "ivb": -1.1,
+      "hb": 14.6,
+      "vaa": -4.82,
+      "haa": 1.78,
+      "spin": 2080,
+      "extension": 6.21,
+      "arm_angle": -27.4,
+      "release_height": 3.11,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 46.2,
+      "chase_pct": 28.6,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.45,
+        0.35,
+        0.51,
+        -0.48,
+        -0.67,
+        -2.12,
+        -0.89,
+        0.23,
+        -1.74,
+        -1.17,
+        -1.21,
+        0.16,
+        -0.31
+      ],
+      "locations_z": [
+        0.83,
+        1.58,
+        1.42,
+        2.4,
+        2.21,
+        1.65,
+        2.55,
+        2.14,
+        1.51,
+        1.65,
+        2.05,
+        2.29,
+        2.29
+      ],
+      "locations_x_vs_r": [
+        1.45,
+        0.35,
+        0.51,
+        -0.48,
+        -0.67,
+        -2.12,
+        -0.89,
+        0.16
+      ],
+      "locations_z_vs_r": [
+        0.83,
+        1.58,
+        1.42,
+        2.4,
+        2.21,
+        1.65,
+        2.55,
+        2.29
+      ],
+      "locations_x_vs_l": [
+        0.23,
+        -1.74,
+        -1.17,
+        -1.21,
+        -0.31
+      ],
+      "locations_z_vs_l": [
+        2.14,
+        1.51,
+        1.65,
+        2.05,
+        2.29
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 2,
+      "n_vs_l": 2,
+      "usage_pct": 22.2,
+      "usage_pct_vs_r": 18.2,
+      "usage_pct_vs_l": 28.6,
+      "velo": 80.2,
+      "ivb": 5.8,
+      "hb": -8.9,
+      "vaa": -4.81,
+      "haa": 4.71,
+      "spin": 2198,
+      "extension": 6.28,
+      "arm_angle": -9.8,
+      "release_height": 3.59,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 25.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.81,
+        2.74,
+        0.14,
+        -0.94
+      ],
+      "locations_z": [
+        2.76,
+        3.25,
+        0.85,
+        2.99
+      ],
+      "locations_x_vs_r": [
+        -0.81,
+        2.74
+      ],
+      "locations_z_vs_r": [
+        2.76,
+        3.25
+      ],
+      "locations_x_vs_l": [
+        0.14,
+        -0.94
+      ],
+      "locations_z_vs_l": [
+        0.85,
+        2.99
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 91.5,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 5.6,
+      "usage_pct_vs_r": 9.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.5,
+      "ivb": -0.1,
+      "hb": -9.1,
+      "vaa": -6.94,
+      "haa": 5.91,
+      "spin": 2134,
+      "extension": 6.42,
+      "arm_angle": -1.5,
+      "release_height": 3.61,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.56
+      ],
+      "locations_z": [
+        1.09
+      ],
+      "locations_x_vs_r": [
+        1.56
+      ],
+      "locations_z_vs_r": [
+        1.09
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

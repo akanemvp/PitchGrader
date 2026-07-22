@@ -1,0 +1,6482 @@
+[
+  {
+    "player_name": "Hader, Josh",
+    "season": "2024",
+    "stuff_plus": 119.5,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1166
+  },
+  {
+    "player_name": "Lange, Alex",
+    "season": "2024",
+    "stuff_plus": 113.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 377
+  },
+  {
+    "player_name": "Montgomery, Mason",
+    "season": "2024",
+    "stuff_plus": 113.2,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 158
+  },
+  {
+    "player_name": "D\u00edaz, Edwin",
+    "season": "2024",
+    "stuff_plus": 113.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 872
+  },
+  {
+    "player_name": "Williams, Devin",
+    "season": "2024",
+    "stuff_plus": 112.9,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 391
+  },
+  {
+    "player_name": "Lo\u00e1isiga, Jonathan",
+    "season": "2024",
+    "stuff_plus": 112.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 61
+  },
+  {
+    "player_name": "Martinez, Justin",
+    "season": "2024",
+    "stuff_plus": 112.2,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1177
+  },
+  {
+    "player_name": "Uribe, Abner",
+    "season": "2024",
+    "stuff_plus": 111.9,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 258
+  },
+  {
+    "player_name": "Kopech, Michael",
+    "season": "2024",
+    "stuff_plus": 111.6,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1141
+  },
+  {
+    "player_name": "N\u00fa\u00f1ez, Dedniel",
+    "season": "2024",
+    "stuff_plus": 111.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 521
+  },
+  {
+    "player_name": "deGrom, Jacob",
+    "season": "2024",
+    "stuff_plus": 111.2,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 172
+  },
+  {
+    "player_name": "Scott, Tanner",
+    "season": "2024",
+    "stuff_plus": 111.0,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1163
+  },
+  {
+    "player_name": "Quijada, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 110.8,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 379
+  },
+  {
+    "player_name": "Miller, Mason",
+    "season": "2024",
+    "stuff_plus": 110.7,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1024
+  },
+  {
+    "player_name": "Hern\u00e1ndez, Daysbel",
+    "season": "2024",
+    "stuff_plus": 110.2,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 305
+  },
+  {
+    "player_name": "Clase, Emmanuel",
+    "season": "2024",
+    "stuff_plus": 110.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 983
+  },
+  {
+    "player_name": "Chapman, Aroldis",
+    "season": "2024",
+    "stuff_plus": 110.0,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 1128
+  },
+  {
+    "player_name": "O'Brien, Riley",
+    "season": "2024",
+    "stuff_plus": 110.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 194
+  },
+  {
+    "player_name": "Speas, Alex",
+    "season": "2024",
+    "stuff_plus": 109.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Crouse, Hans",
+    "season": "2024",
+    "stuff_plus": 109.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 437
+  },
+  {
+    "player_name": "Soto, Gregory",
+    "season": "2024",
+    "stuff_plus": 109.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 960
+  },
+  {
+    "player_name": "Palencia, Daniel",
+    "season": "2024",
+    "stuff_plus": 109.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 263
+  },
+  {
+    "player_name": "Soriano, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 109.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1736
+  },
+  {
+    "player_name": "Zulueta, Yosver",
+    "season": "2024",
+    "stuff_plus": 109.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 286
+  },
+  {
+    "player_name": "Ferrer, Jose A.",
+    "season": "2024",
+    "stuff_plus": 109.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 476
+  },
+  {
+    "player_name": "Joyce, Ben",
+    "season": "2024",
+    "stuff_plus": 109.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 541
+  },
+  {
+    "player_name": "Little, Brendon",
+    "season": "2024",
+    "stuff_plus": 108.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 696
+  },
+  {
+    "player_name": "Peguero, Elvis",
+    "season": "2024",
+    "stuff_plus": 108.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 829
+  },
+  {
+    "player_name": "Suarez, Robert",
+    "season": "2024",
+    "stuff_plus": 108.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 977
+  },
+  {
+    "player_name": "Crochet, Garrett",
+    "season": "2024",
+    "stuff_plus": 108.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2395
+  },
+  {
+    "player_name": "Mu\u00f1oz, Andr\u00e9s",
+    "season": "2024",
+    "stuff_plus": 108.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 951
+  },
+  {
+    "player_name": "Jax, Griffin",
+    "season": "2024",
+    "stuff_plus": 108.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1068
+  },
+  {
+    "player_name": "Newcomb, Sean",
+    "season": "2024",
+    "stuff_plus": 108.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 184
+  },
+  {
+    "player_name": "Dom\u00ednguez, Seranthony",
+    "season": "2024",
+    "stuff_plus": 108.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1064
+  },
+  {
+    "player_name": "Robertson, David",
+    "season": "2024",
+    "stuff_plus": 107.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1211
+  },
+  {
+    "player_name": "Jansen, Kenley",
+    "season": "2024",
+    "stuff_plus": 107.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 801
+  },
+  {
+    "player_name": "Minter, A.J.",
+    "season": "2024",
+    "stuff_plus": 107.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 522
+  },
+  {
+    "player_name": "Glasnow, Tyler",
+    "season": "2024",
+    "stuff_plus": 107.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2011
+  },
+  {
+    "player_name": "Cousins, Jake",
+    "season": "2024",
+    "stuff_plus": 107.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 644
+  },
+  {
+    "player_name": "Kochanowicz, Jack",
+    "season": "2024",
+    "stuff_plus": 107.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 859
+  },
+  {
+    "player_name": "Holderman, Colin",
+    "season": "2024",
+    "stuff_plus": 107.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 869
+  },
+  {
+    "player_name": "Kelly, Joe",
+    "season": "2024",
+    "stuff_plus": 107.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 552
+  },
+  {
+    "player_name": "de Geus, Brett",
+    "season": "2024",
+    "stuff_plus": 107.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 194
+  },
+  {
+    "player_name": "Alcala, Jorge",
+    "season": "2024",
+    "stuff_plus": 107.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 931
+  },
+  {
+    "player_name": "Hodge, Porter",
+    "season": "2024",
+    "stuff_plus": 107.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 642
+  },
+  {
+    "player_name": "Richards, Trevor",
+    "season": "2024",
+    "stuff_plus": 107.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1182
+  },
+  {
+    "player_name": "Roycroft, Chris",
+    "season": "2024",
+    "stuff_plus": 107.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 596
+  },
+  {
+    "player_name": "Ort, Kaleb",
+    "season": "2024",
+    "stuff_plus": 107.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 366
+  },
+  {
+    "player_name": "Cruz, Fernando",
+    "season": "2024",
+    "stuff_plus": 107.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1138
+  },
+  {
+    "player_name": "Ferguson, Caleb",
+    "season": "2024",
+    "stuff_plus": 107.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 940
+  },
+  {
+    "player_name": "Guerrero, Luis",
+    "season": "2024",
+    "stuff_plus": 107.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 133
+  },
+  {
+    "player_name": "Duran, Jhoan",
+    "season": "2024",
+    "stuff_plus": 107.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 881
+  },
+  {
+    "player_name": "Megill, Trevor",
+    "season": "2024",
+    "stuff_plus": 107.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 668
+  },
+  {
+    "player_name": "Morejon, Adrian",
+    "season": "2024",
+    "stuff_plus": 107.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1064
+  },
+  {
+    "player_name": "D\u00edaz, Alexis",
+    "season": "2024",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 977
+  },
+  {
+    "player_name": "Hoffman, Jeff",
+    "season": "2024",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1001
+  },
+  {
+    "player_name": "Holmes, Clay",
+    "season": "2024",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1085
+  },
+  {
+    "player_name": "Mena, Cristian",
+    "season": "2024",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 70
+  },
+  {
+    "player_name": "Valdez, Framber",
+    "season": "2024",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2598
+  },
+  {
+    "player_name": "Ota\u00f1ez, Michel",
+    "season": "2024",
+    "stuff_plus": 106.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 601
+  },
+  {
+    "player_name": "Abreu, Bryan",
+    "season": "2024",
+    "stuff_plus": 106.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1300
+  },
+  {
+    "player_name": "Halvorsen, Seth",
+    "season": "2024",
+    "stuff_plus": 106.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 177
+  },
+  {
+    "player_name": "Jones, Jared",
+    "season": "2024",
+    "stuff_plus": 106.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1912
+  },
+  {
+    "player_name": "Cano, Yennier",
+    "season": "2024",
+    "stuff_plus": 106.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1008
+  },
+  {
+    "player_name": "Cease, Dylan",
+    "season": "2024",
+    "stuff_plus": 106.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 3188
+  },
+  {
+    "player_name": "Erceg, Lucas",
+    "season": "2024",
+    "stuff_plus": 106.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 947
+  },
+  {
+    "player_name": "Walters, Andrew",
+    "season": "2024",
+    "stuff_plus": 106.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 132
+  },
+  {
+    "player_name": "Helsley, Ryan",
+    "season": "2024",
+    "stuff_plus": 106.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 931
+  },
+  {
+    "player_name": "Hern\u00e1ndez, Jonathan",
+    "season": "2024",
+    "stuff_plus": 106.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 761
+  },
+  {
+    "player_name": "Beeter, Clayton",
+    "season": "2024",
+    "stuff_plus": 106.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Burnes, Corbin",
+    "season": "2024",
+    "stuff_plus": 106.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2995
+  },
+  {
+    "player_name": "Kikuchi, Yusei",
+    "season": "2024",
+    "stuff_plus": 106.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2923
+  },
+  {
+    "player_name": "Puk, A.J.",
+    "season": "2024",
+    "stuff_plus": 106.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1173
+  },
+  {
+    "player_name": "Gil, Luis",
+    "season": "2024",
+    "stuff_plus": 106.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2664
+  },
+  {
+    "player_name": "Hern\u00e1ndez, Carlos",
+    "season": "2024",
+    "stuff_plus": 106.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 560
+  },
+  {
+    "player_name": "Hudson, Daniel",
+    "season": "2024",
+    "stuff_plus": 106.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 999
+  },
+  {
+    "player_name": "Kerr, Ray",
+    "season": "2024",
+    "stuff_plus": 106.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 383
+  },
+  {
+    "player_name": "Ragans, Cole",
+    "season": "2024",
+    "stuff_plus": 106.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 3118
+  },
+  {
+    "player_name": "Garc\u00eda, Yimi",
+    "season": "2024",
+    "stuff_plus": 105.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 619
+  },
+  {
+    "player_name": "Hjelle, Sean",
+    "season": "2024",
+    "stuff_plus": 105.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1209
+  },
+  {
+    "player_name": "Adam, Jason",
+    "season": "2024",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1109
+  },
+  {
+    "player_name": "Barnes, Jacob",
+    "season": "2024",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1117
+  },
+  {
+    "player_name": "Hartlieb, Geoff",
+    "season": "2024",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 138
+  },
+  {
+    "player_name": "Luzardo, Jes\u00fas",
+    "season": "2024",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1083
+  },
+  {
+    "player_name": "Pop, Zach",
+    "season": "2024",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 743
+  },
+  {
+    "player_name": "Bowlan, Jonathan",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "Brazob\u00e1n, Huascar",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 864
+  },
+  {
+    "player_name": "Burdi, Nick",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 210
+  },
+  {
+    "player_name": "Eder, Jake",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "P\u00e9rez, Cionel",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 864
+  },
+  {
+    "player_name": "Rasmussen, Drew",
+    "season": "2024",
+    "stuff_plus": 105.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 459
+  },
+  {
+    "player_name": "Gore, MacKenzie",
+    "season": "2024",
+    "stuff_plus": 105.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2994
+  },
+  {
+    "player_name": "Greene, Hunter",
+    "season": "2024",
+    "stuff_plus": 105.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2563
+  },
+  {
+    "player_name": "Strider, Spencer",
+    "season": "2024",
+    "stuff_plus": 105.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 178
+  },
+  {
+    "player_name": "Whitley, Forrest",
+    "season": "2024",
+    "stuff_plus": 105.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 94
+  },
+  {
+    "player_name": "Banda, Anthony",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 774
+  },
+  {
+    "player_name": "Bubic, Kris",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 467
+  },
+  {
+    "player_name": "Chargois, JT",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 529
+  },
+  {
+    "player_name": "Hamilton, Ian",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 619
+  },
+  {
+    "player_name": "Johnson, Seth",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 58
+  },
+  {
+    "player_name": "Rodriguez, Grayson",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1879
+  },
+  {
+    "player_name": "Wheeler, Zack",
+    "season": "2024",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 3134
+  },
+  {
+    "player_name": "Stanek, Ryne",
+    "season": "2024",
+    "stuff_plus": 105.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 977
+  },
+  {
+    "player_name": "Kelly, Zack",
+    "season": "2024",
+    "stuff_plus": 105.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 955
+  },
+  {
+    "player_name": "Stratton, Hunter",
+    "season": "2024",
+    "stuff_plus": 105.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 587
+  },
+  {
+    "player_name": "Bednar, David",
+    "season": "2024",
+    "stuff_plus": 105.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1023
+  },
+  {
+    "player_name": "Estrada, Jeremiah",
+    "season": "2024",
+    "stuff_plus": 105.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 1003
+  },
+  {
+    "player_name": "Pag\u00e1n, Emilio",
+    "season": "2024",
+    "stuff_plus": 105.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 593
+  },
+  {
+    "player_name": "Stewart, Brock",
+    "season": "2024",
+    "stuff_plus": 105.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 268
+  },
+  {
+    "player_name": "Suero, Wander",
+    "season": "2024",
+    "stuff_plus": 105.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2
+  },
+  {
+    "player_name": "S\u00e1nchez, Cristopher",
+    "season": "2024",
+    "stuff_plus": 105.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2797
+  },
+  {
+    "player_name": "Kimbrel, Craig",
+    "season": "2024",
+    "stuff_plus": 104.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 963
+  },
+  {
+    "player_name": "Pearson, Nate",
+    "season": "2024",
+    "stuff_plus": 104.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1059
+  },
+  {
+    "player_name": "Baz, Shane",
+    "season": "2024",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1206
+  },
+  {
+    "player_name": "Burke, Sean",
+    "season": "2024",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 309
+  },
+  {
+    "player_name": "Maton, Phil",
+    "season": "2024",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1066
+  },
+  {
+    "player_name": "Miller, Tyson",
+    "season": "2024",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 934
+  },
+  {
+    "player_name": "Vieira, Thyago",
+    "season": "2024",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 737
+  },
+  {
+    "player_name": "Kolek, Stephen",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 797
+  },
+  {
+    "player_name": "McMillon, John",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 180
+  },
+  {
+    "player_name": "Nance, Tommy",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 322
+  },
+  {
+    "player_name": "Nardi, Andrew",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 906
+  },
+  {
+    "player_name": "Schmidt, Clarke",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1454
+  },
+  {
+    "player_name": "Varland, Louis",
+    "season": "2024",
+    "stuff_plus": 104.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 901
+  },
+  {
+    "player_name": "Richardson, Lyon",
+    "season": "2024",
+    "stuff_plus": 104.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Wingenter, Trey",
+    "season": "2024",
+    "stuff_plus": 104.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 179
+  },
+  {
+    "player_name": "Winn, Cole",
+    "season": "2024",
+    "stuff_plus": 104.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 286
+  },
+  {
+    "player_name": "Pepiot, Ryan",
+    "season": "2024",
+    "stuff_plus": 104.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2149
+  },
+  {
+    "player_name": "Zuber, Tyler",
+    "season": "2024",
+    "stuff_plus": 104.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 75
+  },
+  {
+    "player_name": "Bello, Brayan",
+    "season": "2024",
+    "stuff_plus": 104.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2710
+  },
+  {
+    "player_name": "Skenes, Paul",
+    "season": "2024",
+    "stuff_plus": 104.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2125
+  },
+  {
+    "player_name": "Weaver, Luke",
+    "season": "2024",
+    "stuff_plus": 104.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1374
+  },
+  {
+    "player_name": "Bigge, Hunter",
+    "season": "2024",
+    "stuff_plus": 104.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 300
+  },
+  {
+    "player_name": "Graterol, Brusdar",
+    "season": "2024",
+    "stuff_plus": 104.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 101
+  },
+  {
+    "player_name": "Petersen, Michael",
+    "season": "2024",
+    "stuff_plus": 104.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 363
+  },
+  {
+    "player_name": "Smith, Drew",
+    "season": "2024",
+    "stuff_plus": 104.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 328
+  },
+  {
+    "player_name": "Garrett, Reed",
+    "season": "2024",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 980
+  },
+  {
+    "player_name": "McArthur, James",
+    "season": "2024",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 903
+  },
+  {
+    "player_name": "Miller, Bobby",
+    "season": "2024",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1053
+  },
+  {
+    "player_name": "Parsons, Wes",
+    "season": "2024",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 148
+  },
+  {
+    "player_name": "Williams, Gavin",
+    "season": "2024",
+    "stuff_plus": 104.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1368
+  },
+  {
+    "player_name": "Berroa, Prelander",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 348
+  },
+  {
+    "player_name": "Borucki, Ryan",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 174
+  },
+  {
+    "player_name": "Cleavinger, Garrett",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1056
+  },
+  {
+    "player_name": "Cole, Gerrit",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1534
+  },
+  {
+    "player_name": "King, Bryan",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 416
+  },
+  {
+    "player_name": "Rodr\u00edguez, Randy",
+    "season": "2024",
+    "stuff_plus": 104.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 879
+  },
+  {
+    "player_name": "Mlodzinski, Carmen",
+    "season": "2024",
+    "stuff_plus": 104.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 866
+  },
+  {
+    "player_name": "Smith, Cade",
+    "season": "2024",
+    "stuff_plus": 104.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1166
+  },
+  {
+    "player_name": "Bender, Anthony",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 954
+  },
+  {
+    "player_name": "Fr\u00edas, Luis",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 229
+  },
+  {
+    "player_name": "Herrin, Tim",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1011
+  },
+  {
+    "player_name": "Mercado, Michael",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 260
+  },
+  {
+    "player_name": "Peralta, Wandy",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 613
+  },
+  {
+    "player_name": "Rainey, Tanner",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 939
+  },
+  {
+    "player_name": "Romero, JoJo",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 919
+  },
+  {
+    "player_name": "Scott, Christian",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 787
+  },
+  {
+    "player_name": "Uceta, Edwin",
+    "season": "2024",
+    "stuff_plus": 103.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 672
+  },
+  {
+    "player_name": "Brogdon, Connor",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 97
+  },
+  {
+    "player_name": "Foley, Jason",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 905
+  },
+  {
+    "player_name": "Garc\u00eda, Luis",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 897
+  },
+  {
+    "player_name": "Leiter, Jack",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 669
+  },
+  {
+    "player_name": "Miller, Erik",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1269
+  },
+  {
+    "player_name": "Nicolas, Kyle",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 950
+  },
+  {
+    "player_name": "Rodr\u00edguez, Manuel",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 605
+  },
+  {
+    "player_name": "Skubal, Tarik",
+    "season": "2024",
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2838
+  },
+  {
+    "player_name": "Jobe, Jackson",
+    "season": "2024",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Phillips, Evan",
+    "season": "2024",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 917
+  },
+  {
+    "player_name": "Ruiz, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 835
+  },
+  {
+    "player_name": "Santana, Dennis",
+    "season": "2024",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1106
+  },
+  {
+    "player_name": "Thornton, Trent",
+    "season": "2024",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1139
+  },
+  {
+    "player_name": "Alvarado, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1052
+  },
+  {
+    "player_name": "L\u00f3pez, Pablo",
+    "season": "2024",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2986
+  },
+  {
+    "player_name": "Peralta, Luis",
+    "season": "2024",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 181
+  },
+  {
+    "player_name": "Sterner, Justin",
+    "season": "2024",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 64
+  },
+  {
+    "player_name": "Walker, Ryan",
+    "season": "2024",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1220
+  },
+  {
+    "player_name": "Anderson, Justin",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 945
+  },
+  {
+    "player_name": "Curtiss, John",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 38
+  },
+  {
+    "player_name": "Henriquez, Ronny",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 303
+  },
+  {
+    "player_name": "Senga, Kodai",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 73
+  },
+  {
+    "player_name": "Strahm, Matt",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 981
+  },
+  {
+    "player_name": "Whitlock, Garrett",
+    "season": "2024",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 321
+  },
+  {
+    "player_name": "Birdsong, Hayden",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1388
+  },
+  {
+    "player_name": "Bolton, Cody",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 312
+  },
+  {
+    "player_name": "Headrick, Brent",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 60
+  },
+  {
+    "player_name": "Heller, Ben",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 255
+  },
+  {
+    "player_name": "Megill, Tylor",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1265
+  },
+  {
+    "player_name": "Roupp, Landen",
+    "season": "2024",
+    "stuff_plus": 103.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 906
+  },
+  {
+    "player_name": "Brown, Ben",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 849
+  },
+  {
+    "player_name": "D\u00edaz, Yilber",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 469
+  },
+  {
+    "player_name": "Harvey, Hunter",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 906
+  },
+  {
+    "player_name": "Kirby, George",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2967
+  },
+  {
+    "player_name": "Mushinski, Parker",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 194
+  },
+  {
+    "player_name": "Ray, Robbie",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 568
+  },
+  {
+    "player_name": "Varland, Gus",
+    "season": "2024",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 455
+  },
+  {
+    "player_name": "Booser, Cam",
+    "season": "2024",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 695
+  },
+  {
+    "player_name": "Gilbert, Logan",
+    "season": "2024",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 3041
+  },
+  {
+    "player_name": "Jacob, Alek",
+    "season": "2024",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 200
+  },
+  {
+    "player_name": "Paredes, Enoli",
+    "season": "2024",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 319
+  },
+  {
+    "player_name": "Zeferjahn, Ryan",
+    "season": "2024",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 208
+  },
+  {
+    "player_name": "Bradish, Kyle",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 674
+  },
+  {
+    "player_name": "Cabrera, G\u00e9nesis",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1030
+  },
+  {
+    "player_name": "Chafin, Andrew",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 967
+  },
+  {
+    "player_name": "Eisert, Brandon",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 110
+  },
+  {
+    "player_name": "Ferguson, Tyler",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 819
+  },
+  {
+    "player_name": "Holmes, Grant",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 971
+  },
+  {
+    "player_name": "Kinley, Tyler",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1185
+  },
+  {
+    "player_name": "Klein, Will",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 146
+  },
+  {
+    "player_name": "Marte, Yunior",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 482
+  },
+  {
+    "player_name": "Miller, Bryce",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2749
+  },
+  {
+    "player_name": "Ram\u00edrez, Yohan",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 768
+  },
+  {
+    "player_name": "Robertson, Nick",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 217
+  },
+  {
+    "player_name": "Santos, Gregory",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 112
+  },
+  {
+    "player_name": "Selby, Colin",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 112
+  },
+  {
+    "player_name": "Ure\u00f1a, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1759
+  },
+  {
+    "player_name": "Green, Chad",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 840
+  },
+  {
+    "player_name": "Henriquez, Edgardo",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 59
+  },
+  {
+    "player_name": "Mederos, Victor",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 107
+  },
+  {
+    "player_name": "Sims, Lucas",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 885
+  },
+  {
+    "player_name": "Vesia, Alex",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1109
+  },
+  {
+    "player_name": "Wrobleski, Justin",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 592
+  },
+  {
+    "player_name": "Zu\u00f1iga, Guillo",
+    "season": "2024",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 271
+  },
+  {
+    "player_name": "Baumann, Mike",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1066
+  },
+  {
+    "player_name": "Cabrera, Edward",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1734
+  },
+  {
+    "player_name": "Jim\u00e9nez, Joe",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1070
+  },
+  {
+    "player_name": "Rodr\u00edguez, Yerry",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 438
+  },
+  {
+    "player_name": "Schwellenbach, Spencer",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1793
+  },
+  {
+    "player_name": "Vodnik, Victor",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1341
+  },
+  {
+    "player_name": "Winckowski, Josh",
+    "season": "2024",
+    "stuff_plus": 102.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1240
+  },
+  {
+    "player_name": "Akin, Keegan",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1241
+  },
+  {
+    "player_name": "Herz, DJ",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1586
+  },
+  {
+    "player_name": "Meyer, Max",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 968
+  },
+  {
+    "player_name": "Sabrowski, Erik",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 198
+  },
+  {
+    "player_name": "Topa, Justin",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Woo, Bryan",
+    "season": "2024",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1716
+  },
+  {
+    "player_name": "Criswell, Jeff",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 354
+  },
+  {
+    "player_name": "Iglesias, Raisel",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 908
+  },
+  {
+    "player_name": "M\u00e1rquez, Germ\u00e1n",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 70
+  },
+  {
+    "player_name": "Penrod, Zach",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 86
+  },
+  {
+    "player_name": "Pfaadt, Brandon",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2792
+  },
+  {
+    "player_name": "Ribalta, Orlando",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 97
+  },
+  {
+    "player_name": "Warren, Will",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 458
+  },
+  {
+    "player_name": "Winn, Keaton",
+    "season": "2024",
+    "stuff_plus": 102.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 847
+  },
+  {
+    "player_name": "Peralta, Freddy",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 3066
+  },
+  {
+    "player_name": "Rogers, Tyler",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1002
+  },
+  {
+    "player_name": "Treinen, Blake",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 737
+  },
+  {
+    "player_name": "Webb, Jacob",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 933
+  },
+  {
+    "player_name": "Wilson, Steven",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 623
+  },
+  {
+    "player_name": "Zastryzny, Rob",
+    "season": "2024",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 119
+  },
+  {
+    "player_name": "Burke, Brock",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 575
+  },
+  {
+    "player_name": "Cisnero, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 313
+  },
+  {
+    "player_name": "Cruz, Steven",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 82
+  },
+  {
+    "player_name": "King, John",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 857
+  },
+  {
+    "player_name": "Payamps, Joel",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 899
+  },
+  {
+    "player_name": "Robert, Daniel",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 103
+  },
+  {
+    "player_name": "Suarez, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 987
+  },
+  {
+    "player_name": "Tinoco, Jesus",
+    "season": "2024",
+    "stuff_plus": 102.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 644
+  },
+  {
+    "player_name": "Arrighetti, Spencer",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2505
+  },
+  {
+    "player_name": "Castillo, Luis",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2858
+  },
+  {
+    "player_name": "Dubin, Shawn",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 840
+  },
+  {
+    "player_name": "Faucher, Calvin",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 987
+  },
+  {
+    "player_name": "Walker, Josh",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 215
+  },
+  {
+    "player_name": "Wantz, Andrew",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 35
+  },
+  {
+    "player_name": "Weathers, Ryan",
+    "season": "2024",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1413
+  },
+  {
+    "player_name": "Garc\u00eda, Deivi",
+    "season": "2024",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 283
+  },
+  {
+    "player_name": "Montero, Rafael",
+    "season": "2024",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 683
+  },
+  {
+    "player_name": "Peterson, David",
+    "season": "2024",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1871
+  },
+  {
+    "player_name": "Su\u00e1rez, Albert",
+    "season": "2024",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2233
+  },
+  {
+    "player_name": "Thompson, Keegan",
+    "season": "2024",
+    "stuff_plus": 102.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 538
+  },
+  {
+    "player_name": "Brito, Jhony",
+    "season": "2024",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 626
+  },
+  {
+    "player_name": "Heaney, Andrew",
+    "season": "2024",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2731
+  },
+  {
+    "player_name": "Leone, Dominic",
+    "season": "2024",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 361
+  },
+  {
+    "player_name": "Raley, Brooks",
+    "season": "2024",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 119
+  },
+  {
+    "player_name": "Slaten, Justin",
+    "season": "2024",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 811
+  },
+  {
+    "player_name": "Boyle, Joe",
+    "season": "2024",
+    "stuff_plus": 102.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 966
+  },
+  {
+    "player_name": "Little, Luke",
+    "season": "2024",
+    "stuff_plus": 102.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 438
+  },
+  {
+    "player_name": "Gaddis, Hunter",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1075
+  },
+  {
+    "player_name": "Gonz\u00e1lez, Victor",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 386
+  },
+  {
+    "player_name": "Javier, Cristian",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 567
+  },
+  {
+    "player_name": "Latz, Jacob",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 813
+  },
+  {
+    "player_name": "Maldonado, Anthony",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 297
+  },
+  {
+    "player_name": "Morton, Charlie",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2791
+  },
+  {
+    "player_name": "Reynolds, Sean",
+    "season": "2024",
+    "stuff_plus": 102.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 225
+  },
+  {
+    "player_name": "Ellard, Fraser",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 432
+  },
+  {
+    "player_name": "Fried, Max",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2760
+  },
+  {
+    "player_name": "Gray, Sonny",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2483
+  },
+  {
+    "player_name": "Leclerc, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1204
+  },
+  {
+    "player_name": "Nola, Aaron",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 3189
+  },
+  {
+    "player_name": "Steele, Justin",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2046
+  },
+  {
+    "player_name": "Young, Danny",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 697
+  },
+  {
+    "player_name": "Zerpa, Angel",
+    "season": "2024",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 951
+  },
+  {
+    "player_name": "Altavilla, Dan",
+    "season": "2024",
+    "stuff_plus": 101.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 83
+  },
+  {
+    "player_name": "Ginn, J.T.",
+    "season": "2024",
+    "stuff_plus": 101.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 515
+  },
+  {
+    "player_name": "McDermott, Chayce",
+    "season": "2024",
+    "stuff_plus": 101.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 82
+  },
+  {
+    "player_name": "Imanaga, Shota",
+    "season": "2024",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2590
+  },
+  {
+    "player_name": "Leasure, Jordan",
+    "season": "2024",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 560
+  },
+  {
+    "player_name": "Staumont, Josh",
+    "season": "2024",
+    "stuff_plus": 101.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 420
+  },
+  {
+    "player_name": "Ashby, Aaron",
+    "season": "2024",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 484
+  },
+  {
+    "player_name": "Bradley, Taj",
+    "season": "2024",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2294
+  },
+  {
+    "player_name": "Hicks, Jordan",
+    "season": "2024",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1958
+  },
+  {
+    "player_name": "Pint, Riley",
+    "season": "2024",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 102
+  },
+  {
+    "player_name": "Ryan, River",
+    "season": "2024",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 295
+  },
+  {
+    "player_name": "Bibee, Tanner",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2851
+  },
+  {
+    "player_name": "Cantillo, Joey",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 711
+  },
+  {
+    "player_name": "Jacques, Joe",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 50
+  },
+  {
+    "player_name": "Marte, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 311
+  },
+  {
+    "player_name": "Poche, Colin",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 543
+  },
+  {
+    "player_name": "Pressly, Ryan",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 969
+  },
+  {
+    "player_name": "Reid-Foley, Sean",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 385
+  },
+  {
+    "player_name": "Reyes, Gerardo",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 78
+  },
+  {
+    "player_name": "Smith, Burch",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 896
+  },
+  {
+    "player_name": "Turnbull, Spencer",
+    "season": "2024",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 916
+  },
+  {
+    "player_name": "Adams, Austin",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 805
+  },
+  {
+    "player_name": "Cecconi, Slade",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1290
+  },
+  {
+    "player_name": "Cobb, Alex",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 242
+  },
+  {
+    "player_name": "Johnson, Pierce",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 895
+  },
+  {
+    "player_name": "Rod\u00f3n, Carlos",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 3102
+  },
+  {
+    "player_name": "Soroka, Michael",
+    "season": "2024",
+    "stuff_plus": 101.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1442
+  },
+  {
+    "player_name": "Andrews, Clayton",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Est\u00e9vez, Carlos",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 821
+  },
+  {
+    "player_name": "Grove, Michael",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 827
+  },
+  {
+    "player_name": "Hughes, Brandon",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 350
+  },
+  {
+    "player_name": "Kittredge, Andrew",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1028
+  },
+  {
+    "player_name": "Severino, Luis",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2889
+  },
+  {
+    "player_name": "Teng, Kai-Wei",
+    "season": "2024",
+    "stuff_plus": 101.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 204
+  },
+  {
+    "player_name": "Festa, Matt",
+    "season": "2024",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 385
+  },
+  {
+    "player_name": "Mattson, Isaac",
+    "season": "2024",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 100
+  },
+  {
+    "player_name": "Ortiz, Luis",
+    "season": "2024",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2153
+  },
+  {
+    "player_name": "Willingham, Amos",
+    "season": "2024",
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Bivens, Spencer",
+    "season": "2024",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 768
+  },
+  {
+    "player_name": "Flaherty, Jack",
+    "season": "2024",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2569
+  },
+  {
+    "player_name": "Hurter, Brant",
+    "season": "2024",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 645
+  },
+  {
+    "player_name": "Mears, Nick",
+    "season": "2024",
+    "stuff_plus": 101.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1028
+  },
+  {
+    "player_name": "Bloss, Jake",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 238
+  },
+  {
+    "player_name": "Hill, Jaden",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 151
+  },
+  {
+    "player_name": "Krook, Matt",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Neely, Jack",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 98
+  },
+  {
+    "player_name": "Snider, Collin",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 676
+  },
+  {
+    "player_name": "Thompson, Ryan",
+    "season": "2024",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 977
+  },
+  {
+    "player_name": "Francis, Bowden",
+    "season": "2024",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1558
+  },
+  {
+    "player_name": "Funderburk, Kody",
+    "season": "2024",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 652
+  },
+  {
+    "player_name": "Germ\u00e1n, Domingo",
+    "season": "2024",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 373
+  },
+  {
+    "player_name": "Mize, Casey",
+    "season": "2024",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1789
+  },
+  {
+    "player_name": "Santillan, Tony",
+    "season": "2024",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 504
+  },
+  {
+    "player_name": "Brieske, Beau",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1152
+  },
+  {
+    "player_name": "Brown, Hunter",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2889
+  },
+  {
+    "player_name": "Buehler, Walker",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1336
+  },
+  {
+    "player_name": "Fernandez, Ryan",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1190
+  },
+  {
+    "player_name": "Hudson, Bryan",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 927
+  },
+  {
+    "player_name": "Justice, Evan",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Leahy, Kyle",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 695
+  },
+  {
+    "player_name": "Nittoli, Vinny",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 178
+  },
+  {
+    "player_name": "Orze, Eric",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 42
+  },
+  {
+    "player_name": "Soriano, George",
+    "season": "2024",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 519
+  },
+  {
+    "player_name": "King, Michael",
+    "season": "2024",
+    "stuff_plus": 100.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2895
+  },
+  {
+    "player_name": "Rocker, Kumar",
+    "season": "2024",
+    "stuff_plus": 100.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 218
+  },
+  {
+    "player_name": "Vanasco, Ricky",
+    "season": "2024",
+    "stuff_plus": 100.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "Armstrong, Shawn",
+    "season": "2024",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1109
+  },
+  {
+    "player_name": "Lovelady, Richard",
+    "season": "2024",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 528
+  },
+  {
+    "player_name": "L\u00f3pez, Jorge",
+    "season": "2024",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 802
+  },
+  {
+    "player_name": "Strickland, Hunter",
+    "season": "2024",
+    "stuff_plus": 100.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1157
+  },
+  {
+    "player_name": "Festa, David",
+    "season": "2024",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1099
+  },
+  {
+    "player_name": "Garabito, Gerson",
+    "season": "2024",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 492
+  },
+  {
+    "player_name": "Vest, Will",
+    "season": "2024",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1162
+  },
+  {
+    "player_name": "Wilson, Justin",
+    "season": "2024",
+    "stuff_plus": 100.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 816
+  },
+  {
+    "player_name": "Bickford, Phil",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 154
+  },
+  {
+    "player_name": "Gausman, Kevin",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2868
+  },
+  {
+    "player_name": "Lazar, Max",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 214
+  },
+  {
+    "player_name": "Lucchesi, Joey",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "Nastrini, Nick",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 734
+  },
+  {
+    "player_name": "Oller, Adam",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 710
+  },
+  {
+    "player_name": "V\u00e1squez, Randy",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1687
+  },
+  {
+    "player_name": "Weissert, Greg",
+    "season": "2024",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1029
+  },
+  {
+    "player_name": "Brasier, Ryan",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 374
+  },
+  {
+    "player_name": "Cronin, Declan",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1095
+  },
+  {
+    "player_name": "France, J.P.",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 466
+  },
+  {
+    "player_name": "Garcia, Robert",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 946
+  },
+  {
+    "player_name": "Madden, Ty",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 403
+  },
+  {
+    "player_name": "Matthews, Zebby",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 717
+  },
+  {
+    "player_name": "Moll, Sam",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 624
+  },
+  {
+    "player_name": "Sulser, Cole",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 292
+  },
+  {
+    "player_name": "Webb, Logan",
+    "season": "2024",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 3200
+  },
+  {
+    "player_name": "Crawford, Kutter",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2823
+  },
+  {
+    "player_name": "De Los Santos, Enyel",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1127
+  },
+  {
+    "player_name": "Kerkering, Orion",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 1087
+  },
+  {
+    "player_name": "Lucas, Easton",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 246
+  },
+  {
+    "player_name": "Manning, Matt",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 438
+  },
+  {
+    "player_name": "Merryweather, Julian",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 272
+  },
+  {
+    "player_name": "Sborz, Josh",
+    "season": "2024",
+    "stuff_plus": 100.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 284
+  },
+  {
+    "player_name": "Almonte, Yency",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 267
+  },
+  {
+    "player_name": "Devenski, Chris",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 532
+  },
+  {
+    "player_name": "Duarte, Daniel",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 56
+  },
+  {
+    "player_name": "Gallen, Zac",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2506
+  },
+  {
+    "player_name": "Gutierrez, Vladimir",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 80
+  },
+  {
+    "player_name": "Nelson, Ryne",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2406
+  },
+  {
+    "player_name": "Ryan, Ryder",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 340
+  },
+  {
+    "player_name": "Shugart, Chase",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 142
+  },
+  {
+    "player_name": "Su\u00e1rez, Ranger",
+    "season": "2024",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 2354
+  },
+  {
+    "player_name": "Anderson, Grant",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 483
+  },
+  {
+    "player_name": "Brewer, Colten",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 391
+  },
+  {
+    "player_name": "Englert, Mason",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 365
+  },
+  {
+    "player_name": "Faedo, Alex",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1007
+  },
+  {
+    "player_name": "McDonald, Trevor",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Miller, Shelby",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 850
+  },
+  {
+    "player_name": "Rutledge, Jackson",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 139
+  },
+  {
+    "player_name": "Ryan, Joe",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2106
+  },
+  {
+    "player_name": "Voth, Austin",
+    "season": "2024",
+    "stuff_plus": 100.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 974
+  },
+  {
+    "player_name": "Barlow, Scott",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1022
+  },
+  {
+    "player_name": "Carasiti, Matt",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 170
+  },
+  {
+    "player_name": "Contreras, Luis",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 105
+  },
+  {
+    "player_name": "Doval, Camilo",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1116
+  },
+  {
+    "player_name": "G\u00f3mez, Yoendrys",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 214
+  },
+  {
+    "player_name": "Kelly, Kevin",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1025
+  },
+  {
+    "player_name": "Koenig, Jared",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1017
+  },
+  {
+    "player_name": "Martin, Davis",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 892
+  },
+  {
+    "player_name": "Mu\u00f1oz, Roddery",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1485
+  },
+  {
+    "player_name": "Ottavino, Adam",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 986
+  },
+  {
+    "player_name": "Tate, Dillon",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 590
+  },
+  {
+    "player_name": "Wells, Tyler",
+    "season": "2024",
+    "stuff_plus": 99.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 259
+  },
+  {
+    "player_name": "Avila, Nick",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 225
+  },
+  {
+    "player_name": "Beeks, Jalen",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1186
+  },
+  {
+    "player_name": "Bukauskas, J.B.",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 88
+  },
+  {
+    "player_name": "Duffey, Tyler",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 189
+  },
+  {
+    "player_name": "Jarvis, Bryce",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1006
+  },
+  {
+    "player_name": "Montas, Frankie",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2633
+  },
+  {
+    "player_name": "Rodr\u00edguez, Yariel",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1501
+  },
+  {
+    "player_name": "Spence, Mitch",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2480
+  },
+  {
+    "player_name": "Veneziano, Anthony",
+    "season": "2024",
+    "stuff_plus": 99.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 242
+  },
+  {
+    "player_name": "Bido, Osvaldo",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1055
+  },
+  {
+    "player_name": "Ginkel, Kevin",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1184
+  },
+  {
+    "player_name": "Irvin, Jake",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 3046
+  },
+  {
+    "player_name": "Marsh, Alec",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2161
+  },
+  {
+    "player_name": "Matsui, Yuki",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1049
+  },
+  {
+    "player_name": "Pivetta, Nick",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2386
+  },
+  {
+    "player_name": "Salazar, Eduardo",
+    "season": "2024",
+    "stuff_plus": 99.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 494
+  },
+  {
+    "player_name": "Baker, Bryan",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 369
+  },
+  {
+    "player_name": "Castro, Miguel",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 232
+  },
+  {
+    "player_name": "Garrett, Braxton",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 588
+  },
+  {
+    "player_name": "Jackson, Luke",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 917
+  },
+  {
+    "player_name": "Kremer, Dean",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2171
+  },
+  {
+    "player_name": "Medina, Luis",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 720
+  },
+  {
+    "player_name": "Montero, Keider",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1539
+  },
+  {
+    "player_name": "Sale, Chris",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2815
+  },
+  {
+    "player_name": "Sandlin, Nick",
+    "season": "2024",
+    "stuff_plus": 99.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1003
+  },
+  {
+    "player_name": "Alexander, Scott",
+    "season": "2024",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 566
+  },
+  {
+    "player_name": "Andriese, Matt",
+    "season": "2024",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 88
+  },
+  {
+    "player_name": "Ashcraft, Graham",
+    "season": "2024",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1342
+  },
+  {
+    "player_name": "Darvish, Yu",
+    "season": "2024",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1260
+  },
+  {
+    "player_name": "Lodolo, Nick",
+    "season": "2024",
+    "stuff_plus": 99.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1863
+  },
+  {
+    "player_name": "Canning, Griffin",
+    "season": "2024",
+    "stuff_plus": 99.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2869
+  },
+  {
+    "player_name": "Means, John",
+    "season": "2024",
+    "stuff_plus": 99.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 320
+  },
+  {
+    "player_name": "Rogers, Trevor",
+    "season": "2024",
+    "stuff_plus": 99.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2243
+  },
+  {
+    "player_name": "Cortes, Nestor",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2821
+  },
+  {
+    "player_name": "Cosgrove, Tom",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 312
+  },
+  {
+    "player_name": "Guenther, Sean",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 243
+  },
+  {
+    "player_name": "Hall, DL",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 782
+  },
+  {
+    "player_name": "Sands, Cole",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1154
+  },
+  {
+    "player_name": "Scherzer, Max",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 669
+  },
+  {
+    "player_name": "Stone, Gavin",
+    "season": "2024",
+    "stuff_plus": 99.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2153
+  },
+  {
+    "player_name": "Diekman, Jake",
+    "season": "2024",
+    "stuff_plus": 99.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 627
+  },
+  {
+    "player_name": "Nelson, Nick",
+    "season": "2024",
+    "stuff_plus": 99.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 96
+  },
+  {
+    "player_name": "Burgos, Raymond",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "Harris, Hogan",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1213
+  },
+  {
+    "player_name": "Lamet, Dinelson",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 74
+  },
+  {
+    "player_name": "Marinaccio, Ron",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 395
+  },
+  {
+    "player_name": "Mayza, Tim",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 731
+  },
+  {
+    "player_name": "Romano, Jordan",
+    "season": "2024",
+    "stuff_plus": 99.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 215
+  },
+  {
+    "player_name": "Bowman, Matt",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 497
+  },
+  {
+    "player_name": "Gose, Anthony",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 79
+  },
+  {
+    "player_name": "Holman, Grant",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 292
+  },
+  {
+    "player_name": "Sewald, Paul",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 629
+  },
+  {
+    "player_name": "Snell, Blake",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1773
+  },
+  {
+    "player_name": "Tyler, Kyle",
+    "season": "2024",
+    "stuff_plus": 99.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 580
+  },
+  {
+    "player_name": "Abbott, Andrew",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2333
+  },
+  {
+    "player_name": "Adcock, Ty",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 86
+  },
+  {
+    "player_name": "Alzolay, Adbert",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 329
+  },
+  {
+    "player_name": "Anderson, Chase",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1016
+  },
+  {
+    "player_name": "Brzykcy, Zach",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 104
+  },
+  {
+    "player_name": "D\u00edaz, Miguel",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Finnegan, Kyle",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1067
+  },
+  {
+    "player_name": "Wicks, Jordan",
+    "season": "2024",
+    "stuff_plus": 98.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 852
+  },
+  {
+    "player_name": "Blanco, Ronel",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2751
+  },
+  {
+    "player_name": "Bummer, Aaron",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 961
+  },
+  {
+    "player_name": "Butt\u00f3, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1222
+  },
+  {
+    "player_name": "Musgrove, Joe",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1582
+  },
+  {
+    "player_name": "Pallante, Andre",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1934
+  },
+  {
+    "player_name": "Saucedo, Tayler",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 626
+  },
+  {
+    "player_name": "Strzelecki, Peter",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 192
+  },
+  {
+    "player_name": "Taylor, Troy",
+    "season": "2024",
+    "stuff_plus": 98.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 328
+  },
+  {
+    "player_name": "Davis, Austin",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 142
+  },
+  {
+    "player_name": "Farmer, Buck",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1168
+  },
+  {
+    "player_name": "Iriarte, Jairo",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 137
+  },
+  {
+    "player_name": "Kahnle, Tommy",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 750
+  },
+  {
+    "player_name": "Ross, Joe",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1197
+  },
+  {
+    "player_name": "Wacha, Michael",
+    "season": "2024",
+    "stuff_plus": 98.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2602
+  },
+  {
+    "player_name": "Bird, Jake",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 684
+  },
+  {
+    "player_name": "Brebbia, John",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 994
+  },
+  {
+    "player_name": "Knack, Landon",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1149
+  },
+  {
+    "player_name": "Kuhnel, Joel",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 158
+  },
+  {
+    "player_name": "Law, Derek",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1368
+  },
+  {
+    "player_name": "Liberatore, Matthew",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1357
+  },
+  {
+    "player_name": "Long, Sam",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 702
+  },
+  {
+    "player_name": "Okert, Steven",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 616
+  },
+  {
+    "player_name": "Saalfrank, Andrew",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Toussaint, Touki",
+    "season": "2024",
+    "stuff_plus": 98.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 491
+  },
+  {
+    "player_name": "Bruihl, Justin",
+    "season": "2024",
+    "stuff_plus": 98.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 99
+  },
+  {
+    "player_name": "Busenitz, Alan",
+    "season": "2024",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 75
+  },
+  {
+    "player_name": "Henley, Blair",
+    "season": "2024",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Hill, Tim",
+    "season": "2024",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 982
+  },
+  {
+    "player_name": "Morgan, Eli",
+    "season": "2024",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 646
+  },
+  {
+    "player_name": "Weems, Jordan",
+    "season": "2024",
+    "stuff_plus": 98.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 733
+  },
+  {
+    "player_name": "Bazardo, Eduard",
+    "season": "2024",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 441
+  },
+  {
+    "player_name": "Bieber, Shane",
+    "season": "2024",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 166
+  },
+  {
+    "player_name": "Moore, Matt",
+    "season": "2024",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 854
+  },
+  {
+    "player_name": "Shaw, Bryan",
+    "season": "2024",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 95
+  },
+  {
+    "player_name": "Yamamoto, Yoshinobu",
+    "season": "2024",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1469
+  },
+  {
+    "player_name": "Detmers, Reid",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1557
+  },
+  {
+    "player_name": "Gibaut, Ian",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Herget, Kevin",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 151
+  },
+  {
+    "player_name": "Hollowell, Gavin",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 29
+  },
+  {
+    "player_name": "Lawrence, Justin",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1081
+  },
+  {
+    "player_name": "Smyly, Drew",
+    "season": "2024",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1016
+  },
+  {
+    "player_name": "Anderson, Nick",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 573
+  },
+  {
+    "player_name": "Cannon, Jonathan",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2028
+  },
+  {
+    "player_name": "Clevinger, Mike",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 302
+  },
+  {
+    "player_name": "Freeland, Kyle",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1769
+  },
+  {
+    "player_name": "Koch, Matt",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 23
+  },
+  {
+    "player_name": "Pinto, Ricardo",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 220
+  },
+  {
+    "player_name": "Rodr\u00edguez, Joely",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 249
+  },
+  {
+    "player_name": "White, Mitch",
+    "season": "2024",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 413
+  },
+  {
+    "player_name": "Eovaldi, Nathan",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2622
+  },
+  {
+    "player_name": "Fulmer, Carson",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1472
+  },
+  {
+    "player_name": "Garrett, Amir",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 104
+  },
+  {
+    "player_name": "Gasser, Robert",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 399
+  },
+  {
+    "player_name": "Hoeing, Bryan",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 782
+  },
+  {
+    "player_name": "Keller, Mitch",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2849
+  },
+  {
+    "player_name": "Ramirez, Emmanuel",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 371
+  },
+  {
+    "player_name": "Sauer, Matt",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 327
+  },
+  {
+    "player_name": "Speier, Gabe",
+    "season": "2024",
+    "stuff_plus": 98.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 422
+  },
+  {
+    "player_name": "Church, Marc",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Fitts, Richard",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 314
+  },
+  {
+    "player_name": "Herget, Jimmy",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 189
+  },
+  {
+    "player_name": "Ober, Bailey",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2696
+  },
+  {
+    "player_name": "Sammons, Bryan",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 374
+  },
+  {
+    "player_name": "Suter, Brent",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1022
+  },
+  {
+    "player_name": "Woods Richardson, Simeon",
+    "season": "2024",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2295
+  },
+  {
+    "player_name": "Anderson, Shaun",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 244
+  },
+  {
+    "player_name": "Avila, Pedro",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1419
+  },
+  {
+    "player_name": "Banks, Tanner",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1174
+  },
+  {
+    "player_name": "Bush, Ky",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 328
+  },
+  {
+    "player_name": "Fleming, Josh",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 532
+  },
+  {
+    "player_name": "Jay, Tyler",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 153
+  },
+  {
+    "player_name": "Lynch IV, Daniel",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 631
+  },
+  {
+    "player_name": "Miller, Ryan",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 219
+  },
+  {
+    "player_name": "Sears, JP",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2856
+  },
+  {
+    "player_name": "Smith-Shawver, AJ",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 87
+  },
+  {
+    "player_name": "Thielbar, Caleb",
+    "season": "2024",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 887
+  },
+  {
+    "player_name": "Bernardino, Brennan",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 860
+  },
+  {
+    "player_name": "Campbell, Isaiah",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 119
+  },
+  {
+    "player_name": "Edwards Jr., Carl",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 12
+  },
+  {
+    "player_name": "Feltner, Ryan",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2577
+  },
+  {
+    "player_name": "Povich, Cade",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1389
+  },
+  {
+    "player_name": "Teheran, Julio",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "Waldron, Matt",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2448
+  },
+  {
+    "player_name": "Wesneski, Hayden",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1075
+  },
+  {
+    "player_name": "Winder, Josh",
+    "season": "2024",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 141
+  },
+  {
+    "player_name": "Casparius, Ben",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 156
+  },
+  {
+    "player_name": "Cimber, Adam",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 416
+  },
+  {
+    "player_name": "Criswell, Cooper",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1729
+  },
+  {
+    "player_name": "Espino, Paolo",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 151
+  },
+  {
+    "player_name": "Lee, Dylan",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 856
+  },
+  {
+    "player_name": "L\u00f3pez, Reynaldo",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2095
+  },
+  {
+    "player_name": "Rogers, Taylor",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1082
+  },
+  {
+    "player_name": "Stratton, Chris",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 994
+  },
+  {
+    "player_name": "Waldrep, Hurston",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 133
+  },
+  {
+    "player_name": "White, Owen",
+    "season": "2024",
+    "stuff_plus": 97.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 69
+  },
+  {
+    "player_name": "Bachar, Lake",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 161
+  },
+  {
+    "player_name": "Effross, Scott",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 55
+  },
+  {
+    "player_name": "Gilbert, Tyler",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 145
+  },
+  {
+    "player_name": "Legumina, Casey",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 166
+  },
+  {
+    "player_name": "Martin, Chris",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 657
+  },
+  {
+    "player_name": "Neris, H\u00e9ctor",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1008
+  },
+  {
+    "player_name": "Paddack, Chris",
+    "season": "2024",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1460
+  },
+  {
+    "player_name": "Berr\u00edos, Jos\u00e9",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2914
+  },
+  {
+    "player_name": "Gray, Josiah",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 176
+  },
+  {
+    "player_name": "Hentges, Sam",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 351
+  },
+  {
+    "player_name": "Hern\u00e1ndez, Elieser",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 251
+  },
+  {
+    "player_name": "Horn, Bailey",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 303
+  },
+  {
+    "player_name": "Lorenzen, Michael",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2092
+  },
+  {
+    "player_name": "Lowder, Rhett",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 498
+  },
+  {
+    "player_name": "Snead, Kirby",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 196
+  },
+  {
+    "player_name": "Stroman, Marcus",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2657
+  },
+  {
+    "player_name": "Warren, Austin",
+    "season": "2024",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 173
+  },
+  {
+    "player_name": "Contreras, Roansy",
+    "season": "2024",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1074
+  },
+  {
+    "player_name": "Gibson, Kyle",
+    "season": "2024",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2764
+  },
+  {
+    "player_name": "Logue, Zach",
+    "season": "2024",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 43
+  },
+  {
+    "player_name": "Roberts, Ethan",
+    "season": "2024",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 474
+  },
+  {
+    "player_name": "Wilson, Bryse",
+    "season": "2024",
+    "stuff_plus": 97.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1643
+  },
+  {
+    "player_name": "Castillo, Diego",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 177
+  },
+  {
+    "player_name": "Fedde, Erick",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2891
+  },
+  {
+    "player_name": "Hanifee, Brenan",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 446
+  },
+  {
+    "player_name": "Hudson, Dakota",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1510
+  },
+  {
+    "player_name": "Lugo, Seth",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 3110
+  },
+  {
+    "player_name": "Muller, Kyle",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 725
+  },
+  {
+    "player_name": "Vespi, Nick",
+    "season": "2024",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 169
+  },
+  {
+    "player_name": "Coulombe, Danny",
+    "season": "2024",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 466
+  },
+  {
+    "player_name": "Leiter Jr., Mark",
+    "season": "2024",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1015
+  },
+  {
+    "player_name": "Vines, Darius",
+    "season": "2024",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 257
+  },
+  {
+    "player_name": "Aguiar, Julian",
+    "season": "2024",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 530
+  },
+  {
+    "player_name": "Hernandez, Nick",
+    "season": "2024",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 139
+  },
+  {
+    "player_name": "Kitchen, Austin",
+    "season": "2024",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 158
+  },
+  {
+    "player_name": "Lynn, Lance",
+    "season": "2024",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2039
+  },
+  {
+    "player_name": "McGreevy, Michael",
+    "season": "2024",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 311
+  },
+  {
+    "player_name": "Eflin, Zach",
+    "season": "2024",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2447
+  },
+  {
+    "player_name": "Falter, Bailey",
+    "season": "2024",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2137
+  },
+  {
+    "player_name": "Kuhl, Chad",
+    "season": "2024",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 978
+  },
+  {
+    "player_name": "Martinez, Nick",
+    "season": "2024",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2125
+  },
+  {
+    "player_name": "Quintana, Jose",
+    "season": "2024",
+    "stuff_plus": 96.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2819
+  },
+  {
+    "player_name": "Bassitt, Chris",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2784
+  },
+  {
+    "player_name": "Blewett, Scott",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 319
+  },
+  {
+    "player_name": "D\u00edaz, Jhonathan",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 166
+  },
+  {
+    "player_name": "Rodriguez, Carlos",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 233
+  },
+  {
+    "player_name": "Swanson, Erik",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 666
+  },
+  {
+    "player_name": "Waguespack, Jacob",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 221
+  },
+  {
+    "player_name": "Williams, Trevor",
+    "season": "2024",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1063
+  },
+  {
+    "player_name": "Coleman, Dylan",
+    "season": "2024",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 16
+  },
+  {
+    "player_name": "Junk, Janson",
+    "season": "2024",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 175
+  },
+  {
+    "player_name": "Matzek, Tyler",
+    "season": "2024",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 179
+  },
+  {
+    "player_name": "Verlander, Justin",
+    "season": "2024",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1580
+  },
+  {
+    "player_name": "Wentz, Joey",
+    "season": "2024",
+    "stuff_plus": 96.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1224
+  },
+  {
+    "player_name": "Anderson, Tyler",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2914
+  },
+  {
+    "player_name": "Beck, Tristan",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 242
+  },
+  {
+    "player_name": "Emanuel, Kent",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 284
+  },
+  {
+    "player_name": "Houck, Tanner",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2735
+  },
+  {
+    "player_name": "Manaea, Sean",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2948
+  },
+  {
+    "player_name": "Olson, Reese",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1853
+  },
+  {
+    "player_name": "Priester, Quinn",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 811
+  },
+  {
+    "player_name": "Sandoval, Patrick",
+    "season": "2024",
+    "stuff_plus": 96.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1444
+  },
+  {
+    "player_name": "Boyd, Matthew",
+    "season": "2024",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 669
+  },
+  {
+    "player_name": "Gray, Jon",
+    "season": "2024",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1620
+  },
+  {
+    "player_name": "Holton, Tyler",
+    "season": "2024",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1339
+  },
+  {
+    "player_name": "Howard, Spencer",
+    "season": "2024",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 537
+  },
+  {
+    "player_name": "Gillispie, Connor",
+    "season": "2024",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 138
+  },
+  {
+    "player_name": "Ramirez, Nick",
+    "season": "2024",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 194
+  },
+  {
+    "player_name": "Taillon, Jameson",
+    "season": "2024",
+    "stuff_plus": 96.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2483
+  },
+  {
+    "player_name": "Manoah, Alek",
+    "season": "2024",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 394
+  },
+  {
+    "player_name": "Mantiply, Joe",
+    "season": "2024",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 867
+  },
+  {
+    "player_name": "Mazur, Adam",
+    "season": "2024",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 584
+  },
+  {
+    "player_name": "Singer, Brady",
+    "season": "2024",
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2966
+  },
+  {
+    "player_name": "Chivilli, Angel",
+    "season": "2024",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 512
+  },
+  {
+    "player_name": "Dunning, Dane",
+    "season": "2024",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1689
+  },
+  {
+    "player_name": "Junis, Jakob",
+    "season": "2024",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 943
+  },
+  {
+    "player_name": "McGough, Scott",
+    "season": "2024",
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 577
+  },
+  {
+    "player_name": "Dobnak, Randy",
+    "season": "2024",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 183
+  },
+  {
+    "player_name": "Matz, Steven",
+    "season": "2024",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 754
+  },
+  {
+    "player_name": "Rodriguez, Eduardo",
+    "season": "2024",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 866
+  },
+  {
+    "player_name": "Young, Alex",
+    "season": "2024",
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 267
+  },
+  {
+    "player_name": "Jefferies, Daulton",
+    "season": "2024",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 281
+  },
+  {
+    "player_name": "Shuster, Jared",
+    "season": "2024",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1290
+  },
+  {
+    "player_name": "Flexen, Chris",
+    "season": "2024",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2797
+  },
+  {
+    "player_name": "Hendricks, Kyle",
+    "season": "2024",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2135
+  },
+  {
+    "player_name": "Honeywell, Brent",
+    "season": "2024",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 595
+  },
+  {
+    "player_name": "Houser, Adrian",
+    "season": "2024",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1131
+  },
+  {
+    "player_name": "McFarland, T.J.",
+    "season": "2024",
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 836
+  },
+  {
+    "player_name": "Keuchel, Dallas",
+    "season": "2024",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 308
+  },
+  {
+    "player_name": "Misiewicz, Anthony",
+    "season": "2024",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Quantrill, Cal",
+    "season": "2024",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2643
+  },
+  {
+    "player_name": "Adon, Joan",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 178
+  },
+  {
+    "player_name": "Alexander, Tyler",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1645
+  },
+  {
+    "player_name": "Assad, Javier",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2538
+  },
+  {
+    "player_name": "Gilbreath, Lucas",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 47
+  },
+  {
+    "player_name": "Graceffo, Gordon",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 105
+  },
+  {
+    "player_name": "Martinez, Seth",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 838
+  },
+  {
+    "player_name": "Poteet, Cody",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 384
+  },
+  {
+    "player_name": "Silseth, Chase",
+    "season": "2024",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 167
+  },
+  {
+    "player_name": "Blackburn, Paul",
+    "season": "2024",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1212
+  },
+  {
+    "player_name": "Hartwig, Grant",
+    "season": "2024",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 118
+  },
+  {
+    "player_name": "Myers, Tobias",
+    "season": "2024",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2151
+  },
+  {
+    "player_name": "Schreiber, John",
+    "season": "2024",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 895
+  },
+  {
+    "player_name": "Spiers, Carson",
+    "season": "2024",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1554
+  },
+  {
+    "player_name": "Antone, Tejay",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 47
+  },
+  {
+    "player_name": "Burrows, Mike",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 68
+  },
+  {
+    "player_name": "Castellanos, Humberto",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 186
+  },
+  {
+    "player_name": "Chirinos, Yonny",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 515
+  },
+  {
+    "player_name": "Estes, Joey",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2019
+  },
+  {
+    "player_name": "Pennington, Walter",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 330
+  },
+  {
+    "player_name": "Yates, Kirby",
+    "season": "2024",
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1026
+  },
+  {
+    "player_name": "Bielak, Brandon",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 510
+  },
+  {
+    "player_name": "Elder, Bryce",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 864
+  },
+  {
+    "player_name": "Fairbanks, Pete",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 696
+  },
+  {
+    "player_name": "Hancock, Emerson",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1014
+  },
+  {
+    "player_name": "McKenzie, Triston",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1304
+  },
+  {
+    "player_name": "Nelson, Kyle",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 145
+  },
+  {
+    "player_name": "Parker, Mitchell",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2404
+  },
+  {
+    "player_name": "Thompson, Zack",
+    "season": "2024",
+    "stuff_plus": 95.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 317
+  },
+  {
+    "player_name": "Carrasco, Carlos",
+    "season": "2024",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1693
+  },
+  {
+    "player_name": "Crismatt, Nabil",
+    "season": "2024",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 93
+  },
+  {
+    "player_name": "Kelly, Merrill",
+    "season": "2024",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 1142
+  },
+  {
+    "player_name": "Ram\u00edrez, Erasmo",
+    "season": "2024",
+    "stuff_plus": 95.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 302
+  },
+  {
+    "player_name": "Beede, Tyler",
+    "season": "2024",
+    "stuff_plus": 95.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 265
+  },
+  {
+    "player_name": "Harrison, Kyle",
+    "season": "2024",
+    "stuff_plus": 95.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2078
+  },
+  {
+    "player_name": "Kristofak, Zac",
+    "season": "2024",
+    "stuff_plus": 95.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Meeker, James",
+    "season": "2024",
+    "stuff_plus": 95.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 16
+  },
+  {
+    "player_name": "Buchanan, David",
+    "season": "2024",
+    "stuff_plus": 95.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 58
+  },
+  {
+    "player_name": "Littell, Zack",
+    "season": "2024",
+    "stuff_plus": 95.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 2485
+  },
+  {
+    "player_name": "Gonzales, Marco",
+    "season": "2024",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 546
+  },
+  {
+    "player_name": "Rea, Colin",
+    "season": "2024",
+    "stuff_plus": 94.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2650
+  },
+  {
+    "player_name": "Brooks, Aaron",
+    "season": "2024",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 403
+  },
+  {
+    "player_name": "Cuas, Jose",
+    "season": "2024",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 319
+  },
+  {
+    "player_name": "Floro, Dylan",
+    "season": "2024",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1018
+  },
+  {
+    "player_name": "Phillips, Tyler",
+    "season": "2024",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 578
+  },
+  {
+    "player_name": "Uwasawa, Naoyuki",
+    "season": "2024",
+    "stuff_plus": 94.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 62
+  },
+  {
+    "player_name": "Black, Mason",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 663
+  },
+  {
+    "player_name": "Civale, Aaron",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2699
+  },
+  {
+    "player_name": "Jackson, Jay",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 453
+  },
+  {
+    "player_name": "Miley, Wade",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 118
+  },
+  {
+    "player_name": "S\u00e1nchez, Sixto",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 621
+  },
+  {
+    "player_name": "Tonkin, Michael",
+    "season": "2024",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1419
+  },
+  {
+    "player_name": "Daniel, Davis",
+    "season": "2024",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 508
+  },
+  {
+    "player_name": "Maeda, Kenta",
+    "season": "2024",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1958
+  },
+  {
+    "player_name": "Milner, Hoby",
+    "season": "2024",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1043
+  },
+  {
+    "player_name": "Springs, Jeffrey",
+    "season": "2024",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 565
+  },
+  {
+    "player_name": "Williamson, Brandon",
+    "season": "2024",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 256
+  },
+  {
+    "player_name": "Foster, Matt",
+    "season": "2024",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 108
+  },
+  {
+    "player_name": "Keller, Brad",
+    "season": "2024",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 743
+  },
+  {
+    "player_name": "Stephens, Jackson",
+    "season": "2024",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Thorpe, Drew",
+    "season": "2024",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 721
+  },
+  {
+    "player_name": "Walston, Blake",
+    "season": "2024",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 343
+  },
+  {
+    "player_name": "Allen, Logan",
+    "season": "2024",
+    "stuff_plus": 94.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2135
+  },
+  {
+    "player_name": "Corbin, Patrick",
+    "season": "2024",
+    "stuff_plus": 94.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2888
+  },
+  {
+    "player_name": "Lyles, Jordan",
+    "season": "2024",
+    "stuff_plus": 94.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 72
+  },
+  {
+    "player_name": "Molina, Anthony",
+    "season": "2024",
+    "stuff_plus": 94.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1048
+  },
+  {
+    "player_name": "Basso, Brady",
+    "season": "2024",
+    "stuff_plus": 94.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 350
+  },
+  {
+    "player_name": "Jim\u00e9nez, Dany",
+    "season": "2024",
+    "stuff_plus": 94.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 450
+  },
+  {
+    "player_name": "Lambert, Peter",
+    "season": "2024",
+    "stuff_plus": 94.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1039
+  },
+  {
+    "player_name": "Aldegheri, Sam",
+    "season": "2024",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 222
+  },
+  {
+    "player_name": "Bradford, Cody",
+    "season": "2024",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1175
+  },
+  {
+    "player_name": "Hurt, Kyle",
+    "season": "2024",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 87
+  },
+  {
+    "player_name": "Montgomery, Jordan",
+    "season": "2024",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1929
+  },
+  {
+    "player_name": "Wood, Alex",
+    "season": "2024",
+    "stuff_plus": 94.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 756
+  },
+  {
+    "player_name": "Feyereisen, J.P.",
+    "season": "2024",
+    "stuff_plus": 94.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 179
+  },
+  {
+    "player_name": "Gillaspie, Logan",
+    "season": "2024",
+    "stuff_plus": 94.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 151
+  },
+  {
+    "player_name": "Mikolas, Miles",
+    "season": "2024",
+    "stuff_plus": 94.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2703
+  },
+  {
+    "player_name": "Allard, Kolby",
+    "season": "2024",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 436
+  },
+  {
+    "player_name": "Burr, Ryan",
+    "season": "2024",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 570
+  },
+  {
+    "player_name": "Kershaw, Clayton",
+    "season": "2024",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 504
+  },
+  {
+    "player_name": "Walker, Taijuan",
+    "season": "2024",
+    "stuff_plus": 94.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1435
+  },
+  {
+    "player_name": "McCaughan, Darren",
+    "season": "2024",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 714
+  },
+  {
+    "player_name": "Woodford, Jake",
+    "season": "2024",
+    "stuff_plus": 93.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 618
+  },
+  {
+    "player_name": "Davis, Noah",
+    "season": "2024",
+    "stuff_plus": 93.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 365
+  },
+  {
+    "player_name": "Lopez, Jacob",
+    "season": "2024",
+    "stuff_plus": 93.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 178
+  },
+  {
+    "player_name": "Gallegos, Giovanny",
+    "season": "2024",
+    "stuff_plus": 93.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 401
+  },
+  {
+    "player_name": "Gomber, Austin",
+    "season": "2024",
+    "stuff_plus": 93.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2621
+  },
+  {
+    "player_name": "Kilian, Caleb",
+    "season": "2024",
+    "stuff_plus": 93.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 167
+  },
+  {
+    "player_name": "Mahle, Tyler",
+    "season": "2024",
+    "stuff_plus": 93.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 229
+  },
+  {
+    "player_name": "Gordon, Tanner",
+    "season": "2024",
+    "stuff_plus": 93.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 607
+  },
+  {
+    "player_name": "Barnes, Matt",
+    "season": "2024",
+    "stuff_plus": 93.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 237
+  },
+  {
+    "player_name": "Dodd, Dylan",
+    "season": "2024",
+    "stuff_plus": 93.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Boushley, Caleb",
+    "season": "2024",
+    "stuff_plus": 93.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 63
+  },
+  {
+    "player_name": "Maciejewski, Josh",
+    "season": "2024",
+    "stuff_plus": 93.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 96
+  },
+  {
+    "player_name": "Smith, Will",
+    "season": "2024",
+    "stuff_plus": 93.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 673
+  },
+  {
+    "player_name": "Paxton, James",
+    "season": "2024",
+    "stuff_plus": 93.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1708
+  },
+  {
+    "player_name": "Scott, Tayler",
+    "season": "2024",
+    "stuff_plus": 93.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1203
+  },
+  {
+    "player_name": "Kelly, Michael",
+    "season": "2024",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 470
+  },
+  {
+    "player_name": "Kloffenstein, Adam",
+    "season": "2024",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "P\u00e9rez, Mart\u00edn",
+    "season": "2024",
+    "stuff_plus": 92.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2204
+  },
+  {
+    "player_name": "Chavez, Jesse",
+    "season": "2024",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1044
+  },
+  {
+    "player_name": "Dana, Caden",
+    "season": "2024",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 206
+  },
+  {
+    "player_name": "Feigl, Brady",
+    "season": "2024",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 44
+  },
+  {
+    "player_name": "Irvin, Cole",
+    "season": "2024",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1767
+  },
+  {
+    "player_name": "Senzatela, Antonio",
+    "season": "2024",
+    "stuff_plus": 92.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 218
+  },
+  {
+    "player_name": "Heasley, Jonathan",
+    "season": "2024",
+    "stuff_plus": 92.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 108
+  },
+  {
+    "player_name": "Bellozo, Valente",
+    "season": "2024",
+    "stuff_plus": 92.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1080
+  },
+  {
+    "player_name": "O'Loughlin, Jack",
+    "season": "2024",
+    "stuff_plus": 92.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 176
+  },
+  {
+    "player_name": "Rosenberg, Kenny",
+    "season": "2024",
+    "stuff_plus": 92.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 403
+  },
+  {
+    "player_name": "Stripling, Ross",
+    "season": "2024",
+    "stuff_plus": 92.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1358
+  },
+  {
+    "player_name": "Villalobos, Eli",
+    "season": "2024",
+    "stuff_plus": 92.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 71
+  },
+  {
+    "player_name": "Davidson, Tucker",
+    "season": "2024",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 67
+  },
+  {
+    "player_name": "Peralta, Sammy",
+    "season": "2024",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 282
+  },
+  {
+    "player_name": "Pruitt, Austin",
+    "season": "2024",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 78
+  },
+  {
+    "player_name": "Henry, Tommy",
+    "season": "2024",
+    "stuff_plus": 92.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 706
+  },
+  {
+    "player_name": "Yarbrough, Ryan",
+    "season": "2024",
+    "stuff_plus": 91.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 1106
+  },
+  {
+    "player_name": "Lively, Ben",
+    "season": "2024",
+    "stuff_plus": 91.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 2406
+  },
+  {
+    "player_name": "La Sorsa, Joe",
+    "season": "2024",
+    "stuff_plus": 91.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 242
+  },
+  {
+    "player_name": "Winans, Allan",
+    "season": "2024",
+    "stuff_plus": 91.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 147
+  },
+  {
+    "player_name": "Dunshee, Parker",
+    "season": "2024",
+    "stuff_plus": 91.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Kelly, Casey",
+    "season": "2024",
+    "stuff_plus": 91.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 78
+  },
+  {
+    "player_name": "Blalock, Bradley",
+    "season": "2024",
+    "stuff_plus": 91.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 551
+  },
+  {
+    "player_name": "Kravetz, Evan",
+    "season": "2024",
+    "stuff_plus": 91.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 4
+  },
+  {
+    "player_name": "Loutos, Ryan",
+    "season": "2024",
+    "stuff_plus": 91.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 35
+  },
+  {
+    "player_name": "Crawford, Brandon",
+    "season": "2024",
+    "stuff_plus": 90.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 35
+  },
+  {
+    "player_name": "Leibrandt, Brandon",
+    "season": "2024",
+    "stuff_plus": 90.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 117
+  },
+  {
+    "player_name": "Cueto, Johnny",
+    "season": "2024",
+    "stuff_plus": 90.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 167
+  },
+  {
+    "player_name": "Rogers, Josh",
+    "season": "2024",
+    "stuff_plus": 90.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 170
+  },
+  {
+    "player_name": "Curry, Xzavion",
+    "season": "2024",
+    "stuff_plus": 90.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 639
+  },
+  {
+    "player_name": "Plesac, Zach",
+    "season": "2024",
+    "stuff_plus": 90.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 208
+  },
+  {
+    "player_name": "Shreve, Chasen",
+    "season": "2024",
+    "stuff_plus": 89.8,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Hernandez, Jose E.",
+    "season": "2024",
+    "stuff_plus": 89.6,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 89
+  },
+  {
+    "player_name": "Hill, Rich",
+    "season": "2024",
+    "stuff_plus": 88.6,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "Berm\u00fadez, Jonathan",
+    "season": "2024",
+    "stuff_plus": 87.1,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 101
+  },
+  {
+    "player_name": "Blach, Ty",
+    "season": "2024",
+    "stuff_plus": 86.7,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 1133
+  },
+  {
+    "player_name": "Kessinger, Grae",
+    "season": "2024",
+    "stuff_plus": 85.1,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 4
+  },
+  {
+    "player_name": "Smith, Pavin",
+    "season": "2024",
+    "stuff_plus": 84.4,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Pratto, Nick",
+    "season": "2024",
+    "stuff_plus": 84.3,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "San\u00f3, Miguel",
+    "season": "2024",
+    "stuff_plus": 83.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 3
+  },
+  {
+    "player_name": "Rojas, Josh",
+    "season": "2024",
+    "stuff_plus": 81.4,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Bruj\u00e1n, Vidal",
+    "season": "2024",
+    "stuff_plus": 80.2,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 28
+  },
+  {
+    "player_name": "Hensley, David",
+    "season": "2024",
+    "stuff_plus": 78.5,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Rortvedt, Ben",
+    "season": "2024",
+    "stuff_plus": 73.6,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 24
+  },
+  {
+    "player_name": "Wallner, Matt",
+    "season": "2024",
+    "stuff_plus": 70.0,
+    "grade": "30",
+    "color": "#ef233c",
+    "total_pitches": 2
+  }
+]

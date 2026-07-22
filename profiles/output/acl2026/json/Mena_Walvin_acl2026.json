@@ -1,0 +1,145 @@
+{
+  "player_name": "Mena, Walvin",
+  "season": "acl2026",
+  "total_pitches": 13,
+  "p_throws": "R",
+  "arm_angle": 42.0,
+  "team": "A-DBA",
+  "pitcher_id": 808005,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 77.4,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 8,
+      "n_vs_r": 6,
+      "n_vs_l": 2,
+      "usage_pct": 61.5,
+      "usage_pct_vs_r": 66.7,
+      "usage_pct_vs_l": 50.0,
+      "velo": 92.2,
+      "ivb": 12.8,
+      "hb": 7.0,
+      "vaa": -5.16,
+      "haa": 1.32,
+      "spin": 2381,
+      "extension": 5.66,
+      "arm_angle": 42.9,
+      "release_height": 5.99,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 25.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.33,
+        0.7,
+        -0.22,
+        0.67,
+        -0.43,
+        1.05,
+        -0.83,
+        1.54
+      ],
+      "locations_z": [
+        1.75,
+        2.95,
+        4.0,
+        3.97,
+        4.1,
+        1.68,
+        2.77,
+        2.95
+      ],
+      "locations_x_vs_r": [
+        0.33,
+        0.7,
+        -0.22,
+        0.67,
+        -0.43,
+        1.54
+      ],
+      "locations_z_vs_r": [
+        1.75,
+        2.95,
+        4.0,
+        3.97,
+        4.1,
+        2.95
+      ],
+      "locations_x_vs_l": [
+        1.05,
+        -0.83
+      ],
+      "locations_z_vs_l": [
+        1.68,
+        2.77
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 84.3,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 3,
+      "n_vs_l": 2,
+      "usage_pct": 38.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 50.0,
+      "velo": 92.0,
+      "ivb": 9.5,
+      "hb": 13.3,
+      "vaa": -6.91,
+      "haa": 0.79,
+      "spin": 2340,
+      "extension": 5.71,
+      "arm_angle": 41.1,
+      "release_height": 5.87,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 60.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.44,
+        1.37,
+        1.25,
+        0.87,
+        -1.03
+      ],
+      "locations_z": [
+        0.85,
+        2.59,
+        0.87,
+        1.86,
+        2.13
+      ],
+      "locations_x_vs_r": [
+        -0.44,
+        1.37,
+        -1.03
+      ],
+      "locations_z_vs_r": [
+        0.85,
+        2.59,
+        2.13
+      ],
+      "locations_x_vs_l": [
+        1.25,
+        0.87
+      ],
+      "locations_z_vs_l": [
+        0.87,
+        1.86
+      ]
+    }
+  ]
+}

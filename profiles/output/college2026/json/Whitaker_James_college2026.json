@@ -1,0 +1,197 @@
+{
+  "player_name": "Whitaker, James",
+  "season": "college2026",
+  "total_pitches": 8,
+  "p_throws": "R",
+  "arm_angle": 45.9,
+  "team": "NU",
+  "pitcher_id": 816112,
+  "age": null,
+  "ip_str": "1.0",
+  "era": null,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 83.6,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 37.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 40.0,
+      "velo": 72.0,
+      "ivb": -11.2,
+      "hb": -9.0,
+      "vaa": -11.42,
+      "haa": 3.33,
+      "spin": 2164,
+      "extension": 6.36,
+      "arm_angle": 47.4,
+      "release_height": 5.99,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.44,
+        2.03,
+        0.94
+      ],
+      "locations_z": [
+        2.88,
+        0.37,
+        0.14
+      ],
+      "locations_x_vs_r": [
+        0.94
+      ],
+      "locations_z_vs_r": [
+        0.14
+      ],
+      "locations_x_vs_l": [
+        0.44,
+        2.03
+      ],
+      "locations_z_vs_l": [
+        2.88,
+        0.37
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 86.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 0,
+      "n_vs_l": 3,
+      "usage_pct": 37.5,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 60.0,
+      "velo": 88.3,
+      "ivb": 10.3,
+      "hb": 15.3,
+      "vaa": -6.12,
+      "haa": -0.41,
+      "spin": 1784,
+      "extension": 6.47,
+      "arm_angle": 44.3,
+      "release_height": 5.77,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.65,
+        -0.15,
+        -0.08
+      ],
+      "locations_z": [
+        2.35,
+        2.7,
+        2.29
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.65,
+        -0.15,
+        -0.08
+      ],
+      "locations_z_vs_l": [
+        2.35,
+        2.7,
+        2.29
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 101.6,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 86.4,
+      "ivb": 9.0,
+      "hb": 17.8,
+      "vaa": -4.71,
+      "haa": -1.34,
+      "spin": 1821,
+      "extension": 6.42,
+      "arm_angle": 45.0,
+      "release_height": 5.91,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.0
+      ],
+      "locations_z": [
+        4.07
+      ],
+      "locations_x_vs_r": [
+        -1.0
+      ],
+      "locations_z_vs_r": [
+        4.07
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 78.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 88.1,
+      "ivb": 14.5,
+      "hb": 12.2,
+      "vaa": -5.41,
+      "haa": 0.5,
+      "spin": 1889,
+      "extension": 6.46,
+      "arm_angle": 47.1,
+      "release_height": 5.82,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.4
+      ],
+      "locations_z": [
+        2.8
+      ],
+      "locations_x_vs_r": [
+        0.4
+      ],
+      "locations_z_vs_r": [
+        2.8
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

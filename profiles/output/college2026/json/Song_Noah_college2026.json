@@ -1,0 +1,178 @@
+{
+  "player_name": "Song, Noah",
+  "season": "college2026",
+  "total_pitches": 12,
+  "p_throws": "R",
+  "arm_angle": 41.6,
+  "team": "BOS",
+  "pitcher_id": 679977,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.4,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 6,
+      "n_vs_r": 3,
+      "n_vs_l": 3,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 75.0,
+      "usage_pct_vs_l": 37.5,
+      "velo": 84.4,
+      "ivb": 0.6,
+      "hb": -2.4,
+      "vaa": -8.42,
+      "haa": 2.7,
+      "spin": 2466,
+      "extension": 5.98,
+      "arm_angle": 41.4,
+      "release_height": 6.25,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.44,
+        1.07,
+        -0.46,
+        0.11,
+        1.14,
+        1.19
+      ],
+      "locations_z": [
+        2.75,
+        1.48,
+        2.34,
+        2.41,
+        1.09,
+        1.33
+      ],
+      "locations_x_vs_r": [
+        0.11,
+        1.14,
+        1.19
+      ],
+      "locations_z_vs_r": [
+        2.41,
+        1.09,
+        1.33
+      ],
+      "locations_x_vs_l": [
+        0.44,
+        1.07,
+        -0.46
+      ],
+      "locations_z_vs_l": [
+        2.75,
+        1.48,
+        2.34
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 95.4,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 37.5,
+      "velo": 94.9,
+      "ivb": 16.4,
+      "hb": 4.6,
+      "vaa": -4.67,
+      "haa": 0.15,
+      "spin": 2258,
+      "extension": 6.08,
+      "arm_angle": 42.8,
+      "release_height": 6.32,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.26,
+        -0.96,
+        -1.36,
+        -1.64
+      ],
+      "locations_z": [
+        3.94,
+        3.79,
+        3.13,
+        2.66
+      ],
+      "locations_x_vs_r": [
+        -1.64
+      ],
+      "locations_z_vs_r": [
+        2.66
+      ],
+      "locations_x_vs_l": [
+        -0.26,
+        -0.96,
+        -1.36
+      ],
+      "locations_z_vs_l": [
+        3.94,
+        3.79,
+        3.13
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 77.7,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 0,
+      "n_vs_l": 2,
+      "usage_pct": 16.7,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 25.0,
+      "velo": 87.3,
+      "ivb": 12.1,
+      "hb": 13.3,
+      "vaa": -7.62,
+      "haa": 0.1,
+      "spin": 2147,
+      "extension": 6.29,
+      "arm_angle": 40.7,
+      "release_height": 5.96,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.8,
+        -0.29
+      ],
+      "locations_z": [
+        0.79,
+        1.65
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.8,
+        -0.29
+      ],
+      "locations_z_vs_l": [
+        0.79,
+        1.65
+      ]
+    }
+  ]
+}

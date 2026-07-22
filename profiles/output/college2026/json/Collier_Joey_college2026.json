@@ -1,0 +1,141 @@
+{
+  "player_name": "Collier, Joey",
+  "season": "college2026",
+  "total_pitches": 12,
+  "p_throws": "L",
+  "arm_angle": 23.7,
+  "team": "AF",
+  "pitcher_id": 823307,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 8,
+      "n_vs_r": 4,
+      "n_vs_l": 4,
+      "usage_pct": 66.7,
+      "usage_pct_vs_r": 80.0,
+      "usage_pct_vs_l": 57.1,
+      "velo": 79.7,
+      "ivb": 2.7,
+      "hb": -4.5,
+      "vaa": -6.95,
+      "haa": -3.95,
+      "spin": 2305,
+      "extension": 5.79,
+      "arm_angle": 24.2,
+      "release_height": 5.38,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 75.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.02,
+        0.37,
+        -0.22,
+        0.43,
+        0.2,
+        -0.58,
+        -0.03,
+        -1.71
+      ],
+      "locations_z": [
+        1.27,
+        3.15,
+        1.14,
+        2.93,
+        2.06,
+        2.52,
+        4.67,
+        2.51
+      ],
+      "locations_x_vs_r": [
+        -1.02,
+        0.37,
+        -0.22,
+        0.43
+      ],
+      "locations_z_vs_r": [
+        1.27,
+        3.15,
+        1.14,
+        2.93
+      ],
+      "locations_x_vs_l": [
+        0.2,
+        -0.58,
+        -0.03,
+        -1.71
+      ],
+      "locations_z_vs_l": [
+        2.06,
+        2.52,
+        4.67,
+        2.51
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 93.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 4,
+      "n_vs_r": 1,
+      "n_vs_l": 3,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 42.9,
+      "velo": 87.6,
+      "ivb": 11.3,
+      "hb": 3.2,
+      "vaa": -5.15,
+      "haa": -2.45,
+      "spin": 2418,
+      "extension": 5.83,
+      "arm_angle": 23.2,
+      "release_height": 5.33,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 75.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.63,
+        -0.09,
+        -0.58,
+        0.38
+      ],
+      "locations_z": [
+        3.34,
+        2.13,
+        2.24,
+        3.22
+      ],
+      "locations_x_vs_r": [
+        1.63
+      ],
+      "locations_z_vs_r": [
+        3.34
+      ],
+      "locations_x_vs_l": [
+        -0.09,
+        -0.58,
+        0.38
+      ],
+      "locations_z_vs_l": [
+        2.13,
+        2.24,
+        3.22
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "player_name": "Kohlhepp, Tanner",
+  "season": "breakout2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 14.7,
+  "team": "DTP",
+  "pitcher_id": 681289,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 101.1,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 0,
+      "n_vs_l": 4,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 94.5,
+      "ivb": 11.6,
+      "hb": 12.0,
+      "vaa": -4.54,
+      "haa": 1.28,
+      "spin": 2299,
+      "extension": 5.85,
+      "arm_angle": 14.7,
+      "release_height": 5.11,
+      "spin_axis_clock": "10:28",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": 0.102,
+      "locations_x": [
+        -1.5,
+        0.08,
+        -0.63,
+        -0.85
+      ],
+      "locations_z": [
+        2.24,
+        3.09,
+        2.85,
+        2.52
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.5,
+        0.08,
+        -0.63,
+        -0.85
+      ],
+      "locations_z_vs_l": [
+        2.24,
+        3.09,
+        2.85,
+        2.52
+      ]
+    }
+  ]
+}

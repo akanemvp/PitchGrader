@@ -1,0 +1,203 @@
+{
+  "player_name": "Walters, Brian",
+  "season": "springall2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 23.9,
+  "team": "PHP",
+  "pitcher_id": 805758,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 101.2,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 2,
+      "n_vs_l": 2,
+      "usage_pct": 44.4,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 40.0,
+      "velo": 85.2,
+      "ivb": -2.0,
+      "hb": -9.8,
+      "vaa": -8.08,
+      "haa": 3.33,
+      "spin": 2140,
+      "extension": 6.63,
+      "arm_angle": 19.3,
+      "release_height": 4.71,
+      "spin_axis_clock": "3:28",
+      "zone_pct": 0.0,
+      "chase_pct": 75.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": 0.759,
+      "locations_x": [
+        0.38,
+        -0.26,
+        -0.25,
+        0.08
+      ],
+      "locations_z": [
+        0.89,
+        0.55,
+        0.34,
+        1.44
+      ],
+      "locations_x_vs_r": [
+        -0.25,
+        0.08
+      ],
+      "locations_z_vs_r": [
+        0.34,
+        1.44
+      ],
+      "locations_x_vs_l": [
+        0.38,
+        -0.26
+      ],
+      "locations_z_vs_l": [
+        0.89,
+        0.55
+      ]
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 96.5,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 40.0,
+      "velo": 96.7,
+      "ivb": 8.1,
+      "hb": 13.3,
+      "vaa": -5.06,
+      "haa": 0.72,
+      "spin": 1950,
+      "extension": 6.85,
+      "arm_angle": 26.7,
+      "release_height": 4.95,
+      "spin_axis_clock": "10:03",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.047,
+      "locations_x": [
+        0.26,
+        -1.09,
+        0.77
+      ],
+      "locations_z": [
+        3.14,
+        1.12,
+        2.39
+      ],
+      "locations_x_vs_r": [
+        -1.09
+      ],
+      "locations_z_vs_r": [
+        1.12
+      ],
+      "locations_x_vs_l": [
+        0.26,
+        0.77
+      ],
+      "locations_z_vs_l": [
+        3.14,
+        2.39
+      ]
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 101.3,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 11.1,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 86.0,
+      "ivb": 3.2,
+      "hb": -9.0,
+      "vaa": -6.82,
+      "haa": 2.39,
+      "spin": 2148,
+      "extension": 6.46,
+      "arm_angle": 19.5,
+      "release_height": 4.72,
+      "spin_axis_clock": "2:21",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.73
+      ],
+      "locations_z": [
+        1.47
+      ],
+      "locations_x_vs_r": [
+        -0.73
+      ],
+      "locations_z_vs_r": [
+        1.47
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 90.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 11.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 20.0,
+      "velo": 96.3,
+      "ivb": 11.4,
+      "hb": 6.8,
+      "vaa": -4.05,
+      "haa": 2.76,
+      "spin": 1815,
+      "extension": 6.71,
+      "arm_angle": 30.1,
+      "release_height": 5.07,
+      "spin_axis_clock": "10:58",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.37
+      ],
+      "locations_z": [
+        3.04
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        1.37
+      ],
+      "locations_z_vs_l": [
+        3.04
+      ]
+    }
+  ]
+}

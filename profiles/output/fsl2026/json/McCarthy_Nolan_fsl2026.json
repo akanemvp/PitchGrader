@@ -1,0 +1,102 @@
+{
+  "player_name": "McCarthy, Nolan",
+  "season": "fsl2026",
+  "total_pitches": 12,
+  "p_throws": "R",
+  "arm_angle": 31.4,
+  "team": "LAK",
+  "pitcher_id": 823114,
+  "age": null,
+  "ip_str": "2.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 82.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 12,
+      "n_vs_r": 5,
+      "n_vs_l": 7,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 76.7,
+      "ivb": 15.4,
+      "hb": 14.7,
+      "vaa": -5.38,
+      "haa": -0.09,
+      "spin": 1909,
+      "extension": 6.35,
+      "arm_angle": 31.4,
+      "release_height": 5.34,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 37.5,
+      "whiff_pct": 14.3,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.7,
+        -1.46,
+        -0.44,
+        0.15,
+        1.69,
+        -1.75,
+        -1.91,
+        -1.03,
+        -2.13,
+        -0.1,
+        -0.14,
+        0.32
+      ],
+      "locations_z": [
+        2.92,
+        2.63,
+        4.46,
+        3.07,
+        1.06,
+        3.55,
+        4.3,
+        3.77,
+        4.72,
+        3.92,
+        2.91,
+        1.68
+      ],
+      "locations_x_vs_r": [
+        0.7,
+        -1.46,
+        -0.44,
+        0.15,
+        -0.1
+      ],
+      "locations_z_vs_r": [
+        2.92,
+        2.63,
+        4.46,
+        3.07,
+        3.92
+      ],
+      "locations_x_vs_l": [
+        1.69,
+        -1.75,
+        -1.91,
+        -1.03,
+        -2.13,
+        -0.14,
+        0.32
+      ],
+      "locations_z_vs_l": [
+        1.06,
+        3.55,
+        4.3,
+        3.77,
+        4.72,
+        2.91,
+        1.68
+      ]
+    }
+  ]
+}

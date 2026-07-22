@@ -1,0 +1,227 @@
+{
+  "player_name": "Herrin, Tim",
+  "season": "aaa2026",
+  "total_pitches": 15,
+  "p_throws": "L",
+  "arm_angle": 33.2,
+  "team": "COL",
+  "pitcher_id": 682120,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 97.1,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 5,
+      "n_vs_l": 2,
+      "usage_pct": 46.7,
+      "usage_pct_vs_r": 45.5,
+      "usage_pct_vs_l": 50.0,
+      "velo": 81.0,
+      "ivb": -3.0,
+      "hb": -13.9,
+      "vaa": -10.45,
+      "haa": -4.09,
+      "spin": 2338,
+      "extension": 6.16,
+      "arm_angle": 35.7,
+      "release_height": 6.15,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 57.1,
+      "whiff_pct": 75.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.38,
+        0.01,
+        -1.42,
+        -1.81,
+        1.31,
+        -0.65,
+        0.27
+      ],
+      "locations_z": [
+        0.8,
+        1.33,
+        -0.46,
+        0.17,
+        1.94,
+        0.56,
+        0.23
+      ],
+      "locations_x_vs_r": [
+        -1.42,
+        -1.81,
+        1.31,
+        -0.65,
+        0.27
+      ],
+      "locations_z_vs_r": [
+        -0.46,
+        0.17,
+        1.94,
+        0.56,
+        0.23
+      ],
+      "locations_x_vs_l": [
+        -0.38,
+        0.01
+      ],
+      "locations_z_vs_l": [
+        0.8,
+        1.33
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 95.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 27.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 96.3,
+      "ivb": 12.9,
+      "hb": 7.7,
+      "vaa": -5.21,
+      "haa": -0.08,
+      "spin": 2387,
+      "extension": 6.28,
+      "arm_angle": 32.2,
+      "release_height": 5.85,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        3.43,
+        0.24,
+        -0.09
+      ],
+      "locations_z": [
+        3.76,
+        2.37,
+        1.87
+      ],
+      "locations_x_vs_r": [
+        3.43,
+        0.24,
+        -0.09
+      ],
+      "locations_z_vs_r": [
+        3.76,
+        2.37,
+        1.87
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 93.2,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 9.1,
+      "usage_pct_vs_l": 50.0,
+      "velo": 95.5,
+      "ivb": 5.0,
+      "hb": 12.1,
+      "vaa": -7.38,
+      "haa": -0.79,
+      "spin": 2208,
+      "extension": 6.26,
+      "arm_angle": 32.0,
+      "release_height": 5.81,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 50.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.2,
+        0.21,
+        0.25
+      ],
+      "locations_z": [
+        1.1,
+        1.37,
+        1.89
+      ],
+      "locations_x_vs_r": [
+        0.25
+      ],
+      "locations_z_vs_r": [
+        1.89
+      ],
+      "locations_x_vs_l": [
+        -0.2,
+        0.21
+      ],
+      "locations_z_vs_l": [
+        1.1,
+        1.37
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 99.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 13.3,
+      "usage_pct_vs_r": 18.2,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.7,
+      "ivb": 3.4,
+      "hb": 1.1,
+      "vaa": -7.83,
+      "haa": -2.11,
+      "spin": 2187,
+      "extension": 6.24,
+      "arm_angle": 33.0,
+      "release_height": 6.02,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.1,
+        0.2
+      ],
+      "locations_z": [
+        1.78,
+        1.95
+      ],
+      "locations_x_vs_r": [
+        -0.1,
+        0.2
+      ],
+      "locations_z_vs_r": [
+        1.78,
+        1.95
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

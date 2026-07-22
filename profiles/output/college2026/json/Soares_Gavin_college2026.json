@@ -1,0 +1,142 @@
+{
+  "player_name": "Soares, Gavin",
+  "season": "college2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 47.0,
+  "team": "BC",
+  "pitcher_id": 831500,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 93.3,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 50.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 80.9,
+      "ivb": -6.8,
+      "hb": -2.0,
+      "vaa": -8.43,
+      "haa": 1.63,
+      "spin": 2263,
+      "extension": 6.11,
+      "arm_angle": 49.9,
+      "release_height": 6.2,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.15,
+        0.03
+      ],
+      "locations_z": [
+        2.73,
+        2.72
+      ],
+      "locations_x_vs_r": [
+        0.15,
+        0.03
+      ],
+      "locations_z_vs_r": [
+        2.73,
+        2.72
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 85.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 93.8,
+      "ivb": 16.2,
+      "hb": 5.4,
+      "vaa": -5.03,
+      "haa": 1.35,
+      "spin": 2349,
+      "extension": 6.11,
+      "arm_angle": 46.2,
+      "release_height": 6.02,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.74
+      ],
+      "locations_z": [
+        2.9
+      ],
+      "locations_x_vs_r": [
+        0.74
+      ],
+      "locations_z_vs_r": [
+        2.9
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.9,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.8,
+      "ivb": -6.5,
+      "hb": -3.2,
+      "vaa": -10.53,
+      "haa": 2.93,
+      "spin": 2249,
+      "extension": 6.13,
+      "arm_angle": 45.0,
+      "release_height": 5.98,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.25
+      ],
+      "locations_z": [
+        0.46
+      ],
+      "locations_x_vs_r": [
+        1.25
+      ],
+      "locations_z_vs_r": [
+        0.46
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

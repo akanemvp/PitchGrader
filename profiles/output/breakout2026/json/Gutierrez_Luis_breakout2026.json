@@ -1,0 +1,197 @@
+{
+  "player_name": "Gutierrez, Luis",
+  "season": "breakout2026",
+  "total_pitches": 8,
+  "p_throws": "L",
+  "arm_angle": 35.3,
+  "team": "SDP",
+  "pitcher_id": 692294,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 82.5,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 3,
+      "n_vs_l": 1,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 42.9,
+      "usage_pct_vs_l": 100.0,
+      "velo": 96.1,
+      "ivb": 10.3,
+      "hb": 10.0,
+      "vaa": -5.87,
+      "haa": -2.51,
+      "spin": 1866,
+      "extension": 5.8,
+      "arm_angle": 35.7,
+      "release_height": 5.86,
+      "spin_axis_clock": "1:26",
+      "zone_pct": 75.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.173,
+      "locations_x": [
+        -0.38,
+        -0.46,
+        0.52,
+        -0.83
+      ],
+      "locations_z": [
+        2.67,
+        2.13,
+        1.93,
+        2.42
+      ],
+      "locations_x_vs_r": [
+        -0.46,
+        0.52,
+        -0.83
+      ],
+      "locations_z_vs_r": [
+        2.13,
+        1.93,
+        2.42
+      ],
+      "locations_x_vs_l": [
+        -0.38
+      ],
+      "locations_z_vs_l": [
+        2.67
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 105.7,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 25.0,
+      "usage_pct_vs_r": 28.6,
+      "usage_pct_vs_l": 0.0,
+      "velo": 86.0,
+      "ivb": 0.9,
+      "hb": -1.2,
+      "vaa": -5.56,
+      "haa": -2.66,
+      "spin": 2518,
+      "extension": 5.86,
+      "arm_angle": 38.4,
+      "release_height": 5.99,
+      "spin_axis_clock": "9:57",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.23,
+        1.2
+      ],
+      "locations_z": [
+        4.03,
+        3.84
+      ],
+      "locations_x_vs_r": [
+        0.23,
+        1.2
+      ],
+      "locations_z_vs_r": [
+        4.03,
+        3.84
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 87.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 14.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 91.1,
+      "ivb": 2.6,
+      "hb": 11.5,
+      "vaa": -7.79,
+      "haa": -2.1,
+      "spin": 1783,
+      "extension": 5.76,
+      "arm_angle": 32.5,
+      "release_height": 5.7,
+      "spin_axis_clock": "2:35",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.697,
+      "locations_x": [
+        0.16
+      ],
+      "locations_z": [
+        1.28
+      ],
+      "locations_x_vs_r": [
+        0.16
+      ],
+      "locations_z_vs_r": [
+        1.28
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 98.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 14.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.6,
+      "ivb": -11.3,
+      "hb": -10.7,
+      "vaa": -7.93,
+      "haa": -2.15,
+      "spin": 2333,
+      "extension": 5.72,
+      "arm_angle": 34.7,
+      "release_height": 5.93,
+      "spin_axis_clock": "7:27",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        2.17
+      ],
+      "locations_z": [
+        3.1
+      ],
+      "locations_x_vs_r": [
+        2.17
+      ],
+      "locations_z_vs_r": [
+        3.1
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

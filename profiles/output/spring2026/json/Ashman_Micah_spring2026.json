@@ -1,0 +1,222 @@
+{
+  "player_name": "Ashman, Micah",
+  "season": "spring2026",
+  "total_pitches": 23,
+  "p_throws": "L",
+  "arm_angle": 34.3,
+  "team": "BAL",
+  "pitcher_id": 809840,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 13.5,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 101.8,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 14,
+      "n_vs_r": 6,
+      "n_vs_l": 8,
+      "usage_pct": 60.9,
+      "usage_pct_vs_r": 75.0,
+      "usage_pct_vs_l": 53.3,
+      "velo": 92.0,
+      "ivb": 17.5,
+      "hb": 7.4,
+      "vaa": -5.76,
+      "haa": -1.13,
+      "spin": 2063,
+      "extension": 6.18,
+      "arm_angle": 34.3,
+      "release_height": 5.95,
+      "spin_axis_clock": "12:46",
+      "zone_pct": 85.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 33.3,
+      "xwoba_contact": 0.71,
+      "locations_x": [
+        -0.12,
+        -0.57,
+        0.22,
+        0.21,
+        -0.15,
+        0.02,
+        0.63,
+        0.04,
+        0.86,
+        -0.74,
+        -0.38,
+        -0.2,
+        -0.09,
+        0.71
+      ],
+      "locations_z": [
+        2.39,
+        1.64,
+        2.09,
+        2.07,
+        2.7,
+        1.68,
+        1.88,
+        2.26,
+        1.98,
+        2.19,
+        2.36,
+        2.59,
+        2.16,
+        2.73
+      ],
+      "locations_x_vs_r": [
+        -0.12,
+        -0.57,
+        0.22,
+        0.02,
+        0.63,
+        0.71
+      ],
+      "locations_z_vs_r": [
+        2.39,
+        1.64,
+        2.09,
+        1.68,
+        1.88,
+        2.73
+      ],
+      "locations_x_vs_l": [
+        0.21,
+        -0.15,
+        0.04,
+        0.86,
+        -0.74,
+        -0.38,
+        -0.2,
+        -0.09
+      ],
+      "locations_z_vs_l": [
+        2.07,
+        2.7,
+        2.26,
+        1.98,
+        2.19,
+        2.36,
+        2.59,
+        2.16
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 95.7,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 8,
+      "n_vs_r": 1,
+      "n_vs_l": 7,
+      "usage_pct": 34.8,
+      "usage_pct_vs_r": 12.5,
+      "usage_pct_vs_l": 46.7,
+      "velo": 80.1,
+      "ivb": -2.8,
+      "hb": -4.1,
+      "vaa": -9.31,
+      "haa": -2.39,
+      "spin": 2074,
+      "extension": 5.97,
+      "arm_angle": 33.4,
+      "release_height": 6.05,
+      "spin_axis_clock": "7:38",
+      "zone_pct": 37.5,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.42,
+        0.6,
+        0.61,
+        -0.43,
+        0.27,
+        -0.89,
+        -0.43,
+        -0.26
+      ],
+      "locations_z": [
+        3.68,
+        1.62,
+        2.87,
+        1.23,
+        1.58,
+        -0.11,
+        0.69,
+        1.2
+      ],
+      "locations_x_vs_r": [
+        1.42
+      ],
+      "locations_z_vs_r": [
+        3.68
+      ],
+      "locations_x_vs_l": [
+        0.6,
+        0.61,
+        -0.43,
+        0.27,
+        -0.89,
+        -0.43,
+        -0.26
+      ],
+      "locations_z_vs_l": [
+        1.62,
+        2.87,
+        1.23,
+        1.58,
+        -0.11,
+        0.69,
+        1.2
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 81.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 4.3,
+      "usage_pct_vs_r": 12.5,
+      "usage_pct_vs_l": 0.0,
+      "velo": 87.2,
+      "ivb": 7.6,
+      "hb": 10.2,
+      "vaa": -6.68,
+      "haa": 0.07,
+      "spin": 1521,
+      "extension": 6.16,
+      "arm_angle": 35.2,
+      "release_height": 6.11,
+      "spin_axis_clock": "1:47",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.097,
+      "locations_x": [
+        0.95
+      ],
+      "locations_z": [
+        2.61
+      ],
+      "locations_x_vs_r": [
+        0.95
+      ],
+      "locations_z_vs_r": [
+        2.61
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

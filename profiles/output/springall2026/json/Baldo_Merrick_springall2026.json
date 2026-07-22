@@ -1,0 +1,56 @@
+{
+  "player_name": "Baldo, Merrick",
+  "season": "springall2026",
+  "total_pitches": 1,
+  "p_throws": "R",
+  "arm_angle": 37.3,
+  "team": "WSH",
+  "pitcher_id": 813707,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SI",
+      "pitch_name": "Sinker",
+      "stuff_plus": 86.7,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 94.4,
+      "ivb": 11.8,
+      "hb": 12.1,
+      "vaa": -4.65,
+      "haa": 1.29,
+      "spin": 1847,
+      "extension": 6.77,
+      "arm_angle": 37.3,
+      "release_height": 5.46,
+      "spin_axis_clock": "10:29",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.03
+      ],
+      "locations_z": [
+        2.91
+      ],
+      "locations_x_vs_r": [
+        0.03
+      ],
+      "locations_z_vs_r": [
+        2.91
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

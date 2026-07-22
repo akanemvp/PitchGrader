@@ -1,0 +1,209 @@
+{
+  "player_name": "Schobel, Tanner",
+  "season": "aaa2026",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 37.9,
+  "team": "STP",
+  "pitcher_id": 802355,
+  "age": null,
+  "ip_str": "4.0",
+  "era": 4.5,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 70.0,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 7,
+      "n_vs_l": 0,
+      "usage_pct": 63.6,
+      "usage_pct_vs_r": 77.8,
+      "usage_pct_vs_l": 0.0,
+      "velo": 54.3,
+      "ivb": -3.3,
+      "hb": -0.2,
+      "vaa": -14.41,
+      "haa": 2.98,
+      "spin": 190,
+      "extension": 4.82,
+      "arm_angle": 35.4,
+      "release_height": 6.22,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 14.3,
+      "chase_pct": 16.7,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.11,
+        -2.6,
+        0.52,
+        0.21,
+        0.94,
+        0.65,
+        1.98
+      ],
+      "locations_z": [
+        0.5,
+        3.0,
+        2.95,
+        0.46,
+        1.81,
+        1.36,
+        1.35
+      ],
+      "locations_x_vs_r": [
+        0.11,
+        -2.6,
+        0.52,
+        0.21,
+        0.94,
+        0.65,
+        1.98
+      ],
+      "locations_z_vs_r": [
+        0.5,
+        3.0,
+        2.95,
+        0.46,
+        1.81,
+        1.36,
+        1.35
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 71.2,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 18.2,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 50.0,
+      "velo": 80.9,
+      "ivb": 12.9,
+      "hb": 7.9,
+      "vaa": -7.1,
+      "haa": -0.3,
+      "spin": 1850,
+      "extension": 4.91,
+      "arm_angle": 36.1,
+      "release_height": 6.1,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.86,
+        -0.56
+      ],
+      "locations_z": [
+        3.73,
+        0.64
+      ],
+      "locations_x_vs_r": [
+        -0.56
+      ],
+      "locations_z_vs_r": [
+        0.64
+      ],
+      "locations_x_vs_l": [
+        -1.86
+      ],
+      "locations_z_vs_l": [
+        3.73
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 74.1,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 9.1,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 83.3,
+      "ivb": 12.5,
+      "hb": 7.2,
+      "vaa": -5.88,
+      "haa": 1.41,
+      "spin": 2017,
+      "extension": 5.0,
+      "arm_angle": 40.0,
+      "release_height": 6.11,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.5
+      ],
+      "locations_z": [
+        3.08
+      ],
+      "locations_x_vs_r": [
+        0.5
+      ],
+      "locations_z_vs_r": [
+        3.08
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FC",
+      "pitch_name": "Cutter",
+      "stuff_plus": 77.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 9.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 84.0,
+      "ivb": 12.2,
+      "hb": 4.4,
+      "vaa": -5.29,
+      "haa": -2.11,
+      "spin": 1971,
+      "extension": 4.93,
+      "arm_angle": 40.1,
+      "release_height": 6.3,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -3.28
+      ],
+      "locations_z": [
+        3.74
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -3.28
+      ],
+      "locations_z_vs_l": [
+        3.74
+      ]
+    }
+  ]
+}

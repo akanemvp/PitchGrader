@@ -1,0 +1,123 @@
+{
+  "player_name": "Justice, Evan",
+  "season": "2024",
+  "total_pitches": 8,
+  "p_throws": "L",
+  "arm_angle": 25.6,
+  "team": "COL",
+  "pitcher_id": 687145,
+  "age": 26,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2024/Justice_Evan_2024.png",
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 100.2,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 7,
+      "n_vs_r": 2,
+      "n_vs_l": 5,
+      "usage_pct": 87.5,
+      "usage_pct_vs_r": 66.7,
+      "usage_pct_vs_l": 100.0,
+      "velo": 91.7,
+      "ivb": 11.1,
+      "hb": 7.7,
+      "vaa": -4.52,
+      "haa": -2.19,
+      "spin": 2089,
+      "extension": 6.37,
+      "arm_angle": 22.8,
+      "release_height": 4.71,
+      "spin_axis_clock": "10:08",
+      "zone_pct": 42.9,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.01,
+        -0.95,
+        -0.85,
+        -0.66,
+        -0.63,
+        -1.21,
+        -1.38
+      ],
+      "locations_z": [
+        2.82,
+        2.35,
+        1.4,
+        2.46,
+        3.51,
+        2.33,
+        2.32
+      ],
+      "locations_x_vs_r": [
+        0.01,
+        -0.95
+      ],
+      "locations_z_vs_r": [
+        2.82,
+        2.35
+      ],
+      "locations_x_vs_l": [
+        -0.85,
+        -0.66,
+        -0.63,
+        -1.21,
+        -1.38
+      ],
+      "locations_z_vs_l": [
+        1.4,
+        2.46,
+        3.51,
+        2.33,
+        2.32
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 104.9,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 12.5,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 79.5,
+      "ivb": -3.1,
+      "hb": 1.7,
+      "vaa": -8.79,
+      "haa": -2.53,
+      "spin": 2129,
+      "extension": 6.1,
+      "arm_angle": 28.4,
+      "release_height": 4.81,
+      "spin_axis_clock": "5:22",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.69
+      ],
+      "locations_z": [
+        0.84
+      ],
+      "locations_x_vs_r": [
+        -0.69
+      ],
+      "locations_z_vs_r": [
+        0.84
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}
