@@ -1,0 +1,169 @@
+{
+  "player_name": "D\u00edaz, Edwin",
+  "season": "aaa2026",
+  "total_pitches": 19,
+  "p_throws": "R",
+  "arm_angle": 15.8,
+  "team": "OKC",
+  "pitcher_id": 621242,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 13.5,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 97.8,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 10,
+      "n_vs_r": 6,
+      "n_vs_l": 4,
+      "usage_pct": 52.6,
+      "usage_pct_vs_r": 75.0,
+      "usage_pct_vs_l": 36.4,
+      "velo": 88.7,
+      "ivb": 5.4,
+      "hb": -1.4,
+      "vaa": -5.51,
+      "haa": 2.52,
+      "spin": 2245,
+      "extension": 7.05,
+      "arm_angle": 18.5,
+      "release_height": 4.8,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 60.0,
+      "chase_pct": 25.0,
+      "whiff_pct": 57.1,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.82,
+        0.45,
+        -1.53,
+        0.66,
+        0.65,
+        -0.01,
+        1.32,
+        0.83,
+        0.78,
+        -0.37
+      ],
+      "locations_z": [
+        3.14,
+        2.22,
+        3.51,
+        2.43,
+        1.92,
+        1.77,
+        1.16,
+        1.32,
+        3.24,
+        2.18
+      ],
+      "locations_x_vs_r": [
+        -1.53,
+        0.66,
+        0.65,
+        -0.01,
+        1.32,
+        0.83
+      ],
+      "locations_z_vs_r": [
+        3.51,
+        2.43,
+        1.92,
+        1.77,
+        1.16,
+        1.32
+      ],
+      "locations_x_vs_l": [
+        -0.82,
+        0.45,
+        0.78,
+        -0.37
+      ],
+      "locations_z_vs_l": [
+        3.14,
+        2.22,
+        3.24,
+        2.18
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 113.0,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 9,
+      "n_vs_r": 2,
+      "n_vs_l": 7,
+      "usage_pct": 47.4,
+      "usage_pct_vs_r": 25.0,
+      "usage_pct_vs_l": 63.6,
+      "velo": 96.3,
+      "ivb": 12.9,
+      "hb": 11.6,
+      "vaa": -3.29,
+      "haa": 1.18,
+      "spin": 2309,
+      "extension": 7.19,
+      "arm_angle": 13.0,
+      "release_height": 4.53,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 55.6,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.16,
+        -0.05,
+        -1.13,
+        -1.51,
+        0.69,
+        0.13,
+        0.74,
+        -0.01,
+        1.47
+      ],
+      "locations_z": [
+        2.83,
+        2.33,
+        3.69,
+        3.49,
+        3.58,
+        2.53,
+        3.16,
+        2.3,
+        3.06
+      ],
+      "locations_x_vs_r": [
+        0.69,
+        0.13
+      ],
+      "locations_z_vs_r": [
+        3.58,
+        2.53
+      ],
+      "locations_x_vs_l": [
+        -0.16,
+        -0.05,
+        -1.13,
+        -1.51,
+        0.74,
+        -0.01,
+        1.47
+      ],
+      "locations_z_vs_l": [
+        2.83,
+        2.33,
+        3.69,
+        3.49,
+        3.16,
+        2.3,
+        3.06
+      ]
+    }
+  ]
+}

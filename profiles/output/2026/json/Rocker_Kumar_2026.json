@@ -7,14 +7,14 @@
   "team": "TEX",
   "pitcher_id": 677958,
   "age": 27,
-  "ip_str": "91.1",
-  "era": 4.24,
+  "ip_str": "96.0",
+  "era": 4.03,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 103.7,
+      "stuff_plus": 101.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 602,
@@ -2257,8 +2257,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.7,
-      "grade": "45",
+      "stuff_plus": 100.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 479,
       "n_vs_r": 283,
@@ -4212,7 +4212,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.1,
+      "stuff_plus": 96.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 237,
@@ -5199,7 +5199,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 82.9,
+      "stuff_plus": 88.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 187,
@@ -5986,7 +5986,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 88.9,
+      "stuff_plus": 87.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 93,

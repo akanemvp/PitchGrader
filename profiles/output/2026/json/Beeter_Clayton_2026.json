@@ -8,14 +8,14 @@
   "pitcher_id": 690925,
   "age": 28,
   "ip_str": "29.2",
-  "era": 3.94,
+  "era": 4.25,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 99.5,
-      "grade": "45",
+      "stuff_plus": 104.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 256,
       "n_vs_r": 117,
@@ -1077,7 +1077,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 108.4,
+      "stuff_plus": 108.7,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 242,

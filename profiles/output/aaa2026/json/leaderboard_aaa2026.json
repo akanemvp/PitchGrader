@@ -696,6 +696,14 @@
     "total_pitches": 75
   },
   {
+    "player_name": "D\u00edaz, Edwin",
+    "season": "aaa2026",
+    "stuff_plus": 105.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 19
+  },
+  {
     "player_name": "McDonald, Trevor",
     "season": "aaa2026",
     "stuff_plus": 105.0,
@@ -1256,6 +1264,14 @@
     "total_pitches": 273
   },
   {
+    "player_name": "Gervase, Paul",
+    "season": "aaa2026",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 550
+  },
+  {
     "player_name": "Jacques, Joe",
     "season": "aaa2026",
     "stuff_plus": 102.6,
@@ -1286,14 +1302,6 @@
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 394
-  },
-  {
-    "player_name": "Gervase, Paul",
-    "season": "aaa2026",
-    "stuff_plus": 102.5,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 529
   },
   {
     "player_name": "Murphy, Chris",
@@ -1496,6 +1504,14 @@
     "total_pitches": 534
   },
   {
+    "player_name": "White, Brandon",
+    "season": "aaa2026",
+    "stuff_plus": 102.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 705
+  },
+  {
     "player_name": "Coleman, Carson",
     "season": "aaa2026",
     "stuff_plus": 102.0,
@@ -1648,12 +1664,12 @@
     "total_pitches": 147
   },
   {
-    "player_name": "White, Brandon",
+    "player_name": "Wehunt, Blake",
     "season": "aaa2026",
     "stuff_plus": 101.8,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 685
+    "total_pitches": 32
   },
   {
     "player_name": "Foster, Cameron",
@@ -2208,14 +2224,6 @@
     "total_pitches": 450
   },
   {
-    "player_name": "Walker, Ryan",
-    "season": "aaa2026",
-    "stuff_plus": 100.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 194
-  },
-  {
     "player_name": "Burgos, Juan",
     "season": "aaa2026",
     "stuff_plus": 100.3,
@@ -2238,6 +2246,14 @@
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 1087
+  },
+  {
+    "player_name": "Walker, Ryan",
+    "season": "aaa2026",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 221
   },
   {
     "player_name": "Hoffman, Nolan",

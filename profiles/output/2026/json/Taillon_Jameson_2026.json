@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 93.5,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 98.5,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 337,
       "n_vs_r": 115,
       "n_vs_l": 222,
@@ -1401,7 +1401,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 102.4,
+      "stuff_plus": 100.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 223,
@@ -2332,8 +2332,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 103.1,
-      "grade": "50",
+      "stuff_plus": 96.3,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 204,
       "n_vs_r": 189,
@@ -3187,7 +3187,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 104.7,
+      "stuff_plus": 104.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 195,
@@ -4006,9 +4006,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.0,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 90.6,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 133,
       "n_vs_r": 2,
       "n_vs_l": 131,
@@ -4577,7 +4577,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 83.7,
+      "stuff_plus": 84.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 112,

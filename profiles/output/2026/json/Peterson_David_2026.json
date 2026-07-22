@@ -7,14 +7,14 @@
   "team": "NYM",
   "pitcher_id": 656849,
   "age": 31,
-  "ip_str": "82.2",
-  "era": 6.64,
+  "ip_str": "89.0",
+  "era": 6.17,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.2,
+      "stuff_plus": 91.4,
       "grade": "40",
       "color": "#f4a261",
       "n": 426,
@@ -1757,7 +1757,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 82.3,
+      "stuff_plus": 85.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 352,
@@ -4623,7 +4623,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 102.6,
+      "stuff_plus": 103.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 179,
@@ -5378,7 +5378,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.2,
+      "stuff_plus": 93.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 166,
