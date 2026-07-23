@@ -9,12 +9,12 @@
   "age": 26,
   "ip_str": "108.0",
   "era": 2.58,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/McGreevy_Michael_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 83.1,
+      "stuff_plus": 82.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 427,
@@ -1761,8 +1761,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.6,
-      "grade": "45",
+      "stuff_plus": 102.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 333,
       "n_vs_r": 61,
@@ -3132,9 +3132,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.0,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 92.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 286,
       "n_vs_r": 232,
       "n_vs_l": 54,
@@ -4315,7 +4315,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.8,
+      "stuff_plus": 99.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 194,
@@ -5130,7 +5130,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.0,
+      "stuff_plus": 100.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 192,
@@ -5937,8 +5937,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 99.2,
-      "grade": "45",
+      "stuff_plus": 101.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 172,
       "n_vs_r": 168,
@@ -6664,7 +6664,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.8,
+      "stuff_plus": 100.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 78,

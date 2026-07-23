@@ -9,12 +9,12 @@
   "age": 27,
   "ip_str": "4.2",
   "era": 3.86,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Casparius_Ben_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 104.6,
+      "stuff_plus": 101.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 41,
@@ -217,7 +217,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 118.5,
+      "stuff_plus": 119.5,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 27,
@@ -364,9 +364,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 103.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 16,
       "n_vs_r": 0,
       "n_vs_l": 16,
@@ -465,7 +465,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 106.1,
+      "stuff_plus": 106.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 13,
@@ -556,7 +556,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 113.0,
+      "stuff_plus": 115.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 2,

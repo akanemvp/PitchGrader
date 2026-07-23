@@ -9,12 +9,12 @@
   "age": 33,
   "ip_str": "27.1",
   "era": 8.89,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Gage_Matt_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 102.6,
+      "stuff_plus": 101.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 236,
@@ -997,7 +997,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 78.0,
+      "stuff_plus": 78.7,
       "grade": "30",
       "color": "#ef233c",
       "n": 174,
@@ -1732,7 +1732,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.4,
+      "stuff_plus": 103.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 75,
@@ -2071,7 +2071,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 83.8,
+      "stuff_plus": 86.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 41,

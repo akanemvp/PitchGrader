@@ -93,5 +93,5 @@ ARM_ANGLE_BINS = 6
 MIN_PITCHES_BASELINE = 30
 
 # Seasons
-TRAINING_SEASONS = [2023, 2024, 2025]   # 2023-2025 window for the expected-xwOBA model; 2025 is training data (not scored/displayed)
+TRAINING_SEASONS = [2022, 2023, 2024, 2025]   # 2022-2025 window for the HR-only Method A model; 2025 is training data (not scored/displayed)
 LIVE_SEASON = 2026

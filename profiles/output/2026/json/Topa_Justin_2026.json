@@ -9,14 +9,14 @@
   "age": 35,
   "ip_str": "19.0",
   "era": 7.58,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Topa_Justin_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 102.5,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.6,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 153,
       "n_vs_r": 126,
       "n_vs_l": 27,
@@ -665,7 +665,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 95.3,
+      "stuff_plus": 98.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 95,
@@ -1084,7 +1084,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.5,
+      "stuff_plus": 99.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 60,
@@ -1363,8 +1363,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 96.2,
-      "grade": "45",
+      "stuff_plus": 102.3,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 51,
       "n_vs_r": 12,

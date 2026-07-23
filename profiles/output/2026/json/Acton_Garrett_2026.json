@@ -9,12 +9,12 @@
   "age": 28,
   "ip_str": "6.2",
   "era": 6.75,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Acton_Garrett_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 117.6,
+      "stuff_plus": 111.2,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 63,
@@ -305,7 +305,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 102.2,
+      "stuff_plus": 102.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 52,

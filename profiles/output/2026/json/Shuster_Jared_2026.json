@@ -9,12 +9,12 @@
   "age": 28,
   "ip_str": "9.0",
   "era": 10.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Shuster_Jared_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.3,
+      "stuff_plus": 86.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 49,
@@ -249,7 +249,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 95.7,
+      "stuff_plus": 98.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 34,
@@ -424,7 +424,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 100.8,
+      "stuff_plus": 100.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 34,
@@ -599,7 +599,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 89.3,
+      "stuff_plus": 87.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 28,
@@ -750,7 +750,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 86.3,
+      "stuff_plus": 86.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 21,

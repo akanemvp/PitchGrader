@@ -9,14 +9,14 @@
   "age": 29,
   "ip_str": "50.1",
   "era": 3.75,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Bubic_Kris_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 98.6,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 93.5,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 334,
       "n_vs_r": 286,
       "n_vs_l": 48,
@@ -1389,7 +1389,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 106.2,
+      "stuff_plus": 108.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 162,
@@ -2076,8 +2076,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 98.7,
-      "grade": "45",
+      "stuff_plus": 100.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 140,
       "n_vs_r": 97,
@@ -2675,7 +2675,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 83.8,
+      "stuff_plus": 86.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 103,
@@ -3126,7 +3126,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.2,
+      "stuff_plus": 105.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 72,

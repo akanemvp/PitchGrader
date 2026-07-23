@@ -9,13 +9,13 @@
   "age": 27,
   "ip_str": "41.1",
   "era": 5.88,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Svanson_Matt_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.6,
-      "grade": "45",
+      "stuff_plus": 101.3,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 327,
       "n_vs_r": 178,
@@ -1361,7 +1361,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 108.9,
+      "stuff_plus": 108.7,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 235,
@@ -2340,7 +2340,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 100.9,
+      "stuff_plus": 103.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 154,
@@ -2995,9 +2995,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 96.3,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 4,
       "n_vs_r": 0,
       "n_vs_l": 4,

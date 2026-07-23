@@ -9,12 +9,12 @@
   "age": 33,
   "ip_str": "13.0",
   "era": 4.85,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Romano_Jordan_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.2,
+      "stuff_plus": 104.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 135,
@@ -593,9 +593,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 105.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 104.4,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 125,
       "n_vs_r": 40,
       "n_vs_l": 85,
@@ -1132,8 +1132,8 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 78.4,
-      "grade": "30",
+      "stuff_plus": 81.9,
+      "grade": "35",
       "color": "#ef233c",
       "n": 9,
       "n_vs_r": 1,

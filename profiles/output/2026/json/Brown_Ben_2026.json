@@ -9,13 +9,13 @@
   "age": 27,
   "ip_str": "68.0",
   "era": 2.38,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Brown_Ben_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 102.5,
-      "grade": "50",
+      "stuff_plus": 99.4,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 371,
       "n_vs_r": 84,
@@ -1537,9 +1537,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 109.9,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 110.0,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 366,
       "n_vs_r": 171,
       "n_vs_l": 195,
@@ -3040,7 +3040,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.0,
+      "stuff_plus": 103.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 207,
@@ -3907,7 +3907,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.2,
+      "stuff_plus": 93.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 60,

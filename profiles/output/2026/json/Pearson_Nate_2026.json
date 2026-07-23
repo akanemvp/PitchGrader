@@ -9,14 +9,14 @@
   "age": 30,
   "ip_str": "20.0",
   "era": 3.6,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Pearson_Nate_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 114.2,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 109.5,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 140,
       "n_vs_r": 37,
       "n_vs_l": 103,
@@ -613,7 +613,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 111.3,
+      "stuff_plus": 112.4,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 125,
@@ -1152,8 +1152,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 99.1,
-      "grade": "45",
+      "stuff_plus": 103.7,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 40,
       "n_vs_r": 4,
@@ -1351,8 +1351,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 99.1,
-      "grade": "45",
+      "stuff_plus": 100.5,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 33,
       "n_vs_r": 29,
@@ -1522,7 +1522,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 92.6,
+      "stuff_plus": 93.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 8,

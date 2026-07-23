@@ -9,13 +9,13 @@
   "age": 32,
   "ip_str": "83.0",
   "era": 5.2,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Mahle_Tyler_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.8,
-      "grade": "50",
+      "stuff_plus": 95.5,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 666,
       "n_vs_r": 278,
@@ -2385,9 +2385,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 87.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 91.4,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 345,
       "n_vs_r": 101,
       "n_vs_l": 244,
@@ -3804,7 +3804,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 88.6,
+      "stuff_plus": 84.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 214,
@@ -4699,8 +4699,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 102.6,
-      "grade": "50",
+      "stuff_plus": 99.6,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 140,
       "n_vs_r": 128,
@@ -5298,7 +5298,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 82.4,
+      "stuff_plus": 83.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 21,

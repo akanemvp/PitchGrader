@@ -9,12 +9,12 @@
   "age": 32,
   "ip_str": "38.0",
   "era": 2.13,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Scott_Tanner_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 114.1,
+      "stuff_plus": 114.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 270,
@@ -1133,7 +1133,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 119.2,
+      "stuff_plus": 116.2,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 256,

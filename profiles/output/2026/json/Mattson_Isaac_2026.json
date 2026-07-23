@@ -9,13 +9,13 @@
   "age": 31,
   "ip_str": "32.2",
   "era": 4.41,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Mattson_Isaac_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 104.6,
-      "grade": "50",
+      "stuff_plus": 97.6,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 424,
       "n_vs_r": 196,
@@ -1749,7 +1749,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 98.3,
+      "stuff_plus": 96.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 74,
@@ -2084,8 +2084,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 99.3,
-      "grade": "45",
+      "stuff_plus": 100.9,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 56,
       "n_vs_r": 4,
@@ -2347,7 +2347,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.8,
+      "stuff_plus": 95.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 24,
@@ -2482,9 +2482,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 96.9,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 5,
       "n_vs_r": 3,
       "n_vs_l": 2,

@@ -9,12 +9,12 @@
   "age": 31,
   "ip_str": "0.1",
   "era": 54.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Marte_Yunior_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 102.4,
+      "stuff_plus": 104.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 12,
@@ -101,7 +101,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 118.8,
+      "stuff_plus": 112.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 6,
@@ -164,7 +164,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 101.3,
+      "stuff_plus": 104.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 3,

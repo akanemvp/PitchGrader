@@ -9,14 +9,14 @@
   "age": 27,
   "ip_str": "30.0",
   "era": 6.6,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Crochet_Garrett_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 112.6,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.6,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 174,
       "n_vs_r": 157,
       "n_vs_l": 17,
@@ -749,7 +749,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 103.4,
+      "stuff_plus": 102.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 128,
@@ -1300,7 +1300,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 101.6,
+      "stuff_plus": 101.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 116,
@@ -1803,7 +1803,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.3,
+      "stuff_plus": 102.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 74,
@@ -2138,7 +2138,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.4,
+      "stuff_plus": 86.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 22,
@@ -2263,7 +2263,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 102.4,
+      "stuff_plus": 103.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 4,

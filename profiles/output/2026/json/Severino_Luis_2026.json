@@ -9,12 +9,12 @@
   "age": 32,
   "ip_str": "62.2",
   "era": 4.45,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Severino_Luis_2026.png",
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 111.0,
+      "stuff_plus": 110.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 267,
@@ -1121,9 +1121,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 101.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.8,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 259,
       "n_vs_r": 155,
       "n_vs_l": 104,
@@ -2196,7 +2196,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 109.8,
+      "stuff_plus": 106.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 230,
@@ -3155,7 +3155,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 98.0,
+      "stuff_plus": 99.3,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 225,
@@ -4094,7 +4094,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.8,
+      "stuff_plus": 88.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 59,

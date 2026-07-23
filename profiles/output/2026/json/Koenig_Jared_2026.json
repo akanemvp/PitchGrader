@@ -9,14 +9,14 @@
   "age": 32,
   "ip_str": "5.1",
   "era": 15.19,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Koenig_Jared_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 94.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 95.0,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 63,
       "n_vs_r": 29,
       "n_vs_l": 34,
@@ -305,7 +305,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 92.2,
+      "stuff_plus": 92.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 36,
@@ -488,8 +488,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 78.8,
-      "grade": "30",
+      "stuff_plus": 82.3,
+      "grade": "35",
       "color": "#ef233c",
       "n": 27,
       "n_vs_r": 27,
@@ -633,7 +633,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 97.0,
+      "stuff_plus": 98.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 7,
@@ -700,7 +700,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.4,
+      "stuff_plus": 93.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 2,

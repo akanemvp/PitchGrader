@@ -9,12 +9,12 @@
   "age": 35,
   "ip_str": "34.0",
   "era": 4.76,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Kinley_Tyler_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.8,
+      "stuff_plus": 106.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 369,
@@ -1529,7 +1529,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 81.6,
+      "stuff_plus": 81.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 96,
@@ -1952,9 +1952,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.2,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.5,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 92,
       "n_vs_r": 17,
       "n_vs_l": 75,
@@ -2359,7 +2359,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 81.1,
+      "stuff_plus": 86.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 1,

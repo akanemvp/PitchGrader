@@ -9,14 +9,14 @@
   "age": 31,
   "ip_str": "12.0",
   "era": 9.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Thompson_Keegan_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.2,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 88.9,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 56,
       "n_vs_r": 29,
       "n_vs_l": 27,
@@ -277,7 +277,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 107.7,
+      "stuff_plus": 105.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 47,
@@ -504,7 +504,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 85.1,
+      "stuff_plus": 85.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 44,
@@ -719,7 +719,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.5,
+      "stuff_plus": 101.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 19,
@@ -834,8 +834,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.6,
-      "grade": "45",
+      "stuff_plus": 100.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 16,
       "n_vs_r": 7,
@@ -937,8 +937,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 96.6,
-      "grade": "45",
+      "stuff_plus": 101.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 13,
       "n_vs_r": 6,

@@ -9,13 +9,13 @@
   "age": 26,
   "ip_str": "4.2",
   "era": 1.93,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Dallas_Chad_2026.png",
   "pitches": [
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.9,
-      "grade": "45",
+      "stuff_plus": 102.3,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 26,
       "n_vs_r": 10,
@@ -157,9 +157,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 102.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.7,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 25,
       "n_vs_r": 6,
       "n_vs_l": 19,
@@ -296,7 +296,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.5,
+      "stuff_plus": 102.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 23,
@@ -427,7 +427,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.7,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 8,

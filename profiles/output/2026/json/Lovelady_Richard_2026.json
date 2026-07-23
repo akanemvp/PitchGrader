@@ -9,13 +9,13 @@
   "age": 31,
   "ip_str": "30.1",
   "era": 6.53,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Lovelady_Richard_2026.png",
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 99.2,
-      "grade": "45",
+      "stuff_plus": 102.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 231,
       "n_vs_r": 128,
@@ -977,9 +977,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 94.1,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 95.2,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 158,
       "n_vs_r": 54,
       "n_vs_l": 104,
@@ -1648,7 +1648,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 94.6,
+      "stuff_plus": 93.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 116,
@@ -2151,7 +2151,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.5,
+      "stuff_plus": 104.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 34,

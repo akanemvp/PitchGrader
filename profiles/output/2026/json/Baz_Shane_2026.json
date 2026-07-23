@@ -9,14 +9,14 @@
   "age": 27,
   "ip_str": "117.2",
   "era": 4.36,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Baz_Shane_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 105.6,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 97.6,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 656,
       "n_vs_r": 188,
       "n_vs_l": 468,
@@ -2229,7 +2229,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 110.4,
+      "stuff_plus": 114.6,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 634,
@@ -4528,7 +4528,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.7,
+      "stuff_plus": 98.6,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 326,
@@ -5871,8 +5871,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 79.2,
-      "grade": "30",
+      "stuff_plus": 80.3,
+      "grade": "35",
       "color": "#ef233c",
       "n": 157,
       "n_vs_r": 1,
@@ -6538,7 +6538,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 93.2,
+      "stuff_plus": 94.8,
       "grade": "40",
       "color": "#f4a261",
       "n": 152,

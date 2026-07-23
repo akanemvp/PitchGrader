@@ -9,14 +9,14 @@
   "age": 28,
   "ip_str": "16.2",
   "era": 3.78,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Hanifee_Brenan_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 104.7,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 148,
       "n_vs_r": 126,
       "n_vs_l": 22,
@@ -645,7 +645,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.7,
+      "stuff_plus": 104.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 55,
@@ -904,8 +904,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 99.1,
-      "grade": "45",
+      "stuff_plus": 104.0,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 25,
       "n_vs_r": 2,

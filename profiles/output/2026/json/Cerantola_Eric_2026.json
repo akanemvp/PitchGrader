@@ -9,12 +9,12 @@
   "age": 26,
   "ip_str": "5.1",
   "era": 10.12,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Cerantola_Eric_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 103.6,
+      "stuff_plus": 104.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 49,
@@ -249,9 +249,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 87.6,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 45,
       "n_vs_r": 12,
       "n_vs_l": 33,
@@ -468,7 +468,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 87.1,
+      "stuff_plus": 86.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 28,

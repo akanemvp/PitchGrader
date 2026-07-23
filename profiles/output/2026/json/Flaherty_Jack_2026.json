@@ -9,14 +9,14 @@
   "age": 31,
   "ip_str": "86.1",
   "era": 4.59,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Flaherty_Jack_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 106.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 101.0,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 806,
       "n_vs_r": 377,
       "n_vs_l": 429,
@@ -2607,7 +2607,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.1,
+      "stuff_plus": 102.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 397,
@@ -4234,7 +4234,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 100.2,
+      "stuff_plus": 102.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 321,
@@ -5557,7 +5557,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 86.3,
+      "stuff_plus": 83.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 73,
@@ -5888,7 +5888,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 75.6,
+      "stuff_plus": 77.6,
       "grade": "30",
       "color": "#ef233c",
       "n": 42,

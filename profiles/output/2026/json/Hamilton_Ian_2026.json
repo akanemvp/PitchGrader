@@ -9,14 +9,14 @@
   "age": 31,
   "ip_str": "4.2",
   "era": 7.71,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Hamilton_Ian_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 93.5,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 96.5,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 51,
       "n_vs_r": 32,
       "n_vs_l": 19,
@@ -257,7 +257,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.2,
+      "stuff_plus": 86.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 25,
@@ -396,8 +396,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.1,
-      "grade": "45",
+      "stuff_plus": 100.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 9,
       "n_vs_r": 6,

@@ -9,12 +9,12 @@
   "age": 36,
   "ip_str": "35.1",
   "era": 5.09,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Rogers_Taylor_2026.png",
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 101.7,
+      "stuff_plus": 100.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 319,
@@ -1329,7 +1329,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.6,
+      "stuff_plus": 94.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 233,
@@ -2300,7 +2300,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 98.6,
+      "stuff_plus": 96.6,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 87,

@@ -9,14 +9,14 @@
   "age": 25,
   "ip_str": "44.0",
   "era": 3.89,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Dollander_Chase_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 114.7,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 108.6,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 280,
       "n_vs_r": 126,
       "n_vs_l": 154,
@@ -1173,7 +1173,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 105.1,
+      "stuff_plus": 105.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 178,
@@ -1924,7 +1924,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 111.4,
+      "stuff_plus": 113.0,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 108,
@@ -2395,7 +2395,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 87.0,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 78,
@@ -2746,7 +2746,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 101.7,
+      "stuff_plus": 104.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 59,
@@ -3021,9 +3021,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 105.0,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 104.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 40,
       "n_vs_r": 32,
       "n_vs_l": 8,

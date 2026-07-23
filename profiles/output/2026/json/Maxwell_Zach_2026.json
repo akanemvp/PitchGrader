@@ -9,12 +9,12 @@
   "age": 25,
   "ip_str": "10.0",
   "era": 8.1,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Maxwell_Zach_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 123.9,
+      "stuff_plus": 121.2,
       "grade": "70",
       "color": "#00b4d8",
       "n": 138,
@@ -605,7 +605,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 113.1,
+      "stuff_plus": 112.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 61,
@@ -888,7 +888,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.4,
+      "stuff_plus": 98.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 49,

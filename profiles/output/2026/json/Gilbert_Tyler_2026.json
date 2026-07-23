@@ -9,12 +9,12 @@
   "age": 33,
   "ip_str": "3.2",
   "era": 17.18,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Gilbert_Tyler_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.3,
+      "stuff_plus": 102.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 34,
@@ -189,7 +189,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 95.3,
+      "stuff_plus": 99.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 34,
@@ -362,8 +362,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.1,
-      "grade": "50",
+      "stuff_plus": 99.1,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 17,
       "n_vs_r": 17,
@@ -467,9 +467,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.1,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 7,
       "n_vs_r": 5,
       "n_vs_l": 2,
@@ -534,7 +534,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 73.1,
+      "stuff_plus": 75.7,
       "grade": "30",
       "color": "#ef233c",
       "n": 2,

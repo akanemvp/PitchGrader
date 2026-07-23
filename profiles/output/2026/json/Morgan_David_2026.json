@@ -7,9 +7,9 @@
   "team": "SD",
   "pitcher_id": 688158,
   "age": 27,
-  "ip_str": "22.0",
-  "era": 6.14,
-  "card_image": null,
+  "ip_str": "21.2",
+  "era": 6.23,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Morgan_David_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
@@ -505,9 +505,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.8,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 110,
       "n_vs_r": 77,
       "n_vs_l": 33,
@@ -984,8 +984,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 97.8,
-      "grade": "45",
+      "stuff_plus": 102.9,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 102,
       "n_vs_r": 37,
@@ -1431,7 +1431,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.7,
+      "stuff_plus": 109.2,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 66,

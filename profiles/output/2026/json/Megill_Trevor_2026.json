@@ -9,12 +9,12 @@
   "age": 33,
   "ip_str": "38.0",
   "era": 2.84,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Megill_Trevor_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 118.4,
+      "stuff_plus": 116.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 366,
@@ -1517,7 +1517,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 124.0,
+      "stuff_plus": 123.1,
       "grade": "70",
       "color": "#00b4d8",
       "n": 211,

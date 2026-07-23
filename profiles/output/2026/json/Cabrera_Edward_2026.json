@@ -9,14 +9,14 @@
   "age": 28,
   "ip_str": "72.1",
   "era": 5.47,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Cabrera_Edward_2026.png",
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 367,
       "n_vs_r": 109,
       "n_vs_l": 258,
@@ -1521,8 +1521,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 99.2,
-      "grade": "45",
+      "stuff_plus": 102.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 257,
       "n_vs_r": 134,
@@ -2588,7 +2588,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 105.3,
+      "stuff_plus": 108.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 238,
@@ -3579,7 +3579,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.7,
+      "stuff_plus": 91.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 203,
@@ -4430,8 +4430,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 99.5,
-      "grade": "45",
+      "stuff_plus": 100.7,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 138,
       "n_vs_r": 111,

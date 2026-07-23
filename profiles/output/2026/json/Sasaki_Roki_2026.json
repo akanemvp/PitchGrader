@@ -9,12 +9,12 @@
   "age": 25,
   "ip_str": "86.2",
   "era": 4.78,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Sasaki_Roki_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 108.8,
+      "stuff_plus": 108.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 656,
@@ -2365,7 +2365,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 111.9,
+      "stuff_plus": 115.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 385,
@@ -3944,7 +3944,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 109.5,
+      "stuff_plus": 108.7,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 321,
@@ -5267,7 +5267,7 @@
     {
       "pitch_type": "FO",
       "pitch_name": "Forkball",
-      "stuff_plus": 112.5,
+      "stuff_plus": 112.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 154,

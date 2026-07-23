@@ -9,14 +9,14 @@
   "age": null,
   "ip_str": "14.0",
   "era": 1.93,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Dobnak_Randy_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.1,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 110,
       "n_vs_r": 55,
       "n_vs_l": 55,
@@ -493,8 +493,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 96.9,
-      "grade": "45",
+      "stuff_plus": 101.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 48,
       "n_vs_r": 4,
@@ -724,7 +724,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 95.7,
+      "stuff_plus": 98.7,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 39,
@@ -919,7 +919,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 82.4,
+      "stuff_plus": 86.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 27,
@@ -1066,7 +1066,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 96.7,
+      "stuff_plus": 99.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 26,
@@ -1209,8 +1209,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 97.1,
-      "grade": "45",
+      "stuff_plus": 101.7,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 5,
       "n_vs_r": 0,

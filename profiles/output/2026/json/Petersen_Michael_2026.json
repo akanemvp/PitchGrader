@@ -9,12 +9,12 @@
   "age": 32,
   "ip_str": "43.1",
   "era": 2.91,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Petersen_Michael_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 115.9,
+      "stuff_plus": 113.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 432,
@@ -1781,7 +1781,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 109.0,
+      "stuff_plus": 107.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 193,
@@ -2592,7 +2592,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 90.9,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 86,

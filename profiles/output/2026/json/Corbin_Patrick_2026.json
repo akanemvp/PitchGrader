@@ -9,12 +9,12 @@
   "age": 37,
   "ip_str": "80.0",
   "era": 5.51,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Corbin_Patrick_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.0,
+      "stuff_plus": 94.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 387,
@@ -1601,9 +1601,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.3,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 92.2,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 383,
       "n_vs_r": 263,
       "n_vs_l": 120,
@@ -3172,7 +3172,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 86.0,
+      "stuff_plus": 87.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 247,
@@ -4199,8 +4199,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 100.9,
-      "grade": "50",
+      "stuff_plus": 99.9,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 218,
       "n_vs_r": 165,
@@ -5110,8 +5110,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 81.2,
-      "grade": "35",
+      "stuff_plus": 78.9,
+      "grade": "30",
       "color": "#ef233c",
       "n": 159,
       "n_vs_r": 108,
@@ -5785,7 +5785,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 83.8,
+      "stuff_plus": 84.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 17,
@@ -5892,8 +5892,8 @@
     {
       "pitch_type": "CS",
       "pitch_name": "Slow Curve",
-      "stuff_plus": 79.9,
-      "grade": "30",
+      "stuff_plus": 82.8,
+      "grade": "35",
       "color": "#ef233c",
       "n": 1,
       "n_vs_r": 1,

@@ -9,12 +9,12 @@
   "age": 27,
   "ip_str": "4.0",
   "era": 4.5,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Criswell_Jeff_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.3,
+      "stuff_plus": 108.7,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 37,
@@ -201,7 +201,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.0,
+      "stuff_plus": 90.4,
       "grade": "40",
       "color": "#f4a261",
       "n": 33,
@@ -372,9 +372,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 87.0,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 91.7,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 9,
       "n_vs_r": 1,
       "n_vs_l": 8,

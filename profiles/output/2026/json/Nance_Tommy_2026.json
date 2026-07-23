@@ -9,12 +9,12 @@
   "age": 35,
   "ip_str": "36.1",
   "era": 3.72,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Nance_Tommy_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 111.9,
+      "stuff_plus": 112.4,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 226,
@@ -957,7 +957,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 114.6,
+      "stuff_plus": 118.3,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 192,
@@ -1764,8 +1764,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 96.8,
-      "grade": "45",
+      "stuff_plus": 102.6,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 165,
       "n_vs_r": 81,
@@ -2463,7 +2463,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 84.4,
+      "stuff_plus": 85.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 1,

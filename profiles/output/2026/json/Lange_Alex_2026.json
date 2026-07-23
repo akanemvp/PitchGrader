@@ -9,12 +9,12 @@
   "age": 31,
   "ip_str": "41.0",
   "era": 7.24,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Lange_Alex_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 108.2,
+      "stuff_plus": 109.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 247,
@@ -1041,9 +1041,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 104.9,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 109.6,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 186,
       "n_vs_r": 126,
       "n_vs_l": 60,
@@ -1824,9 +1824,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 107.1,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 110.0,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 167,
       "n_vs_r": 20,
       "n_vs_l": 147,
@@ -2531,7 +2531,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 95.8,
+      "stuff_plus": 98.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 93,
@@ -2942,7 +2942,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.8,
+      "stuff_plus": 92.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 86,

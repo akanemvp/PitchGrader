@@ -10,11 +10,10 @@ model cannot identify pitcher handedness and one grade per pitch suffices.
 train_unified() does the full run:
   1. engineer shape features (cached to model/feature_cache.parquet),
   2. save the movement/spin baselines inference needs,
-  3. compute the RV baselines the target needs,
-  4. train the "all" regressor (train_prob_resid_ensemble) and save it,
-  5. compute and save the global normalization (current + 2020-24 historical)
+  3. train the "all" model (train_prob_resid_ensemble) and save it,
+  4. compute and save the global normalization (current + historical)
      that maps xRV onto the 100 = league-average, 10 = one-SD Stuff+ scale,
-  6. write the model version hash.
+  5. write the model version hash.
 """
 
 import hashlib
@@ -27,11 +26,7 @@ import pandas as pd
 
 from config import MODEL_DIR
 from features.engineering import CORE_FEATURES, engineer_features
-from model.submodels import (
-    compute_rv_baselines,
-    save_ensemble,
-    save_rv_baselines,
-)
+from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
@@ -112,10 +107,6 @@ def train_unified(df: pd.DataFrame) -> dict:
             pickle.dump(_spin_lookup, _fh)
         logger.info(f"Spin axis lookup saved ({len(_spin_lookup)} entries)")
 
-    logger.info("Computing RV baselines …")
-    rv_baselines = compute_rv_baselines(df)
-    save_rv_baselines(rv_baselines)
-
     if "stand" in df.columns and "stand_r" not in df.columns:
         df["stand_r"] = (df["stand"] == "R").astype(int)
 
@@ -123,7 +114,7 @@ def train_unified(df: pd.DataFrame) -> dict:
     all_feats = [f for f in CORE_FEATURES if f in df.columns]
     logger.info(f"  [all] Driveline run-value regressor on {len(df):,} pitches, {len(all_feats)} features")
     from model.prob_resid import train_prob_resid_ensemble, predict_prob_resid_rv
-    ens_all = train_prob_resid_ensemble(df, rv_baselines, features=all_feats)
+    ens_all = train_prob_resid_ensemble(df, features=all_feats)
     if ens_all is None:
         raise RuntimeError("Global model training failed")
     save_ensemble(ens_all, "all")

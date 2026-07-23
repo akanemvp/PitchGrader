@@ -9,13 +9,13 @@
   "age": 42,
   "ip_str": "22.0",
   "era": 9.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Scherzer_Max_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.9,
-      "grade": "50",
+      "stuff_plus": 96.5,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 200,
       "n_vs_r": 66,
@@ -853,7 +853,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.8,
+      "stuff_plus": 104.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 96,
@@ -1276,7 +1276,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 83.3,
+      "stuff_plus": 89.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 66,
@@ -1579,7 +1579,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 92.3,
+      "stuff_plus": 93.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 58,
@@ -1850,7 +1850,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 93.8,
+      "stuff_plus": 92.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 5,

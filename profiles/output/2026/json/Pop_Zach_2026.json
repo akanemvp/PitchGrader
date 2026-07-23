@@ -9,14 +9,14 @@
   "age": 30,
   "ip_str": "7.1",
   "era": 4.91,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Pop_Zach_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 103.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 109.8,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 81,
       "n_vs_r": 40,
       "n_vs_l": 41,
@@ -377,7 +377,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 110.8,
+      "stuff_plus": 111.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 34,
@@ -552,7 +552,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 90.5,
+      "stuff_plus": 90.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 15,

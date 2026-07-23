@@ -9,12 +9,12 @@
   "age": 24,
   "ip_str": "9.1",
   "era": 4.82,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Abner_Philip_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.7,
+      "stuff_plus": 86.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 75,
@@ -353,7 +353,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.6,
+      "stuff_plus": 97.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 25,
@@ -492,7 +492,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.9,
+      "stuff_plus": 99.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 18,
@@ -603,7 +603,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 85.2,
+      "stuff_plus": 88.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 7,
@@ -668,7 +668,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 85.7,
+      "stuff_plus": 80.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 1,

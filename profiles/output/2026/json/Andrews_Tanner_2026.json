@@ -9,14 +9,14 @@
   "age": 31,
   "ip_str": "3.0",
   "era": 0.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Andrews_Tanner_2026.png",
   "pitches": [
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 107.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 111.9,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 18,
       "n_vs_r": 5,
       "n_vs_l": 13,
@@ -125,7 +125,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 88.0,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 16,
@@ -228,7 +228,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.4,
+      "stuff_plus": 101.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 9,

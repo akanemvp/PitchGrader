@@ -9,14 +9,14 @@
   "age": 30,
   "ip_str": "28.2",
   "era": 6.91,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Waldron_Matt_2026.png",
   "pitches": [
     {
       "pitch_type": "KN",
       "pitch_name": "Knuckleball",
-      "stuff_plus": 93.9,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 99.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 133,
       "n_vs_r": 56,
       "n_vs_l": 77,
@@ -585,8 +585,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 81.3,
-      "grade": "35",
+      "stuff_plus": 76.3,
+      "grade": "30",
       "color": "#ef233c",
       "n": 95,
       "n_vs_r": 41,
@@ -1004,7 +1004,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 94.7,
+      "stuff_plus": 92.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 93,
@@ -1415,7 +1415,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 86.6,
+      "stuff_plus": 86.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 79,
@@ -1770,7 +1770,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.6,
+      "stuff_plus": 95.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 72,

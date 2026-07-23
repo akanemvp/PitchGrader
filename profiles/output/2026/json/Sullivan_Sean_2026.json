@@ -9,12 +9,12 @@
   "age": 24,
   "ip_str": "22.1",
   "era": 8.87,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Sullivan_Sean_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 84.8,
+      "stuff_plus": 82.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 209,
@@ -889,7 +889,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 82.7,
+      "stuff_plus": 82.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 65,
@@ -1188,7 +1188,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 98.5,
+      "stuff_plus": 98.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 63,
@@ -1479,9 +1479,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 93.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 97.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 50,
       "n_vs_r": 41,
       "n_vs_l": 31,
@@ -1806,7 +1806,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.5,
+      "stuff_plus": 87.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 3,

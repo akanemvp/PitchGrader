@@ -582,6 +582,27 @@ def _pitch_panel(ax, row: pd.Series):
 # Batch generation
 # ---------------------------------------------------------------------------
 
+def _canonicalize_names(df: pd.DataFrame) -> pd.DataFrame:
+    """Unify a pitcher's display name across data-source spellings so one pitcher
+    never splits into two cards. /gf mis-parses suffixes (Samy Natera Jr. →
+    'Jr., Samy Natera') and strips accents; pick per pitcher id the variant with the
+    fewest tokens after the comma (proper 'Surname, First'), then accented."""
+    if "pitcher" not in df.columns or "player_name" not in df.columns:
+        return df
+    def _after_comma(n): return len(str(n).split(",", 1)[1].split()) if "," in str(n) else len(str(n).split())
+    def _has_accent(s):  return any(ord(c) > 127 for c in str(s))
+    def _score(n):       return (-_after_comma(n), _has_accent(n), len(str(n)))
+    sub = df.dropna(subset=["pitcher", "player_name"])
+    best = {pid: max(g["player_name"].unique(), key=_score) for pid, g in sub.groupby("pitcher")}
+    if not best:
+        return df
+    df = df.copy()
+    pit = df["pitcher"]
+    df["player_name"] = [best.get(p, n) if pd.notna(p) else n
+                         for p, n in zip(pit, df["player_name"])]
+    return df
+
+
 def generate_all_cards(df: pd.DataFrame, season: int, skip_png: bool = False) -> list:
     """
     Generate cards for every pitcher in df.
@@ -592,6 +613,7 @@ def generate_all_cards(df: pd.DataFrame, season: int, skip_png: bool = False) ->
          (so 100 = league average for that pitch, 120 = elite).
       3. Generate PNG card + JSON profile for each pitcher.
     """
+    df = _canonicalize_names(df)  # merge /gf name-spelling variants by pitcher id
     out_dir  = os.path.join(PROFILES_DIR, str(season))
     json_dir = os.path.join(out_dir, "json")
     os.makedirs(json_dir, exist_ok=True)

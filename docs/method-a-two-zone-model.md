@@ -10,16 +10,19 @@ xRV(shape) = P(in-zone | shape) · IN-ZONE value
            + P(out-zone | shape) · OUT-ZONE value
 ```
 
-- **IN-ZONE value** = `P(swing | in-zone) · [whiff / foul / GB·AIR·PU·HR contact]`
+- **IN-ZONE value** = `P(swing | in-zone) · [whiff / foul / contact]`
   `+ P(take | in-zone) · V_called_strike` — an in-zone take is a **called strike**.
-- **OUT-ZONE value** = `P(chase | out-zone) · [whiff / foul / GB·AIR·PU·HR contact]`
+- **OUT-ZONE value** = `P(chase | out-zone) · [whiff / foul / contact]`
   `+ P(no-chase | out-zone) · V_ball` — an out-of-zone take is a **ball**.
 
 Seven LightGBM heads, all on the 8 arm-normalized `SHAPE_FEATS`:
-`zone` (P in-zone), `izgate` (P swing | in-zone), `iz_swing`, `iz_ip`, `chase`
-(P swing | out-zone), `oz_swing`, `oz_ip`. Contact is a 4-cell trajectory model —
-ground ball (LA<10), air/line-drive (10–50), pop-up (>50), home run — valued per cell
-by count-adjusted run value, with chase contact valued weaker than in-zone contact.
+`zone` (P in-zone), `izgate` (P swing | in-zone), `iz_swing`, `iz_hr`, `chase`
+(P swing | out-zone), `oz_swing`, `oz_hr`. Contact is modeled as **home-run
+probability only** — `P(HR | in-play, shape)` valued at the HR run value, with every
+non-HR ball in play held at a single flat count-adjusted rate. HR is the one contact
+outcome shape genuinely predicts and the one that dominates run value; a finer
+EV × launch-angle grid was tried and rejected (shape can't predict exit velocity, so
+the extra cells added noise and under-graded sinkers). Trained on 2022–2025.
 
 ## The key ideas (why this and not a flat model)
 1. **Takes are credited to shape, fairly.** A called strike's value attaches through

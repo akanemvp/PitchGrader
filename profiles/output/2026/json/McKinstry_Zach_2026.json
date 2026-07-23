@@ -9,12 +9,12 @@
   "age": null,
   "ip_str": "1.0",
   "era": 18.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/McKinstry_Zach_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 70.8,
+      "stuff_plus": 70.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 2,

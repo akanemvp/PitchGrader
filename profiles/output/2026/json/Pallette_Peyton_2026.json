@@ -9,12 +9,12 @@
   "age": 25,
   "ip_str": "20.2",
   "era": 5.66,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Pallette_Peyton_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 104.8,
+      "stuff_plus": 100.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 231,
@@ -977,8 +977,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.4,
-      "grade": "45",
+      "stuff_plus": 103.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 106,
       "n_vs_r": 35,
@@ -1440,7 +1440,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.4,
+      "stuff_plus": 107.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 99,
@@ -1875,7 +1875,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 81.3,
+      "stuff_plus": 81.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 6,

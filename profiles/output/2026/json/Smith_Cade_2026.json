@@ -9,12 +9,12 @@
   "age": 27,
   "ip_str": "45.1",
   "era": 3.57,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Smith_Cade_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 116.8,
+      "stuff_plus": 114.0,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 481,
@@ -1977,7 +1977,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 116.0,
+      "stuff_plus": 119.3,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 195,
@@ -2796,7 +2796,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 105.5,
+      "stuff_plus": 105.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 101,

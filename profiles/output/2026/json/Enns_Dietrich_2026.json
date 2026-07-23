@@ -9,12 +9,12 @@
   "age": 35,
   "ip_str": "16.0",
   "era": 5.62,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Enns_Dietrich_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 94.4,
+      "stuff_plus": 91.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 160,
@@ -693,7 +693,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 110.3,
+      "stuff_plus": 112.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 59,
@@ -968,9 +968,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 106.7,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 102.8,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 29,
       "n_vs_r": 5,
       "n_vs_l": 24,
@@ -1123,7 +1123,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 92.3,
+      "stuff_plus": 92.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 27,
@@ -1270,9 +1270,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 89.6,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 95.4,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 16,
       "n_vs_r": 15,
       "n_vs_l": 1,

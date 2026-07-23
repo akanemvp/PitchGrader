@@ -9,12 +9,12 @@
   "age": 37,
   "ip_str": "90.2",
   "era": 4.47,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Sugano_Tomoyuki_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.6,
+      "stuff_plus": 84.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 308,
@@ -1285,9 +1285,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 88.5,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 93.1,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 298,
       "n_vs_r": 117,
       "n_vs_l": 181,
@@ -2516,7 +2516,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.3,
+      "stuff_plus": 89.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 287,
@@ -3703,7 +3703,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.5,
+      "stuff_plus": 104.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 165,
@@ -4402,7 +4402,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.6,
+      "stuff_plus": 98.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 154,
@@ -5057,8 +5057,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 101.5,
-      "grade": "50",
+      "stuff_plus": 99.3,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 150,
       "n_vs_r": 97,
@@ -5696,7 +5696,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 92.2,
+      "stuff_plus": 94.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 95,

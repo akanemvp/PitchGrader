@@ -9,7 +9,7 @@
   "age": 31,
   "ip_str": "2.1",
   "era": 0.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Rogers_Jake_2026.png",
   "pitches": [
     {
       "pitch_type": "EP",
@@ -129,7 +129,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 72.2,
+      "stuff_plus": 70.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 15,

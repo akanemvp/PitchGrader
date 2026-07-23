@@ -9,12 +9,12 @@
   "age": 33,
   "ip_str": "94.0",
   "era": 6.8,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Freeland_Kyle_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.1,
+      "stuff_plus": 84.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 406,
@@ -1677,8 +1677,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 100.1,
-      "grade": "50",
+      "stuff_plus": 97.5,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 332,
       "n_vs_r": 265,
@@ -3044,7 +3044,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 102.2,
+      "stuff_plus": 104.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 326,
@@ -4387,9 +4387,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 85.9,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 91.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 227,
       "n_vs_r": 208,
       "n_vs_l": 19,
@@ -5334,7 +5334,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 100.6,
+      "stuff_plus": 102.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 164,
@@ -6029,7 +6029,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.4,
+      "stuff_plus": 90.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 87,

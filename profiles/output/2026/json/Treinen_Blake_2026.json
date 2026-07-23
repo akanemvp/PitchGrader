@@ -9,12 +9,12 @@
   "age": 38,
   "ip_str": "23.0",
   "era": 5.48,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Treinen_Blake_2026.png",
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 106.1,
+      "stuff_plus": 106.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 156,
@@ -677,7 +677,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 105.4,
+      "stuff_plus": 109.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 140,
@@ -1276,9 +1276,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 87.3,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 43,
       "n_vs_r": 17,
       "n_vs_l": 26,
@@ -1487,7 +1487,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.8,
+      "stuff_plus": 96.9,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 35,

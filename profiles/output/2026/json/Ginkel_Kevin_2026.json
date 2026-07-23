@@ -7,14 +7,14 @@
   "team": "AZ",
   "pitcher_id": 656464,
   "age": 32,
-  "ip_str": "41.0",
-  "era": 4.61,
-  "card_image": null,
+  "ip_str": "40.0",
+  "era": 4.73,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Ginkel_Kevin_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.9,
+      "stuff_plus": 107.1,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 323,
@@ -1345,7 +1345,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 94.1,
+      "stuff_plus": 91.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 282,
@@ -2512,8 +2512,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.7,
-      "grade": "45",
+      "stuff_plus": 102.9,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 27,
       "n_vs_r": 26,

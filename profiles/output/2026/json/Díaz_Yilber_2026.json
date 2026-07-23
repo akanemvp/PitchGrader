@@ -9,13 +9,13 @@
   "age": null,
   "ip_str": "0.2",
   "era": 94.5,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/D\u00edaz_Yilber_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.0,
-      "grade": "50",
+      "stuff_plus": 95.0,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 27,
       "n_vs_r": 12,
@@ -161,7 +161,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.3,
+      "stuff_plus": 101.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 13,
@@ -252,9 +252,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 92.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 99.3,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 4,
       "n_vs_r": 2,
       "n_vs_l": 2,

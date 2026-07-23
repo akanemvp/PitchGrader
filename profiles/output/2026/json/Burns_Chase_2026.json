@@ -9,12 +9,12 @@
   "age": 23,
   "ip_str": "107.2",
   "era": 2.42,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Burns_Chase_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 118.5,
+      "stuff_plus": 118.2,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 1009,
@@ -2567,7 +2567,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 117.7,
+      "stuff_plus": 118.0,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 662,
@@ -4930,9 +4930,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 87.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 93.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 96,
       "n_vs_r": 1,
       "n_vs_l": 95,
@@ -5353,8 +5353,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.4,
-      "grade": "45",
+      "stuff_plus": 100.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 1,
       "n_vs_r": 0,

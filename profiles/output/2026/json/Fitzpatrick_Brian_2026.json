@@ -9,12 +9,12 @@
   "age": 26,
   "ip_str": "6.2",
   "era": 2.7,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Fitzpatrick_Brian_2026.png",
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.2,
+      "stuff_plus": 92.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 36,
@@ -197,9 +197,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 86.8,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 23,
       "n_vs_r": 17,
       "n_vs_l": 6,
@@ -328,7 +328,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.2,
+      "stuff_plus": 99.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 20,
@@ -447,8 +447,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 100.4,
-      "grade": "50",
+      "stuff_plus": 98.1,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 20,
       "n_vs_r": 15,
@@ -566,7 +566,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.1,
+      "stuff_plus": 96.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 10,

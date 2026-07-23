@@ -9,12 +9,12 @@
   "age": 25,
   "ip_str": "27.2",
   "era": 7.16,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Phillips_Connor_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 115.0,
+      "stuff_plus": 110.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 267,
@@ -1121,7 +1121,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 110.0,
+      "stuff_plus": 113.6,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 263,
@@ -2212,9 +2212,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 107.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 111.3,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 16,
       "n_vs_r": 1,
       "n_vs_l": 15,

@@ -8,13 +8,13 @@
   "pitcher_id": 605452,
   "age": 33,
   "ip_str": "11.2",
-  "era": 8.49,
-  "card_image": null,
+  "era": 6.94,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Ross_Joe_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 100.6,
+      "stuff_plus": 101.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 59,
@@ -289,7 +289,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 96.5,
+      "stuff_plus": 98.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 50,
@@ -528,7 +528,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 82.5,
+      "stuff_plus": 88.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 42,
@@ -735,7 +735,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.4,
+      "stuff_plus": 91.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 41,
@@ -938,7 +938,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.7,
+      "stuff_plus": 107.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 13,

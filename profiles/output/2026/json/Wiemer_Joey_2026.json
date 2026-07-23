@@ -9,12 +9,12 @@
   "age": 27,
   "ip_str": "2.0",
   "era": 22.5,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Wiemer_Joey_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 73.2,
+      "stuff_plus": 70.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 16,

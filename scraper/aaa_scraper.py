@@ -142,12 +142,16 @@ def parse_gamefeed_to_pitches(d: dict) -> pd.DataFrame:
                     try: row["pfx_x"] = -float(row["pfx_x"])
                     except Exception: pass
                 row["game_date"]     = game_date
-                # Convert "First Last" → "Last, First" to match Statcast CSV convention
+                # Convert "First Last" → "Last, First" to match Statcast CSV convention,
+                # keeping generational suffixes with the surname (Samy Natera Jr. →
+                # "Natera Jr., Samy", not "Jr., Samy Natera").
                 _pname = p.get("pitcher_name", "")
                 if _pname and "," not in _pname:
-                    _np = _pname.strip().rsplit(" ", 1)
-                    if len(_np) == 2:
-                        _pname = f"{_np[1]}, {_np[0]}"
+                    _np = _pname.strip().split()
+                    if len(_np) >= 3 and _np[-1].lower().rstrip(".") in {"jr", "sr", "ii", "iii", "iv"}:
+                        _pname = f"{' '.join(_np[-2:])}, {' '.join(_np[:-2])}"
+                    elif len(_np) >= 2:
+                        _pname = f"{_np[-1]}, {' '.join(_np[:-1])}"
                 row["player_name"]   = _pname
                 row["inning_topbot"] = inning_topbot
                 # On the pitcher's half: pitcher's team is the fielding team

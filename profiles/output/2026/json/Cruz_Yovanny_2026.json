@@ -9,12 +9,12 @@
   "age": 27,
   "ip_str": "4.1",
   "era": 0.0,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Cruz_Yovanny_2026.png",
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.0,
+      "stuff_plus": 109.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 21,
@@ -137,7 +137,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 113.8,
+      "stuff_plus": 114.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 18,
@@ -248,9 +248,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 100.2,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 7,
       "n_vs_r": 1,
       "n_vs_l": 6,

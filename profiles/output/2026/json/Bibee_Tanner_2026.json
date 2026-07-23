@@ -9,14 +9,14 @@
   "age": 27,
   "ip_str": "119.0",
   "era": 3.63,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Bibee_Tanner_2026.png",
   "pitches": [
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 110.0,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 109.8,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 451,
       "n_vs_r": 240,
       "n_vs_l": 211,
@@ -1857,7 +1857,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.0,
+      "stuff_plus": 104.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 439,
@@ -3652,7 +3652,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.4,
+      "stuff_plus": 87.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 406,
@@ -5315,9 +5315,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 282,
       "n_vs_r": 47,
       "n_vs_l": 235,
@@ -6482,7 +6482,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 91.1,
+      "stuff_plus": 92.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 203,
@@ -7333,7 +7333,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 104.0,
+      "stuff_plus": 103.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 65,

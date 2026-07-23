@@ -7,14 +7,14 @@
   "team": "SD",
   "pitcher_id": 608566,
   "age": 31,
-  "ip_str": "41.2",
-  "era": 5.18,
-  "card_image": null,
+  "ip_str": "42.1",
+  "era": 4.68,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/M\u00e1rquez_Germ\u00e1n_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.1,
+      "stuff_plus": 82.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 275,
@@ -1153,7 +1153,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 97.4,
+      "stuff_plus": 98.3,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 248,
@@ -2184,7 +2184,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.3,
+      "stuff_plus": 93.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 99,
@@ -2619,7 +2619,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 89.3,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 82,
@@ -2986,8 +2986,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 76.4,
-      "grade": "30",
+      "stuff_plus": 81.6,
+      "grade": "35",
       "color": "#ef233c",
       "n": 23,
       "n_vs_r": 3,

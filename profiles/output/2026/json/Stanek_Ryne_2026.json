@@ -9,14 +9,14 @@
   "age": 35,
   "ip_str": "37.1",
   "era": 5.54,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Stanek_Ryne_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 112.4,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 108.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 350,
       "n_vs_r": 162,
       "n_vs_l": 188,
@@ -1453,7 +1453,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 112.3,
+      "stuff_plus": 112.1,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 160,
@@ -2132,8 +2132,8 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 97.0,
-      "grade": "45",
+      "stuff_plus": 102.0,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 98,
       "n_vs_r": 35,
@@ -2563,8 +2563,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 96.5,
-      "grade": "45",
+      "stuff_plus": 102.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 73,
       "n_vs_r": 68,
@@ -2894,7 +2894,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 103.0,
+      "stuff_plus": 103.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 2,

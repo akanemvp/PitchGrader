@@ -293,12 +293,24 @@ def _get_live_game_pks(start_date: str = "2026-03-26") -> dict:
         return {}
 
 
+_NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
+
 def _gf_name(name: str | None) -> "str | None":
-    """Convert 'First Last' to 'Last, First' to match Statcast CSV convention."""
+    """Convert 'First Last' to 'Last, First' to match Statcast CSV convention.
+
+    Handles generational suffixes so 'Samy Natera Jr.' becomes 'Natera Jr., Samy'
+    (surname = last two tokens) rather than the misparsed 'Jr., Samy Natera'.
+    """
     if not name or ',' in name:
         return name
-    parts = name.rsplit(' ', 1)
-    return f"{parts[1]}, {parts[0]}" if len(parts) == 2 else name
+    parts = name.split()
+    if len(parts) < 2:
+        return name
+    if len(parts) >= 3 and parts[-1].lower().rstrip('.') in _NAME_SUFFIXES:
+        first = " ".join(parts[:-2]); last = " ".join(parts[-2:])
+    else:
+        first = " ".join(parts[:-1]); last = parts[-1]
+    return f"{last}, {first}"
 
 
 def _apply_canonical_names(df: pd.DataFrame) -> pd.DataFrame:

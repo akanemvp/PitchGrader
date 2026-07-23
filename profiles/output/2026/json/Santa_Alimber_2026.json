@@ -9,14 +9,14 @@
   "age": 23,
   "ip_str": "15.1",
   "era": 2.93,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Santa_Alimber_2026.png",
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.5,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 87,
       "n_vs_r": 38,
       "n_vs_l": 49,
@@ -401,7 +401,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.4,
+      "stuff_plus": 103.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 77,
@@ -748,7 +748,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.5,
+      "stuff_plus": 94.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 74,

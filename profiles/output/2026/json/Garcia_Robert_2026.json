@@ -9,14 +9,14 @@
   "age": 30,
   "ip_str": "8.0",
   "era": 3.38,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Garcia_Robert_2026.png",
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 109.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 98.2,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 68,
       "n_vs_r": 37,
       "n_vs_l": 31,
@@ -325,7 +325,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 108.5,
+      "stuff_plus": 109.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 49,
@@ -560,7 +560,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.9,
+      "stuff_plus": 107.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 36,

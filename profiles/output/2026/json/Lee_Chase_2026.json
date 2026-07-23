@@ -9,13 +9,13 @@
   "age": 28,
   "ip_str": "3.1",
   "era": 8.1,
-  "card_image": null,
+  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Lee_Chase_2026.png",
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.3,
-      "grade": "45",
+      "stuff_plus": 103.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 22,
       "n_vs_r": 10,
@@ -141,7 +141,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 100.0,
+      "stuff_plus": 102.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 20,
@@ -260,7 +260,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.5,
+      "stuff_plus": 94.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 11,
@@ -343,9 +343,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 93.7,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 97.6,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 3,
       "n_vs_r": 0,
       "n_vs_l": 3,
