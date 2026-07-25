@@ -7,14 +7,14 @@
   "team": "TOR",
   "pitcher_id": 669456,
   "age": null,
-  "ip_str": "25.2",
-  "era": 5.26,
+  "ip_str": "30.2",
+  "era": 4.7,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 88.5,
+      "stuff_plus": 89.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 196,
@@ -837,7 +837,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 101.5,
+      "stuff_plus": 103.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 109,
@@ -1312,7 +1312,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 108.7,
+      "stuff_plus": 105.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 94,
@@ -1727,7 +1727,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 93.4,
+      "stuff_plus": 90.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 70,
@@ -2046,7 +2046,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.9,
+      "stuff_plus": 105.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 46,
@@ -2269,7 +2269,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.0,
+      "stuff_plus": 88.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 4,

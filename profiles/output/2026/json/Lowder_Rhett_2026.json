@@ -7,14 +7,14 @@
   "team": "CIN",
   "pitcher_id": 695076,
   "age": 24,
-  "ip_str": "74.0",
-  "era": 4.99,
+  "ip_str": "77.0",
+  "era": 5.03,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 101.2,
+      "stuff_plus": 101.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 400,
@@ -1653,7 +1653,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.8,
+      "stuff_plus": 107.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 371,
@@ -3176,7 +3176,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 84.9,
+      "stuff_plus": 88.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 287,
@@ -4363,7 +4363,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 108.5,
+      "stuff_plus": 107.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 266,

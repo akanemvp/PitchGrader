@@ -7,14 +7,14 @@
   "team": "PHI",
   "pitcher_id": 666200,
   "age": 29,
-  "ip_str": "116.0",
-  "era": 3.18,
+  "ip_str": "122.1",
+  "era": 3.09,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 108.9,
+      "stuff_plus": 107.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 768,
@@ -2321,7 +2321,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 96.8,
+      "stuff_plus": 95.3,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 511,
@@ -4296,8 +4296,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 100.7,
-      "grade": "50",
+      "stuff_plus": 98.9,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 389,
       "n_vs_r": 373,
@@ -5891,7 +5891,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 107.7,
+      "stuff_plus": 108.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 363,

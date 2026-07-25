@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.5,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 376,
@@ -1557,7 +1557,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 88.6,
+      "stuff_plus": 89.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 309,
@@ -2832,7 +2832,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 84.4,
+      "stuff_plus": 84.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 301,
@@ -4075,9 +4075,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 104.4,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.9,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 283,
       "n_vs_r": 56,
       "n_vs_l": 227,
@@ -5246,7 +5246,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 104.2,
+      "stuff_plus": 100.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 188,
@@ -6061,7 +6061,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 103.0,
+      "stuff_plus": 104.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 167,
@@ -6768,7 +6768,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 90.7,
+      "stuff_plus": 93.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 160,
@@ -7447,9 +7447,9 @@
     {
       "pitch_type": "CS",
       "pitch_name": "Slow Curve",
-      "stuff_plus": 96.4,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 94.6,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 49,
       "n_vs_r": 24,
       "n_vs_l": 25,
@@ -7682,8 +7682,8 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 102.8,
-      "grade": "50",
+      "stuff_plus": 99.7,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 44,
       "n_vs_r": 30,

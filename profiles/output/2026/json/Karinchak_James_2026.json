@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 93.9,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 95,
@@ -433,7 +433,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.5,
+      "stuff_plus": 109.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 61,

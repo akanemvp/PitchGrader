@@ -14,7 +14,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 100.3,
+      "stuff_plus": 101.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 324,
@@ -1349,7 +1349,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 94.9,
+      "stuff_plus": 93.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 241,
@@ -2352,7 +2352,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.6,
+      "stuff_plus": 98.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 87,

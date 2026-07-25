@@ -8,15 +8,15 @@
   "pitcher_id": 683769,
   "age": 28,
   "ip_str": "33.2",
-  "era": 2.14,
+  "era": 2.67,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 103.8,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 269,
       "n_vs_r": 164,
       "n_vs_l": 105,
@@ -1129,7 +1129,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 101.6,
+      "stuff_plus": 103.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 175,
@@ -1868,8 +1868,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 99.9,
-      "grade": "45",
+      "stuff_plus": 102.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 118,
       "n_vs_r": 31,
@@ -2379,7 +2379,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 94.0,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 8,

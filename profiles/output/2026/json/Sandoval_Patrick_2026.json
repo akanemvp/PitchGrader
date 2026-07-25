@@ -7,14 +7,14 @@
   "team": "BOS",
   "pitcher_id": 663776,
   "age": null,
-  "ip_str": "9.1",
-  "era": 4.82,
+  "ip_str": "14.0",
+  "era": 3.21,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.5,
+      "stuff_plus": 106.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 68,
@@ -325,7 +325,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 85.8,
+      "stuff_plus": 85.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 60,
@@ -604,7 +604,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.6,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 54,
@@ -857,7 +857,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.7,
+      "stuff_plus": 91.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 32,
@@ -1024,7 +1024,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 101.0,
+      "stuff_plus": 102.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 9,
@@ -1097,9 +1097,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 98.7,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 2,
       "n_vs_r": 0,
       "n_vs_l": 2,

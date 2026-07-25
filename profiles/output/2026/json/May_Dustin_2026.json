@@ -7,14 +7,14 @@
   "team": "STL",
   "pitcher_id": 669160,
   "age": 29,
-  "ip_str": "101.0",
-  "era": 4.46,
+  "ip_str": "104.0",
+  "era": 4.41,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 100.0,
+      "stuff_plus": 101.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 450,
@@ -1853,9 +1853,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 102.7,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 111.1,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 373,
       "n_vs_r": 84,
       "n_vs_l": 289,
@@ -3384,7 +3384,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 118.9,
+      "stuff_plus": 118.5,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 326,
@@ -4727,7 +4727,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 107.8,
+      "stuff_plus": 106.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 306,
@@ -5990,7 +5990,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.9,
+      "stuff_plus": 97.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 113,
@@ -6479,7 +6479,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 114.0,
+      "stuff_plus": 115.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 112,

@@ -8,13 +8,13 @@
   "pitcher_id": 650911,
   "age": 30,
   "ip_str": "132.2",
-  "era": 2.92,
+  "era": 2.85,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 112.8,
+      "stuff_plus": 110.2,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 850,
@@ -2389,7 +2389,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 117.9,
+      "stuff_plus": 116.4,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 782,
@@ -4344,7 +4344,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 114.0,
+      "stuff_plus": 113.6,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 370,

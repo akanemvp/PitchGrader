@@ -14,7 +14,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.2,
+      "stuff_plus": 95.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 195,
@@ -833,7 +833,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.9,
+      "stuff_plus": 87.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 147,
@@ -2027,7 +2027,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 105.8,
+      "stuff_plus": 107.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 66,
@@ -2330,9 +2330,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 97.8,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 61,
       "n_vs_r": 59,
       "n_vs_l": 2,

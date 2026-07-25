@@ -8,7 +8,7 @@
   "pitcher_id": 641793,
   "age": 31,
   "ip_str": "101.0",
-  "era": 5.61,
+  "era": 5.7,
   "card_image": null,
   "pitches": [
     {
@@ -1921,7 +1921,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 76.1,
+      "stuff_plus": 76.8,
       "grade": "30",
       "color": "#ef233c",
       "n": 435,
@@ -3700,7 +3700,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 103.3,
+      "stuff_plus": 104.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 327,
@@ -5047,8 +5047,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 79.9,
-      "grade": "30",
+      "stuff_plus": 83.4,
+      "grade": "35",
       "color": "#ef233c",
       "n": 237,
       "n_vs_r": 132,
@@ -6034,9 +6034,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 95.1,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 93.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 141,
       "n_vs_r": 97,
       "n_vs_l": 45,

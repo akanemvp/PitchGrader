@@ -8,13 +8,13 @@
   "pitcher_id": 674444,
   "age": 27,
   "ip_str": "36.0",
-  "era": 4.75,
+  "era": 5.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 117.7,
+      "stuff_plus": 113.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 333,
@@ -1385,9 +1385,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.7,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.0,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 155,
       "n_vs_r": 49,
       "n_vs_l": 106,
@@ -2044,7 +2044,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 109.7,
+      "stuff_plus": 107.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 89,
