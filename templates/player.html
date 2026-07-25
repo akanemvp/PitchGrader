@@ -213,7 +213,7 @@
       flex: 1;
       min-height: 0;
       display: grid;
-      grid-template-columns: 408px 1fr;
+      grid-template-columns: 440px 1fr;
       grid-template-rows: 1fr;
       gap: 10px;
       align-items: stretch;
@@ -803,10 +803,13 @@ function buildUsageChart(pitches, isLHP, compact = false) {
 // ─── Movement profile SVG ──────────────────────────────────────────────────
 // rawPitches: optional [{hb, ivb, pt}] array — fetched async, overlaid separately
 function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = null) {
-  const W = 400, H = 430;                  // widened to hold ±25" of break; band below for arm-angle label
-  const cx = W / 2, cy = 200;              // grid center; clean band reserved at bottom
-  const SCALE = 7.4;   // px per inch
-  const RINGS = [5, 10, 15, 20, 25];
+  const SCALE = 7.4;   // px per inch — equal on both axes so break is undistorted
+  const EXT_X = 25, EXT_Y = 20;            // ±25" horizontal break (wide), ±20" vertical
+  const GEXT_X = EXT_X * SCALE, GEXT_Y = EXT_Y * SCALE;
+  const W = GEXT_X * 2 + 30, H = GEXT_Y * 2 + 60;  // 30px side margins; 60px band below for arm-angle label
+  const cx = W / 2, cy = 15 + GEXT_Y;      // grid center; 15px top margin, band reserved at bottom
+  const RINGS_X = [5, 10, 15, 20, 25];
+  const RINGS_Y = [5, 10, 15, 20];
   const aSign = isLHP ? -1 : 1;
 
   let rings = "";   // background: rings, axes, labels
@@ -814,19 +817,21 @@ function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = n
   let blobs = "";   // pitch blobs (drawn on top of lines)
   let inner = "";
 
-  // ── Cartesian grid ("T" graph): gridlines every 5" + bold center crosshair ──
-  const GEXT = 20 * SCALE;                 // half-extent in px (±20")
-  const gx0 = cx - GEXT, gx1 = cx + GEXT;
-  const gy0 = cy - GEXT, gy1 = cy + GEXT;
-  RINGS.forEach(r => {                     // 5/10/15/20" gridlines, both sides of center
+  // ── Cartesian grid: vertical gridlines ±25" (break), horizontal ±20" (rise/drop) ──
+  const gx0 = cx - GEXT_X, gx1 = cx + GEXT_X;
+  const gy0 = cy - GEXT_Y, gy1 = cy + GEXT_Y;
+  RINGS_X.forEach(r => {                    // vertical gridlines at ±5..25"
     const d = r * SCALE;
     rings += `<line x1="${cx-d}" y1="${gy0}" x2="${cx-d}" y2="${gy1}" stroke="#dde2e8" stroke-width="1"/>`;
     rings += `<line x1="${cx+d}" y1="${gy0}" x2="${cx+d}" y2="${gy1}" stroke="#dde2e8" stroke-width="1"/>`;
+  });
+  RINGS_Y.forEach(r => {                    // horizontal gridlines at ±5..20"
+    const d = r * SCALE;
     rings += `<line x1="${gx0}" y1="${cy-d}" x2="${gx1}" y2="${cy-d}" stroke="#dde2e8" stroke-width="1"/>`;
     rings += `<line x1="${gx0}" y1="${cy+d}" x2="${gx1}" y2="${cy+d}" stroke="#dde2e8" stroke-width="1"/>`;
   });
   // bounding box
-  rings += `<rect x="${gx0}" y="${gy0}" width="${GEXT*2}" height="${GEXT*2}" fill="none" stroke="#ccd2da" stroke-width="1"/>`;
+  rings += `<rect x="${gx0}" y="${gy0}" width="${GEXT_X*2}" height="${GEXT_Y*2}" fill="none" stroke="#ccd2da" stroke-width="1"/>`;
   // center crosshair — the main axes, darker so they read clearly
   rings += `<line x1="${cx}" y1="${gy0}" x2="${cx}" y2="${gy1}" stroke="#a6aeba" stroke-width="1.6"/>`;
   rings += `<line x1="${gx0}" y1="${cy}" x2="${gx1}" y2="${cy}" stroke="#a6aeba" stroke-width="1.6"/>`;
@@ -972,7 +977,7 @@ function overlayRawDots(rawPitches, isLHP) {
   _rawIsLHP = isLHP;
   const layer = document.getElementById("raw-dots-layer");
   if (!layer) return;
-  const W = 400, cx = W / 2, cy = W / 2, SCALE = 7.4;
+  const cx = 200, cy = 163, SCALE = 7.4;   // must match buildMovementPlot's landscape grid center
   let svg = "";
   rawPitches.forEach(d => {
     if (d.hb == null || d.ivb == null) return;
