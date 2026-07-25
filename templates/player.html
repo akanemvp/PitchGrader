@@ -806,7 +806,7 @@ function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = n
   const SCALE = 7.4;   // px per inch — equal on both axes so break is undistorted
   const EXT = 25;                          // ±25" of break each way — square/even grid
   const GEXT = EXT * SCALE;
-  const W = GEXT * 2 + 30, H = GEXT * 2 + 60;  // 30px side margins; 60px band below for arm-angle label
+  const W = GEXT * 2 + 30, H = GEXT * 2 + 30;  // even 15px margin on all four sides (square)
   const cx = W / 2, cy = 15 + GEXT;        // grid center; 15px top margin, band reserved at bottom
   const RINGS = [5, 10, 15, 20, 25];
   const aSign = isLHP ? -1 : 1;
@@ -908,10 +908,10 @@ function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = n
   // Center pivot — on top of lines but under blob labels
   blobs += `<circle cx="${cx}" cy="${cy}" r="3.5" fill="#ccd1d8" stroke="#a8b0ba" stroke-width="1"/>`;
 
-  // Arm angle — bottom-right corner label
+  // Arm angle — inside the grid's bottom-right corner (keeps margins even)
   if (avgAngle != null) {
-    blobs += `<text x="${W - 10}" y="${H - 16}" text-anchor="end" fill="#5f6772" font-size="7.5" font-weight="700" letter-spacing="1.2" font-family="'Inter',sans-serif">ARM ANGLE</text>`;
-    blobs += `<text x="${W - 10}" y="${H - 4}"  text-anchor="end" fill="#11161d" font-size="11" font-weight="700" letter-spacing="-0.3" font-family="'Inter',sans-serif">${avgAngle.toFixed(1)}°</text>`;
+    blobs += `<text x="${gx1 - 7}" y="${gy1 - 15}" text-anchor="end" fill="#5f6772" font-size="7.5" font-weight="700" letter-spacing="1.2" font-family="'Inter',sans-serif">ARM ANGLE</text>`;
+    blobs += `<text x="${gx1 - 7}" y="${gy1 - 4}"  text-anchor="end" fill="#11161d" font-size="11" font-weight="700" letter-spacing="-0.3" font-family="'Inter',sans-serif">${avgAngle.toFixed(1)}°</text>`;
   }
 
   const svgW = compact ? "220" : "100%";
