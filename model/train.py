@@ -30,7 +30,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v252_core9_spin"
+MODEL_VERSION = "v300_direct_rv"
 
 
 def train_unified(df: pd.DataFrame) -> dict:

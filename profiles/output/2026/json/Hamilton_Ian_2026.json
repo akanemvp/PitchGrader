@@ -9,12 +9,12 @@
   "age": 31,
   "ip_str": "4.2",
   "era": 7.71,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Hamilton_Ian_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 96.5,
+      "stuff_plus": 96.6,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 51,
@@ -36,7 +36,7 @@
       "zone_pct": 37.3,
       "chase_pct": 28.1,
       "whiff_pct": 28.6,
-      "xwoba_contact": 0.374,
+      "xwoba_contact": 0.358,
       "locations_x": [
         -0.34,
         0.41,
@@ -279,7 +279,7 @@
       "zone_pct": 40.0,
       "chase_pct": 20.0,
       "whiff_pct": 22.2,
-      "xwoba_contact": 0.701,
+      "xwoba_contact": 0.421,
       "locations_x": [
         0.83,
         -1.32,

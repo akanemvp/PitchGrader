@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "2.0",
   "era": 9.0,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Santos_Winston_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
@@ -36,7 +36,7 @@
       "zone_pct": 44.4,
       "chase_pct": 20.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.247,
       "locations_x": [
         0.89,
         1.71,
@@ -147,7 +147,7 @@
       "zone_pct": 40.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.293,
       "locations_x": [
         -0.31,
         -0.66,
@@ -226,7 +226,7 @@
       "zone_pct": 60.0,
       "chase_pct": 50.0,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.297,
       "locations_x": [
         -1.16,
         -0.11,

@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "2.2",
   "era": 47.25,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Tur_Yunior_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FS",
@@ -282,7 +282,7 @@
       "zone_pct": 52.9,
       "chase_pct": 37.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.793,
+      "xwoba_contact": 0.431,
       "locations_x": [
         -0.39,
         -0.16,

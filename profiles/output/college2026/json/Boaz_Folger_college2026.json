@@ -8,14 +8,14 @@
   "pitcher_id": 815038,
   "age": null,
   "ip_str": "7.1",
-  "era": 3.68,
+  "era": 11.05,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.3,
-      "grade": "50",
+      "stuff_plus": 98.4,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 58,
       "n_vs_r": 37,
@@ -285,7 +285,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.2,
+      "stuff_plus": 104.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 33,
@@ -456,7 +456,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 90.2,
+      "stuff_plus": 93.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 27,
@@ -603,7 +603,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.7,
+      "stuff_plus": 85.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 4,

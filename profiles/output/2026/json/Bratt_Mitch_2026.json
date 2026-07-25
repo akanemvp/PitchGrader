@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "10.2",
   "era": 5.06,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Bratt_Mitch_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
@@ -36,7 +36,7 @@
       "zone_pct": 44.4,
       "chase_pct": 31.1,
       "whiff_pct": 6.8,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.259,
       "locations_x": [
         0.28,
         -1.09,
@@ -399,7 +399,7 @@
       "zone_pct": 40.9,
       "chase_pct": 42.3,
       "whiff_pct": 13.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.321,
       "locations_x": [
         1.29,
         -0.79,
@@ -614,7 +614,7 @@
       "zone_pct": 55.2,
       "chase_pct": 30.8,
       "whiff_pct": 23.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.059,
       "locations_x": [
         -0.28,
         -1.42,
@@ -767,7 +767,7 @@
       "zone_pct": 44.4,
       "chase_pct": 20.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.149,
       "locations_x": [
         1.26,
         -0.64,
@@ -878,7 +878,7 @@
       "zone_pct": 7.1,
       "chase_pct": 46.2,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.207,
       "locations_x": [
         1.77,
         1.06,
@@ -971,7 +971,7 @@
       "zone_pct": 40.0,
       "chase_pct": 16.7,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.007,
       "locations_x": [
         1.12,
         0.35,

@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "2.2",
   "era": 3.38,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Burgos_Juan_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
@@ -36,7 +36,7 @@
       "zone_pct": 25.0,
       "chase_pct": 33.3,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.081,
       "locations_x": [
         0.66,
         0.27,
@@ -139,7 +139,7 @@
       "zone_pct": 57.1,
       "chase_pct": 16.7,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.235,
       "locations_x": [
         0.31,
         -0.89,
@@ -234,7 +234,7 @@
       "zone_pct": 62.5,
       "chase_pct": 33.3,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.008,
       "locations_x": [
         0.89,
         0.34,

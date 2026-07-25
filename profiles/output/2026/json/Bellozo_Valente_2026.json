@@ -9,7 +9,7 @@
   "age": 26,
   "ip_str": "10.2",
   "era": 8.44,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Bellozo_Valente_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
@@ -418,7 +418,7 @@
       "zone_pct": 41.7,
       "chase_pct": 19.0,
       "whiff_pct": 29.4,
-      "xwoba_contact": 0.432,
+      "xwoba_contact": 0.396,
       "locations_x": [
         0.78,
         0.08,

@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "5.0",
   "era": 0.0,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Curtis_Khristian_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
@@ -36,7 +36,7 @@
       "zone_pct": 54.5,
       "chase_pct": 20.0,
       "whiff_pct": 37.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.143,
       "locations_x": [
         0.02,
         0.21,
@@ -163,7 +163,7 @@
       "zone_pct": 50.0,
       "chase_pct": 10.0,
       "whiff_pct": 22.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.631,
       "locations_x": [
         0.18,
         -0.97,
@@ -282,7 +282,7 @@
       "zone_pct": 42.9,
       "chase_pct": 37.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.335,
       "locations_x": [
         -0.13,
         -0.7,
@@ -377,7 +377,7 @@
       "zone_pct": 22.2,
       "chase_pct": 85.7,
       "whiff_pct": 42.9,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.099,
       "locations_x": [
         0.25,
         0.02,

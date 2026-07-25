@@ -8,14 +8,14 @@
   "pitcher_id": 809788,
   "age": null,
   "ip_str": "5.0",
-  "era": 3.6,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.8,
-      "grade": "35",
+      "stuff_plus": 70.0,
+      "grade": "30",
       "color": "#ef233c",
       "n": 27,
       "n_vs_r": 20,
@@ -161,7 +161,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 90.0,
+      "stuff_plus": 90.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 26,
@@ -304,7 +304,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 90.1,
+      "stuff_plus": 90.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 13,
@@ -395,7 +395,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 81.9,
+      "stuff_plus": 88.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 8,
@@ -466,7 +466,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 83.0,
+      "stuff_plus": 81.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 8,
@@ -537,7 +537,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 88.8,
+      "stuff_plus": 87.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 7,

@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 73.1,
-      "grade": "30",
+      "stuff_plus": 85.2,
+      "grade": "35",
       "color": "#ef233c",
       "n": 10,
       "n_vs_r": 24,
@@ -157,7 +157,7 @@
     {
       "pitch_type": "EP",
       "pitch_name": "Eephus",
-      "stuff_plus": 72.0,
+      "stuff_plus": 70.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 1,

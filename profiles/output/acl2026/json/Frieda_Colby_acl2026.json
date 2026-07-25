@@ -1,0 +1,129 @@
+{
+  "player_name": "Frieda, Colby",
+  "season": "acl2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 46.0,
+  "team": "F-NAT",
+  "pitcher_id": 695640,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 96.2,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 6,
+      "n_vs_r": 4,
+      "n_vs_l": 2,
+      "usage_pct": 66.7,
+      "usage_pct_vs_r": 80.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 82.3,
+      "ivb": 0.1,
+      "hb": -6.5,
+      "vaa": -7.4,
+      "haa": 2.78,
+      "spin": 2449,
+      "extension": 6.61,
+      "arm_angle": 43.0,
+      "release_height": 5.62,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 33.3,
+      "whiff_pct": 25.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.67,
+        1.7,
+        1.4,
+        -0.22,
+        0.09,
+        0.32
+      ],
+      "locations_z": [
+        2.44,
+        1.94,
+        1.4,
+        2.55,
+        3.82,
+        1.6
+      ],
+      "locations_x_vs_r": [
+        0.67,
+        1.7,
+        1.4,
+        -0.22
+      ],
+      "locations_z_vs_r": [
+        2.44,
+        1.94,
+        1.4,
+        2.55
+      ],
+      "locations_x_vs_l": [
+        0.09,
+        0.32
+      ],
+      "locations_z_vs_l": [
+        3.82,
+        1.6
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 86.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 92.9,
+      "ivb": 17.3,
+      "hb": 7.5,
+      "vaa": -4.2,
+      "haa": -0.59,
+      "spin": 2296,
+      "extension": 6.37,
+      "arm_angle": 48.9,
+      "release_height": 5.85,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.58,
+        -0.99,
+        -1.63
+      ],
+      "locations_z": [
+        2.84,
+        3.91,
+        3.26
+      ],
+      "locations_x_vs_r": [
+        0.58
+      ],
+      "locations_z_vs_r": [
+        2.84
+      ],
+      "locations_x_vs_l": [
+        -0.99,
+        -1.63
+      ],
+      "locations_z_vs_l": [
+        3.91,
+        3.26
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "5.0",
   "era": 1.8,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Drake_Kohl_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
@@ -36,7 +36,7 @@
       "zone_pct": 51.2,
       "chase_pct": 20.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.356,
       "locations_x": [
         0.01,
         -0.18,
@@ -342,7 +342,7 @@
       "zone_pct": 7.1,
       "chase_pct": 46.2,
       "whiff_pct": 57.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.187,
       "locations_x": [
         0.87,
         -0.07,
@@ -435,7 +435,7 @@
       "zone_pct": 36.4,
       "chase_pct": 57.1,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.518,
       "locations_x": [
         -0.83,
         -0.82,

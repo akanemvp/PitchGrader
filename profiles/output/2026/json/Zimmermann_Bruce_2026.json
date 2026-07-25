@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "5.0",
   "era": 5.4,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Zimmermann_Bruce_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
@@ -36,7 +36,7 @@
       "zone_pct": 43.5,
       "chase_pct": 38.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.155,
       "locations_x": [
         1.03,
         -0.33,
@@ -167,7 +167,7 @@
       "zone_pct": 61.5,
       "chase_pct": 20.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.179,
       "locations_x": [
         -0.31,
         0.49,
@@ -258,7 +258,7 @@
       "zone_pct": 18.2,
       "chase_pct": 33.3,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.108,
       "locations_x": [
         -0.64,
         -0.18,
@@ -339,7 +339,7 @@
       "zone_pct": 66.7,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.283,
       "locations_x": [
         0.1,
         0.24,
@@ -485,7 +485,7 @@
       "zone_pct": 25.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.738,
       "locations_x": [
         0.96,
         0.58,

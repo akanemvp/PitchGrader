@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "0.2",
   "era": 94.5,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/D\u00edaz_Yilber_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
@@ -36,7 +36,7 @@
       "zone_pct": 48.1,
       "chase_pct": 21.4,
       "whiff_pct": 20.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.325,
       "locations_x": [
         0.02,
         0.84,
@@ -183,7 +183,7 @@
       "zone_pct": 38.5,
       "chase_pct": 25.0,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.667,
       "locations_x": [
         0.03,
         1.6,

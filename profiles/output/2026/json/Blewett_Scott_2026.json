@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "2.0",
   "era": 0.0,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Blewett_Scott_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
@@ -124,7 +124,7 @@
       "vaa": -4.99,
       "haa": 2.11,
       "spin": 2296,
-      "extension": 7.13,
+      "extension": 7.14,
       "arm_angle": 46.4,
       "release_height": 6.09,
       "spin_axis_clock": "11:29",
@@ -210,7 +210,7 @@
       "zone_pct": 42.9,
       "chase_pct": 25.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.095,
       "locations_x": [
         -0.47,
         -0.21,

@@ -7,14 +7,14 @@
   "team": "WV",
   "pitcher_id": 837578,
   "age": null,
-  "ip_str": "19.2",
-  "era": 5.03,
+  "ip_str": "19.1",
+  "era": 7.45,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.3,
+      "stuff_plus": 80.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 208,
@@ -885,7 +885,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 101.2,
+      "stuff_plus": 100.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 99,
@@ -1320,7 +1320,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 97.0,
+      "stuff_plus": 96.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 79,

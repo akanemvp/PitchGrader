@@ -329,7 +329,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 92.6,
+      "stuff_plus": 94.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 29,
@@ -484,8 +484,8 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 75.4,
-      "grade": "30",
+      "stuff_plus": 87.7,
+      "grade": "35",
       "color": "#ef233c",
       "n": 7,
       "n_vs_r": 7,

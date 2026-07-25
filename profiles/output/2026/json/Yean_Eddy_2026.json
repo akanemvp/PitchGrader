@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "4.0",
   "era": 0.0,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Yean_Eddy_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
@@ -36,7 +36,7 @@
       "zone_pct": 43.3,
       "chase_pct": 0.0,
       "whiff_pct": 12.5,
-      "xwoba_contact": 0.496,
+      "xwoba_contact": 0.349,
       "locations_x": [
         -1.74,
         -2.14,
@@ -195,7 +195,7 @@
       "zone_pct": 42.1,
       "chase_pct": 45.5,
       "whiff_pct": 18.2,
-      "xwoba_contact": 0.321,
+      "xwoba_contact": 0.278,
       "locations_x": [
         0.42,
         -0.35,

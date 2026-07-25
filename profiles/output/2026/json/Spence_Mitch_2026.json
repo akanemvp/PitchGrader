@@ -9,7 +9,7 @@
   "age": 28,
   "ip_str": "9.1",
   "era": 19.29,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Spence_Mitch_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
@@ -36,7 +36,7 @@
       "zone_pct": 60.5,
       "chase_pct": 30.0,
       "whiff_pct": 10.0,
-      "xwoba_contact": 0.305,
+      "xwoba_contact": 0.333,
       "locations_x": [
         -0.02,
         0.84,
@@ -753,7 +753,7 @@
       "zone_pct": 21.2,
       "chase_pct": 38.5,
       "whiff_pct": 37.5,
-      "xwoba_contact": 0.56,
+      "xwoba_contact": 0.551,
       "locations_x": [
         0.73,
         -1.1,

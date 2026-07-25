@@ -189,8 +189,8 @@
     }
     /* Wrapper that holds the above-fold content at exactly viewport height */
     .above-fold {
-      height: calc(100vh - 132px);
-      max-height: 860px;
+      height: calc(100vh - 118px);
+      max-height: 940px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -213,7 +213,7 @@
       flex: 1;
       min-height: 0;
       display: grid;
-      grid-template-columns: 370px 1fr;
+      grid-template-columns: 408px 1fr;
       grid-template-rows: 1fr;
       gap: 10px;
       align-items: stretch;
@@ -590,6 +590,19 @@ function chipCell(val, text, lo, mid, hi, lowerIsBetter = false) {
   return `<td><span class="stat-chip" style="background:${bg}">${text}</span></td>`;
 }
 
+// Per-pitch-type league baselines (2026 season, [lo, mid, hi] = mean ∓ 1σ across pitchers).
+// Zone% = % in strike zone; SwStr% = whiffs / swings. Coloring is relative to how each
+// pitch type performs — a 20% whiff rate is elite for a sinker, average for a slider.
+const PT_BASE = {
+  FF:{zone:[44.0,50.5,57.0], swstr:[11.2,18.6,26.1]}, SI:{zone:[48.9,54.9,60.9], swstr:[ 5.8,11.3,16.7]},
+  FC:{zone:[43.0,49.7,56.3], swstr:[13.2,20.5,27.9]}, SL:{zone:[35.5,42.7,49.9], swstr:[22.0,31.7,41.5]},
+  ST:{zone:[33.9,41.2,48.5], swstr:[19.4,28.6,37.7]}, CU:{zone:[32.0,39.6,47.1], swstr:[18.5,28.5,38.6]},
+  KC:{zone:[31.6,37.4,43.1], swstr:[19.6,31.1,42.6]}, CH:{zone:[27.9,35.7,43.4], swstr:[18.9,28.8,38.6]},
+  FS:{zone:[26.9,34.4,42.0], swstr:[21.3,31.7,42.2]},
+};
+const PT_BASE_DEF = { zone:[38,46,54], swstr:[16,26,36] };
+function ptBase(pt) { return PT_BASE[pt] || PT_BASE_DEF; }
+
 // ─── Team logo helpers ─────────────────────────────────────────────────────
 const TEAM_ESPN = {
   "AZ":"ari","ATL":"atl","BAL":"bal","BOS":"bos","CHC":"chc","CWS":"chw",
@@ -790,10 +803,10 @@ function buildUsageChart(pitches, isLHP, compact = false) {
 // ─── Movement profile SVG ──────────────────────────────────────────────────
 // rawPitches: optional [{hb, ivb, pt}] array — fetched async, overlaid separately
 function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = null) {
-  const W = 340, H = 356;                  // extra height below the grid for the arm-angle label
-  const cx = W / 2, cy = 170;              // grid kept at original center; clean band reserved at bottom
+  const W = 400, H = 430;                  // widened to hold ±25" of break; band below for arm-angle label
+  const cx = W / 2, cy = 200;              // grid center; clean band reserved at bottom
   const SCALE = 7.4;   // px per inch
-  const RINGS = [5, 10, 15, 20];
+  const RINGS = [5, 10, 15, 20, 25];
   const aSign = isLHP ? -1 : 1;
 
   let rings = "";   // background: rings, axes, labels
@@ -820,12 +833,7 @@ function buildMovementPlot(pitches, isLHP, avgAngle, compact = false, gamePk = n
   // 5" scale label
   rings += `<text x="${cx + 5*SCALE + 3}" y="${cy - 3}" fill="#646b75" font-size="8" font-weight="700" font-family="'Inter', sans-serif">5"</text>`;
 
-  // Axis labels
-  const leftLabel  = isLHP ? "← arm"   : "← glove";
-  const rightLabel = isLHP ? "glove →" : "arm →";
-  rings += `<text x="12" y="${cy - 5}" text-anchor="start" fill="#646b75" font-size="8.5" font-weight="700" font-family="'Inter', sans-serif">${leftLabel}</text>`;
-  rings += `<text x="${W - 12}" y="${cy - 5}" text-anchor="end" fill="#646b75" font-size="8.5" font-weight="700" font-family="'Inter', sans-serif">${rightLabel}</text>`;
-  rings += `<text x="${cx + 3}" y="14" fill="#646b75" font-size="8.5" font-weight="700" font-family="'Inter', sans-serif">rise</text>`;
+  // (direction labels removed — grid + 5" scale marker only)
 
   // Organic blobs — sort largest (most usage) first so they render behind smaller ones
   const sorted = [...pitches].sort((a, b) => (b.usage_pct || 0) - (a.usage_pct || 0));
@@ -964,7 +972,7 @@ function overlayRawDots(rawPitches, isLHP) {
   _rawIsLHP = isLHP;
   const layer = document.getElementById("raw-dots-layer");
   if (!layer) return;
-  const W = 340, cx = W / 2, cy = W / 2, SCALE = 7.4;
+  const W = 400, cx = W / 2, cy = W / 2, SCALE = 7.4;
   let svg = "";
   rawPitches.forEach(d => {
     if (d.hb == null || d.ivb == null) return;
@@ -1080,8 +1088,8 @@ function buildTable(pitches, noWrap = false) {
       <td>${fmtAbs(p.extension, 1)}</td>
       <td>${p.release_height != null ? p.release_height.toFixed(1) + "'" : "—"}</td>
       <td>${p.spin_axis_clock || "—"}</td>
-      ${chipCell(p.zone_pct,      fmtPct(p.zone_pct),    38, 47, 57,    false)}
-      ${chipCell(p.whiff_pct,     fmtPct(p.whiff_pct),   18, 27, 38,    false)}
+      ${(z => chipCell(p.zone_pct,  fmtPct(p.zone_pct),  z[0], z[1], z[2], false))(ptBase(p.pitch_type).zone)}
+      ${(w => chipCell(p.whiff_pct, fmtPct(p.whiff_pct), w[0], w[1], w[2], false))(ptBase(p.pitch_type).swstr)}
       ${chipCell(p.xwoba_contact, xw,                   0.200, 0.340, 0.460, true)}
       <td class="sp-num" style="color:${stuffColor(p.stuff_plus)};font-weight:700">${p.stuff_plus != null ? Math.round(p.stuff_plus) : "—"}</td>
     </tr>`;
@@ -1255,7 +1263,7 @@ function renderPage(data, scatter, isGameView, gamePk) {
 
   const arsenalLabel = isGameView
     ? `Pitch Arsenal — ${fmtGameDate(data.game_date)}`
-    : `Pitch Arsenal — ${season_label} Season`;
+    : `Pitch Arsenal`;
 
   const gridClass = isGameView ? "main-grid game-grid" : "main-grid";
   let html = `<div class="above-fold"><div class="${gridClass}">`;

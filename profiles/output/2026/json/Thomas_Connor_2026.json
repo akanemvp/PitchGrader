@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "3.2",
   "era": 9.82,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Thomas_Connor_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
@@ -36,7 +36,7 @@
       "zone_pct": 53.8,
       "chase_pct": 33.3,
       "whiff_pct": 11.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.266,
       "locations_x": [
         -0.66,
         -0.46,
@@ -125,7 +125,7 @@
       "zone_pct": 53.8,
       "chase_pct": 33.3,
       "whiff_pct": 40.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.158,
       "locations_x": [
         0.66,
         -0.62,
@@ -216,7 +216,7 @@
       "zone_pct": 50.0,
       "chase_pct": 33.3,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.162,
       "locations_x": [
         0.87,
         0.86,
@@ -303,7 +303,7 @@
       "zone_pct": 41.7,
       "chase_pct": 42.9,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.278,
       "locations_x": [
         0.33,
         -0.34,
@@ -390,7 +390,7 @@
       "zone_pct": 20.0,
       "chase_pct": 12.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.29,
       "locations_x": [
         0.77,
         0.19,

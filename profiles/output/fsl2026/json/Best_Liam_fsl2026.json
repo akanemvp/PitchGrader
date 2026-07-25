@@ -1,41 +1,41 @@
 {
   "player_name": "Best, Liam",
   "season": "fsl2026",
-  "total_pitches": 652,
+  "total_pitches": 655,
   "p_throws": "R",
   "arm_angle": 40.2,
   "team": "PMB",
   "pitcher_id": 807555,
   "age": null,
-  "ip_str": "31.0",
-  "era": 4.65,
+  "ip_str": "31.2",
+  "era": 4.55,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 107.1,
-      "grade": "55",
-      "color": "#7bf1a8",
-      "n": 320,
-      "n_vs_r": 168,
+      "stuff_plus": 101.6,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 321,
+      "n_vs_r": 169,
       "n_vs_l": 152,
-      "usage_pct": 49.1,
-      "usage_pct_vs_r": 46.8,
+      "usage_pct": 49.0,
+      "usage_pct_vs_r": 46.7,
       "usage_pct_vs_l": 51.9,
-      "velo": 93.6,
+      "velo": 93.5,
       "ivb": 17.7,
       "hb": 9.9,
       "vaa": -4.72,
-      "haa": 0.66,
+      "haa": 0.67,
       "spin": 2415,
       "extension": 6.46,
       "arm_angle": 39.2,
       "release_height": 5.66,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 49.1,
+      "zone_pct": 49.2,
       "chase_pct": 17.2,
-      "whiff_pct": 14.8,
+      "whiff_pct": 14.7,
       "xwoba_contact": null,
       "locations_x": [
         0.24,
@@ -357,7 +357,8 @@
         -0.34,
         -1.28,
         -0.95,
-        -0.05
+        -0.05,
+        0.58
       ],
       "locations_z": [
         3.77,
@@ -679,7 +680,8 @@
         2.65,
         2.5,
         1.07,
-        1.86
+        1.86,
+        2.17
       ],
       "locations_x_vs_r": [
         0.24,
@@ -849,7 +851,8 @@
         -0.34,
         -1.28,
         -0.95,
-        -0.05
+        -0.05,
+        0.58
       ],
       "locations_z_vs_r": [
         3.77,
@@ -1019,7 +1022,8 @@
         2.65,
         2.5,
         1.07,
-        1.86
+        1.86,
+        2.17
       ],
       "locations_x_vs_l": [
         -0.5,
@@ -1333,28 +1337,28 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.0,
+      "stuff_plus": 96.2,
       "grade": "45",
       "color": "#c9d1d9",
-      "n": 282,
-      "n_vs_r": 180,
+      "n": 284,
+      "n_vs_r": 182,
       "n_vs_l": 102,
-      "usage_pct": 43.3,
-      "usage_pct_vs_r": 50.1,
+      "usage_pct": 43.4,
+      "usage_pct_vs_r": 50.3,
       "usage_pct_vs_l": 34.8,
       "velo": 83.5,
       "ivb": 0.0,
       "hb": -8.3,
-      "vaa": -8.19,
-      "haa": 3.17,
+      "vaa": -8.18,
+      "haa": 3.16,
       "spin": 2389,
-      "extension": 6.28,
+      "extension": 6.27,
       "arm_angle": 38.2,
       "release_height": 5.72,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 39.0,
-      "chase_pct": 36.6,
-      "whiff_pct": 45.7,
+      "zone_pct": 39.1,
+      "chase_pct": 36.4,
+      "whiff_pct": 45.3,
       "xwoba_contact": null,
       "locations_x": [
         0.01,
@@ -1638,7 +1642,9 @@
         0.26,
         1.99,
         -0.23,
-        0.39
+        0.39,
+        -1.86,
+        -0.77
       ],
       "locations_z": [
         1.0,
@@ -1922,7 +1928,9 @@
         1.26,
         0.48,
         1.12,
-        2.7
+        2.7,
+        3.28,
+        2.46
       ],
       "locations_x_vs_r": [
         0.01,
@@ -2104,7 +2112,9 @@
         0.26,
         1.99,
         -0.23,
-        0.39
+        0.39,
+        -1.86,
+        -0.77
       ],
       "locations_z_vs_r": [
         1.0,
@@ -2286,7 +2296,9 @@
         1.26,
         0.48,
         1.12,
-        2.7
+        2.7,
+        3.28,
+        2.46
       ],
       "locations_x_vs_l": [
         0.04,
@@ -2500,9 +2512,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 88.4,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 95.8,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 42,
       "n_vs_r": 8,
       "n_vs_l": 34,
@@ -2707,7 +2719,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 93.2,
+      "stuff_plus": 91.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 7,
@@ -2774,9 +2786,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 107.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 101.2,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 1,
       "n_vs_r": 1,
       "n_vs_l": 0,

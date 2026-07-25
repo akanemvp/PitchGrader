@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "5.1",
   "era": 3.38,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Brito_Jhony_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
@@ -36,7 +36,7 @@
       "zone_pct": 60.9,
       "chase_pct": 77.8,
       "whiff_pct": 30.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.23,
       "locations_x": [
         0.19,
         -0.39,
@@ -167,7 +167,7 @@
       "zone_pct": 64.7,
       "chase_pct": 50.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.454,
       "locations_x": [
         0.07,
         1.68,
@@ -375,7 +375,7 @@
       "zone_pct": 38.5,
       "chase_pct": 37.5,
       "whiff_pct": 40.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.002,
       "locations_x": [
         -0.42,
         0.89,
@@ -466,7 +466,7 @@
       "zone_pct": 57.1,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.507,
       "locations_x": [
         1.64,
         0.27,

@@ -9,7 +9,7 @@
   "age": 24,
   "ip_str": "5.0",
   "era": 7.2,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Molina_Anthony_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
@@ -36,7 +36,7 @@
       "zone_pct": 34.4,
       "chase_pct": 28.6,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.369,
+      "xwoba_contact": 0.377,
       "locations_x": [
         0.13,
         -0.09,
@@ -203,7 +203,7 @@
       "zone_pct": 25.0,
       "chase_pct": 27.8,
       "whiff_pct": 11.1,
-      "xwoba_contact": 0.529,
+      "xwoba_contact": 0.53,
       "locations_x": [
         -1.74,
         -0.55,
@@ -338,7 +338,7 @@
       "zone_pct": 41.7,
       "chase_pct": 42.9,
       "whiff_pct": 35.7,
-      "xwoba_contact": 0.151,
+      "xwoba_contact": 0.103,
       "locations_x": [
         0.08,
         -0.0,
@@ -473,7 +473,7 @@
       "zone_pct": 62.5,
       "chase_pct": 66.7,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.553,
       "locations_x": [
         -0.77,
         -0.04,

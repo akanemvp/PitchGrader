@@ -8,13 +8,13 @@
   "pitcher_id": 529017,
   "age": null,
   "ip_str": "22.2",
-  "era": 2.78,
+  "era": 3.18,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.2,
+      "stuff_plus": 88.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 250,
@@ -1053,7 +1053,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.8,
+      "stuff_plus": 95.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 66,
@@ -1356,7 +1356,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.6,
+      "stuff_plus": 98.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 63,
@@ -1647,7 +1647,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.8,
+      "stuff_plus": 91.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 45,

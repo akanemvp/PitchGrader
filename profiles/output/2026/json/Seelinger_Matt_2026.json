@@ -9,7 +9,7 @@
   "age": null,
   "ip_str": "2.0",
   "era": 31.5,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Seelinger_Matt_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
@@ -36,7 +36,7 @@
       "zone_pct": 36.4,
       "chase_pct": 21.4,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.028,
       "locations_x": [
         0.42,
         0.41,
@@ -163,7 +163,7 @@
       "zone_pct": 45.0,
       "chase_pct": 36.4,
       "whiff_pct": 37.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.624,
       "locations_x": [
         -0.98,
         -1.27,
@@ -282,7 +282,7 @@
       "zone_pct": 20.0,
       "chase_pct": 25.0,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.234,
       "locations_x": [
         -0.81,
         0.44,

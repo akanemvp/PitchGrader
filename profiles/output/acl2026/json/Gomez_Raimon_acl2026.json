@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 121.3,
+      "stuff_plus": 127.8,
       "grade": "70",
       "color": "#00b4d8",
       "n": 2,
@@ -61,7 +61,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.6,
+      "stuff_plus": 108.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 1,
@@ -75,7 +75,7 @@
       "hb": -5.9,
       "vaa": -6.77,
       "haa": 3.48,
-      "spin": 2370,
+      "spin": 2372,
       "extension": 6.26,
       "arm_angle": 40.9,
       "release_height": 5.65,

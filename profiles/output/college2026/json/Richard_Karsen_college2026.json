@@ -8,14 +8,14 @@
   "pitcher_id": 830766,
   "age": null,
   "ip_str": "1.0",
-  "era": 18.0,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 102.6,
-      "grade": "50",
+      "stuff_plus": 99.9,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 11,
       "n_vs_r": 6,
@@ -97,7 +97,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 98.6,
+      "stuff_plus": 96.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 9,

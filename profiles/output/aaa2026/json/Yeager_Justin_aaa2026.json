@@ -1,24 +1,24 @@
 {
   "player_name": "Yeager, Justin",
   "season": "aaa2026",
-  "total_pitches": 729,
+  "total_pitches": 731,
   "p_throws": "R",
   "arm_angle": 35.7,
   "team": "ELP",
   "pitcher_id": 687866,
   "age": null,
-  "ip_str": "40.0",
-  "era": 7.65,
+  "ip_str": "40.1",
+  "era": 7.81,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.3,
+      "stuff_plus": 102.2,
       "grade": "50",
       "color": "#c9d1d9",
-      "n": 329,
-      "n_vs_r": 176,
+      "n": 330,
+      "n_vs_r": 177,
       "n_vs_l": 153,
       "usage_pct": 45.1,
       "usage_pct_vs_r": 44.2,
@@ -29,12 +29,12 @@
       "vaa": -7.56,
       "haa": 2.62,
       "spin": 2296,
-      "extension": 6.17,
+      "extension": 6.18,
       "arm_angle": 35.4,
       "release_height": 5.81,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 45.9,
-      "chase_pct": 30.3,
+      "zone_pct": 45.8,
+      "chase_pct": 30.2,
       "whiff_pct": 26.7,
       "xwoba_contact": null,
       "locations_x": [
@@ -366,7 +366,8 @@
         0.5,
         -0.14,
         0.64,
-        0.36
+        0.36,
+        -0.22
       ],
       "locations_z": [
         3.96,
@@ -697,7 +698,8 @@
         2.98,
         2.29,
         2.81,
-        2.19
+        2.19,
+        3.97
       ],
       "locations_x_vs_r": [
         -0.07,
@@ -875,7 +877,8 @@
         -0.62,
         -0.95,
         -0.14,
-        0.64
+        0.64,
+        -0.22
       ],
       "locations_z_vs_r": [
         3.96,
@@ -1053,7 +1056,8 @@
         4.25,
         4.51,
         2.29,
-        2.81
+        2.81,
+        3.97
       ],
       "locations_x_vs_l": [
         0.91,
@@ -1369,28 +1373,28 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.9,
+      "stuff_plus": 100.4,
       "grade": "50",
       "color": "#c9d1d9",
-      "n": 308,
-      "n_vs_r": 167,
+      "n": 309,
+      "n_vs_r": 168,
       "n_vs_l": 141,
-      "usage_pct": 42.2,
+      "usage_pct": 42.3,
       "usage_pct_vs_r": 42.0,
       "usage_pct_vs_l": 42.6,
       "velo": 94.9,
       "ivb": 16.0,
       "hb": 6.6,
       "vaa": -5.04,
-      "haa": 1.37,
+      "haa": 1.36,
       "spin": 2206,
       "extension": 6.16,
       "arm_angle": 35.5,
       "release_height": 5.79,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 46.8,
+      "zone_pct": 46.9,
       "chase_pct": 20.7,
-      "whiff_pct": 12.0,
+      "whiff_pct": 11.9,
       "xwoba_contact": null,
       "locations_x": [
         1.6,
@@ -1700,7 +1704,8 @@
         1.07,
         0.47,
         1.93,
-        0.63
+        0.63,
+        -0.39
       ],
       "locations_z": [
         1.82,
@@ -2010,7 +2015,8 @@
         1.52,
         3.22,
         1.85,
-        1.67
+        1.67,
+        2.06
       ],
       "locations_x_vs_r": [
         1.6,
@@ -2179,7 +2185,8 @@
         0.12,
         1.07,
         1.93,
-        0.63
+        0.63,
+        -0.39
       ],
       "locations_z_vs_r": [
         1.82,
@@ -2348,7 +2355,8 @@
         1.81,
         1.52,
         1.85,
-        1.67
+        1.67,
+        2.06
       ],
       "locations_x_vs_l": [
         -0.64,
@@ -2640,7 +2648,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 104.1,
+      "stuff_plus": 104.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 57,
@@ -2907,14 +2915,14 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.3,
+      "stuff_plus": 94.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 35,
       "n_vs_r": 17,
       "n_vs_l": 18,
       "usage_pct": 4.8,
-      "usage_pct_vs_r": 4.3,
+      "usage_pct_vs_r": 4.2,
       "usage_pct_vs_l": 5.4,
       "velo": 80.9,
       "ivb": -5.6,

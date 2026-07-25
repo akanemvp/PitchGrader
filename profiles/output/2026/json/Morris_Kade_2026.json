@@ -9,7 +9,7 @@
   "age": 24,
   "ip_str": "10.0",
   "era": 9.9,
-  "card_image": "/Users/akane/Desktop/new_stuff/stuff_plus/profiles/output/2026/Morris_Kade_2026.png",
+  "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
@@ -36,7 +36,7 @@
       "zone_pct": 45.7,
       "chase_pct": 36.0,
       "whiff_pct": 13.0,
-      "xwoba_contact": 0.187,
+      "xwoba_contact": 0.255,
       "locations_x": [
         0.41,
         0.77,
@@ -259,7 +259,7 @@
       "zone_pct": 47.6,
       "chase_pct": 27.3,
       "whiff_pct": 12.5,
-      "xwoba_contact": 0.357,
+      "xwoba_contact": 0.361,
       "locations_x": [
         -0.81,
         -0.83,
@@ -382,7 +382,7 @@
       "zone_pct": 40.0,
       "chase_pct": 25.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.141,
+      "xwoba_contact": 0.26,
       "locations_x": [
         0.01,
         1.61,
@@ -501,7 +501,7 @@
       "zone_pct": 33.3,
       "chase_pct": 33.3,
       "whiff_pct": 37.5,
-      "xwoba_contact": 0.179,
+      "xwoba_contact": 0.174,
       "locations_x": [
         -0.48,
         1.38,
@@ -612,7 +612,7 @@
       "zone_pct": 16.7,
       "chase_pct": 20.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.23,
       "locations_x": [
         -0.46,
         -0.66,
@@ -699,7 +699,7 @@
       "zone_pct": 37.5,
       "chase_pct": 40.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": 1.179,
+      "xwoba_contact": 0.913,
       "locations_x": [
         -0.72,
         0.11,

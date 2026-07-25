@@ -14,8 +14,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 99.9,
-      "grade": "45",
+      "stuff_plus": 102.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 5,
       "n_vs_r": 5,
@@ -71,9 +71,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 108.7,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 71.2,
+      "grade": "30",
+      "color": "#ef233c",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,
