@@ -54,7 +54,16 @@ _LGBM = dict(
     max_depth=8, num_leaves=20, learning_rate=0.05, min_child_samples=30,
     reg_alpha=0.5, reg_lambda=2.0, n_jobs=-1, verbose=-1, random_state=42,
 )
-_N_MULTI, _N_HR = 600, 500
+# Home runs are rare (~4.5% of balls in play), so the HR head overfits feature
+# COMBINATIONS at light regularization — smooth marginals but jumpy joint predictions
+# that crater individual pitches near the average shape. Big leaves + path smoothing
+# force P(HR) to vary gently with shape (the composite is unaffected; only the noisy
+# per-pitch tail is reined in).
+_LGBM_HR = dict(
+    max_depth=6, num_leaves=15, learning_rate=0.05, min_child_samples=800,
+    reg_alpha=0.5, reg_lambda=5.0, path_smooth=1.0, n_jobs=-1, verbose=-1, random_state=42,
+)
+_N_MULTI, _N_HR = 600, 150
 _SAMPLE_MULTI, _SAMPLE_HR, _SAMPLE_NORM = 1_200_000, 800_000, 150_000
 
 
@@ -147,15 +156,16 @@ def _cav(ca, mask):
 
 
 def bucket_values(df: pd.DataFrame) -> dict:
-    """Global count-adjusted run values for the valued outcomes (whiff, in-play HR)."""
+    """Global count-adjusted run values for the valued outcomes (whiff, foul, in-play HR)."""
     dd = df["description"].fillna("").astype(str)
     ev = df["events"].fillna("").astype(str)
     dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
     b = pd.to_numeric(df["balls"], errors="coerce").fillna(0).astype(int)
     s = pd.to_numeric(df["strikes"], errors="coerce").fillna(0).astype(int)
     ca = dre - pd.DataFrame({"b": b, "s": s, "d": dre}).groupby(["b", "s"]).d.transform("mean")
-    isw = dd.isin(WHIFF_DESCS); isip = dd.eq(INPLAY_DESC); ishr = ev.eq("home_run")
-    return {"whiff": _cav(ca, isw), "hr": _cav(ca, isip & ishr)}
+    isw = dd.isin(WHIFF_DESCS); isf = dd.isin(FOUL_DESCS)
+    isip = dd.eq(INPLAY_DESC); ishr = ev.eq("home_run")
+    return {"whiff": _cav(ca, isw), "foul": _cav(ca, isf), "hr": _cav(ca, isip & ishr)}
 
 
 def train_family_prob(df: pd.DataFrame, fam_mask: pd.Series, family: str, V: dict) -> dict:
@@ -179,7 +189,7 @@ def train_family_prob(df: pd.DataFrame, fam_mask: pd.Series, family: str, V: dic
     hidx = df.index[base & isip]
     if len(hidx) > _SAMPLE_HR:
         hidx = pd.Index(rng.choice(hidx, _SAMPLE_HR, replace=False))
-    hh = lgb.LGBMClassifier(objective="binary", n_estimators=_N_HR, **_LGBM)
+    hh = lgb.LGBMClassifier(objective="binary", n_estimators=_N_HR, **_LGBM_HR)
     hh.fit(df.loc[hidx, SHAPE_FEATS].values, ishr.loc[hidx].astype(int).values)
 
     ens = {"method": "prob_family", "family": family, "feats": SHAPE_FEATS,

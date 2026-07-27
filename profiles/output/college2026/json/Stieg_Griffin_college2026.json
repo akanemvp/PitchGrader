@@ -8,13 +8,13 @@
   "pitcher_id": 703495,
   "age": null,
   "ip_str": "5.1",
-  "era": 15.19,
+  "era": 8.44,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.1,
+      "stuff_plus": 91.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 68,
@@ -325,9 +325,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 90.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 88.7,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 32,
       "n_vs_r": 15,
       "n_vs_l": 17,
@@ -492,7 +492,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 94.8,
+      "stuff_plus": 91.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 26,
@@ -635,7 +635,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 89.1,
+      "stuff_plus": 87.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 23,
@@ -766,7 +766,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 88.4,
+      "stuff_plus": 86.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 6,

@@ -14,7 +14,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.4,
+      "stuff_plus": 107.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 4,
@@ -67,7 +67,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 89.3,
+      "stuff_plus": 81.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 1,
@@ -108,7 +108,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 79.2,
+      "stuff_plus": 77.2,
       "grade": "30",
       "color": "#ef233c",
       "n": 1,

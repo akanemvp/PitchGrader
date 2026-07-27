@@ -31,7 +31,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v400_family_prob"
+MODEL_VERSION = "v401_family_prob_smooth_hr"
 
 
 def train_unified(df: pd.DataFrame) -> dict:
