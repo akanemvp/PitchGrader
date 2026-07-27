@@ -14,7 +14,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 103.8,
+      "stuff_plus": 101.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 183,
@@ -785,7 +785,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 104.2,
+      "stuff_plus": 104.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 179,
@@ -1540,9 +1540,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 107.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 102.8,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 32,
       "n_vs_r": 2,
       "n_vs_l": 30,
@@ -1707,7 +1707,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.0,
+      "stuff_plus": 106.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 19,
@@ -1822,7 +1822,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 100.4,
+      "stuff_plus": 101.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 1,

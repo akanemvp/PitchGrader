@@ -7,15 +7,15 @@
   "team": "RIC",
   "pitcher_id": 821511,
   "age": null,
-  "ip_str": "2.1",
+  "ip_str": "2.2",
   "era": 0.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 77.0,
-      "grade": "30",
+      "stuff_plus": 81.3,
+      "grade": "35",
       "color": "#ef233c",
       "n": 8,
       "n_vs_r": 5,
@@ -85,7 +85,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 92.5,
+      "stuff_plus": 90.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 7,
@@ -152,7 +152,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 77.7,
+      "stuff_plus": 78.8,
       "grade": "30",
       "color": "#ef233c",
       "n": 6,
@@ -213,7 +213,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 93.5,
+      "stuff_plus": 92.0,
       "grade": "40",
       "color": "#f4a261",
       "n": 1,

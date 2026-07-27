@@ -14,7 +14,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 111.7,
+      "stuff_plus": 110.2,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 61,
@@ -297,9 +297,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 106.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 104.2,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 33,
       "n_vs_r": 28,
       "n_vs_l": 5,
@@ -611,9 +611,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 113.8,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 108.5,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 10,
       "n_vs_r": 7,
       "n_vs_l": 3,
@@ -690,7 +690,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 118.0,
+      "stuff_plus": 116.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 3,

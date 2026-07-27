@@ -8,13 +8,13 @@
   "pitcher_id": 800890,
   "age": null,
   "ip_str": "1.0",
-  "era": 9.0,
+  "era": 18.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 98.8,
+      "stuff_plus": 96.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 13,
@@ -105,7 +105,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 86.3,
+      "stuff_plus": 82.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 12,

@@ -75,9 +75,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 104.5,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 5,
       "n_vs_r": 0,
       "n_vs_l": 5,
@@ -132,7 +132,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 115.5,
+      "stuff_plus": 117.0,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 3,

@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.5,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.2,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 102,
       "n_vs_r": 89,
       "n_vs_l": 13,
@@ -461,7 +461,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 87.1,
+      "stuff_plus": 84.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 71,
@@ -784,7 +784,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 85.2,
+      "stuff_plus": 89.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 10,
