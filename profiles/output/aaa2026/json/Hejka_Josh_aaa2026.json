@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.1,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 100.6,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 96,
       "n_vs_r": 64,
       "n_vs_l": 32,
@@ -437,7 +437,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 79.8,
+      "stuff_plus": 76.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 50,

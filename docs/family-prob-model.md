@@ -51,3 +51,17 @@ breaking scale, not the fastball scale.
 ## Artifacts
 `ensemble_fb.pkl`, `ensemble_os.pkl`, `ensemble_br.pkl`, `cutter_router.pkl`.
 Old `ensemble_all.pkl` removed. Trained on 2022–2025; all live-season profiles regenerated.
+
+## v401 — HR-head regularization (per-pitch smoothing)
+
+Home runs are rare (~4.5% of balls in play), so at light regularization the binary HR
+head overfit feature *combinations*: smooth single-feature marginals but jumpy joint
+predictions that cratered individual pitches near a pitcher's own average shape (e.g. a
+near-mean Glasnow four-seam grading 75 while his composite was 107, driven by a spurious
+P(HR)=0.09 vs the mean shape's 0.024).
+
+Fix: the HR head now trains with heavy regularization (`min_child_samples=800`,
+`num_leaves=15`, `max_depth=6`, `path_smooth=1.0`, 150 trees). P(HR) now varies gently
+with shape — per-pitch spread on a fixed pitcher drops ~30% (Glasnow FF std 11.9 → 8.2,
+min 55 → 87) with the composite/leaderboard unchanged. The whiff/multiclass head was
+already smooth and is untouched. Foul remains an (unvalued) class.

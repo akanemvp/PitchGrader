@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.4,
+      "stuff_plus": 88.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 130,
@@ -1092,7 +1092,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 74.9,
+      "stuff_plus": 78.2,
       "grade": "30",
       "color": "#ef233c",
       "n": 7,
@@ -1157,7 +1157,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 81.6,
+      "stuff_plus": 86.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 5,
