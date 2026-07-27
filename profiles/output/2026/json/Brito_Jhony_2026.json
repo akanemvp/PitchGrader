@@ -14,7 +14,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 105.1,
+      "stuff_plus": 106.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 23,
@@ -36,7 +36,7 @@
       "zone_pct": 60.9,
       "chase_pct": 77.8,
       "whiff_pct": 30.0,
-      "xwoba_contact": 0.23,
+      "xwoba_contact": null,
       "locations_x": [
         0.19,
         -0.39,
@@ -145,7 +145,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.4,
+      "stuff_plus": 102.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 17,
@@ -167,7 +167,7 @@
       "zone_pct": 64.7,
       "chase_pct": 50.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.454,
+      "xwoba_contact": null,
       "locations_x": [
         0.07,
         1.68,
@@ -252,9 +252,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 87.1,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 16,
       "n_vs_r": 16,
       "n_vs_l": 0,
@@ -375,7 +375,7 @@
       "zone_pct": 38.5,
       "chase_pct": 37.5,
       "whiff_pct": 40.0,
-      "xwoba_contact": 0.002,
+      "xwoba_contact": null,
       "locations_x": [
         -0.42,
         0.89,
@@ -444,7 +444,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 82.8,
+      "stuff_plus": 88.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 7,
@@ -466,7 +466,7 @@
       "zone_pct": 57.1,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.507,
+      "xwoba_contact": null,
       "locations_x": [
         1.64,
         0.27,
@@ -511,9 +511,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 96.7,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.4,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

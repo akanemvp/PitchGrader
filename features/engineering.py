@@ -703,6 +703,11 @@ def engineer_features(
     if "release_pos_x" in df.columns:
         df["release_pos_x_arm"] = pd.to_numeric(df["release_pos_x"], errors="coerce") * _hand_sign
 
+    # induced-Magnus accel components (ind_vert / ind_horiz_arm) — model shape features
+    if all(c in df.columns for c in ("vx0", "vy0", "vz0", "ax", "ay", "az", "p_throws")):
+        from model.prob_resid import add_magnus
+        add_magnus(df)
+
     # -- 5a. in_zone: binary strike-zone indicator (batter-specific via sz_top/sz_bot)
     if "plate_x" in df.columns and "plate_z" in df.columns:
         sz_top = df.get("sz_top", pd.Series(3.5, index=df.index)).fillna(3.5)

@@ -1,28 +1,28 @@
 {
   "player_name": "Cellucci, Brendan",
   "season": "aaa2026",
-  "total_pitches": 564,
+  "total_pitches": 571,
   "p_throws": "L",
   "arm_angle": 35.3,
   "team": "BUF",
   "pitcher_id": 676454,
   "age": null,
-  "ip_str": "34.0",
-  "era": 4.5,
+  "ip_str": "34.1",
+  "era": 4.46,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.2,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 97.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 190,
       "n_vs_r": 75,
       "n_vs_l": 115,
-      "usage_pct": 33.7,
+      "usage_pct": 33.3,
       "usage_pct_vs_r": 26.6,
-      "usage_pct_vs_l": 40.8,
+      "usage_pct_vs_l": 39.8,
       "velo": 93.0,
       "ivb": 8.0,
       "hb": 12.1,
@@ -813,15 +813,15 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 100.7,
+      "stuff_plus": 104.1,
       "grade": "50",
       "color": "#c9d1d9",
-      "n": 147,
+      "n": 148,
       "n_vs_r": 81,
-      "n_vs_l": 66,
-      "usage_pct": 26.1,
+      "n_vs_l": 67,
+      "usage_pct": 25.9,
       "usage_pct_vs_r": 28.7,
-      "usage_pct_vs_l": 23.4,
+      "usage_pct_vs_l": 23.2,
       "velo": 85.4,
       "ivb": 1.1,
       "hb": -4.8,
@@ -832,9 +832,9 @@
       "arm_angle": 38.9,
       "release_height": 5.73,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 44.9,
+      "zone_pct": 45.3,
       "chase_pct": 21.0,
-      "whiff_pct": 29.3,
+      "whiff_pct": 28.8,
       "xwoba_contact": null,
       "locations_x": [
         -0.55,
@@ -983,7 +983,8 @@
         -0.1,
         1.8,
         1.11,
-        0.2
+        0.2,
+        -0.03
       ],
       "locations_z": [
         1.12,
@@ -1132,7 +1133,8 @@
         0.83,
         2.04,
         3.25,
-        1.91
+        1.91,
+        1.51
       ],
       "locations_x_vs_r": [
         -0.79,
@@ -1366,7 +1368,8 @@
         0.31,
         0.32,
         -1.16,
-        -0.61
+        -0.61,
+        -0.03
       ],
       "locations_z_vs_l": [
         1.12,
@@ -1434,34 +1437,35 @@
         0.65,
         3.57,
         1.46,
-        1.97
+        1.97,
+        1.51
       ]
     },
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 97.3,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 115,
+      "stuff_plus": 109.6,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 119,
       "n_vs_r": 86,
-      "n_vs_l": 29,
-      "usage_pct": 20.4,
+      "n_vs_l": 33,
+      "usage_pct": 20.8,
       "usage_pct_vs_r": 30.5,
-      "usage_pct_vs_l": 10.3,
+      "usage_pct_vs_l": 11.4,
       "velo": 93.6,
-      "ivb": 14.5,
+      "ivb": 14.4,
       "hb": 3.3,
-      "vaa": -5.1,
-      "haa": -1.82,
-      "spin": 2260,
+      "vaa": -5.09,
+      "haa": -1.84,
+      "spin": 2262,
       "extension": 6.76,
-      "arm_angle": 34.6,
+      "arm_angle": 34.4,
       "release_height": 5.56,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 53.9,
-      "chase_pct": 26.4,
-      "whiff_pct": 22.4,
+      "zone_pct": 53.8,
+      "chase_pct": 27.3,
+      "whiff_pct": 23.1,
       "xwoba_contact": null,
       "locations_x": [
         -1.18,
@@ -1578,7 +1582,11 @@
         -0.35,
         0.16,
         0.29,
-        0.83
+        0.83,
+        0.63,
+        -0.18,
+        -1.28,
+        -0.9
       ],
       "locations_z": [
         2.45,
@@ -1695,7 +1703,11 @@
         2.62,
         2.47,
         3.78,
-        3.33
+        3.33,
+        3.09,
+        1.93,
+        3.09,
+        2.75
       ],
       "locations_x_vs_r": [
         -1.41,
@@ -1902,7 +1914,11 @@
         -0.4,
         -1.67,
         0.65,
-        0.29
+        0.29,
+        0.63,
+        -0.18,
+        -1.28,
+        -0.9
       ],
       "locations_z_vs_l": [
         2.45,
@@ -1933,33 +1949,37 @@
         1.95,
         0.94,
         2.02,
-        3.78
+        3.78,
+        3.09,
+        1.93,
+        3.09,
+        2.75
       ]
     },
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 106.9,
-      "grade": "55",
-      "color": "#7bf1a8",
-      "n": 112,
+      "stuff_plus": 101.8,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 114,
       "n_vs_r": 40,
-      "n_vs_l": 72,
-      "usage_pct": 19.9,
+      "n_vs_l": 74,
+      "usage_pct": 20.0,
       "usage_pct_vs_r": 14.2,
-      "usage_pct_vs_l": 25.5,
+      "usage_pct_vs_l": 25.6,
       "velo": 82.4,
       "ivb": 3.0,
       "hb": -15.9,
       "vaa": -7.98,
-      "haa": -4.07,
-      "spin": 2450,
+      "haa": -4.11,
+      "spin": 2448,
       "extension": 6.66,
       "arm_angle": 32.1,
-      "release_height": 5.56,
+      "release_height": 5.55,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 35.7,
-      "chase_pct": 23.6,
+      "zone_pct": 35.1,
+      "chase_pct": 23.0,
       "whiff_pct": 30.0,
       "xwoba_contact": null,
       "locations_x": [
@@ -2074,7 +2094,9 @@
         -1.39,
         0.15,
         -0.99,
-        1.22
+        1.22,
+        -2.59,
+        -2.1
       ],
       "locations_z": [
         0.87,
@@ -2188,7 +2210,9 @@
         0.79,
         1.48,
         1.87,
-        2.03
+        2.03,
+        0.95,
+        1.36
       ],
       "locations_x_vs_r": [
         1.06,
@@ -2346,7 +2370,9 @@
         -0.8,
         -1.42,
         -0.12,
-        -1.39
+        -1.39,
+        -2.59,
+        -2.1
       ],
       "locations_z_vs_l": [
         0.87,
@@ -2420,7 +2446,9 @@
         1.35,
         2.04,
         2.38,
-        0.79
+        0.79,
+        0.95,
+        1.36
       ]
     }
   ]

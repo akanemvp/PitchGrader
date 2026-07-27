@@ -1,41 +1,41 @@
 {
   "player_name": "Hern\u00e1ndez, Carlos",
   "season": "aaa2026",
-  "total_pitches": 14,
+  "total_pitches": 29,
   "p_throws": "R",
-  "arm_angle": 46.3,
+  "arm_angle": 47.7,
   "team": "COL",
   "pitcher_id": 672578,
   "age": null,
-  "ip_str": "1.0",
+  "ip_str": "2.0",
   "era": 0.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 93.6,
+      "stuff_plus": 93.2,
       "grade": "40",
       "color": "#f4a261",
-      "n": 7,
-      "n_vs_r": 5,
-      "n_vs_l": 2,
-      "usage_pct": 50.0,
-      "usage_pct_vs_r": 45.5,
-      "usage_pct_vs_l": 66.7,
+      "n": 18,
+      "n_vs_r": 7,
+      "n_vs_l": 11,
+      "usage_pct": 62.1,
+      "usage_pct_vs_r": 53.8,
+      "usage_pct_vs_l": 68.8,
       "velo": 96.8,
-      "ivb": 16.1,
-      "hb": 8.0,
-      "vaa": -3.93,
-      "haa": 0.08,
-      "spin": 2349,
-      "extension": 6.79,
-      "arm_angle": 46.8,
-      "release_height": 5.91,
+      "ivb": 16.2,
+      "hb": 7.7,
+      "vaa": -3.92,
+      "haa": -0.15,
+      "spin": 2314,
+      "extension": 6.8,
+      "arm_angle": 46.3,
+      "release_height": 5.9,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 57.1,
-      "chase_pct": 33.3,
-      "whiff_pct": 40.0,
+      "zone_pct": 38.9,
+      "chase_pct": 45.5,
+      "whiff_pct": 41.7,
       "xwoba_contact": null,
       "locations_x": [
         -0.52,
@@ -44,7 +44,18 @@
         -0.23,
         1.46,
         -0.34,
-        0.44
+        0.44,
+        -1.08,
+        -0.34,
+        -0.34,
+        -0.08,
+        -0.94,
+        0.13,
+        0.32,
+        -1.14,
+        -1.23,
+        -0.44,
+        -0.04
       ],
       "locations_z": [
         3.66,
@@ -53,56 +64,89 @@
         3.17,
         4.53,
         3.27,
-        2.86
+        2.86,
+        5.58,
+        5.08,
+        3.27,
+        3.94,
+        4.08,
+        3.13,
+        1.51,
+        2.8,
+        3.05,
+        3.62,
+        2.6
       ],
       "locations_x_vs_r": [
         -0.52,
         -0.04,
         1.46,
         -0.34,
-        0.44
+        0.44,
+        -0.44,
+        -0.04
       ],
       "locations_z_vs_r": [
         3.66,
         3.02,
         4.53,
         3.27,
-        2.86
+        2.86,
+        3.62,
+        2.6
       ],
       "locations_x_vs_l": [
         -1.6,
-        -0.23
+        -0.23,
+        -1.08,
+        -0.34,
+        -0.34,
+        -0.08,
+        -0.94,
+        0.13,
+        0.32,
+        -1.14,
+        -1.23
       ],
       "locations_z_vs_l": [
         4.09,
-        3.17
+        3.17,
+        5.58,
+        5.08,
+        3.27,
+        3.94,
+        4.08,
+        3.13,
+        1.51,
+        2.8,
+        3.05
       ]
     },
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 95.6,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 7,
+      "stuff_plus": 92.8,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 10,
       "n_vs_r": 6,
-      "n_vs_l": 1,
-      "usage_pct": 50.0,
-      "usage_pct_vs_r": 54.5,
-      "usage_pct_vs_l": 33.3,
-      "velo": 82.7,
-      "ivb": -3.2,
-      "hb": -6.5,
-      "vaa": -9.07,
-      "haa": 1.36,
-      "spin": 2269,
-      "extension": 6.66,
-      "arm_angle": 45.9,
-      "release_height": 6.01,
+      "n_vs_l": 4,
+      "usage_pct": 34.5,
+      "usage_pct_vs_r": 46.2,
+      "usage_pct_vs_l": 25.0,
+      "velo": 82.8,
+      "ivb": -2.9,
+      "hb": -6.2,
+      "vaa": -8.82,
+      "haa": 1.35,
+      "spin": 2134,
+      "extension": 6.64,
+      "arm_angle": 46.5,
+      "release_height": 6.07,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 42.9,
+      "zone_pct": 60.0,
       "chase_pct": 25.0,
-      "whiff_pct": 50.0,
+      "whiff_pct": 66.7,
       "xwoba_contact": null,
       "locations_x": [
         0.43,
@@ -111,7 +155,10 @@
         0.44,
         -0.9,
         -0.39,
-        -0.56
+        -0.56,
+        -0.55,
+        0.37,
+        -0.17
       ],
       "locations_z": [
         1.33,
@@ -120,7 +167,10 @@
         0.39,
         1.96,
         1.73,
-        1.55
+        1.55,
+        3.45,
+        1.68,
+        1.88
       ],
       "locations_x_vs_r": [
         0.43,
@@ -139,10 +189,57 @@
         1.55
       ],
       "locations_x_vs_l": [
-        -0.91
+        -0.91,
+        -0.55,
+        0.37,
+        -0.17
       ],
       "locations_z_vs_l": [
-        1.56
+        1.56,
+        3.45,
+        1.68,
+        1.88
+      ]
+    },
+    {
+      "pitch_type": "FS",
+      "pitch_name": "Splitter",
+      "stuff_plus": 111.8,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 3.4,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 6.2,
+      "velo": 88.9,
+      "ivb": 2.6,
+      "hb": 6.1,
+      "vaa": -7.4,
+      "haa": -1.02,
+      "spin": 782,
+      "extension": 6.75,
+      "arm_angle": 50.2,
+      "release_height": 6.1,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.15
+      ],
+      "locations_z": [
+        2.18
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.15
+      ],
+      "locations_z_vs_l": [
+        2.18
       ]
     }
   ]

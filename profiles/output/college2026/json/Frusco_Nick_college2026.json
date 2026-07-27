@@ -8,15 +8,15 @@
   "pitcher_id": 829308,
   "age": null,
   "ip_str": "1.0",
-  "era": null,
+  "era": 9.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 96.2,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 88.5,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 9,
       "n_vs_r": 6,
       "n_vs_l": 3,
@@ -89,7 +89,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.6,
+      "stuff_plus": 96.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 5,
@@ -148,7 +148,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.2,
+      "stuff_plus": 93.4,
       "grade": "40",
       "color": "#f4a261",
       "n": 4,

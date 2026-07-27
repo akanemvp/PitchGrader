@@ -1,27 +1,27 @@
 {
   "player_name": "Roth, Houston",
   "season": "aaa2026",
-  "total_pitches": 744,
+  "total_pitches": 746,
   "p_throws": "R",
   "arm_angle": 43.4,
   "team": "TAC",
   "pitcher_id": 674175,
   "age": null,
-  "ip_str": "41.2",
-  "era": 5.18,
+  "ip_str": "42.0",
+  "era": 5.14,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 85.4,
-      "grade": "35",
-      "color": "#ef233c",
-      "n": 371,
-      "n_vs_r": 184,
+      "stuff_plus": 90.3,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 372,
+      "n_vs_r": 185,
       "n_vs_l": 187,
       "usage_pct": 49.9,
-      "usage_pct_vs_r": 41.7,
+      "usage_pct_vs_r": 41.8,
       "usage_pct_vs_l": 61.7,
       "velo": 91.0,
       "ivb": 17.1,
@@ -33,9 +33,9 @@
       "arm_angle": 43.8,
       "release_height": 5.81,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 52.6,
-      "chase_pct": 19.3,
-      "whiff_pct": 28.4,
+      "zone_pct": 52.4,
+      "chase_pct": 19.8,
+      "whiff_pct": 28.2,
       "xwoba_contact": null,
       "locations_x": [
         0.95,
@@ -408,7 +408,8 @@
         -1.07,
         -0.8,
         -0.54,
-        0.26
+        0.26,
+        -0.13
       ],
       "locations_z": [
         2.29,
@@ -781,7 +782,8 @@
         1.48,
         3.23,
         3.02,
-        3.05
+        3.05,
+        3.87
       ],
       "locations_x_vs_r": [
         0.09,
@@ -967,7 +969,8 @@
         -0.46,
         -0.63,
         -0.24,
-        0.26
+        0.26,
+        -0.13
       ],
       "locations_z_vs_r": [
         2.85,
@@ -1153,7 +1156,8 @@
         2.66,
         2.84,
         2.13,
-        3.05
+        3.05,
+        3.87
       ],
       "locations_x_vs_l": [
         0.95,
@@ -1537,14 +1541,14 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 96.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.8,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 193,
       "n_vs_r": 152,
       "n_vs_l": 41,
       "usage_pct": 25.9,
-      "usage_pct_vs_r": 34.5,
+      "usage_pct_vs_r": 34.3,
       "usage_pct_vs_l": 13.5,
       "velo": 82.2,
       "ivb": 0.9,
@@ -2351,24 +2355,24 @@
       "stuff_plus": 93.1,
       "grade": "40",
       "color": "#f4a261",
-      "n": 136,
-      "n_vs_r": 89,
+      "n": 137,
+      "n_vs_r": 90,
       "n_vs_l": 47,
-      "usage_pct": 18.3,
-      "usage_pct_vs_r": 20.2,
+      "usage_pct": 18.4,
+      "usage_pct_vs_r": 20.3,
       "usage_pct_vs_l": 15.5,
       "velo": 86.4,
       "ivb": 6.5,
-      "hb": -2.1,
-      "vaa": -6.69,
-      "haa": 1.42,
+      "hb": -2.2,
+      "vaa": -6.68,
+      "haa": 1.41,
       "spin": 2038,
       "extension": 6.48,
       "arm_angle": 43.0,
       "release_height": 5.83,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 52.2,
-      "chase_pct": 30.8,
+      "zone_pct": 51.8,
+      "chase_pct": 30.3,
       "whiff_pct": 19.4,
       "xwoba_contact": null,
       "locations_x": [
@@ -2507,7 +2511,8 @@
         0.94,
         0.1,
         -0.48,
-        0.11
+        0.11,
+        -0.89
       ],
       "locations_z": [
         0.36,
@@ -2645,7 +2650,8 @@
         2.22,
         3.08,
         2.43,
-        2.3
+        2.3,
+        4.46
       ],
       "locations_x_vs_r": [
         0.31,
@@ -2736,7 +2742,8 @@
         -0.38,
         -0.05,
         0.08,
-        0.11
+        0.11,
+        -0.89
       ],
       "locations_z_vs_r": [
         0.36,
@@ -2827,7 +2834,8 @@
         1.77,
         0.63,
         2.78,
-        2.3
+        2.3,
+        4.46
       ],
       "locations_x_vs_l": [
         0.02,
@@ -2931,9 +2939,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 102.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 92.4,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 44,
       "n_vs_r": 16,
       "n_vs_l": 28,

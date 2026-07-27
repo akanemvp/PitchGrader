@@ -1,41 +1,41 @@
 {
   "player_name": "Holub, Blake",
   "season": "aaa2026",
-  "total_pitches": 621,
+  "total_pitches": 631,
   "p_throws": "R",
-  "arm_angle": 55.7,
+  "arm_angle": 55.8,
   "team": "NAS",
   "pitcher_id": 700183,
   "age": null,
-  "ip_str": "37.1",
-  "era": 2.41,
+  "ip_str": "38.1",
+  "era": 2.35,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 90.9,
+      "stuff_plus": 94.0,
       "grade": "40",
       "color": "#f4a261",
-      "n": 350,
-      "n_vs_r": 139,
-      "n_vs_l": 211,
-      "usage_pct": 56.4,
-      "usage_pct_vs_r": 51.5,
-      "usage_pct_vs_l": 60.1,
+      "n": 354,
+      "n_vs_r": 140,
+      "n_vs_l": 214,
+      "usage_pct": 56.1,
+      "usage_pct_vs_r": 51.3,
+      "usage_pct_vs_l": 59.8,
       "velo": 95.1,
       "ivb": 16.9,
       "hb": 1.7,
       "vaa": -5.8,
       "haa": -0.18,
-      "spin": 2238,
+      "spin": 2237,
       "extension": 6.88,
       "arm_angle": 57.4,
       "release_height": 6.46,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 49.1,
-      "chase_pct": 29.2,
-      "whiff_pct": 18.0,
+      "zone_pct": 49.4,
+      "chase_pct": 29.1,
+      "whiff_pct": 17.7,
       "xwoba_contact": null,
       "locations_x": [
         -0.9,
@@ -387,7 +387,11 @@
         -0.32,
         0.22,
         0.92,
-        -0.16
+        -0.16,
+        0.01,
+        -0.13,
+        -0.04,
+        0.01
       ],
       "locations_z": [
         2.31,
@@ -739,7 +743,11 @@
         1.85,
         2.08,
         2.4,
-        2.79
+        2.79,
+        2.53,
+        4.01,
+        1.86,
+        3.07
       ],
       "locations_x_vs_r": [
         -1.62,
@@ -880,7 +888,8 @@
         0.27,
         0.44,
         0.43,
-        -0.16
+        -0.16,
+        0.01
       ],
       "locations_z_vs_r": [
         2.76,
@@ -1021,7 +1030,8 @@
         2.55,
         2.67,
         1.55,
-        2.79
+        2.79,
+        3.07
       ],
       "locations_x_vs_l": [
         -0.9,
@@ -1234,7 +1244,10 @@
         0.65,
         -0.32,
         0.22,
-        0.92
+        0.92,
+        0.01,
+        -0.13,
+        -0.04
       ],
       "locations_z_vs_l": [
         2.31,
@@ -1447,34 +1460,37 @@
         2.87,
         1.85,
         2.08,
-        2.4
+        2.4,
+        2.53,
+        4.01,
+        1.86
       ]
     },
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 113.8,
+      "stuff_plus": 113.2,
       "grade": "60",
       "color": "#4cc9f0",
-      "n": 257,
-      "n_vs_r": 127,
-      "n_vs_l": 130,
-      "usage_pct": 41.4,
-      "usage_pct_vs_r": 47.0,
-      "usage_pct_vs_l": 37.0,
-      "velo": 85.8,
+      "n": 262,
+      "n_vs_r": 129,
+      "n_vs_l": 133,
+      "usage_pct": 41.5,
+      "usage_pct_vs_r": 47.3,
+      "usage_pct_vs_l": 37.2,
+      "velo": 85.7,
       "ivb": -2.1,
       "hb": -3.8,
-      "vaa": -8.71,
-      "haa": 0.71,
-      "spin": 2386,
+      "vaa": -8.69,
+      "haa": 0.72,
+      "spin": 2384,
       "extension": 6.95,
       "arm_angle": 57.5,
-      "release_height": 6.46,
+      "release_height": 6.47,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 53.7,
-      "chase_pct": 31.9,
-      "whiff_pct": 31.6,
+      "zone_pct": 53.1,
+      "chase_pct": 31.7,
+      "whiff_pct": 31.1,
       "xwoba_contact": null,
       "locations_x": [
         0.43,
@@ -1733,7 +1749,12 @@
         0.12,
         0.59,
         0.0,
-        0.45
+        0.45,
+        1.26,
+        0.91,
+        0.69,
+        0.59,
+        -0.85
       ],
       "locations_z": [
         2.32,
@@ -1992,7 +2013,12 @@
         2.79,
         2.75,
         0.65,
-        2.66
+        2.66,
+        3.53,
+        2.39,
+        2.88,
+        3.74,
+        2.99
       ],
       "locations_x_vs_r": [
         -0.17,
@@ -2121,7 +2147,9 @@
         0.53,
         0.59,
         0.0,
-        0.45
+        0.45,
+        0.59,
+        -0.85
       ],
       "locations_z_vs_r": [
         1.99,
@@ -2250,7 +2278,9 @@
         1.74,
         2.75,
         0.65,
-        2.66
+        2.66,
+        3.74,
+        2.99
       ],
       "locations_x_vs_l": [
         0.43,
@@ -2382,7 +2412,10 @@
         -0.28,
         0.19,
         0.1,
-        0.12
+        0.12,
+        1.26,
+        0.91,
+        0.69
       ],
       "locations_z_vs_l": [
         2.32,
@@ -2514,33 +2547,36 @@
         1.99,
         2.44,
         2.44,
-        2.79
+        2.79,
+        3.53,
+        2.39,
+        2.88
       ]
     },
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 99.2,
+      "stuff_plus": 97.8,
       "grade": "45",
       "color": "#c9d1d9",
-      "n": 14,
+      "n": 15,
       "n_vs_r": 4,
-      "n_vs_l": 10,
-      "usage_pct": 2.3,
+      "n_vs_l": 11,
+      "usage_pct": 2.4,
       "usage_pct_vs_r": 1.5,
-      "usage_pct_vs_l": 2.8,
-      "velo": 88.1,
-      "ivb": 7.5,
-      "hb": 8.7,
-      "vaa": -8.17,
-      "haa": 0.15,
-      "spin": 1412,
+      "usage_pct_vs_l": 3.1,
+      "velo": 88.0,
+      "ivb": 7.4,
+      "hb": 8.6,
+      "vaa": -8.15,
+      "haa": 0.22,
+      "spin": 1415,
       "extension": 7.07,
-      "arm_angle": 52.3,
+      "arm_angle": 52.5,
       "release_height": 6.2,
       "spin_axis_clock": "\u2014",
       "zone_pct": 0.0,
-      "chase_pct": 28.6,
+      "chase_pct": 26.7,
       "whiff_pct": 100.0,
       "xwoba_contact": null,
       "locations_x": [
@@ -2557,7 +2593,8 @@
         0.98,
         -0.32,
         0.05,
-        0.58
+        0.58,
+        1.1
       ],
       "locations_z": [
         0.63,
@@ -2573,7 +2610,8 @@
         1.48,
         1.0,
         3.6,
-        1.2
+        1.2,
+        1.79
       ],
       "locations_x_vs_r": [
         0.24,
@@ -2597,7 +2635,8 @@
         0.98,
         -0.32,
         0.05,
-        0.58
+        0.58,
+        1.1
       ],
       "locations_z_vs_l": [
         0.63,
@@ -2609,7 +2648,8 @@
         1.48,
         1.0,
         3.6,
-        1.2
+        1.2,
+        1.79
       ]
     }
   ]

@@ -8,13 +8,13 @@
   "pitcher_id": 840561,
   "age": null,
   "ip_str": "2.0",
-  "era": 13.5,
+  "era": 18.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 91.7,
+      "stuff_plus": 90.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 12,
@@ -101,9 +101,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 91.1,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 88.0,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 11,
       "n_vs_r": 10,
       "n_vs_l": 1,
@@ -245,7 +245,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 74.0,
+      "stuff_plus": 71.6,
       "grade": "30",
       "color": "#ef233c",
       "n": 6,
@@ -308,7 +308,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 71.0,
+      "stuff_plus": 78.0,
       "grade": "30",
       "color": "#ef233c",
       "n": 5,

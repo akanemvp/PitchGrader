@@ -1,21 +1,21 @@
 """
 Stuff+ inference — loads the trained model and turns pitches into grades.
 
-StuffPlusPredictor loads the saved model (a single LightGBM regressor on the
-Driveline run-value target) plus the frozen normalization baseline, then:
+StuffPlusPredictor loads the three family probability models (fastball / offspeed /
+breaking) plus the cutter router, then:
   1. engineers shape features for each pitch (unless already engineered),
-  2. predicts each pitch's expected run value (xRV),
-  3. normalizes to the Stuff+ scale: 100 = league average, 10 = one standard
-     deviation. Lower xRV = better pitch = higher grade.
+  2. routes each pitch to its family (cutters via the Mahalanobis router),
+  3. predicts each pitch's expected run value (xRV) with that family's model,
+  4. normalizes on that family's OWN scale: 100 = family average, 10 = one SD.
+Lower xRV = better pitch = higher grade. Because each family self-normalizes, a
+fastball is graded against fastballs — no cross-family shafting.
 
-The model's shape features are arm-normalized and carry no handedness, so a lefty
-and a righty throwing physically identical pitches grade identically and no platoon
-averaging is needed — one scoring pass per pitch.
+The shape features are arm-normalized and carry no handedness, so a lefty and a righty
+throwing physically identical pitches grade identically — one scoring pass per pitch.
 
-Two grade columns are produced: `stuff_plus` (the raw z-score, used for
-aggregation/leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap
-so individual pitches top out ~135 instead of running to extreme outliers).
-Grades are globally comparable across pitch types — no per-type re-normalization.
+Two grade columns are produced: `stuff_plus` (the raw z-score, used for aggregation/
+leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap so individual
+pitches top out ~135 instead of running to extreme outliers).
 """
 
 import logging
@@ -28,37 +28,30 @@ import pandas as pd
 from config import MODEL_DIR
 from features.engineering import engineer_features
 from model.submodels import load_ensemble
-from model.prob_resid import predict_prob_resid_rv
+from model.prob_resid import assign_family, predict_family_rv, add_magnus, SHAPE_FEATS
 
 logger = logging.getLogger(__name__)
 
 _POWER_TYPES = {"FF", "FA", "SI", "FC", "ST"}
+_FAM_KEY = {"FB": "fb", "OFF": "os", "BR": "br"}
 
-# Percentile-anchored display grade. The raw Stuff+ z-score is a fine scale for the
-# bulk and for aggregation (pitcher / pitch-type means all sit well below the knee),
-# but on individual pitches the xRV distribution is fat-tailed, so a linear z-score
-# sends the rare elite pitch to a fictional 6 SD (clipped 160). This remaps single
-# pitches: identity below the ~99th-pct knee, then a saturating soft-cap so the tail
-# compresses into a realistic ceiling (~135) instead of running away. Aggregated
-# grades are unchanged because they live below the knee.
-_DG_KNEE, _DG_CEIL, _DG_SOFT = 125.0, 135.0, 12.0   # knee=99th pct, ceiling, softness
+_DG_KNEE, _DG_CEIL, _DG_SOFT = 125.0, 135.0, 12.0
 
 
 def display_grade(sp):
-    """Percentile-anchored display grade for individual pitches (see note above)."""
+    """Percentile-anchored display grade for individual pitches."""
     sp = np.asarray(sp, dtype=float)
     out = sp.copy()
-    hi = sp > _DG_KNEE          # NaN-safe: NaN > knee is False, so NaNs pass through
+    hi = sp > _DG_KNEE
     out[hi] = _DG_KNEE + (_DG_CEIL - _DG_KNEE) * (1.0 - np.exp(-(sp[hi] - _DG_KNEE) / _DG_SOFT))
     return out
 
 
 class StuffPlusPredictor:
     def __init__(self):
-        self.ensembles:              dict = {}
-        self.norm_global:            dict = {}
-        self.norm_global_historical: dict = {}
-        self.baselines                    = None
+        self.ensembles: dict = {}
+        self.router = None
+        self.baselines = None
         self._load()
 
     def _load(self):
@@ -67,26 +60,24 @@ class StuffPlusPredictor:
             with open(bpath, "rb") as f:
                 self.baselines = pickle.load(f)
 
-        gpath = os.path.join(MODEL_DIR, "norm_global.pkl")
-        if os.path.exists(gpath):
-            with open(gpath, "rb") as f:
-                self.norm_global = pickle.load(f)
-            _gm = self.norm_global.get("mean", self.norm_global.get("global_mean", 0.0))
-            logger.info(f"Global norm loaded: mean={_gm:.5f}")
-
-        hg_path = os.path.join(MODEL_DIR, "norm_global_historical.pkl")
-        if os.path.exists(hg_path):
-            with open(hg_path, "rb") as f:
-                self.norm_global_historical = pickle.load(f)
-            _hgm = self.norm_global_historical.get("mean", self.norm_global_historical.get("global_mean", 0.0))
-            logger.info(f"Historical global norm loaded: mean={_hgm:.5f}")
-
-        ens = load_ensemble("all")
-        if ens is not None:
-            self.ensembles["all"] = ens
-            logger.info("Global model loaded")
+        self.ensembles = {}
+        for key in ("fb", "os", "br"):
+            e = load_ensemble(key)
+            if e is not None:
+                self.ensembles[key] = e
+        if self.ensembles:
+            logger.info(f"Family models loaded: {sorted(self.ensembles)}")
         else:
-            logger.warning("No model found — run 'python main.py train' first")
+            logger.warning("No family models found — run 'python main.py train' first")
+
+        rpath = os.path.join(MODEL_DIR, "cutter_router.pkl")
+        if os.path.exists(rpath):
+            with open(rpath, "rb") as f:
+                self.router = pickle.load(f)
+
+    def _fam_norm(self, ens, norm_set):
+        n = ens.get("norm_hist") if (norm_set == "historical" and ens.get("norm_hist")) else ens["norm"]
+        return n["mean"], max(n["std"], 1e-6)
 
     def predict(self, df, baselines=None, already_engineered=False, norm_set="current"):
         if not already_engineered:
@@ -95,32 +86,31 @@ class StuffPlusPredictor:
 
         df = df.copy()
         df["stuff_plus"] = np.nan
-
-        if "all" not in self.ensembles:
+        if not self.ensembles:
             logger.warning("Model not loaded — returning NaN")
             return df
+        if "ind_vert" not in df.columns:
+            add_magnus(df)
 
-        _global_src  = self.norm_global_historical if (norm_set == "historical" and self.norm_global_historical) else self.norm_global
-        _global_mean = _global_src.get("mean", _global_src.get("global_mean", 0.0))
-        _global_std  = max(_global_src.get("std", _global_src.get("global_std", 0.007)), 1e-6)
+        fam = assign_family(df, self.router)
+        sp = np.full(len(df), np.nan)
+        for family, key in _FAM_KEY.items():
+            ens = self.ensembles.get(key)
+            if ens is None:
+                continue
+            rows = (fam == family).values
+            if not rows.any():
+                continue
+            rv = predict_family_rv(df.loc[rows], ens)
+            gm, gs = self._fam_norm(ens, norm_set)
+            sp[rows] = 100.0 + (gm - rv) / gs * 10.0
 
-        ens = self.ensembles["all"]
-
-        # Single pass: the model's features are arm-normalized and exclude same_hand,
-        # so it cannot see batter or pitcher handedness. The old two-pass same/opposite
-        # average is a no-op here and just doubled inference cost.
-        expected_rv = predict_prob_resid_rv(df, ens)
-        stuff_plus = 100.0 + (_global_mean - expected_rv) / _global_std * 10.0
-
-        # Velocity floor: a "power" pitch type below 75 mph is almost always a
-        # mislabel, so null it rather than emit a bogus grade.
-        low_velo   = (df["release_speed"] < 75.0).values
+        # Velocity floor: a "power" pitch type below 75 mph is almost always a mislabel.
+        low_velo = (pd.to_numeric(df["release_speed"], errors="coerce") < 75.0).values
         power_mask = df["pitch_type"].isin(_POWER_TYPES).values
-        stuff_plus[power_mask & low_velo] = np.nan
+        sp[power_mask & low_velo] = np.nan
 
-        df["stuff_plus"] = np.clip(stuff_plus, -50.0, 200.0)
-        # Raw stuff_plus stays as-is for aggregation; display grade compresses the
-        # individual-pitch tail into a realistic ceiling (~135).
+        df["stuff_plus"] = np.clip(sp, -50.0, 200.0)
         df["stuff_plus_display"] = display_grade(df["stuff_plus"].values)
         return df
 
@@ -131,46 +121,47 @@ _COMPOSITE_PREDICTOR = None
 def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
     """Grade each pitch type's AVERAGE pitch — {pitch_type: Stuff+}.
 
-    Averages the model's shape features within a pitch type, then scores that single
-    composite pitch. This is not the same as averaging the per-pitch grades: the model
-    is a tree ensemble, so mean(grade(x)) != grade(mean(x)), and averaging grades
-    quietly penalizes pitchers whose stuff varies more from pitch to pitch.
-
-    `df` must already be engineered (it comes from a *_scored table). Returns {} if the
-    model or the required feature columns aren't available, so callers can fall back.
+    Averages the model's shape features within a pitch type, routes each averaged pitch
+    to its family, and scores it on that family's scale. `df` must already be engineered
+    (from a *_scored table). Cutter routing uses this pitcher's cutters (df is per-pitcher).
     """
     global _COMPOSITE_PREDICTOR
     if _COMPOSITE_PREDICTOR is None:
         _COMPOSITE_PREDICTOR = StuffPlusPredictor()
     p = _COMPOSITE_PREDICTOR
-    ens = p.ensembles.get("all")
-    if ens is None or df is None or df.empty or "pitch_type" not in df.columns:
+    if not p.ensembles or df is None or df.empty or "pitch_type" not in df.columns:
         logger.warning("composite grade skipped: no model or empty frame")
         return {}
-    want = list(ens.get("feats", []))
-    missing = [f for f in want if f not in df.columns]
+
+    missing = [f for f in SHAPE_FEATS if f not in df.columns]
     if missing:
-        # Loud on purpose: silently falling back to the per-pitch mean is how a stale
-        # aggregation slips into production unnoticed.
         logger.warning(f"composite grade skipped — missing model features: {missing}")
         return {}
 
-    src = p.norm_global_historical if (norm_set == "historical" and p.norm_global_historical) else p.norm_global
-    gm = src.get("mean", src.get("global_mean", 0.0))
-    gs = max(src.get("std", src.get("global_std", 0.007)), 1e-6)
-
-    comp = df.groupby("pitch_type")[want].mean().dropna()
+    comp = df.groupby("pitch_type")[SHAPE_FEATS].mean().dropna()
     if comp.empty:
         return {}
     comp = comp.reset_index()
-    # neutral columns the scorer touches but the model doesn't use as features
-    for col, val in (("plate_x", 0.0), ("plate_z", 2.5), ("same_hand", 0.0),
-                     ("vx0", 0.0), ("vy0", -130.0), ("vz0", 0.0), ("ay", 25.0)):
-        if col not in comp.columns:
-            comp[col] = val
-    rv = predict_prob_resid_rv(comp, ens)
-    sp = np.clip(100.0 + (gm - rv) / gs * 10.0, -50.0, 200.0)
-    return {pt: float(v) for pt, v in zip(comp["pitch_type"], sp) if np.isfinite(v)}
+    if "player_name" in df.columns and df["player_name"].nunique() == 1:
+        comp["player_name"] = df["player_name"].iloc[0]
+
+    fam = assign_family(comp, p.router)
+    out: dict = {}
+    for family, key in _FAM_KEY.items():
+        ens = p.ensembles.get(key)
+        if ens is None:
+            continue
+        rows = (fam == family).values
+        if not rows.any():
+            continue
+        sub = comp.loc[rows]
+        rv = predict_family_rv(sub, ens)
+        gm, gs = p._fam_norm(ens, norm_set)
+        sp = np.clip(100.0 + (gm - rv) / gs * 10.0, -50.0, 200.0)
+        for pt, v in zip(sub["pitch_type"].values, sp):
+            if np.isfinite(v):
+                out[pt] = float(v)
+    return out
 
 
 def load_baselines():

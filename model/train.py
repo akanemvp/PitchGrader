@@ -1,19 +1,20 @@
 """
 Stuff+ model training.
 
-Trains the production model: a single LightGBM regressor on a swing-outcome
-run-value target (see model/prob_resid.py). One model covers every pitch type
-("all"); there is no per-type or family split, no location model, no count model,
-and no platoon marginalization — the shape features are arm-normalized, so the
-model cannot identify pitcher handedness and one grade per pitch suffices.
+Trains the production model: three LightGBM family models — fastball, offspeed,
+breaking — each a probability model (multiclass whiff/foul/in-play + binary
+P(HR|in-play)) on 8 arm-normalized induced-Magnus shape features (see
+model/prob_resid.py). Each family is normalized on its OWN scale so fastballs are
+graded against fastballs. Cutters (FC) are routed to the fastball or breaking
+family per pitcher by a Mahalanobis router.
 
 train_unified() does the full run:
-  1. engineer shape features (cached to model/feature_cache.parquet),
+  1. engineer shape features (cached to model/feature_cache.parquet) + Magnus backfill,
   2. save the movement/spin baselines inference needs,
-  3. train the "all" model (train_prob_resid_ensemble) and save it,
-  4. compute and save the global normalization (current + historical)
-     that maps xRV onto the 100 = league-average, 10 = one-SD Stuff+ scale,
-  5. write the model version hash.
+  3. fit and save the cutter router,
+  4. train the three family models (train_family_prob) and save them,
+  5. compute and save per-family normalization (current + historical),
+  6. write the model version hash.
 """
 
 import hashlib
@@ -30,7 +31,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v300_direct_rv"
+MODEL_VERSION = "v400_family_prob"
 
 
 def train_unified(df: pd.DataFrame) -> dict:
@@ -110,60 +111,60 @@ def train_unified(df: pd.DataFrame) -> dict:
     if "stand" in df.columns and "stand_r" not in df.columns:
         df["stand_r"] = (df["stand"] == "R").astype(int)
 
-    # --- Train the single "all" regressor ---
-    all_feats = [f for f in CORE_FEATURES if f in df.columns]
-    logger.info(f"  [all] Driveline run-value regressor on {len(df):,} pitches, {len(all_feats)} features")
-    from model.prob_resid import train_prob_resid_ensemble, predict_prob_resid_rv
-    ens_all = train_prob_resid_ensemble(df, features=all_feats)
-    if ens_all is None:
-        raise RuntimeError("Global model training failed")
-    save_ensemble(ens_all, "all")
-    ensembles = {"all": ens_all}
-    logger.info(f"  [all] model saved.")
-    # Remove stale family models so predict.py uses the global model
-    for _fam in ("fb", "br", "os", "nfb"):
-        _fam_path = os.path.join(MODEL_DIR, f"ensemble_{_fam}.pkl")
-        if os.path.exists(_fam_path):
-            os.remove(_fam_path)
-            logger.info(f"  Removed stale ensemble_{_fam}.pkl")
+    from model.prob_resid import (add_magnus, fit_cutter_router, assign_family,
+                                   bucket_values, train_family_prob, predict_family_rv,
+                                   SHAPE_FEATS, FAMILIES)
+    # Backfill induced-Magnus features (stale caches predate them; idempotent).
+    add_magnus(df)
 
-    def _compute_global_norm(df_norm, suffix=""):
-        """Score a sample of pitches with the trained model and return {mean, std}.
-        These map xRV onto the Stuff+ scale at inference. A 400k sample estimates
-        mean/std tightly while keeping scoring cheap."""
-        if len(df_norm) > 400_000:
-            df_norm = df_norm.sample(n=400_000, random_state=42)
-        e_rv = predict_prob_resid_rv(df_norm, ensembles["all"])
-        valid = np.isfinite(e_rv)
-        g_mean = float(e_rv[valid].mean())
-        g_std  = float(e_rv[valid].std() + 1e-8)
-        global_norm = {"mean": g_mean, "std": g_std}
-        logger.info(f"  Global norm{suffix}: mean={g_mean:.5f}  std={g_std:.5f}  n={valid.sum():,}")
-        return global_norm
+    # --- Cutter router (fastball vs breaking family), fit + saved ---
+    router = fit_cutter_router(df)
+    with open(os.path.join(MODEL_DIR, "cutter_router.pkl"), "wb") as f:
+        pickle.dump(router, f)
+    fam = assign_family(df, router)
+    _fc = df["pitch_type"].astype(str).eq("FC")
+    logger.info(f"  Cutter router: {int((fam[_fc]=='FB').sum()):,} FC->FB, "
+                f"{int((fam[_fc]=='BR').sum()):,} FC->BR of {int(_fc.sum()):,}")
 
-    # Current norm (all training years). norm_family / norm_per_type are written
-    # empty — predict.py falls back to the single global norm.
-    global_norm = _compute_global_norm(df)
-    with open(os.path.join(MODEL_DIR, "norm_family.pkl"), "wb") as f:
-        pickle.dump({}, f)
-    with open(os.path.join(MODEL_DIR, "norm_per_type.pkl"), "wb") as f:
-        pickle.dump({}, f)
-    with open(os.path.join(MODEL_DIR, "norm_global.pkl"), "wb") as f:
-        pickle.dump(global_norm, f)
-    logger.info(f"Global norm saved: {global_norm}")
+    # --- Global valued run values (whiff, in-play HR) ---
+    V = bucket_values(df)
+    logger.info(f"  values: whiff={V['whiff']:+.4f}  in-play HR={V['hr']:+.3f}")
 
-    # Historical norm (2020-2024) — used to score 2023-2025 without contamination
-    # from the current season's population.
-    if "game_year" in df.columns:
-        df_hist = df[df["game_year"] <= 2024]
-        global_norm_hist = _compute_global_norm(df_hist, suffix=" [hist]")
-        with open(os.path.join(MODEL_DIR, "norm_family_historical.pkl"), "wb") as f:
+    # --- Train the three family probability models on their own scales ---
+    FAM_KEY = {"FB": "fb", "OFF": "os", "BR": "br"}
+    _hist = (df["game_year"] <= 2024) if "game_year" in df.columns else None
+    _sf = df[SHAPE_FEATS].notna().all(axis=1)
+    ensembles = {}
+    for family in FAMILIES:
+        m = (fam == family)
+        if int((m & _sf).sum()) < 5000:
+            logger.warning(f"  [{family}] too few shaped pitches — skipping")
+            continue
+        ens = train_family_prob(df, m, family, V)
+        if _hist is not None:
+            hi = df.index[m & _hist & _sf]
+            if len(hi):
+                hsamp = df.loc[hi, SHAPE_FEATS].sample(n=min(150000, len(hi)), random_state=42)
+                eh = predict_family_rv(hsamp, ens)
+                ens["norm_hist"] = {"mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
+        save_ensemble(ens, FAM_KEY[family])
+        ensembles[FAM_KEY[family]] = ens
+        logger.info(f"  [{family}] saved -> ensemble_{FAM_KEY[family]}.pkl")
+
+    # Drop the old single "all" model so predict.py uses the family models.
+    _all = os.path.join(MODEL_DIR, "ensemble_all.pkl")
+    if os.path.exists(_all):
+        os.remove(_all); logger.info("  Removed stale ensemble_all.pkl")
+
+    # Back-compat: legacy readers still probe norm_global*; point them at the FB norm.
+    _fb = ensembles.get("fb", {}).get("norm", {"mean": 0.0, "std": 0.01})
+    for _n in ("norm_global.pkl", "norm_global_historical.pkl"):
+        with open(os.path.join(MODEL_DIR, _n), "wb") as f:
+            pickle.dump({"mean": _fb["mean"], "std": _fb["std"]}, f)
+    for _n in ("norm_family.pkl", "norm_per_type.pkl",
+               "norm_family_historical.pkl", "norm_per_type_historical.pkl"):
+        with open(os.path.join(MODEL_DIR, _n), "wb") as f:
             pickle.dump({}, f)
-        with open(os.path.join(MODEL_DIR, "norm_per_type_historical.pkl"), "wb") as f:
-            pickle.dump({}, f)
-        with open(os.path.join(MODEL_DIR, "norm_global_historical.pkl"), "wb") as f:
-            pickle.dump(global_norm_hist, f)
-        logger.info(f"Historical norms (2020-2024) saved")
 
     version = hashlib.md5(MODEL_VERSION.encode()).hexdigest()[:12]
     with open(os.path.join(MODEL_DIR, "model_version.txt"), "w") as f:

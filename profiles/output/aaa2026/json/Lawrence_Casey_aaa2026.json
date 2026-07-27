@@ -1,40 +1,40 @@
 {
   "player_name": "Lawrence, Casey",
   "season": "aaa2026",
-  "total_pitches": 1713,
+  "total_pitches": 1744,
   "p_throws": "R",
   "arm_angle": 26.8,
   "team": "TAC",
   "pitcher_id": 596271,
   "age": null,
-  "ip_str": "118.2",
-  "era": 3.94,
+  "ip_str": "120.2",
+  "era": 4.03,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.8,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 426,
-      "n_vs_r": 343,
-      "n_vs_l": 83,
-      "usage_pct": 24.9,
-      "usage_pct_vs_r": 34.9,
+      "stuff_plus": 93.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 430,
+      "n_vs_r": 346,
+      "n_vs_l": 84,
+      "usage_pct": 24.7,
+      "usage_pct_vs_r": 34.4,
       "usage_pct_vs_l": 11.4,
       "velo": 88.6,
       "ivb": 4.1,
-      "hb": 15.0,
+      "hb": 14.9,
       "vaa": -6.17,
-      "haa": 1.18,
-      "spin": 2112,
+      "haa": 1.19,
+      "spin": 2113,
       "extension": 5.91,
       "arm_angle": 27.8,
       "release_height": 5.11,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 63.1,
-      "chase_pct": 24.2,
+      "zone_pct": 63.3,
+      "chase_pct": 24.1,
       "whiff_pct": 4.0,
       "xwoba_contact": null,
       "locations_x": [
@@ -463,7 +463,11 @@
         -0.59,
         0.59,
         0.18,
-        -0.32
+        -0.32,
+        1.83,
+        -0.0,
+        0.45,
+        0.79
       ],
       "locations_z": [
         1.83,
@@ -891,7 +895,11 @@
         1.36,
         2.64,
         2.41,
-        2.17
+        2.17,
+        1.54,
+        3.35,
+        2.07,
+        2.14
       ],
       "locations_x_vs_r": [
         0.11,
@@ -1236,7 +1244,10 @@
         -0.27,
         0.15,
         -0.59,
-        0.18
+        0.18,
+        1.83,
+        -0.0,
+        0.45
       ],
       "locations_z_vs_r": [
         1.83,
@@ -1581,7 +1592,10 @@
         1.44,
         2.55,
         1.36,
-        2.41
+        2.41,
+        1.54,
+        3.35,
+        2.07
       ],
       "locations_x_vs_l": [
         0.32,
@@ -1666,7 +1680,8 @@
         0.22,
         1.57,
         0.59,
-        -0.32
+        -0.32,
+        0.79
       ],
       "locations_z_vs_l": [
         2.63,
@@ -1751,34 +1766,35 @@
         2.33,
         2.78,
         2.64,
-        2.17
+        2.17,
+        2.14
       ]
     },
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 98.7,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 385,
-      "n_vs_r": 237,
+      "stuff_plus": 87.2,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 396,
+      "n_vs_r": 248,
       "n_vs_l": 148,
-      "usage_pct": 22.5,
-      "usage_pct_vs_r": 24.1,
-      "usage_pct_vs_l": 20.3,
+      "usage_pct": 22.7,
+      "usage_pct_vs_r": 24.7,
+      "usage_pct_vs_l": 20.0,
       "velo": 78.5,
-      "ivb": 4.6,
-      "hb": -11.5,
-      "vaa": -7.35,
+      "ivb": 4.5,
+      "hb": -11.6,
+      "vaa": -7.37,
       "haa": 4.09,
-      "spin": 2643,
+      "spin": 2645,
       "extension": 5.85,
       "arm_angle": 25.3,
       "release_height": 5.03,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 51.2,
-      "chase_pct": 27.7,
-      "whiff_pct": 22.4,
+      "zone_pct": 50.5,
+      "chase_pct": 27.6,
+      "whiff_pct": 21.8,
       "xwoba_contact": null,
       "locations_x": [
         -0.74,
@@ -2165,7 +2181,18 @@
         -0.29,
         0.84,
         0.92,
-        -0.83
+        -0.83,
+        1.06,
+        0.04,
+        -0.24,
+        -1.26,
+        0.13,
+        0.14,
+        0.28,
+        1.02,
+        0.45,
+        0.05,
+        1.16
       ],
       "locations_z": [
         1.88,
@@ -2552,7 +2579,18 @@
         2.15,
         0.57,
         1.2,
-        2.37
+        2.37,
+        1.57,
+        2.23,
+        1.52,
+        3.16,
+        1.24,
+        1.37,
+        1.13,
+        0.21,
+        2.11,
+        1.22,
+        1.96
       ],
       "locations_x_vs_r": [
         -0.74,
@@ -2791,7 +2829,18 @@
         -0.12,
         -0.13,
         0.84,
-        -0.83
+        -0.83,
+        1.06,
+        0.04,
+        -0.24,
+        -1.26,
+        0.13,
+        0.14,
+        0.28,
+        1.02,
+        0.45,
+        0.05,
+        1.16
       ],
       "locations_z_vs_r": [
         1.88,
@@ -3030,7 +3079,18 @@
         1.59,
         0.84,
         0.57,
-        2.37
+        2.37,
+        1.57,
+        2.23,
+        1.52,
+        3.16,
+        1.24,
+        1.37,
+        1.13,
+        0.21,
+        2.11,
+        1.22,
+        1.96
       ],
       "locations_x_vs_l": [
         0.59,
@@ -3336,14 +3396,14 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 92.3,
-      "grade": "40",
-      "color": "#f4a261",
-      "n": 376,
-      "n_vs_r": 197,
-      "n_vs_l": 179,
-      "usage_pct": 21.9,
-      "usage_pct_vs_r": 20.0,
+      "stuff_plus": 101.5,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 381,
+      "n_vs_r": 199,
+      "n_vs_l": 182,
+      "usage_pct": 21.8,
+      "usage_pct_vs_r": 19.8,
       "usage_pct_vs_l": 24.6,
       "velo": 81.6,
       "ivb": -0.5,
@@ -3356,8 +3416,8 @@
       "release_height": 5.03,
       "spin_axis_clock": "\u2014",
       "zone_pct": 38.8,
-      "chase_pct": 48.3,
-      "whiff_pct": 18.2,
+      "chase_pct": 48.5,
+      "whiff_pct": 18.4,
       "xwoba_contact": null,
       "locations_x": [
         -0.64,
@@ -3735,7 +3795,12 @@
         -0.27,
         -0.53,
         -0.23,
-        -0.92
+        -0.92,
+        -2.09,
+        -0.49,
+        -0.43,
+        0.05,
+        0.27
       ],
       "locations_z": [
         1.48,
@@ -4113,7 +4178,12 @@
         1.84,
         1.73,
         1.2,
-        2.69
+        2.69,
+        2.19,
+        1.59,
+        1.26,
+        1.38,
+        1.65
       ],
       "locations_x_vs_r": [
         -0.64,
@@ -4312,7 +4382,9 @@
         -0.26,
         -0.85,
         -0.7,
-        -0.53
+        -0.53,
+        -0.49,
+        0.27
       ],
       "locations_z_vs_r": [
         1.48,
@@ -4511,7 +4583,9 @@
         1.67,
         1.2,
         2.1,
-        1.73
+        1.73,
+        1.59,
+        1.65
       ],
       "locations_x_vs_l": [
         0.87,
@@ -4692,7 +4766,10 @@
         -0.2,
         -0.27,
         -0.23,
-        -0.92
+        -0.92,
+        -2.09,
+        -0.43,
+        0.05
       ],
       "locations_z_vs_l": [
         0.75,
@@ -4873,34 +4950,37 @@
         1.3,
         1.84,
         1.2,
-        2.69
+        2.69,
+        2.19,
+        1.26,
+        1.38
       ]
     },
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 95.4,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 316,
-      "n_vs_r": 108,
-      "n_vs_l": 208,
-      "usage_pct": 18.4,
-      "usage_pct_vs_r": 11.0,
-      "usage_pct_vs_l": 28.5,
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 323,
+      "n_vs_r": 112,
+      "n_vs_l": 211,
+      "usage_pct": 18.5,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 28.6,
       "velo": 82.9,
       "ivb": 6.4,
-      "hb": -1.3,
-      "vaa": -6.19,
-      "haa": 3.01,
-      "spin": 2272,
+      "hb": -1.2,
+      "vaa": -6.2,
+      "haa": 2.99,
+      "spin": 2268,
       "extension": 5.89,
       "arm_angle": 27.8,
-      "release_height": 5.13,
+      "release_height": 5.14,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 60.8,
-      "chase_pct": 27.4,
-      "whiff_pct": 16.7,
+      "zone_pct": 60.7,
+      "chase_pct": 27.6,
+      "whiff_pct": 16.4,
       "xwoba_contact": null,
       "locations_x": [
         -0.84,
@@ -5218,7 +5298,14 @@
         -0.21,
         0.62,
         0.51,
-        1.08
+        1.08,
+        0.65,
+        0.12,
+        -0.98,
+        -0.43,
+        0.52,
+        -0.34,
+        -0.32
       ],
       "locations_z": [
         1.85,
@@ -5536,7 +5623,14 @@
         3.22,
         3.31,
         2.58,
-        1.68
+        1.68,
+        2.03,
+        0.86,
+        2.27,
+        3.04,
+        2.04,
+        3.73,
+        2.06
       ],
       "locations_x_vs_r": [
         -0.84,
@@ -5646,7 +5740,11 @@
         -0.67,
         0.62,
         -1.03,
-        1.08
+        1.08,
+        0.65,
+        0.12,
+        -0.98,
+        -0.32
       ],
       "locations_z_vs_r": [
         1.85,
@@ -5756,7 +5854,11 @@
         1.89,
         1.47,
         2.17,
-        1.26
+        1.26,
+        2.03,
+        0.86,
+        2.27,
+        2.06
       ],
       "locations_x_vs_l": [
         0.3,
@@ -5966,7 +6068,10 @@
         -0.21,
         0.62,
         0.51,
-        1.08
+        1.08,
+        -0.43,
+        0.52,
+        -0.34
       ],
       "locations_z_vs_l": [
         2.44,
@@ -6176,34 +6281,37 @@
         3.22,
         3.31,
         2.58,
-        1.68
+        1.68,
+        3.04,
+        2.04,
+        3.73
       ]
     },
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 81.0,
-      "grade": "35",
+      "stuff_plus": 78.0,
+      "grade": "30",
       "color": "#ef233c",
-      "n": 199,
-      "n_vs_r": 91,
-      "n_vs_l": 108,
+      "n": 202,
+      "n_vs_r": 92,
+      "n_vs_l": 110,
       "usage_pct": 11.6,
       "usage_pct_vs_r": 9.2,
-      "usage_pct_vs_l": 14.8,
+      "usage_pct_vs_l": 14.9,
       "velo": 89.0,
-      "ivb": 11.9,
+      "ivb": 11.8,
       "hb": 12.2,
       "vaa": -4.31,
       "haa": 1.27,
-      "spin": 2195,
+      "spin": 2196,
       "extension": 5.85,
       "arm_angle": 27.4,
       "release_height": 5.11,
       "spin_axis_clock": "\u2014",
-      "zone_pct": 34.2,
-      "chase_pct": 27.5,
-      "whiff_pct": 11.1,
+      "zone_pct": 34.7,
+      "chase_pct": 27.3,
+      "whiff_pct": 10.9,
       "xwoba_contact": null,
       "locations_x": [
         1.02,
@@ -6404,7 +6512,10 @@
         -0.07,
         -0.93,
         -0.85,
-        -1.27
+        -1.27,
+        -1.43,
+        -0.15,
+        -0.55
       ],
       "locations_z": [
         1.42,
@@ -6605,7 +6716,10 @@
         1.66,
         2.14,
         2.47,
-        3.05
+        3.05,
+        2.93,
+        2.68,
+        3.18
       ],
       "locations_x_vs_r": [
         1.02,
@@ -6698,7 +6812,8 @@
         -1.92,
         -0.1,
         -0.72,
-        -0.93
+        -0.93,
+        -0.15
       ],
       "locations_z_vs_r": [
         1.42,
@@ -6791,7 +6906,8 @@
         3.1,
         2.21,
         2.22,
-        2.14
+        2.14,
+        2.68
       ],
       "locations_x_vs_l": [
         -0.81,
@@ -6901,7 +7017,9 @@
         -0.52,
         -0.07,
         -0.85,
-        -1.27
+        -1.27,
+        -1.43,
+        -0.55
       ],
       "locations_z_vs_l": [
         4.01,
@@ -7011,19 +7129,84 @@
         1.86,
         1.66,
         2.47,
-        3.05
+        3.05,
+        2.93,
+        3.18
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 87.8,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 6,
+      "n_vs_r": 3,
+      "n_vs_l": 3,
+      "usage_pct": 0.3,
+      "usage_pct_vs_r": 0.3,
+      "usage_pct_vs_l": 0.4,
+      "velo": 78.0,
+      "ivb": -1.6,
+      "hb": -13.7,
+      "vaa": -8.26,
+      "haa": 4.18,
+      "spin": 2706,
+      "extension": 5.91,
+      "arm_angle": 26.1,
+      "release_height": 5.04,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 66.7,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.05,
+        0.28,
+        0.77,
+        0.62,
+        0.36,
+        -1.7
+      ],
+      "locations_z": [
+        1.38,
+        1.17,
+        1.39,
+        1.36,
+        1.38,
+        1.99
+      ],
+      "locations_x_vs_r": [
+        0.05,
+        0.77,
+        0.62
+      ],
+      "locations_z_vs_r": [
+        1.38,
+        1.39,
+        1.36
+      ],
+      "locations_x_vs_l": [
+        0.28,
+        0.36,
+        -1.7
+      ],
+      "locations_z_vs_l": [
+        1.17,
+        1.38,
+        1.99
       ]
     },
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.6,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 87.8,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 6,
       "n_vs_r": 5,
       "n_vs_l": 1,
-      "usage_pct": 0.4,
+      "usage_pct": 0.3,
       "usage_pct_vs_r": 0.5,
       "usage_pct_vs_l": 0.1,
       "velo": 78.8,
@@ -7075,65 +7258,6 @@
       ],
       "locations_z_vs_l": [
         1.39
-      ]
-    },
-    {
-      "pitch_type": "CU",
-      "pitch_name": "Curveball",
-      "stuff_plus": 97.5,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 5,
-      "n_vs_r": 3,
-      "n_vs_l": 2,
-      "usage_pct": 0.3,
-      "usage_pct_vs_r": 0.3,
-      "usage_pct_vs_l": 0.3,
-      "velo": 78.3,
-      "ivb": -1.7,
-      "hb": -13.7,
-      "vaa": -8.36,
-      "haa": 4.51,
-      "spin": 2703,
-      "extension": 5.94,
-      "arm_angle": 26.2,
-      "release_height": 5.02,
-      "spin_axis_clock": "\u2014",
-      "zone_pct": 0.0,
-      "chase_pct": 60.0,
-      "whiff_pct": 66.7,
-      "xwoba_contact": null,
-      "locations_x": [
-        0.05,
-        0.28,
-        0.77,
-        0.62,
-        0.36
-      ],
-      "locations_z": [
-        1.38,
-        1.17,
-        1.39,
-        1.36,
-        1.38
-      ],
-      "locations_x_vs_r": [
-        0.05,
-        0.77,
-        0.62
-      ],
-      "locations_z_vs_r": [
-        1.38,
-        1.39,
-        1.36
-      ],
-      "locations_x_vs_l": [
-        0.28,
-        0.36
-      ],
-      "locations_z_vs_l": [
-        1.17,
-        1.38
       ]
     }
   ]

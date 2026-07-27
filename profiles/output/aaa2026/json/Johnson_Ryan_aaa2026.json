@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.9,
+      "stuff_plus": 94.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 32,
@@ -181,9 +181,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.7,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 24,
       "n_vs_r": 8,
       "n_vs_l": 16,
@@ -316,9 +316,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 99.5,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 12,
       "n_vs_r": 10,
       "n_vs_l": 2,
@@ -403,7 +403,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 95.9,
+      "stuff_plus": 98.7,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 10,

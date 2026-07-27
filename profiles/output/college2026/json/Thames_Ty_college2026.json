@@ -7,14 +7,14 @@
   "team": "RIC",
   "pitcher_id": 835341,
   "age": null,
-  "ip_str": "2.2",
-  "era": 0.0,
+  "ip_str": "2.1",
+  "era": 15.43,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 94.6,
+      "stuff_plus": 94.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 32,
@@ -181,7 +181,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 93.2,
+      "stuff_plus": 91.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 11,
