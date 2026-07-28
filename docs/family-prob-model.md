@@ -65,3 +65,19 @@ Fix: the HR head now trains with heavy regularization (`min_child_samples=800`,
 with shape — per-pitch spread on a fixed pitcher drops ~30% (Glasnow FF std 11.9 → 8.2,
 min 55 → 87) with the composite/leaderboard unchanged. The whiff/multiclass head was
 already smooth and is untouched. Foul remains an (unvalued) class.
+
+## v402 — raw (un-normalized) horizontal features
+
+`release_pos_x` and horizontal Magnus break are now used RAW (`ind_horiz`) instead of
+arm-normalized (`release_pos_x_arm` / `ind_horiz_arm`), and `spin_eff` was dropped after
+it landed at ~8% importance and didn't separate similar-shape fastballs.
+
+Why: arm-normalization mirrors lefties onto righties so a mirror pitch grades identically —
+but that pooled away real L/R signal. Un-normalized, the model reads release side and break
+direction directly and separates fastballs the mirrored view could not (e.g. Mason Montgomery
+FF, a lefty, now correctly out-grades Andrew Painter's — P(whiff) 0.128 vs 0.100, matching
+their actual 0.259 vs 0.078 whiff/swing; the arm-normalized model had both stuck at ~0.103).
+
+Trade-off: the model is now handedness-dependent — a lefty and righty throwing mirror-image
+pitches grade slightly differently. The cutter router still uses the arm-signed `ind_horiz_arm`
+(handedness-robust routing); `_composite_pitch_grade` carries the router features through.

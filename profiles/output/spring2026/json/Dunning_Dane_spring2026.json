@@ -225,8 +225,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 81.0,
-      "grade": "35",
+      "stuff_plus": 77.0,
+      "grade": "30",
       "color": "#ef233c",
       "n": 32,
       "n_vs_r": 15,
@@ -392,7 +392,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.6,
+      "stuff_plus": 92.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 29,
@@ -547,7 +547,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 90.5,
+      "stuff_plus": 94.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 13,
@@ -638,7 +638,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 99.2,
+      "stuff_plus": 99.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 4,

@@ -1,7 +1,7 @@
 {
   "player_name": "Espada, Jose",
   "season": "2026",
-  "total_pitches": 30,
+  "total_pitches": 15,
   "p_throws": "R",
   "arm_angle": 47.9,
   "team": "BAL",
@@ -14,12 +14,12 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 109.6,
-      "grade": "55",
-      "color": "#7bf1a8",
-      "n": 16,
-      "n_vs_r": 14,
-      "n_vs_l": 2,
+      "stuff_plus": 110.1,
+      "grade": "60",
+      "color": "#4cc9f0",
+      "n": 8,
+      "n_vs_r": 7,
+      "n_vs_l": 1,
       "usage_pct": 53.3,
       "usage_pct_vs_r": 77.8,
       "usage_pct_vs_l": 16.7,
@@ -45,25 +45,9 @@
         1.61,
         0.42,
         1.14,
-        -0.85,
-        -0.58,
-        -0.36,
-        0.24,
-        -0.14,
-        1.61,
-        0.42,
-        1.14,
         -0.85
       ],
       "locations_z": [
-        3.32,
-        1.4,
-        2.6,
-        2.91,
-        1.12,
-        1.21,
-        0.74,
-        2.01,
         3.32,
         1.4,
         2.6,
@@ -80,13 +64,6 @@
         1.61,
         0.42,
         1.14,
-        -0.85,
-        -0.36,
-        0.24,
-        -0.14,
-        1.61,
-        0.42,
-        1.14,
         -0.85
       ],
       "locations_z_vs_r": [
@@ -96,33 +73,24 @@
         1.12,
         1.21,
         0.74,
-        2.01,
-        1.4,
-        2.6,
-        2.91,
-        1.12,
-        1.21,
-        0.74,
         2.01
       ],
       "locations_x_vs_l": [
-        -0.58,
         -0.58
       ],
       "locations_z_vs_l": [
-        3.32,
         3.32
       ]
     },
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 99.9,
+      "stuff_plus": 99.0,
       "grade": "45",
       "color": "#c9d1d9",
-      "n": 12,
-      "n_vs_r": 4,
-      "n_vs_l": 8,
+      "n": 6,
+      "n_vs_r": 2,
+      "n_vs_l": 4,
       "usage_pct": 40.0,
       "usage_pct_vs_r": 22.2,
       "usage_pct_vs_l": 66.7,
@@ -146,21 +114,9 @@
         -1.09,
         0.98,
         -0.08,
-        0.06,
-        0.14,
-        -0.14,
-        -1.09,
-        0.98,
-        -0.08,
         0.06
       ],
       "locations_z": [
-        2.61,
-        2.3,
-        3.27,
-        3.69,
-        3.35,
-        1.69,
         2.61,
         2.3,
         3.27,
@@ -170,21 +126,13 @@
       ],
       "locations_x_vs_r": [
         0.14,
-        0.06,
-        0.14,
         0.06
       ],
       "locations_z_vs_r": [
         2.61,
-        1.69,
-        2.61,
         1.69
       ],
       "locations_x_vs_l": [
-        -0.14,
-        -1.09,
-        0.98,
-        -0.08,
         -0.14,
         -1.09,
         0.98,
@@ -194,22 +142,18 @@
         2.3,
         3.27,
         3.69,
-        3.35,
-        2.3,
-        3.27,
-        3.69,
         3.35
       ]
     },
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 70.0,
-      "grade": "30",
+      "stuff_plus": 84.4,
+      "grade": "35",
       "color": "#ef233c",
-      "n": 2,
+      "n": 1,
       "n_vs_r": 0,
-      "n_vs_l": 2,
+      "n_vs_l": 1,
       "usage_pct": 6.7,
       "usage_pct_vs_r": 0.0,
       "usage_pct_vs_l": 16.7,
@@ -228,21 +172,17 @@
       "whiff_pct": null,
       "xwoba_contact": null,
       "locations_x": [
-        1.29,
         1.29
       ],
       "locations_z": [
-        0.27,
         0.27
       ],
       "locations_x_vs_r": [],
       "locations_z_vs_r": [],
       "locations_x_vs_l": [
-        1.29,
         1.29
       ],
       "locations_z_vs_l": [
-        0.27,
         0.27
       ]
     }

@@ -28,7 +28,7 @@ import pandas as pd
 from config import MODEL_DIR
 from features.engineering import engineer_features
 from model.submodels import load_ensemble
-from model.prob_resid import assign_family, predict_family_rv, add_magnus, SHAPE_FEATS
+from model.prob_resid import assign_family, predict_family_rv, add_magnus, SHAPE_FEATS, ROUTER_FEATS
 
 logger = logging.getLogger(__name__)
 
@@ -133,12 +133,13 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
         logger.warning("composite grade skipped: no model or empty frame")
         return {}
 
-    missing = [f for f in SHAPE_FEATS if f not in df.columns]
+    want = list(dict.fromkeys(SHAPE_FEATS + ROUTER_FEATS))   # router needs ind_horiz_arm
+    missing = [f for f in want if f not in df.columns]
     if missing:
         logger.warning(f"composite grade skipped — missing model features: {missing}")
         return {}
 
-    comp = df.groupby("pitch_type")[SHAPE_FEATS].mean().dropna()
+    comp = df.groupby("pitch_type")[want].mean().dropna(subset=SHAPE_FEATS)
     if comp.empty:
         return {}
     comp = comp.reset_index()
