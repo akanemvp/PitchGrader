@@ -181,8 +181,13 @@ _SCORED_COLS = [
 # Derive the model features from the trained model so this can never drift again when
 # SHAPE_FEATS changes.
 try:
-    from model.prob_resid import SHAPE_FEATS as _MODEL_FEATS
-    for _f in _MODEL_FEATS:
+    from model.prob_resid import SHAPE_FEATS as _MODEL_FEATS, ROUTER_FEATS as _RTR_FEATS
+    # Model features + router features + the raw kinematics add_magnus needs to
+    # regenerate the Magnus features (ind_vert/ind_horiz/ind_horiz_arm) and release_pos_x —
+    # without these the composite grader falls back to mean-of-grades (a different number).
+    _needed = list(_MODEL_FEATS) + list(_RTR_FEATS) + \
+        ["release_pos_x", "vx0", "vy0", "vz0", "ax", "ay", "az"]
+    for _f in _needed:
         if _f not in _SCORED_COLS:
             _SCORED_COLS.append(_f)
 except Exception as _exc:  # pragma: no cover - defensive

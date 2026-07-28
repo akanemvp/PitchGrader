@@ -14,7 +14,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.3,
+      "stuff_plus": 103.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 17,
@@ -36,7 +36,7 @@
       "zone_pct": 35.3,
       "chase_pct": 54.5,
       "whiff_pct": 60.0,
-      "xwoba_contact": 0.55,
+      "xwoba_contact": null,
       "locations_x": [
         0.84,
         0.29,
@@ -121,7 +121,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 109.3,
+      "stuff_plus": 106.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 7,
@@ -143,7 +143,7 @@
       "zone_pct": 42.9,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.105,
+      "xwoba_contact": null,
       "locations_x": [
         0.44,
         0.43,
@@ -188,7 +188,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.5,
+      "stuff_plus": 96.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 5,
@@ -210,7 +210,7 @@
       "zone_pct": 60.0,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.225,
+      "xwoba_contact": null,
       "locations_x": [
         0.1,
         0.62,
@@ -247,9 +247,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.6,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 90.8,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 4,
       "n_vs_r": 0,
       "n_vs_l": 4,
@@ -269,7 +269,7 @@
       "zone_pct": 50.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": 1.223,
+      "xwoba_contact": null,
       "locations_x": [
         -0.28,
         0.41,
@@ -300,7 +300,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 101.5,
+      "stuff_plus": 101.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 1,
