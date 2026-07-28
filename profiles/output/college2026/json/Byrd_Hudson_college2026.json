@@ -133,7 +133,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 82.4,
+      "stuff_plus": 85.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,
@@ -178,7 +178,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.2,
+      "stuff_plus": 87.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,
@@ -223,7 +223,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 90.1,
+      "stuff_plus": 90.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 1,

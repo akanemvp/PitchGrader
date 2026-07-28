@@ -36,7 +36,7 @@
       "zone_pct": 21.1,
       "chase_pct": 13.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.393,
+      "xwoba_contact": 0.445,
       "locations_x": [
         -1.06,
         -0.88,
@@ -240,7 +240,7 @@
     {
       "pitch_type": "KN",
       "pitch_name": "Knuckleball",
-      "stuff_plus": 70.0,
+      "stuff_plus": 70.2,
       "grade": "30",
       "color": "#ef233c",
       "n": 1,

@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 73.8,
+      "stuff_plus": 77.8,
       "grade": "30",
       "color": "#ef233c",
       "n": 6,
@@ -77,7 +77,7 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 85.0,
+      "stuff_plus": 88.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 5,
@@ -134,7 +134,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.6,
+      "stuff_plus": 84.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,

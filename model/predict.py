@@ -89,7 +89,7 @@ class StuffPlusPredictor:
         if not self.ensembles:
             logger.warning("Model not loaded — returning NaN")
             return df
-        if "ind_vert" not in df.columns:
+        if any(c not in df.columns for c in ("ind_vert", "ind_horiz", "ind_horiz_arm")):
             add_magnus(df)
 
         fam = assign_family(df, self.router)
@@ -134,6 +134,11 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
         return {}
 
     want = list(dict.fromkeys(SHAPE_FEATS + ROUTER_FEATS))   # router needs ind_horiz_arm
+    # Regenerate the Magnus features from raw kinematics if a slim (refresh) frame lacks
+    # them — never fall back to mean-of-grades just because a stored column is missing.
+    if any(c not in df.columns for c in want) and \
+       all(c in df.columns for c in ("vx0", "vy0", "vz0", "ax", "ay", "az", "p_throws")):
+        df = add_magnus(df.copy())
     missing = [f for f in want if f not in df.columns]
     if missing:
         logger.warning(f"composite grade skipped — missing model features: {missing}")

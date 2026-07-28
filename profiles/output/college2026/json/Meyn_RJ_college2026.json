@@ -14,7 +14,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 70.0,
+      "stuff_plus": 74.4,
       "grade": "30",
       "color": "#ef233c",
       "n": 21,
@@ -137,7 +137,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 92.5,
+      "stuff_plus": 93.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 20,
