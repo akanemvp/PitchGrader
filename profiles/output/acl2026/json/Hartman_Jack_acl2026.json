@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.9,
+      "stuff_plus": 92.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 36,
@@ -197,8 +197,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.2,
-      "grade": "45",
+      "stuff_plus": 100.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 23,
       "n_vs_r": 12,
@@ -328,7 +328,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 104.8,
+      "stuff_plus": 103.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 16,

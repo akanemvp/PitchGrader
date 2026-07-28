@@ -1,7 +1,7 @@
 {
   "player_name": "McFarlane, Alex",
   "season": "2026",
-  "total_pitches": 24,
+  "total_pitches": 12,
   "p_throws": "R",
   "arm_angle": 24.2,
   "team": "PHI",
@@ -14,12 +14,12 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 119.6,
+      "stuff_plus": 116.1,
       "grade": "60",
       "color": "#4cc9f0",
-      "n": 12,
+      "n": 6,
       "n_vs_r": 0,
-      "n_vs_l": 12,
+      "n_vs_l": 6,
       "usage_pct": 50.0,
       "usage_pct_vs_r": 0.0,
       "usage_pct_vs_l": 75.0,
@@ -43,21 +43,9 @@
         -1.35,
         0.98,
         -1.04,
-        -0.14,
-        0.77,
-        0.55,
-        -1.35,
-        0.98,
-        -1.04,
         -0.14
       ],
       "locations_z": [
-        1.74,
-        1.49,
-        2.66,
-        2.55,
-        2.41,
-        1.7,
         1.74,
         1.49,
         2.66,
@@ -73,21 +61,9 @@
         -1.35,
         0.98,
         -1.04,
-        -0.14,
-        0.77,
-        0.55,
-        -1.35,
-        0.98,
-        -1.04,
         -0.14
       ],
       "locations_z_vs_l": [
-        1.74,
-        1.49,
-        2.66,
-        2.55,
-        2.41,
-        1.7,
         1.74,
         1.49,
         2.66,
@@ -99,11 +75,11 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 116.1,
+      "stuff_plus": 114.9,
       "grade": "60",
       "color": "#4cc9f0",
-      "n": 6,
-      "n_vs_r": 6,
+      "n": 3,
+      "n_vs_r": 3,
       "n_vs_l": 0,
       "usage_pct": 25.0,
       "usage_pct_vs_r": 75.0,
@@ -125,15 +101,9 @@
       "locations_x": [
         1.73,
         -0.33,
-        0.04,
-        1.73,
-        -0.33,
         0.04
       ],
       "locations_z": [
-        1.91,
-        1.23,
-        1.29,
         1.91,
         1.23,
         1.29
@@ -141,15 +111,9 @@
       "locations_x_vs_r": [
         1.73,
         -0.33,
-        0.04,
-        1.73,
-        -0.33,
         0.04
       ],
       "locations_z_vs_r": [
-        1.91,
-        1.23,
-        1.29,
         1.91,
         1.23,
         1.29
@@ -160,12 +124,12 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 118.4,
+      "stuff_plus": 119.0,
       "grade": "60",
       "color": "#4cc9f0",
-      "n": 4,
+      "n": 2,
       "n_vs_r": 0,
-      "n_vs_l": 4,
+      "n_vs_l": 2,
       "usage_pct": 16.7,
       "usage_pct_vs_r": 0.0,
       "usage_pct_vs_l": 25.0,
@@ -185,13 +149,9 @@
       "xwoba_contact": null,
       "locations_x": [
         -0.43,
-        0.44,
-        -0.43,
         0.44
       ],
       "locations_z": [
-        2.35,
-        1.68,
         2.35,
         1.68
       ],
@@ -199,13 +159,9 @@
       "locations_z_vs_r": [],
       "locations_x_vs_l": [
         -0.43,
-        0.44,
-        -0.43,
         0.44
       ],
       "locations_z_vs_l": [
-        2.35,
-        1.68,
         2.35,
         1.68
       ]
@@ -213,11 +169,11 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 112.2,
+      "stuff_plus": 111.4,
       "grade": "60",
       "color": "#4cc9f0",
-      "n": 2,
-      "n_vs_r": 2,
+      "n": 1,
+      "n_vs_r": 1,
       "n_vs_l": 0,
       "usage_pct": 8.3,
       "usage_pct_vs_r": 25.0,
@@ -237,19 +193,15 @@
       "whiff_pct": null,
       "xwoba_contact": null,
       "locations_x": [
-        -0.96,
         -0.96
       ],
       "locations_z": [
-        2.34,
         2.34
       ],
       "locations_x_vs_r": [
-        -0.96,
         -0.96
       ],
       "locations_z_vs_r": [
-        2.34,
         2.34
       ],
       "locations_x_vs_l": [],

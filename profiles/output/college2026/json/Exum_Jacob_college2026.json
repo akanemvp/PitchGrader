@@ -8,13 +8,13 @@
   "pitcher_id": 811107,
   "age": null,
   "ip_str": "0.2",
-  "era": null,
+  "era": 27.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 85.3,
+      "stuff_plus": 88.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 15,
@@ -113,9 +113,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 100.9,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 90.8,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 3,
       "n_vs_r": 0,
       "n_vs_l": 3,

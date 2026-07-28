@@ -2,949 +2,965 @@
   {
     "player_name": "Navarro, Reinold",
     "season": "breakout2026",
-    "stuff_plus": 130.1,
+    "stuff_plus": 136.8,
     "grade": "80",
     "color": "#00b4d8",
     "total_pitches": 11
   },
   {
-    "player_name": "Agreda, Ismael",
+    "player_name": "Nielson, Cy",
     "season": "breakout2026",
-    "stuff_plus": 117.8,
+    "stuff_plus": 121.1,
+    "grade": "70",
+    "color": "#00b4d8",
+    "total_pitches": 1
+  },
+  {
+    "player_name": "Bowen, Tyler",
+    "season": "breakout2026",
+    "stuff_plus": 117.1,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 22
+    "total_pitches": 17
   },
   {
     "player_name": "Phillips, Marcus",
     "season": "breakout2026",
-    "stuff_plus": 116.5,
+    "stuff_plus": 115.6,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 25
   },
   {
-    "player_name": "Wood, Gage",
+    "player_name": "Smith, Hagen",
     "season": "breakout2026",
-    "stuff_plus": 115.8,
+    "stuff_plus": 115.4,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 60
+    "total_pitches": 44
   },
   {
-    "player_name": "Bidois, Brandan",
+    "player_name": "Pickell, Cannon",
     "season": "breakout2026",
-    "stuff_plus": 115.0,
+    "stuff_plus": 114.3,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 22
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Raya, Marco",
+    "season": "breakout2026",
+    "stuff_plus": 114.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 14
   },
   {
     "player_name": "Birchard, Ryan",
     "season": "breakout2026",
-    "stuff_plus": 115.0,
+    "stuff_plus": 114.1,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 18
   },
   {
-    "player_name": "Pickell, Cannon",
+    "player_name": "Hartle, Josh",
     "season": "breakout2026",
-    "stuff_plus": 114.9,
+    "stuff_plus": 114.1,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 26
+    "total_pitches": 28
   },
   {
-    "player_name": "Bowen, Tyler",
+    "player_name": "Agreda, Ismael",
     "season": "breakout2026",
-    "stuff_plus": 114.6,
+    "stuff_plus": 113.9,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 17
+    "total_pitches": 22
+  },
+  {
+    "player_name": "Wood, Gage",
+    "season": "breakout2026",
+    "stuff_plus": 113.3,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 60
+  },
+  {
+    "player_name": "Hernandez, Herick",
+    "season": "breakout2026",
+    "stuff_plus": 113.1,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 42
   },
   {
     "player_name": "Rosario, Leomar",
     "season": "breakout2026",
-    "stuff_plus": 113.9,
+    "stuff_plus": 112.8,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 19
   },
   {
+    "player_name": "Bidois, Brandan",
+    "season": "breakout2026",
+    "stuff_plus": 112.5,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 22
+  },
+  {
     "player_name": "Valera, Juan",
     "season": "breakout2026",
-    "stuff_plus": 113.3,
+    "stuff_plus": 111.9,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 38
   },
   {
-    "player_name": "N\u00fa\u00f1ez, Eduarniel",
+    "player_name": "Watson, Aaron",
     "season": "breakout2026",
-    "stuff_plus": 112.9,
+    "stuff_plus": 111.0,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 13
+    "total_pitches": 15
   },
   {
     "player_name": "McFarlane, Alex",
     "season": "breakout2026",
-    "stuff_plus": 112.6,
+    "stuff_plus": 110.8,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 14
   },
   {
+    "player_name": "N\u00fa\u00f1ez, Eduarniel",
+    "season": "breakout2026",
+    "stuff_plus": 110.5,
+    "grade": "60",
+    "color": "#4cc9f0",
+    "total_pitches": 13
+  },
+  {
     "player_name": "Ellerts, Magnus",
     "season": "breakout2026",
-    "stuff_plus": 112.2,
+    "stuff_plus": 110.4,
     "grade": "60",
     "color": "#4cc9f0",
     "total_pitches": 5
   },
   {
-    "player_name": "Raya, Marco",
+    "player_name": "Kennedy-Hayes, Titan",
     "season": "breakout2026",
-    "stuff_plus": 112.0,
+    "stuff_plus": 110.4,
     "grade": "60",
     "color": "#4cc9f0",
-    "total_pitches": 14
+    "total_pitches": 17
   },
   {
-    "player_name": "Smith, Hagen",
+    "player_name": "Santa, Alimber",
     "season": "breakout2026",
-    "stuff_plus": 110.8,
-    "grade": "60",
-    "color": "#4cc9f0",
-    "total_pitches": 44
+    "stuff_plus": 109.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 12
   },
   {
-    "player_name": "Clemente, Jake",
+    "player_name": "Coleman, Javen",
     "season": "breakout2026",
-    "stuff_plus": 110.7,
-    "grade": "60",
-    "color": "#4cc9f0",
-    "total_pitches": 37
+    "stuff_plus": 109.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 13
   },
   {
     "player_name": "Shepardson, Grant",
     "season": "breakout2026",
-    "stuff_plus": 110.5,
-    "grade": "60",
-    "color": "#4cc9f0",
+    "stuff_plus": 109.6,
+    "grade": "55",
+    "color": "#7bf1a8",
     "total_pitches": 34
-  },
-  {
-    "player_name": "Cranton, Hunter",
-    "season": "breakout2026",
-    "stuff_plus": 110.3,
-    "grade": "60",
-    "color": "#4cc9f0",
-    "total_pitches": 10
-  },
-  {
-    "player_name": "Watson, Aaron",
-    "season": "breakout2026",
-    "stuff_plus": 110.3,
-    "grade": "60",
-    "color": "#4cc9f0",
-    "total_pitches": 15
-  },
-  {
-    "player_name": "Brewer, Hoss",
-    "season": "breakout2026",
-    "stuff_plus": 110.2,
-    "grade": "60",
-    "color": "#4cc9f0",
-    "total_pitches": 4
   },
   {
     "player_name": "Jr., Miguel Sime",
     "season": "breakout2026",
-    "stuff_plus": 109.9,
+    "stuff_plus": 109.3,
     "grade": "55",
     "color": "#7bf1a8",
     "total_pitches": 41
   },
   {
-    "player_name": "Orellana, Douglas",
+    "player_name": "Cranton, Hunter",
     "season": "breakout2026",
-    "stuff_plus": 109.8,
+    "stuff_plus": 109.1,
     "grade": "55",
     "color": "#7bf1a8",
-    "total_pitches": 2
+    "total_pitches": 10
   },
   {
-    "player_name": "Collyer, Gavin",
+    "player_name": "Clemente, Jake",
     "season": "breakout2026",
-    "stuff_plus": 109.6,
+    "stuff_plus": 108.6,
     "grade": "55",
     "color": "#7bf1a8",
-    "total_pitches": 6
-  },
-  {
-    "player_name": "Kennedy-Hayes, Titan",
-    "season": "breakout2026",
-    "stuff_plus": 109.4,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 17
-  },
-  {
-    "player_name": "Bednar, Will",
-    "season": "breakout2026",
-    "stuff_plus": 108.8,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 30
-  },
-  {
-    "player_name": "Santa, Alimber",
-    "season": "breakout2026",
-    "stuff_plus": 108.8,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 12
+    "total_pitches": 37
   },
   {
     "player_name": "Dotel, Wilber",
     "season": "breakout2026",
-    "stuff_plus": 108.3,
+    "stuff_plus": 108.4,
     "grade": "55",
     "color": "#7bf1a8",
     "total_pitches": 40
-  },
-  {
-    "player_name": "Hernandez, Seth",
-    "season": "breakout2026",
-    "stuff_plus": 108.2,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 35
-  },
-  {
-    "player_name": "Grable, Ben",
-    "season": "breakout2026",
-    "stuff_plus": 108.1,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 2
-  },
-  {
-    "player_name": "Mu\u00f1oz, Rolddy",
-    "season": "breakout2026",
-    "stuff_plus": 107.4,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 16
-  },
-  {
-    "player_name": "Garcia, Davian",
-    "season": "breakout2026",
-    "stuff_plus": 107.2,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 22
-  },
-  {
-    "player_name": "Kuncl, Trevor",
-    "season": "breakout2026",
-    "stuff_plus": 107.2,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 20
-  },
-  {
-    "player_name": "Hernandez, Herick",
-    "season": "breakout2026",
-    "stuff_plus": 107.1,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 42
-  },
-  {
-    "player_name": "Brecht, Brody",
-    "season": "breakout2026",
-    "stuff_plus": 106.5,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 43
-  },
-  {
-    "player_name": "Zazueta, Christian",
-    "season": "breakout2026",
-    "stuff_plus": 106.5,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 59
   },
   {
     "player_name": "DeBerry, Jaron",
     "season": "breakout2026",
-    "stuff_plus": 106.4,
+    "stuff_plus": 108.0,
     "grade": "55",
     "color": "#7bf1a8",
-    "total_pitches": 32
-  },
-  {
-    "player_name": "Brito, Anderson",
-    "season": "breakout2026",
-    "stuff_plus": 106.2,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 36
-  },
-  {
-    "player_name": "Fajardo, Yhoiker",
-    "season": "breakout2026",
-    "stuff_plus": 105.7,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 43
-  },
-  {
-    "player_name": "Jordan, Dylan",
-    "season": "breakout2026",
-    "stuff_plus": 105.6,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 30
-  },
-  {
-    "player_name": "Coleman, Javen",
-    "season": "breakout2026",
-    "stuff_plus": 105.5,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 13
-  },
-  {
-    "player_name": "Harris, Trent",
-    "season": "breakout2026",
-    "stuff_plus": 105.5,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 6
-  },
-  {
-    "player_name": "Franklin, Tanner",
-    "season": "breakout2026",
-    "stuff_plus": 105.1,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 49
-  },
-  {
-    "player_name": "Sloan, Ryan",
-    "season": "breakout2026",
-    "stuff_plus": 105.1,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 56
-  },
-  {
-    "player_name": "Stanifer, Gage",
-    "season": "breakout2026",
-    "stuff_plus": 105.0,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 32
-  },
-  {
-    "player_name": "Cabrera, Jean",
-    "season": "breakout2026",
-    "stuff_plus": 104.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 33
-  },
-  {
-    "player_name": "Colleran Jr., Dennis",
-    "season": "breakout2026",
-    "stuff_plus": 104.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 9
-  },
-  {
-    "player_name": "Milbrandt, Karson",
-    "season": "breakout2026",
-    "stuff_plus": 104.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 58
-  },
-  {
-    "player_name": "Rojas, Cesar",
-    "season": "breakout2026",
-    "stuff_plus": 104.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 20
-  },
-  {
-    "player_name": "Wenninger, Jack",
-    "season": "breakout2026",
-    "stuff_plus": 104.8,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 65
-  },
-  {
-    "player_name": "Nielson, Cy",
-    "season": "breakout2026",
-    "stuff_plus": 104.7,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 1
-  },
-  {
-    "player_name": "Day, Cam",
-    "season": "breakout2026",
-    "stuff_plus": 104.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 31
-  },
-  {
-    "player_name": "Curtis, Khristian",
-    "season": "breakout2026",
-    "stuff_plus": 104.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 33
-  },
-  {
-    "player_name": "Caple, Brooks",
-    "season": "breakout2026",
-    "stuff_plus": 104.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 38
-  },
-  {
-    "player_name": "Cortez, Chris",
-    "season": "breakout2026",
-    "stuff_plus": 104.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 24
-  },
-  {
-    "player_name": "Jimenez, Marco",
-    "season": "breakout2026",
-    "stuff_plus": 104.0,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 12
-  },
-  {
-    "player_name": "Sommers, Drew",
-    "season": "breakout2026",
-    "stuff_plus": 103.8,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 15
-  },
-  {
-    "player_name": "Ellwanger, James",
-    "season": "breakout2026",
-    "stuff_plus": 103.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 51
-  },
-  {
-    "player_name": "Petty, Chase",
-    "season": "breakout2026",
-    "stuff_plus": 103.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 40
-  },
-  {
-    "player_name": "Zwack, Nick",
-    "season": "breakout2026",
-    "stuff_plus": 103.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Hicks, James",
-    "season": "breakout2026",
-    "stuff_plus": 103.5,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 45
-  },
-  {
-    "player_name": "Gibson, Trey",
-    "season": "breakout2026",
-    "stuff_plus": 103.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 30
-  },
-  {
-    "player_name": "Simon, Ben",
-    "season": "breakout2026",
-    "stuff_plus": 103.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 13
-  },
-  {
-    "player_name": "Mueth, Zander",
-    "season": "breakout2026",
-    "stuff_plus": 103.3,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 21
-  },
-  {
-    "player_name": "Smith, Dylan",
-    "season": "breakout2026",
-    "stuff_plus": 103.3,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 7
-  },
-  {
-    "player_name": "Curry, Aidan",
-    "season": "breakout2026",
-    "stuff_plus": 103.2,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 40
-  },
-  {
-    "player_name": "Snead, Nate",
-    "season": "breakout2026",
-    "stuff_plus": 103.2,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 37
-  },
-  {
-    "player_name": "Hartle, Josh",
-    "season": "breakout2026",
-    "stuff_plus": 103.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 28
-  },
-  {
-    "player_name": "Southard, Jared",
-    "season": "breakout2026",
-    "stuff_plus": 103.0,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 8
-  },
-  {
-    "player_name": "Stull, Eston",
-    "season": "breakout2026",
-    "stuff_plus": 103.0,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 3
-  },
-  {
-    "player_name": "Urbina, Jose",
-    "season": "breakout2026",
-    "stuff_plus": 102.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 49
-  },
-  {
-    "player_name": "May, Aiden",
-    "season": "breakout2026",
-    "stuff_plus": 102.8,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 53
-  },
-  {
-    "player_name": "Childers, Will",
-    "season": "breakout2026",
-    "stuff_plus": 102.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Eyanson, Anthony",
-    "season": "breakout2026",
-    "stuff_plus": 102.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 26
-  },
-  {
-    "player_name": "Payne, Landen",
-    "season": "breakout2026",
-    "stuff_plus": 102.6,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 23
-  },
-  {
-    "player_name": "Chourio, Kendry",
-    "season": "breakout2026",
-    "stuff_plus": 102.5,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 44
-  },
-  {
-    "player_name": "Bradt, Tyler",
-    "season": "breakout2026",
-    "stuff_plus": 102.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 14
-  },
-  {
-    "player_name": "Davis, Tyler",
-    "season": "breakout2026",
-    "stuff_plus": 102.4,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 33
-  },
-  {
-    "player_name": "Aracena, Wellington",
-    "season": "breakout2026",
-    "stuff_plus": 102.2,
-    "grade": "50",
-    "color": "#c9d1d9",
     "total_pitches": 32
   },
   {
     "player_name": "Santucci, Jonathan",
     "season": "breakout2026",
-    "stuff_plus": 102.0,
-    "grade": "50",
-    "color": "#c9d1d9",
+    "stuff_plus": 108.0,
+    "grade": "55",
+    "color": "#7bf1a8",
     "total_pitches": 49
   },
   {
-    "player_name": "Pan, Wen-Hui",
+    "player_name": "Brewer, Hoss",
     "season": "breakout2026",
-    "stuff_plus": 101.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 14
+    "stuff_plus": 107.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 4
   },
   {
-    "player_name": "Culpepper, C.J.",
+    "player_name": "Grable, Ben",
     "season": "breakout2026",
-    "stuff_plus": 101.8,
+    "stuff_plus": 107.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2
+  },
+  {
+    "player_name": "Zwack, Nick",
+    "season": "breakout2026",
+    "stuff_plus": 107.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Hernandez, Seth",
+    "season": "breakout2026",
+    "stuff_plus": 107.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 35
+  },
+  {
+    "player_name": "Sommers, Drew",
+    "season": "breakout2026",
+    "stuff_plus": 107.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Zazueta, Christian",
+    "season": "breakout2026",
+    "stuff_plus": 107.2,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 59
+  },
+  {
+    "player_name": "Bednar, Will",
+    "season": "breakout2026",
+    "stuff_plus": 107.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Serwinowski, Adam",
+    "season": "breakout2026",
+    "stuff_plus": 106.9,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 53
+  },
+  {
+    "player_name": "Garcia, Davian",
+    "season": "breakout2026",
+    "stuff_plus": 106.7,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 22
+  },
+  {
+    "player_name": "Orellana, Douglas",
+    "season": "breakout2026",
+    "stuff_plus": 106.6,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 2
+  },
+  {
+    "player_name": "Clemmey, Alex",
+    "season": "breakout2026",
+    "stuff_plus": 106.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Doyle, Liam",
+    "season": "breakout2026",
+    "stuff_plus": 105.8,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 76
+  },
+  {
+    "player_name": "Collyer, Gavin",
+    "season": "breakout2026",
+    "stuff_plus": 105.5,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 6
+  },
+  {
+    "player_name": "Kuncl, Trevor",
+    "season": "breakout2026",
+    "stuff_plus": 105.4,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Rojas, Cesar",
+    "season": "breakout2026",
+    "stuff_plus": 105.3,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Brecht, Brody",
+    "season": "breakout2026",
+    "stuff_plus": 105.1,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 43
+  },
+  {
+    "player_name": "Colleran Jr., Dennis",
+    "season": "breakout2026",
+    "stuff_plus": 105.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 9
+  },
+  {
+    "player_name": "Root, Zach",
+    "season": "breakout2026",
+    "stuff_plus": 105.0,
+    "grade": "55",
+    "color": "#7bf1a8",
+    "total_pitches": 53
+  },
+  {
+    "player_name": "Mu\u00f1oz, Rolddy",
+    "season": "breakout2026",
+    "stuff_plus": 104.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 16
+  },
+  {
+    "player_name": "Sloan, Ryan",
+    "season": "breakout2026",
+    "stuff_plus": 104.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 56
+  },
+  {
+    "player_name": "Milbrandt, Karson",
+    "season": "breakout2026",
+    "stuff_plus": 104.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 58
+  },
+  {
+    "player_name": "Caple, Brooks",
+    "season": "breakout2026",
+    "stuff_plus": 104.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 38
+  },
+  {
+    "player_name": "Peters, Mason",
+    "season": "breakout2026",
+    "stuff_plus": 104.5,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 40
   },
   {
-    "player_name": "Pacheco, Brad",
+    "player_name": "Smith, Dylan",
     "season": "breakout2026",
-    "stuff_plus": 101.8,
+    "stuff_plus": 104.5,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 10
+    "total_pitches": 7
   },
   {
-    "player_name": "Dzierwa, Joseph",
+    "player_name": "Hawks, Sawyer",
     "season": "breakout2026",
-    "stuff_plus": 101.7,
+    "stuff_plus": 104.1,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 48
+    "total_pitches": 17
   },
   {
-    "player_name": "Sterling, Levi",
+    "player_name": "Watson, Michael",
     "season": "breakout2026",
-    "stuff_plus": 101.7,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 10
-  },
-  {
-    "player_name": "Wichrowski, Brett",
-    "season": "breakout2026",
-    "stuff_plus": 101.7,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 30
-  },
-  {
-    "player_name": "Dorchies, Ethan",
-    "season": "breakout2026",
-    "stuff_plus": 101.5,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 39
-  },
-  {
-    "player_name": "Hintz, Casey",
-    "season": "breakout2026",
-    "stuff_plus": 101.5,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 5
-  },
-  {
-    "player_name": "Witherspoon, Kyson",
-    "season": "breakout2026",
-    "stuff_plus": 101.2,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 39
-  },
-  {
-    "player_name": "Bormie, Wilian",
-    "season": "breakout2026",
-    "stuff_plus": 101.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 5
-  },
-  {
-    "player_name": "Cates, Austin",
-    "season": "breakout2026",
-    "stuff_plus": 101.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 35
-  },
-  {
-    "player_name": "Martinez-Gomez, Luis",
-    "season": "breakout2026",
-    "stuff_plus": 101.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 20
-  },
-  {
-    "player_name": "Root, Zach",
-    "season": "breakout2026",
-    "stuff_plus": 101.1,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 53
-  },
-  {
-    "player_name": "Jr., Yoel Tejeda",
-    "season": "breakout2026",
-    "stuff_plus": 101.0,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 28
-  },
-  {
-    "player_name": "Clemmey, Alex",
-    "season": "breakout2026",
-    "stuff_plus": 100.9,
+    "stuff_plus": 104.1,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 11
   },
   {
-    "player_name": "Gabrysh, Luke",
+    "player_name": "Jimenez, Marco",
     "season": "breakout2026",
-    "stuff_plus": 100.9,
+    "stuff_plus": 103.9,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 46
+    "total_pitches": 12
   },
   {
-    "player_name": "Hardin, Tyson",
+    "player_name": "Franklin, Tanner",
     "season": "breakout2026",
-    "stuff_plus": 100.9,
+    "stuff_plus": 103.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 49
+  },
+  {
+    "player_name": "Cabrera, Jean",
+    "season": "breakout2026",
+    "stuff_plus": 103.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Brito, Anderson",
+    "season": "breakout2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Snead, Nate",
+    "season": "breakout2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 37
+  },
+  {
+    "player_name": "Southard, Jared",
+    "season": "breakout2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Torres, Wande",
+    "season": "breakout2026",
+    "stuff_plus": 103.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Cortez, Chris",
+    "season": "breakout2026",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 24
+  },
+  {
+    "player_name": "Day, Cam",
+    "season": "breakout2026",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Petty, Chase",
+    "season": "breakout2026",
+    "stuff_plus": 103.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "Stanifer, Gage",
+    "season": "breakout2026",
+    "stuff_plus": 103.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Gutierrez, Luis",
+    "season": "breakout2026",
+    "stuff_plus": 103.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Arnold, Jamie",
+    "season": "breakout2026",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 67
+  },
+  {
+    "player_name": "Jordan, Dylan",
+    "season": "breakout2026",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Pacheco, Brad",
+    "season": "breakout2026",
+    "stuff_plus": 103.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Miller, Joe",
+    "season": "breakout2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 36
+  },
+  {
+    "player_name": "Oakie, Joey",
+    "season": "breakout2026",
+    "stuff_plus": 103.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 34
+  },
+  {
+    "player_name": "Harris, Trent",
+    "season": "breakout2026",
+    "stuff_plus": 102.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 6
+  },
+  {
+    "player_name": "Hintz, Casey",
+    "season": "breakout2026",
+    "stuff_plus": 102.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 5
+  },
+  {
+    "player_name": "Dzierwa, Joseph",
+    "season": "breakout2026",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Mueth, Zander",
+    "season": "breakout2026",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 21
+  },
+  {
+    "player_name": "Santana, Sandro",
+    "season": "breakout2026",
+    "stuff_plus": 102.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 19
+  },
+  {
+    "player_name": "Gibson, Trey",
+    "season": "breakout2026",
+    "stuff_plus": 102.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Hicks, James",
+    "season": "breakout2026",
+    "stuff_plus": 102.0,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 45
   },
   {
-    "player_name": "Walters, Brian",
-    "season": "breakout2026",
-    "stuff_plus": 100.9,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 9
-  },
-  {
-    "player_name": "Perry, Nolan",
-    "season": "breakout2026",
-    "stuff_plus": 100.8,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 15
-  },
-  {
-    "player_name": "Mendez, Miguel",
-    "season": "breakout2026",
-    "stuff_plus": 100.7,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 25
-  },
-  {
     "player_name": "Kemp, Kannon",
     "season": "breakout2026",
-    "stuff_plus": 100.6,
+    "stuff_plus": 102.0,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 25
   },
   {
-    "player_name": "Scarborough, Caden",
+    "player_name": "Eyanson, Anthony",
     "season": "breakout2026",
-    "stuff_plus": 100.6,
+    "stuff_plus": 101.9,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 11
+    "total_pitches": 26
   },
   {
-    "player_name": "Marte, Yunior",
+    "player_name": "Jr., Yoel Tejeda",
     "season": "breakout2026",
-    "stuff_plus": 100.5,
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 28
+  },
+  {
+    "player_name": "Payne, Landen",
+    "season": "breakout2026",
+    "stuff_plus": 101.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 23
+  },
+  {
+    "player_name": "Hardin, Tyson",
+    "season": "breakout2026",
+    "stuff_plus": 101.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 45
+  },
+  {
+    "player_name": "Curtis, Khristian",
+    "season": "breakout2026",
+    "stuff_plus": 101.6,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Davis, Tyler",
+    "season": "breakout2026",
+    "stuff_plus": 101.5,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 33
+  },
+  {
+    "player_name": "Hill, Dasan",
+    "season": "breakout2026",
+    "stuff_plus": 101.5,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 51
   },
   {
-    "player_name": "Peters, Mason",
+    "player_name": "Macko, Adam",
     "season": "breakout2026",
-    "stuff_plus": 100.5,
+    "stuff_plus": 101.5,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 40
+    "total_pitches": 26
   },
   {
-    "player_name": "Weyrich, Nick",
+    "player_name": "Manfredi Sr., Mark",
     "season": "breakout2026",
-    "stuff_plus": 100.5,
+    "stuff_plus": 101.4,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 25
+    "total_pitches": 27
   },
   {
-    "player_name": "Kean, Chris",
+    "player_name": "Wenninger, Jack",
     "season": "breakout2026",
-    "stuff_plus": 100.4,
+    "stuff_plus": 101.4,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 10
+    "total_pitches": 65
   },
   {
-    "player_name": "Hawks, Sawyer",
+    "player_name": "Wichrowski, Brett",
     "season": "breakout2026",
-    "stuff_plus": 100.3,
+    "stuff_plus": 101.4,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 17
+    "total_pitches": 30
   },
   {
-    "player_name": "Serwinowski, Adam",
+    "player_name": "Childers, Will",
     "season": "breakout2026",
-    "stuff_plus": 100.3,
+    "stuff_plus": 101.3,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 53
+    "total_pitches": 11
   },
   {
-    "player_name": "Forbes, Patrick",
+    "player_name": "Scarborough, Caden",
     "season": "breakout2026",
-    "stuff_plus": 100.1,
+    "stuff_plus": 101.3,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 53
+    "total_pitches": 11
   },
   {
-    "player_name": "Sena, Reidis",
+    "player_name": "Chourio, Kendry",
     "season": "breakout2026",
-    "stuff_plus": 100.1,
+    "stuff_plus": 101.2,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 44
+  },
+  {
+    "player_name": "Stull, Eston",
+    "season": "breakout2026",
+    "stuff_plus": 101.2,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 3
   },
   {
-    "player_name": "Arnold, Jamie",
+    "player_name": "Kean, Chris",
     "season": "breakout2026",
-    "stuff_plus": 100.0,
-    "grade": "45",
+    "stuff_plus": 101.1,
+    "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 67
+    "total_pitches": 10
   },
   {
-    "player_name": "Denton, Cade",
+    "player_name": "Marte, Yunior",
+    "season": "breakout2026",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Trentadue, Josh",
+    "season": "breakout2026",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 49
+  },
+  {
+    "player_name": "Weyrich, Nick",
+    "season": "breakout2026",
+    "stuff_plus": 101.0,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "Ellwanger, James",
+    "season": "breakout2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Pan, Wen-Hui",
+    "season": "breakout2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 14
+  },
+  {
+    "player_name": "Schoolcraft, Kruz",
+    "season": "breakout2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 27
+  },
+  {
+    "player_name": "Simon, Ben",
+    "season": "breakout2026",
+    "stuff_plus": 100.9,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 13
+  },
+  {
+    "player_name": "Anderson, Kade",
+    "season": "breakout2026",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 64
+  },
+  {
+    "player_name": "Cuthbertson, Hayden",
+    "season": "breakout2026",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 19
+  },
+  {
+    "player_name": "Torre, Luis De La",
+    "season": "breakout2026",
+    "stuff_plus": 100.8,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Urbina, Jose",
+    "season": "breakout2026",
+    "stuff_plus": 100.7,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 49
+  },
+  {
+    "player_name": "Curry, Aidan",
+    "season": "breakout2026",
+    "stuff_plus": 100.4,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 40
+  },
+  {
+    "player_name": "Bowker, Cody",
+    "season": "breakout2026",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 20
+  },
+  {
+    "player_name": "Gabrysh, Luke",
+    "season": "breakout2026",
+    "stuff_plus": 100.3,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 46
+  },
+  {
+    "player_name": "Caminiti, Cam",
+    "season": "breakout2026",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 9
+  },
+  {
+    "player_name": "Dorchies, Ethan",
+    "season": "breakout2026",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 39
+  },
+  {
+    "player_name": "Perry, Nolan",
+    "season": "breakout2026",
+    "stuff_plus": 100.1,
+    "grade": "50",
+    "color": "#c9d1d9",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Cates, Austin",
     "season": "breakout2026",
     "stuff_plus": 99.9,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 6
+    "total_pitches": 35
   },
   {
-    "player_name": "Gutierrez, Luis",
+    "player_name": "Fajardo, Yhoiker",
     "season": "breakout2026",
     "stuff_plus": 99.9,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 8
+    "total_pitches": 43
   },
   {
-    "player_name": "Doyle, Liam",
+    "player_name": "May, Aiden",
     "season": "breakout2026",
     "stuff_plus": 99.8,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 76
+    "total_pitches": 53
   },
   {
-    "player_name": "Victor, Najer",
+    "player_name": "Sterling, Levi",
     "season": "breakout2026",
     "stuff_plus": 99.8,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 17
+    "total_pitches": 10
   },
   {
-    "player_name": "Oakie, Joey",
+    "player_name": "Mendez, Miguel",
     "season": "breakout2026",
     "stuff_plus": 99.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 34
-  },
-  {
-    "player_name": "Montero, Jose",
-    "season": "breakout2026",
-    "stuff_plus": 99.6,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 25
   },
   {
-    "player_name": "Cebert, Jack",
+    "player_name": "Witherspoon, Kyson",
     "season": "breakout2026",
-    "stuff_plus": 99.2,
+    "stuff_plus": 99.6,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 72
+    "total_pitches": 39
   },
   {
-    "player_name": "Morris, Kade",
+    "player_name": "Aracena, Wellington",
     "season": "breakout2026",
-    "stuff_plus": 99.2,
+    "stuff_plus": 99.1,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 56
+    "total_pitches": 32
   },
   {
-    "player_name": "Bowker, Cody",
+    "player_name": "Martinez-Gomez, Luis",
     "season": "breakout2026",
     "stuff_plus": 99.1,
     "grade": "45",
@@ -952,577 +968,553 @@
     "total_pitches": 20
   },
   {
-    "player_name": "Hawkins, Garrett",
+    "player_name": "Carreno, Nicolas",
     "season": "breakout2026",
-    "stuff_plus": 99.1,
+    "stuff_plus": 99.0,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 17
+    "total_pitches": 9
   },
   {
-    "player_name": "Michael, Trevin",
+    "player_name": "Schweitzer, Tyler",
     "season": "breakout2026",
-    "stuff_plus": 98.6,
+    "stuff_plus": 99.0,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 7
+    "total_pitches": 21
   },
   {
-    "player_name": "Sanders, Will",
+    "player_name": "Culpepper, C.J.",
     "season": "breakout2026",
-    "stuff_plus": 98.6,
+    "stuff_plus": 98.8,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 26
+    "total_pitches": 40
   },
   {
-    "player_name": "Torres, Wande",
+    "player_name": "Sena, Reidis",
     "season": "breakout2026",
-    "stuff_plus": 98.6,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 34
-  },
-  {
-    "player_name": "Baumann, Garrett",
-    "season": "breakout2026",
-    "stuff_plus": 98.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 31
-  },
-  {
-    "player_name": "Bremner, Tyler",
-    "season": "breakout2026",
-    "stuff_plus": 98.5,
+    "stuff_plus": 98.8,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 3
   },
   {
-    "player_name": "Rodriguez, Moises",
+    "player_name": "Montero, Jose",
     "season": "breakout2026",
-    "stuff_plus": 98.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 4
-  },
-  {
-    "player_name": "Schoolcraft, Kruz",
-    "season": "breakout2026",
-    "stuff_plus": 98.4,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 27
-  },
-  {
-    "player_name": "Kim, Seong-Jun",
-    "season": "breakout2026",
-    "stuff_plus": 98.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Middleton, JB",
-    "season": "breakout2026",
-    "stuff_plus": 98.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 24
-  },
-  {
-    "player_name": "Wing, Kaleb",
-    "season": "breakout2026",
-    "stuff_plus": 98.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 19
-  },
-  {
-    "player_name": "German, Nestor",
-    "season": "breakout2026",
-    "stuff_plus": 98.1,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 36
-  },
-  {
-    "player_name": "Watson, Michael",
-    "season": "breakout2026",
-    "stuff_plus": 98.1,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Meccage, Bryce",
-    "season": "breakout2026",
-    "stuff_plus": 97.8,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 43
-  },
-  {
-    "player_name": "Cerantola, Eric",
-    "season": "breakout2026",
-    "stuff_plus": 97.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 19
-  },
-  {
-    "player_name": "Manfredi Sr., Mark",
-    "season": "breakout2026",
-    "stuff_plus": 97.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 27
-  },
-  {
-    "player_name": "Fisher, Matthew",
-    "season": "breakout2026",
-    "stuff_plus": 97.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 22
-  },
-  {
-    "player_name": "G\u00f3mez, Yorman",
-    "season": "breakout2026",
-    "stuff_plus": 97.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 41
-  },
-  {
-    "player_name": "Caminiti, Cam",
-    "season": "breakout2026",
-    "stuff_plus": 97.4,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 9
-  },
-  {
-    "player_name": "Cawyer, Zachary",
-    "season": "breakout2026",
-    "stuff_plus": 97.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 12
-  },
-  {
-    "player_name": "Dalena, Jaxon",
-    "season": "breakout2026",
-    "stuff_plus": 97.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 24
-  },
-  {
-    "player_name": "Harmon, Landon",
-    "season": "breakout2026",
-    "stuff_plus": 97.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 10
-  },
-  {
-    "player_name": "Macko, Adam",
-    "season": "breakout2026",
-    "stuff_plus": 97.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 26
-  },
-  {
-    "player_name": "Santana, Sandro",
-    "season": "breakout2026",
-    "stuff_plus": 97.2,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 19
-  },
-  {
-    "player_name": "Cuthbertson, Hayden",
-    "season": "breakout2026",
-    "stuff_plus": 97.1,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 19
-  },
-  {
-    "player_name": "Randall, Josh",
-    "season": "breakout2026",
-    "stuff_plus": 96.9,
+    "stuff_plus": 98.7,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 25
   },
   {
-    "player_name": "Carreno, Nicolas",
+    "player_name": "Bradt, Tyler",
     "season": "breakout2026",
-    "stuff_plus": 96.8,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 9
-  },
-  {
-    "player_name": "Miller, Joe",
-    "season": "breakout2026",
-    "stuff_plus": 96.8,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 36
-  },
-  {
-    "player_name": "Ortiz, JeanPierre",
-    "season": "breakout2026",
-    "stuff_plus": 96.8,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 34
-  },
-  {
-    "player_name": "Biven, Tucker",
-    "season": "breakout2026",
-    "stuff_plus": 96.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Doughty, Braylon",
-    "season": "breakout2026",
-    "stuff_plus": 96.6,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 39
-  },
-  {
-    "player_name": "Youngerman, Sean",
-    "season": "breakout2026",
-    "stuff_plus": 96.6,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 28
-  },
-  {
-    "player_name": "Loomis, Eric",
-    "season": "breakout2026",
-    "stuff_plus": 96.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Echavarria, Steven",
-    "season": "breakout2026",
-    "stuff_plus": 96.2,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 37
-  },
-  {
-    "player_name": "Wolters, Blake",
-    "season": "breakout2026",
-    "stuff_plus": 96.2,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 32
-  },
-  {
-    "player_name": "Letson, Bishop",
-    "season": "breakout2026",
-    "stuff_plus": 96.1,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 32
-  },
-  {
-    "player_name": "Graves, Mavis",
-    "season": "breakout2026",
-    "stuff_plus": 95.9,
+    "stuff_plus": 98.6,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 14
   },
   {
-    "player_name": "Gregory-Alford, Trey",
+    "player_name": "Morris, Kade",
     "season": "breakout2026",
-    "stuff_plus": 95.8,
+    "stuff_plus": 98.6,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 30
+    "total_pitches": 56
   },
   {
-    "player_name": "Herrera, Welinton",
+    "player_name": "Walters, Brian",
     "season": "breakout2026",
-    "stuff_plus": 95.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 15
-  },
-  {
-    "player_name": "Ryan, Sam",
-    "season": "breakout2026",
-    "stuff_plus": 95.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 10
-  },
-  {
-    "player_name": "Trentadue, Josh",
-    "season": "breakout2026",
-    "stuff_plus": 95.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 49
-  },
-  {
-    "player_name": "Ulloa, Fidel",
-    "season": "breakout2026",
-    "stuff_plus": 95.7,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 6
-  },
-  {
-    "player_name": "Jean, Antoine",
-    "season": "breakout2026",
-    "stuff_plus": 95.6,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 21
-  },
-  {
-    "player_name": "McGwire, Mason",
-    "season": "breakout2026",
-    "stuff_plus": 95.5,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 8
-  },
-  {
-    "player_name": "Beilenson, Charlie",
-    "season": "breakout2026",
-    "stuff_plus": 95.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 23
-  },
-  {
-    "player_name": "Torre, Luis De La",
-    "season": "breakout2026",
-    "stuff_plus": 95.3,
-    "grade": "45",
-    "color": "#c9d1d9",
-    "total_pitches": 51
-  },
-  {
-    "player_name": "Cook, Alex",
-    "season": "breakout2026",
-    "stuff_plus": 95.1,
+    "stuff_plus": 98.6,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 9
   },
   {
+    "player_name": "Herrera, Welinton",
+    "season": "breakout2026",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 15
+  },
+  {
+    "player_name": "Meccage, Bryce",
+    "season": "breakout2026",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 43
+  },
+  {
+    "player_name": "Victor, Najer",
+    "season": "breakout2026",
+    "stuff_plus": 98.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Bormie, Wilian",
+    "season": "breakout2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 5
+  },
+  {
+    "player_name": "Cebert, Jack",
+    "season": "breakout2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 72
+  },
+  {
+    "player_name": "Rodriguez, Moises",
+    "season": "breakout2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 4
+  },
+  {
+    "player_name": "Wing, Kaleb",
+    "season": "breakout2026",
+    "stuff_plus": 98.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 19
+  },
+  {
+    "player_name": "Forbes, Patrick",
+    "season": "breakout2026",
+    "stuff_plus": 98.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 53
+  },
+  {
+    "player_name": "Sanders, Will",
+    "season": "breakout2026",
+    "stuff_plus": 97.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 26
+  },
+  {
+    "player_name": "Obermueller, Cade",
+    "season": "breakout2026",
+    "stuff_plus": 97.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 44
+  },
+  {
+    "player_name": "Baumann, Garrett",
+    "season": "breakout2026",
+    "stuff_plus": 97.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 31
+  },
+  {
+    "player_name": "Lamkin, Justin",
+    "season": "breakout2026",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 47
+  },
+  {
+    "player_name": "Pence, Dalton",
+    "season": "breakout2026",
+    "stuff_plus": 97.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 48
+  },
+  {
+    "player_name": "Bennett, Jake",
+    "season": "breakout2026",
+    "stuff_plus": 97.4,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "Bremner, Tyler",
+    "season": "breakout2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 3
+  },
+  {
+    "player_name": "Hawkins, Garrett",
+    "season": "breakout2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 17
+  },
+  {
+    "player_name": "Kim, Seong-Jun",
+    "season": "breakout2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Letson, Bishop",
+    "season": "breakout2026",
+    "stuff_plus": 97.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Denton, Cade",
+    "season": "breakout2026",
+    "stuff_plus": 97.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 6
+  },
+  {
+    "player_name": "Cawyer, Zachary",
+    "season": "breakout2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 12
+  },
+  {
+    "player_name": "G\u00f3mez, Yorman",
+    "season": "breakout2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 41
+  },
+  {
+    "player_name": "Su, Lan-Hong",
+    "season": "breakout2026",
+    "stuff_plus": 97.0,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Fisher, Matthew",
+    "season": "breakout2026",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 22
+  },
+  {
+    "player_name": "Michael, Trevin",
+    "season": "breakout2026",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 7
+  },
+  {
+    "player_name": "Ulloa, Fidel",
+    "season": "breakout2026",
+    "stuff_plus": 96.8,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 6
+  },
+  {
+    "player_name": "German, Nestor",
+    "season": "breakout2026",
+    "stuff_plus": 96.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 36
+  },
+  {
     "player_name": "Carr, Kyle",
     "season": "breakout2026",
-    "stuff_plus": 95.0,
+    "stuff_plus": 96.3,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 66
   },
   {
-    "player_name": "Bennett, Jake",
+    "player_name": "Middleton, JB",
     "season": "breakout2026",
-    "stuff_plus": 94.9,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 25
+    "stuff_plus": 96.3,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 24
   },
   {
-    "player_name": "Lamkin, Justin",
+    "player_name": "Dalena, Jaxon",
     "season": "breakout2026",
-    "stuff_plus": 94.9,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 47
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 24
   },
   {
-    "player_name": "Hertzler, Cole",
+    "player_name": "Doughty, Braylon",
     "season": "breakout2026",
-    "stuff_plus": 94.7,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 38
+    "stuff_plus": 96.2,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 39
   },
   {
-    "player_name": "Kelley, Jackson",
+    "player_name": "Graves, Mavis",
     "season": "breakout2026",
-    "stuff_plus": 94.5,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 12
+    "stuff_plus": 96.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 14
   },
   {
-    "player_name": "Kohlhepp, Tanner",
+    "player_name": "Jean, Antoine",
     "season": "breakout2026",
-    "stuff_plus": 94.5,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 4
-  },
-  {
-    "player_name": "Schweitzer, Tyler",
-    "season": "breakout2026",
-    "stuff_plus": 94.3,
-    "grade": "40",
-    "color": "#f4a261",
+    "stuff_plus": 96.0,
+    "grade": "45",
+    "color": "#c9d1d9",
     "total_pitches": 21
   },
   {
-    "player_name": "Cohen, Harrison",
+    "player_name": "Ortiz, JeanPierre",
     "season": "breakout2026",
-    "stuff_plus": 94.0,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 10
-  },
-  {
-    "player_name": "Anderson, Kade",
-    "season": "breakout2026",
-    "stuff_plus": 93.8,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 64
-  },
-  {
-    "player_name": "Minton, Hayden",
-    "season": "breakout2026",
-    "stuff_plus": 93.8,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 30
-  },
-  {
-    "player_name": "Cleveland, Tyler",
-    "season": "breakout2026",
-    "stuff_plus": 93.6,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 7
-  },
-  {
-    "player_name": "Hill, Dasan",
-    "season": "breakout2026",
-    "stuff_plus": 93.5,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 51
-  },
-  {
-    "player_name": "Obermueller, Cade",
-    "season": "breakout2026",
-    "stuff_plus": 93.4,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 44
-  },
-  {
-    "player_name": "Su, Lan-Hong",
-    "season": "breakout2026",
-    "stuff_plus": 93.4,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Wepf, Lucas",
-    "season": "breakout2026",
-    "stuff_plus": 93.4,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 17
-  },
-  {
-    "player_name": "Martinez, Keyner",
-    "season": "breakout2026",
-    "stuff_plus": 93.2,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 41
-  },
-  {
-    "player_name": "Cox, Jackson",
-    "season": "breakout2026",
-    "stuff_plus": 93.0,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 28
+    "stuff_plus": 95.9,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 34
   },
   {
     "player_name": "Fitzpatrick, Brian",
     "season": "breakout2026",
-    "stuff_plus": 92.9,
-    "grade": "40",
-    "color": "#f4a261",
+    "stuff_plus": 95.8,
+    "grade": "45",
+    "color": "#c9d1d9",
     "total_pitches": 5
   },
   {
-    "player_name": "Forret, Michael",
+    "player_name": "Loomis, Eric",
     "season": "breakout2026",
-    "stuff_plus": 92.8,
-    "grade": "40",
-    "color": "#f4a261",
+    "stuff_plus": 95.7,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Wolters, Blake",
+    "season": "breakout2026",
+    "stuff_plus": 95.6,
+    "grade": "45",
+    "color": "#c9d1d9",
     "total_pitches": 32
   },
   {
-    "player_name": "Li\u00f1an, Sean Paul",
+    "player_name": "Cerantola, Eric",
     "season": "breakout2026",
-    "stuff_plus": 92.6,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 16
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 19
   },
   {
-    "player_name": "Edington, Derrick",
+    "player_name": "Ryan, Sam",
     "season": "breakout2026",
-    "stuff_plus": 92.5,
-    "grade": "40",
-    "color": "#f4a261",
-    "total_pitches": 16
+    "stuff_plus": 95.5,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 10
   },
   {
-    "player_name": "Broca, Jes\u00fas",
+    "player_name": "Randall, Josh",
     "season": "breakout2026",
-    "stuff_plus": 92.4,
+    "stuff_plus": 95.1,
+    "grade": "45",
+    "color": "#c9d1d9",
+    "total_pitches": 25
+  },
+  {
+    "player_name": "McGwire, Mason",
+    "season": "breakout2026",
+    "stuff_plus": 95.0,
     "grade": "40",
     "color": "#f4a261",
     "total_pitches": 8
   },
   {
-    "player_name": "Pence, Dalton",
+    "player_name": "Echavarria, Steven",
     "season": "breakout2026",
-    "stuff_plus": 92.3,
+    "stuff_plus": 94.9,
     "grade": "40",
     "color": "#f4a261",
-    "total_pitches": 48
+    "total_pitches": 37
+  },
+  {
+    "player_name": "Biven, Tucker",
+    "season": "breakout2026",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 11
+  },
+  {
+    "player_name": "Cook, Alex",
+    "season": "breakout2026",
+    "stuff_plus": 94.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 9
+  },
+  {
+    "player_name": "Cleveland, Tyler",
+    "season": "breakout2026",
+    "stuff_plus": 94.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 7
+  },
+  {
+    "player_name": "Minton, Hayden",
+    "season": "breakout2026",
+    "stuff_plus": 94.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 30
   },
   {
     "player_name": "Mayfield, Kash",
     "season": "breakout2026",
-    "stuff_plus": 92.0,
+    "stuff_plus": 93.7,
     "grade": "40",
     "color": "#f4a261",
     "total_pitches": 34
   },
   {
-    "player_name": "Craig, Gabe",
+    "player_name": "Broca, Jes\u00fas",
+    "season": "breakout2026",
+    "stuff_plus": 93.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Cohen, Harrison",
+    "season": "breakout2026",
+    "stuff_plus": 93.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Edington, Derrick",
+    "season": "breakout2026",
+    "stuff_plus": 93.5,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 16
+  },
+  {
+    "player_name": "Youngerman, Sean",
+    "season": "breakout2026",
+    "stuff_plus": 93.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 28
+  },
+  {
+    "player_name": "Forret, Michael",
+    "season": "breakout2026",
+    "stuff_plus": 93.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 32
+  },
+  {
+    "player_name": "Gregory-Alford, Trey",
+    "season": "breakout2026",
+    "stuff_plus": 93.2,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 30
+  },
+  {
+    "player_name": "Beilenson, Charlie",
+    "season": "breakout2026",
+    "stuff_plus": 93.0,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 23
+  },
+  {
+    "player_name": "Oppor, Christian",
+    "season": "breakout2026",
+    "stuff_plus": 92.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 51
+  },
+  {
+    "player_name": "Martinez, Keyner",
+    "season": "breakout2026",
+    "stuff_plus": 92.4,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 41
+  },
+  {
+    "player_name": "Hertzler, Cole",
+    "season": "breakout2026",
+    "stuff_plus": 92.3,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 38
+  },
+  {
+    "player_name": "Murphy, Owen",
+    "season": "breakout2026",
+    "stuff_plus": 92.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 71
+  },
+  {
+    "player_name": "Harmon, Landon",
     "season": "breakout2026",
     "stuff_plus": 91.9,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Cox, Jackson",
+    "season": "breakout2026",
+    "stuff_plus": 91.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 28
+  },
+  {
+    "player_name": "Herrera, Yujanyer",
+    "season": "breakout2026",
+    "stuff_plus": 91.8,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 18
+  },
+  {
+    "player_name": "Craig, Gabe",
+    "season": "breakout2026",
+    "stuff_plus": 91.2,
     "grade": "40",
     "color": "#f4a261",
     "total_pitches": 29
@@ -1530,7 +1522,7 @@
   {
     "player_name": "Martinez, Jeter",
     "season": "breakout2026",
-    "stuff_plus": 91.7,
+    "stuff_plus": 90.9,
     "grade": "40",
     "color": "#f4a261",
     "total_pitches": 19
@@ -1538,47 +1530,63 @@
   {
     "player_name": "Rojas, Yenrri",
     "season": "breakout2026",
-    "stuff_plus": 91.7,
+    "stuff_plus": 90.8,
     "grade": "40",
     "color": "#f4a261",
     "total_pitches": 45
   },
   {
-    "player_name": "Herrera, Yujanyer",
+    "player_name": "Wepf, Lucas",
     "season": "breakout2026",
-    "stuff_plus": 91.6,
+    "stuff_plus": 90.6,
     "grade": "40",
     "color": "#f4a261",
-    "total_pitches": 18
+    "total_pitches": 17
   },
   {
-    "player_name": "Murphy, Owen",
+    "player_name": "Li\u00f1an, Sean Paul",
     "season": "breakout2026",
-    "stuff_plus": 91.0,
+    "stuff_plus": 90.5,
     "grade": "40",
     "color": "#f4a261",
-    "total_pitches": 71
+    "total_pitches": 16
   },
   {
-    "player_name": "Lequerica, Carlos",
+    "player_name": "Kelley, Jackson",
     "season": "breakout2026",
-    "stuff_plus": 89.9,
+    "stuff_plus": 89.3,
     "grade": "35",
     "color": "#ef233c",
-    "total_pitches": 15
+    "total_pitches": 12
+  },
+  {
+    "player_name": "Kohlhepp, Tanner",
+    "season": "breakout2026",
+    "stuff_plus": 89.1,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 4
   },
   {
     "player_name": "Moreno, Johan",
     "season": "breakout2026",
-    "stuff_plus": 89.8,
+    "stuff_plus": 89.1,
     "grade": "35",
     "color": "#ef233c",
     "total_pitches": 1
   },
   {
+    "player_name": "Lequerica, Carlos",
+    "season": "breakout2026",
+    "stuff_plus": 88.5,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 15
+  },
+  {
     "player_name": "Perez, Javier",
     "season": "breakout2026",
-    "stuff_plus": 88.7,
+    "stuff_plus": 88.4,
     "grade": "35",
     "color": "#ef233c",
     "total_pitches": 43
@@ -1586,17 +1594,9 @@
   {
     "player_name": "Durke, Hayden",
     "season": "breakout2026",
-    "stuff_plus": 87.7,
+    "stuff_plus": 87.6,
     "grade": "35",
     "color": "#ef233c",
     "total_pitches": 3
-  },
-  {
-    "player_name": "Oppor, Christian",
-    "season": "breakout2026",
-    "stuff_plus": 86.8,
-    "grade": "35",
-    "color": "#ef233c",
-    "total_pitches": 51
   }
 ]

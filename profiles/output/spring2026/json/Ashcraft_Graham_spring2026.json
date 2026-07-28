@@ -14,7 +14,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 104.6,
+      "stuff_plus": 104.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 75,
@@ -353,9 +353,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 113.1,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 53,
       "n_vs_r": 34,
       "n_vs_l": 19,

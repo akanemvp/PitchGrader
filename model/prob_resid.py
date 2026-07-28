@@ -35,8 +35,8 @@ INPLAY_DESC  = "hit_into_play"
 # 8 arm-normalized induced-Magnus shape features (ind_vert/ind_horiz_arm added by
 # features.engineering.add_magnus; the rest are standard engineered columns).
 SHAPE_FEATS = [
-    "release_speed", "release_extension", "release_pos_x_arm", "release_pos_z",
-    "arm_angle", "release_spin_rate", "ind_vert", "ind_horiz_arm",
+    "release_speed", "release_extension", "release_pos_x", "release_pos_z",
+    "arm_angle", "release_spin_rate", "ind_vert", "ind_horiz",
 ]
 # Cutter-router space: velocity + arm-relative movement + spin + slot.
 ROUTER_FEATS = ["release_speed", "ind_vert", "ind_horiz_arm", "release_spin_rate", "arm_angle"]
@@ -68,19 +68,19 @@ _SAMPLE_MULTI, _SAMPLE_HR, _SAMPLE_NORM = 1_200_000, 800_000, 150_000
 
 
 def add_magnus(df: pd.DataFrame) -> pd.DataFrame:
-    """Add ind_vert / ind_horiz_arm (induced-Magnus acceleration) from raw kinematics.
+    """Add induced-Magnus accel components from raw kinematics. Idempotent.
 
-    Idempotent — safe to call on an already-engineered frame or a stale feature cache.
-    ind_vert  = Magnus (spin-induced) vertical accel = (az+g) minus the drag-parallel part.
-    ind_horiz_arm = Magnus horizontal accel, arm-side signed (positive = arm-side run).
+    ind_vert      = Magnus (spin-induced) vertical accel = (az+g) minus the drag-parallel part.
+    ind_horiz     = Magnus horizontal accel, RAW (not arm-signed; catcher's-view x sign).
+    ind_horiz_arm = Magnus horizontal accel, arm-side signed — kept for the cutter router.
     """
     hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
     vx = pd.to_numeric(df.get("vx0"), errors="coerce").values
     vy = pd.to_numeric(df.get("vy0"), errors="coerce").values
     vz = pd.to_numeric(df.get("vz0"), errors="coerce").values
     ax = pd.to_numeric(df.get("ax"), errors="coerce").values
-    ay = pd.to_numeric(df.get("ay"), errors="coerce").values
     az = pd.to_numeric(df.get("az"), errors="coerce").values
+    ay = pd.to_numeric(df.get("ay"), errors="coerce").values
     vm = np.sqrt(vx * vx + vy * vy + vz * vz)
     aax, aaz = ax, az + _G
     with np.errstate(invalid="ignore", divide="ignore"):
@@ -88,6 +88,7 @@ def add_magnus(df: pd.DataFrame) -> pd.DataFrame:
         pz = dot * vz / vm
         px = dot * vx / vm
     df["ind_vert"] = aaz - pz
+    df["ind_horiz"] = aax - px
     df["ind_horiz_arm"] = (aax - px) * hs
     return df
 

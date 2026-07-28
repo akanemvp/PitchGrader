@@ -14,9 +14,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.6,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 82.5,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 63,
       "n_vs_r": 44,
       "n_vs_l": 19,
@@ -305,7 +305,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 71.7,
+      "stuff_plus": 71.4,
       "grade": "30",
       "color": "#ef233c",
       "n": 27,
@@ -452,7 +452,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 76.2,
+      "stuff_plus": 71.9,
       "grade": "30",
       "color": "#ef233c",
       "n": 6,

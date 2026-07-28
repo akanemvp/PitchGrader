@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 102.7,
+      "stuff_plus": 100.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 40,
@@ -332,7 +332,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 99.6,
+      "stuff_plus": 98.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 11,
@@ -478,7 +478,7 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 122.5,
+      "stuff_plus": 122.1,
       "grade": "70",
       "color": "#00b4d8",
       "n": 2,
