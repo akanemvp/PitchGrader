@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 109.6,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 101.7,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 30,
       "n_vs_r": 15,
       "n_vs_l": 15,
@@ -36,7 +36,7 @@
       "zone_pct": 43.3,
       "chase_pct": 17.6,
       "whiff_pct": 21.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.323,
       "locations_x": [
         -0.47,
         -0.26,
@@ -173,9 +173,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 110.1,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 105.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 9,
       "n_vs_r": 7,
       "n_vs_l": 2,
@@ -195,7 +195,7 @@
       "zone_pct": 66.7,
       "chase_pct": 0.0,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.487,
       "locations_x": [
         -1.65,
         0.03,

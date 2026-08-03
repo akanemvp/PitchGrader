@@ -14,9 +14,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 73.6,
-      "grade": "30",
-      "color": "#ef233c",
+      "stuff_plus": 98.9,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 49,
       "n_vs_r": 24,
       "n_vs_l": 25,
@@ -36,7 +36,7 @@
       "zone_pct": 53.1,
       "chase_pct": 17.4,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.328,
       "locations_x": [
         -0.31,
         -0.16,
@@ -249,9 +249,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 88.6,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 103.0,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 6,
       "n_vs_r": 6,
       "n_vs_l": 0,
@@ -271,7 +271,7 @@
       "zone_pct": 50.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.113,
       "locations_x": [
         1.84,
         1.5,

@@ -8,15 +8,15 @@
   "pitcher_id": 694335,
   "age": 27,
   "ip_str": "42.0",
-  "era": 6.43,
+  "era": 5.79,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.9,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 89.7,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 341,
       "n_vs_r": 183,
       "n_vs_l": 158,
@@ -36,7 +36,7 @@
       "zone_pct": 56.9,
       "chase_pct": 23.8,
       "whiff_pct": 9.7,
-      "xwoba_contact": 0.43,
+      "xwoba_contact": 0.413,
       "locations_x": [
         -0.01,
         -0.11,
@@ -1417,7 +1417,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 105.4,
+      "stuff_plus": 107.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 244,
@@ -1439,7 +1439,7 @@
       "zone_pct": 42.2,
       "chase_pct": 24.8,
       "whiff_pct": 23.6,
-      "xwoba_contact": 0.416,
+      "xwoba_contact": 0.407,
       "locations_x": [
         0.49,
         0.94,
@@ -2432,7 +2432,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 100.7,
+      "stuff_plus": 104.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 168,
@@ -2454,7 +2454,7 @@
       "zone_pct": 56.0,
       "chase_pct": 24.3,
       "whiff_pct": 17.1,
-      "xwoba_contact": 0.465,
+      "xwoba_contact": 0.421,
       "locations_x": [
         0.48,
         -0.06,
@@ -3143,9 +3143,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 97.9,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 4,
       "n_vs_r": 0,
       "n_vs_l": 4,

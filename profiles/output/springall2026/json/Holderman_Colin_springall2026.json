@@ -36,7 +36,7 @@
       "zone_pct": 38.1,
       "chase_pct": 41.0,
       "whiff_pct": 40.0,
-      "xwoba_contact": 0.326,
+      "xwoba_contact": 0.274,
       "locations_x": [
         -1.43,
         2.09,
@@ -327,7 +327,7 @@
       "zone_pct": 52.3,
       "chase_pct": 19.0,
       "whiff_pct": 10.5,
-      "xwoba_contact": 0.571,
+      "xwoba_contact": 0.624,
       "locations_x": [
         -0.09,
         0.05,
@@ -542,7 +542,7 @@
       "zone_pct": 32.0,
       "chase_pct": 29.4,
       "whiff_pct": 22.2,
-      "xwoba_contact": 0.693,
+      "xwoba_contact": 1.028,
       "locations_x": [
         -0.93,
         0.64,
@@ -681,7 +681,7 @@
       "zone_pct": 58.8,
       "chase_pct": 28.6,
       "whiff_pct": 40.0,
-      "xwoba_contact": 0.407,
+      "xwoba_contact": 0.511,
       "locations_x": [
         0.88,
         -0.32,

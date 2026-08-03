@@ -14,9 +14,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 91.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 103.4,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 289,
       "n_vs_r": 136,
       "n_vs_l": 153,
@@ -36,7 +36,7 @@
       "zone_pct": 47.1,
       "chase_pct": 34.0,
       "whiff_pct": 31.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.363,
       "locations_x": [
         0.18,
         -0.26,
@@ -1209,7 +1209,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.3,
+      "stuff_plus": 85.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 247,
@@ -1231,7 +1231,7 @@
       "zone_pct": 56.7,
       "chase_pct": 21.5,
       "whiff_pct": 7.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.35,
       "locations_x": [
         -1.38,
         -0.17,
@@ -2236,9 +2236,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 103.2,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 214,
       "n_vs_r": 42,
       "n_vs_l": 172,
@@ -2258,7 +2258,7 @@
       "zone_pct": 39.3,
       "chase_pct": 40.0,
       "whiff_pct": 28.9,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.267,
       "locations_x": [
         -1.08,
         -1.35,
@@ -3131,7 +3131,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.2,
+      "stuff_plus": 84.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 210,
@@ -3153,7 +3153,7 @@
       "zone_pct": 51.9,
       "chase_pct": 21.8,
       "whiff_pct": 19.8,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.321,
       "locations_x": [
         -0.03,
         0.27,
@@ -4010,8 +4010,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.5,
-      "grade": "45",
+      "stuff_plus": 103.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 93,
       "n_vs_r": 22,
@@ -4032,7 +4032,7 @@
       "zone_pct": 32.3,
       "chase_pct": 41.3,
       "whiff_pct": 39.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.333,
       "locations_x": [
         -0.37,
         1.19,
@@ -4421,9 +4421,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 93.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 104.1,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 86,
       "n_vs_r": 62,
       "n_vs_l": 24,
@@ -4443,7 +4443,7 @@
       "zone_pct": 33.7,
       "chase_pct": 22.8,
       "whiff_pct": 17.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.463,
       "locations_x": [
         -0.65,
         0.66,
@@ -4804,9 +4804,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 91.7,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 103.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 37,
       "n_vs_r": 27,
       "n_vs_l": 10,
@@ -4826,7 +4826,7 @@
       "zone_pct": 35.1,
       "chase_pct": 20.8,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.04,
       "locations_x": [
         0.36,
         1.51,

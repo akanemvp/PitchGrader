@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 93.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 103.8,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 21,
       "n_vs_r": 19,
       "n_vs_l": 2,
@@ -36,7 +36,7 @@
       "zone_pct": 52.4,
       "chase_pct": 50.0,
       "whiff_pct": 54.5,
-      "xwoba_contact": 0.006,
+      "xwoba_contact": 0.018,
       "locations_x": [
         0.76,
         0.11,
@@ -137,7 +137,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 99.2,
+      "stuff_plus": 97.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 20,
@@ -159,7 +159,7 @@
       "zone_pct": 45.0,
       "chase_pct": 36.4,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.038,
+      "xwoba_contact": 0.268,
       "locations_x": [
         0.47,
         -0.41,
@@ -256,7 +256,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.5,
+      "stuff_plus": 108.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 16,
@@ -278,7 +278,7 @@
       "zone_pct": 43.8,
       "chase_pct": 44.4,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.037,
       "locations_x": [
         1.66,
         0.86,
@@ -359,8 +359,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 95.5,
-      "grade": "45",
+      "stuff_plus": 102.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 12,
       "n_vs_r": 2,
@@ -381,7 +381,7 @@
       "zone_pct": 41.7,
       "chase_pct": 71.4,
       "whiff_pct": 60.0,
-      "xwoba_contact": 0.871,
+      "xwoba_contact": 0.475,
       "locations_x": [
         -0.4,
         -0.72,
@@ -446,9 +446,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 125.5,
-      "grade": "70",
-      "color": "#00b4d8",
+      "stuff_plus": 115.6,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 3,
       "n_vs_r": 1,
       "n_vs_l": 2,

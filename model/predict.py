@@ -1,14 +1,13 @@
 """
 Stuff+ inference — loads the trained model and turns pitches into grades.
 
-StuffPlusPredictor loads the three family probability models (fastball / offspeed /
-breaking) plus the cutter router, then:
+StuffPlusPredictor loads the one global swing-outcome model, then:
   1. engineers shape features for each pitch (unless already engineered),
-  2. routes each pitch to its family (cutters via the Mahalanobis router),
-  3. predicts each pitch's expected run value (xRV) with that family's model,
-  4. normalizes on that family's OWN scale: 100 = family average, 10 = one SD.
-Lower xRV = better pitch = higher grade. Because each family self-normalizes, a
-fastball is graded against fastballs — no cross-family shafting.
+  2. derives the raw arm-signed shape columns the model scores on,
+  3. predicts each pitch's expected run value (xRV) with the global model,
+  4. normalizes on one global scale: 100 = league-average pitch, 10 = one SD.
+Lower xRV = better pitch = higher grade. The scale is shared across pitch types,
+so breaking balls (higher whiff, softer contact) sit above fastballs on average.
 
 The shape features are arm-normalized and carry no handedness, so a lefty and a righty
 throwing physically identical pitches grade identically — one scoring pass per pitch.
@@ -28,12 +27,11 @@ import pandas as pd
 from config import MODEL_DIR
 from features.engineering import engineer_features
 from model.submodels import load_ensemble
-from model.prob_resid import assign_family, predict_family_rv, add_magnus, SHAPE_FEATS, ROUTER_FEATS
+from model.prob_resid import predict_global_rv, add_shape_features, SHAPE_FEATS
 
 logger = logging.getLogger(__name__)
 
 _POWER_TYPES = {"FF", "FA", "SI", "FC", "ST"}
-_FAM_KEY = {"FB": "fb", "OFF": "os", "BR": "br"}
 
 _DG_KNEE, _DG_CEIL, _DG_SOFT = 125.0, 135.0, 12.0
 
@@ -49,7 +47,7 @@ def display_grade(sp):
 
 class StuffPlusPredictor:
     def __init__(self):
-        self.ensembles: dict = {}
+        self.ensemble: dict | None = None
         self.router = None
         self.baselines = None
         self._load()
@@ -60,22 +58,19 @@ class StuffPlusPredictor:
             with open(bpath, "rb") as f:
                 self.baselines = pickle.load(f)
 
-        self.ensembles = {}
-        for key in ("fb", "os", "br"):
-            e = load_ensemble(key)
-            if e is not None:
-                self.ensembles[key] = e
-        if self.ensembles:
-            logger.info(f"Family models loaded: {sorted(self.ensembles)}")
+        self.ensemble = load_ensemble("all")
+        if self.ensemble is not None:
+            logger.info("Global model loaded (ensemble_all.pkl)")
         else:
-            logger.warning("No family models found — run 'python main.py train' first")
+            logger.warning("No model found — run 'python main.py train' first")
 
         rpath = os.path.join(MODEL_DIR, "cutter_router.pkl")
         if os.path.exists(rpath):
             with open(rpath, "rb") as f:
                 self.router = pickle.load(f)
 
-    def _fam_norm(self, ens, norm_set):
+    def _norm(self, norm_set):
+        ens = self.ensemble
         n = ens.get("norm_hist") if (norm_set == "historical" and ens.get("norm_hist")) else ens["norm"]
         return n["mean"], max(n["std"], 1e-6)
 
@@ -86,23 +81,16 @@ class StuffPlusPredictor:
 
         df = df.copy()
         df["stuff_plus"] = np.nan
-        if not self.ensembles:
+        if self.ensemble is None:
             logger.warning("Model not loaded — returning NaN")
             return df
-        if any(c not in df.columns for c in ("ind_vert", "ind_horiz", "ind_horiz_arm")):
-            add_magnus(df)
+        add_shape_features(df)
 
-        fam = assign_family(df, self.router)
+        rows = df[SHAPE_FEATS].notna().all(axis=1).values
         sp = np.full(len(df), np.nan)
-        for family, key in _FAM_KEY.items():
-            ens = self.ensembles.get(key)
-            if ens is None:
-                continue
-            rows = (fam == family).values
-            if not rows.any():
-                continue
-            rv = predict_family_rv(df.loc[rows], ens)
-            gm, gs = self._fam_norm(ens, norm_set)
+        if rows.any():
+            rv = predict_global_rv(df.loc[rows], self.ensemble)
+            gm, gs = self._norm(norm_set)
             sp[rows] = 100.0 + (gm - rv) / gs * 10.0
 
         # Velocity floor: a "power" pitch type below 75 mph is almost always a mislabel.
@@ -129,44 +117,31 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
     if _COMPOSITE_PREDICTOR is None:
         _COMPOSITE_PREDICTOR = StuffPlusPredictor()
     p = _COMPOSITE_PREDICTOR
-    if not p.ensembles or df is None or df.empty or "pitch_type" not in df.columns:
+    if p.ensemble is None or df is None or df.empty or "pitch_type" not in df.columns:
         logger.warning("composite grade skipped: no model or empty frame")
         return {}
 
-    want = list(dict.fromkeys(SHAPE_FEATS + ROUTER_FEATS))   # router needs ind_horiz_arm
-    # Regenerate the Magnus features from raw kinematics if a slim (refresh) frame lacks
+    # Regenerate the raw shape columns from kinematics if a slim (refresh) frame lacks
     # them — never fall back to mean-of-grades just because a stored column is missing.
-    if any(c not in df.columns for c in want) and \
-       all(c in df.columns for c in ("vx0", "vy0", "vz0", "ax", "ay", "az", "p_throws")):
-        df = add_magnus(df.copy())
-    missing = [f for f in want if f not in df.columns]
+    if all(c in df.columns for c in ("ax", "az", "release_pos_x", "p_throws")):
+        df = add_shape_features(df.copy())
+    missing = [f for f in SHAPE_FEATS if f not in df.columns]
     if missing:
         logger.warning(f"composite grade skipped — missing model features: {missing}")
         return {}
 
-    comp = df.groupby("pitch_type")[want].mean().dropna(subset=SHAPE_FEATS)
+    comp = df.groupby("pitch_type")[SHAPE_FEATS].mean().dropna(subset=SHAPE_FEATS)
     if comp.empty:
         return {}
     comp = comp.reset_index()
-    if "player_name" in df.columns and df["player_name"].nunique() == 1:
-        comp["player_name"] = df["player_name"].iloc[0]
 
-    fam = assign_family(comp, p.router)
+    rv = predict_global_rv(comp, p.ensemble)
+    gm, gs = p._norm(norm_set)
+    sp = np.clip(100.0 + (gm - rv) / gs * 10.0, -50.0, 200.0)
     out: dict = {}
-    for family, key in _FAM_KEY.items():
-        ens = p.ensembles.get(key)
-        if ens is None:
-            continue
-        rows = (fam == family).values
-        if not rows.any():
-            continue
-        sub = comp.loc[rows]
-        rv = predict_family_rv(sub, ens)
-        gm, gs = p._fam_norm(ens, norm_set)
-        sp = np.clip(100.0 + (gm - rv) / gs * 10.0, -50.0, 200.0)
-        for pt, v in zip(sub["pitch_type"].values, sp):
-            if np.isfinite(v):
-                out[pt] = float(v)
+    for pt, v in zip(comp["pitch_type"].values, sp):
+        if np.isfinite(v):
+            out[pt] = float(v)
     return out
 
 

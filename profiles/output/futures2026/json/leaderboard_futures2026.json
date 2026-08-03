@@ -1,144 +1,112 @@
 [
   {
-    "player_name": "Doyle, Liam",
-    "season": "futures2026",
-    "stuff_plus": 120.3,
-    "grade": "70",
-    "color": "#00b4d8",
-    "total_pitches": 24
-  },
-  {
     "player_name": "Sloan, Ryan",
     "season": "futures2026",
-    "stuff_plus": 111.1,
-    "grade": "60",
-    "color": "#4cc9f0",
+    "stuff_plus": 109.0,
+    "grade": "55",
+    "color": "#7bf1a8",
     "total_pitches": 17
-  },
-  {
-    "player_name": "Wood, Gage",
-    "season": "futures2026",
-    "stuff_plus": 108.2,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 11
-  },
-  {
-    "player_name": "Chourio, Kendry",
-    "season": "futures2026",
-    "stuff_plus": 107.9,
-    "grade": "55",
-    "color": "#7bf1a8",
-    "total_pitches": 14
   },
   {
     "player_name": "Grable, Ben",
     "season": "futures2026",
-    "stuff_plus": 107.6,
+    "stuff_plus": 106.5,
     "grade": "55",
     "color": "#7bf1a8",
     "total_pitches": 2
   },
   {
-    "player_name": "Arnold, Jamie",
+    "player_name": "Wood, Gage",
     "season": "futures2026",
-    "stuff_plus": 107.4,
+    "stuff_plus": 105.4,
     "grade": "55",
     "color": "#7bf1a8",
-    "total_pitches": 12
+    "total_pitches": 11
   },
   {
-    "player_name": "Hernandez, Seth",
+    "player_name": "Scarborough, Caden",
     "season": "futures2026",
-    "stuff_plus": 106.9,
+    "stuff_plus": 105.1,
     "grade": "55",
     "color": "#7bf1a8",
-    "total_pitches": 14
+    "total_pitches": 11
   },
   {
     "player_name": "Sime Jr., Miguel",
     "season": "futures2026",
-    "stuff_plus": 106.5,
+    "stuff_plus": 105.1,
     "grade": "55",
     "color": "#7bf1a8",
     "total_pitches": 20
   },
   {
-    "player_name": "Caminiti, Cam",
+    "player_name": "Doyle, Liam",
     "season": "futures2026",
-    "stuff_plus": 102.4,
+    "stuff_plus": 104.9,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 9
+    "total_pitches": 24
   },
   {
-    "player_name": "Pan, Wen-Hui",
+    "player_name": "Hernandez, Seth",
     "season": "futures2026",
-    "stuff_plus": 102.1,
+    "stuff_plus": 104.9,
     "grade": "50",
     "color": "#c9d1d9",
     "total_pitches": 14
   },
   {
-    "player_name": "Scarborough, Caden",
+    "player_name": "Chourio, Kendry",
     "season": "futures2026",
-    "stuff_plus": 102.1,
+    "stuff_plus": 102.7,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 11
+    "total_pitches": 14
   },
   {
-    "player_name": "Dzierwa, Joseph",
+    "player_name": "Arnold, Jamie",
     "season": "futures2026",
-    "stuff_plus": 101.8,
+    "stuff_plus": 102.6,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 2
+    "total_pitches": 12
   },
   {
-    "player_name": "Perry, Nolan",
+    "player_name": "Pan, Wen-Hui",
     "season": "futures2026",
-    "stuff_plus": 101.1,
+    "stuff_plus": 101.5,
     "grade": "50",
     "color": "#c9d1d9",
-    "total_pitches": 15
+    "total_pitches": 14
   },
   {
-    "player_name": "Bremner, Tyler",
+    "player_name": "Caminiti, Cam",
     "season": "futures2026",
-    "stuff_plus": 100.6,
-    "grade": "50",
+    "stuff_plus": 99.7,
+    "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 3
-  },
-  {
-    "player_name": "Anderson, Kade",
-    "season": "futures2026",
-    "stuff_plus": 100.3,
-    "grade": "50",
-    "color": "#c9d1d9",
-    "total_pitches": 10
+    "total_pitches": 9
   },
   {
     "player_name": "Eyanson, Anthony",
     "season": "futures2026",
-    "stuff_plus": 98.5,
+    "stuff_plus": 99.5,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 12
   },
   {
-    "player_name": "McGwire, Mason",
+    "player_name": "Perry, Nolan",
     "season": "futures2026",
-    "stuff_plus": 97.2,
+    "stuff_plus": 99.0,
     "grade": "45",
     "color": "#c9d1d9",
-    "total_pitches": 8
+    "total_pitches": 15
   },
   {
     "player_name": "Milbrandt, Karson",
     "season": "futures2026",
-    "stuff_plus": 97.1,
+    "stuff_plus": 97.3,
     "grade": "45",
     "color": "#c9d1d9",
     "total_pitches": 4
@@ -146,9 +114,41 @@
   {
     "player_name": "Mayfield, Kash",
     "season": "futures2026",
-    "stuff_plus": 95.9,
-    "grade": "45",
-    "color": "#c9d1d9",
+    "stuff_plus": 94.7,
+    "grade": "40",
+    "color": "#f4a261",
     "total_pitches": 25
+  },
+  {
+    "player_name": "Anderson, Kade",
+    "season": "futures2026",
+    "stuff_plus": 94.6,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 10
+  },
+  {
+    "player_name": "Bremner, Tyler",
+    "season": "futures2026",
+    "stuff_plus": 93.7,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 3
+  },
+  {
+    "player_name": "McGwire, Mason",
+    "season": "futures2026",
+    "stuff_plus": 90.1,
+    "grade": "40",
+    "color": "#f4a261",
+    "total_pitches": 8
+  },
+  {
+    "player_name": "Dzierwa, Joseph",
+    "season": "futures2026",
+    "stuff_plus": 87.3,
+    "grade": "35",
+    "color": "#ef233c",
+    "total_pitches": 2
   }
 ]

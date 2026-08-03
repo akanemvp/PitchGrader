@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.9,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 107.7,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 1,
       "n_vs_r": 0,
       "n_vs_l": 1,
@@ -36,7 +36,7 @@
       "zone_pct": 100.0,
       "chase_pct": null,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.201,
       "locations_x": [
         0.82
       ],

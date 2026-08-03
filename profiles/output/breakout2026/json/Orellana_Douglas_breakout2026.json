@@ -14,9 +14,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 104.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 112.8,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

@@ -1,26 +1,26 @@
 {
   "player_name": "Festa, Matt",
   "season": "2026",
-  "total_pitches": 716,
+  "total_pitches": 717,
   "p_throws": "R",
-  "arm_angle": 31.2,
+  "arm_angle": 31.3,
   "team": "CLE",
   "pitcher_id": 670036,
   "age": 33,
   "ip_str": "43.0",
-  "era": 6.28,
+  "era": 6.49,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 111.2,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 106.8,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 320,
       "n_vs_r": 143,
       "n_vs_l": 177,
-      "usage_pct": 44.7,
+      "usage_pct": 44.6,
       "usage_pct_vs_r": 38.8,
       "usage_pct_vs_l": 50.9,
       "velo": 92.4,
@@ -36,7 +36,7 @@
       "zone_pct": 49.1,
       "chase_pct": 30.1,
       "whiff_pct": 28.0,
-      "xwoba_contact": 0.411,
+      "xwoba_contact": 0.445,
       "locations_x": [
         -0.29,
         -0.43,
@@ -1333,13 +1333,13 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 111.0,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 285,
       "n_vs_r": 152,
       "n_vs_l": 133,
-      "usage_pct": 39.8,
+      "usage_pct": 39.7,
       "usage_pct_vs_r": 41.2,
       "usage_pct_vs_l": 38.2,
       "velo": 83.1,
@@ -1355,7 +1355,7 @@
       "zone_pct": 46.3,
       "chase_pct": 32.7,
       "whiff_pct": 21.9,
-      "xwoba_contact": 0.349,
+      "xwoba_contact": 0.351,
       "locations_x": [
         1.22,
         0.17,
@@ -2512,9 +2512,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.2,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.7,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 64,
       "n_vs_r": 32,
       "n_vs_l": 32,
@@ -2534,7 +2534,7 @@
       "zone_pct": 40.6,
       "chase_pct": 36.8,
       "whiff_pct": 15.2,
-      "xwoba_contact": 0.351,
+      "xwoba_contact": 0.326,
       "locations_x": [
         0.11,
         0.36,
@@ -2807,9 +2807,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.5,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.0,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 46,
       "n_vs_r": 41,
       "n_vs_l": 5,
@@ -2829,7 +2829,7 @@
       "zone_pct": 54.3,
       "chase_pct": 23.8,
       "whiff_pct": 5.9,
-      "xwoba_contact": 0.327,
+      "xwoba_contact": 0.366,
       "locations_x": [
         -0.58,
         -1.09,
@@ -3030,9 +3030,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 98.2,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 1,
       "n_vs_r": 0,
       "n_vs_l": 1,
@@ -3067,6 +3067,47 @@
       "locations_z_vs_l": [
         2.99
       ]
+    },
+    {
+      "pitch_type": "UN",
+      "pitch_name": "UN",
+      "stuff_plus": 94.1,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 0.1,
+      "usage_pct_vs_r": 0.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 72.0,
+      "ivb": -3.0,
+      "hb": -13.4,
+      "vaa": -7.47,
+      "haa": 4.41,
+      "spin": 2456,
+      "extension": 5.5,
+      "arm_angle": 32.1,
+      "release_height": 5.73,
+      "spin_axis_clock": "7:46",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.64
+      ],
+      "locations_z": [
+        3.88
+      ],
+      "locations_x_vs_r": [
+        0.64
+      ],
+      "locations_z_vs_r": [
+        3.88
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
     }
   ]
 }

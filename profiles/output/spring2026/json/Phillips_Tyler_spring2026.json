@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 103.7,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 92.9,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 39,
       "n_vs_r": 26,
       "n_vs_l": 13,
@@ -36,7 +36,7 @@
       "zone_pct": 46.2,
       "chase_pct": 23.8,
       "whiff_pct": 6.2,
-      "xwoba_contact": 0.199,
+      "xwoba_contact": 0.301,
       "locations_x": [
         0.62,
         -0.05,
@@ -209,7 +209,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 115.2,
+      "stuff_plus": 111.1,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 34,
@@ -231,7 +231,7 @@
       "zone_pct": 38.2,
       "chase_pct": 47.6,
       "whiff_pct": 53.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.221,
       "locations_x": [
         -0.86,
         0.51,
@@ -382,9 +382,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 106.1,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 110.2,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 30,
       "n_vs_r": 25,
       "n_vs_l": 5,
@@ -404,7 +404,7 @@
       "zone_pct": 23.3,
       "chase_pct": 34.8,
       "whiff_pct": 46.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.503,
       "locations_x": [
         1.57,
         0.58,
@@ -541,9 +541,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 96.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 87.9,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 19,
       "n_vs_r": 3,
       "n_vs_l": 16,
@@ -563,7 +563,7 @@
       "zone_pct": 31.6,
       "chase_pct": 23.1,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.572,
+      "xwoba_contact": 0.591,
       "locations_x": [
         0.98,
         -0.22,
@@ -656,7 +656,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 105.3,
+      "stuff_plus": 109.6,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 18,

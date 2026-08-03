@@ -74,11 +74,33 @@ def cmd_train():
 
 
 def cmd_score():
-    from config import DB_PATH
+    import os, pickle
+    from config import DB_PATH, MODEL_DIR
     from features.engineering import engineer_features
     from model.predict import StuffPlusPredictor
 
     predictor = StuffPlusPredictor()
+    _XWOBA_KNN = os.path.join(os.path.dirname(MODEL_DIR), "xwoba_knn.pkl")
+
+    def _fill_xwoba(dfx):
+        """Fill estimated_woba from exit-velo/launch-angle via the cached k-NN for
+        /gf-sourced rows that lack it (Statcast has it; /gf does not). Without this,
+        re-scoring wipes xwOBAcon for any game pulled from the /gf feed."""
+        if not os.path.exists(_XWOBA_KNN) or not {"launch_speed", "launch_angle"}.issubset(dfx.columns):
+            return dfx
+        if "estimated_woba_using_speedangle" not in dfx.columns:
+            dfx["estimated_woba_using_speedangle"] = None
+        ev = pd.to_numeric(dfx["launch_speed"], errors="coerce")
+        la = pd.to_numeric(dfx["launch_angle"], errors="coerce")
+        xw = pd.to_numeric(dfx["estimated_woba_using_speedangle"], errors="coerce")
+        m = ev.notna() & la.notna() & xw.isna()
+        if m.any():
+            with open(_XWOBA_KNN, "rb") as fh:
+                knn = pickle.load(fh)
+            dfx.loc[m, "estimated_woba_using_speedangle"] = \
+                knn.predict(dfx.loc[m, ["launch_speed", "launch_angle"]].astype(float).values).round(3)
+            logger.info(f"  xwOBA: filled {int(m.sum())} /gf batted balls via k-NN")
+        return dfx
 
     # 2023/2024/2025: use historical norms (2020-2024 baseline) to avoid contamination
     # 2026 seasons: use current norms (2020-2025 baseline)
@@ -134,6 +156,7 @@ def cmd_score():
         df_scored = predictor.predict(df_eng, already_engineered=True, norm_set=norm_set)
 
         df_scored["stuff_plus"] = df_scored["stuff_plus"].clip(50.0, 160.0)
+        df_scored = _fill_xwoba(df_scored)
 
         # SQLite is case-insensitive on column names — drop case-insensitive dupes
         seen, keep = {}, []

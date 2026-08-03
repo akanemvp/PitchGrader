@@ -8,13 +8,13 @@
   "pitcher_id": 840533,
   "age": null,
   "ip_str": "8.1",
-  "era": 2.16,
+  "era": 0.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.6,
+      "stuff_plus": 91.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 73,
@@ -36,7 +36,7 @@
       "zone_pct": 42.5,
       "chase_pct": 11.9,
       "whiff_pct": 22.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.384,
       "locations_x": [
         -0.33,
         -1.32,
@@ -345,9 +345,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 89.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 102.4,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 42,
       "n_vs_r": 31,
       "n_vs_l": 11,
@@ -367,7 +367,7 @@
       "zone_pct": 35.7,
       "chase_pct": 33.3,
       "whiff_pct": 35.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.177,
       "locations_x": [
         -1.75,
         -1.37,
@@ -552,9 +552,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 93.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 107.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 18,
       "n_vs_r": 18,
       "n_vs_l": 0,
@@ -574,7 +574,7 @@
       "zone_pct": 38.9,
       "chase_pct": 36.4,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.219,
       "locations_x": [
         -0.54,
         0.3,

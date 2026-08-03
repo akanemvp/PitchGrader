@@ -1,9 +1,9 @@
 {
   "player_name": "Zeferjahn, Ryan",
   "season": "2026",
-  "total_pitches": 819,
+  "total_pitches": 820,
   "p_throws": "R",
-  "arm_angle": 36.1,
+  "arm_angle": 38.1,
   "team": "LAA",
   "pitcher_id": 666171,
   "age": 28,
@@ -14,7 +14,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 110.9,
+      "stuff_plus": 116.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 300,
@@ -36,7 +36,7 @@
       "zone_pct": 48.0,
       "chase_pct": 33.3,
       "whiff_pct": 35.7,
-      "xwoba_contact": 0.344,
+      "xwoba_contact": 0.324,
       "locations_x": [
         -0.42,
         -2.74,
@@ -1253,9 +1253,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 116.3,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 264,
       "n_vs_r": 127,
       "n_vs_l": 137,
@@ -1275,7 +1275,7 @@
       "zone_pct": 39.8,
       "chase_pct": 14.5,
       "whiff_pct": 35.3,
-      "xwoba_contact": 0.358,
+      "xwoba_contact": 0.301,
       "locations_x": [
         -0.73,
         -0.9,
@@ -2348,9 +2348,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 99.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.8,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 140,
       "n_vs_r": 93,
       "n_vs_l": 47,
@@ -2947,13 +2947,13 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 110.7,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 109.9,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 111,
       "n_vs_r": 66,
       "n_vs_l": 45,
-      "usage_pct": 13.6,
+      "usage_pct": 13.5,
       "usage_pct_vs_r": 15.2,
       "usage_pct_vs_l": 11.7,
       "velo": 88.1,
@@ -2969,7 +2969,7 @@
       "zone_pct": 43.2,
       "chase_pct": 27.0,
       "whiff_pct": 26.0,
-      "xwoba_contact": 0.247,
+      "xwoba_contact": 0.24,
       "locations_x": [
         0.73,
         0.22,
@@ -3430,9 +3430,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 101.9,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 4,
       "n_vs_r": 1,
       "n_vs_l": 3,
@@ -3452,7 +3452,7 @@
       "zone_pct": 0.0,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.586,
       "locations_x": [
         -0.27,
         -1.72,
@@ -3480,6 +3480,47 @@
         2.26,
         1.42,
         4.27
+      ]
+    },
+    {
+      "pitch_type": "UN",
+      "pitch_name": "UN",
+      "stuff_plus": 95.4,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 0.1,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 0.3,
+      "velo": 54.8,
+      "ivb": 15.4,
+      "hb": 0.7,
+      "vaa": -11.3,
+      "haa": -0.34,
+      "spin": 1091,
+      "extension": 6.3,
+      "arm_angle": 47.9,
+      "release_height": 6.28,
+      "spin_axis_clock": "12:36",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -0.87
+      ],
+      "locations_z": [
+        2.71
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -0.87
+      ],
+      "locations_z_vs_l": [
+        2.71
       ]
     }
   ]

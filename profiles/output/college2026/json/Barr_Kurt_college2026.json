@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 90.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 103.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 143,
       "n_vs_r": 92,
       "n_vs_l": 51,
@@ -36,7 +36,7 @@
       "zone_pct": 33.6,
       "chase_pct": 34.7,
       "whiff_pct": 46.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.291,
       "locations_x": [
         -0.1,
         0.4,
@@ -625,7 +625,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.1,
+      "stuff_plus": 88.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 91,
@@ -647,7 +647,7 @@
       "zone_pct": 46.2,
       "chase_pct": 22.4,
       "whiff_pct": 11.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.408,
       "locations_x": [
         0.35,
         0.04,
@@ -1028,9 +1028,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 86.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 105.0,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 16,
       "n_vs_r": 6,
       "n_vs_l": 10,
@@ -1050,7 +1050,7 @@
       "zone_pct": 37.5,
       "chase_pct": 40.0,
       "whiff_pct": 42.9,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.179,
       "locations_x": [
         -0.81,
         -0.59,
@@ -1131,9 +1131,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 89.9,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 99.0,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 12,
       "n_vs_r": 10,
       "n_vs_l": 2,
@@ -1153,7 +1153,7 @@
       "zone_pct": 66.7,
       "chase_pct": 0.0,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.299,
       "locations_x": [
         0.75,
         0.11,

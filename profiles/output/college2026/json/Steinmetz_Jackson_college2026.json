@@ -14,9 +14,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.1,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 94.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 37,
       "n_vs_r": 17,
       "n_vs_l": 20,
@@ -36,7 +36,7 @@
       "zone_pct": 40.5,
       "chase_pct": 13.6,
       "whiff_pct": 7.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.428,
       "locations_x": [
         -0.22,
         3.44,
@@ -201,7 +201,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 81.0,
+      "stuff_plus": 86.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 18,
@@ -223,7 +223,7 @@
       "zone_pct": 38.9,
       "chase_pct": 9.1,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.268,
       "locations_x": [
         0.52,
         1.8,
@@ -312,9 +312,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 84.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 96.3,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

@@ -8,15 +8,15 @@
   "pitcher_id": 824280,
   "age": null,
   "ip_str": "1.0",
-  "era": 18.0,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 91.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 110.8,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 12,
       "n_vs_r": 5,
       "n_vs_l": 7,
@@ -36,7 +36,7 @@
       "zone_pct": 58.3,
       "chase_pct": 40.0,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.219,
       "locations_x": [
         1.9,
         -0.01,
@@ -101,8 +101,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 78.7,
-      "grade": "30",
+      "stuff_plus": 83.3,
+      "grade": "35",
       "color": "#ef233c",
       "n": 5,
       "n_vs_r": 4,
@@ -123,7 +123,7 @@
       "zone_pct": 40.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.468,
       "locations_x": [
         0.94,
         0.92,
@@ -160,9 +160,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 90.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 108.5,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 2,
       "n_vs_r": 0,
       "n_vs_l": 2,
@@ -182,7 +182,7 @@
       "zone_pct": 0.0,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.043,
       "locations_x": [
         -0.37,
         -0.08
@@ -205,9 +205,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 86.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 104.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 1,
       "n_vs_r": 0,
       "n_vs_l": 1,

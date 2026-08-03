@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.0,
+      "stuff_plus": 88.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 71,
@@ -36,7 +36,7 @@
       "zone_pct": 43.7,
       "chase_pct": 20.0,
       "whiff_pct": 30.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.337,
       "locations_x": [
         0.01,
         -0.22,
@@ -337,9 +337,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.5,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 96.4,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 32,
       "n_vs_r": 3,
       "n_vs_l": 29,
@@ -359,7 +359,7 @@
       "zone_pct": 43.8,
       "chase_pct": 33.3,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.296,
       "locations_x": [
         -0.11,
         -0.15,
@@ -504,9 +504,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 87.4,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 99.6,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 21,
       "n_vs_r": 12,
       "n_vs_l": 9,
@@ -526,7 +526,7 @@
       "zone_pct": 38.1,
       "chase_pct": 23.1,
       "whiff_pct": 28.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.007,
       "locations_x": [
         0.05,
         -0.23,
@@ -627,7 +627,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 84.4,
+      "stuff_plus": 82.8,
       "grade": "35",
       "color": "#ef233c",
       "n": 13,
@@ -649,7 +649,7 @@
       "zone_pct": 46.2,
       "chase_pct": 28.6,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.268,
       "locations_x": [
         0.86,
         -0.41,
@@ -718,7 +718,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 86.2,
+      "stuff_plus": 88.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,

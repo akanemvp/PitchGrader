@@ -25,6 +25,9 @@ profiles/__pycache__/
 *_diagnostic.py
 *_test.py
 
+# Experimental / research scripts (kept local; the shipped model lives in model/)
+eye_test_experiments/
+
 # OS
 .DS_Store
 Thumbs.db

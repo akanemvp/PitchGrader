@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 123,
       "n_vs_r": 57,
       "n_vs_l": 66,
@@ -36,7 +36,7 @@
       "zone_pct": 50.4,
       "chase_pct": 26.2,
       "whiff_pct": 15.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.288,
       "locations_x": [
         0.72,
         -0.52,
@@ -545,9 +545,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 95.7,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 76,
       "n_vs_r": 18,
       "n_vs_l": 58,
@@ -567,7 +567,7 @@
       "zone_pct": 47.4,
       "chase_pct": 30.0,
       "whiff_pct": 38.9,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.421,
       "locations_x": [
         -0.68,
         0.29,
@@ -888,8 +888,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 96.3,
-      "grade": "45",
+      "stuff_plus": 104.7,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 73,
       "n_vs_r": 56,
@@ -910,7 +910,7 @@
       "zone_pct": 32.9,
       "chase_pct": 22.4,
       "whiff_pct": 36.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.512,
       "locations_x": [
         -0.7,
         0.71,
@@ -1219,7 +1219,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.6,
+      "stuff_plus": 86.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 71,
@@ -1241,7 +1241,7 @@
       "zone_pct": 36.6,
       "chase_pct": 8.9,
       "whiff_pct": 19.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.33,
       "locations_x": [
         -0.8,
         -1.13,
@@ -1542,7 +1542,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 90.0,
+      "stuff_plus": 93.8,
       "grade": "40",
       "color": "#f4a261",
       "n": 44,
@@ -1564,7 +1564,7 @@
       "zone_pct": 52.3,
       "chase_pct": 33.3,
       "whiff_pct": 15.8,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.262,
       "locations_x": [
         0.27,
         -0.63,

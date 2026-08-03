@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 102.5,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 89.6,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 195,
       "n_vs_r": 53,
       "n_vs_l": 142,
@@ -36,7 +36,7 @@
       "zone_pct": 51.3,
       "chase_pct": 26.3,
       "whiff_pct": 15.9,
-      "xwoba_contact": 0.245,
+      "xwoba_contact": 0.282,
       "locations_x": [
         -0.01,
         -0.04,
@@ -833,9 +833,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 104.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.9,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 154,
       "n_vs_r": 152,
       "n_vs_l": 2,
@@ -855,7 +855,7 @@
       "zone_pct": 45.5,
       "chase_pct": 40.5,
       "whiff_pct": 25.9,
-      "xwoba_contact": 0.267,
+      "xwoba_contact": 0.29,
       "locations_x": [
         -0.17,
         0.01,
@@ -1488,7 +1488,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.2,
+      "stuff_plus": 103.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 154,
@@ -1510,7 +1510,7 @@
       "zone_pct": 39.0,
       "chase_pct": 38.3,
       "whiff_pct": 42.9,
-      "xwoba_contact": 0.368,
+      "xwoba_contact": 0.374,
       "locations_x": [
         -0.62,
         0.28,
@@ -2143,9 +2143,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.1,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 99,
       "n_vs_r": 87,
       "n_vs_l": 12,
@@ -2165,7 +2165,7 @@
       "zone_pct": 38.4,
       "chase_pct": 18.0,
       "whiff_pct": 13.9,
-      "xwoba_contact": 0.483,
+      "xwoba_contact": 0.4,
       "locations_x": [
         0.46,
         0.3,
@@ -2578,7 +2578,7 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 96.6,
+      "stuff_plus": 98.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 42,
@@ -2600,7 +2600,7 @@
       "zone_pct": 47.6,
       "chase_pct": 22.7,
       "whiff_pct": 45.5,
-      "xwoba_contact": 0.4,
+      "xwoba_contact": 0.385,
       "locations_x": [
         0.92,
         0.41,

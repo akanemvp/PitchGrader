@@ -8,13 +8,13 @@
   "pitcher_id": 670329,
   "age": 32,
   "ip_str": "45.0",
-  "era": 3.4,
+  "era": 3.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 97.6,
+      "stuff_plus": 97.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 221,
@@ -36,7 +36,7 @@
       "zone_pct": 53.4,
       "chase_pct": 24.3,
       "whiff_pct": 18.6,
-      "xwoba_contact": 0.392,
+      "xwoba_contact": 0.418,
       "locations_x": [
         -0.48,
         0.32,
@@ -937,8 +937,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 96.6,
-      "grade": "45",
+      "stuff_plus": 103.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 185,
       "n_vs_r": 5,
@@ -959,7 +959,7 @@
       "zone_pct": 50.3,
       "chase_pct": 27.2,
       "whiff_pct": 44.9,
-      "xwoba_contact": 0.327,
+      "xwoba_contact": 0.291,
       "locations_x": [
         -0.01,
         -0.83,
@@ -1716,9 +1716,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 90.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 102.3,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 133,
       "n_vs_r": 129,
       "n_vs_l": 4,
@@ -1738,7 +1738,7 @@
       "zone_pct": 42.1,
       "chase_pct": 31.2,
       "whiff_pct": 30.2,
-      "xwoba_contact": 0.255,
+      "xwoba_contact": 0.283,
       "locations_x": [
         -0.31,
         1.74,
@@ -2287,9 +2287,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 109.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 110.5,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 115,
       "n_vs_r": 40,
       "n_vs_l": 75,
@@ -2309,7 +2309,7 @@
       "zone_pct": 36.5,
       "chase_pct": 30.1,
       "whiff_pct": 36.5,
-      "xwoba_contact": 0.42,
+      "xwoba_contact": 0.31,
       "locations_x": [
         0.01,
         -1.11,

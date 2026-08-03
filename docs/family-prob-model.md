@@ -1,3 +1,6 @@
+> **Superseded (Sprint 4).** This three-family model was replaced by the one global
+> swing-outcome model — see [global-swing-model.md](global-swing-model.md). Kept for history.
+
 # Stuff+ — 3-family probability model (v400_family_prob)
 
 Replaces the single direct-RV regressor (`v300_direct_rv`) with **three family models**

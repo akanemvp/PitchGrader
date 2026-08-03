@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.3,
+      "stuff_plus": 85.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 222,
@@ -36,7 +36,7 @@
       "zone_pct": 50.0,
       "chase_pct": 18.9,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.398,
       "locations_x": [
         -0.13,
         -0.7,
@@ -941,9 +941,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.1,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 105.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 118,
       "n_vs_r": 84,
       "n_vs_l": 34,
@@ -963,7 +963,7 @@
       "zone_pct": 33.9,
       "chase_pct": 33.3,
       "whiff_pct": 35.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.317,
       "locations_x": [
         1.09,
         -0.04,
@@ -1452,7 +1452,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.4,
+      "stuff_plus": 83.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 55,
@@ -1474,7 +1474,7 @@
       "zone_pct": 45.5,
       "chase_pct": 10.0,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.538,
       "locations_x": [
         -0.26,
         -0.1,
@@ -1711,9 +1711,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 99.6,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 33,
       "n_vs_r": 24,
       "n_vs_l": 9,
@@ -1733,7 +1733,7 @@
       "zone_pct": 21.2,
       "chase_pct": 34.6,
       "whiff_pct": 54.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 1.052,
       "locations_x": [
         -0.15,
         0.21,
@@ -1882,8 +1882,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.2,
-      "grade": "45",
+      "stuff_plus": 104.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 27,
       "n_vs_r": 17,

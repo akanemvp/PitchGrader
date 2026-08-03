@@ -1,19 +1,17 @@
 """
 Stuff+ model training.
 
-Trains the production model: three LightGBM family models — fastball, offspeed,
-breaking — each a probability model (multiclass whiff/foul/in-play + binary
-P(HR|in-play)) on 8 arm-normalized induced-Magnus shape features (see
-model/prob_resid.py). Each family is normalized on its OWN scale so fastballs are
-graded against fastballs. Cutters (FC) are routed to the fastball or breaking
-family per pitcher by a Mahalanobis router.
+Trains the production model: one global LightGBM swing-outcome model — a swing
+softmax {whiff, foul, in-play} plus a 5-cell contact grid — on 8 arm-normalized
+raw-shape features (see model/prob_resid.py). Grades are one global scale, so a
+pitch is measured against every pitch, not just its own type.
 
 train_unified() does the full run:
-  1. engineer shape features (cached to model/feature_cache.parquet) + Magnus backfill,
+  1. engineer shape features (cached to model/feature_cache.parquet) + Magnus/shape backfill,
   2. save the movement/spin baselines inference needs,
-  3. fit and save the cutter router,
-  4. train the three family models (train_family_prob) and save them,
-  5. compute and save per-family normalization (current + historical),
+  3. fit and save the cutter router (family tagging only),
+  4. train the one global model (train_global_model) and save it,
+  5. compute and save global normalization (current + historical),
   6. write the model version hash.
 """
 
@@ -31,7 +29,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v402_family_prob_raw_horiz"
+MODEL_VERSION = "v500_global_swing_grid"
 
 
 def train_unified(df: pd.DataFrame) -> dict:
@@ -111,13 +109,14 @@ def train_unified(df: pd.DataFrame) -> dict:
     if "stand" in df.columns and "stand_r" not in df.columns:
         df["stand_r"] = (df["stand"] == "R").astype(int)
 
-    from model.prob_resid import (add_magnus, fit_cutter_router, assign_family,
-                                   bucket_values, train_family_prob, predict_family_rv,
-                                   SHAPE_FEATS, FAMILIES)
-    # Backfill induced-Magnus features (stale caches predate them; idempotent).
+    from model.prob_resid import (add_magnus, add_shape_features, fit_cutter_router,
+                                   assign_family, bucket_values, train_global_model,
+                                   predict_global_rv, SHAPE_FEATS)
+    # Backfill induced-Magnus (router) + raw shape features (scoring). Both idempotent.
     add_magnus(df)
+    add_shape_features(df)
 
-    # --- Cutter router (fastball vs breaking family), fit + saved ---
+    # --- Cutter router (fastball vs breaking family), fit + saved (family tagging only) ---
     router = fit_cutter_router(df)
     with open(os.path.join(MODEL_DIR, "cutter_router.pkl"), "wb") as f:
         pickle.dump(router, f)
@@ -126,41 +125,39 @@ def train_unified(df: pd.DataFrame) -> dict:
     logger.info(f"  Cutter router: {int((fam[_fc]=='FB').sum()):,} FC->FB, "
                 f"{int((fam[_fc]=='BR').sum()):,} FC->BR of {int(_fc.sum()):,}")
 
-    # --- Global valued run values (whiff, in-play HR) ---
+    # --- Valued swing-outcome run values (whiff, foul) ---
     V = bucket_values(df)
-    logger.info(f"  values: whiff={V['whiff']:+.4f}  in-play HR={V['hr']:+.3f}")
+    logger.info(f"  values: whiff={V['whiff']:+.4f}  foul={V['foul']:+.4f}")
 
-    # --- Train the three family probability models on their own scales ---
-    FAM_KEY = {"FB": "fb", "OFF": "os", "BR": "br"}
-    _hist = (df["game_year"] <= 2024) if "game_year" in df.columns else None
+    # --- Train the one global model (swing softmax + 5-cell contact grid) ---
     _sf = df[SHAPE_FEATS].notna().all(axis=1)
-    ensembles = {}
-    for family in FAMILIES:
-        m = (fam == family)
-        if int((m & _sf).sum()) < 5000:
-            logger.warning(f"  [{family}] too few shaped pitches — skipping")
-            continue
-        ens = train_family_prob(df, m, family, V)
-        if _hist is not None:
-            hi = df.index[m & _hist & _sf]
-            if len(hi):
-                hsamp = df.loc[hi, SHAPE_FEATS].sample(n=min(150000, len(hi)), random_state=42)
-                eh = predict_family_rv(hsamp, ens)
-                ens["norm_hist"] = {"mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
-        save_ensemble(ens, FAM_KEY[family])
-        ensembles[FAM_KEY[family]] = ens
-        logger.info(f"  [{family}] saved -> ensemble_{FAM_KEY[family]}.pkl")
+    if int(_sf.sum()) < 5000:
+        raise RuntimeError(f"Too few shaped pitches to train ({int(_sf.sum())}).")
+    ens = train_global_model(df, V)
 
-    # Drop the old single "all" model so predict.py uses the family models.
-    _all = os.path.join(MODEL_DIR, "ensemble_all.pkl")
-    if os.path.exists(_all):
-        os.remove(_all); logger.info("  Removed stale ensemble_all.pkl")
+    # Historical norm (<=2024) so 2023/2024 seasons grade on a contamination-free scale.
+    _hist = (df["game_year"] <= 2024) if "game_year" in df.columns else None
+    if _hist is not None:
+        hi = df.index[_hist & _sf]
+        if len(hi):
+            hsamp = df.loc[hi, SHAPE_FEATS].sample(n=min(300000, len(hi)), random_state=42)
+            eh = predict_global_rv(hsamp, ens)
+            ens["norm_hist"] = {"mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
 
-    # Back-compat: legacy readers still probe norm_global*; point them at the FB norm.
-    _fb = ensembles.get("fb", {}).get("norm", {"mean": 0.0, "std": 0.01})
+    save_ensemble(ens, "all")
+    ensembles = {"all": ens}
+    logger.info("  saved -> ensemble_all.pkl")
+
+    # Drop the old per-family models so predict.py loads the single global model.
+    for _fam_key in ("fb", "os", "br"):
+        _fp = os.path.join(MODEL_DIR, f"ensemble_{_fam_key}.pkl")
+        if os.path.exists(_fp):
+            os.remove(_fp); logger.info(f"  Removed stale ensemble_{_fam_key}.pkl")
+
+    # Back-compat: legacy readers still probe norm_global*; point them at the global norm.
     for _n in ("norm_global.pkl", "norm_global_historical.pkl"):
         with open(os.path.join(MODEL_DIR, _n), "wb") as f:
-            pickle.dump({"mean": _fb["mean"], "std": _fb["std"]}, f)
+            pickle.dump({"mean": ens["norm"]["mean"], "std": ens["norm"]["std"]}, f)
     for _n in ("norm_family.pkl", "norm_per_type.pkl",
                "norm_family_historical.pkl", "norm_per_type_historical.pkl"):
         with open(os.path.join(MODEL_DIR, _n), "wb") as f:

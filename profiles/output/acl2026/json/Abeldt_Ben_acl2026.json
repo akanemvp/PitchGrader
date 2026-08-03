@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 93.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 98.2,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 162,
       "n_vs_r": 139,
       "n_vs_l": 44,
@@ -36,7 +36,7 @@
       "zone_pct": 37.7,
       "chase_pct": 20.2,
       "whiff_pct": 31.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.251,
       "locations_x": [
         -1.37,
         1.77,

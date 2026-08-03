@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 104.6,
-      "grade": "50",
+      "stuff_plus": 98.5,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 739,
       "n_vs_r": 290,
@@ -36,7 +36,7 @@
       "zone_pct": 50.2,
       "chase_pct": 34.5,
       "whiff_pct": 24.2,
-      "xwoba_contact": 0.404,
+      "xwoba_contact": 0.393,
       "locations_x": [
         0.89,
         -2.23,
@@ -2433,8 +2433,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 99.9,
-      "grade": "45",
+      "stuff_plus": 102.5,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 455,
       "n_vs_r": 192,
@@ -2455,7 +2455,7 @@
       "zone_pct": 47.5,
       "chase_pct": 34.3,
       "whiff_pct": 23.5,
-      "xwoba_contact": 0.33,
+      "xwoba_contact": 0.318,
       "locations_x": [
         0.03,
         -0.5,
@@ -4292,9 +4292,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 101.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 88.5,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 270,
       "n_vs_r": 186,
       "n_vs_l": 84,
@@ -4314,7 +4314,7 @@
       "zone_pct": 57.0,
       "chase_pct": 26.7,
       "whiff_pct": 7.2,
-      "xwoba_contact": 0.447,
+      "xwoba_contact": 0.448,
       "locations_x": [
         -2.16,
         0.38,
@@ -5411,7 +5411,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 100.5,
+      "stuff_plus": 100.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 211,
@@ -5433,7 +5433,7 @@
       "zone_pct": 37.4,
       "chase_pct": 34.1,
       "whiff_pct": 18.3,
-      "xwoba_contact": 0.344,
+      "xwoba_contact": 0.289,
       "locations_x": [
         -1.01,
         0.12,
@@ -6294,9 +6294,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 95.5,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 93.0,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 1,
       "n_vs_r": 1,
       "n_vs_l": 0,

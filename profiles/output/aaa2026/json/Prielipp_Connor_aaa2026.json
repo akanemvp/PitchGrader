@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.3,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 90.8,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 107,
       "n_vs_r": 79,
       "n_vs_l": 28,
@@ -36,7 +36,7 @@
       "zone_pct": 49.5,
       "chase_pct": 22.2,
       "whiff_pct": 22.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.325,
       "locations_x": [
         0.28,
         2.16,
@@ -481,7 +481,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 112.0,
+      "stuff_plus": 111.3,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 77,
@@ -503,7 +503,7 @@
       "zone_pct": 53.2,
       "chase_pct": 38.9,
       "whiff_pct": 41.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.493,
       "locations_x": [
         0.33,
         0.76,
@@ -828,7 +828,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.3,
+      "stuff_plus": 102.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 56,
@@ -850,7 +850,7 @@
       "zone_pct": 50.0,
       "chase_pct": 28.6,
       "whiff_pct": 29.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.359,
       "locations_x": [
         1.49,
         0.76,
@@ -1091,9 +1091,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 112.3,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 104.7,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 56,
       "n_vs_r": 41,
       "n_vs_l": 15,
@@ -1113,7 +1113,7 @@
       "zone_pct": 25.0,
       "chase_pct": 28.6,
       "whiff_pct": 52.9,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.143,
       "locations_x": [
         -1.24,
         0.92,
@@ -1354,9 +1354,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 99.0,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 13,
       "n_vs_r": 1,
       "n_vs_l": 12,

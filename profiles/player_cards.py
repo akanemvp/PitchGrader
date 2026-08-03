@@ -431,8 +431,8 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
     _contact_desc = {
         # /gf snake_case
         "hit_into_play", "hit_into_play_no_out", "hit_into_play_score",
-        # Baseball Savant CSV title-case
-        "In play, out(s)", "In play, no out", "In play, runs(s)",
+        # Baseball Savant CSV / /gf title-case
+        "In play, out(s)", "In play, no out", "In play, run(s)", "In play, runs(s)",
     }
 
     def _sample_locs(sub_df, max_n=400):

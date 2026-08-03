@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.0,
+      "stuff_plus": 87.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 37,
@@ -36,7 +36,7 @@
       "zone_pct": 51.4,
       "chase_pct": 16.7,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.275,
       "locations_x": [
         -1.28,
         0.88,
@@ -201,9 +201,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 93.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 106.7,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 32,
       "n_vs_r": 18,
       "n_vs_l": 14,
@@ -223,7 +223,7 @@
       "zone_pct": 50.0,
       "chase_pct": 37.5,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.383,
       "locations_x": [
         0.58,
         -0.26,
@@ -368,9 +368,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 91.2,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 100.4,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 23,
       "n_vs_r": 10,
       "n_vs_l": 13,
@@ -390,7 +390,7 @@
       "zone_pct": 30.4,
       "chase_pct": 31.2,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.828,
       "locations_x": [
         -0.78,
         0.84,
@@ -499,9 +499,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 101.6,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 18,
       "n_vs_r": 2,
       "n_vs_l": 16,
@@ -610,7 +610,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.0,
+      "stuff_plus": 84.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 18,
@@ -632,7 +632,7 @@
       "zone_pct": 44.4,
       "chase_pct": 20.0,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.425,
       "locations_x": [
         -0.75,
         -1.44,

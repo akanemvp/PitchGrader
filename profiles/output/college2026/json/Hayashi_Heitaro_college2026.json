@@ -7,16 +7,16 @@
   "team": "WSU",
   "pitcher_id": 840552,
   "age": null,
-  "ip_str": "0.2",
-  "era": 13.5,
+  "ip_str": "1.0",
+  "era": 0.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 84.2,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 94.9,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 12,
       "n_vs_r": 7,
       "n_vs_l": 5,
@@ -36,7 +36,7 @@
       "zone_pct": 50.0,
       "chase_pct": 33.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.115,
       "locations_x": [
         1.6,
         0.65,
@@ -101,7 +101,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 88.8,
+      "stuff_plus": 87.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,
@@ -146,7 +146,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 87.6,
+      "stuff_plus": 89.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,
@@ -168,7 +168,7 @@
       "zone_pct": 50.0,
       "chase_pct": 100.0,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.948,
       "locations_x": [
         -1.85,
         -0.23

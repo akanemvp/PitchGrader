@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 94.9,
+      "stuff_plus": 92.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 253,
@@ -36,7 +36,7 @@
       "zone_pct": 59.3,
       "chase_pct": 27.2,
       "whiff_pct": 20.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.285,
       "locations_x": [
         -1.79,
         -1.25,
@@ -1065,9 +1065,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 97.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 112,
       "n_vs_r": 83,
       "n_vs_l": 29,
@@ -1087,7 +1087,7 @@
       "zone_pct": 50.9,
       "chase_pct": 36.4,
       "whiff_pct": 32.8,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.255,
       "locations_x": [
         0.53,
         -0.43,
@@ -1552,7 +1552,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 102.2,
+      "stuff_plus": 100.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 78,
@@ -1574,7 +1574,7 @@
       "zone_pct": 52.6,
       "chase_pct": 18.9,
       "whiff_pct": 25.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.355,
       "locations_x": [
         0.02,
         -0.4,
@@ -1903,9 +1903,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 94.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 108.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 69,
       "n_vs_r": 53,
       "n_vs_l": 16,
@@ -1925,7 +1925,7 @@
       "zone_pct": 39.1,
       "chase_pct": 11.9,
       "whiff_pct": 42.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.575,
       "locations_x": [
         0.9,
         0.54,
@@ -2218,9 +2218,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 93.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 100.5,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 20,
       "n_vs_r": 2,
       "n_vs_l": 18,

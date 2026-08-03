@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.9,
+      "stuff_plus": 88.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 47,
@@ -36,7 +36,7 @@
       "zone_pct": 36.2,
       "chase_pct": 30.0,
       "whiff_pct": 22.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.341,
       "locations_x": [
         -2.8,
         -1.05,
@@ -241,9 +241,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 93.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 110.5,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 18,
       "n_vs_r": 15,
       "n_vs_l": 3,
@@ -263,7 +263,7 @@
       "zone_pct": 33.3,
       "chase_pct": 33.3,
       "whiff_pct": 37.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.731,
       "locations_x": [
         0.43,
         1.57,
@@ -352,9 +352,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 92.2,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 8,
       "n_vs_r": 5,
       "n_vs_l": 3,
@@ -374,7 +374,7 @@
       "zone_pct": 25.0,
       "chase_pct": 16.7,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.117,
       "locations_x": [
         -0.9,
         -1.04,
@@ -423,7 +423,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 92.6,
+      "stuff_plus": 93.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 5,
@@ -445,7 +445,7 @@
       "zone_pct": 20.0,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.142,
       "locations_x": [
         1.03,
         -0.3,
@@ -482,9 +482,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 91.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 110.8,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

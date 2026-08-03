@@ -8,14 +8,14 @@
   "pitcher_id": 839385,
   "age": null,
   "ip_str": "3.0",
-  "era": 0.0,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.5,
-      "grade": "45",
+      "stuff_plus": 100.8,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 15,
       "n_vs_r": 9,
@@ -36,7 +36,7 @@
       "zone_pct": 46.7,
       "chase_pct": 37.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.219,
       "locations_x": [
         1.33,
         0.14,
@@ -113,7 +113,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 86.4,
+      "stuff_plus": 83.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 15,
@@ -135,7 +135,7 @@
       "zone_pct": 40.0,
       "chase_pct": 66.7,
       "whiff_pct": 44.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.331,
       "locations_x": [
         0.54,
         -0.08,
@@ -212,7 +212,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 94.6,
+      "stuff_plus": 90.4,
       "grade": "40",
       "color": "#f4a261",
       "n": 9,
@@ -234,7 +234,7 @@
       "zone_pct": 33.3,
       "chase_pct": 33.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.272,
       "locations_x": [
         2.85,
         0.81,
@@ -287,7 +287,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.6,
+      "stuff_plus": 83.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 3,
@@ -309,7 +309,7 @@
       "zone_pct": 33.3,
       "chase_pct": 50.0,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.007,
       "locations_x": [
         0.37,
         0.93,

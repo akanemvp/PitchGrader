@@ -14,9 +14,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 90.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 102.2,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 41,
       "n_vs_r": 27,
       "n_vs_l": 23,
@@ -36,7 +36,7 @@
       "zone_pct": 48.0,
       "chase_pct": 23.1,
       "whiff_pct": 22.2,
-      "xwoba_contact": 0.033,
+      "xwoba_contact": 0.331,
       "locations_x": [
         -1.12,
         -1.62,
@@ -253,9 +253,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 91.7,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 100.1,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 40,
       "n_vs_r": 33,
       "n_vs_l": 7,
@@ -275,7 +275,7 @@
       "zone_pct": 45.0,
       "chase_pct": 13.6,
       "whiff_pct": 31.2,
-      "xwoba_contact": 0.186,
+      "xwoba_contact": 0.142,
       "locations_x": [
         -0.4,
         -0.57,
@@ -452,7 +452,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.0,
+      "stuff_plus": 88.0,
       "grade": "35",
       "color": "#ef233c",
       "n": 40,
@@ -474,7 +474,7 @@
       "zone_pct": 45.0,
       "chase_pct": 9.1,
       "whiff_pct": 15.4,
-      "xwoba_contact": 0.132,
+      "xwoba_contact": 0.402,
       "locations_x": [
         0.42,
         1.02,

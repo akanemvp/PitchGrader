@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.3,
+      "stuff_plus": 84.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 32,
@@ -36,7 +36,7 @@
       "zone_pct": 34.4,
       "chase_pct": 19.0,
       "whiff_pct": 28.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.53,
       "locations_x": [
         -1.26,
         0.54,
@@ -181,8 +181,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.9,
-      "grade": "45",
+      "stuff_plus": 103.6,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 31,
       "n_vs_r": 21,
@@ -203,7 +203,7 @@
       "zone_pct": 38.7,
       "chase_pct": 21.1,
       "whiff_pct": 36.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.426,
       "locations_x": [
         -0.22,
         -0.58,
@@ -344,9 +344,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 87.6,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 21,
       "n_vs_r": 18,
       "n_vs_l": 3,
@@ -366,7 +366,7 @@
       "zone_pct": 23.8,
       "chase_pct": 37.5,
       "whiff_pct": 22.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.017,
       "locations_x": [
         0.26,
         -0.92,
@@ -467,8 +467,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.0,
-      "grade": "45",
+      "stuff_plus": 104.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 17,
       "n_vs_r": 13,
@@ -489,7 +489,7 @@
       "zone_pct": 29.4,
       "chase_pct": 41.7,
       "whiff_pct": 71.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.252,
       "locations_x": [
         1.37,
         0.85,
@@ -574,9 +574,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.7,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 108.8,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 11,
       "n_vs_r": 6,
       "n_vs_l": 5,
@@ -596,7 +596,7 @@
       "zone_pct": 18.2,
       "chase_pct": 44.4,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.009,
       "locations_x": [
         -0.86,
         -0.17,
@@ -657,9 +657,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 102.2,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.6,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 4,
       "n_vs_r": 2,
       "n_vs_l": 2,
@@ -679,7 +679,7 @@
       "zone_pct": 50.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.1,
       "locations_x": [
         0.1,
         -0.0,

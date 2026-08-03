@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.1,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 89.0,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 157,
       "n_vs_r": 89,
       "n_vs_l": 68,
@@ -36,7 +36,7 @@
       "zone_pct": 56.7,
       "chase_pct": 27.9,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.363,
       "locations_x": [
         0.69,
         -1.32,
@@ -681,8 +681,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.7,
-      "grade": "45",
+      "stuff_plus": 100.4,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 82,
       "n_vs_r": 45,
@@ -703,7 +703,7 @@
       "zone_pct": 54.9,
       "chase_pct": 24.3,
       "whiff_pct": 8.8,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.305,
       "locations_x": [
         -0.93,
         1.66,
@@ -1048,7 +1048,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 108.2,
+      "stuff_plus": 107.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 46,
@@ -1070,7 +1070,7 @@
       "zone_pct": 39.1,
       "chase_pct": 35.7,
       "whiff_pct": 32.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.217,
       "locations_x": [
         -0.45,
         -0.71,
@@ -1271,7 +1271,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 115.6,
+      "stuff_plus": 112.3,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 16,
@@ -1293,7 +1293,7 @@
       "zone_pct": 31.2,
       "chase_pct": 27.3,
       "whiff_pct": 12.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.285,
       "locations_x": [
         0.27,
         0.26,
@@ -1374,9 +1374,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 99.7,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.7,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 8,
       "n_vs_r": 0,
       "n_vs_l": 8,

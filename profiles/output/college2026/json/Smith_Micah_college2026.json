@@ -8,7 +8,7 @@
   "pitcher_id": 827879,
   "age": null,
   "ip_str": "0.2",
-  "era": 0.0,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
@@ -36,7 +36,7 @@
       "zone_pct": 60.0,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.092,
       "locations_x": [
         -1.2,
         -0.47,
@@ -73,7 +73,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 92.3,
+      "stuff_plus": 90.0,
       "grade": "40",
       "color": "#f4a261",
       "n": 1,

@@ -8,15 +8,15 @@
   "pitcher_id": 831555,
   "age": null,
   "ip_str": "2.2",
-  "era": 20.25,
+  "era": 0.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 95.5,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 28,
       "n_vs_r": 14,
       "n_vs_l": 14,
@@ -36,7 +36,7 @@
       "zone_pct": 57.1,
       "chase_pct": 50.0,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.683,
       "locations_x": [
         -0.37,
         1.18,
@@ -165,9 +165,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 92.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.3,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 15,
       "n_vs_r": 5,
       "n_vs_l": 10,
@@ -187,7 +187,7 @@
       "zone_pct": 53.3,
       "chase_pct": 14.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.911,
       "locations_x": [
         0.63,
         -0.27,
@@ -264,8 +264,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 101.0,
-      "grade": "50",
+      "stuff_plus": 97.0,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 11,
       "n_vs_r": 2,
@@ -286,7 +286,7 @@
       "zone_pct": 54.5,
       "chase_pct": 40.0,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.566,
       "locations_x": [
         0.59,
         0.58,
@@ -347,9 +347,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.1,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 111.1,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 2,
       "n_vs_r": 0,
       "n_vs_l": 2,
@@ -369,7 +369,7 @@
       "zone_pct": 50.0,
       "chase_pct": 0.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 1.162,
       "locations_x": [
         -0.95,
         0.52

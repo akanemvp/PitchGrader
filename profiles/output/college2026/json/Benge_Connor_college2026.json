@@ -8,13 +8,13 @@
   "pitcher_id": 829657,
   "age": null,
   "ip_str": "0.1",
-  "era": 0.0,
+  "era": null,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 93.0,
+      "stuff_plus": 91.4,
       "grade": "40",
       "color": "#f4a261",
       "n": 2,
@@ -36,7 +36,7 @@
       "zone_pct": 50.0,
       "chase_pct": 100.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.183,
       "locations_x": [
         0.5,
         -0.87
@@ -59,9 +59,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 92.0,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 105.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 1,
       "n_vs_r": 1,
       "n_vs_l": 0,
@@ -100,7 +100,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 100.0,
+      "stuff_plus": 104.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 1,

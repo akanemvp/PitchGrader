@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 88.3,
+      "stuff_plus": 85.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 54,
@@ -36,7 +36,7 @@
       "zone_pct": 53.7,
       "chase_pct": 32.0,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.397,
       "locations_x": [
         -0.96,
         -1.35,
@@ -269,8 +269,8 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 95.2,
-      "grade": "45",
+      "stuff_plus": 104.3,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 38,
       "n_vs_r": 29,
@@ -291,7 +291,7 @@
       "zone_pct": 18.4,
       "chase_pct": 32.3,
       "whiff_pct": 61.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.117,
       "locations_x": [
         1.12,
         1.18,
@@ -460,8 +460,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 96.4,
-      "grade": "45",
+      "stuff_plus": 102.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 22,
       "n_vs_r": 15,
@@ -482,7 +482,7 @@
       "zone_pct": 63.6,
       "chase_pct": 25.0,
       "whiff_pct": 27.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.694,
       "locations_x": [
         -0.1,
         0.25,
@@ -587,8 +587,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 96.0,
-      "grade": "45",
+      "stuff_plus": 103.3,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 18,
       "n_vs_r": 9,
@@ -609,7 +609,7 @@
       "zone_pct": 44.4,
       "chase_pct": 0.0,
       "whiff_pct": 60.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.58,
       "locations_x": [
         1.0,
         0.29,
@@ -698,9 +698,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 87.8,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 94.5,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 4,
       "n_vs_r": 4,
       "n_vs_l": 0,
@@ -751,7 +751,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.2,
+      "stuff_plus": 94.6,
       "grade": "40",
       "color": "#f4a261",
       "n": 3,

@@ -8,15 +8,15 @@
   "pitcher_id": 518876,
   "age": 38,
   "ip_str": "109.1",
-  "era": 4.69,
+  "era": 4.53,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 106.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 102.6,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 464,
       "n_vs_r": 120,
       "n_vs_l": 344,
@@ -36,7 +36,7 @@
       "zone_pct": 26.5,
       "chase_pct": 48.4,
       "whiff_pct": 30.4,
-      "xwoba_contact": 0.474,
+      "xwoba_contact": 0.426,
       "locations_x": [
         -0.36,
         -0.29,
@@ -1909,7 +1909,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.3,
+      "stuff_plus": 95.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 452,
@@ -1931,7 +1931,7 @@
       "zone_pct": 51.5,
       "chase_pct": 26.0,
       "whiff_pct": 12.4,
-      "xwoba_contact": 0.494,
+      "xwoba_contact": 0.508,
       "locations_x": [
         0.43,
         -1.56,
@@ -3756,7 +3756,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 97.0,
+      "stuff_plus": 96.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 264,
@@ -3778,7 +3778,7 @@
       "zone_pct": 51.5,
       "chase_pct": 32.0,
       "whiff_pct": 10.3,
-      "xwoba_contact": 0.462,
+      "xwoba_contact": 0.442,
       "locations_x": [
         0.84,
         1.24,
@@ -4851,8 +4851,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 99.9,
-      "grade": "45",
+      "stuff_plus": 102.7,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 198,
       "n_vs_r": 50,
@@ -4873,7 +4873,7 @@
       "zone_pct": 34.8,
       "chase_pct": 27.9,
       "whiff_pct": 19.7,
-      "xwoba_contact": 0.325,
+      "xwoba_contact": 0.308,
       "locations_x": [
         0.17,
         -0.6,
@@ -5682,9 +5682,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 98.8,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 189,
       "n_vs_r": 170,
       "n_vs_l": 19,
@@ -5704,7 +5704,7 @@
       "zone_pct": 41.8,
       "chase_pct": 32.7,
       "whiff_pct": 33.0,
-      "xwoba_contact": 0.335,
+      "xwoba_contact": 0.351,
       "locations_x": [
         0.8,
         -0.03,
@@ -6477,9 +6477,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 95.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 85.8,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 177,
       "n_vs_r": 123,
       "n_vs_l": 54,
@@ -6499,7 +6499,7 @@
       "zone_pct": 46.3,
       "chase_pct": 27.4,
       "whiff_pct": 5.9,
-      "xwoba_contact": 0.471,
+      "xwoba_contact": 0.464,
       "locations_x": [
         0.96,
         0.48,

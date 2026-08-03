@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 70.0,
-      "grade": "30",
+      "stuff_plus": 85.1,
+      "grade": "35",
       "color": "#ef233c",
       "n": 10,
       "n_vs_r": 23,
@@ -36,7 +36,7 @@
       "zone_pct": 45.7,
       "chase_pct": 26.3,
       "whiff_pct": 5.9,
-      "xwoba_contact": 0.305,
+      "xwoba_contact": 0.43,
       "locations_x": [
         0.9,
         -0.51,

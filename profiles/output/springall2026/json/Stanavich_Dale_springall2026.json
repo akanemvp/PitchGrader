@@ -290,7 +290,7 @@
       "zone_pct": 11.1,
       "chase_pct": 12.5,
       "whiff_pct": 100.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.107,
       "locations_x": [
         -2.4,
         -0.73,

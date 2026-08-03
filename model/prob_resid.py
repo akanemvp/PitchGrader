@@ -1,21 +1,26 @@
-"""Stuff+ — 3-family probability model (whiff / in-play HR).
+"""Stuff+ — one global swing-outcome model (Pitch Profiler / proStuff+ style).
 
-Three separate models — fastball, offspeed, breaking — each trained and normalized on
-its OWN scale, so a fastball is graded against fastballs (no cross-family shafting where
-splitters out-grade four-seams per pitch). Each family model composes:
+A single model, trained on every pitch, grades pitch shape by its expected run
+value from three swing outcomes:
 
-    xRV = P(whiff)·V_whiff + P(in-play)·P(HR | in-play)·V_HR
+    xRV = P(whiff)·V_whiff + P(foul)·V_foul + P(in-play)·E[contact RV | in-play]
 
-from a multiclass {other, whiff, foul, in-play} head plus a binary P(HR | in-play) head,
-both on the 8 arm-normalized induced-Magnus SHAPE_FEATS. Foul is a class (so the
-probabilities are proper) but is not valued — only whiff and in-play home-run damage
-drive the grade, which keeps power fastballs (low slot, high ride) on top.
+  • A swing softmax head predicts {whiff, foul, in-play} from pitch shape.
+  • A 5-cell contact grid predicts where an in-play ball lands — ground ball / air,
+    each split at 95 mph exit velocity, plus pop-ups — and each cell carries its
+    empirical run value, so E[contact RV | in-play] is the grid's expectation.
 
-Cutters (Statcast "FC") behave like fastballs for some pitchers and like sliders for
-others. A Mahalanobis router places each pitcher's cutters in the fastball or breaking
-family (per-pitcher majority vote) so slider-cutters aren't scored on the fastball scale.
+Shape is described by 8 arm-normalized features: velocity, spin rate, raw vertical
+and (arm-side) horizontal acceleration, arm angle, release side and height, and
+extension. No location, count, or game-state — a pitch grades on its shape alone,
+and a lefty and righty throwing physically identical pitches grade identically.
 
-Lower xRV = better; each family is normalized to 100 = family average, 10 = one SD.
+Lower xRV = better. Grades are one global z-score: 100 = league-average pitch,
+10 = one standard deviation. Because the scale is shared across pitch types,
+breaking balls (higher whiff, softer contact) sit above fastballs on average.
+
+The cutter router (Mahalanobis, fastball vs breaking) and family helpers are kept
+for back-compat with callers that tag pitch families; scoring itself is global.
 """
 from __future__ import annotations
 
@@ -32,16 +37,17 @@ WHIFF_DESCS  = {"swinging_strike", "swinging_strike_blocked", "missed_bunt"}
 FOUL_DESCS   = {"foul", "foul_tip", "bunt_foul_tip", "foul_bunt"}
 INPLAY_DESC  = "hit_into_play"
 
-# 8 arm-normalized induced-Magnus shape features (ind_vert/ind_horiz_arm added by
-# features.engineering.add_magnus; the rest are standard engineered columns).
+# 8 arm-normalized shape features. ax_arm / az are RAW accelerations (arm-side and
+# vertical); release_pos_x_arm is the arm-side release point. add_shape_features
+# derives the three arm-signed columns from raw kinematics.
 SHAPE_FEATS = [
-    "release_speed", "release_extension", "release_pos_x", "release_pos_z",
-    "arm_angle", "release_spin_rate", "ind_vert", "ind_horiz",
+    "release_speed", "release_spin_rate", "ax_arm", "az",
+    "arm_angle", "release_pos_x_arm", "release_pos_z", "release_extension",
 ]
 # Cutter-router space: velocity + arm-relative movement + spin + slot.
 ROUTER_FEATS = ["release_speed", "ind_vert", "ind_horiz_arm", "release_spin_rate", "arm_angle"]
 
-# Family membership by Statcast pitch_type. Cutters (FC) are routed at train/score time.
+# Family membership by Statcast pitch_type. Cutters (FC) are routed by the router.
 FB_TYPES  = {"FF", "FA", "SI"}
 BR_TYPES  = {"SL", "ST", "SV", "SC", "GY", "CU", "KC", "CS", "SLV"}
 OFF_TYPES = {"CH", "FO", "FS", "EP", "KN"}
@@ -50,29 +56,31 @@ FAMILIES  = ("FB", "OFF", "BR")
 ZONE_HALF = 0.83   # half plate-width + ball radius (ft)
 _G = 32.174
 
-_LGBM = dict(
-    max_depth=8, num_leaves=20, learning_rate=0.05, min_child_samples=30,
-    reg_alpha=0.5, reg_lambda=2.0, n_jobs=-1, verbose=-1, random_state=42,
+# Swing softmax {whiff, foul, in-play}: 31 leaves, slow lr (tjStuff-style).
+_LGBM_SWING = dict(
+    num_leaves=31, learning_rate=0.01, min_child_samples=20,
+    subsample=0.8, subsample_freq=1, colsample_bytree=0.8,
+    reg_alpha=0.1, reg_lambda=0.2, n_jobs=-1, verbose=-1, random_state=42,
 )
-# Home runs are rare (~4.5% of balls in play), so the HR head overfits feature
-# COMBINATIONS at light regularization — smooth marginals but jumpy joint predictions
-# that crater individual pitches near the average shape. Big leaves + path smoothing
-# force P(HR) to vary gently with shape (the composite is unaffected; only the noisy
-# per-pitch tail is reined in).
-_LGBM_HR = dict(
-    max_depth=6, num_leaves=15, learning_rate=0.05, min_child_samples=800,
-    reg_alpha=0.5, reg_lambda=5.0, path_smooth=1.0, n_jobs=-1, verbose=-1, random_state=42,
+# 5-cell contact grid — heavily smoothed. The per-cell run values are steady but the
+# joint shape->cell map is noisy per pitch, so big min_child + strong reg keep the
+# contact expectation gently varying with shape instead of over-fitting the tail.
+_LGBM_GRID = dict(
+    num_leaves=15, learning_rate=0.03, min_child_samples=3000,
+    subsample=0.8, subsample_freq=1, colsample_bytree=0.8,
+    reg_alpha=0.2, reg_lambda=0.5, n_jobs=-1, verbose=-1, random_state=42,
 )
-_N_MULTI, _N_HR = 600, 150
-_SAMPLE_MULTI, _SAMPLE_HR, _SAMPLE_NORM = 1_200_000, 800_000, 150_000
+_N_SWING, _N_GRID = 1000, 500
+_SAMPLE_SWING, _SAMPLE_GRID, _SAMPLE_NORM = 2_500_000, 1_500_000, 300_000
+
+_CELL_NAMES = ["GB<95", "GB95+", "air<95", "air95+", "pop"]
 
 
 def add_magnus(df: pd.DataFrame) -> pd.DataFrame:
     """Add induced-Magnus accel components from raw kinematics. Idempotent.
 
-    ind_vert      = Magnus (spin-induced) vertical accel = (az+g) minus the drag-parallel part.
-    ind_horiz     = Magnus horizontal accel, RAW (not arm-signed; catcher's-view x sign).
-    ind_horiz_arm = Magnus horizontal accel, arm-side signed — kept for the cutter router.
+    ind_vert / ind_horiz(_arm) feed the cutter router (ROUTER_FEATS). The scoring
+    model uses raw accelerations (add_shape_features), not these.
     """
     hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
     vx = pd.to_numeric(df.get("vx0"), errors="coerce").values
@@ -90,6 +98,20 @@ def add_magnus(df: pd.DataFrame) -> pd.DataFrame:
     df["ind_vert"] = aaz - pz
     df["ind_horiz"] = aax - px
     df["ind_horiz_arm"] = (aax - px) * hs
+    return df
+
+
+def add_shape_features(df: pd.DataFrame) -> pd.DataFrame:
+    """Add the raw arm-signed shape columns the scoring model needs. Idempotent.
+
+    ax_arm            = raw horizontal accel, arm-side signed.
+    az                = raw vertical accel (unsigned; downward is negative).
+    release_pos_x_arm = release side, arm-side signed.
+    """
+    hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
+    df["ax_arm"] = pd.to_numeric(df.get("ax"), errors="coerce").values * hs
+    df["az"] = pd.to_numeric(df.get("az"), errors="coerce").values
+    df["release_pos_x_arm"] = pd.to_numeric(df.get("release_pos_x"), errors="coerce").values * hs
     return df
 
 
@@ -125,7 +147,7 @@ def fit_cutter_router(df: pd.DataFrame) -> dict:
 
 def assign_family(df: pd.DataFrame, router: dict | None) -> pd.Series:
     """Family (FB/OFF/BR) per pitch. Cutters routed by Mahalanobis; per-pitcher majority
-    when a pitcher/name column is present, else per-pitch."""
+    when a pitcher/name column is present, else per-pitch. (Tagging only — scoring is global.)"""
     pt = df["pitch_type"].astype(str)
     fam = pt.map(_basefam)
     fc = pt.eq("FC")
@@ -151,74 +173,120 @@ def assign_family(df: pd.DataFrame, router: dict | None) -> pd.Series:
     return fam
 
 
-def _cav(ca, mask):
-    v = ca[mask & ca.notna()]
-    return float(v.mean()) if len(v) else 0.0
+def _count_adjusted_rv(df: pd.DataFrame) -> pd.Series:
+    """delta_run_exp with the mean removed per (balls, strikes) count — a shape-neutral,
+    count-adjusted run value. Base-out state is added when those columns are present."""
+    dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
+    b = pd.to_numeric(df.get("balls"), errors="coerce").fillna(0).astype(int)
+    s = pd.to_numeric(df.get("strikes"), errors="coerce").fillna(0).astype(int)
+    grp = pd.DataFrame({"b": b, "s": s, "d": dre})
+    keys = ["b", "s"]
+    have_situ = all(c in df.columns for c in ("on_1b", "on_2b", "on_3b", "outs_when_up"))
+    if have_situ:
+        b1 = df["on_1b"].notna().astype(int); b2 = df["on_2b"].notna().astype(int)
+        b3 = df["on_3b"].notna().astype(int)
+        outs = pd.to_numeric(df["outs_when_up"], errors="coerce").fillna(0).astype(int)
+        grp["situ"] = b1 * 4 + b2 * 2 + b3 + outs * 8
+        keys.append("situ")
+    return dre - grp.groupby(keys)["d"].transform("mean")
+
+
+def _grid_cell(df: pd.DataFrame) -> pd.Series:
+    """5-cell contact grid label: 0 GB<95, 1 GB95+, 2 air<95, 3 air95+, 4 pop-up (grouped)."""
+    la = pd.to_numeric(df.get("launch_angle"), errors="coerce")
+    ev = pd.to_numeric(df.get("launch_speed"), errors="coerce")
+    bt = pd.Series(np.nan, index=df.index)
+    bt[la < 10] = 0                       # ground ball
+    bt[(la >= 10) & (la < 50)] = 1        # air ball
+    bt[la >= 50] = 2                      # pop-up
+    eb = (ev >= 95).astype(float); eb[ev.isna()] = np.nan
+    cell = pd.Series(np.nan, index=df.index)
+    gbair = bt.isin([0, 1])
+    cell[gbair] = bt[gbair] * 2 + eb[gbair]
+    cell[bt.eq(2)] = 4.0                   # pop-up, no EV split
+    return cell
 
 
 def bucket_values(df: pd.DataFrame) -> dict:
-    """Global count-adjusted run values for the valued outcomes (whiff, foul, in-play HR)."""
+    """Count-adjusted run values for the valued swing outcomes (whiff, foul)."""
     dd = df["description"].fillna("").astype(str)
-    ev = df["events"].fillna("").astype(str)
-    dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
-    b = pd.to_numeric(df["balls"], errors="coerce").fillna(0).astype(int)
-    s = pd.to_numeric(df["strikes"], errors="coerce").fillna(0).astype(int)
-    ca = dre - pd.DataFrame({"b": b, "s": s, "d": dre}).groupby(["b", "s"]).d.transform("mean")
+    ca = _count_adjusted_rv(df)
     isw = dd.isin(WHIFF_DESCS); isf = dd.isin(FOUL_DESCS)
-    isip = dd.eq(INPLAY_DESC); ishr = ev.eq("home_run")
-    return {"whiff": _cav(ca, isw), "foul": _cav(ca, isf), "hr": _cav(ca, isip & ishr)}
+
+    def cav(mask):
+        v = ca[mask & ca.notna()]
+        return float(v.mean()) if len(v) else 0.0
+
+    return {"whiff": cav(isw), "foul": cav(isf)}
 
 
-def train_family_prob(df: pd.DataFrame, fam_mask: pd.Series, family: str, V: dict) -> dict:
-    """Train one family's probability model: multiclass {other,whiff,foul,inplay} + P(HR|inplay)."""
+def train_global_model(df: pd.DataFrame, V: dict) -> dict:
+    """Train the one global model: swing softmax {whiff,foul,in-play} + 5-cell contact grid."""
     dd = df["description"].fillna("").astype(str)
-    ev = df["events"].fillna("").astype(str)
-    isw = dd.isin(WHIFF_DESCS); isf = dd.isin(FOUL_DESCS)
-    isip = dd.eq(INPLAY_DESC); ishr = ev.eq("home_run")
+    isw = dd.isin(WHIFF_DESCS); isf = dd.isin(FOUL_DESCS); isip = dd.eq(INPLAY_DESC)
     sf = df[SHAPE_FEATS].notna().all(axis=1)
-    base = fam_mask & sf
     rng = np.random.RandomState(42)
 
-    lab = pd.Series(0, index=df.index)
-    lab[isw] = 1; lab[isf] = 2; lab[isip] = 3
-    idx = df.index[base]
-    if len(idx) > _SAMPLE_MULTI:
-        idx = pd.Index(rng.choice(idx, _SAMPLE_MULTI, replace=False))
-    mc = lgb.LGBMClassifier(objective="multiclass", num_class=4, n_estimators=_N_MULTI, **_LGBM)
-    mc.fit(df.loc[idx, SHAPE_FEATS].values, lab.loc[idx].values)
+    # --- swing softmax: 0 whiff, 1 foul, 2 in-play ---
+    lab = pd.Series(-1, index=df.index)
+    lab[isw] = 0; lab[isf] = 1; lab[isip] = 2
+    swi = df.index[(isw | isf | isip) & sf]
+    if len(swi) > _SAMPLE_SWING:
+        swi = pd.Index(rng.choice(swi, _SAMPLE_SWING, replace=False))
+    swing = lgb.LGBMClassifier(objective="multiclass", num_class=3,
+                               n_estimators=_N_SWING, **_LGBM_SWING)
+    swing.fit(df.loc[swi, SHAPE_FEATS].values, lab.loc[swi].values)
 
-    hidx = df.index[base & isip]
-    if len(hidx) > _SAMPLE_HR:
-        hidx = pd.Index(rng.choice(hidx, _SAMPLE_HR, replace=False))
-    hh = lgb.LGBMClassifier(objective="binary", n_estimators=_N_HR, **_LGBM_HR)
-    hh.fit(df.loc[hidx, SHAPE_FEATS].values, ishr.loc[hidx].astype(int).values)
+    # --- 5-cell contact grid + per-cell run values ---
+    ca = _count_adjusted_rv(df)
+    cell = _grid_cell(df)
+    ipall = isip & sf & cell.notna() & ca.notna()
+    Vcell = np.array([ca[ipall & (cell == c)].mean() if int((ipall & (cell == c)).sum()) > 0
+                      else np.nan for c in range(5)])
+    Vcell = np.where(np.isfinite(Vcell), Vcell, float(ca[ipall].mean()))
+    gi = df.index[ipall]
+    if len(gi) > _SAMPLE_GRID:
+        gi = pd.Index(rng.choice(gi, _SAMPLE_GRID, replace=False))
+    grid = lgb.LGBMClassifier(objective="multiclass", n_estimators=_N_GRID, **_LGBM_GRID)
+    grid.fit(df.loc[gi, SHAPE_FEATS].values, cell.loc[gi].astype(int).values)
 
-    ens = {"method": "prob_family", "family": family, "feats": SHAPE_FEATS,
-           "shape_feats": SHAPE_FEATS, "multiclass": mc, "hr": hh,
-           "V_whiff": V["whiff"], "V_hr": V["hr"], "weights": V,
-           "groups": {family: None}, "count_dist": [((0, 0), 1.0)]}
+    ens = {"method": "global_swing_grid", "feats": SHAPE_FEATS, "shape_feats": SHAPE_FEATS,
+           "swing": swing, "grid": grid, "grid_classes": grid.classes_,
+           "Vcell": Vcell, "V_whiff": V["whiff"], "V_foul": V["foul"], "weights": V}
 
-    samp = df.loc[base, SHAPE_FEATS].sample(n=min(_SAMPLE_NORM, int(base.sum())), random_state=42)
-    e = predict_family_rv(samp, ens)
+    samp = df.loc[sf, SHAPE_FEATS].sample(n=min(_SAMPLE_NORM, int(sf.sum())), random_state=42)
+    e = predict_global_rv(samp, ens)
     ens["norm"] = {"mean": float(np.nanmean(e)), "std": float(np.nanstd(e) + 1e-8)}
-    logger.info(f"  [{family}] whiff={V['whiff']:+.4f} hr={V['hr']:+.3f} "
-                f"norm mean={ens['norm']['mean']:+.5f} std={ens['norm']['std']:.5f} "
-                f"(multi n={len(idx):,}, hr n={len(hidx):,})")
+    logger.info(
+        f"  global: whiff={V['whiff']:+.4f} foul={V['foul']:+.4f}  "
+        f"grid RV=[{', '.join(f'{n}={v:+.3f}' for n, v in zip(_CELL_NAMES, Vcell))}]  "
+        f"norm mean={ens['norm']['mean']:+.5f} std={ens['norm']['std']:.5f}  "
+        f"(swings n={len(swi):,}, in-play n={len(gi):,})")
     return ens
 
 
-def predict_family_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
-    """Expected run value from one family's probability model: P(wh)·Vwh + P(ip)·P(HR)·Vhr."""
+def predict_global_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
+    """Expected run value from the global model: P(wh)·Vwh + P(foul)·Vf + P(ip)·E[contact RV]."""
     if len(df) == 0:
         return np.full(0, np.nan)
     X = df[SHAPE_FEATS].apply(pd.to_numeric, errors="coerce")
     X = X.fillna(X.median()).values
-    P = ens["multiclass"].predict_proba(X)
-    phr = ens["hr"].predict_proba(X)[:, 1]
-    return P[:, 1] * ens["V_whiff"] + P[:, 3] * phr * ens["V_hr"]
+    P = ens["swing"].predict_proba(X)          # cols: 0 whiff, 1 foul, 2 in-play
+    Pg = ens["grid"].predict_proba(X)
+    cdmg = Pg @ ens["Vcell"][ens["grid_classes"]]   # E[contact RV | in-play]
+    return P[:, 0] * ens["V_whiff"] + P[:, 1] * ens["V_foul"] + P[:, 2] * cdmg
 
 
-# --- back-compat: some callers still import these names ---
+# --- back-compat aliases: callers still import these names ---
+def predict_family_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
+    """Back-compat shim — the model is now one global model, so this scores globally."""
+    return predict_global_rv(df, ens)
+
+
+def predict_prob_resid_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
+    return predict_global_rv(df, ens)
+
+
 def _batter_zone(df: pd.DataFrame) -> pd.Series:
     px = pd.to_numeric(df.get("plate_x"), errors="coerce")
     pz = pd.to_numeric(df.get("plate_z"), errors="coerce")
@@ -226,8 +294,3 @@ def _batter_zone(df: pd.DataFrame) -> pd.Series:
     szb = pd.to_numeric(df.get("sz_bot"), errors="coerce")
     inz = (px.abs().values <= ZONE_HALF) & (pz.values >= szb.values) & (pz.values <= szt.values)
     return pd.Series(np.where(pz.notna().values, inz, False), index=df.index).fillna(False)
-
-
-def predict_prob_resid_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
-    """Back-compat shim: score with a single family ensemble."""
-    return predict_family_rv(df, ens)

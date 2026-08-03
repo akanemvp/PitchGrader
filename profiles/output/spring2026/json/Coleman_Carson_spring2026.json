@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 98.2,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 91.4,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 75,
       "n_vs_r": 32,
       "n_vs_l": 43,
@@ -36,7 +36,7 @@
       "zone_pct": 49.3,
       "chase_pct": 21.1,
       "whiff_pct": 21.2,
-      "xwoba_contact": 0.298,
+      "xwoba_contact": 0.444,
       "locations_x": [
         -0.73,
         0.15,
@@ -353,9 +353,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 93.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 105.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 17,
       "n_vs_r": 12,
       "n_vs_l": 5,
@@ -460,7 +460,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 95.4,
+      "stuff_plus": 99.7,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 1,

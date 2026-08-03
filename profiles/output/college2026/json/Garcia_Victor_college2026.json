@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.9,
+      "stuff_plus": 91.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 51,
@@ -36,7 +36,7 @@
       "zone_pct": 35.3,
       "chase_pct": 12.1,
       "whiff_pct": 29.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.189,
       "locations_x": [
         -0.06,
         0.35,
@@ -257,7 +257,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 81.9,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 24,
@@ -279,7 +279,7 @@
       "zone_pct": 33.3,
       "chase_pct": 6.2,
       "whiff_pct": 14.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.123,
       "locations_x": [
         -1.19,
         -1.16,
@@ -392,7 +392,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 93.3,
+      "stuff_plus": 90.9,
       "grade": "40",
       "color": "#f4a261",
       "n": 11,
@@ -414,7 +414,7 @@
       "zone_pct": 36.4,
       "chase_pct": 14.3,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.725,
       "locations_x": [
         -0.89,
         0.09,
@@ -473,9 +473,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 91.7,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 88.4,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 10,
       "n_vs_r": 10,
       "n_vs_l": 0,
@@ -550,9 +550,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 100.6,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 92.7,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,
@@ -595,8 +595,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.6,
-      "grade": "35",
+      "stuff_plus": 79.3,
+      "grade": "30",
       "color": "#ef233c",
       "n": 2,
       "n_vs_r": 1,

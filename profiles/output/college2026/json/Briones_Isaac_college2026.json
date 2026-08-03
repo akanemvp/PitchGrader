@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 87.3,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 95.5,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 42,
       "n_vs_r": 35,
       "n_vs_l": 7,
@@ -36,7 +36,7 @@
       "zone_pct": 40.5,
       "chase_pct": 40.0,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.25,
       "locations_x": [
         0.7,
         2.73,
@@ -221,7 +221,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.7,
+      "stuff_plus": 83.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 39,
@@ -243,7 +243,7 @@
       "zone_pct": 35.9,
       "chase_pct": 16.0,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.216,
       "locations_x": [
         -0.31,
         -0.41,
@@ -416,9 +416,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 84.7,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 90.5,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 22,
       "n_vs_r": 12,
       "n_vs_l": 10,
@@ -438,7 +438,7 @@
       "zone_pct": 40.9,
       "chase_pct": 30.8,
       "whiff_pct": 8.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.331,
       "locations_x": [
         -0.1,
         0.15,
@@ -543,7 +543,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.5,
+      "stuff_plus": 84.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 22,
@@ -565,7 +565,7 @@
       "zone_pct": 31.8,
       "chase_pct": 0.0,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.6,
       "locations_x": [
         0.3,
         1.15,
@@ -670,9 +670,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 91.1,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 108.5,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 6,
       "n_vs_r": 0,
       "n_vs_l": 6,

@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 96.2,
+      "stuff_plus": 98.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 16,
@@ -36,7 +36,7 @@
       "zone_pct": 37.5,
       "chase_pct": 20.0,
       "whiff_pct": 12.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.379,
       "locations_x": [
         0.05,
         -0.48,
@@ -117,9 +117,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 92.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 106.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,
@@ -139,7 +139,7 @@
       "zone_pct": 100.0,
       "chase_pct": null,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.84,
       "locations_x": [
         0.37,
         0.62
@@ -162,9 +162,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 91.4,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 101.3,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 1,
       "n_vs_r": 1,
       "n_vs_l": 0,
@@ -203,7 +203,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.6,
+      "stuff_plus": 100.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 1,

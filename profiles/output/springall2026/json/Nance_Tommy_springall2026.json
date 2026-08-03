@@ -36,7 +36,7 @@
       "zone_pct": 59.2,
       "chase_pct": 25.0,
       "whiff_pct": 26.1,
-      "xwoba_contact": 0.094,
+      "xwoba_contact": 0.282,
       "locations_x": [
         -0.07,
         0.47,
@@ -271,7 +271,7 @@
       "zone_pct": 50.0,
       "chase_pct": 16.7,
       "whiff_pct": 10.0,
-      "xwoba_contact": 0.555,
+      "xwoba_contact": 0.529,
       "locations_x": [
         -0.74,
         -0.29,

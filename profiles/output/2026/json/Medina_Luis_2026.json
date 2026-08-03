@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 102.1,
-      "grade": "50",
+      "stuff_plus": 96.3,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 216,
       "n_vs_r": 106,
@@ -36,7 +36,7 @@
       "zone_pct": 50.9,
       "chase_pct": 25.5,
       "whiff_pct": 17.6,
-      "xwoba_contact": 0.463,
+      "xwoba_contact": 0.432,
       "locations_x": [
         -0.03,
         0.05,
@@ -917,8 +917,8 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 102.9,
-      "grade": "50",
+      "stuff_plus": 95.4,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 203,
       "n_vs_r": 139,
@@ -939,7 +939,7 @@
       "zone_pct": 54.7,
       "chase_pct": 16.3,
       "whiff_pct": 8.8,
-      "xwoba_contact": 0.432,
+      "xwoba_contact": 0.422,
       "locations_x": [
         -0.84,
         0.78,
@@ -1768,9 +1768,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.5,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 109,
       "n_vs_r": 89,
       "n_vs_l": 20,
@@ -1790,7 +1790,7 @@
       "zone_pct": 39.4,
       "chase_pct": 25.8,
       "whiff_pct": 39.1,
-      "xwoba_contact": 0.162,
+      "xwoba_contact": 0.182,
       "locations_x": [
         0.03,
         0.58,
@@ -2243,7 +2243,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 107.2,
+      "stuff_plus": 108.3,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 102,
@@ -2265,7 +2265,7 @@
       "zone_pct": 29.4,
       "chase_pct": 30.6,
       "whiff_pct": 65.3,
-      "xwoba_contact": 0.182,
+      "xwoba_contact": 0.187,
       "locations_x": [
         -1.35,
         0.68,
@@ -2690,7 +2690,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 95.8,
+      "stuff_plus": 97.6,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 88,
