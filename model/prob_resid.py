@@ -80,17 +80,26 @@ _SAMPLE_SWING, _SAMPLE_GRID, _SAMPLE_NORM = 2_500_000, 1_500_000, 300_000
 _CELL_NAMES = ["GB", "FB", "PU"]
 
 
+def _num(df: pd.DataFrame, name: str) -> pd.Series:
+    """A numeric column as a Series, or an all-NaN Series if the column is absent — so a
+    feed without spin_axis (minor leagues) yields NaN shape features, not a crash."""
+    s = df.get(name)
+    if s is None:
+        return pd.Series(np.nan, index=df.index, dtype="float64")
+    return pd.to_numeric(s, errors="coerce")
+
+
 def add_magnus(df: pd.DataFrame) -> pd.DataFrame:
     """Add induced-Magnus accel components from raw kinematics (feeds the cutter router).
     Idempotent. ind_vert / ind_horiz(_arm) are ROUTER_FEATS only — scoring uses SHAPE_FEATS.
     """
     hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
-    vx = pd.to_numeric(df.get("vx0"), errors="coerce").values
-    vy = pd.to_numeric(df.get("vy0"), errors="coerce").values
-    vz = pd.to_numeric(df.get("vz0"), errors="coerce").values
-    ax = pd.to_numeric(df.get("ax"), errors="coerce").values
-    az = pd.to_numeric(df.get("az"), errors="coerce").values
-    ay = pd.to_numeric(df.get("ay"), errors="coerce").values
+    vx = _num(df, "vx0").values
+    vy = _num(df, "vy0").values
+    vz = _num(df, "vz0").values
+    ax = _num(df, "ax").values
+    az = _num(df, "az").values
+    ay = _num(df, "ay").values
     vm = np.sqrt(vx * vx + vy * vy + vz * vz)
     aax, aaz = ax, az + _G
     with np.errstate(invalid="ignore", divide="ignore"):
@@ -107,13 +116,13 @@ def _transverse_accel(df: pd.DataFrame):
     """Alan Nathan transverse (Magnus-frame) acceleration components aTx, aTz, and the
     arm sign, from raw 9P kinematics. Drag is projected out along the ball's velocity."""
     hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
-    vx0 = pd.to_numeric(df.get("vx0"), errors="coerce").values
-    vy0 = pd.to_numeric(df.get("vy0"), errors="coerce").values
-    vz0 = pd.to_numeric(df.get("vz0"), errors="coerce").values
-    ax  = pd.to_numeric(df.get("ax"), errors="coerce").values
-    ay  = pd.to_numeric(df.get("ay"), errors="coerce").values
-    az  = pd.to_numeric(df.get("az"), errors="coerce").values
-    ext = pd.to_numeric(df.get("release_extension"), errors="coerce").clip(4, 8).values
+    vx0 = _num(df, "vx0").values
+    vy0 = _num(df, "vy0").values
+    vz0 = _num(df, "vz0").values
+    ax  = _num(df, "ax").values
+    ay  = _num(df, "ay").values
+    az  = _num(df, "az").values
+    ext = _num(df, "release_extension").clip(4, 8).values
     with np.errstate(invalid="ignore", divide="ignore"):
         yR = 60.5 - ext
         tR = (-vy0 - np.sqrt(np.clip(vy0 ** 2 - 2 * ay * (50 - yR), 0, None))) / ay
@@ -132,7 +141,7 @@ def fit_spin_offset(df: pd.DataFrame) -> dict:
     four-seamers, whose movement is pure Magnus. Saved so inference can align a single
     pitcher's spin axis to the movement frame. Returns {'R': deg, 'L': deg}."""
     aTx, aTz, _ = _transverse_accel(df)
-    sa = pd.to_numeric(df.get("spin_axis"), errors="coerce").values
+    sa = _num(df, "spin_axis").values
     mdir = np.degrees(np.arctan2(aTz, aTx)) % 360
     ff = (df["pitch_type"].astype(str) == "FF").values
     throws = df["p_throws"].astype(str).values
@@ -177,7 +186,7 @@ def add_shape_features(df: pd.DataFrame, spin_off: dict | None = None) -> pd.Dat
     """
     off = spin_off or _spin_offset()
     aTx, aTz, hs = _transverse_accel(df)
-    sa = pd.to_numeric(df.get("spin_axis"), errors="coerce").values
+    sa = _num(df, "spin_axis").values
     throws = df["p_throws"].astype(str).values
     off_row = np.where(throws == "L", off.get("L", 83.0), off.get("R", 97.0))
     phiM = np.radians(sa - off_row)
@@ -189,7 +198,7 @@ def add_shape_features(df: pd.DataFrame, spin_off: dict | None = None) -> pd.Dat
     df["mag_horiz_arm"] = magx * hs
     df["nonmag_vert"] = nmz
     df["nonmag_horiz_arm"] = nmx * hs
-    df["release_pos_x_arm"] = pd.to_numeric(df.get("release_pos_x"), errors="coerce").values * hs
+    df["release_pos_x_arm"] = _num(df, "release_pos_x").values * hs
     return df
 
 
@@ -262,8 +271,8 @@ def _count_adjusted_rv(df: pd.DataFrame) -> pd.Series:
     """delta_run_exp with the mean removed per (balls, strikes) count — a shape-neutral,
     count-adjusted run value. Base-out state is added when those columns are present."""
     dre = pd.to_numeric(df["delta_run_exp"], errors="coerce")
-    b = pd.to_numeric(df.get("balls"), errors="coerce").fillna(0).astype(int)
-    s = pd.to_numeric(df.get("strikes"), errors="coerce").fillna(0).astype(int)
+    b = _num(df, "balls").fillna(0).astype(int)
+    s = _num(df, "strikes").fillna(0).astype(int)
     grp = pd.DataFrame({"b": b, "s": s, "d": dre})
     keys = ["b", "s"]
     have_situ = all(c in df.columns for c in ("on_1b", "on_2b", "on_3b", "outs_when_up"))
@@ -280,7 +289,7 @@ def _grid_cell(df: pd.DataFrame) -> pd.Series:
     """SIERA-style batted-ball label by launch angle — 0 ground ball (<10°),
     1 fly ball (25–50°), 2 pop-up (≥50°). Line drives (10–25°) are left NaN and excluded
     from training: line-drive rate is a batter/luck outcome, not a pitcher skill."""
-    la = pd.to_numeric(df.get("launch_angle"), errors="coerce")
+    la = _num(df, "launch_angle")
     cell = pd.Series(np.nan, index=df.index)
     cell[la < 10] = 0                     # ground ball
     cell[(la >= 25) & (la < 50)] = 1      # fly ball
@@ -430,9 +439,9 @@ def predict_family_rv(df: pd.DataFrame, ens: dict) -> np.ndarray:
 
 
 def _batter_zone(df: pd.DataFrame) -> pd.Series:
-    px = pd.to_numeric(df.get("plate_x"), errors="coerce")
-    pz = pd.to_numeric(df.get("plate_z"), errors="coerce")
-    szt = pd.to_numeric(df.get("sz_top"), errors="coerce")
-    szb = pd.to_numeric(df.get("sz_bot"), errors="coerce")
+    px = _num(df, "plate_x")
+    pz = _num(df, "plate_z")
+    szt = _num(df, "sz_top")
+    szb = _num(df, "sz_bot")
     inz = (px.abs().values <= ZONE_HALF) & (pz.values >= szb.values) & (pz.values <= szt.values)
     return pd.Series(np.where(pz.notna().values, inz, False), index=df.index).fillna(False)
