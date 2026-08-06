@@ -1,85 +1,99 @@
 # Manual verification
 
-Verification of the Sprint 4 change: replacing the three-family Stuff+ model with the one
-global swing-outcome model (`v500_global_swing_grid`). Manual checks are paired with the
-automated suite in `tests/` — the automated tests pin invariants (arm-signing, monotonicity,
-handedness), the manual checks confirm the grades are sensible against the eye test.
+Verification of the Sprint 4 change: replacing the one global Stuff+ model with the
+**fastball / non-fastball split** model (`v600_fbsplit_siera`). Manual checks are paired with
+the automated suite in `tests/` — the automated tests pin invariants (spin_axis dependency,
+line-drive exclusion, routing, velocity monotonicity), the manual checks confirm the grades
+are sensible against the eye test.
 
 ## Environment
 
-- Retrain: `python main.py train` on 2022–2025 (~2.9 M pitches).
-- Re-score: `python main.py score` (all live-season tables).
-- Board: per-(pitcher, pitch-type) grade of the average pitch, 2026 MLB.
+- Retrain: `python main.py train` on 2022–2025 (~2.9 M pitches, cached features).
+- Board: per-(pitcher, pitch-type) grade of the average pitch, 2026 MLB, n ≥ 50.
 
 ## 1. Training completes and produces the expected model
 
-**Expected:** one model artifact `ensemble_all.pkl`; the three family artifacts removed;
-sensible run values and grid cell values.
+**Expected:** one model artifact `ensemble_all.pkl` with two group models on separate scales;
+the per-hand spin-axis offset saved; contact-score → run-value slopes negative (a
+ground-ball-heavy shape lowers run value).
 
 **Observed:** ✅
 ```
+Cutter router: 14,461 FC->FB, 210,771 FC->BR of 225,232
 values: whiff=-0.1130  foul=-0.0387
-grid RV=[GB<95=-0.106, GB95+=+0.052, air<95=+0.016, air95+=+0.425, pop=-0.237]
-saved -> ensemble_all.pkl ; removed ensemble_{fb,os,br}.pkl
+[FB]    RV=-0.0376*(GB-FB-PU)-0.0196  norm mean=-0.04549 std=0.00571  (swings 664,570, in-play 192,827)
+[NONFB] RV=-0.0406*(GB-FB-PU)-0.0136  norm mean=-0.05386 std=0.00796  (swings 709,254, in-play 198,160)
+Model version: 78768b705ae9
 ```
-Whiffs and pop-ups help the pitcher (negative RV); hard air balls (air95+) are the most
-damaging cell (+0.425). Matches intuition.
+Both slopes are negative — a higher `GB − FB − PU` (more grounders, fewer fly balls) lowers
+expected run value, as SIERA intends. spin_offset saved as `{R: 96.8°, L: 82.6°}`, matching
+the documented convention offsets.
 
-## 2. Fastball leaderboard matches the eye test
+## 2. Fastballs are graded against fastballs (the point of the split)
 
 **Expected:** velocity-plus-ride power arms lead the four-seams; Misiorowski and Miller at the
-top; no soft-tosser inflated to the top.
+top; sinkers rate within the fastball group instead of being buried.
 
 **Observed:** ✅
 ```
-FF: Misiorowski 117 · Miller 110 · Scott 110 · Helsley 109 · Cease 108 · Zeferjahn 108 · Burns 107
-    Miller, Mason  FF 110  (101.4 mph)
-    Misiorowski    FF 117  (100.6 mph)
+FF: Misiorowski 130 · Kempner 125 · Miller 124 · Lawrence 119 · Cuas 117 · Alvarado 113
+SI: Holmes 124 · Garcia 117 · Loáisiga 116 · Cano 115 · Ginn 114
+FC: Alvarado 129 · Roycroft 111 · Holmes 109
+    Miller, Mason  FF 124   Misiorowski FF 130   Holmes, Clay SI 124 (SSW sinker rates elite)
 ```
+Under the previous single-scale model these same fastballs graded ~104 (buried under breaking
+balls). On the fastball scale they now separate correctly, and Holmes' seam-shifted sinker
+rates elite among sinkers.
 
-## 3. Grades are on one global scale (fastballs below breaking balls)
+## 3. Separate per-group scales
 
-**Expected:** by design, one shared scale — breaking balls average above fastballs.
+**Expected:** each group centered near 100 on its own scale, so a fastball's grade is relative
+to fastballs and a breaking ball's to breaking balls (not one shared scale).
 
-**Observed:** ✅ per-type mean grade `FF:93  SI:91  SL:108  ST:109  CH:107  FS:109`. This is the
-intended behavior of a single-scale model (documented in
-[global-swing-model.md](global-swing-model.md)); it is *not* a defect. Callers that want each
-type centered at 100 use the retained per-family tagging.
+**Observed:** ✅ the FB and NONFB norms above are distinct (`-0.0455/0.0057` vs
+`-0.0539/0.0080`); breaking/offspeed no longer sit structurally above every fastball.
 
-## 4. Handedness symmetry (also automated)
+## 4. A card cannot be made until Statcast fills the 3D spin axis (also automated)
 
-**Expected:** a lefty and a righty throwing physically mirrored pitches grade identically.
+**Expected:** the Magnus/non-Magnus split needs `spin_axis`; a pitch with no spin axis is
+unscorable (NaN grade) and gains a grade once the axis is filled in.
 
-**Observed:** ✅ `tests/test_predict.py::test_handedness_mirror_scores_identically` passes; the
-arm-signed features are byte-identical for mirrored raw kinematics.
+**Observed:** ✅ `tests/test_predict.py::test_spin_axis_required_to_score` passes — the same
+pitch grades to a finite number with `spin_axis` present and to NaN without it. Confirmed
+end-to-end: scoring the 2026 board, pitches missing `spin_axis` produce no grade.
 
-## 5. Velocity monotonicity (also automated)
+## 5. Line drives are excluded from the contact head (also automated)
 
-**Expected:** holding shape fixed, more velocity → more whiffs → a better grade.
+**Expected:** launch angles 10–25° (line drives) are dropped from the GB/FB/PU labelling —
+line-drive rate is batter/luck, not a pitcher skill.
 
-**Observed:** ✅ `test_whiff_probability_rises_with_velocity` and `test_higher_velocity_grades_better`
-pass; a 101 mph four-seam grades above the same shape at 91.
+**Observed:** ✅ `tests/test_prob_resid.py::test_grid_cell_excludes_line_drives` passes; the
+contact head trains only on ground balls, fly balls, and pop-ups.
+
+## 6. Routing, handedness, velocity (automated)
+
+**Observed:** ✅ `test_both_groups_score` (a fastball and a slider each grade finite on their
+own scale), `test_release_side_is_arm_normalized`, and `test_higher_velocity_grades_better`
+all pass — a 101 mph four-seam grades above the same shape at 91.
 
 ## Verification after refactoring
 
-The change refactored three code paths that used to loop over three family models
-(`predict`, `_composite_pitch_grade`, and the `train` family loop) down to a single global
-pass. To confirm the refactor did not silently break scoring:
+The change replaced the single-model scoring pass with two group models + per-group
+normalization, and removed a dead back-compat block that wrote unused `norm_global*.pkl`
+files. To confirm the refactor did not silently break scoring:
 
-- **Import/interface check:** `predict_family_rv` was kept as a back-compat alias so existing
-  callers still resolve; a repo-wide grep confirmed no remaining references to the removed
-  `.ensembles` / `_fam_norm` / per-family artifacts outside the experiments folder.
-- **End-to-end re-score:** all eight live-season tables re-scored cleanly (exit 0), producing
-  finite grades — e.g. `pitches_2026_scored` 461,325 rows with no NaN blow-ups.
-- **Automated suite:** 15/15 tests pass after the refactor.
+- **Import/interface check:** `predict_global_rv` / `predict_family_rv` kept as back-compat
+  aliases; a repo-wide grep confirmed no remaining readers of the removed norm files.
+- **End-to-end:** the production model loads and grades the 2026 board with finite grades for
+  every pitch that has a spin axis; the spin_axis / group routing behave as above.
+- **Automated suite:** 17/17 tests pass after the refactor.
 
 ## Discovered limitations (recorded, not fixed)
 
-- **Contact grid over-credits weak contact on four-seams.** Matt Festa's dead 92 mph four-seam
-  grades 106 — slightly above Eury Pérez's 98 mph four-seam (105) — because the contact grid
-  reads Festa's soft-contact shape favorably. This is a known property of the contact-grid
-  valuation (the grid assumes hittable-looking shapes yield the contact its cells imply), and
-  the same mechanism under-grades running power four-seams. It is documented here as a
-  limitation of the shipped model rather than a regression; the whiff head alone ranks these
-  pitches correctly. A future iteration (whiff + HR-only in-play for fastballs) would address
-  it.
+- **The compressed fastball group inflates soft-tossers.** Because within-group standardization
+  amplifies small differences, low-velocity four-seams float up: Zuber grades ~112 and Festa's
+  dead 92 mph four-seam ~106, higher than they should among fastballs, while Eury Pérez's
+  genuinely good four-seam sits ~98. The single-scale model kept these near 100 but buried the
+  good fastballs; the split fixes the burying at the cost of this inflation. Tunable via the
+  contact-score weights or a monotonic velocity prior — recorded as a known property of the
+  shipped split model, not a regression.

@@ -29,9 +29,10 @@ scrapers ─▶ data/statcast.db ─▶ main.py score ─▶ *_scored tables ─
 Everything above the model treats a pitch as a row of raw Statcast columns; everything the
 model needs is derived inside `model/`. The contract is small and stable:
 
-- **`model/prob_resid.py`** owns the model — the shape features (`SHAPE_FEATS`), how they are
-  derived from raw kinematics (`add_shape_features`), the training routine
-  (`train_global_model`), and scoring (`predict_global_rv`).
+- **`model/prob_resid.py`** owns the model — the 10 Magnus/non-Magnus shape features
+  (`SHAPE_FEATS`), how they are derived from raw kinematics and the measured spin axis
+  (`add_shape_features`), the two-group training routine (`train_split_model`), and scoring
+  (`predict_group_rv` → raw xRV, `grade_pitches` → per-group z-score).
 - **`model/train.py`** runs a full training pass and writes every inference artifact to
   `model/artifacts/`: the model (`ensemble_all.pkl`), movement baselines, spin-axis lookup,
   the cutter router, and normalization constants.
@@ -41,37 +42,43 @@ model needs is derived inside `model/`. The contract is small and stable:
 
 Because the model reads only its own artifacts and writes only those two columns, the model
 can be replaced without touching ingestion, aggregation, or the web layer — which is exactly
-what the v500 change below did.
+what the split change below did.
 
-## v500 — model responsibility change (Sprint 4)
+## v600 — fastball / non-fastball split (Sprint 4)
 
-The previous model (`v402_family_prob`) was **three separate family models** (fastball /
-offspeed / breaking), each normalized on its own scale, composing
-`P(whiff)·V_whiff + P(in-play)·P(HR|in-play)·V_HR` on induced-Magnus features.
+The previous model (`v500_global_swing_grid`) was **one global model on a single scale**,
+which buried fastballs under breaking balls: breaking balls miss more bats, so they averaged
+above every four-seam and no fastball could stand out.
 
-It was replaced by **one global swing-outcome model** (see
-[global-swing-model.md](global-swing-model.md)): a single swing softmax
-`{whiff, foul, in-play}` plus a 5-cell contact grid, on raw-acceleration shape features, with
-one global normalization scale.
+It was replaced by a **fastball / non-fastball split** — two models, cutters routed by the
+Mahalanobis classifier — each **normalized on its OWN scale**, so a fastball is graded against
+fastballs and a breaking ball against breaking balls. Each model is a swing softmax
+`{whiff, foul, in-play}` plus a **SIERA-style contact head**: a GB/FB/PU classifier whose
+in-play value is `a·(P(GB) − P(FB) − P(PU)) + b`, with **line drives excluded** from training
+(line-drive rate is a batter/luck outcome, not a repeatable pitcher skill). Shape is now the
+10 **Magnus/non-Magnus** features derived from the measured 3D spin axis (Nathan's method), so
+a pitch is unscorable until Statcast fills its `spin_axis` in. Features are RobustScaler-
+standardized before the linear-tree heads.
 
 The swap stayed inside the model boundary:
 
-- `predict.py` now loads one artifact (`ensemble_all.pkl`) and applies one scale, instead of
-  routing each pitch to one of three family models and three scales.
-- `train.py` trains and saves one model instead of three.
-- The cutter router and `assign_family` helpers are retained for pitch-family tagging but no
-  longer gate scoring.
-- Ingestion, aggregation, persistence, and the web app were unchanged apart from one comment
-  and the feature-column list `app.py` derives from `SHAPE_FEATS` (which updates itself).
+- `predict.py` routes each pitch to its group model and normalizes on that group's scale
+  (`grade_pitches`), instead of one global scale.
+- `train.py` trains two group models and saves the per-hand spin-axis convention offset
+  (`spin_offset.pkl`) that the Magnus split needs at inference.
+- `app.py` adds `spin_axis` to the columns it pulls (the Magnus split depends on it);
+  ingestion, aggregation, persistence, and the web app are otherwise unchanged.
 
 ## Data and artifacts
 
 - `data/statcast.db` — raw `pitches_<season>` and scored `pitches_<season>_scored` tables.
   Git-ignored; a mounted volume on Railway.
-- `model/artifacts/ensemble_all.pkl` — the trained model (swing softmax + contact grid +
-  run values + normalization). Committed.
-- `model/artifacts/{movement_baselines,cutter_router,spin_axis_lookup,norm_global*}.pkl` —
-  supporting inference artifacts. Committed.
+- `model/artifacts/ensemble_all.pkl` — the trained split model (two group models: swing
+  softmax + SIERA contact head, the RobustScaler, run values, and per-group normalization).
+  Committed.
+- `model/artifacts/{movement_baselines,cutter_router,spin_axis_lookup,spin_offset}.pkl` —
+  supporting inference artifacts (`spin_offset` is the per-hand Magnus convention offset).
+  Committed.
 - `model/artifacts/feature_cache.parquet` — the engineered training frame, rebuilt by
   `main.py train`. Git-ignored (large, regenerable).
 - `profiles/output/**/*.json` — leaderboards and pitcher cards. Committed (PNGs are not).

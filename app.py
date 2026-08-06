@@ -183,10 +183,10 @@ _SCORED_COLS = [
 try:
     from model.prob_resid import SHAPE_FEATS as _MODEL_FEATS, ROUTER_FEATS as _RTR_FEATS
     # Model features + router features + the raw kinematics add_shape_features needs to
-    # regenerate the arm-signed shape columns (ax_arm / release_pos_x_arm) — without
-    # these the composite grader falls back to mean-of-grades (a different number).
+    # regenerate the Magnus/non-Magnus shape columns. spin_axis is required for the
+    # Magnus split — a pitch with no 3D spin axis can't be scored (NaN grade).
     _needed = list(_MODEL_FEATS) + list(_RTR_FEATS) + \
-        ["release_pos_x", "vx0", "vy0", "vz0", "ax", "ay", "az"]
+        ["release_pos_x", "vx0", "vy0", "vz0", "ax", "ay", "az", "spin_axis", "release_extension"]
     for _f in _needed:
         if _f not in _SCORED_COLS:
             _SCORED_COLS.append(_f)

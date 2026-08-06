@@ -1,17 +1,18 @@
 """
 Stuff+ model training.
 
-Trains the production model: one global LightGBM swing-outcome model — a swing
-softmax {whiff, foul, in-play} plus a 5-cell contact grid — on 8 arm-normalized
-raw-shape features (see model/prob_resid.py). Grades are one global scale, so a
-pitch is measured against every pitch, not just its own type.
+Trains the production model: a fastball / non-fastball SPLIT model (cutters routed by a
+Mahalanobis classifier) — each group a swing softmax {whiff, foul, in-play} plus a
+SIERA-style GB/FB/PU contact head — on 10 arm-normalized Magnus/non-Magnus shape
+features (see model/prob_resid.py). Each group is normalized on its OWN scale, so a
+fastball is graded against fastballs and a breaking ball against breaking balls.
 
 train_unified() does the full run:
   1. engineer shape features (cached to model/feature_cache.parquet) + Magnus/shape backfill,
   2. save the movement/spin baselines inference needs,
-  3. fit and save the cutter router (family tagging only),
-  4. train the one global model (train_global_model) and save it,
-  5. compute and save global normalization (current + historical),
+  3. fit + save the cutter router and the per-hand spin-axis convention offset,
+  4. train the two-group split model (train_split_model) and save it,
+  5. compute and save per-group normalization (current + historical),
   6. write the model version hash.
 """
 
@@ -29,7 +30,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v500_global_swing_grid"
+MODEL_VERSION = "v600_fbsplit_siera"
 
 
 def train_unified(df: pd.DataFrame) -> dict:
@@ -110,10 +111,13 @@ def train_unified(df: pd.DataFrame) -> dict:
         df["stand_r"] = (df["stand"] == "R").astype(int)
 
     from model.prob_resid import (add_magnus, add_shape_features, fit_cutter_router,
-                                   assign_family, bucket_values, train_global_model,
-                                   predict_global_rv, SHAPE_FEATS)
-    # Backfill induced-Magnus (router) + raw shape features (scoring). Both idempotent.
+                                   assign_family, bucket_values, train_split_model,
+                                   predict_group_rv, fit_spin_offset, _assign_group,
+                                   SHAPE_FEATS, GROUPS)
+    # Backfill induced-Magnus (router feats). Then fit + save the per-hand spin-axis
+    # convention offset, and derive the 10 Magnus/non-Magnus shape features. All idempotent.
     add_magnus(df)
+    fit_spin_offset(df)
     add_shape_features(df)
 
     # --- Cutter router (fastball vs breaking family), fit + saved (family tagging only) ---
@@ -129,39 +133,34 @@ def train_unified(df: pd.DataFrame) -> dict:
     V = bucket_values(df)
     logger.info(f"  values: whiff={V['whiff']:+.4f}  foul={V['foul']:+.4f}")
 
-    # --- Train the one global model (swing softmax + 5-cell contact grid) ---
+    # --- Train the two-group split model (FB / non-FB swing softmax + SIERA contact head) ---
     _sf = df[SHAPE_FEATS].notna().all(axis=1)
     if int(_sf.sum()) < 5000:
         raise RuntimeError(f"Too few shaped pitches to train ({int(_sf.sum())}).")
-    ens = train_global_model(df, V)
+    ens = train_split_model(df, V, router)
 
-    # Historical norm (<=2024) so 2023/2024 seasons grade on a contamination-free scale.
+    # Per-group historical norms (<=2024) so 2023/2024 seasons grade on a clean scale.
     _hist = (df["game_year"] <= 2024) if "game_year" in df.columns else None
     if _hist is not None:
-        hi = df.index[_hist & _sf]
-        if len(hi):
-            hsamp = df.loc[hi, SHAPE_FEATS].sample(n=min(300000, len(hi)), random_state=42)
-            eh = predict_global_rv(hsamp, ens)
-            ens["norm_hist"] = {"mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
+        _grp = _assign_group(df, router)
+        for _gname in GROUPS:
+            hi = df.index[_hist & _sf & (_grp == _gname)]
+            if len(hi):
+                if len(hi) > 300000:
+                    hi = pd.Index(np.random.RandomState(42).choice(hi.values, 300000, replace=False))
+                eh = predict_group_rv(df.loc[hi], ens)   # full rows (needs pitch_type + router feats)
+                ens["groups"][_gname]["norm_hist"] = {
+                    "mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
 
     save_ensemble(ens, "all")
     ensembles = {"all": ens}
     logger.info("  saved -> ensemble_all.pkl")
 
-    # Drop the old per-family models so predict.py loads the single global model.
+    # Drop any stale per-family model files so predict.py only loads ensemble_all.pkl.
     for _fam_key in ("fb", "os", "br"):
         _fp = os.path.join(MODEL_DIR, f"ensemble_{_fam_key}.pkl")
         if os.path.exists(_fp):
             os.remove(_fp); logger.info(f"  Removed stale ensemble_{_fam_key}.pkl")
-
-    # Back-compat: legacy readers still probe norm_global*; point them at the global norm.
-    for _n in ("norm_global.pkl", "norm_global_historical.pkl"):
-        with open(os.path.join(MODEL_DIR, _n), "wb") as f:
-            pickle.dump({"mean": ens["norm"]["mean"], "std": ens["norm"]["std"]}, f)
-    for _n in ("norm_family.pkl", "norm_per_type.pkl",
-               "norm_family_historical.pkl", "norm_per_type_historical.pkl"):
-        with open(os.path.join(MODEL_DIR, _n), "wb") as f:
-            pickle.dump({}, f)
 
     version = hashlib.md5(MODEL_VERSION.encode()).hexdigest()[:12]
     with open(os.path.join(MODEL_DIR, "model_version.txt"), "w") as f:
