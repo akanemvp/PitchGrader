@@ -62,3 +62,6 @@ model/artifacts/residual_models.pkl
 model/artifacts/pitcher_level_norms.pkl
 model/artifacts/*.bak
 model/artifacts/*_backup.pkl
+
+# Local scratch eval scripts (session tools, not part of the deliverable)
+scratchpad_*.py

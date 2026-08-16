@@ -1,99 +1,108 @@
 # Manual verification
 
-Verification of the Sprint 4 change: replacing the one global Stuff+ model with the
-**fastball / non-fastball split** model (`v600_fbsplit_siera`). Manual checks are paired with
-the automated suite in `tests/` — the automated tests pin invariants (spin_axis dependency,
-line-drive exclusion, routing, velocity monotonicity), the manual checks confirm the grades
-are sensible against the eye test.
+Verification of the Sprint 5 model (`v700_threegroup_gbair`): a three-group (fastball /
+breaking / offspeed) probability model on **one shared scale** with **global run values** and a
+**GB/air contact head** (exit-velocity heads removed). Manual checks are paired with the
+automated suite in `tests/` — the automated tests pin invariants (feature derivation,
+kinematics-only scoring, GB/air labelling, routing, velocity monotonicity), the manual checks
+confirm the grades are sensible against the eye test.
 
 ## Environment
 
 - Retrain: `python main.py train` on 2022–2025 (~2.9 M pitches, cached features).
-- Board: per-(pitcher, pitch-type) grade of the average pitch, 2026 MLB, n ≥ 50.
+- Board: per-(pitcher, pitch-type) grade of the average pitch, 2026 MLB, scored out-of-sample.
 
 ## 1. Training completes and produces the expected model
 
-**Expected:** one model artifact `ensemble_all.pkl` with two group models on separate scales;
-the per-hand spin-axis offset saved; contact-score → run-value slopes negative (a
-ground-ball-heavy shape lowers run value).
+**Expected:** one model artifact `ensemble_all.pkl` with three group models on one shared
+scale; one global set of outcome run values; a negative ground-ball value and positive air
+value.
 
 **Observed:** ✅
 ```
-Cutter router: 14,461 FC->FB, 210,771 FC->BR of 225,232
-values: whiff=-0.1130  foul=-0.0387
-[FB]    RV=-0.0376*(GB-FB-PU)-0.0196  norm mean=-0.04549 std=0.00571  (swings 664,570, in-play 192,827)
-[NONFB] RV=-0.0406*(GB-FB-PU)-0.0136  norm mean=-0.05386 std=0.00796  (swings 709,254, in-play 198,160)
-Model version: 78768b705ae9
+global values: Vwh=-0.1129 Vfo=-0.0387 Vgb=-0.0452 Vair=+0.1291
+[FB]  (8f) outcome n=664,570 (rounds=211), in-play n=248,236 (GB/air classifier rounds=83)
+[BR]  (8f) outcome n=514,259 (rounds=558), in-play n=179,990 (GB/air classifier rounds=155)
+[OFF] (8f) outcome n=194,995 (rounds=199), in-play n=72,739  (GB/air classifier rounds=44)
+Model version: 0ac2c07911b8
 ```
-Both slopes are negative — a higher `GB − FB − PU` (more grounders, fewer fly balls) lowers
-expected run value, as SIERA intends. spin_offset saved as `{R: 96.8°, L: 82.6°}`, matching
-the documented convention offsets.
+A whiff costs the batter the most (−0.113), a foul less (−0.039), a ground ball is mildly good
+for the pitcher (−0.045), and an air ball is bad (+0.129) — the expected signs. All three
+groups share the one norm; values are global.
 
-## 2. Fastballs are graded against fastballs (the point of the split)
+## 2. Grades match the eye test
 
-**Expected:** velocity-plus-ride power arms lead the four-seams; Misiorowski and Miller at the
-top; sinkers rate within the fastball group instead of being buried.
+**Expected:** velocity-plus-ride power arms lead the four-seams; elite breaking balls top their
+groups; a dead-average pitch sits near 100; no blow-ups.
 
-**Observed:** ✅
+**Observed (2026 board):** ✅
 ```
-FF: Misiorowski 130 · Kempner 125 · Miller 124 · Lawrence 119 · Cuas 117 · Alvarado 113
-SI: Holmes 124 · Garcia 117 · Loáisiga 116 · Cano 115 · Ginn 114
-FC: Alvarado 129 · Roycroft 111 · Holmes 109
-    Miller, Mason  FF 124   Misiorowski FF 130   Holmes, Clay SI 124 (SSW sinker rates elite)
+FF: Misiorowski 118 · Miller 114 · Scott 110 · Alvarado 110
+SI: Cano 111 · Little 110 · Holmes 106
+FC: Alvarado 124 · Roycroft 115 · Misiorowski 113
+CU: Jax 135 · Taylor 132 · Glasnow 131 · Misiorowski 131
+per-type mean: KC 113 · FS 111 · CH 108 · CU 108 · SL 107 · ST 102 · FC 99 · SI 95 · FF 94
 ```
-Under the previous single-scale model these same fastballs graded ~104 (buried under breaking
-balls). On the fastball scale they now separate correctly, and Holmes' seam-shifted sinker
-rates elite among sinkers.
+Misiorowski and Miller lead the four-seams; Alvarado's cutter (routed to the breaking group)
+and the sharp curveballs sit at the top; Skenes' four-seam (95) and the field spread sensibly.
+No pitch runs to an extreme outlier.
 
-## 3. Separate per-group scales
+## 3. One shared scale + global values (not per-group)
 
-**Expected:** each group centered near 100 on its own scale, so a fastball's grade is relative
-to fastballs and a breaking ball's to breaking balls (not one shared scale).
+**Expected:** all three groups z-scored on a single scale, so fastballs sit below breaking
+balls on average (breaking balls miss more bats and induce softer contact) rather than each
+group being re-centered to 100.
 
-**Observed:** ✅ the FB and NONFB norms above are distinct (`-0.0455/0.0057` vs
-`-0.0539/0.0080`); breaking/offspeed no longer sit structurally above every fastball.
+**Observed:** ✅ per-type means range from FF/SI ≈ 94–95 up to KC/FS ≈ 111–113 on the one
+scale — fastballs are graded against the whole population, and the global values mean a whiff
+is worth the same in every group.
 
-## 4. A card cannot be made until Statcast fills the 3D spin axis (also automated)
+## 4. A pitch scores from kinematics — `spin_axis` is not required (also automated)
 
-**Expected:** the Magnus/non-Magnus split needs `spin_axis`; a pitch with no spin axis is
-unscorable (NaN grade) and gains a grade once the axis is filled in.
+**Expected:** the induced-movement features come from the pitch's trajectory, not the measured
+spin axis, so a feed without `spin_axis` (minor leagues) still scores.
 
-**Observed:** ✅ `tests/test_predict.py::test_spin_axis_required_to_score` passes — the same
-pitch grades to a finite number with `spin_axis` present and to NaN without it. Confirmed
-end-to-end: scoring the 2026 board, pitches missing `spin_axis` produce no grade.
+**Observed:** ✅ the same four-seam grades to **94.6 with `spin_axis` present and 94.6 with it
+NaN** — identical. `tests/test_predict.py::test_scores_from_kinematics` pins this, and also
+that a pitch missing a real shape feature (e.g. `release_speed`) is left ungraded (NaN).
 
-## 5. Line drives are excluded from the contact head (also automated)
+## 5. The GB/air contact head — why exit velocity was removed
 
-**Expected:** launch angles 10–25° (line drives) are dropped from the GB/FB/PU labelling —
-line-drive rate is batter/luck, not a pitcher skill.
+**Expected:** a simple GB/air classifier captures the repeatable contact signal at least as
+well as the more complex exit-velocity machinery it replaced.
 
-**Observed:** ✅ `tests/test_prob_resid.py::test_grid_cell_excludes_line_drives` passes; the
-contact head trains only on ground balls, fly balls, and pop-ups.
+**Observed (out-of-sample, 2026, per pitcher×pitch-type):** ✅
+- Pitch **shape predicts exit velocity barely at all** — Pearson r = 0.18 (r² = 0.03); the
+  model's predicted EV spanned ~2.4 mph against 15.3 mph of real spread.
+- The **EV term added no ranking skill**: with ground-ball probability held fixed, the EV-only
+  contact score correlated −0.05 with actual contact run value (noise).
+- **P(GB) alone ranked contact damage as well or better** than the full EV model
+  (Spearman ≈ 0.19–0.23 vs xwOBAcon / dRE), and the full contact score was 93% just P(GB).
+
+So the exit-velocity heads were removed and the in-play term is `P(GB)·V_gb + P(air)·V_air`.
+This is recorded as a deliberate, evidence-based simplification, not a regression.
 
 ## 6. Routing, handedness, velocity (automated)
 
-**Observed:** ✅ `test_both_groups_score` (a fastball and a slider each grade finite on their
-own scale), `test_release_side_is_arm_normalized`, and `test_higher_velocity_grades_better`
-all pass — a 101 mph four-seam grades above the same shape at 91.
+**Observed:** ✅ `test_all_groups_score` (a fastball, slider, and changeup each grade finite on
+the shared scale), `test_release_side_is_arm_normalized` and
+`test_induced_horizontal_is_arm_normalized` (a mirror-image lefty and righty grade
+identically), and `test_higher_velocity_grades_better` (a 101 mph four-seam out-grades the same
+shape at 91) all pass.
 
-## Verification after refactoring
+## 7. Automated suite
 
-The change replaced the single-model scoring pass with two group models + per-group
-normalization, and removed a dead back-compat block that wrote unused `norm_global*.pkl`
-files. To confirm the refactor did not silently break scoring:
-
-- **Import/interface check:** `predict_global_rv` / `predict_family_rv` kept as back-compat
-  aliases; a repo-wide grep confirmed no remaining readers of the removed norm files.
-- **End-to-end:** the production model loads and grades the 2026 board with finite grades for
-  every pitch that has a spin axis; the spin_axis / group routing behave as above.
-- **Automated suite:** 17/17 tests pass after the refactor.
+**Observed:** ✅ `python -m pytest tests/` → **19 passed**. The suite was updated this sprint to
+match the current model (8 induced features, GB/air labelling, FB/BR/OFF routing,
+kinematics-only scoring) after the model core changed.
 
 ## Discovered limitations (recorded, not fixed)
 
-- **The compressed fastball group inflates soft-tossers.** Because within-group standardization
-  amplifies small differences, low-velocity four-seams float up: Zuber grades ~112 and Festa's
-  dead 92 mph four-seam ~106, higher than they should among fastballs, while Eury Pérez's
-  genuinely good four-seam sits ~98. The single-scale model kept these near 100 but buried the
-  good fastballs; the split fixes the burying at the cost of this inflation. Tunable via the
-  contact-score weights or a monotonic velocity prior — recorded as a known property of the
-  shipped split model, not a regression.
+- **Shape-only by design.** The model cannot see command, sequencing, or tunneling, so a
+  pitcher whose value comes from location rather than raw stuff will grade lower than his
+  results suggest — this is intentional (it is a Stuff+ metric) but worth stating.
+- **Fastballs sit below breaking balls on the shared scale.** Because every pitch is on one
+  scale, four-seams average ~94 and breaking balls ~107. This reflects real run value (breaking
+  balls miss more bats) but means a "100" is not the same achievement for a fastball as for a
+  slider. A per-group scale was tried and rejected — the shared scale keeps grades comparable
+  across types, which the product wants.

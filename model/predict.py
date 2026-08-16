@@ -1,14 +1,14 @@
 """
 Stuff+ inference — loads the trained model and turns pitches into grades.
 
-StuffPlusPredictor loads the one global swing-outcome model, then:
+StuffPlusPredictor loads the trained three-group model, then:
   1. engineers shape features for each pitch (unless already engineered),
-  2. derives the raw arm-signed shape columns the model scores on,
-  3. predicts each pitch's expected run value (xRV) with the global model,
-  4. normalizes on that pitch's GROUP scale (fastball vs non-fastball): 100 =
-     group-average pitch, 10 = one SD.
-Lower xRV = better pitch = higher grade. Fastballs are graded against fastballs and
-breaking/offspeed against their own group, so four-seams aren't buried under breaking balls.
+  2. derives the arm-signed induced shape columns the model scores on,
+  3. routes each pitch to its group model (fastball / breaking / offspeed, cutters routed)
+     and predicts its expected run value (xRV),
+  4. normalizes on the ONE SHARED scale: 100 = league-average pitch, 10 = one SD.
+Lower xRV = better pitch = higher grade. All three groups share one scale, so a fastball,
+breaking ball, and offspeed pitch are graded on the same scale.
 
 The shape features are arm-normalized and carry no handedness, so a lefty and a righty
 throwing physically identical pitches grade identically — one scoring pass per pitch.
@@ -80,8 +80,8 @@ class StuffPlusPredictor:
         if self.ensemble is None:
             logger.warning("Model not loaded — returning NaN")
             return df
-        add_magnus(df)          # router feats (ind_vert/ind_horiz_arm) for FB/NONFB routing
-        add_shape_features(df)  # Magnus/non-Magnus shape feats (needs spin_axis)
+        add_magnus(df)          # ind_vert/ind_horiz_arm (also router feats)
+        add_shape_features(df)  # induced shape feats
 
         # A pitch is scorable only when all 10 shape features are present — which
         # requires spin_axis (for the Magnus/non-Magnus split). No spin axis → NaN grade.
@@ -129,7 +129,7 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
         logger.warning(f"composite grade skipped — missing model features: {missing}")
         return {}
 
-    _agg = SHAPE_FEATS + [c for c in ("ind_vert", "ind_horiz_arm") if c in df.columns]
+    _agg = list(dict.fromkeys(list(SHAPE_FEATS) + ["ind_vert", "ind_horiz_arm"]))
     comp = df.groupby("pitch_type")[_agg].mean().dropna(subset=SHAPE_FEATS)
     if comp.empty:
         return {}

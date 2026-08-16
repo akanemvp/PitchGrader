@@ -1,4 +1,4 @@
-"""Behavioral tests for scoring (model/predict.py + the trained split model).
+"""Behavioral tests for scoring (model/predict.py + the trained three-group model).
 
 The property tests load the trained ensemble_all.pkl and are skipped if the model has
 not been trained yet, so the suite still passes on a fresh checkout. Run
@@ -41,13 +41,15 @@ def test_display_grade_soft_caps_above_knee():
 
 
 @needs_model
-def test_spin_axis_required_to_score():
-    """The card cannot be made until Statcast fills the 3D spin axis in: a pitch scores
-    to a finite grade with spin_axis present, and to NaN without it."""
-    with_axis = pr.grade_pitches(_raw(), ENS)
-    assert np.isfinite(with_axis[0])
-    without = pr.grade_pitches(_raw(spin_axis=np.nan), ENS)
-    assert np.isnan(without[0])
+def test_scores_from_kinematics():
+    """A pitch scores from its trajectory alone — with OR without spin_axis (the induced
+    features are kinematic), but is unscorable when a shape feature is missing entirely."""
+    with_axis = pr.grade_pitches(_raw(), ENS)[0]
+    without_axis = pr.grade_pitches(_raw(spin_axis=np.nan), ENS)[0]
+    assert np.isfinite(with_axis) and np.isfinite(without_axis)
+    assert with_axis == pytest.approx(without_axis)          # spin_axis does not affect the grade
+    unscorable = pr.grade_pitches(_raw(release_speed=np.nan), ENS)[0]
+    assert np.isnan(unscorable)                              # missing a shape feature -> no grade
 
 
 @needs_model
@@ -59,13 +61,14 @@ def test_higher_velocity_grades_better():
 
 
 @needs_model
-def test_both_groups_score():
-    """Routing works end to end: a fastball (FB group) and a slider (NONFB group) each
-    grade to a finite number on their own scale."""
+def test_all_groups_score():
+    """Routing works end to end: a fastball (FB), a slider (BR), and a changeup (OFF) each
+    grade to a finite number on the shared scale."""
     ff = pr.grade_pitches(_raw("FF"), ENS)[0]
     sl = pr.grade_pitches(_raw("SL", release_speed=86.0, release_spin_rate=2600.0,
                                ax=4.0, az=-32.0, spin_axis=120.0), ENS)[0]
-    assert np.isfinite(ff) and np.isfinite(sl)
+    ch = pr.grade_pitches(_raw("CH", release_speed=86.0, ax=-15.0, az=-24.0, spin_axis=230.0), ENS)[0]
+    assert np.isfinite(ff) and np.isfinite(sl) and np.isfinite(ch)
 
 
 @needs_model
