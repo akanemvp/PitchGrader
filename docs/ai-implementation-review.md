@@ -1,81 +1,99 @@
 # AI-assisted implementation review
 
-The Sprint 4 model change (the fastball / non-fastball split, `v600_fbsplit_siera`), its tests,
-and its docs were produced with an AI pair (Claude Code). This records how AI was used for
-exploration, test generation, and review, what was revised or rejected, and how the
-AI-generated work was verified before it was trusted.
+The Sprint 5 model (`v700_threegroup_gbair`) — the three-group model, the removal of the
+exit-velocity contact head, the rewritten tests, and this documentation — was produced with an
+AI pair (Claude Code). This records how AI was used for exploration, measurement, test
+generation, and cleanup, what was revised or rejected, and how the AI-generated work was
+verified before it was trusted.
 
 ## AI-assisted model exploration — the contact head
 
-The hard design problem was the in-play (contact) head. The AI worked through several
-candidates against a held-out 2026 eye-test board, and most were **rejected** for concrete,
-diagnosable reasons:
+The central Sprint 5 question was whether the model's exit-velocity contact machinery earned
+its complexity. Rather than argue it, the AI was directed to **measure it out-of-sample** (train
+on ≤2025, test on 2026), and the evidence — not intuition — drove the decision:
 
-- **Predict exit velocity → run value — rejected (inverted the model).** It graded elite
-  velocity *worse*: harder pitches produce higher exit velo when hit ("faster in, faster out"),
-  and only mistakes reach the in-play branch (selection), so the head learned "105 mph = easy
-  homer" and buried the best fastballs.
-- **Binary home-run head — rejected (too noisy).** Home runs are 4.5% of contact; with so few
-  positives per leaf the linear-tree leaves extrapolated the sparse velocity tail wildly (a
-  105 mph four-seam's grade collapsed). Regularizing it (large `min_data`) tamed the crash but
-  left a residual velocity dip.
-- **xwOBACON / barrel heads — worked but middling.** Both de-noised the HR signal, but still
-  charged elite velocity for hard contact through the same confound.
-- **SIERA-style GB/FB/PU with line drives excluded — accepted.** Modeling the *launch-angle
-  mix* the pitcher actually controls (ground balls vs fly balls vs pop-ups) rather than contact
-  *hardness* (which is mostly the batter) removed the velocity confound entirely and made the
-  velocity curve monotonic. Excluding line drives (10–25°) is deliberate: line-drive rate is a
-  batter/luck outcome, not a repeatable skill.
+- **Does shape predict exit velocity?** Barely — Pearson r = 0.18, r² = 0.03. Predicted EV
+  spanned ~2.4 mph against 15.3 mph of real spread. Exit velocity is overwhelmingly
+  batter-controlled; it is not a repeatable pitch-shape signal.
+- **Did the EV term add ranking skill?** No. With ground-ball probability held fixed, the
+  EV-only contact score correlated −0.05 with actual contact run value — statistical noise. The
+  full contact score turned out to be **93% just P(GB)**.
+- **Would a plain GB/air classifier do as well?** Yes — P(GB) alone ranked contact damage as
+  well or better than the full EV apparatus (Spearman ≈ 0.19–0.23).
 
-The value here was the AI running and *diagnosing* each dead end quickly, so the accepted
-design was chosen because the others demonstrably failed, not on a hunch.
+**Decision:** the exit-velocity heads (per-type EV-distribution regressors + empirical EV→RV
+curves — dozens of models) were **removed**, and the in-play term reduced to
+`P(GB)·V_gb + P(air)·V_air`. The value here was the AI running the measurement quickly and
+following the numbers to a simpler, better-justified model.
+
+A related finding the AI surfaced and the team accepted: because pitch shape *cannot* recover
+exit velocity, an "exit velocity over expected" idea (a residual metric popular in public
+analysis) would belong in a separate *pitcher*-level layer, not inside this shape-only Stuff+.
+
+## AI-assisted architecture experiments
+
+The AI built and boarded several structural variants side by side so the shipped design was
+chosen against real comparisons, not a hunch:
+
+- **Single model vs 2-group (FB/NONFB) vs 3-group (FB/BR/OFF) split**, all on one shared scale.
+  The split's measurable effect (once EV was gone) was concentrated in a few pitches — most
+  visibly cutters, which route to a dedicated group and grade more sharply there. The 3-group
+  split was kept for its cleaner within-family resolution.
+- **Per-group scales and per-group run values — rejected.** A whiff should be worth the same run
+  value regardless of the pitch that produced it; the shared scale + global values keep grades
+  comparable across pitch types, which the product wants.
+- **A pop-up (GB/air/pop-up) contact head and an HR-in-air head** were prototyped and boarded;
+  they re-tilted the fastball/sinker footing without a clear predictive win, and were not
+  shipped. (Pop-up propensity *is* shape-predictable, unlike exit velocity — noted for future
+  work.)
+
+## A correctness bug the AI found while documenting
+
+The earlier model required Statcast's `spin_axis` (its features used a Magnus/non-Magnus split
+derived from the measured spin axis). The current model's induced features come from the
+pitch's **kinematics** instead. While writing the docs the AI asserted the old "needs
+spin_axis" property, then **verified it empirically** rather than trusting the prior text — and
+found the same pitch grades to **94.6 with `spin_axis` and 94.6 without it**. The dependency was
+gone. The docs, the module docstrings, and two stale tests
+(`test_spin_axis_required_to_score`) were corrected to state the true behavior: the model scores
+from kinematics alone, so minor-league feeds without a spin axis now score. This is a case of
+**verifying a claim before documenting it**, and the verification changed the claim.
 
 ## AI-assisted test generation
 
-The test suite in `tests/` was drafted from a plain-language spec of the model's invariants:
+The test suite was rewritten this sprint to match the new model core:
 
-- **Pure-function tests** (`test_prob_resid.py`) — the Magnus/non-Magnus feature derivation and
-  its spin_axis dependency, the SIERA GB/FB/PU labelling and its line-drive exclusion, outcome
-  run-value signs, and FB/NONFB routing. No trained model needed, so they run in ~1 s.
-- **Behavioral tests** (`test_predict.py`) — the spin_axis-required-to-score property, velocity
-  monotonicity, both groups scoring, and the display-grade soft cap. These load the trained
-  `ensemble_all.pkl` and `skipif` it is absent, so a fresh checkout still passes.
+- **Pure-function tests** (`test_prob_resid.py`) — the induced-feature derivation, arm-side and
+  induced-horizontal normalization (a mirror-image lefty and righty grade identically), the
+  binary GB/air labelling, outcome run-value signs (whiff < foul < 0, GB < 0 < air), and
+  FB/BR/OFF routing. No trained model needed, so they run in ~1 s.
+- **Behavioral tests** (`test_predict.py`) — kinematics-only scoring (with and without
+  `spin_axis`), velocity monotonicity, all three groups scoring, and bounded finite grades.
+  These load `ensemble_all.pkl` and `skipif` it is absent, so a fresh checkout still passes.
 
-The AI was directed to test *properties* (monotone, bounded, NaN-when-unscorable) rather than
-frozen numeric outputs, so the suite survives a retrain without golden-value churn.
+The AI was directed to test *properties* (monotone, bounded, arm-symmetric, NaN-when-unscorable)
+rather than frozen numeric outputs, so the suite survives a retrain without golden-value churn.
+One first-draft test asserted an incomplete handedness mirror (it reflected `ax` but not `vx0`
+or the release point) and failed on the real data; it was fixed to a full x-axis reflection.
 
-## A generated behavior that was wrong — and caught by its own test
+## Dead-code and documentation cleanup
 
-The first cut of `predict_group_rv` filled missing features with the column median
-(`fillna(X.median())`), carried over from the old code. That silently **defeated the spin_axis
-dependency**: a pitch with no spin axis got median-filled Magnus features and a bogus grade.
-The `test_spin_axis_required_to_score` test failed on exactly this — a pitch with `spin_axis =
-NaN` came back finite instead of NaN. The fix was to score only rows with all 10 features
-present and return NaN otherwise, enforcing the dependency at the model level rather than
-relying on the caller to pre-filter. The failing test is what surfaced the defect.
-
-## Refactoring — accepted and rejected
-
-**Accepted (cleanup):** the old `train.py` wrote four legacy `norm_global*.pkl` /
-`norm_family*.pkl` files "for back-compat". A repo-wide grep found **no readers**, so the whole
-block was deleted rather than fixed — keeping the model clean, as requested. `predict_global_rv`
-/ `predict_family_rv` were kept as thin aliases so external callers still resolve.
-
-**Rejected:** the AI also built the same model as a **single global model (no split)** to
-compare. It was rejected because on one shared scale the good fastballs were buried (Miller 104,
-Pérez 96) under breaking balls — the exact problem the split exists to solve. The single-model
-run is kept only as the comparison that justifies the split; the split is the shipped model.
+With the EV heads and the Magnus/non-Magnus split gone, the AI removed the now-unreachable code
+it left behind — the EV→RV curve helper, the quantile list, the pop-up cell names, and unused
+sampling constants — and rewrote the module docstrings in `prob_resid.py`, `train.py`, and
+`predict.py`, which still described the old per-group-scale SIERA model. All six required docs
+were brought in line with the shipped model.
 
 ## How AI-generated work was verified
 
-- **Ran the suite:** `python -m pytest tests/` → **17 passed**.
-- **End-to-end retrain:** `python main.py train` completed with the expected per-group scales
-  and saved every artifact (`ensemble_all.pkl`, `spin_offset.pkl`).
+- **Ran the suite:** `python -m pytest tests/` → **19 passed**.
+- **End-to-end retrain:** `python main.py train` completed with the expected global values and
+  three-group logs, and saved every artifact.
 - **Board sanity check:** the 2026 board was compared against the eye test (Misiorowski / Miller
-  lead the four-seams, Holmes' seam-shifted sinker rates elite, Alvarado's cutter routes to the
-  breaking group) and against the scratchpad prototype's numbers before accepting.
-- **Dependency check:** confirmed directly that a pitch with `spin_axis` scores and the same
-  pitch without it does not.
+  lead the four-seams, Alvarado's cutter routes to the breaking group and tops the cutters, no
+  outliers) before accepting.
+- **Empirical verification of claims:** the `spin_axis` independence and the EV-vs-GB contact
+  finding were both confirmed by direct measurement, not assumed from prior text.
 
-No AI-generated code or test was committed until it had passed the suite and been checked
-against real scored data.
+No AI-generated code, test, or documentation claim was committed until it had passed the suite
+and been checked against real scored data.

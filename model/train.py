@@ -1,18 +1,19 @@
 """
 Stuff+ model training.
 
-Trains the production model: a fastball / non-fastball SPLIT model (cutters routed by a
-Mahalanobis classifier) — each group a swing softmax {whiff, foul, in-play} plus a
-SIERA-style GB/FB/PU contact head — on 10 arm-normalized Magnus/non-Magnus shape
-features (see model/prob_resid.py). Each group is normalized on its OWN scale, so a
-fastball is graded against fastballs and a breaking ball against breaking balls.
+Trains the production model: a three-group SPLIT model — fastballs / breaking balls /
+offspeed, cutters routed to FB or BR by a Mahalanobis classifier — each group a swing
+softmax {whiff, foul, in-play} plus a GB/air contact head, on 8 arm-normalized induced
+(Magnus-frame) shape features (see model/prob_resid.py). Outcome run values are ONE GLOBAL
+set and all three groups are z-scored on ONE SHARED scale, so a fastball, breaking ball,
+and offspeed pitch are graded on the same scale.
 
 train_unified() does the full run:
   1. engineer shape features (cached to model/feature_cache.parquet) + Magnus/shape backfill,
   2. save the movement/spin baselines inference needs,
   3. fit + save the cutter router and the per-hand spin-axis convention offset,
-  4. train the two-group split model (train_split_model) and save it,
-  5. compute and save per-group normalization (current + historical),
+  4. train the three-group split model (train_split_model) and save it,
+  5. compute and save the shared normalization (current + historical),
   6. write the model version hash.
 """
 
@@ -30,7 +31,7 @@ from model.submodels import save_ensemble
 
 logger = logging.getLogger(__name__)
 
-MODEL_VERSION = "v600_fbsplit_siera"
+MODEL_VERSION = "v700_threegroup_gbair"
 
 
 def train_unified(df: pd.DataFrame) -> dict:
@@ -114,8 +115,7 @@ def train_unified(df: pd.DataFrame) -> dict:
                                    assign_family, bucket_values, train_split_model,
                                    predict_group_rv, fit_spin_offset, _assign_group,
                                    SHAPE_FEATS, GROUPS)
-    # Backfill induced-Magnus (router feats). Then fit + save the per-hand spin-axis
-    # convention offset, and derive the 10 Magnus/non-Magnus shape features. All idempotent.
+    # Backfill induced-Magnus (router feats) and derive the shape features. Idempotent.
     add_magnus(df)
     fit_spin_offset(df)
     add_shape_features(df)
@@ -139,18 +139,15 @@ def train_unified(df: pd.DataFrame) -> dict:
         raise RuntimeError(f"Too few shaped pitches to train ({int(_sf.sum())}).")
     ens = train_split_model(df, V, router)
 
-    # Per-group historical norms (<=2024) so 2023/2024 seasons grade on a clean scale.
+    # Single shared historical norm (<=2024) so 2023/2024 seasons grade on a clean scale.
     _hist = (df["game_year"] <= 2024) if "game_year" in df.columns else None
     if _hist is not None:
-        _grp = _assign_group(df, router)
-        for _gname in GROUPS:
-            hi = df.index[_hist & _sf & (_grp == _gname)]
-            if len(hi):
-                if len(hi) > 300000:
-                    hi = pd.Index(np.random.RandomState(42).choice(hi.values, 300000, replace=False))
-                eh = predict_group_rv(df.loc[hi], ens)   # full rows (needs pitch_type + router feats)
-                ens["groups"][_gname]["norm_hist"] = {
-                    "mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
+        hi = df.index[_hist & _sf]
+        if len(hi):
+            if len(hi) > 300000:
+                hi = pd.Index(np.random.RandomState(42).choice(hi.values, 300000, replace=False))
+            eh = predict_group_rv(df.loc[hi], ens)   # routes each pitch to its group model
+            ens["norm_hist"] = {"mean": float(np.nanmean(eh)), "std": float(np.nanstd(eh) + 1e-8)}
 
     save_ensemble(ens, "all")
     ensembles = {"all": ens}

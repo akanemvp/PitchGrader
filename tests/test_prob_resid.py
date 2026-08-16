@@ -1,9 +1,9 @@
 """Unit tests for the model core (model/prob_resid.py).
 
-These cover the pure, deterministic pieces of the fastball / non-fastball split model —
-the Magnus/non-Magnus shape derivation (and its spin_axis dependency), the SIERA
-GB/FB/PU labelling (with line drives excluded), the outcome run values, and FB/NONFB
-group routing — so they run in a second without the trained artifacts or feature cache.
+These cover the pure, deterministic pieces of the three-group (FB / BR / OFF) model — the
+induced-movement shape derivation, arm-side normalization, the GB/air contact labelling,
+the outcome run values, and family routing — so they run in a second without the trained
+artifacts or feature cache.
 """
 import numpy as np
 import pandas as pd
@@ -21,29 +21,29 @@ def _raw_ff(**over):
     return pd.DataFrame([row])
 
 
-def test_add_shape_features_magnus_finite():
-    """A valid pitch with a spin axis gets all 10 shape features, and the Magnus split
-    lands the four-seam's lift in mag_vert (positive ride)."""
+def test_add_shape_features_all_finite():
+    """A valid pitch gets all 8 shape features, and the induced split lands a riding
+    four-seam's lift as positive ind_vert."""
     df = _raw_ff()
     pr.add_shape_features(df)
+    assert len(pr.SHAPE_FEATS) == 8
     assert np.isfinite(df[pr.SHAPE_FEATS].values).all()
-    assert df["mag_vert"].iloc[0] > 0        # a riding four-seam has positive Magnus vertical
+    assert df["ind_vert"].iloc[0] > 0        # a riding four-seam has positive induced vertical
 
 
-def test_add_shape_features_requires_spin_axis():
-    """No 3D spin axis -> the Magnus/non-Magnus features are NaN, so the pitch is
-    unscorable (a card can't be made until Statcast fills spin_axis in)."""
+def test_scores_from_kinematics_without_spin_axis():
+    """The induced features come from the pitch's trajectory (vx0/ax/…), not spin_axis, so a
+    pitch with no spin_axis still gets finite shape features (minor-league feeds score)."""
     df = _raw_ff(spin_axis=np.nan)
     pr.add_shape_features(df)
-    for c in ("mag_vert", "mag_horiz_arm", "nonmag_vert", "nonmag_horiz_arm"):
-        assert pd.isna(df[c].iloc[0])
+    assert np.isfinite(df[pr.SHAPE_FEATS].values).all()
 
 
 def test_add_shape_features_idempotent():
     df = _raw_ff()
-    pr.add_shape_features(df); once = df["mag_vert"].iloc[0]
+    pr.add_shape_features(df); once = df["ind_vert"].iloc[0]
     pr.add_shape_features(df)
-    assert df["mag_vert"].iloc[0] == once
+    assert df["ind_vert"].iloc[0] == once
 
 
 def test_release_side_is_arm_normalized():
@@ -55,21 +55,48 @@ def test_release_side_is_arm_normalized():
     assert rhp["release_pos_x_arm"].iloc[0] == pytest.approx(lhp["release_pos_x_arm"].iloc[0])
 
 
-def test_grid_cell_siera_labels():
-    """SIERA contact cells: 0 ground ball (<10 deg), 1 fly ball (25-50 deg), 2 pop-up (>=50 deg)."""
-    df = pd.DataFrame({"launch_angle": [-5.0, 5.0, 30.0, 45.0, 60.0]})
-    assert pr._grid_cell(df).tolist() == [0.0, 0.0, 1.0, 1.0, 2.0]
+def test_induced_horizontal_is_arm_normalized():
+    """ind_horiz_arm is arm-signed: a full mirror-image lefty and righty (all x-components
+    reflected) land on the same arm-side run."""
+    rhp = _raw_ff(p_throws="R", vx0=6.0, ax=-11.0, release_pos_x=-1.8)
+    lhp = _raw_ff(p_throws="L", vx0=-6.0, ax=11.0, release_pos_x=1.8)   # reflect vx0, ax, release side
+    pr.add_shape_features(rhp); pr.add_shape_features(lhp)
+    assert rhp["ind_horiz_arm"].iloc[0] == pytest.approx(lhp["ind_horiz_arm"].iloc[0])
 
 
-def test_grid_cell_excludes_line_drives():
-    """Line drives (10-25 deg) are left NaN — line-drive rate is batter/luck, not a pitcher
-    skill, so they are excluded from the contact head entirely."""
-    df = pd.DataFrame({"launch_angle": [10.0, 15.0, 24.0]})
+def test_grid_cell_gb_vs_air():
+    """Binary contact cells: 0 ground ball (<10 deg), 1 air (>=10 deg, any non-GB contact)."""
+    df = pd.DataFrame({"launch_angle": [-5.0, 5.0, 15.0, 30.0, 60.0]})
+    assert pr._grid_cell(df).tolist() == [0.0, 0.0, 1.0, 1.0, 1.0]
+
+
+def test_grid_cell_nan_without_launch_angle():
+    df = pd.DataFrame({"launch_angle": [np.nan]})
     assert pr._grid_cell(df).isna().all()
 
 
+def test_dre_values_signs():
+    """Whiffs, fouls, and grounders cost the batter run value; air balls add it. A whiff
+    costs more than a foul, and an air ball is worse (for the pitcher) than a grounder."""
+    n = 3000
+    rng = np.random.RandomState(0)
+    df = pd.DataFrame({
+        "description": (["swinging_strike"] * n + ["foul"] * n + ["hit_into_play"] * n
+                        + ["hit_into_play"] * n),
+        "delta_run_exp": np.r_[
+            rng.normal(-0.11, 0.01, n), rng.normal(-0.04, 0.01, n),
+            rng.normal(-0.05, 0.01, n), rng.normal(0.13, 0.01, n)],
+        "launch_angle": np.r_[
+            np.full(n, np.nan), np.full(n, np.nan), np.full(n, 3.0), np.full(n, 30.0)],
+    })
+    lab = pr._outcome_label(df)
+    V = pr._dre_values(df, lab)
+    assert V["whiff"] < V["foul"] < 0.0
+    assert V["gb"] < 0.0 < V["air"]
+
+
 def test_bucket_values_signs():
-    """Whiffs and fouls both cost the batter run value; a whiff costs more than a foul."""
+    """Count-adjusted swing values: a whiff costs the batter more than a foul, both < 0."""
     n = 4000
     rng = np.random.RandomState(0)
     df = pd.DataFrame({
@@ -91,11 +118,11 @@ def test_basefam_mapping():
     assert pr._basefam("FC") is None    # cutters routed separately
 
 
-def test_assign_group_fb_vs_nonfb():
-    """Fastballs -> FB; breaking/offspeed -> NONFB; unrouted cutters default to NONFB."""
-    df = pd.DataFrame({"pitch_type": ["FF", "SI", "SL", "CH", "CU", "FC"]})
+def test_assign_group_three_families():
+    """Fastballs -> FB; breaking -> BR; offspeed -> OFF; unrouted cutters default to BR."""
+    df = pd.DataFrame({"pitch_type": ["FF", "SI", "SL", "CU", "CH", "FS", "FC"]})
     grp = pr._assign_group(df, router=None)
-    assert grp.tolist() == ["FB", "FB", "NONFB", "NONFB", "NONFB", "NONFB"]
+    assert grp.tolist() == ["FB", "FB", "BR", "BR", "OFF", "OFF", "BR"]
 
 
 def test_fit_spin_offset_structure(tmp_path, monkeypatch):
@@ -110,4 +137,4 @@ def test_fit_spin_offset_structure(tmp_path, monkeypatch):
 
 def test_predict_group_rv_empty_frame():
     empty = pd.DataFrame({c: [] for c in pr.SHAPE_FEATS + ["pitch_type"]})
-    assert len(pr.predict_group_rv(empty, {"groups": {}})) == 0
+    assert len(pr.predict_group_rv(empty, {"groups": {}, "values": {}})) == 0
