@@ -65,3 +65,7 @@ model/artifacts/*_backup.pkl
 
 # Local scratch eval scripts (session tools, not part of the deliverable)
 scratchpad_*.py
+
+# Editor/backup scratch files (never commit)
+*.bak
+*.darkbak

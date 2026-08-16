@@ -22,7 +22,25 @@ scrapers ─▶ data/statcast.db ─▶ main.py score ─▶ *_scored tables ─
 | Aggregation | `profiles/` | Roll scored pitches up into per-pitcher, per-pitch-type cards and season leaderboards. |
 | Persistence | `data/statcast.db`, `storage/overrides.py` | SQLite tables; durable pitch-type override table re-applied on every re-score. |
 | Web | `app.py`, `templates/` | Leaderboards, pitcher cards, and the pitch-type editor. |
+| Admin | `app.py` (`/api/admin/*`) | Operational POST routes — see below. |
 | CLI | `main.py` | `train` / `score` / `profiles` / `live`. |
+
+### Admin surface (`/api/admin/*`)
+
+`app.py` exposes four operational POST routes with a **large blast radius** — they can drop
+scored tables and kick off full retrains/rebuilds:
+
+| Route | Effect |
+|-------|--------|
+| `POST /api/admin/rescore-spring` | Drop `pitches_spring2026_scored` + clear sentinels so the next refresh does a full rescore. |
+| `POST /api/admin/rebuild-all` | Rebuild all cards/leaderboards from the current scored tables. |
+| `POST /api/admin/retrain` | Full model retrain in the background (~15–20 min). |
+| `POST /api/admin/rebuild-season` | Rescore/rebuild a single season (`?season=2025` etc.). |
+
+**Auth:** every route requires `?token=<ADMIN_TOKEN>` and **fails closed** — the token is read
+only from the `ADMIN_TOKEN` environment variable, with no committed fallback, so if the env
+var is unset the routes are disabled rather than guarded by a default. `ADMIN_TOKEN` must be
+set in the deployment environment (Railway) for these routes to function.
 
 ## The model boundary
 
