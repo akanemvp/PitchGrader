@@ -2,8 +2,6 @@
 
 **Grade the nastiness of every pitch, not where it ended up.**
 
-Live app: https://akanemvp.up.railway.app
-
 ## Problem & Motivation
 
 Traditional pitching statistics — ERA, K/BB, and the like — conflate a pitcher's actual stuff with everything around it: defense, luck, sequencing, count leverage, and command. A nasty pitch thrown down the middle and hit hard looks bad in the box score; a mediocre pitch that induces a weak groundout looks good. None of these numbers isolate the one thing a pitcher most directly controls and most reliably repeats: the *shape* of the pitch itself.

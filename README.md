@@ -5,8 +5,6 @@ its physical shape — velocity, spin, movement, release, and arm slot — indep
 it was located or the count it was thrown in. A grade of **100 is league average** and
 **every 10 points is one standard deviation**, so a 120 fastball is a top-decile fastball.
 
-Live app: **https://akanemvp.up.railway.app**
-
 ## What it does
 
 - **Scores every pitch** in 2026 MLB plus AAA, spring, ACL, FSL, college, and Futures feeds.
