@@ -2562,13 +2562,23 @@ def live_status():
 # Admin endpoints
 # ---------------------------------------------------------------------------
 
-_ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "stuffplus-admin-2026")
+# Admin token comes ONLY from the environment — no committed fallback. If ADMIN_TOKEN is
+# unset the admin routes fail CLOSED (a default in a public repo is not a secret).
+_ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN")
+
+
+def _admin_ok() -> bool:
+    """True only if ADMIN_TOKEN is configured AND the request token matches it. Unset env
+    var => always False, so the destructive admin routes are disabled rather than guarded by
+    a known default."""
+    return bool(_ADMIN_TOKEN) and request.args.get("token") == _ADMIN_TOKEN
+
 
 @app.route("/api/admin/rescore-spring", methods=["POST"])
 def admin_rescore_spring():
     """Drop pitches_spring2026_scored and clear sentinels so next refresh cycle
     does a full rescore with the current model.  Requires ?token=ADMIN_TOKEN."""
-    if request.args.get("token") != _ADMIN_TOKEN:
+    if not _admin_ok():
         abort(403)
     try:
         conn_adm = sqlite3.connect(DB_PATH)
@@ -2591,7 +2601,7 @@ def admin_rescore_spring():
 def admin_rebuild_all():
     """Re-score all seasons and regenerate all profiles in the background.
     Requires ?token=ADMIN_TOKEN."""
-    if request.args.get("token") != _ADMIN_TOKEN:
+    if not _admin_ok():
         abort(403)
 
     import threading
@@ -2666,7 +2676,7 @@ def admin_rebuild_all():
 def admin_retrain():
     """Re-train all family ensembles from scratch using the training DB tables.
     Requires ?token=ADMIN_TOKEN. Runs in background (~15-20 min). Check logs for progress."""
-    if request.args.get("token") != _ADMIN_TOKEN:
+    if not _admin_ok():
         abort(403)
 
     import threading
@@ -2738,7 +2748,7 @@ def admin_retrain():
 def admin_rebuild_season():
     """Re-score a single season and regenerate its profiles.
     Requires ?token=ADMIN_TOKEN&season=2025 (or 2023/2024/spring2026)."""
-    if request.args.get("token") != _ADMIN_TOKEN:
+    if not _admin_ok():
         abort(403)
     season = request.args.get("season", "").strip()
     if not season:
