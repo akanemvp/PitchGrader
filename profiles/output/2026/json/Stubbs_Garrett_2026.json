@@ -1,0 +1,74 @@
+{
+  "player_name": "Stubbs, Garrett",
+  "season": "2026",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 26.3,
+  "team": "PHI",
+  "pitcher_id": 596117,
+  "age": 33,
+  "ip_str": "1.0",
+  "era": 9.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 67.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 2,
+      "n_vs_l": 3,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 67.8,
+      "ivb": 14.9,
+      "hb": 10.7,
+      "vaa": -7.21,
+      "haa": 1.05,
+      "spin": 1714,
+      "extension": 5.26,
+      "arm_angle": 26.3,
+      "release_height": 5.52,
+      "spin_axis_clock": "10:49",
+      "zone_pct": 80.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 50.0,
+      "xwoba_contact": 0.219,
+      "locations_x": [
+        0.79,
+        -0.35,
+        0.41,
+        -0.56,
+        -0.75
+      ],
+      "locations_z": [
+        2.65,
+        4.18,
+        2.7,
+        2.94,
+        2.01
+      ],
+      "locations_x_vs_r": [
+        0.79,
+        -0.35
+      ],
+      "locations_z_vs_r": [
+        2.65,
+        4.18
+      ],
+      "locations_x_vs_l": [
+        0.41,
+        -0.56,
+        -0.75
+      ],
+      "locations_z_vs_l": [
+        2.7,
+        2.94,
+        2.01
+      ]
+    }
+  ]
+}

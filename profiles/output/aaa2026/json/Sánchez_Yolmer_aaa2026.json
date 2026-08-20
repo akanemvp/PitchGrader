@@ -1,0 +1,169 @@
+{
+  "player_name": "S\u00e1nchez, Yolmer",
+  "season": "aaa2026",
+  "total_pitches": 19,
+  "p_throws": "R",
+  "arm_angle": 35.8,
+  "team": "SL",
+  "pitcher_id": 570560,
+  "age": null,
+  "ip_str": "3.1",
+  "era": 8.1,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "EP",
+      "pitch_name": "Eephus",
+      "stuff_plus": 45.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 12,
+      "n_vs_r": 9,
+      "n_vs_l": 3,
+      "usage_pct": 63.2,
+      "usage_pct_vs_r": 69.2,
+      "usage_pct_vs_l": 50.0,
+      "velo": 53.6,
+      "ivb": 10.1,
+      "hb": 3.4,
+      "vaa": -12.21,
+      "haa": 3.12,
+      "spin": 1248,
+      "extension": 4.26,
+      "arm_angle": 33.3,
+      "release_height": 6.36,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 58.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 14.3,
+      "xwoba_contact": 0.442,
+      "locations_x": [
+        -0.82,
+        0.09,
+        2.71,
+        0.15,
+        1.47,
+        -0.03,
+        0.16,
+        2.2,
+        0.09,
+        0.14,
+        -0.02,
+        -0.03
+      ],
+      "locations_z": [
+        2.76,
+        2.87,
+        2.61,
+        0.13,
+        3.05,
+        2.24,
+        3.06,
+        1.05,
+        3.76,
+        3.06,
+        2.17,
+        2.31
+      ],
+      "locations_x_vs_r": [
+        -0.82,
+        0.09,
+        2.71,
+        0.15,
+        1.47,
+        -0.03,
+        2.2,
+        0.09,
+        -0.02
+      ],
+      "locations_z_vs_r": [
+        2.76,
+        2.87,
+        2.61,
+        0.13,
+        3.05,
+        2.24,
+        1.05,
+        3.76,
+        2.17
+      ],
+      "locations_x_vs_l": [
+        0.16,
+        0.14,
+        -0.03
+      ],
+      "locations_z_vs_l": [
+        3.06,
+        3.06,
+        2.31
+      ]
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 75.9,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 4,
+      "n_vs_l": 3,
+      "usage_pct": 36.8,
+      "usage_pct_vs_r": 30.8,
+      "usage_pct_vs_l": 50.0,
+      "velo": 75.2,
+      "ivb": 11.7,
+      "hb": 7.6,
+      "vaa": -6.96,
+      "haa": 1.88,
+      "spin": 1802,
+      "extension": 4.85,
+      "arm_angle": 38.3,
+      "release_height": 6.28,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 42.9,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.214,
+      "locations_x": [
+        0.93,
+        0.79,
+        0.7,
+        -0.03,
+        0.68,
+        -0.28,
+        0.79
+      ],
+      "locations_z": [
+        3.56,
+        4.15,
+        3.14,
+        2.06,
+        2.02,
+        3.56,
+        3.46
+      ],
+      "locations_x_vs_r": [
+        0.93,
+        0.7,
+        -0.03,
+        0.68
+      ],
+      "locations_z_vs_r": [
+        3.56,
+        3.14,
+        2.06,
+        2.02
+      ],
+      "locations_x_vs_l": [
+        0.79,
+        -0.28,
+        0.79
+      ],
+      "locations_z_vs_l": [
+        4.15,
+        3.56,
+        3.46
+      ]
+    }
+  ]
+}

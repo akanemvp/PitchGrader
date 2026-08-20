@@ -1,7 +1,7 @@
 {
   "player_name": "Abeldt, Ben",
   "season": "acl2026",
-  "total_pitches": 162,
+  "total_pitches": 183,
   "p_throws": "L",
   "arm_angle": 21.5,
   "team": "A-RAN",
@@ -14,10 +14,10 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 98.2,
-      "grade": "45",
-      "color": "#c9d1d9",
-      "n": 162,
+      "stuff_plus": 91.6,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 183,
       "n_vs_r": 139,
       "n_vs_l": 44,
       "usage_pct": 100.0,

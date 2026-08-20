@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 102.5,
+      "stuff_plus": 104.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 54,
@@ -36,7 +36,7 @@
       "zone_pct": 74.1,
       "chase_pct": 0.0,
       "whiff_pct": 10.0,
-      "xwoba_contact": 0.235,
+      "xwoba_contact": 0.293,
       "locations_x": [
         -0.46,
         -0.91,
@@ -269,7 +269,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 104.4,
+      "stuff_plus": 104.7,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 31,
@@ -291,7 +291,7 @@
       "zone_pct": 74.2,
       "chase_pct": 12.5,
       "whiff_pct": 28.6,
-      "xwoba_contact": 0.093,
+      "xwoba_contact": 0.439,
       "locations_x": [
         -1.59,
         -0.15,
@@ -432,7 +432,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.9,
+      "stuff_plus": 101.0,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 28,
@@ -454,7 +454,7 @@
       "zone_pct": 32.1,
       "chase_pct": 26.3,
       "whiff_pct": 11.1,
-      "xwoba_contact": 0.147,
+      "xwoba_contact": 0.227,
       "locations_x": [
         -3.03,
         -0.21,
@@ -583,9 +583,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 111.5,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 120.4,
+      "grade": "70",
+      "color": "#00b4d8",
       "n": 3,
       "n_vs_r": 1,
       "n_vs_l": 2,

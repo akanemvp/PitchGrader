@@ -14,9 +14,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 97.5,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 92.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 26,
       "n_vs_r": 17,
       "n_vs_l": 9,
@@ -36,7 +36,7 @@
       "zone_pct": 38.5,
       "chase_pct": 18.8,
       "whiff_pct": 40.0,
-      "xwoba_contact": 0.64,
+      "xwoba_contact": 0.395,
       "locations_x": [
         0.54,
         0.74,
@@ -157,7 +157,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 82.1,
+      "stuff_plus": 84.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 20,
@@ -179,7 +179,7 @@
       "zone_pct": 70.0,
       "chase_pct": 16.7,
       "whiff_pct": 11.1,
-      "xwoba_contact": 0.263,
+      "xwoba_contact": 0.454,
       "locations_x": [
         0.49,
         0.54,
@@ -276,8 +276,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 79.3,
-      "grade": "30",
+      "stuff_plus": 83.9,
+      "grade": "35",
       "color": "#ef233c",
       "n": 12,
       "n_vs_r": 4,
@@ -298,7 +298,7 @@
       "zone_pct": 25.0,
       "chase_pct": 22.2,
       "whiff_pct": 40.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.147,
       "locations_x": [
         -0.09,
         1.2,
@@ -385,7 +385,7 @@
       "zone_pct": 41.7,
       "chase_pct": 71.4,
       "whiff_pct": 10.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.181,
       "locations_x": [
         -1.38,
         -0.11,
@@ -450,9 +450,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 94.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.6,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 11,
       "n_vs_r": 6,
       "n_vs_l": 5,
@@ -472,7 +472,7 @@
       "zone_pct": 72.7,
       "chase_pct": 33.3,
       "whiff_pct": 50.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.309,
       "locations_x": [
         0.27,
         0.04,
@@ -533,7 +533,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 83.7,
+      "stuff_plus": 85.4,
       "grade": "35",
       "color": "#ef233c",
       "n": 8,

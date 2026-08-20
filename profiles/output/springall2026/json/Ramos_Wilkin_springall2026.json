@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 102.2,
+      "stuff_plus": 104.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 57,
@@ -36,7 +36,7 @@
       "zone_pct": 50.9,
       "chase_pct": 21.4,
       "whiff_pct": 13.6,
-      "xwoba_contact": 0.517,
+      "xwoba_contact": 0.477,
       "locations_x": [
         -1.59,
         -1.27,
@@ -281,9 +281,9 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 105.7,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 115.0,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 36,
       "n_vs_r": 14,
       "n_vs_l": 22,
@@ -464,7 +464,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 99.1,
+      "stuff_plus": 95.7,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 27,

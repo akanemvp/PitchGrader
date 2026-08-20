@@ -7,14 +7,14 @@
   "team": "IU",
   "pitcher_id": 838114,
   "age": null,
-  "ip_str": "1.1",
-  "era": 0.0,
+  "ip_str": "1.2",
+  "era": 10.8,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 85.1,
+      "stuff_plus": 80.2,
       "grade": "35",
       "color": "#ef233c",
       "n": 20,
@@ -133,9 +133,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 111.4,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.9,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 18,
       "n_vs_r": 14,
       "n_vs_l": 4,
@@ -244,7 +244,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 113.3,
+      "stuff_plus": 111.6,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 5,
@@ -301,7 +301,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 104.4,
+      "stuff_plus": 101.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 4,

@@ -80,7 +80,6 @@ def step_score():
     pr = StuffPlusPredictor()
     eng, _ = engineer_features(to_score, baselines=pr.baselines)
     scored = pr.predict(eng, already_engineered=True, norm_set="current")
-    scored["stuff_plus"] = scored["stuff_plus"].clip(50.0, 160.0)
     seen, keep = {}, []
     for c in scored.columns:
         lc = c.lower()

@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.1,
+      "stuff_plus": 91.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 69,
@@ -36,7 +36,7 @@
       "zone_pct": 42.0,
       "chase_pct": 30.0,
       "whiff_pct": 17.1,
-      "xwoba_contact": 0.842,
+      "xwoba_contact": 0.597,
       "locations_x": [
         1.03,
         -0.04,
@@ -329,7 +329,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.0,
+      "stuff_plus": 109.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 56,
@@ -351,7 +351,7 @@
       "zone_pct": 50.0,
       "chase_pct": 39.3,
       "whiff_pct": 27.3,
-      "xwoba_contact": 0.366,
+      "xwoba_contact": 0.404,
       "locations_x": [
         0.11,
         -0.43,
@@ -592,7 +592,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.3,
+      "stuff_plus": 91.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 34,
@@ -614,7 +614,7 @@
       "zone_pct": 52.9,
       "chase_pct": 31.2,
       "whiff_pct": 11.8,
-      "xwoba_contact": 0.28,
+      "xwoba_contact": 0.251,
       "locations_x": [
         -0.9,
         -1.02,
@@ -767,7 +767,7 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 104.6,
+      "stuff_plus": 101.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 22,
@@ -789,7 +789,7 @@
       "zone_pct": 18.2,
       "chase_pct": 22.2,
       "whiff_pct": 40.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.655,
       "locations_x": [
         -0.75,
         -0.2,
@@ -894,7 +894,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 101.6,
+      "stuff_plus": 102.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 21,
@@ -916,7 +916,7 @@
       "zone_pct": 23.8,
       "chase_pct": 31.2,
       "whiff_pct": 44.4,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.728,
       "locations_x": [
         0.42,
         -0.85,

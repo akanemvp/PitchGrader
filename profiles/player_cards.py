@@ -11,6 +11,7 @@ import json
 import logging
 import os
 import tempfile
+import time
 import urllib.request
 
 import numpy as np
@@ -103,11 +104,6 @@ def stuff_grade(sp: float, pt_mean: float = 100.0) -> tuple:
     return ("30", GRADE_COLORS["poor"])
 
 
-def _clip_stuff_plus(sp: float) -> float:
-    """Clip Stuff+ to the displayable range [70, 140]."""
-    return max(70.0, min(140.0, sp))
-
-
 def _nan_to_none(v):
     """Convert NaN / numpy scalars to a JSON-safe Python float or None."""
     if v is None:
@@ -129,11 +125,15 @@ _boxscore_er_cache: dict[int, dict[int, int]] = {}
 _boxscore_ip_cache: dict[int, dict[int, int]] = {}  # game_pk → {pitcher_id → outs}
 
 def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
-    """Return {pitcher_id: earned_runs} and {pitcher_id: outs} from MLB Stats API. Cached."""
+    """Return {pitcher_id: earned_runs} and {pitcher_id: outs} from MLB Stats API.
+    Cached permanently per game_pk: batch profile builds fetch each game once (a TTL here
+    would re-fetch games shared across pitchers during a long build and stall it). The live
+    game-line IP for in-progress games is refreshed separately in app.py's own TTL'd copy."""
     if game_pk in _boxscore_er_cache:
         return _boxscore_er_cache[game_pk]
     result: dict[int, int] = {}
     ip_result: dict[int, int] = {}
+    fetched = False
     try:
         url = f"https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
         with urllib.request.urlopen(url, timeout=5) as resp:
@@ -155,11 +155,14 @@ def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
                         ip_result[int(pid)] = ip_outs
                     except Exception:
                         pass
+        fetched = True
     except Exception:
         pass
-    _boxscore_er_cache[game_pk] = result
-    _boxscore_ip_cache[game_pk] = ip_result
-    return result
+    # Only cache a successful fetch; on failure keep serving the last good cache.
+    if fetched:
+        _boxscore_er_cache[game_pk] = result
+        _boxscore_ip_cache[game_pk] = ip_result
+    return _boxscore_er_cache.get(game_pk, result)
 
 
 # ---------------------------------------------------------------------------
@@ -174,10 +177,9 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
     handles both hard zapballs and traditional splitters, so no threshold
     split is needed at the card level.
 
-    Includes all pitch types with at least 1 scored pitch. Low-velocity
-    pitches (nulled by velocity floor in predict.py) are excluded from the
-    count automatically since n uses ("stuff_plus", "count") which skips NaN.
-    Sorted by usage (count desc).
+    Includes all pitch types with at least 1 scored pitch. Every scorable pitch
+    now counts (no velocity floor) — n uses ("stuff_plus", "count") which still
+    skips any NaN (e.g. a pitch missing shape features). Sorted by usage (count desc).
 
     New fields added for profile visualizations:
       - p_throws        : pitcher handedness ("R" or "L")
@@ -525,7 +527,7 @@ def summarize_pitcher(df: pd.DataFrame) -> pd.DataFrame:
 def _pitch_panel(ax, row: pd.Series):
     """Draw one pitch-type panel inside a given Axes."""
     pitch_name = PITCH_TYPES.get(row["pitch_type"], row["pitch_type"])
-    sp = _clip_stuff_plus(float(row["stuff_plus"]))
+    sp = float(row["stuff_plus"])
     grade, color = stuff_grade(sp, pt_mean=float(row.get("pt_mean", 100.0)))
 
     ax.set_facecolor(BG_CARD)
@@ -612,25 +614,15 @@ def generate_all_cards(df: pd.DataFrame, season: int, skip_png: bool = False) ->
     existing_png  = set(_glob.glob(os.path.join(out_dir,  f"*_{season}.png")))
 
     # --- Step 1: raw summaries for all pitchers ---
-    # Skip position players who pitched in blowouts:
-    #   • 75th-percentile velo never exceeds 75 mph  (real pitchers always hit 75+)
-    #   • OR more than 70% of their pitches are Eephus
-    pos_player_skipped = 0
+    # No velocity/eephus gate: every pitcher gets a card, position players included.
+    # Their fastballs grade badly on merit and sink to the bottom of the boards.
     raw_summaries = {}
     for name, pdata in df.groupby("player_name"):
-        p75_velo = pdata["release_speed"].quantile(0.75)
-        ep_frac  = (pdata["pitch_type"] == "EP").mean()
-        if p75_velo < 75 or ep_frac > 0.70:
-            pos_player_skipped += 1
-            continue
         s = summarize_pitcher(pdata)
         if not s.empty:
             s = s.copy()
             s["player_name"] = name
             raw_summaries[name] = s
-
-    if pos_player_skipped:
-        logger.info(f"Skipped {pos_player_skipped} position-player pitchers.")
 
     if not raw_summaries:
         logger.warning("No valid pitcher summaries — check that model was trained and profiles re-run.")
@@ -806,7 +798,7 @@ def _build_profile_from_summary(
 
     pitches = []
     for _, row in summary.iterrows():
-        sp = _clip_stuff_plus(float(row["stuff_plus"]))
+        sp = float(row["stuff_plus"])
         sp_rounded = round(sp, 1)
         pt_mean_for_type = float(row.get("pt_mean", 100.0))
         grade, color = stuff_grade(sp_rounded, pt_mean=pt_mean_for_type)
@@ -891,7 +883,7 @@ def _build_leaderboard_from_calibrated(combined: pd.DataFrame, season: int) -> l
             continue
         total_n = int(grp["n"].sum())
         # Usage-weighted average (clip before grading so extreme outliers don't distort)
-        avg_sp = _clip_stuff_plus(float((valid["stuff_plus"] * valid["n"]).sum() / valid["n"].sum()))
+        avg_sp = float((valid["stuff_plus"] * valid["n"]).sum() / valid["n"].sum())
         grade, color = stuff_grade(avg_sp)
         rows.append({
             "player_name":  name,

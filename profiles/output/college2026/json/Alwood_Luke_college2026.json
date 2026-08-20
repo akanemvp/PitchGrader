@@ -8,15 +8,15 @@
   "pitcher_id": 834947,
   "age": null,
   "ip_str": "1.0",
-  "era": null,
+  "era": 9.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 89.2,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 90.3,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 14,
       "n_vs_r": 12,
       "n_vs_l": 2,
@@ -109,7 +109,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 103.2,
+      "stuff_plus": 101.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 10,

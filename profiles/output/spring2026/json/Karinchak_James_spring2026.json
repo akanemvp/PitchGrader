@@ -253,9 +253,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 112.0,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 109.3,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 41,
       "n_vs_r": 19,
       "n_vs_l": 22,

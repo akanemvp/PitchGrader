@@ -14,9 +14,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 106.2,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 111.5,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 21,
       "n_vs_r": 20,
       "n_vs_l": 1,
@@ -137,9 +137,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 109.9,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 16,
       "n_vs_r": 9,
       "n_vs_l": 7,
@@ -159,7 +159,7 @@
       "zone_pct": 81.2,
       "chase_pct": 66.7,
       "whiff_pct": 22.2,
-      "xwoba_contact": 0.244,
+      "xwoba_contact": 0.443,
       "locations_x": [
         0.57,
         -0.54,
@@ -240,7 +240,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 86.4,
+      "stuff_plus": 83.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 14,
@@ -262,7 +262,7 @@
       "zone_pct": 64.3,
       "chase_pct": 20.0,
       "whiff_pct": 10.0,
-      "xwoba_contact": 0.619,
+      "xwoba_contact": 0.553,
       "locations_x": [
         -0.64,
         -0.74,
@@ -333,7 +333,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 96.1,
+      "stuff_plus": 96.7,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 14,
@@ -428,7 +428,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.6,
+      "stuff_plus": 93.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 7,
@@ -450,7 +450,7 @@
       "zone_pct": 57.1,
       "chase_pct": 33.3,
       "whiff_pct": 50.0,
-      "xwoba_contact": 0.008,
+      "xwoba_contact": 0.829,
       "locations_x": [
         0.28,
         -0.62,
@@ -493,7 +493,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 98.6,
+      "stuff_plus": 98.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 5,

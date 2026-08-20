@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.9,
+      "stuff_plus": 93.8,
       "grade": "40",
       "color": "#f4a261",
       "n": 92,
@@ -36,7 +36,7 @@
       "zone_pct": 53.3,
       "chase_pct": 30.2,
       "whiff_pct": 15.7,
-      "xwoba_contact": 0.216,
+      "xwoba_contact": 0.375,
       "locations_x": [
         1.35,
         -0.58,
@@ -421,7 +421,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 107.7,
+      "stuff_plus": 107.9,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 70,
@@ -443,7 +443,7 @@
       "zone_pct": 30.0,
       "chase_pct": 44.9,
       "whiff_pct": 64.7,
-      "xwoba_contact": 0.402,
+      "xwoba_contact": 0.488,
       "locations_x": [
         0.4,
         0.56,
@@ -740,7 +740,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 97.0,
+      "stuff_plus": 97.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 42,
@@ -762,7 +762,7 @@
       "zone_pct": 52.4,
       "chase_pct": 30.0,
       "whiff_pct": 23.8,
-      "xwoba_contact": 0.284,
+      "xwoba_contact": 0.271,
       "locations_x": [
         0.81,
         0.23,
@@ -947,9 +947,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 114.1,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 41,
       "n_vs_r": 8,
       "n_vs_l": 33,
@@ -969,7 +969,7 @@
       "zone_pct": 36.6,
       "chase_pct": 23.1,
       "whiff_pct": 33.3,
-      "xwoba_contact": 0.96,
+      "xwoba_contact": 0.608,
       "locations_x": [
         -1.15,
         -0.75,
@@ -1150,9 +1150,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 94.6,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 97.4,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 37,
       "n_vs_r": 32,
       "n_vs_l": 5,
@@ -1172,7 +1172,7 @@
       "zone_pct": 73.0,
       "chase_pct": 30.0,
       "whiff_pct": 9.5,
-      "xwoba_contact": 0.244,
+      "xwoba_contact": 0.223,
       "locations_x": [
         0.5,
         0.36,

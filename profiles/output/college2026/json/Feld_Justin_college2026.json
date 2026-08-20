@@ -7,14 +7,14 @@
   "team": "GU",
   "pitcher_id": 824281,
   "age": null,
-  "ip_str": "3.2",
-  "era": null,
+  "ip_str": "3.1",
+  "era": 16.2,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.7,
+      "stuff_plus": 89.1,
       "grade": "35",
       "color": "#ef233c",
       "n": 17,
@@ -121,9 +121,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.3,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 100.0,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 16,
       "n_vs_r": 8,
       "n_vs_l": 8,
@@ -224,7 +224,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 104.1,
+      "stuff_plus": 100.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 11,
@@ -307,7 +307,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 93.0,
+      "stuff_plus": 90.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 11,

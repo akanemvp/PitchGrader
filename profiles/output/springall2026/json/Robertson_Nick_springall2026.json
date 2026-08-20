@@ -14,7 +14,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 113.6,
+      "stuff_plus": 115.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 16,
@@ -117,7 +117,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.3,
+      "stuff_plus": 89.7,
       "grade": "35",
       "color": "#ef233c",
       "n": 12,
@@ -204,7 +204,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.2,
+      "stuff_plus": 103.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 8,

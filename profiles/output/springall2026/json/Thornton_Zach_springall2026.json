@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 86.5,
+      "stuff_plus": 86.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 39,
@@ -36,7 +36,7 @@
       "zone_pct": 71.8,
       "chase_pct": 18.2,
       "whiff_pct": 11.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.241,
       "locations_x": [
         -0.76,
         0.51,
@@ -209,7 +209,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 99.2,
+      "stuff_plus": 99.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 39,
@@ -231,7 +231,7 @@
       "zone_pct": 48.7,
       "chase_pct": 30.0,
       "whiff_pct": 13.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.333,
       "locations_x": [
         0.51,
         0.11,
@@ -404,9 +404,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.7,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 94.6,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 26,
       "n_vs_r": 21,
       "n_vs_l": 5,
@@ -426,7 +426,7 @@
       "zone_pct": 61.5,
       "chase_pct": 20.0,
       "whiff_pct": 11.1,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.332,
       "locations_x": [
         -0.27,
         -2.35,
@@ -547,9 +547,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.1,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 95.6,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 6,
       "n_vs_r": 4,
       "n_vs_l": 2,
@@ -610,7 +610,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 104.6,
+      "stuff_plus": 102.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 5,
@@ -632,7 +632,7 @@
       "zone_pct": 20.0,
       "chase_pct": 25.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.054,
       "locations_x": [
         -0.76,
         -0.83,

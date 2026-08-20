@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 100.1,
+      "stuff_plus": 103.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 116,
@@ -36,7 +36,7 @@
       "zone_pct": 49.1,
       "chase_pct": 16.9,
       "whiff_pct": 12.5,
-      "xwoba_contact": 0.62,
+      "xwoba_contact": 0.409,
       "locations_x": [
         -0.63,
         0.03,
@@ -517,9 +517,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 100.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 58,
       "n_vs_r": 39,
       "n_vs_l": 19,
@@ -539,7 +539,7 @@
       "zone_pct": 24.1,
       "chase_pct": 29.5,
       "whiff_pct": 56.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.25,
       "locations_x": [
         0.6,
         -1.8,

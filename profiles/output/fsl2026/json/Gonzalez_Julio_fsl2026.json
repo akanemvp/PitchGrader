@@ -1,0 +1,127 @@
+{
+  "player_name": "Gonzalez, Julio",
+  "season": "fsl2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 23.2,
+  "team": "SLU",
+  "pitcher_id": 835490,
+  "age": null,
+  "ip_str": "0.2",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 91.5,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 6,
+      "n_vs_r": 2,
+      "n_vs_l": 4,
+      "usage_pct": 66.7,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 80.0,
+      "ivb": 8.6,
+      "hb": 18.7,
+      "vaa": -6.93,
+      "haa": 1.38,
+      "spin": 1981,
+      "extension": 5.9,
+      "arm_angle": 21.7,
+      "release_height": 5.28,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        0.62,
+        0.94,
+        0.41,
+        0.84,
+        -0.0,
+        -1.28
+      ],
+      "locations_z": [
+        0.73,
+        2.25,
+        1.79,
+        1.91,
+        2.08,
+        2.64
+      ],
+      "locations_x_vs_r": [
+        -0.0,
+        -1.28
+      ],
+      "locations_z_vs_r": [
+        2.08,
+        2.64
+      ],
+      "locations_x_vs_l": [
+        0.62,
+        0.94,
+        0.41,
+        0.84
+      ],
+      "locations_z_vs_l": [
+        0.73,
+        2.25,
+        1.79,
+        1.91
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 98.9,
+      "grade": "45",
+      "color": "#c9d1d9",
+      "n": 3,
+      "n_vs_r": 3,
+      "n_vs_l": 0,
+      "usage_pct": 33.3,
+      "usage_pct_vs_r": 60.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 82.5,
+      "ivb": 3.0,
+      "hb": -1.7,
+      "vaa": -6.82,
+      "haa": 3.79,
+      "spin": 2279,
+      "extension": 5.75,
+      "arm_angle": 24.7,
+      "release_height": 5.42,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.164,
+      "locations_x": [
+        0.12,
+        1.76,
+        -0.04
+      ],
+      "locations_z": [
+        1.58,
+        1.78,
+        3.68
+      ],
+      "locations_x_vs_r": [
+        0.12,
+        1.76,
+        -0.04
+      ],
+      "locations_z_vs_r": [
+        1.58,
+        1.78,
+        3.68
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

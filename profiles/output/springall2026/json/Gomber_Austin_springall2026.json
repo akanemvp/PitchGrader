@@ -36,7 +36,7 @@
       "zone_pct": 50.0,
       "chase_pct": 11.1,
       "whiff_pct": 11.1,
-      "xwoba_contact": 0.454,
+      "xwoba_contact": 0.64,
       "locations_x": [
         -0.65,
         0.42,
@@ -341,7 +341,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 92.0,
+      "stuff_plus": 90.2,
       "grade": "40",
       "color": "#f4a261",
       "n": 57,
@@ -363,7 +363,7 @@
       "zone_pct": 38.6,
       "chase_pct": 20.0,
       "whiff_pct": 3.8,
-      "xwoba_contact": 0.465,
+      "xwoba_contact": 0.232,
       "locations_x": [
         -0.64,
         -0.23,
@@ -608,7 +608,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.3,
+      "stuff_plus": 103.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 48,
@@ -630,7 +630,7 @@
       "zone_pct": 56.2,
       "chase_pct": 42.9,
       "whiff_pct": 32.1,
-      "xwoba_contact": 0.44,
+      "xwoba_contact": 0.332,
       "locations_x": [
         0.71,
         0.2,
@@ -839,7 +839,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 109.9,
+      "stuff_plus": 107.4,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 20,
@@ -861,7 +861,7 @@
       "zone_pct": 30.0,
       "chase_pct": 57.1,
       "whiff_pct": 50.0,
-      "xwoba_contact": 0.344,
+      "xwoba_contact": 0.434,
       "locations_x": [
         -0.19,
         0.82,
@@ -958,9 +958,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 94.9,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 98.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 18,
       "n_vs_r": 17,
       "n_vs_l": 1,
@@ -980,7 +980,7 @@
       "zone_pct": 44.4,
       "chase_pct": 10.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.102,
+      "xwoba_contact": 0.139,
       "locations_x": [
         -0.37,
         0.25,
@@ -1069,9 +1069,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 111.0,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 13,
       "n_vs_r": 13,
       "n_vs_l": 0,
@@ -1091,7 +1091,7 @@
       "zone_pct": 53.8,
       "chase_pct": 16.7,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.509,
       "locations_x": [
         -0.4,
         1.83,

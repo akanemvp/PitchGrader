@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 91.0,
+      "stuff_plus": 92.0,
       "grade": "40",
       "color": "#f4a261",
       "n": 48,
@@ -36,7 +36,7 @@
       "zone_pct": 43.8,
       "chase_pct": 33.3,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.3,
+      "xwoba_contact": 0.259,
       "locations_x": [
         0.31,
         0.07,
@@ -245,9 +245,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.5,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 106.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 20,
       "n_vs_r": 6,
       "n_vs_l": 14,
@@ -267,7 +267,7 @@
       "zone_pct": 40.0,
       "chase_pct": 33.3,
       "whiff_pct": 36.4,
-      "xwoba_contact": 0.195,
+      "xwoba_contact": 0.148,
       "locations_x": [
         1.1,
         1.35,
@@ -364,7 +364,7 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 104.3,
+      "stuff_plus": 100.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 20,
@@ -386,7 +386,7 @@
       "zone_pct": 25.0,
       "chase_pct": 33.3,
       "whiff_pct": 33.3,
-      "xwoba_contact": 0.359,
+      "xwoba_contact": 0.291,
       "locations_x": [
         1.19,
         0.38,
@@ -481,7 +481,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 113.4,
+      "stuff_plus": 117.1,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 13,
@@ -503,7 +503,7 @@
       "zone_pct": 69.2,
       "chase_pct": 50.0,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.18,
+      "xwoba_contact": 0.179,
       "locations_x": [
         0.87,
         1.33,
@@ -572,7 +572,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 107.7,
+      "stuff_plus": 109.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 3,
@@ -621,9 +621,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.8,
-      "grade": "35",
-      "color": "#ef233c",
+      "stuff_plus": 92.7,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

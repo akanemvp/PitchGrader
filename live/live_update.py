@@ -184,8 +184,6 @@ class LiveUpdater:
         if count_overrides("2026"):
             raw_win = apply_overrides(raw_win, "2026")
         df_scored = self.predictor.predict(raw_win, baselines=self.baselines)
-        if "stuff_plus" in df_scored.columns:
-            df_scored["stuff_plus"] = df_scored["stuff_plus"].clip(50.0, 160.0)
 
         # 3) Replace the window's rows in the scored table (align to its columns).
         conn = sqlite3.connect(DB_PATH, timeout=60)

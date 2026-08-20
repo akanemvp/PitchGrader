@@ -217,7 +217,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.2,
+      "stuff_plus": 99.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 29,
@@ -372,9 +372,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 110.5,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 24,
       "n_vs_r": 11,
       "n_vs_l": 13,
@@ -394,7 +394,7 @@
       "zone_pct": 29.2,
       "chase_pct": 23.5,
       "whiff_pct": 16.7,
-      "xwoba_contact": 0.315,
+      "xwoba_contact": 0.228,
       "locations_x": [
         1.78,
         -0.86,
@@ -507,7 +507,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 99.0,
+      "stuff_plus": 98.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 7,
@@ -572,7 +572,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 88.2,
+      "stuff_plus": 88.5,
       "grade": "35",
       "color": "#ef233c",
       "n": 2,

@@ -18,14 +18,15 @@ pitch produced it. Per-pitch differentiation comes from the PROBABILITIES, not t
 All three groups are z-scored on ONE SHARED scale (100 = league-average pitch, 10 = one
 SD), so a fastball, breaking ball, and offspeed pitch are graded on the same scale.
 
-Shape is 8 arm-normalized features: velocity, spin rate, the induced (Magnus-frame,
-gravity + drag removed) vertical (ind_vert) and arm-side horizontal (ind_horiz_arm)
-accelerations, arm angle, release side and height, and extension. The induced movement is
+Shape is 7 arm-normalized features (identical for all three groups): velocity, spin rate,
+the induced (Magnus-frame, gravity + drag removed) vertical (ind_vert) and arm-side horizontal
+(ind_horiz_arm) accelerations, arm angle, and release side and height. The induced movement is
 derived from the pitch's 9-parameter trajectory (its velocity and acceleration vectors), so
 — unlike the earlier Magnus/non-Magnus split — a pitch scores from kinematics alone and does
 NOT need Statcast's per-pitch spin_axis (minor-league feeds without it still score). No
 location, count, or game-state; a lefty and righty throwing physically identical pitches
-grade identically.
+grade identically. (release_extension and arm_angle_dev were tested and dropped 2026-08-19 —
+both near-no-ops; and NEVER fold extension into velocity, it corrupts the velocity signal.)
 
 Lower xRV = better. Heads are LightGBM (num_leaves=8, max_depth=3) with linear_tree,
 early-stopped on a held-out split; features are passed through unscaled.
@@ -39,7 +40,6 @@ import pickle
 import numpy as np
 import pandas as pd
 import lightgbm as lgb
-from sklearn.preprocessing import RobustScaler
 
 from config import MODEL_DIR
 
@@ -51,12 +51,14 @@ WHIFF_DESCS  = {"swinging_strike", "swinging_strike_blocked", "missed_bunt"}
 FOUL_DESCS   = {"foul", "foul_tip", "bunt_foul_tip", "foul_bunt"}
 INPLAY_DESC  = "hit_into_play"
 
-# 8 arm-normalized shape features. Movement is the INDUCED (Magnus-frame, gravity + drag
+# 7 arm-normalized shape features. Movement is the INDUCED (Magnus-frame, gravity + drag
 # removed) vertical (ind_vert) and arm-side horizontal (ind_horiz_arm) accelerations;
 # release side is arm-signed (release_pos_x_arm). A mirror lefty/righty grade identically.
-SHAPE_FEATS = [
-    "release_speed", "release_spin_rate", "ind_horiz_arm", "ind_vert",
-    "arm_angle", "release_pos_x_arm", "release_pos_z", "release_extension",
+SHAPE_FEATS = [  # 7 kinematic + release_extension as a RAW feature (NOT folded into velocity)
+    "release_speed", "release_spin_rate",
+    "ind_horiz_arm", "ind_vert",
+    "arm_angle", "release_pos_x_arm", "release_pos_z",
+    "release_extension",
 ]
 # Raw kinematic columns add_shape_features consumes to build the Magnus split.
 KINEMATIC_COLS = ["vx0", "vy0", "vz0", "ax", "ay", "az",
@@ -69,9 +71,8 @@ FB_TYPES  = {"FF", "FA", "SI"}
 BR_TYPES  = {"SL", "ST", "SV", "SC", "GY", "CU", "KC", "CS", "SLV"}
 OFF_TYPES = {"CH", "FO", "FS", "EP", "KN"}
 FAMILIES  = ("FB", "OFF", "BR")
-GROUPS    = ("FB", "BR", "OFF")   # THREE models (cutters routed FB/BR), ONE shared scale + values
-GROUP_FEATS = {"ALL": SHAPE_FEATS, "FB": SHAPE_FEATS, "NONFB": SHAPE_FEATS,
-               "BR": SHAPE_FEATS, "OFF": SHAPE_FEATS}
+GROUPS    = ("ALL",)   # ONE unified model over all pitch types (no FB/BR/OFF split)
+GROUP_FEATS = {"ALL": SHAPE_FEATS}
 
 ZONE_HALF = 0.83   # half plate-width + ball radius (ft)
 _G = 32.174
@@ -79,12 +80,12 @@ _G = 32.174
 _SPIN_OFFSET_PATH = os.path.join(MODEL_DIR, "spin_offset.pkl")   # per-hand spin-axis convention offset
 
 # All heads: shallow LightGBM (num_leaves=8, max_depth=3) + linear_tree, early-stopped.
-_LGBM = dict(learning_rate=0.1, linear_tree=True, num_leaves=8, max_depth=3, n_jobs=-1, verbose=-1, random_state=42)
+_LGBM = dict(linear_tree=True, n_jobs=-1, verbose=-1, random_state=42)   # base LGBM defaults (num_leaves=31, max_depth=-1, lr=0.1) + linear_tree
 _SAMPLE_SWING, _SAMPLE_GRID, _SAMPLE_NORM = 2_500_000, 1_500_000, 300_000
 
 
 class _Identity:
-    """No-op feature scaler (TESTING variant: RobustScaler removed — raw features)."""
+    """No-op feature scaler — features are passed through raw (tree splits are scale-invariant)."""
     def fit(self, X):
         return self
 
@@ -190,14 +191,22 @@ def _spin_offset() -> dict:
 def add_shape_features(df: pd.DataFrame, spin_off: dict | None = None) -> pd.DataFrame:
     """Add the shape columns the scoring model needs. Idempotent.
 
-    Movement features are the INDUCED (Magnus-frame, gravity + drag removed) vertical
-    (ind_vert) and arm-side horizontal (ind_horiz_arm) accelerations from add_magnus;
-    release_pos_x_arm is the arm-side release point.
+    Movement is the induced (Magnus-frame) vertical/arm-side horizontal acceleration
+    (ind_vert, ind_horiz_arm); release_pos_x_arm is the arm-side release point.
+    Extension and arm_angle are winsorized to physically plausible bands.
     """
     if "ind_vert" not in df.columns or "ind_horiz_arm" not in df.columns:
         add_magnus(df)
     hs = df["p_throws"].map({"R": -1.0, "L": 1.0}).fillna(-1.0).values
     df["release_pos_x_arm"] = _num(df, "release_pos_x").values * hs
+    # Winsorize extension into a physically plausible band — values outside are
+    # Hawkeye tracking errors; clipping (not dropping) caps leverage on linear_tree leaves.
+    if "release_extension" in df.columns:
+        df["release_extension"] = _num(df, "release_extension").clip(4.0, 8.5)
+    # arm_angle: clip ONLY the impossible high side (>100deg = behind the head, ~5 glitch
+    # pitches). Do NOT floor the low end — submariners (Tyler Rogers ~-62deg) are real.
+    if "arm_angle" in df.columns:
+        df["arm_angle"] = _num(df, "arm_angle").clip(upper=100.0)
     return df
 
 
@@ -260,10 +269,10 @@ def assign_family(df: pd.DataFrame, router: dict | None) -> pd.Series:
 
 
 def _assign_group(df: pd.DataFrame, router: dict | None) -> pd.Series:
-    """Three probability-model groups — FB / BR / OFF — cutters routed to FB or BR by the
-    Mahalanobis classifier. Anything unclassified defaults to BR. All groups share ONE scale
-    + GLOBAL values (grouping only changes what each head learns, not the grading scale)."""
-    return assign_family(df, router).fillna("BR")
+    """One unified model over all pitch types — every pitch is graded by the same heads on
+    ONE shared scale + GLOBAL run values, so a fastball, breaking ball, and offspeed pitch
+    are directly comparable."""
+    return pd.Series("ALL", index=df.index)   # one unified group over all pitch types
 
 
 def _count_adjusted_rv(df: pd.DataFrame) -> pd.Series:
@@ -411,8 +420,8 @@ def _fit_group(sub: pd.DataFrame, feats: list, rng) -> dict:
 
 
 def train_split_model(df: pd.DataFrame, V: dict, router: dict) -> dict:
-    """Two probability models (FB / NONFB, cutters routed) — each a swing softmax
-    {whiff,foul,in-play} + GB/air contact head on RobustScaler features — but ONE GLOBAL set
+    """Three probability models (FB / BR / OFF, cutters routed) — each a swing softmax
+    {whiff,foul,in-play} + GB/air contact head on raw (unscaled) features — but ONE GLOBAL set
     of outcome run values (raw mean delta_run_exp over all pitches, so a whiff/grounder is
     worth the same regardless of shape) and ONE shared grading scale."""
     sf = df[SHAPE_FEATS].notna().all(axis=1)

@@ -1061,7 +1061,6 @@ function buildTable(pitches, noWrap = false) {
     { l: "HAA",    a: "right" },
     { l: "Ext",    a: "right" },
     { l: "RelHt",  a: "right" },
-    { l: "Axis",   a: "right" },
     { l: "Zone%",    a: "right" },
     { l: "SwStr%",   a: "right" },
     { l: "xwOBA<br>CON", a: "right" },
@@ -1088,7 +1087,6 @@ function buildTable(pitches, noWrap = false) {
       <td>${fmtAbs(p.haa, 1)}°</td>
       <td>${fmtAbs(p.extension, 1)}</td>
       <td>${p.release_height != null ? p.release_height.toFixed(1) + "'" : "—"}</td>
-      <td>${p.spin_axis_clock || "—"}</td>
       ${(z => chipCell(p.zone_pct,  fmtPct(p.zone_pct),  z[0], z[1], z[2], false))(ptBase(p.pitch_type).zone)}
       ${(w => chipCell(p.whiff_pct, fmtPct(p.whiff_pct), w[0], w[1], w[2], false))(ptBase(p.pitch_type).swstr)}
       ${chipCell(p.xwoba_contact, xw,                   0.200, 0.340, 0.460, true)}

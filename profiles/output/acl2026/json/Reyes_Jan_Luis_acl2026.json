@@ -1,0 +1,80 @@
+{
+  "player_name": "Reyes, Jan Luis",
+  "season": "acl2026",
+  "total_pitches": 7,
+  "p_throws": "L",
+  "arm_angle": 31.3,
+  "team": "A-CUB",
+  "pitcher_id": 813939,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 65.9,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 7,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 70.5,
+      "ivb": 15.5,
+      "hb": 7.0,
+      "vaa": -7.4,
+      "haa": -1.5,
+      "spin": 1759,
+      "extension": 5.17,
+      "arm_angle": 31.3,
+      "release_height": 5.72,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 28.6,
+      "chase_pct": 40.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.009,
+      "locations_x": [
+        -0.87,
+        0.3,
+        -0.27,
+        -1.59,
+        -1.19,
+        0.42,
+        -0.0
+      ],
+      "locations_z": [
+        2.06,
+        3.72,
+        0.97,
+        3.3,
+        0.97,
+        2.63,
+        2.81
+      ],
+      "locations_x_vs_r": [
+        -0.87,
+        0.3,
+        -0.27,
+        -1.59,
+        -1.19,
+        0.42,
+        -0.0
+      ],
+      "locations_z_vs_r": [
+        2.06,
+        3.72,
+        0.97,
+        3.3,
+        0.97,
+        2.63,
+        2.81
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

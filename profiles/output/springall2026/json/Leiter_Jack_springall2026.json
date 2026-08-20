@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 102.1,
-      "grade": "50",
+      "stuff_plus": 99.0,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 89,
       "n_vs_r": 53,
@@ -36,7 +36,7 @@
       "zone_pct": 59.6,
       "chase_pct": 27.8,
       "whiff_pct": 13.3,
-      "xwoba_contact": 0.524,
+      "xwoba_contact": 0.554,
       "locations_x": [
         -0.1,
         1.37,
@@ -409,7 +409,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 114.2,
+      "stuff_plus": 115.5,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 43,
@@ -431,7 +431,7 @@
       "zone_pct": 39.5,
       "chase_pct": 30.8,
       "whiff_pct": 38.9,
-      "xwoba_contact": 0.355,
+      "xwoba_contact": 0.267,
       "locations_x": [
         0.3,
         1.05,
@@ -620,9 +620,9 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 115.6,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 121.1,
+      "grade": "70",
+      "color": "#00b4d8",
       "n": 39,
       "n_vs_r": 19,
       "n_vs_l": 20,
@@ -642,7 +642,7 @@
       "zone_pct": 28.2,
       "chase_pct": 35.7,
       "whiff_pct": 37.5,
-      "xwoba_contact": 0.888,
+      "xwoba_contact": 0.446,
       "locations_x": [
         0.73,
         -0.42,
@@ -830,14 +830,14 @@
       "vaa": -4.73,
       "haa": -0.93,
       "spin": 2334,
-      "extension": 6.95,
+      "extension": 6.9,
       "arm_angle": 48.2,
       "release_height": 5.5,
       "spin_axis_clock": "10:27",
       "zone_pct": 40.0,
       "chase_pct": 44.4,
       "whiff_pct": 26.3,
-      "xwoba_contact": 0.237,
+      "xwoba_contact": 0.317,
       "locations_x": [
         -1.15,
         -1.11,
@@ -974,7 +974,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 102.8,
+      "stuff_plus": 100.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 25,
@@ -996,7 +996,7 @@
       "zone_pct": 32.0,
       "chase_pct": 47.1,
       "whiff_pct": 16.7,
-      "xwoba_contact": 0.224,
+      "xwoba_contact": 0.151,
       "locations_x": [
         0.28,
         1.1,
@@ -1113,7 +1113,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 113.6,
+      "stuff_plus": 113.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 19,
@@ -1135,7 +1135,7 @@
       "zone_pct": 63.2,
       "chase_pct": 42.9,
       "whiff_pct": 40.0,
-      "xwoba_contact": 0.689,
+      "xwoba_contact": 0.795,
       "locations_x": [
         -0.39,
         0.69,

@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 110.2,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 30,
       "n_vs_r": 14,
       "n_vs_l": 16,
@@ -36,7 +36,7 @@
       "zone_pct": 50.0,
       "chase_pct": 20.0,
       "whiff_pct": 23.1,
-      "xwoba_contact": 0.671,
+      "xwoba_contact": 0.55,
       "locations_x": [
         -0.05,
         1.32,
@@ -173,9 +173,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 114.3,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 122.8,
+      "grade": "70",
+      "color": "#00b4d8",
       "n": 25,
       "n_vs_r": 12,
       "n_vs_l": 13,
@@ -195,7 +195,7 @@
       "zone_pct": 32.0,
       "chase_pct": 41.2,
       "whiff_pct": 45.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.415,
       "locations_x": [
         -1.39,
         -0.6,
@@ -312,7 +312,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 113.1,
+      "stuff_plus": 119.1,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 12,
@@ -399,7 +399,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.1,
+      "stuff_plus": 103.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 10,
@@ -421,7 +421,7 @@
       "zone_pct": 70.0,
       "chase_pct": 33.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.129,
+      "xwoba_contact": 0.353,
       "locations_x": [
         -1.57,
         0.05,
@@ -478,7 +478,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 96.1,
+      "stuff_plus": 95.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 3,
@@ -500,7 +500,7 @@
       "zone_pct": 0.0,
       "chase_pct": 33.3,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.263,
       "locations_x": [
         0.03,
         -0.56,

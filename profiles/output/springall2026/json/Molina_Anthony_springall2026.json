@@ -14,9 +14,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 105.0,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 103.5,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 24,
       "n_vs_r": 14,
       "n_vs_l": 10,
@@ -36,7 +36,7 @@
       "zone_pct": 54.2,
       "chase_pct": 9.1,
       "whiff_pct": 9.1,
-      "xwoba_contact": 0.073,
+      "xwoba_contact": 0.35,
       "locations_x": [
         1.22,
         0.79,
@@ -149,7 +149,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.4,
+      "stuff_plus": 102.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 22,
@@ -171,7 +171,7 @@
       "zone_pct": 18.2,
       "chase_pct": 27.8,
       "whiff_pct": 66.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.506,
       "locations_x": [
         -0.34,
         1.04,
@@ -276,8 +276,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 98.2,
-      "grade": "45",
+      "stuff_plus": 104.2,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 12,
       "n_vs_r": 0,
@@ -298,7 +298,7 @@
       "zone_pct": 25.0,
       "chase_pct": 66.7,
       "whiff_pct": 50.0,
-      "xwoba_contact": 0.307,
+      "xwoba_contact": 0.171,
       "locations_x": [
         -0.97,
         0.05,
@@ -361,9 +361,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 101.8,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.4,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 5,
       "n_vs_r": 3,
       "n_vs_l": 2,
@@ -420,7 +420,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.9,
+      "stuff_plus": 96.8,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 4,
@@ -473,7 +473,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 91.2,
+      "stuff_plus": 94.3,
       "grade": "40",
       "color": "#f4a261",
       "n": 2,

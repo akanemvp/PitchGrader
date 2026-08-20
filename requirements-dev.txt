@@ -1,4 +1,0 @@
-# Development / test dependencies (not needed to run the web app).
-#   python -m pip install -r requirements-dev.txt
--r requirements.txt
-pytest>=8.0.0

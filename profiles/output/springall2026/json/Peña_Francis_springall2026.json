@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 104.1,
+      "stuff_plus": 102.6,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 31,
@@ -177,7 +177,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 117.4,
+      "stuff_plus": 113.7,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 23,
@@ -199,7 +199,7 @@
       "zone_pct": 39.1,
       "chase_pct": 28.6,
       "whiff_pct": 22.2,
-      "xwoba_contact": 0.531,
+      "xwoba_contact": 0.524,
       "locations_x": [
         -0.15,
         0.1,
@@ -308,9 +308,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 106.7,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 100.9,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 9,
       "n_vs_r": 7,
       "n_vs_l": 2,
@@ -383,9 +383,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 107.5,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 99.7,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 7,
       "n_vs_r": 5,
       "n_vs_l": 2,

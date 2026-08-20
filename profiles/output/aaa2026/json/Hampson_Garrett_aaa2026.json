@@ -1,0 +1,109 @@
+{
+  "player_name": "Hampson, Garrett",
+  "season": "aaa2026",
+  "total_pitches": 5,
+  "p_throws": "R",
+  "arm_angle": 58.2,
+  "team": "LOU",
+  "pitcher_id": 641658,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 39.7,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 80.0,
+      "usage_pct_vs_r": 80.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 51.6,
+      "ivb": 19.4,
+      "hb": -6.5,
+      "vaa": -11.69,
+      "haa": 2.95,
+      "spin": 1123,
+      "extension": 5.24,
+      "arm_angle": 56.3,
+      "release_height": 6.72,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.2,
+      "locations_x": [
+        -0.14,
+        -0.26,
+        0.58,
+        -0.29
+      ],
+      "locations_z": [
+        2.07,
+        3.32,
+        3.61,
+        3.94
+      ],
+      "locations_x_vs_r": [
+        -0.14,
+        -0.26,
+        0.58,
+        -0.29
+      ],
+      "locations_z_vs_r": [
+        2.07,
+        3.32,
+        3.61,
+        3.94
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 49.2,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 20.0,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 50.6,
+      "ivb": 15.1,
+      "hb": 1.9,
+      "vaa": -12.09,
+      "haa": 0.65,
+      "spin": 1010,
+      "extension": 5.2,
+      "arm_angle": 60.0,
+      "release_height": 6.78,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.61
+      ],
+      "locations_z": [
+        3.61
+      ],
+      "locations_x_vs_r": [
+        -1.61
+      ],
+      "locations_z_vs_r": [
+        3.61
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

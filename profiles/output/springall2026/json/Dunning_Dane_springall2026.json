@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.2,
+      "stuff_plus": 92.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 43,
@@ -36,7 +36,7 @@
       "zone_pct": 55.8,
       "chase_pct": 21.1,
       "whiff_pct": 16.7,
-      "xwoba_contact": 0.545,
+      "xwoba_contact": 0.437,
       "locations_x": [
         0.57,
         -1.29,
@@ -225,9 +225,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 95.0,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 93.1,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 32,
       "n_vs_r": 15,
       "n_vs_l": 17,
@@ -247,7 +247,7 @@
       "zone_pct": 31.2,
       "chase_pct": 40.9,
       "whiff_pct": 25.0,
-      "xwoba_contact": 0.169,
+      "xwoba_contact": 0.261,
       "locations_x": [
         1.04,
         0.88,
@@ -392,7 +392,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.9,
+      "stuff_plus": 103.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 29,
@@ -414,7 +414,7 @@
       "zone_pct": 27.6,
       "chase_pct": 28.6,
       "whiff_pct": 36.4,
-      "xwoba_contact": 0.137,
+      "xwoba_contact": 0.133,
       "locations_x": [
         1.14,
         0.1,
@@ -547,7 +547,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 104.2,
+      "stuff_plus": 104.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 13,
@@ -569,7 +569,7 @@
       "zone_pct": 15.4,
       "chase_pct": 45.5,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.602,
+      "xwoba_contact": 0.418,
       "locations_x": [
         -0.84,
         -0.91,
@@ -638,9 +638,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 103.4,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 112.2,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 4,
       "n_vs_r": 3,
       "n_vs_l": 1,

@@ -8,13 +8,13 @@
   "pitcher_id": 814316,
   "age": null,
   "ip_str": "1.0",
-  "era": null,
+  "era": 36.0,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 89.7,
+      "stuff_plus": 86.9,
       "grade": "35",
       "color": "#ef233c",
       "n": 8,
@@ -83,9 +83,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.4,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 97.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 8,
       "n_vs_r": 3,
       "n_vs_l": 5,
@@ -154,7 +154,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 85.3,
+      "stuff_plus": 82.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 4,
@@ -207,7 +207,7 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 105.7,
+      "stuff_plus": 108.7,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 3,

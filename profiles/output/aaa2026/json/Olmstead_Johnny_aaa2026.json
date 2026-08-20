@@ -1,0 +1,206 @@
+{
+  "player_name": "Olmstead, Johnny",
+  "season": "aaa2026",
+  "total_pitches": 19,
+  "p_throws": "R",
+  "arm_angle": 46.2,
+  "team": "JAX",
+  "pitcher_id": 675394,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 54.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 15,
+      "n_vs_r": 4,
+      "n_vs_l": 11,
+      "usage_pct": 78.9,
+      "usage_pct_vs_r": 80.0,
+      "usage_pct_vs_l": 78.6,
+      "velo": 59.0,
+      "ivb": 16.0,
+      "hb": 7.8,
+      "vaa": -9.83,
+      "haa": 0.59,
+      "spin": 1540,
+      "extension": 5.07,
+      "arm_angle": 45.5,
+      "release_height": 6.43,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 40.0,
+      "chase_pct": 11.1,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.189,
+      "locations_x": [
+        -1.49,
+        0.05,
+        -1.3,
+        0.12,
+        0.87,
+        0.49,
+        0.19,
+        0.32,
+        -2.59,
+        -0.01,
+        -2.33,
+        0.78,
+        0.22,
+        1.5,
+        0.18
+      ],
+      "locations_z": [
+        5.3,
+        2.68,
+        1.78,
+        1.94,
+        2.04,
+        3.26,
+        0.83,
+        2.85,
+        5.28,
+        3.78,
+        4.13,
+        3.61,
+        2.46,
+        0.96,
+        2.31
+      ],
+      "locations_x_vs_r": [
+        0.49,
+        0.19,
+        0.32,
+        0.22
+      ],
+      "locations_z_vs_r": [
+        3.26,
+        0.83,
+        2.85,
+        2.46
+      ],
+      "locations_x_vs_l": [
+        -1.49,
+        0.05,
+        -1.3,
+        0.12,
+        0.87,
+        -2.59,
+        -0.01,
+        -2.33,
+        0.78,
+        1.5,
+        0.18
+      ],
+      "locations_z_vs_l": [
+        5.3,
+        2.68,
+        1.78,
+        1.94,
+        2.04,
+        5.28,
+        3.78,
+        4.13,
+        3.61,
+        0.96,
+        2.31
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 59.9,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 1,
+      "n_vs_l": 2,
+      "usage_pct": 15.8,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 14.3,
+      "velo": 59.5,
+      "ivb": 15.8,
+      "hb": 12.4,
+      "vaa": -10.85,
+      "haa": 0.83,
+      "spin": 1556,
+      "extension": 5.23,
+      "arm_angle": 45.1,
+      "release_height": 6.26,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 66.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.45,
+        -0.19,
+        0.16
+      ],
+      "locations_z": [
+        1.09,
+        1.77,
+        1.96
+      ],
+      "locations_x_vs_r": [
+        1.45
+      ],
+      "locations_z_vs_r": [
+        1.09
+      ],
+      "locations_x_vs_l": [
+        -0.19,
+        0.16
+      ],
+      "locations_z_vs_l": [
+        1.77,
+        1.96
+      ]
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 54.6,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 0,
+      "n_vs_l": 1,
+      "usage_pct": 5.3,
+      "usage_pct_vs_r": 0.0,
+      "usage_pct_vs_l": 7.1,
+      "velo": 55.8,
+      "ivb": 13.4,
+      "hb": 7.1,
+      "vaa": -9.96,
+      "haa": -0.74,
+      "spin": 1340,
+      "extension": 5.63,
+      "arm_angle": 48.1,
+      "release_height": 6.41,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.47
+      ],
+      "locations_z": [
+        3.44
+      ],
+      "locations_x_vs_r": [],
+      "locations_z_vs_r": [],
+      "locations_x_vs_l": [
+        -1.47
+      ],
+      "locations_z_vs_l": [
+        3.44
+      ]
+    }
+  ]
+}

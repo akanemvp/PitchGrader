@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 103.6,
+      "stuff_plus": 101.1,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 112,
@@ -36,7 +36,7 @@
       "zone_pct": 52.7,
       "chase_pct": 35.8,
       "whiff_pct": 29.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.294,
       "locations_x": [
         0.03,
         0.09,
@@ -501,7 +501,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 106.6,
+      "stuff_plus": 106.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 43,
@@ -523,7 +523,7 @@
       "zone_pct": 44.2,
       "chase_pct": 41.7,
       "whiff_pct": 55.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.144,
       "locations_x": [
         0.31,
         -1.07,
@@ -712,7 +712,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 97.4,
+      "stuff_plus": 98.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 22,
@@ -734,7 +734,7 @@
       "zone_pct": 22.7,
       "chase_pct": 23.5,
       "whiff_pct": 22.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.458,
       "locations_x": [
         -0.89,
         0.17,
@@ -839,9 +839,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 104.0,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 5,
       "n_vs_r": 2,
       "n_vs_l": 3,

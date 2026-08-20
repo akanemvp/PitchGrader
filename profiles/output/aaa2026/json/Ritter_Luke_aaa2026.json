@@ -1,7 +1,7 @@
 {
   "player_name": "Ritter, Luke",
   "season": "aaa2026",
-  "total_pitches": 1,
+  "total_pitches": 3,
   "p_throws": "R",
   "arm_angle": 37.9,
   "team": "TOL",
@@ -14,10 +14,10 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 78.1,
+      "stuff_plus": 66.3,
       "grade": "30",
       "color": "#ef233c",
-      "n": 1,
+      "n": 3,
       "n_vs_r": 1,
       "n_vs_l": 2,
       "usage_pct": 100.0,

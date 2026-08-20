@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 93.3,
+      "stuff_plus": 92.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 44,
@@ -36,7 +36,7 @@
       "zone_pct": 47.7,
       "chase_pct": 34.8,
       "whiff_pct": 25.0,
-      "xwoba_contact": 0.274,
+      "xwoba_contact": 0.52,
       "locations_x": [
         0.28,
         -0.04,
@@ -229,9 +229,9 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 105.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 102.7,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 36,
       "n_vs_r": 6,
       "n_vs_l": 30,
@@ -251,7 +251,7 @@
       "zone_pct": 22.2,
       "chase_pct": 21.4,
       "whiff_pct": 50.0,
-      "xwoba_contact": 0.144,
+      "xwoba_contact": 0.111,
       "locations_x": [
         -0.5,
         0.28,
@@ -412,7 +412,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 84.0,
+      "stuff_plus": 84.6,
       "grade": "35",
       "color": "#ef233c",
       "n": 35,
@@ -434,7 +434,7 @@
       "zone_pct": 48.6,
       "chase_pct": 22.2,
       "whiff_pct": 11.1,
-      "xwoba_contact": 0.764,
+      "xwoba_contact": 0.51,
       "locations_x": [
         -0.25,
         -0.01,
@@ -591,8 +591,8 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 101.0,
-      "grade": "50",
+      "stuff_plus": 99.3,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 30,
       "n_vs_r": 24,
@@ -613,7 +613,7 @@
       "zone_pct": 46.7,
       "chase_pct": 25.0,
       "whiff_pct": 21.4,
-      "xwoba_contact": 0.208,
+      "xwoba_contact": 0.637,
       "locations_x": [
         0.42,
         1.56,
@@ -750,9 +750,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 94.5,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 98.8,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 17,
       "n_vs_r": 2,
       "n_vs_l": 15,

@@ -1,0 +1,113 @@
+{
+  "player_name": "Hearn, Ethan",
+  "season": "aaa2026",
+  "total_pitches": 6,
+  "p_throws": "R",
+  "arm_angle": 26.1,
+  "team": "IOW",
+  "pitcher_id": 683001,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 58.4,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 5,
+      "n_vs_r": 5,
+      "n_vs_l": 0,
+      "usage_pct": 83.3,
+      "usage_pct_vs_r": 83.3,
+      "usage_pct_vs_l": 0.0,
+      "velo": 63.3,
+      "ivb": 13.7,
+      "hb": 12.9,
+      "vaa": -9.11,
+      "haa": 1.03,
+      "spin": 1615,
+      "extension": 5.06,
+      "arm_angle": 32.5,
+      "release_height": 5.94,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 20.0,
+      "chase_pct": 25.0,
+      "whiff_pct": 100.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        -1.07,
+        -1.4,
+        -0.64,
+        1.61,
+        -0.47
+      ],
+      "locations_z": [
+        1.19,
+        1.63,
+        2.81,
+        2.37,
+        3.61
+      ],
+      "locations_x_vs_r": [
+        -1.07,
+        -1.4,
+        -0.64,
+        1.61,
+        -0.47
+      ],
+      "locations_z_vs_r": [
+        1.19,
+        1.63,
+        2.81,
+        2.37,
+        3.61
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "FF",
+      "pitch_name": "4-Seam Fastball",
+      "stuff_plus": 84.4,
+      "grade": "35",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 16.7,
+      "usage_pct_vs_r": 16.7,
+      "usage_pct_vs_l": 0.0,
+      "velo": 86.7,
+      "ivb": 14.9,
+      "hb": 6.5,
+      "vaa": -4.5,
+      "haa": 2.45,
+      "spin": 1970,
+      "extension": 5.58,
+      "arm_angle": 19.7,
+      "release_height": 5.29,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.32,
+      "locations_x": [
+        0.21
+      ],
+      "locations_z": [
+        3.07
+      ],
+      "locations_x_vs_r": [
+        0.21
+      ],
+      "locations_z_vs_r": [
+        3.07
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

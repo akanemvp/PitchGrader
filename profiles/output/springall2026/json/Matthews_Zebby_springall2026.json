@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.2,
+      "stuff_plus": 96.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 74,
@@ -36,7 +36,7 @@
       "zone_pct": 56.8,
       "chase_pct": 31.2,
       "whiff_pct": 8.3,
-      "xwoba_contact": 0.413,
+      "xwoba_contact": 0.324,
       "locations_x": [
         1.09,
         1.69,
@@ -349,9 +349,9 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 103.1,
-      "grade": "50",
-      "color": "#c9d1d9",
+      "stuff_plus": 107.1,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 57,
       "n_vs_r": 32,
       "n_vs_l": 25,
@@ -371,7 +371,7 @@
       "zone_pct": 40.4,
       "chase_pct": 32.4,
       "whiff_pct": 27.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.322,
       "locations_x": [
         1.83,
         0.82,
@@ -616,7 +616,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 97.6,
+      "stuff_plus": 97.4,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 37,
@@ -638,7 +638,7 @@
       "zone_pct": 64.9,
       "chase_pct": 38.5,
       "whiff_pct": 26.1,
-      "xwoba_contact": 0.153,
+      "xwoba_contact": 0.201,
       "locations_x": [
         0.25,
         1.78,
@@ -803,7 +803,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 104.7,
+      "stuff_plus": 101.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 13,
@@ -894,7 +894,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 91.3,
+      "stuff_plus": 93.7,
       "grade": "40",
       "color": "#f4a261",
       "n": 12,
@@ -916,7 +916,7 @@
       "zone_pct": 50.0,
       "chase_pct": 66.7,
       "whiff_pct": 16.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.139,
       "locations_x": [
         0.05,
         1.04,
@@ -979,9 +979,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 91.3,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 96.1,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 7,
       "n_vs_r": 0,
       "n_vs_l": 7,

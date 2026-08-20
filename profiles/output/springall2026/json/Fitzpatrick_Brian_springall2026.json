@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.3,
+      "stuff_plus": 90.8,
       "grade": "40",
       "color": "#f4a261",
       "n": 38,
@@ -205,7 +205,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.2,
+      "stuff_plus": 103.3,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 22,
@@ -227,7 +227,7 @@
       "zone_pct": 50.0,
       "chase_pct": 45.5,
       "whiff_pct": 15.4,
-      "xwoba_contact": 0.228,
+      "xwoba_contact": 0.382,
       "locations_x": [
         2.0,
         0.66,
@@ -332,9 +332,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.3,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 93.7,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 12,
       "n_vs_r": 2,
       "n_vs_l": 10,
@@ -419,7 +419,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 87.4,
+      "stuff_plus": 88.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 11,
@@ -502,7 +502,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.9,
+      "stuff_plus": 101.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 11,
@@ -524,7 +524,7 @@
       "zone_pct": 45.5,
       "chase_pct": 50.0,
       "whiff_pct": 33.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.015,
       "locations_x": [
         -0.73,
         -0.17,
@@ -585,9 +585,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 98.4,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 88.1,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 2,
       "n_vs_r": 2,
       "n_vs_l": 0,

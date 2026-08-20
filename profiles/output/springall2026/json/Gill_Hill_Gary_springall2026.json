@@ -14,9 +14,9 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 90.9,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 96.3,
+      "grade": "45",
+      "color": "#c9d1d9",
       "n": 14,
       "n_vs_r": 8,
       "n_vs_l": 6,
@@ -36,7 +36,7 @@
       "zone_pct": 78.6,
       "chase_pct": 0.0,
       "whiff_pct": 28.6,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.275,
       "locations_x": [
         0.65,
         0.24,
@@ -109,9 +109,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 92.8,
-      "grade": "40",
-      "color": "#f4a261",
+      "stuff_plus": 89.4,
+      "grade": "35",
+      "color": "#ef233c",
       "n": 12,
       "n_vs_r": 3,
       "n_vs_l": 9,
@@ -196,7 +196,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 103.4,
+      "stuff_plus": 104.4,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 12,
@@ -218,7 +218,7 @@
       "zone_pct": 66.7,
       "chase_pct": 50.0,
       "whiff_pct": 12.5,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.628,
       "locations_x": [
         0.84,
         0.29,
@@ -283,8 +283,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 100.8,
-      "grade": "50",
+      "stuff_plus": 96.7,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 8,
       "n_vs_r": 6,
@@ -305,7 +305,7 @@
       "zone_pct": 37.5,
       "chase_pct": 20.0,
       "whiff_pct": 25.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.25,
       "locations_x": [
         0.13,
         0.89,
@@ -354,8 +354,8 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 99.4,
-      "grade": "45",
+      "stuff_plus": 102.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 3,
       "n_vs_r": 0,
@@ -376,7 +376,7 @@
       "zone_pct": 0.0,
       "chase_pct": 66.7,
       "whiff_pct": 0.0,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.624,
       "locations_x": [
         0.33,
         0.22,

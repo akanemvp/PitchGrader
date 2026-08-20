@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 96.7,
+      "stuff_plus": 97.2,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 69,
@@ -36,7 +36,7 @@
       "zone_pct": 47.8,
       "chase_pct": 33.3,
       "whiff_pct": 35.3,
-      "xwoba_contact": 0.834,
+      "xwoba_contact": 0.749,
       "locations_x": [
         -0.34,
         0.34,
@@ -329,7 +329,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 97.6,
+      "stuff_plus": 97.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 62,
@@ -351,7 +351,7 @@
       "zone_pct": 58.1,
       "chase_pct": 30.8,
       "whiff_pct": 24.1,
-      "xwoba_contact": 0.243,
+      "xwoba_contact": 0.343,
       "locations_x": [
         -0.25,
         -0.17,
@@ -616,9 +616,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 111.7,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 123.4,
+      "grade": "70",
+      "color": "#00b4d8",
       "n": 44,
       "n_vs_r": 9,
       "n_vs_l": 35,
@@ -638,7 +638,7 @@
       "zone_pct": 34.1,
       "chase_pct": 20.7,
       "whiff_pct": 45.5,
-      "xwoba_contact": 0.313,
+      "xwoba_contact": 0.339,
       "locations_x": [
         -0.16,
         -0.14,
@@ -831,7 +831,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 113.6,
+      "stuff_plus": 114.9,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 20,
@@ -853,7 +853,7 @@
       "zone_pct": 75.0,
       "chase_pct": 40.0,
       "whiff_pct": 20.0,
-      "xwoba_contact": 0.125,
+      "xwoba_contact": 0.333,
       "locations_x": [
         0.22,
         0.03,
@@ -948,7 +948,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 105.7,
+      "stuff_plus": 108.5,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 15,
@@ -1045,9 +1045,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 107.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 112.7,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 6,
       "n_vs_r": 5,
       "n_vs_l": 1,

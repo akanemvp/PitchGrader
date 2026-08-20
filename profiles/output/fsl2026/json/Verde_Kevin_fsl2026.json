@@ -1,0 +1,68 @@
+{
+  "player_name": "Verde, Kevin",
+  "season": "fsl2026",
+  "total_pitches": 4,
+  "p_throws": "R",
+  "arm_angle": 28.6,
+  "team": "TAM",
+  "pitcher_id": 814269,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 61.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 69.2,
+      "ivb": 12.4,
+      "hb": 5.6,
+      "vaa": -8.8,
+      "haa": 0.86,
+      "spin": 1807,
+      "extension": 4.0,
+      "arm_angle": 28.6,
+      "release_height": 6.41,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 75.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.166,
+      "locations_x": [
+        -0.94,
+        -0.38,
+        -0.96,
+        -0.11
+      ],
+      "locations_z": [
+        1.89,
+        2.96,
+        1.58,
+        2.6
+      ],
+      "locations_x_vs_r": [
+        -0.94,
+        -0.38,
+        -0.96,
+        -0.11
+      ],
+      "locations_z_vs_r": [
+        1.89,
+        2.96,
+        1.58,
+        2.6
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

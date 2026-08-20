@@ -1,0 +1,186 @@
+{
+  "player_name": "Cordova, Jose",
+  "season": "aaa2026",
+  "total_pitches": 14,
+  "p_throws": "R",
+  "arm_angle": 31.2,
+  "team": "ABQ",
+  "pitcher_id": 682276,
+  "age": null,
+  "ip_str": "1.1",
+  "era": 0.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 46.6,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 7,
+      "n_vs_r": 3,
+      "n_vs_l": 4,
+      "usage_pct": 50.0,
+      "usage_pct_vs_r": 33.3,
+      "usage_pct_vs_l": 80.0,
+      "velo": 56.4,
+      "ivb": 9.5,
+      "hb": 2.6,
+      "vaa": -11.14,
+      "haa": 2.67,
+      "spin": 1420,
+      "extension": 4.62,
+      "arm_angle": 33.4,
+      "release_height": 6.24,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 71.4,
+      "chase_pct": 50.0,
+      "whiff_pct": 20.0,
+      "xwoba_contact": 0.17,
+      "locations_x": [
+        0.53,
+        -0.58,
+        0.42,
+        0.15,
+        0.96,
+        0.26,
+        0.7
+      ],
+      "locations_z": [
+        2.25,
+        2.69,
+        1.47,
+        1.76,
+        2.96,
+        3.57,
+        2.24
+      ],
+      "locations_x_vs_r": [
+        0.53,
+        -0.58,
+        0.42
+      ],
+      "locations_z_vs_r": [
+        2.25,
+        2.69,
+        1.47
+      ],
+      "locations_x_vs_l": [
+        0.15,
+        0.96,
+        0.26,
+        0.7
+      ],
+      "locations_z_vs_l": [
+        1.76,
+        2.96,
+        3.57,
+        2.24
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 59.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 6,
+      "n_vs_r": 5,
+      "n_vs_l": 1,
+      "usage_pct": 42.9,
+      "usage_pct_vs_r": 55.6,
+      "usage_pct_vs_l": 20.0,
+      "velo": 67.5,
+      "ivb": 10.6,
+      "hb": 4.6,
+      "vaa": -9.31,
+      "haa": 2.51,
+      "spin": 1676,
+      "extension": 4.81,
+      "arm_angle": 27.9,
+      "release_height": 5.91,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 16.7,
+      "chase_pct": 40.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.047,
+      "locations_x": [
+        1.53,
+        0.18,
+        0.29,
+        0.85,
+        -0.95,
+        0.92
+      ],
+      "locations_z": [
+        2.01,
+        3.11,
+        1.2,
+        0.88,
+        2.93,
+        -0.14
+      ],
+      "locations_x_vs_r": [
+        1.53,
+        0.18,
+        0.29,
+        0.85,
+        0.92
+      ],
+      "locations_z_vs_r": [
+        2.01,
+        3.11,
+        1.2,
+        0.88,
+        -0.14
+      ],
+      "locations_x_vs_l": [
+        -0.95
+      ],
+      "locations_z_vs_l": [
+        2.93
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 48.6,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 7.1,
+      "usage_pct_vs_r": 11.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 59.1,
+      "ivb": 13.3,
+      "hb": 12.1,
+      "vaa": -10.01,
+      "haa": 1.32,
+      "spin": 1606,
+      "extension": 4.37,
+      "arm_angle": 32.2,
+      "release_height": 6.37,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 100.0,
+      "chase_pct": null,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.012,
+      "locations_x": [
+        0.18
+      ],
+      "locations_z": [
+        2.62
+      ],
+      "locations_x_vs_r": [
+        0.18
+      ],
+      "locations_z_vs_r": [
+        2.62
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

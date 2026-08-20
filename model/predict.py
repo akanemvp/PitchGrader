@@ -13,9 +13,9 @@ breaking ball, and offspeed pitch are graded on the same scale.
 The shape features are arm-normalized and carry no handedness, so a lefty and a righty
 throwing physically identical pitches grade identically — one scoring pass per pitch.
 
-Two grade columns are produced: `stuff_plus` (the raw z-score, used for aggregation/
-leaderboards) and `stuff_plus_display` (a percentile-anchored soft-cap so individual
-pitches top out ~135 instead of running to extreme outliers).
+One grade column is produced: `stuff_plus`, the raw z-score. No floor, clip, or display
+cap — the shallow regularized linear_tree keeps individual pitches bounded on their own
+(max ~165), so every pitch shows its true value.
 """
 
 import logging
@@ -31,19 +31,6 @@ from model.submodels import load_ensemble
 from model.prob_resid import grade_pitches, add_shape_features, add_magnus, SHAPE_FEATS
 
 logger = logging.getLogger(__name__)
-
-_POWER_TYPES = {"FF", "FA", "SI", "FC", "ST"}
-
-_DG_KNEE, _DG_CEIL, _DG_SOFT = 125.0, 135.0, 12.0
-
-
-def display_grade(sp):
-    """Percentile-anchored display grade for individual pitches."""
-    sp = np.asarray(sp, dtype=float)
-    out = sp.copy()
-    hi = sp > _DG_KNEE
-    out[hi] = _DG_KNEE + (_DG_CEIL - _DG_KNEE) * (1.0 - np.exp(-(sp[hi] - _DG_KNEE) / _DG_SOFT))
-    return out
 
 
 class StuffPlusPredictor:
@@ -83,20 +70,16 @@ class StuffPlusPredictor:
         add_magnus(df)          # ind_vert/ind_horiz_arm (also router feats)
         add_shape_features(df)  # induced shape feats
 
-        # A pitch is scorable only when all 10 shape features are present — which
-        # requires spin_axis (for the Magnus/non-Magnus split). No spin axis → NaN grade.
+        # A pitch is scorable only when all 7 shape features are present. They derive from
+        # the 9-parameter trajectory (kinematics) alone — no spin_axis needed.
         rows = df[SHAPE_FEATS].notna().all(axis=1).values
         sp = np.full(len(df), np.nan)
         if rows.any():
             sp[rows] = grade_pitches(df.loc[rows], self.ensemble, norm_set)
 
-        # Velocity floor: a "power" pitch type below 75 mph is almost always a mislabel.
-        low_velo = (pd.to_numeric(df["release_speed"], errors="coerce") < 75.0).values
-        power_mask = df["pitch_type"].isin(_POWER_TYPES).values
-        sp[power_mask & low_velo] = np.nan
-
-        df["stuff_plus"] = np.clip(sp, -50.0, 200.0)
-        df["stuff_plus_display"] = display_grade(df["stuff_plus"].values)
+        # No velocity floor, clip, or display cap: every scorable pitch grades on its
+        # true value, including slow position-player junk (bad on its own merits).
+        df["stuff_plus"] = sp
         return df
 
 
@@ -135,7 +118,7 @@ def _composite_pitch_grade(df, norm_set: str = "current") -> dict:
         return {}
     comp = comp.reset_index()
 
-    sp = np.clip(grade_pitches(comp, p.ensemble, norm_set), -50.0, 200.0)
+    sp = grade_pitches(comp, p.ensemble, norm_set)
     out: dict = {}
     for pt, v in zip(comp["pitch_type"].values, sp):
         if np.isfinite(v):

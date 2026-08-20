@@ -14,7 +14,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.3,
+      "stuff_plus": 95.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 76,
@@ -36,7 +36,7 @@
       "zone_pct": 46.1,
       "chase_pct": 29.3,
       "whiff_pct": 23.1,
-      "xwoba_contact": 0.696,
+      "xwoba_contact": 0.566,
       "locations_x": [
         0.42,
         -0.69,
@@ -357,7 +357,7 @@
     {
       "pitch_type": "SV",
       "pitch_name": "Slurve",
-      "stuff_plus": 105.1,
+      "stuff_plus": 108.8,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 48,
@@ -379,7 +379,7 @@
       "zone_pct": 39.6,
       "chase_pct": 17.2,
       "whiff_pct": 35.7,
-      "xwoba_contact": 0.432,
+      "xwoba_contact": 0.362,
       "locations_x": [
         1.18,
         -0.13,

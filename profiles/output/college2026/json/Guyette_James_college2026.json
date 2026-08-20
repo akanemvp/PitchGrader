@@ -8,13 +8,13 @@
   "pitcher_id": 821962,
   "age": null,
   "ip_str": "16.0",
-  "era": 2.25,
+  "era": 4.5,
   "card_image": null,
   "pitches": [
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 103.8,
+      "stuff_plus": 104.9,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 288,

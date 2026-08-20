@@ -14,7 +14,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 101.8,
+      "stuff_plus": 101.2,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 53,
@@ -36,7 +36,7 @@
       "zone_pct": 47.2,
       "chase_pct": 25.0,
       "whiff_pct": 24.0,
-      "xwoba_contact": 0.235,
+      "xwoba_contact": 0.22,
       "locations_x": [
         0.49,
         -0.33,
@@ -265,7 +265,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 98.2,
+      "stuff_plus": 96.0,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 42,
@@ -287,7 +287,7 @@
       "zone_pct": 52.4,
       "chase_pct": 50.0,
       "whiff_pct": 23.3,
-      "xwoba_contact": 0.407,
+      "xwoba_contact": 0.382,
       "locations_x": [
         0.69,
         0.26,
@@ -472,8 +472,8 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 98.9,
-      "grade": "45",
+      "stuff_plus": 102.1,
+      "grade": "50",
       "color": "#c9d1d9",
       "n": 41,
       "n_vs_r": 37,
@@ -494,7 +494,7 @@
       "zone_pct": 36.6,
       "chase_pct": 26.9,
       "whiff_pct": 42.9,
-      "xwoba_contact": 0.439,
+      "xwoba_contact": 0.384,
       "locations_x": [
         1.09,
         -1.27,
@@ -675,7 +675,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 89.1,
+      "stuff_plus": 88.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 21,
@@ -697,7 +697,7 @@
       "zone_pct": 57.1,
       "chase_pct": 22.2,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.538,
+      "xwoba_contact": 0.384,
       "locations_x": [
         -0.7,
         -2.77,
@@ -798,7 +798,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 103.9,
+      "stuff_plus": 102.8,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 14,
@@ -891,8 +891,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 101.3,
-      "grade": "50",
+      "stuff_plus": 96.7,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 5,
       "n_vs_r": 0,

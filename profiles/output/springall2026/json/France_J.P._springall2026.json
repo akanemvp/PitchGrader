@@ -14,9 +14,9 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 108.7,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 102.4,
+      "grade": "50",
+      "color": "#c9d1d9",
       "n": 46,
       "n_vs_r": 35,
       "n_vs_l": 11,
@@ -36,7 +36,7 @@
       "zone_pct": 58.7,
       "chase_pct": 36.8,
       "whiff_pct": 23.1,
-      "xwoba_contact": 0.313,
+      "xwoba_contact": 0.287,
       "locations_x": [
         0.8,
         1.51,
@@ -237,9 +237,9 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 95.9,
-      "grade": "45",
-      "color": "#c9d1d9",
+      "stuff_plus": 90.4,
+      "grade": "40",
+      "color": "#f4a261",
       "n": 43,
       "n_vs_r": 17,
       "n_vs_l": 26,
@@ -259,7 +259,7 @@
       "zone_pct": 41.9,
       "chase_pct": 16.0,
       "whiff_pct": 42.9,
-      "xwoba_contact": 0.532,
+      "xwoba_contact": 0.468,
       "locations_x": [
         0.23,
         0.31,
@@ -448,7 +448,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 87.6,
+      "stuff_plus": 87.3,
       "grade": "35",
       "color": "#ef233c",
       "n": 38,
@@ -470,7 +470,7 @@
       "zone_pct": 57.9,
       "chase_pct": 31.2,
       "whiff_pct": 22.7,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.365,
       "locations_x": [
         1.48,
         1.72,
@@ -637,9 +637,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 106.8,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 114.9,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 29,
       "n_vs_r": 13,
       "n_vs_l": 16,
@@ -659,7 +659,7 @@
       "zone_pct": 31.0,
       "chase_pct": 30.0,
       "whiff_pct": 27.3,
-      "xwoba_contact": 0.855,
+      "xwoba_contact": 0.433,
       "locations_x": [
         -0.16,
         -0.63,
@@ -792,7 +792,7 @@
     {
       "pitch_type": "CH",
       "pitch_name": "Changeup",
-      "stuff_plus": 97.9,
+      "stuff_plus": 96.5,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 20,
@@ -814,7 +814,7 @@
       "zone_pct": 30.0,
       "chase_pct": 42.9,
       "whiff_pct": 36.4,
-      "xwoba_contact": 0.049,
+      "xwoba_contact": 0.169,
       "locations_x": [
         -0.05,
         -0.94,
@@ -911,8 +911,8 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 102.0,
-      "grade": "50",
+      "stuff_plus": 96.3,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 13,
       "n_vs_r": 12,

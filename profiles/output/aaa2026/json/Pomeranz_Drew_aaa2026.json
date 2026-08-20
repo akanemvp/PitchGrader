@@ -14,8 +14,8 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 101.7,
-      "grade": "50",
+      "stuff_plus": 96.1,
+      "grade": "45",
       "color": "#c9d1d9",
       "n": 30,
       "n_vs_r": 15,
@@ -173,9 +173,9 @@
     {
       "pitch_type": "KC",
       "pitch_name": "Knuckle Curve",
-      "stuff_plus": 105.1,
-      "grade": "55",
-      "color": "#7bf1a8",
+      "stuff_plus": 115.8,
+      "grade": "60",
+      "color": "#4cc9f0",
       "n": 9,
       "n_vs_r": 7,
       "n_vs_l": 2,

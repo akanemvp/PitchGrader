@@ -2159,14 +2159,38 @@ def _table_for_season(season: str) -> "str | None":
 
 _boxscore_er_cache: dict[int, dict[int, int]] = {}  # game_pk → {pitcher_id → earned_runs}
 _boxscore_ip_cache: dict[int, dict[int, int]] = {}  # game_pk → {pitcher_id → outs}
+_boxscore_ts: dict[int, float] = {}                 # game_pk → last successful fetch (epoch s)
+_final_games: set[int] = set()                      # game_pk known Final → cache forever
+_BOXSCORE_TTL = 90.0  # re-fetch after this many seconds: an in-progress game's IP/ER
+                      # keep climbing, so a permanent cache freezes the first read.
+
+
+def _game_is_final(game_pk: int) -> bool:
+    """Cheap schedule-endpoint check for whether a game has ended. A Final game's box
+    score never changes again, so we can cache it permanently instead of TTL-polling —
+    this keeps a starter's multi-game page from re-fetching every finished box each load."""
+    try:
+        import urllib.request
+        url = f"https://statsapi.mlb.com/api/v1/schedule?gamePk={game_pk}"
+        with urllib.request.urlopen(url, timeout=5) as resp:
+            data = json.loads(resp.read())
+        return data["dates"][0]["games"][0]["status"]["abstractGameState"] == "Final"
+    except Exception:
+        return False
+
 
 def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
     """Fetch pitcher earned runs (and innings→outs) from MLB Stats API box score.
-    Cached per game. Also populates _boxscore_ip_cache: the boxscore inningsPitched
-    is authoritative for IP — it captures baserunning outs (pickoffs / caught
-    stealing) and the trailing out of a double play that the pitch-event stream
-    omits, which event-counting alone misses."""
-    if game_pk in _boxscore_er_cache:
+    Cached per game with a short TTL. Also populates _boxscore_ip_cache: the boxscore
+    inningsPitched is authoritative for IP — it captures baserunning outs (pickoffs /
+    caught stealing) and the trailing out of a double play that the pitch-event stream
+    omits, which event-counting alone misses. The TTL matters for LIVE games: without it
+    the first mid-game read (e.g. 2 IP in the 2nd) is frozen for the life of the process
+    even as the starter pitches into the 7th."""
+    if game_pk in _boxscore_er_cache and (
+        game_pk in _final_games
+        or (time.time() - _boxscore_ts.get(game_pk, 0.0)) < _BOXSCORE_TTL
+    ):
         return _boxscore_er_cache[game_pk]
     result: dict[int, int] = {}
     ip_result: dict[int, int] = {}
@@ -2204,7 +2228,11 @@ def _get_boxscore_earned_runs(game_pk: int) -> dict[int, int]:
     if fetched:
         _boxscore_er_cache[game_pk] = result
         _boxscore_ip_cache[game_pk] = ip_result
-    return result
+        _boxscore_ts[game_pk] = time.time()
+        if _game_is_final(game_pk):
+            _final_games.add(game_pk)   # stop re-polling — box score is now frozen for real
+    # On a failed refresh, keep serving the last good cache rather than blanking it.
+    return _boxscore_er_cache.get(game_pk, result)
 
 
 def _compute_game_stats(gdf: pd.DataFrame) -> dict:
@@ -2426,7 +2454,7 @@ def api_game_detail():
             try: pitcher_id = int(_pid.iloc[0])
             except (ValueError, TypeError): pass
 
-    from profiles.player_cards import summarize_pitcher, stuff_grade, _clip_stuff_plus, _nan_to_none
+    from profiles.player_cards import summarize_pitcher, stuff_grade, _nan_to_none
     from config import PITCH_TYPES
 
     game_stats = _compute_game_stats(df)
@@ -2447,7 +2475,7 @@ def api_game_detail():
 
     pitches = []
     for _, row in summary.iterrows():
-        sp    = _clip_stuff_plus(float(row["stuff_plus"]))
+        sp    = float(row["stuff_plus"])
         grade, color = stuff_grade(round(sp, 1))
         def _sl(key):
             v = row.get(key); return v if isinstance(v, list) else []
@@ -3339,7 +3367,7 @@ def api_reclassify_profile():
         return jsonify({"error": f"model error: {exc}"}), 500
 
     # Build profile response (mirrors api_game_detail)
-    from profiles.player_cards import summarize_pitcher, stuff_grade, _clip_stuff_plus, _nan_to_none
+    from profiles.player_cards import summarize_pitcher, stuff_grade, _nan_to_none
     from config import PITCH_TYPES
 
     summary = summarize_pitcher(df_scored)
@@ -3364,7 +3392,7 @@ def api_reclassify_profile():
 
     pitches = []
     for _, row in summary.iterrows():
-        sp = _clip_stuff_plus(float(row["stuff_plus"]))
+        sp = float(row["stuff_plus"])
         grade, color = stuff_grade(round(sp, 1))
         def _sl(key):
             v = row.get(key); return v if isinstance(v, list) else []

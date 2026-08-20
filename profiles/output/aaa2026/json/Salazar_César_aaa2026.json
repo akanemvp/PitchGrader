@@ -1,0 +1,90 @@
+{
+  "player_name": "Salazar, C\u00e9sar",
+  "season": "aaa2026",
+  "total_pitches": 9,
+  "p_throws": "R",
+  "arm_angle": 46.0,
+  "team": "SUG",
+  "pitcher_id": 663967,
+  "age": null,
+  "ip_str": "1.0",
+  "era": 18.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 49.4,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 9,
+      "n_vs_r": 7,
+      "n_vs_l": 2,
+      "usage_pct": 100.0,
+      "usage_pct_vs_r": 100.0,
+      "usage_pct_vs_l": 100.0,
+      "velo": 57.4,
+      "ivb": 19.2,
+      "hb": 6.0,
+      "vaa": -9.54,
+      "haa": 0.45,
+      "spin": 1596,
+      "extension": 4.84,
+      "arm_angle": 46.0,
+      "release_height": 6.28,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 16.7,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.382,
+      "locations_x": [
+        -0.4,
+        -0.51,
+        -2.52,
+        -1.32,
+        -1.25,
+        -0.74,
+        0.23,
+        1.6,
+        0.1
+      ],
+      "locations_z": [
+        3.6,
+        1.84,
+        3.37,
+        4.03,
+        3.23,
+        4.37,
+        2.88,
+        1.95,
+        2.0
+      ],
+      "locations_x_vs_r": [
+        -2.52,
+        -1.32,
+        -1.25,
+        -0.74,
+        0.23,
+        1.6,
+        0.1
+      ],
+      "locations_z_vs_r": [
+        3.37,
+        4.03,
+        3.23,
+        4.37,
+        2.88,
+        1.95,
+        2.0
+      ],
+      "locations_x_vs_l": [
+        -0.4,
+        -0.51
+      ],
+      "locations_z_vs_l": [
+        3.6,
+        1.84
+      ]
+    }
+  ]
+}

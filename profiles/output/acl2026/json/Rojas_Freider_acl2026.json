@@ -1,0 +1,158 @@
+{
+  "player_name": "Rojas, Freider",
+  "season": "acl2026",
+  "total_pitches": 7,
+  "p_throws": "R",
+  "arm_angle": 34.9,
+  "team": "A-BRW",
+  "pitcher_id": 808248,
+  "age": null,
+  "ip_str": "1.2",
+  "era": 10.8,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 53.5,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 3,
+      "n_vs_r": 2,
+      "n_vs_l": 1,
+      "usage_pct": 42.9,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 57.9,
+      "ivb": 10.5,
+      "hb": 5.5,
+      "vaa": -11.16,
+      "haa": 1.68,
+      "spin": 1335,
+      "extension": 4.65,
+      "arm_angle": 38.6,
+      "release_height": 6.29,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 33.3,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.896,
+      "locations_x": [
+        -0.64,
+        0.94,
+        1.14
+      ],
+      "locations_z": [
+        2.3,
+        2.71,
+        2.4
+      ],
+      "locations_x_vs_r": [
+        0.94,
+        1.14
+      ],
+      "locations_z_vs_r": [
+        2.71,
+        2.4
+      ],
+      "locations_x_vs_l": [
+        -0.64
+      ],
+      "locations_z_vs_l": [
+        2.3
+      ]
+    },
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 69.3,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 1,
+      "n_vs_l": 1,
+      "usage_pct": 28.6,
+      "usage_pct_vs_r": 20.0,
+      "usage_pct_vs_l": 50.0,
+      "velo": 70.0,
+      "ivb": 8.9,
+      "hb": 11.2,
+      "vaa": -8.79,
+      "haa": 1.69,
+      "spin": 1534,
+      "extension": 4.97,
+      "arm_angle": 32.0,
+      "release_height": 5.71,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": null,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.35,
+        0.5
+      ],
+      "locations_z": [
+        0.95,
+        2.53
+      ],
+      "locations_x_vs_r": [
+        0.5
+      ],
+      "locations_z_vs_r": [
+        2.53
+      ],
+      "locations_x_vs_l": [
+        1.35
+      ],
+      "locations_z_vs_l": [
+        0.95
+      ]
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 54.0,
+      "grade": "30",
+      "color": "#ef233c",
+      "n": 2,
+      "n_vs_r": 2,
+      "n_vs_l": 0,
+      "usage_pct": 28.6,
+      "usage_pct_vs_r": 40.0,
+      "usage_pct_vs_l": 0.0,
+      "velo": 66.8,
+      "ivb": 10.1,
+      "hb": 5.0,
+      "vaa": -8.77,
+      "haa": 2.08,
+      "spin": 1465,
+      "extension": 5.03,
+      "arm_angle": 34.1,
+      "release_height": 5.88,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.124,
+      "locations_x": [
+        1.27,
+        0.27
+      ],
+      "locations_z": [
+        2.3,
+        2.19
+      ],
+      "locations_x_vs_r": [
+        1.27,
+        0.27
+      ],
+      "locations_z_vs_r": [
+        2.3,
+        2.19
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

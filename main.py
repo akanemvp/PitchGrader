@@ -155,7 +155,7 @@ def cmd_score():
         df_eng, _ = engineer_features(df, baselines=predictor.baselines)
         df_scored = predictor.predict(df_eng, already_engineered=True, norm_set=norm_set)
 
-        df_scored["stuff_plus"] = df_scored["stuff_plus"].clip(50.0, 160.0)
+        # No clip — every pitch keeps its raw grade (slow junk grades low on merit).
         df_scored = _fill_xwoba(df_scored)
 
         # SQLite is case-insensitive on column names — drop case-insensitive dupes

@@ -14,7 +14,7 @@
     {
       "pitch_type": "FC",
       "pitch_name": "Cutter",
-      "stuff_plus": 107.0,
+      "stuff_plus": 105.0,
       "grade": "55",
       "color": "#7bf1a8",
       "n": 6,
@@ -29,7 +29,7 @@
       "vaa": -6.71,
       "haa": 3.73,
       "spin": 2361,
-      "extension": 8.18,
+      "extension": 7.33,
       "arm_angle": 39.0,
       "release_height": 5.76,
       "spin_axis_clock": "1:04",
@@ -77,7 +77,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.4,
+      "stuff_plus": 92.1,
       "grade": "40",
       "color": "#f4a261",
       "n": 5,
@@ -134,7 +134,7 @@
     {
       "pitch_type": "SL",
       "pitch_name": "Slider",
-      "stuff_plus": 104.4,
+      "stuff_plus": 102.5,
       "grade": "50",
       "color": "#c9d1d9",
       "n": 2,
@@ -181,7 +181,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 111.5,
+      "stuff_plus": 110.3,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 1,

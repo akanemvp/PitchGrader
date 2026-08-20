@@ -1,0 +1,170 @@
+{
+  "player_name": "Egan, Austin",
+  "season": "college2026",
+  "total_pitches": 11,
+  "p_throws": "R",
+  "arm_angle": 6.9,
+  "team": "BUK",
+  "pitcher_id": 838598,
+  "age": null,
+  "ip_str": "0.1",
+  "era": 27.0,
+  "card_image": null,
+  "pitches": [
+    {
+      "pitch_type": "CH",
+      "pitch_name": "Changeup",
+      "stuff_plus": 92.9,
+      "grade": "40",
+      "color": "#f4a261",
+      "n": 6,
+      "n_vs_r": 6,
+      "n_vs_l": 0,
+      "usage_pct": 54.5,
+      "usage_pct_vs_r": 54.5,
+      "usage_pct_vs_l": 0.0,
+      "velo": 74.5,
+      "ivb": 7.8,
+      "hb": 13.0,
+      "vaa": -6.59,
+      "haa": 2.57,
+      "spin": 1000,
+      "extension": 6.25,
+      "arm_angle": 0.3,
+      "release_height": 3.99,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 16.7,
+      "chase_pct": 0.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.441,
+      "locations_x": [
+        0.04,
+        -1.11,
+        0.03,
+        -0.34,
+        -0.0,
+        0.55
+      ],
+      "locations_z": [
+        0.83,
+        2.37,
+        1.2,
+        1.39,
+        2.43,
+        1.36
+      ],
+      "locations_x_vs_r": [
+        0.04,
+        -1.11,
+        0.03,
+        -0.34,
+        -0.0,
+        0.55
+      ],
+      "locations_z_vs_r": [
+        0.83,
+        2.37,
+        1.2,
+        1.39,
+        2.43,
+        1.36
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "CU",
+      "pitch_name": "Curveball",
+      "stuff_plus": 104.9,
+      "grade": "50",
+      "color": "#c9d1d9",
+      "n": 4,
+      "n_vs_r": 4,
+      "n_vs_l": 0,
+      "usage_pct": 36.4,
+      "usage_pct_vs_r": 36.4,
+      "usage_pct_vs_l": 0.0,
+      "velo": 72.3,
+      "ivb": 4.9,
+      "hb": 1.7,
+      "vaa": -6.9,
+      "haa": 4.2,
+      "spin": 1785,
+      "extension": 6.35,
+      "arm_angle": 6.0,
+      "release_height": 4.25,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 50.0,
+      "chase_pct": 50.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": 0.224,
+      "locations_x": [
+        1.77,
+        -0.74,
+        0.27,
+        0.45
+      ],
+      "locations_z": [
+        1.13,
+        2.89,
+        2.89,
+        1.41
+      ],
+      "locations_x_vs_r": [
+        1.77,
+        -0.74,
+        0.27,
+        0.45
+      ],
+      "locations_z_vs_r": [
+        1.13,
+        2.89,
+        2.89,
+        1.41
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    },
+    {
+      "pitch_type": "SL",
+      "pitch_name": "Slider",
+      "stuff_plus": 105.7,
+      "grade": "55",
+      "color": "#7bf1a8",
+      "n": 1,
+      "n_vs_r": 1,
+      "n_vs_l": 0,
+      "usage_pct": 9.1,
+      "usage_pct_vs_r": 9.1,
+      "usage_pct_vs_l": 0.0,
+      "velo": 69.3,
+      "ivb": 11.2,
+      "hb": -9.0,
+      "vaa": -7.06,
+      "haa": 6.0,
+      "spin": 1963,
+      "extension": 6.55,
+      "arm_angle": 14.4,
+      "release_height": 4.54,
+      "spin_axis_clock": "\u2014",
+      "zone_pct": 0.0,
+      "chase_pct": 100.0,
+      "whiff_pct": 0.0,
+      "xwoba_contact": null,
+      "locations_x": [
+        1.47
+      ],
+      "locations_z": [
+        2.14
+      ],
+      "locations_x_vs_r": [
+        1.47
+      ],
+      "locations_z_vs_r": [
+        2.14
+      ],
+      "locations_x_vs_l": [],
+      "locations_z_vs_l": []
+    }
+  ]
+}

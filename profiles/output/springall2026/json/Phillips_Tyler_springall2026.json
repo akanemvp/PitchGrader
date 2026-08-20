@@ -14,7 +14,7 @@
     {
       "pitch_type": "SI",
       "pitch_name": "Sinker",
-      "stuff_plus": 95.7,
+      "stuff_plus": 98.1,
       "grade": "45",
       "color": "#c9d1d9",
       "n": 39,
@@ -36,7 +36,7 @@
       "zone_pct": 46.2,
       "chase_pct": 23.8,
       "whiff_pct": 6.2,
-      "xwoba_contact": 0.199,
+      "xwoba_contact": 0.301,
       "locations_x": [
         0.62,
         -0.05,
@@ -209,9 +209,9 @@
     {
       "pitch_type": "CU",
       "pitch_name": "Curveball",
-      "stuff_plus": 114.9,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 120.7,
+      "grade": "70",
+      "color": "#00b4d8",
       "n": 34,
       "n_vs_r": 0,
       "n_vs_l": 34,
@@ -231,7 +231,7 @@
       "zone_pct": 38.2,
       "chase_pct": 47.6,
       "whiff_pct": 53.3,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.221,
       "locations_x": [
         -0.86,
         0.51,
@@ -382,9 +382,9 @@
     {
       "pitch_type": "ST",
       "pitch_name": "Sweeper",
-      "stuff_plus": 110.0,
-      "grade": "60",
-      "color": "#4cc9f0",
+      "stuff_plus": 105.2,
+      "grade": "55",
+      "color": "#7bf1a8",
       "n": 30,
       "n_vs_r": 25,
       "n_vs_l": 5,
@@ -404,7 +404,7 @@
       "zone_pct": 23.3,
       "chase_pct": 34.8,
       "whiff_pct": 46.2,
-      "xwoba_contact": null,
+      "xwoba_contact": 0.503,
       "locations_x": [
         1.57,
         0.58,
@@ -541,7 +541,7 @@
     {
       "pitch_type": "FF",
       "pitch_name": "4-Seam Fastball",
-      "stuff_plus": 90.1,
+      "stuff_plus": 92.5,
       "grade": "40",
       "color": "#f4a261",
       "n": 19,
@@ -563,7 +563,7 @@
       "zone_pct": 31.6,
       "chase_pct": 23.1,
       "whiff_pct": 0.0,
-      "xwoba_contact": 0.572,
+      "xwoba_contact": 0.591,
       "locations_x": [
         0.98,
         -0.22,
@@ -656,7 +656,7 @@
     {
       "pitch_type": "FS",
       "pitch_name": "Splitter",
-      "stuff_plus": 111.0,
+      "stuff_plus": 115.8,
       "grade": "60",
       "color": "#4cc9f0",
       "n": 18,
